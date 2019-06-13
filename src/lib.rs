@@ -4,15 +4,11 @@ extern crate pest;
 extern crate horned_owl;
 
 use pest::error::Error;
-use pest::iterators::Pairs;
 
 /// The OWL2 Functional-style Syntax parser.
 #[derive(Debug, Parser)]
 #[grammar = "owl.pest"]
 pub struct OwlFunctionalParser;
-
-
-
 
 #[cfg(test)]
 mod tests {
@@ -20,18 +16,30 @@ mod tests {
     use pest::Parser;
     use super::*;
 
-    #[test]
-    fn example() {
-        let doc = r#"
-            Ontology( <http://www.my.example.com/example>
-                ClassAssertion( a:Person a:Peter )
-            )
-        "#;
+    macro_rules! assert_parse {
+        ($rule:path, $doc:expr) => {
+            let doc = $doc;
+            if let Err(e) = OwlFunctionalParser::parse($rule, doc.trim()) {
+                panic!("parsing using {:?}:\n{}\nfailed with: {}", $rule, doc.trim(), e);
+            };
+        }
+    }
 
-        // assert!(OwlFunctionalParser::parse(Rule::OntologyDocument, doc).is_ok());
-        match OwlFunctionalParser::parse(Rule::OntologyDocument, doc.trim()) {
-            Ok(doc) => panic!("{:#?}", doc),
-            Err(e) => panic!("{}", e),
-        };
+    #[test]
+    fn ontology_document() {
+        assert_parse!(
+            Rule::OntologyDocument,
+            r#"Ontology( <http://www.my.example.com/example>
+                ClassAssertion( a:Person a:Peter )
+            )"#
+        );
+    }
+
+    #[test]
+    fn ontology_document_empty() {
+        assert_parse!(
+            Rule::OntologyDocument,
+            r#"Ontology ()"#
+        );
     }
 }
