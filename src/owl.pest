@@ -28,7 +28,7 @@ LIT_DATA_UNION_OF = _{ "DataUnionOf" }
 LIT_DATA_COMPLEMENT_OF = _{ "DataComplementOf" }
 LIT_DATA_ONE_OF = _{ "DataOneOf" }
 LIT_DATATYPE_RESTRICTION = _{ "DatatypeRestriction" }
-LIT_OBJECT_INTERSECTION_OF = _{ "ObjectntersectionOf" }
+LIT_OBJECT_INTERSECTION_OF = _{ "ObjectIntersectionOf" }
 LIT_OBJECT_UNION_OF = _{ "ObjectUnionOf" }
 LIT_OBJECT_COMPLEMENT_OF = _{ "ObjectComplementOf" }
 LIT_OBJECT_MIN_CARDINALITY = _{"ObjectMinCardinality"}
@@ -93,7 +93,7 @@ NodeID = { BlankNodeLabel }
 
 //
 
-FullIRI = { LCHEVRON ~ Iri ~ RCHEVRON }
+FullIRI = ${ LCHEVRON ~ Iri ~ RCHEVRON }
 PrefixName = { PnameNs }
 AbbreviatedIRI = { PnameLn }
 IRI = {FullIRI | AbbreviatedIRI}
@@ -162,7 +162,7 @@ Individual = { NamedIndividual | AnonymousIndividual }
 NamedIndividual = { IRI }
 AnonymousIndividual = { NodeID }
 
-Literal = { TypedLiteral | StringLiteralNoLanguage | StringLiteralWithLanguage }
+Literal = { TypedLiteral | StringLiteralWithLanguage | StringLiteralNoLanguage }
 TypedLiteral = { LexicalForm ~ CARET{2} ~ Datatype }
 LexicalForm = { QuotedString }
 StringLiteralNoLanguage = { QuotedString }
@@ -202,7 +202,7 @@ ObjectUnionOf = { LIT_OBJECT_UNION_OF ~ LBRACKET ~ ClassExpression{2,} ~ RBRACKE
 ObjectComplementOf = { LIT_OBJECT_COMPLEMENT_OF ~ LBRACKET ~ ClassExpression ~ RBRACKET }
 ObjectOneOf = { LIT_OBJECT_ONE_OF ~ LBRACKET ~ Individual+ ~ RBRACKET }
 ObjectSomeValuesFrom = { LIT_OBJECT_SOME_VALUES_FROM ~ LBRACKET ~ ObjectPropertyExpression ~ ClassExpression ~ RBRACKET }
-ObjectAllValuesFrom = { LIT_OBJECT_ALL_VALUES_FROM ~ LBRACKET ~ ObjectPropertyExpression ~ ClassExpression ~ LBRACKET }
+ObjectAllValuesFrom = { LIT_OBJECT_ALL_VALUES_FROM ~ LBRACKET ~ ObjectPropertyExpression ~ ClassExpression ~ RBRACKET }
 ObjectHasValue = { LIT_OBJECT_HAS_VALUE ~ LBRACKET ~ ObjectPropertyExpression ~ Individual ~ RBRACKET }
 ObjectHasSelf = { LIT_OBJECT_HAS_SELF ~ LBRACKET ~ ObjectPropertyExpression ~ RBRACKET }
 ObjectMinCardinality = { LIT_OBJECT_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }

@@ -45,6 +45,7 @@ mod tests {
     #[test]
     fn literal() {
         assert_parse!(Rule::Literal, r#""gene_ontology"^^xsd:string"#);
+        assert_parse!(Rule::Literal, r#""Alan Ruttenberg"@en"#);
     }
 
     #[test]
@@ -55,6 +56,28 @@ mod tests {
     #[test]
     fn quoted_string() {
         assert_parse!(Rule::QuotedString, r#""gene_ontology""#);
+    }
+
+    #[test]
+    fn object_intersection_of() {
+        assert_parse!(
+            Rule::ObjectIntersectionOf,
+            r#"ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008150> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0006310>))"#
+        );
+    }
+
+
+    #[test]
+    fn object_some_values_from() {
+        assert_parse!(
+            Rule::ObjectSomeValuesFrom,
+            r#"ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0006310>)"#
+        );
+    }
+
+    #[test]
+    fn string_literal_with_language() {
+        assert_parse!(Rule::StringLiteralWithLanguage, r#""Alan Ruttenberg"@en"#);
     }
 
 }
