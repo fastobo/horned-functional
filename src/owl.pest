@@ -1,6 +1,7 @@
 
 
 WHITESPACE = _{ " " | "\t" | "\n" | "\r" }
+COMMENT = _{ "#" ~ (!"\n" ~ !"\r" ~ ANY)* }
 
 
 LIT_PREFIX = _{ "Prefix" }
@@ -87,7 +88,7 @@ CARET    = _{ "^" }
 //
 NonNegativeInteger = { ASCII_DIGIT+ }
 LanguageTag = ${ "@" ~ BCP47_LanguageTag }
-QuotedString = ${ "\"" ~ (  "\\\\" | "\\\"" | ANY )* ~ "\"" }
+QuotedString = ${ "\"" ~ ( !"\"" ~ ("\\\\" | "\\\"" | ANY) )* ~ "\"" }
 NodeID = { BlankNodeLabel }
 
 //

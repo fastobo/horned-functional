@@ -18,10 +18,11 @@ mod tests {
 
     macro_rules! assert_parse {
         ($rule:path, $doc:expr) => {
-            let doc = $doc;
-            if let Err(e) = OwlFunctionalParser::parse($rule, doc.trim()) {
-                panic!("parsing using {:?}:\n{}\nfailed with: {}", $rule, doc.trim(), e);
-            };
+            let doc = $doc.trim();
+            match OwlFunctionalParser::parse($rule, doc) {
+                Ok(mut p) => assert_eq!(p.next().unwrap().as_span().end(), doc.len()),
+                Err(e) => panic!("parsing using {:?}:\n{}\nfailed with: {}", $rule, doc.trim(), e),
+            }
         }
     }
 
@@ -37,9 +38,23 @@ mod tests {
 
     #[test]
     fn ontology_document_empty() {
-        assert_parse!(
-            Rule::OntologyDocument,
-            r#"Ontology ()"#
-        );
+        assert_parse!(Rule::OntologyDocument, r#"Ontology ()"#);
     }
+
+
+    #[test]
+    fn literal() {
+        assert_parse!(Rule::Literal, r#""gene_ontology"^^xsd:string"#);
+    }
+
+    #[test]
+    fn typed_literal() {
+        assert_parse!(Rule::TypedLiteral, r#""gene_ontology"^^xsd:string"#);
+    }
+
+    #[test]
+    fn quoted_string() {
+        assert_parse!(Rule::QuotedString, r#""gene_ontology""#);
+    }
+
 }
