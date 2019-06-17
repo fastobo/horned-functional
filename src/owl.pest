@@ -126,13 +126,20 @@ Axioms = { Axiom* }
 Declaration = { LIT_DECLARATION ~ LBRACKET ~ AxiomAnnotations ~ Entity ~ RBRACKET}
 
 Entity = {
-    LIT_CLASS ~ LBRACKET ~ Class ~ RBRACKET
-  | LIT_DATATYPE ~ LBRACKET ~ Datatype ~ RBRACKET
-  | LIT_OBJECT_PROPERTY ~ LBRACKET ~ ObjectProperty ~ RBRACKET
-  | LIT_DATA_PROPERTY ~ LBRACKET ~ DataProperty ~ RBRACKET
-  | LIT_ANNOTATION_PROPERTY ~ LBRACKET ~ AnnotationProperty ~ RBRACKET
-  | LIT_NAMED_INDIVIDUAL ~ LBRACKET ~ NamedIndividual ~ RBRACKET
+    ClassDeclaration
+  | DatatypeDeclaration
+  | ObjectPropertyDeclaration
+  | DataPropertyDeclaration
+  | AnnotationPropertyDeclaration
+  | NamedIndividualDeclaration
 }
+
+ClassDeclaration = { LIT_CLASS ~ LBRACKET ~ Class ~ RBRACKET }
+DatatypeDeclaration = { LIT_DATATYPE ~ LBRACKET ~ Datatype ~ RBRACKET }
+ObjectPropertyDeclaration = { LIT_OBJECT_PROPERTY ~ LBRACKET ~ ObjectProperty ~ RBRACKET }
+DataPropertyDeclaration = { LIT_DATA_PROPERTY ~ LBRACKET ~ DataProperty ~ RBRACKET }
+AnnotationPropertyDeclaration = { LIT_ANNOTATION_PROPERTY ~ LBRACKET ~ AnnotationProperty ~ RBRACKET }
+NamedIndividualDeclaration = { LIT_NAMED_INDIVIDUAL ~ LBRACKET ~ NamedIndividual ~ RBRACKET }
 
 AnnotationSubject = { IRI | AnonymousIndividual }
 AnnotationValue = { AnonymousIndividual | IRI | Literal }
@@ -170,7 +177,6 @@ StringLiteralWithLanguage = { QuotedString ~ LanguageTag }
 
 ObjectPropertyExpression = { ObjectProperty | InverseObjectProperty }
 InverseObjectProperty = { LIT_OBJECT_INVERSE_OF ~ LBRACKET ~ ObjectProperty ~ RBRACKET }
-DataPropertyExpression = { DataProperty }
 
 DataRange = {
     Datatype
@@ -184,9 +190,9 @@ DataIntersectionOf = { LIT_DATA_INTERSECTION_OF ~ LBRACKET ~ DataRange{2,} ~ RBR
 DataUnionOf = { LIT_DATA_UNION_OF ~ LBRACKET ~ DataRange{2,} ~ RBRACKET}
 DataComplementOf = { LIT_DATA_COMPLEMENT_OF ~ LBRACKET ~ DataRange ~ RBRACKET }
 DataOneOf = { LIT_DATA_ONE_OF ~ LBRACKET ~ Literal+ ~ RBRACKET }
-DatatypeRestriction = { LIT_DATATYPE_RESTRICTION ~ LBRACKET ~ Datatype ~ (ConstrainingFacet ~ RestrictionValue)+ ~ RBRACKET}
+DatatypeRestriction = { LIT_DATATYPE_RESTRICTION ~ LBRACKET ~ Datatype ~ FacetRestriction+ ~ RBRACKET}
+FacetRestriction = { ConstrainingFacet ~ Literal }
 ConstrainingFacet = { IRI }
-RestrictionValue = { Literal }
 
 ClassExpression = {
     Class |
@@ -208,12 +214,12 @@ ObjectHasSelf = { LIT_OBJECT_HAS_SELF ~ LBRACKET ~ ObjectPropertyExpression ~ RB
 ObjectMinCardinality = { LIT_OBJECT_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
 ObjectMaxCardinality = { LIT_OBJECT_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
 ObjectExactCardinality = { LIT_OBJECT_EXACT_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
-DataSomeValuesFrom = { LIT_DATA_SOME_VALUES_FROM ~ LBRACKET ~ DataPropertyExpression+ ~ DataRange ~ RBRACKET }
-DataAllValuesFrom = { LIT_DATA_ALL_VALUES_FROM ~ LBRACKET ~ DataPropertyExpression+ ~ DataRange ~ RBRACKET }
-DataHasValue = { LIT_DATA_HAS_VALUE ~ LBRACKET ~ DataPropertyExpression ~ Literal ~ RBRACKET }
-DataMinCardinality = { LIT_DATA_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataPropertyExpression ~ DataRange? ~ RBRACKET }
-DataMaxCardinality = { LIT_DATA_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataPropertyExpression ~ DataRange? ~ RBRACKET }
-DataExactCardinality = { LIT_DATA_EXACT_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataPropertyExpression ~ DataRange? ~ RBRACKET }
+DataSomeValuesFrom = { LIT_DATA_SOME_VALUES_FROM ~ LBRACKET ~ DataProperty+ ~ DataRange ~ RBRACKET }
+DataAllValuesFrom = { LIT_DATA_ALL_VALUES_FROM ~ LBRACKET ~ DataProperty+ ~ DataRange ~ RBRACKET }
+DataHasValue = { LIT_DATA_HAS_VALUE ~ LBRACKET ~ DataProperty ~ Literal ~ RBRACKET }
+DataMinCardinality = { LIT_DATA_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
+DataMaxCardinality = { LIT_DATA_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
+DataExactCardinality = { LIT_DATA_EXACT_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
 
 
 Axiom = {Declaration | ClassAxiom | ObjectPropertyAxiom | DataPropertyAxiom | DatatypeDefinition | HasKey | Assertion | AnnotationAxiom}
@@ -221,8 +227,8 @@ Axiom = {Declaration | ClassAxiom | ObjectPropertyAxiom | DataPropertyAxiom | Da
 
 ClassAxiom = { SubClassOf | EquivalentClasses | DisjointClasses | DisjointUnion  }
 SubClassOf = { LIT_SUB_CLASS_OF ~ LBRACKET ~ AxiomAnnotations ~ SubClassExpression ~ SuperClassExpression ~ RBRACKET}
-SubClassExpression = {ClassExpression}
-SuperClassExpression = {ClassExpression}
+SubClassExpression = _{ClassExpression}
+SuperClassExpression = _{ClassExpression}
 
 EquivalentClasses = {LIT_EQUIVALENT_CLASSES ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression{2,} ~ RBRACKET}
 DisjointClasses = {LIT_DISJOINT_CLASSES ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression{2,} ~ RBRACKET}
@@ -261,22 +267,22 @@ TransitiveObjectProperty = {LIT_TRANSITIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnn
 
 DataPropertyAxiom = {SubDataPropertyOf | EquivalentDataProperties | DisjointDataProperties | DataPropertyDomain | DataPropertyRange | FunctionalDataProperty}
 
-SubDataPropertyOf = {LIT_SUB_DATA_PROPERTY_OF ~ LBRACKET ~ AxiomAnnotations ~ SubDataPropertyExpression ~ SuperDataPropertyExpression }
-SubDataPropertyExpression = {DataPropertyExpression}
-SuperDataPropertyExpression = {DataPropertyExpression}
+SubDataPropertyOf = {LIT_SUB_DATA_PROPERTY_OF ~ LBRACKET ~ AxiomAnnotations ~ SubDataProperty ~ SuperDataProperty }
+SubDataProperty = {DataProperty}
+SuperDataProperty = {DataProperty}
 
-EquivalentDataProperties = {LIT_EQUIVALENT_DATA_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression{2,} ~ RBRACKET}
-DisjointDataProperties = {LIT_DISJOINT_DATA_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression{2,} ~ RBRACKET}
+EquivalentDataProperties = {LIT_EQUIVALENT_DATA_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ DataProperty{2,} ~ RBRACKET}
+DisjointDataProperties = {LIT_DISJOINT_DATA_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ DataProperty{2,} ~ RBRACKET}
 
-DataPropertyDomain = {LIT_DATA_PROPERTY_DOMAIN ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression ~ ClassExpression ~ RBRACKET }
-DataPropertyRange = {LIT_DATA_PROPERTY_RANGE ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression ~ ClassExpression ~ RBRACKET }
-FunctionalDataProperty = {LIT_FUNCTIONAL_DATA_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression ~ RBRACKET}
+DataPropertyDomain = {LIT_DATA_PROPERTY_DOMAIN ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ ClassExpression ~ RBRACKET }
+DataPropertyRange = {LIT_DATA_PROPERTY_RANGE ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ ClassExpression ~ RBRACKET }
+FunctionalDataProperty = {LIT_FUNCTIONAL_DATA_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ RBRACKET}
 
 DatatypeDefinition = { LIT_DATATYPE_DEFINITION ~ LBRACKET ~ AxiomAnnotations ~ Datatype ~ DataRange ~ RBRACKET}
 
 
 
-HasKey = { LIT_HAS_KEY  ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression ~ LBRACKET ~ ObjectPropertyExpression* ~ RBRACKET ~ LBRACKET ~ DataPropertyExpression* ~ RBRACKET }
+HasKey = { LIT_HAS_KEY  ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression ~ LBRACKET ~ ObjectPropertyExpression* ~ RBRACKET ~ LBRACKET ~ DataProperty* ~ RBRACKET }
 
 
 Assertion = {  SameIndividual | DifferentIndividuals | ClassAssertion | ObjectPropertyAssertion | NegativeObjectPropertyAssertion | DataPropertyAssertion | NegativeDataPropertyAssertion }
@@ -290,8 +296,8 @@ DifferentIndividuals = {LIT_DIFFERENT_INDIVIDUALS ~ LBRACKET ~ AxiomAnnotations 
 ClassAssertion = {LIT_CLASS_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression ~ Individual ~ RBRACKET }
 ObjectPropertyAssertion = { LIT_OBJECT_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ SourceIndividual ~ TargetIndividual ~ RBRACKET }
 NegativeObjectPropertyAssertion = { LIT_NEGATIVE_OBJECT_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ SourceIndividual ~ TargetIndividual ~ RBRACKET }
-DataPropertyAssertion = { LIT_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression ~ SourceIndividual ~ TargetValue ~ RBRACKET }
-NegativeDataPropertyAssertion = { LIT_NEGATIVE_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataPropertyExpression ~ SourceIndividual ~ TargetValue ~ RBRACKET }
+DataPropertyAssertion = { LIT_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ SourceIndividual ~ TargetValue ~ RBRACKET }
+NegativeDataPropertyAssertion = { LIT_NEGATIVE_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ SourceIndividual ~ TargetValue ~ RBRACKET }
 
 
 

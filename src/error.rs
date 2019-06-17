@@ -13,6 +13,9 @@ pub enum Error {
 
     #[fail(display = "expansion error: {:?}", 0)]
     ExpansionError(curie::ExpansionError),
+
+    #[fail(display = "invalid facet: {}", 0)]
+    InvalidFacet(String),
 }
 
 
