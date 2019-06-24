@@ -289,15 +289,14 @@ Assertion = {  SameIndividual | DifferentIndividuals | ClassAssertion | ObjectPr
 
 SourceIndividual = { Individual }
 TargetIndividual = { Individual }
-TargetValue = { Literal }
 
 SameIndividual = { LIT_SAME_INDIVIDUAL ~ LBRACKET ~ AxiomAnnotations ~ Individual{2,} ~ RBRACKET }
 DifferentIndividuals = {LIT_DIFFERENT_INDIVIDUALS ~ LBRACKET ~ AxiomAnnotations ~ Individual{2,} ~ RBRACKET }
 ClassAssertion = {LIT_CLASS_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression ~ Individual ~ RBRACKET }
 ObjectPropertyAssertion = { LIT_OBJECT_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ SourceIndividual ~ TargetIndividual ~ RBRACKET }
 NegativeObjectPropertyAssertion = { LIT_NEGATIVE_OBJECT_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ SourceIndividual ~ TargetIndividual ~ RBRACKET }
-DataPropertyAssertion = { LIT_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ SourceIndividual ~ TargetValue ~ RBRACKET }
-NegativeDataPropertyAssertion = { LIT_NEGATIVE_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ SourceIndividual ~ TargetValue ~ RBRACKET }
+DataPropertyAssertion = { LIT_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ SourceIndividual ~ Literal ~ RBRACKET }
+NegativeDataPropertyAssertion = { LIT_NEGATIVE_DATA_PROPERTY_ASSERTION ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ SourceIndividual ~ Literal ~ RBRACKET }
 
 
 

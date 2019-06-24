@@ -36,11 +36,10 @@ macro_rules! impl_wrapper {
 
 impl_wrapper!(Class, Rule::Class);
 impl_wrapper!(Import, Rule::Import);
-impl_wrapper!(Datatype, Rule::DataAllValuesFrom);
+impl_wrapper!(Datatype, Rule::Datatype);
 impl_wrapper!(ObjectProperty, Rule::ObjectProperty);
 impl_wrapper!(DataProperty, Rule::DataProperty);
 impl_wrapper!(AnnotationProperty, Rule::AnnotationProperty);
-impl_wrapper!(NamedIndividual, Rule::NamedIndividual);
 
 impl_wrapper!(DeclareClass, Rule::ClassDeclaration);
 impl_wrapper!(DeclareDatatype, Rule::DatatypeDeclaration);
@@ -55,9 +54,15 @@ impl_wrapper!(DeclareNamedIndividual, Rule::NamedIndividualDeclaration);
 impl FromPair for AnnotatedAxiom {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
         match pair.as_rule() {
+            // Rule::AnnotatedAxiom
             Rule::Axiom => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
             Rule::ClassAxiom => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::ObjectPropertyAxiom => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::DataPropertyAxiom => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::Assertion => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::AnnotationAxiom => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
 
+            // Declaration
             Rule::Declaration => {
                 let mut inner = pair.into_inner();
 
@@ -76,6 +81,7 @@ impl FromPair for AnnotatedAxiom {
                 Ok(Self::new(axiom, annotations))
             }
 
+            // ClassAxiom
             Rule::SubClassOf => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
@@ -83,30 +89,247 @@ impl FromPair for AnnotatedAxiom {
                 let supercls = ClassExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(SubClassOf::new(supercls, subcls), annotations))
             }
-
             Rule::EquivalentClasses => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ce: Result<_, Error> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
                 Ok(Self::new(EquivalentClasses(ce?), annotations))
             }
-
             Rule::DisjointClasses => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ce: Result<_, Error> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
                 Ok(Self::new(DisjointClasses(ce?), annotations))
             }
-
             Rule::DisjointUnion => {
+                // FIXME: missing definition in `horned-owl`
                 unimplemented!()
             }
 
+            // ObjectPropertyAxiom
             Rule::SubObjectPropertyOf => {
-                let mut inner = pair.into_inner();
-                // let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 unimplemented!()
             }
+            Rule::EquivalentObjectProperties => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let op: Result<Vec<ObjectPropertyExpression>, Error> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
+                Ok(Self::new(EquivalentObjectProperties(op?), annotations))
+            }
+            Rule::DisjointObjectProperties => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let op: Result<Vec<ObjectPropertyExpression>, Error> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
+                Ok(Self::new(DisjointObjectProperties(op?), annotations))
+            }
+            Rule::ObjectPropertyDomain => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ObjectPropertyDomain::new(ope, ce), annotations))
+            }
+            Rule::ObjectPropertyRange => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ObjectPropertyRange::new(ope, ce), annotations))
+            }
+            Rule::InverseObjectProperties => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r1 = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r2 = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(InverseObjectProperties(r1, r2), annotations))
+            }
+            Rule::FunctionalObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(FunctionalObjectProperty(r), annotations))
+            }
+            Rule::InverseFunctionalObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(InverseFunctionalObjectProperty(r), annotations))
+            }
+            Rule::ReflexiveObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ReflexiveObjectProperty(r), annotations))
+            }
+            Rule::IrreflexiveObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(IrreflexiveObjectProperty(r), annotations))
+            }
+            Rule::SymmetricObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(SymmetricObjectProperty(r), annotations))
+            }
+            Rule::AsymmetricObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(AsymmetricObjectProperty(r), annotations))
+            }
+            Rule::TransitiveObjectProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(TransitiveObjectProperty(r), annotations))
+            }
+
+            // DataPropertyAxiom
+            Rule::SubDataPropertyOf => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let sub_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let super_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(
+                    SubDataPropertyOf { sub_property, super_property },
+                    annotations,
+                ))
+            }
+            Rule::EquivalentDataProperties => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let dp: Result<Vec<DataProperty>, Error> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
+                Ok(Self::new(EquivalentDataProperties(dp?), annotations))
+            }
+            Rule::DisjointDataProperties => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let dp: Result<Vec<DataProperty>, Error> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
+                Ok(Self::new(DisjointDataProperties(dp?), annotations))
+            }
+            Rule::DataPropertyDomain => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let dp = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ObjectPropertyDomain::new(dp, ce), annotations))
+            }
+            Rule::DataPropertyRange => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let dp = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ObjectPropertyRange::new(dp, ce), annotations))
+            }
+            Rule::FunctionalDataProperty => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let dp = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(FunctionalDataProperty(dp), annotations))
+            }
+            Rule::DatatypeDefinition => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let k = Datatype::from_pair(inner.next().unwrap(), b, p)?;
+                let r = DataRange::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(DatatypeDefinition::new(k, r), annotations))
+            }
+
+            // HasKey
+            Rule::HasKey => {
+                unimplemented!()
+            }
+
+            // Assertion
+            Rule::SameIndividual => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let individuals: Result<_, _> = inner
+                    .map(|pair| NamedIndividual::from_pair(pair, b, p))
+                    .collect();
+                Ok(Self::new(SameIndividual(individuals?), annotations))
+            }
+            Rule::DifferentIndividuals => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let individuals: Result<_, _> = inner
+                    .map(|pair| NamedIndividual::from_pair(pair, b, p))
+                    .collect();
+                Ok(Self::new(DifferentIndividuals(individuals?), annotations))
+            }
+            Rule::ClassAssertion => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = ClassExpression::from_pair(inner.next().unwrap(), b, p)?;
+                let i = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ClassAssertion::new(ce, i), annotations))
+            }
+            Rule::ObjectPropertyAssertion => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
+                let from = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                let to = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(ObjectPropertyAssertion::new(ope, from, to), annotations))
+            }
+            Rule::NegativeObjectPropertyAssertion => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
+                let from = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                let to = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(NegativeObjectPropertyAssertion::new(ope, from, to), annotations))
+            }
+            Rule::DataPropertyAssertion => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = DataProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let from = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                let to = Literal::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(DataPropertyAssertion::new(ope, from, to), annotations))
+            }
+            Rule::NegativeDataPropertyAssertion => {
+                // FIXME: support for anonymous individual
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = DataProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let from = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
+                let to = Literal::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(NegativeDataPropertyAssertion::new(ope, from, to), annotations))
+            }
+
+            // AnnotationAxiom
+            Rule::AnnotationAssertion => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let property = AnnotationProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let subject = IRI::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
+                let value = AnnotationValue::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(
+                    AnnotationAssertion::new(subject, Annotation {
+                        annotation_property: property,
+                        annotation_value: value,
+                    }),
+                    annotations,
+                ))
+            }
+            Rule::SubAnnotationPropertyOf => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let sub_property = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
+                let super_property = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
+                Ok(Self::new(SubAnnotationPropertyOf { sub_property, super_property }, annotations))
+            }
+            Rule::AnnotationPropertyDomain => unimplemented!(),
+            Rule::AnnotationPropertyRange => unimplemented!(),
 
             _ => unimplemented!(),
         }
@@ -315,6 +538,22 @@ impl FromPair for IRI {
     }
 }
 
+impl FromPair for NamedIndividual {
+    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
+        match pair.as_rule() {
+            Rule::Individual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::SourceIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::TargetIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
+            Rule::AnonymousIndividual => unimplemented!("AnonymousIndividual are unsupported"),
+            Rule::NamedIndividual => {
+                IRI::from_pair(pair.into_inner().next().unwrap(), b, p)
+                    .map(NamedIndividual)
+            }
+            _ => unreachable!("invalid rule in NamedIndividual::from_pair")
+        }
+    }
+}
+
 impl FromPair for Literal {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
         match pair.as_rule() {
@@ -351,6 +590,19 @@ impl FromPair for Literal {
                 })
             }
             _ => unreachable!("invalid rule in Literal::from_pair"),
+        }
+    }
+}
+
+impl FromPair for ObjectPropertyExpression {
+    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
+        let inner = pair.into_inner().next().unwrap();
+        match inner.as_rule() {
+            Rule::ObjectProperty => ObjectProperty::from_pair(inner, b, p)
+                .map(ObjectPropertyExpression::ObjectProperty),
+            Rule::InverseObjectProperty => ObjectProperty::from_pair(inner.into_inner().next().unwrap(), b, p)
+                .map(ObjectPropertyExpression::InverseObjectProperty),
+            _ => unreachable!("invalid rule in ObjectPropertyExpression.from_pair"),
         }
     }
 }
