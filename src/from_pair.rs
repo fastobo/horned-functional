@@ -108,7 +108,14 @@ impl FromPair for AnnotatedAxiom {
 
             // ObjectPropertyAxiom
             Rule::SubObjectPropertyOf => {
-                unimplemented!()
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let sub_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let super_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(
+                    SubObjectPropertyOf { super_property, sub_property },
+                    annotations,
+                ))
             }
             Rule::EquivalentObjectProperties => {
                 let mut inner = pair.into_inner();
@@ -331,7 +338,7 @@ impl FromPair for AnnotatedAxiom {
             Rule::AnnotationPropertyDomain => unimplemented!(),
             Rule::AnnotationPropertyRange => unimplemented!(),
 
-            _ => unimplemented!(),
+            _ => unreachable!("invalid Rule in AnnotatedAxiom::from_pair"),
         }
     }
 }
@@ -691,6 +698,27 @@ impl FromPair for String {
     }
 }
 
+impl FromPair for SubObjectPropertyExpression {
+    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
+        debug_assert!(pair.as_rule() == Rule::SubObjectPropertyExpression);
+        let mut inner = pair.into_inner().next().unwrap();
+        match inner.as_rule() {
+            Rule::ObjectPropertyExpression => {
+                ObjectPropertyExpression::from_pair(inner, b, p)
+                    .map(SubObjectPropertyExpression::ObjectPropertyExpression)
+            }
+            Rule::PropertyExpressionChain => {
+                let mut objs = Vec::new();
+                for pair in inner.into_inner() {
+                    // FIXME: https://github.com/phillord/horned-owl/issues/14
+                    objs.push(ObjectProperty::from_pair(pair, b, p)?);
+                }
+                Ok(SubObjectPropertyExpression::ObjectPropertyChain(objs))
+            }
+            _ => unreachable!("unexpected rule in SubObjectProperty::from_pair"),
+        }
+    }
+}
 
 // ---------------------------------------------------------------------------
 
