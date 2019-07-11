@@ -24,7 +24,7 @@ status     = "actively-developed"
 [dependencies]
 pest = "*"
 pest_derive = "*"
-horned-owl = "*"
+horned-owl = { git = "https://github.com/phillord/horned-owl" }
 curie = "*"
 failure = "*"
 enum_meta = "*"
