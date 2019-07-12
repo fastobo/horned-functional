@@ -20,8 +20,9 @@ macro_rules! foundrytest {
         #[test]
         $(#[$attr])*
         fn $name() {
-            let dir = std::env::var("CARGO_MANIFEST_DIR").unwrap();
-            let path = std::path::PathBuf::from(dir)
+            let path = std::path::PathBuf::from(file!())
+                .parent()
+                .unwrap()
                 .join("data")
                 .join(stringify!($name))
                 .with_extension("obo.ofn");
