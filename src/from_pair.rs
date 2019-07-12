@@ -110,8 +110,11 @@ impl FromPair for AnnotatedAxiom {
             Rule::SubObjectPropertyOf => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let sub_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let super_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+
+                let sub_property = SubObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
+                let super_property = ObjectPropertyExpression::from_pair(
+                    inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
+
                 Ok(Self::new(
                     SubObjectPropertyOf { super_property, sub_property },
                     annotations,
@@ -133,63 +136,63 @@ impl FromPair for AnnotatedAxiom {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ope = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = ClassExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(ObjectPropertyDomain::new(ope, ce), annotations))
             }
             Rule::ObjectPropertyRange => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let ope = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ope = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = ClassExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(ObjectPropertyRange::new(ope, ce), annotations))
             }
             Rule::InverseObjectProperties => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r1 = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r2 = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r1 = ObjectProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let r2 = ObjectProperty::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(InverseObjectProperties(r1, r2), annotations))
             }
             Rule::FunctionalObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(FunctionalObjectProperty(r), annotations))
             }
             Rule::InverseFunctionalObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(InverseFunctionalObjectProperty(r), annotations))
             }
             Rule::ReflexiveObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(ReflexiveObjectProperty(r), annotations))
             }
             Rule::IrreflexiveObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(IrreflexiveObjectProperty(r), annotations))
             }
             Rule::SymmetricObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(SymmetricObjectProperty(r), annotations))
             }
             Rule::AsymmetricObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(AsymmetricObjectProperty(r), annotations))
             }
             Rule::TransitiveObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let r = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let r = ObjectProperty::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(TransitiveObjectProperty(r), annotations))
             }
 
@@ -558,7 +561,7 @@ impl FromPair for IRI {
                 let iri = pair.into_inner().next().unwrap();
                 Ok(build.iri(iri.as_str()))
             }
-            _ => unreachable!("invalid rule in IRI::from_pair"),
+            _ => unreachable!("invalid rule in IRI::from_pair: {:?}", pair),
         }
     }
 }
@@ -588,10 +591,10 @@ impl FromPair for Literal {
             Rule::TypedLiteral => {
                 let mut inner = pair.into_inner();
                 let lit = String::from_pair(inner.next().unwrap(), b, p)?;
-                let dty = IRI::from_pair(inner.next().unwrap(), b, p)?;
+                let dty = Datatype::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Literal {
                     literal: Some(lit),
-                    datatype_iri: Some(dty),
+                    datatype_iri: Some(dty.0),
                     lang: None,
                 })
             }
@@ -621,13 +624,14 @@ impl FromPair for Literal {
 
 impl FromPair for ObjectPropertyExpression {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
+        println!("in ObjectPropertyExpression.from_pair: {:?}", pair);
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::ObjectProperty => ObjectProperty::from_pair(inner, b, p)
                 .map(ObjectPropertyExpression::ObjectProperty),
             Rule::InverseObjectProperty => ObjectProperty::from_pair(inner.into_inner().next().unwrap(), b, p)
                 .map(ObjectPropertyExpression::InverseObjectProperty),
-            _ => unreachable!("invalid rule in ObjectPropertyExpression.from_pair"),
+            _ => unreachable!("invalid rule in ObjectPropertyExpression.from_pair: {:?}", inner),
         }
     }
 }
@@ -729,7 +733,7 @@ impl FromPair for SubObjectPropertyExpression {
                 let mut objs = Vec::new();
                 for pair in inner.into_inner() {
                     // FIXME: https://github.com/phillord/horned-owl/issues/14
-                    objs.push(ObjectProperty::from_pair(pair, b, p)?);
+                    objs.push(ObjectPropertyExpression::from_pair(pair, b, p)?);
                 }
                 Ok(SubObjectPropertyExpression::ObjectPropertyChain(objs))
             }

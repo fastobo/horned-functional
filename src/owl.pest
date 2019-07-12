@@ -253,14 +253,15 @@ EquivalentObjectProperties = {LIT_EQUIVALENT_OBJECT_PROPERTIES ~ LBRACKET ~ Axio
 DisjointObjectProperties = {LIT_DISJOINT_OBJECT_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression{2,} ~ RBRACKET}
 ObjectPropertyDomain = {LIT_OBJECT_PROPERTY_DOMAIN ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ ClassExpression ~ RBRACKET}
 ObjectPropertyRange = {LIT_OBJECT_PROPERTY_RANGE ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ ClassExpression ~ RBRACKET}
-InverseObjectProperties = {LIT_INVERSE_OBJECT_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression{2} ~ RBRACKET}
 FunctionalObjectProperty = {LIT_FUNCTIONAL_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 InverseFunctionalObjectProperty = {LIT_INVERSE_FUNCTIONAL_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 ReflexiveObjectProperty = {LIT_REFLEXIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 IrreflexiveObjectProperty = {LIT_IRREFLEXIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 SymmetricObjectProperty = {LIT_SYMMETRIC_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 AsymmetricObjectProperty = {LIT_ASYMMETRIC_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
-TransitiveObjectProperty = {LIT_TRANSITIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
+// FIXME: the official grammar allows `ObjectPropertyExpression` here but `horned-owl` does not.
+TransitiveObjectProperty = {LIT_TRANSITIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectProperty ~ RBRACKET}
+InverseObjectProperties = {LIT_INVERSE_OBJECT_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ ObjectProperty{2} ~ RBRACKET}
 
 
 
