@@ -1,4 +1,5 @@
 use std::collections::BTreeSet;
+use std::str::FromStr;
 
 use horned_owl::model::*;
 use horned_owl::vocab::WithIRI;
@@ -26,7 +27,6 @@ macro_rules! impl_wrapper {
     ($ty:ident, $rule:path) => {
         impl FromPair for $ty {
             fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
-                println!("{:?}", pair);
                 debug_assert!(pair.as_rule() == $rule);
                 FromPair::from_pair(pair.into_inner().next().unwrap(), b, p).map($ty)
             }
@@ -407,10 +407,16 @@ impl FromPair for ClassExpression {
                 unimplemented!()
             }
             Rule::ObjectSomeValuesFrom => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pair.next().unwrap(), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectSomeValuesFrom { o, ce })
             }
             Rule::ObjectAllValuesFrom => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pair.next().unwrap(), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectAllValuesFrom { o, ce })
             }
             Rule::ObjectHasValue => {
                 unimplemented!()
@@ -419,13 +425,25 @@ impl FromPair for ClassExpression {
                 unimplemented!()
             }
             Rule::ObjectMinCardinality => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let n = u32::from_pair(pair.next().unwrap(), b, p)? as i32;
+                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectMinCardinality { n, o, ce })
             }
             Rule::ObjectMaxCardinality => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let n = u32::from_pair(pair.next().unwrap(), b, p)? as i32;
+                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectMaxCardinality { n, o, ce })
             }
             Rule::ObjectExactCardinality => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let n = u32::from_pair(pair.next().unwrap(), b, p)? as i32;
+                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectExactCardinality { n, o, ce })
             }
             Rule::DataSomeValuesFrom => {
                 unimplemented!()
@@ -717,6 +735,13 @@ impl FromPair for SubObjectPropertyExpression {
             }
             _ => unreachable!("unexpected rule in SubObjectProperty::from_pair"),
         }
+    }
+}
+
+impl FromPair for u32 {
+    fn from_pair(pair: Pair<Rule>, _b: &Build, _p: &PrefixMapping) -> Result<Self, Error> {
+        debug_assert!(pair.as_rule() == Rule::NonNegativeInteger);
+        Ok(Self::from_str(pair.as_str()).expect("cannot fail with the right rule"))
     }
 }
 
