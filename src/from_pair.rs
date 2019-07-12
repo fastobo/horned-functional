@@ -377,7 +377,10 @@ impl FromPair for AnnotationValue {
 
 impl FromPair for BTreeSet<Annotation> {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
-        debug_assert!(pair.as_rule() == Rule::AxiomAnnotations);
+        debug_assert!(
+            [Rule::AnnotationAnnotations, Rule::AxiomAnnotations].contains(&pair.as_rule()),
+            "invalid rule in BTreeSet<Annotation>: {:?}", pair.as_rule()
+        );
         pair
             .into_inner()
             .map(|pair| Annotation::from_pair(pair, b, p))
@@ -678,7 +681,7 @@ impl FromPair for Ontology {
 
 impl FromPair for OntologyAnnotation {
     fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self, Error> {
-        debug_assert!(pair.as_rule() == Rule::OntologyDocument);
+        debug_assert!(pair.as_rule() == Rule::Annotation, "unexpected rule in `OntologyAnnotation: {:?}", pair.as_rule());
         Annotation::from_pair(pair, build, prefixes).map(OntologyAnnotation)
     }
 }

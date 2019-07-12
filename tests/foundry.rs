@@ -60,5 +60,5 @@ foundrytest!(#[ignore] ro);
 // foundrytest!(vto);
 // foundrytest!(mondo);
 // foundrytest!(gaz);
-foundrytest!(go);
+// foundrytest!(go);
 // foundrytest!(chebi);
