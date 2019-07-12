@@ -22,10 +22,7 @@ macro_rules! foundrytest {
 foundrytest!(aero);
 foundrytest!(apo);
 foundrytest!(cio);
-foundrytest!(doid);
 foundrytest!(hao);
-foundrytest!(hp);
-foundrytest!(mp);
 foundrytest!(ms);
 foundrytest!(peco);
 foundrytest!(plana);
