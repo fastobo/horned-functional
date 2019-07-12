@@ -86,7 +86,7 @@ EQ       = _{ "=" }
 CARET    = _{ "^" }
 
 //
-NonNegativeInteger = { ASCII_DIGIT+ }
+NonNegativeInteger = @{ ASCII_DIGIT+ }
 LanguageTag = ${ "@" ~ BCP47_LanguageTag }
 QuotedString = ${ "\"" ~ ( !"\"" ~ ("\\\\" | "\\\"" | ANY) )* ~ "\"" }
 NodeID = { BlankNodeLabel }
