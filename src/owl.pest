@@ -330,8 +330,8 @@ PnCharsBase = @{
 
 RFC3987_Iri = @{ RFC3987_IriScheme ~ ":" ~ RFC3987_IriHierPart ~ ("?" ~ RFC3987_IriQuery)? ~ ("#" ~ RFC3987_IriFragment)? }
 
-RFC3987_IriHierPart = {
-    ("//" ~ RFC3987_IriAuthority ~ RFC3987_IriPathAbempty )
+RFC3987_IriHierPart = ${
+    ("//" ~ RFC3987_IriAuthority ~ RFC3987_IriPathAbempty? )
   | RFC3987_IriPathAbsolute
   | RFC3987_IriPathRootless
   | RFC3987_IriPathEmpty
@@ -373,11 +373,11 @@ RFC3987_IriDecOctet   = ${
   | ("25" ~ ('0' .. '5'))
 }
 
-RFC3987_IriIpChar = { RFC3987_IriUnreserved | RFC3987_IriPctEncoded | RFC3987_IriSubDelims | ":" | "@" }
-RFC3987_IriIpLiteral = { "[" ~ (RFC3987_IriIpv6Address ~ RFC3987_IriIpvFutureAddress)* ~ "]" }
+RFC3987_IriIpChar = ${ RFC3987_IriUnreserved | RFC3987_IriPctEncoded | RFC3987_IriSubDelims | ":" | "@" }
+RFC3987_IriIpLiteral = ${ "[" ~ (RFC3987_IriIpv6Address ~ RFC3987_IriIpvFutureAddress)* ~ "]" }
 
 RFC3987_IriIpv6H16  = ${ ASCII_HEX_DIGIT{1,4} }
-RFC3987_IriIpv6Ls32 = { (RFC3987_IriIpv6H16 ~ ":" ~ RFC3987_IriIpv6H16) | RFC3987_IriIpv4Address }
+RFC3987_IriIpv6Ls32 = ${ (RFC3987_IriIpv6H16 ~ ":" ~ RFC3987_IriIpv6H16) | RFC3987_IriIpv4Address }
 
 RFC3987_IriIpv4Address      = ${ RFC3987_IriDecOctet ~ "." ~ RFC3987_IriDecOctet ~ "." ~ RFC3987_IriDecOctet ~ "." ~ RFC3987_IriDecOctet }
 RFC3987_IriIpvFutureAddress = ${ "v" ~ ASCII_HEX_DIGIT+ ~ "." ~ (RFC3987_IriUnreserved | RFC3987_IriSubDelims | ":")+ }
