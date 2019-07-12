@@ -1,20 +1,5 @@
 extern crate horned_functional;
 
-use std::io::BufRead;
-use std::io::BufReader;
-
-// use fastobo_graphs::GraphDocument;
-//
-// lazy_static::lazy_static! {
-//     /// The latest OBO Foundry listing.
-//     static ref FOUNDRY: obofoundry::Foundry = {
-//         let response = ureq::get("http://www.obofoundry.org/registry/ontologies.yml")
-//             .call();
-//         serde_yaml::from_reader(response.into_reader())
-//             .expect("could not read the OBO Foundry listing")
-//     };
-// }
-
 macro_rules! foundrytest {
     ( $(#[$attr:meta])* $name:ident) => (
         #[test]
@@ -27,7 +12,6 @@ macro_rules! foundrytest {
                 .join(stringify!($name))
                 .with_extension("obo.ofn");
             let txt = std::fs::read_to_string(&path).unwrap();
-
             if let Err(e) = horned_functional::parse(&txt) {
                 panic!("could not parse {}: {}", stringify!($name), e);
             }
