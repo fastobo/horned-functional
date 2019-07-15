@@ -7,7 +7,6 @@ use enum_meta::Meta;
 use curie::Curie;
 use curie::PrefixMapping;
 use pest::iterators::Pair;
-use pest::iterators::Pairs;
 
 use super::error::Error;
 use super::parser::Rule;
@@ -404,7 +403,7 @@ impl FromPair for ClassExpression {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
         debug_assert!(pair.as_rule() == Rule::ClassExpression);
 
-        let mut inner = pair.into_inner().next().unwrap();
+        let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::Class => {
                 Class::from_pair(inner, b, p).map(ClassExpression::Class)
@@ -489,7 +488,7 @@ impl FromPair for ClassExpression {
 impl FromPair for DataRange {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
         debug_assert!(pair.as_rule() == Rule::DataRange);
-        let mut inner = pair.into_inner().next().unwrap();
+        let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::Datatype => {
                 Datatype::from_pair(inner, b, p).map(DataRange::Datatype)
@@ -541,7 +540,7 @@ impl FromPair for Facet {
         Facet::all()
             .into_iter()
             .find(|facet| &iri.to_string() == facet.iri_s())
-            .ok_or( Error::InvalidFacet(iri.to_string()) )
+            .ok_or_else(|| Error::InvalidFacet(iri.to_string()))
     }
 }
 
@@ -699,7 +698,7 @@ impl FromPair for OntologyAnnotation {
 }
 
 impl FromPair for (Ontology, PrefixMapping) {
-    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self, Error> {
+    fn from_pair(pair: Pair<Rule>, build: &Build, _prefixes: &PrefixMapping) -> Result<Self, Error> {
 
         debug_assert!(pair.as_rule() == Rule::OntologyDocument);
         let mut pairs = pair.into_inner();
@@ -727,7 +726,7 @@ impl FromPair for (Ontology, PrefixMapping) {
 }
 
 impl FromPair for String {
-    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self, Error> {
+    fn from_pair(pair: Pair<Rule>, _build: &Build, _prefixes: &PrefixMapping) -> Result<Self, Error> {
         debug_assert!(pair.as_rule() == Rule::QuotedString);
         let l = pair.as_str().len();
         let s = &pair.as_str()[1..l-1];
@@ -738,7 +737,7 @@ impl FromPair for String {
 impl FromPair for SubObjectPropertyExpression {
     fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self, Error> {
         debug_assert!(pair.as_rule() == Rule::SubObjectPropertyExpression);
-        let mut inner = pair.into_inner().next().unwrap();
+        let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::ObjectPropertyExpression => {
                 ObjectPropertyExpression::from_pair(inner, b, p)
@@ -814,7 +813,7 @@ mod tests {
     #[test]
     fn import() {
         let build = Build::default();
-        let mut prefixes = PrefixMapping::default();
+        let prefixes = PrefixMapping::default();
 
         assert_parse_into!(
             Import, Rule::Import, build, prefixes,

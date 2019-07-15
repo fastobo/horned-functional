@@ -20,7 +20,8 @@ use self::parser::Rule;
 use self::from_pair::FromPair;
 use self::error::Error;
 
+#[inline]
 pub fn parse(src: &str) -> Result<(Ontology, PrefixMapping), Error> {
-    let mut pair = OwlFunctionalParser::parse(Rule::OntologyDocument, src)?.next().unwrap();
+    let pair = OwlFunctionalParser::parse(Rule::OntologyDocument, src)?.next().unwrap();
     FromPair::from_pair(pair, &Build::new(), &PrefixMapping::default())
 }

@@ -1,6 +1,4 @@
 use pest::error::Error;
-use pest::error::ErrorVariant;
-use pest::iterators::Pair;
 use pest::iterators::Pairs;
 
 /// The OWL2 Functional-style Syntax parser.
@@ -26,7 +24,6 @@ impl OwlFunctionalParser {
 mod tests {
 
     use super::*;
-    use pest::Parser;
 
     macro_rules! assert_parse {
         ($rule:path, $doc:expr) => {
