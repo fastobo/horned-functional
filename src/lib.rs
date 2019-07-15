@@ -1,7 +1,7 @@
 #[macro_use]
-extern crate pest_derive;
+extern crate err_derive;
 #[macro_use]
-extern crate failure;
+extern crate pest_derive;
 
 extern crate curie;
 extern crate horned_owl;

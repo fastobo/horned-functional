@@ -1,20 +1,20 @@
 use super::parser::Rule;
 
-#[derive(Debug, Fail)]
+#[derive(Debug, Error)]
 pub enum Error {
-    #[fail(display = "{}", 0)]
-    PestError(#[cause] pest::error::Error<Rule>),
+    #[error(display = "{}", 0)]
+    PestError(#[error(cause)] pest::error::Error<Rule>),
 
-    #[fail(display = "{}", 0)]
-    IOError(#[cause] std::io::Error),
+    #[error(display = "{}", 0)]
+    IOError(#[error(cause)] std::io::Error),
 
-    #[fail(display = "invalid prefix: {:?}", 0)]
+    #[error(display = "invalid prefix: {:?}", 0)]
     InvalidPrefixError(curie::InvalidPrefixError),
 
-    #[fail(display = "expansion error: {:?}", 0)]
+    #[error(display = "expansion error: {:?}", 0)]
     ExpansionError(curie::ExpansionError),
 
-    #[fail(display = "invalid facet: {}", 0)]
+    #[error(display = "invalid facet: {}", 0)]
     InvalidFacet(String),
 }
 
