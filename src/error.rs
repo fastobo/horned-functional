@@ -1,5 +1,9 @@
 use super::parser::Rule;
 
+/// The result type for this crate.
+pub type Result<T> = std::result::Result<T, Error>;
+
+/// The error type for this crate.
 #[derive(Debug, Error)]
 pub enum Error {
     #[error(display = "{}", 0)]
@@ -18,13 +22,11 @@ pub enum Error {
     InvalidFacet(String),
 }
 
-
 impl From<pest::error::Error<Rule>> for Error {
     fn from(e: pest::error::Error<Rule>) -> Self {
         Error::PestError(e)
     }
 }
-
 
 impl From<std::io::Error> for Error {
     fn from(e: std::io::Error) -> Self {
@@ -32,13 +34,11 @@ impl From<std::io::Error> for Error {
     }
 }
 
-
 impl From<curie::InvalidPrefixError> for Error {
     fn from(e: curie::InvalidPrefixError) -> Self {
         Error::InvalidPrefixError(e)
     }
 }
-
 
 impl From<curie::ExpansionError> for Error {
     fn from(e: curie::ExpansionError) -> Self {

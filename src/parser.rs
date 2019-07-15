@@ -1,7 +1,10 @@
-use pest::error::Error;
 use pest::iterators::Pairs;
+use super::error::Result;
 
 /// The OWL2 Functional-style Syntax parser.
+///
+/// You shouldn't have to use this type directly: instead, use the top level
+/// `parse` function to parse an ontology document.
 #[derive(Debug, Parser)]
 #[grammar = "owl.pest"]
 pub struct OwlFunctionalParser;
@@ -15,8 +18,8 @@ impl OwlFunctionalParser {
     ///
     /// [`Rule`]: ./enum.Rule.html
     /// [`pest::Parser::parse`]: https://docs.rs/pest/latest/pest/trait.Parser.html
-    pub fn parse(rule: Rule, input: &str) -> Result<Pairs<Rule>, Error<Rule>> {
-        <Self as pest::Parser<Rule>>::parse(rule, input)
+    pub fn parse(rule: Rule, input: &str) -> Result<Pairs<Rule>> {
+        <Self as pest::Parser<Rule>>::parse(rule, input).map_err(From::from)
     }
 }
 
