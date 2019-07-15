@@ -8,9 +8,9 @@ use curie::Curie;
 use curie::PrefixMapping;
 use pest::iterators::Pair;
 
-use super::error::Error;
-use super::error::Result;
-use super::parser::Rule;
+use crate::error::Error;
+use crate::error::Result;
+use crate::parser::Rule;
 
 
 // ---------------------------------------------------------------------------
@@ -20,8 +20,28 @@ use super::parser::Rule;
 /// `Pair<Rule>` values can be obtained from the `OwlFunctionalParser` struct
 /// after parsing a
 pub trait FromPair: Sized {
+    /// The valid production rules for the implementor.
+    const RULES: &'static [Rule];
+
     /// Create a new instance from a `Pair`.
-    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self>;
+    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+        if cfg!(debug_assertions) {
+            if !Self::RULES.contains(&pair.as_rule()) {
+                return Err(Error::from(
+                    pest::error::Error::new_from_span(
+                        pest::error::ErrorVariant::ParsingError {
+                            positives: vec![pair.as_rule().clone()],
+                            negatives: Self::RULES.iter().cloned().collect(),
+                        },
+                        pair.as_span(),
+                    )
+                ));
+            }
+        }
+        Self::from_pair_unchecked(pair, build, prefixes)
+    }
+
+    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self>;
 }
 
 
@@ -30,8 +50,8 @@ pub trait FromPair: Sized {
 macro_rules! impl_wrapper {
     ($ty:ident, $rule:path) => {
         impl FromPair for $ty {
-            fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-                debug_assert!(pair.as_rule() == $rule);
+            const RULES: &'static [Rule] = &[$rule];
+            fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
                 FromPair::from_pair(pair.into_inner().next().unwrap(), b, p).map($ty)
             }
         }
@@ -56,7 +76,52 @@ impl_wrapper!(DeclareNamedIndividual, Rule::NamedIndividualDeclaration);
 // ---------------------------------------------------------------------------
 
 impl FromPair for AnnotatedAxiom {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
+    const RULES: &'static [Rule] = &[
+        Rule::Axiom,
+        Rule::ClassAxiom,
+        Rule::ObjectPropertyAxiom,
+        Rule::DataPropertyAxiom,
+        Rule::Assertion,
+        Rule::AnnotationAxiom,
+        Rule::Declaration,
+        Rule::SubClassOf,
+        Rule::EquivalentClasses,
+        Rule::DisjointClasses,
+        Rule::DisjointUnion,
+        Rule::SubObjectPropertyOf,
+        Rule::EquivalentObjectProperties,
+        Rule::DisjointObjectProperties,
+        Rule::ObjectPropertyDomain,
+        Rule::ObjectPropertyRange,
+        Rule::InverseObjectProperties,
+        Rule::InverseObjectProperties,
+        Rule::InverseFunctionalObjectProperty,
+        Rule::ReflexiveObjectProperty,
+        Rule::IrreflexiveObjectProperty,
+        Rule::SymmetricObjectProperty,
+        Rule::AsymmetricObjectProperty,
+        Rule::TransitiveObjectProperty,
+        Rule::SubDataPropertyOf,
+        Rule::EquivalentDataProperties,
+        Rule::DisjointDataProperties,
+        Rule::DataPropertyDomain,
+        Rule::DataPropertyRange,
+        Rule::FunctionalDataProperty,
+        Rule::DatatypeDefinition,
+        Rule::HasKey,
+        Rule::SameIndividual,
+        Rule::DifferentIndividuals,
+        Rule::ClassAssertion,
+        Rule::ObjectPropertyAssertion,
+        Rule::NegativeObjectPropertyAssertion,
+        Rule::DataPropertyAssertion,
+        Rule::NegativeDataPropertyAssertion,
+        Rule::AnnotationAssertion,
+        Rule::SubAnnotationPropertyOf,
+        Rule::AnnotationPropertyDomain,
+        Rule::AnnotationPropertyRange,
+    ];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         match pair.as_rule() {
             // Rule::AnnotatedAxiom
             Rule::Axiom => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
@@ -363,9 +428,8 @@ impl FromPair for AnnotatedAxiom {
 }
 
 impl FromPair for Annotation {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::Annotation);
-
+    const RULES: &'static [Rule] = &[Rule::Annotation];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let mut inner = pair.into_inner();
         let _annotations: BTreeSet<Annotation> = FromPair::from_pair(
             inner.next().unwrap(), b, p
@@ -379,8 +443,8 @@ impl FromPair for Annotation {
 }
 
 impl FromPair for AnnotationValue {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::AnnotationValue);
+    const RULES: &'static [Rule] = &[Rule::AnnotationValue];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::IRI => IRI::from_pair(inner, b, p).map(AnnotationValue::IRI),
@@ -392,11 +456,8 @@ impl FromPair for AnnotationValue {
 }
 
 impl FromPair for BTreeSet<Annotation> {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(
-            [Rule::AnnotationAnnotations, Rule::AxiomAnnotations].contains(&pair.as_rule()),
-            "invalid rule in BTreeSet<Annotation>: {:?}", pair.as_rule()
-        );
+    const RULES: &'static [Rule] = &[Rule::AnnotationAnnotations, Rule::AxiomAnnotations];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         pair
             .into_inner()
             .map(|pair| Annotation::from_pair(pair, b, p))
@@ -405,9 +466,8 @@ impl FromPair for BTreeSet<Annotation> {
 }
 
 impl FromPair for ClassExpression {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::ClassExpression);
-
+    const RULES: &'static [Rule] = &[Rule::ClassExpression];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::Class => {
@@ -491,8 +551,8 @@ impl FromPair for ClassExpression {
 }
 
 impl FromPair for DataRange {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::DataRange);
+    const RULES: &'static [Rule] = &[Rule::DataRange];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::Datatype => {
@@ -539,8 +599,8 @@ impl FromPair for DataRange {
 }
 
 impl FromPair for Facet {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::ConstrainingFacet);
+    const RULES: &'static [Rule] = &[Rule::ConstrainingFacet];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let iri = IRI::from_pair(pair.into_inner().next().unwrap(), b, p)?;
         Facet::all()
             .into_iter()
@@ -550,8 +610,8 @@ impl FromPair for Facet {
 }
 
 impl FromPair for FacetRestriction {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::FacetRestriction);
+    const RULES: &'static [Rule] = &[Rule::FacetRestriction];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let mut inner = pair.into_inner();
         let f = Facet::from_pair(inner.next().unwrap(), b, p)?;
         let l = Literal::from_pair(inner.next().unwrap(), b, p)?;
@@ -560,7 +620,8 @@ impl FromPair for FacetRestriction {
 }
 
 impl FromPair for IRI {
-    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+    const RULES: &'static [Rule] = &[Rule::IRI, Rule::AbbreviatedIRI, Rule::FullIRI];
+    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
         match pair.as_rule() {
             Rule::IRI => {
                 let inner = pair.into_inner().next().unwrap();
@@ -586,7 +647,8 @@ impl FromPair for IRI {
 }
 
 impl FromPair for NamedIndividual {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
+    const RULES: &'static [Rule] = &[Rule::Individual, Rule::SourceIndividual, Rule::TargetIndividual, Rule::AnonymousIndividual, Rule::NamedIndividual];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         match pair.as_rule() {
             Rule::Individual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
             Rule::SourceIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
@@ -602,7 +664,8 @@ impl FromPair for NamedIndividual {
 }
 
 impl FromPair for Literal {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
+    const RULES: &'static [Rule] = &[Rule::Literal, Rule::TypedLiteral, Rule::StringLiteralWithLanguage, Rule::StringLiteralNoLanguage];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         match pair.as_rule() {
             Rule::Literal => {
                 Self::from_pair(pair.into_inner().next().unwrap(), b, p)
@@ -642,8 +705,8 @@ impl FromPair for Literal {
 }
 
 impl FromPair for ObjectPropertyExpression {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        println!("in ObjectPropertyExpression.from_pair: {:?}", pair);
+    const RULES: &'static [Rule] = &[Rule::ObjectPropertyExpression];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::ObjectProperty => ObjectProperty::from_pair(inner, b, p)
@@ -656,7 +719,8 @@ impl FromPair for ObjectPropertyExpression {
 }
 
 impl FromPair for Ontology {
-    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+    const RULES: &'static [Rule] = &[Rule::Ontology];
+    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
         debug_assert!(pair.as_rule() == Rule::Ontology);
         let mut pairs = pair.into_inner();
         let mut pair = pairs.next().unwrap();
@@ -696,16 +760,15 @@ impl FromPair for Ontology {
 }
 
 impl FromPair for OntologyAnnotation {
-    fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::Annotation, "unexpected rule in `OntologyAnnotation: {:?}", pair.as_rule());
+    const RULES: &'static [Rule] = &[Rule::Annotation];
+    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
         Annotation::from_pair(pair, build, prefixes).map(OntologyAnnotation)
     }
 }
 
 impl FromPair for (Ontology, PrefixMapping) {
-    fn from_pair(pair: Pair<Rule>, build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
-
-        debug_assert!(pair.as_rule() == Rule::OntologyDocument);
+    const RULES: &'static [Rule] = &[Rule::OntologyDocument];
+    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
         let mut pairs = pair.into_inner();
 
         // Build the prefix mapping and use it to build the ontology
@@ -731,8 +794,8 @@ impl FromPair for (Ontology, PrefixMapping) {
 }
 
 impl FromPair for String {
-    fn from_pair(pair: Pair<Rule>, _build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::QuotedString);
+    const RULES: &'static [Rule] = &[Rule::QuotedString];
+    fn from_pair_unchecked(pair: Pair<Rule>, _build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
         let l = pair.as_str().len();
         let s = &pair.as_str()[1..l-1];
         Ok(s.replace(r"\\", r"\").replace(r#"\""#, r#"""#))
@@ -740,8 +803,8 @@ impl FromPair for String {
 }
 
 impl FromPair for SubObjectPropertyExpression {
-    fn from_pair(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::SubObjectPropertyExpression);
+    const RULES: &'static [Rule] = &[Rule::SubObjectPropertyExpression];
+    fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
             Rule::ObjectPropertyExpression => {
@@ -762,8 +825,8 @@ impl FromPair for SubObjectPropertyExpression {
 }
 
 impl FromPair for u32 {
-    fn from_pair(pair: Pair<Rule>, _b: &Build, _p: &PrefixMapping) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::NonNegativeInteger);
+    const RULES: &'static [Rule] = &[Rule::NonNegativeInteger];
+    fn from_pair_unchecked(pair: Pair<Rule>, _b: &Build, _p: &PrefixMapping) -> Result<Self> {
         Ok(Self::from_str(pair.as_str()).expect("cannot fail with the right rule"))
     }
 }
