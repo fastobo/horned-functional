@@ -338,9 +338,21 @@ impl FromPair for AnnotatedAxiom {
                 let super_property = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
                 Ok(Self::new(SubAnnotationPropertyOf { sub_property, super_property }, annotations))
             }
-            Rule::AnnotationPropertyDomain => unimplemented!(),
-            Rule::AnnotationPropertyRange => unimplemented!(),
 
+            Rule::AnnotationPropertyDomain => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ap = AnnotationProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let iri = IRI::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(AnnotationPropertyDomain::new(ap, iri), annotations))
+            }
+            Rule::AnnotationPropertyRange => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ap = AnnotationProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let iri = IRI::from_pair(inner.next().unwrap(), b, p)?;
+                Ok(Self::new(AnnotationPropertyRange::new(ap, iri), annotations))
+            }
             _ => unreachable!("invalid Rule in AnnotatedAxiom::from_pair"),
         }
     }
