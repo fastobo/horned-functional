@@ -493,22 +493,25 @@ impl FromPair for ClassExpression {
                 o.map(|o| ClassExpression::ObjectOneOf { o })
             }
             Rule::ObjectSomeValuesFrom => {
-                let mut pair = inner.into_inner();
-                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pair.next().unwrap(), b, p).map(Box::new)?;
+                let mut pairs = inner.into_inner();
+                let o = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pairs.next().unwrap(), b, p).map(Box::new)?;
                 Ok(ClassExpression::ObjectSomeValuesFrom { o, ce })
             }
             Rule::ObjectAllValuesFrom => {
-                let mut pair = inner.into_inner();
-                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pair.next().unwrap(), b, p).map(Box::new)?;
+                let mut pairs = inner.into_inner();
+                let o = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
+                let ce = Self::from_pair(pairs.next().unwrap(), b, p).map(Box::new)?;
                 Ok(ClassExpression::ObjectAllValuesFrom { o, ce })
             }
             Rule::ObjectHasValue => {
-                unimplemented!()
+                let mut pairs = inner.into_inner();
+                let o = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
+                let i = NamedIndividual::from_pair(pairs.next().unwrap(), b, p)?;
+                Ok(ClassExpression::ObjectHasValue { o, i })
             }
             Rule::ObjectHasSelf => {
-                unimplemented!()
+                unimplemented!("FromPair::from_pair for ClassExpression::ObjectHasSelf")
             }
             Rule::ObjectMinCardinality => {
                 let mut pair = inner.into_inner();
@@ -541,13 +544,25 @@ impl FromPair for ClassExpression {
                 unimplemented!()
             }
             Rule::DataMinCardinality => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
+                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
+                let dr = DataRange::from_pair(pair.next().expect("unsupported"), b, p)?;
+                Ok(ClassExpression::DataMinCardinality { n, dp, dr })
             }
             Rule::DataMaxCardinality => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
+                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
+                let dr = DataRange::from_pair(pair.next().expect("unsupported"), b, p)?;
+                Ok(ClassExpression::DataMaxCardinality { n, dp, dr })
             }
             Rule::DataExactCardinality => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
+                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
+                let dr = DataRange::from_pair(pair.next().expect("unsupported"), b, p)?;
+                Ok(ClassExpression::DataExactCardinality { n, dp, dr })
             }
             _ => unreachable!("invalid rule in ClassExpression::from_pair"),
         }
