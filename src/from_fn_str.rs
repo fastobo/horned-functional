@@ -1,5 +1,7 @@
+use std::collections::BTreeSet;
+
 use curie::PrefixMapping;
-use horned_owl::model::Build;
+use horned_owl::model::*;
 
 use crate::error::Error;
 use crate::error::Result;
@@ -30,41 +32,80 @@ pub trait FromFunctional: Sized + FromPair {
     }
 }
 
-
-impl<T: Sized + FromPair> FromFunctional for T {
-    fn from_ofn(s: &str, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
-        for rule in T::RULES {
-            if let Ok(mut pairs) = OwlFunctionalParser::parse(*rule, s) {
-                if pairs.as_str().len() == s.len() {
-                    return T::from_pair(pairs.next().unwrap(), build, prefixes);
-                } else {
-                    return Err(
-                        Error::from(
-                            pest::error::Error::new_from_span(
-                                pest::error::ErrorVariant::CustomError {
-                                    message: "remaining input".to_string(),
-                                },
-                                pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap()
+// We use a macro instead of a blanket impl to have all types displayed in
+// the documentation.
+macro_rules! implement {
+    ($($ty:ty),+) => {
+        $(impl FromFunctional for $ty {
+            fn from_ofn(s: &str, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+                for rule in Self::RULES {
+                    if let Ok(mut pairs) = OwlFunctionalParser::parse(*rule, s) {
+                        if pairs.as_str().len() == s.len() {
+                            return Self::from_pair(pairs.next().unwrap(), build, prefixes);
+                        } else {
+                            return Err(
+                                Error::from(
+                                    pest::error::Error::new_from_span(
+                                        pest::error::ErrorVariant::CustomError {
+                                            message: "remaining input".to_string(),
+                                        },
+                                        pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap()
+                                    )
+                                )
                             )
+                        }
+                    }
+                }
+
+                return Err(
+                    Error::from(
+                        pest::error::Error::new_from_span(
+                            pest::error::ErrorVariant::ParsingError {
+                                positives: Vec::new(),
+                                negatives: Self::RULES.iter().cloned().collect(),
+                            },
+                            pest::Span::new(s, 0, s.len()).unwrap()
                         )
                     )
-                }
+                );
             }
-        }
-
-        return Err(
-            Error::from(
-                pest::error::Error::new_from_span(
-                    pest::error::ErrorVariant::ParsingError {
-                        positives: Vec::new(),
-                        negatives: Self::RULES.iter().cloned().collect(),
-                    },
-                    pest::Span::new(s, 0, s.len()).unwrap()
-                )
-            )
-        );
+        })*
     }
 }
+
+implement!(
+    AnnotationProperty,
+    AnnotatedAxiom,
+    Annotation,
+    AnnotationValue,
+    BTreeSet<Annotation>,
+    Class,
+    ClassExpression,
+    DataProperty,
+    DataRange,
+    Datatype,
+    DeclareClass,
+    DeclareDatatype,
+    DeclareObjectProperty,
+    DeclareDataProperty,
+    DeclareAnnotationProperty,
+    DeclareNamedIndividual,
+    Facet,
+    FacetRestriction,
+    Import,
+    IRI,
+    NamedIndividual,
+    Literal,
+    ObjectPropertyExpression,
+    ObjectProperty,
+    Ontology,
+    OntologyAnnotation,
+    (Ontology, PrefixMapping),
+    String,
+    SubObjectPropertyExpression,
+    u32
+);
+
 
 
 #[cfg(test)]
