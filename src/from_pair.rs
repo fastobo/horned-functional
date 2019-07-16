@@ -171,8 +171,11 @@ impl FromPair for AnnotatedAxiom {
                 Ok(Self::new(DisjointClasses(ce?), annotations))
             }
             Rule::DisjointUnion => {
-                // FIXME: missing definition in `horned-owl`
-                unimplemented!()
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let cls = Class::from_pair(inner.next().unwrap(), b, p)?;
+                let ce: Result<_> = inner.map(|pair| FromPair::from_pair(pair, b, p)).collect();
+                Ok(Self::new(DisjointUnion(cls, ce?), annotations))
             }
 
             // ObjectPropertyAxiom
@@ -486,7 +489,8 @@ impl FromPair for ClassExpression {
                 Ok(ClassExpression::ObjectComplementOf { ce })
             }
             Rule::ObjectOneOf => {
-                unimplemented!()
+                let o: Result<_> = inner.into_inner().map(|pair| NamedIndividual::from_pair(pair, b, p)).collect();
+                o.map(|o| ClassExpression::ObjectOneOf { o })
             }
             Rule::ObjectSomeValuesFrom => {
                 let mut pair = inner.into_inner();
@@ -508,21 +512,21 @@ impl FromPair for ClassExpression {
             }
             Rule::ObjectMinCardinality => {
                 let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)? as i32;
+                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
                 let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
                 let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
                 Ok(ClassExpression::ObjectMinCardinality { n, o, ce })
             }
             Rule::ObjectMaxCardinality => {
                 let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)? as i32;
+                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
                 let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
                 let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
                 Ok(ClassExpression::ObjectMaxCardinality { n, o, ce })
             }
             Rule::ObjectExactCardinality => {
                 let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)? as i32;
+                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
                 let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
                 let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
                 Ok(ClassExpression::ObjectExactCardinality { n, o, ce })
