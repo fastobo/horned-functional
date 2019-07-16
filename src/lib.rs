@@ -12,6 +12,10 @@ mod from_fn_str;
 mod error;
 mod parser;
 
+use std::fs::File;
+use std::path::Path;
+use std::io::Read;
+
 use curie::PrefixMapping;
 use horned_owl::model::Ontology;
 
@@ -22,19 +26,22 @@ pub use self::from_fn_str::FromFunctional;
 /// Parse an entire OWL document from the given string.
 #[inline]
 pub fn from_str<S: AsRef<str>>(src: S) -> Result<(Ontology, PrefixMapping)> {
-    FromFunctional::from_ofn_str(src.as_str())
+    FromFunctional::from_ofn_str(src.as_ref())
 }
 
 /// Parse an entire OWL document from the given string.
 #[inline]
-pub fn from_reader<R: Read>(r: Read) -> Result<(Ontology, PrefixMapping)> {
+pub fn from_reader<R: Read + 'static>(mut r: R) -> Result<(Ontology, PrefixMapping)> {
     let mut s = String::new();
     r.read_to_string(&mut s)?;
     from_str(s)
 }
 
+
 /// Parse an entire OWL document from the given string.
 #[inline]
 pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(Ontology, PrefixMapping)> {
-    File::open(path).map_err(From::from).and_then(|f| from_reader(f))
+    //let f = File::open(path).map_err(Error::from)?;
+    from_reader(File::open(path)?)
 }
+
