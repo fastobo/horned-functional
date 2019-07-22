@@ -183,12 +183,12 @@ impl FromPair for AnnotatedAxiom {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
 
-                let sub_property = SubObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
-                let super_property = ObjectPropertyExpression::from_pair(
+                let sub = SubObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
+                let sup = ObjectPropertyExpression::from_pair(
                     inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
 
                 Ok(Self::new(
-                    SubObjectPropertyOf { super_property, sub_property },
+                    SubObjectPropertyOf { sup, sub },
                     annotations,
                 ))
             }
@@ -272,10 +272,10 @@ impl FromPair for AnnotatedAxiom {
             Rule::SubDataPropertyOf => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let sub_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let super_property = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let sub = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let sup = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
-                    SubDataPropertyOf { sub_property, super_property },
+                    SubDataPropertyOf { sub, sup },
                     annotations,
                 ))
             }
@@ -406,9 +406,9 @@ impl FromPair for AnnotatedAxiom {
             Rule::SubAnnotationPropertyOf => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let sub_property = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
-                let super_property = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
-                Ok(Self::new(SubAnnotationPropertyOf { sub_property, super_property }, annotations))
+                let sub = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
+                let sup = FromPair::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
+                Ok(Self::new(SubAnnotationPropertyOf { sub, sup }, annotations))
             }
 
             Rule::AnnotationPropertyDomain => {
@@ -485,8 +485,8 @@ impl FromPair for ClassExpression {
                 Ok(ClassExpression::ObjectUnionOf { o })
             }
             Rule::ObjectComplementOf => {
-                let ce = Self::from_pair(inner.into_inner().next().unwrap(), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectComplementOf { ce })
+                let bce = Self::from_pair(inner.into_inner().next().unwrap(), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectComplementOf { bce })
             }
             Rule::ObjectOneOf => {
                 let o: Result<_> = inner.into_inner().map(|pair| NamedIndividual::from_pair(pair, b, p)).collect();
@@ -511,7 +511,9 @@ impl FromPair for ClassExpression {
                 Ok(ClassExpression::ObjectHasValue { o, i })
             }
             Rule::ObjectHasSelf => {
-                unimplemented!("FromPair::from_pair for ClassExpression::ObjectHasSelf")
+                let mut pair = inner.into_inner().next().unwrap();
+                let expr = ObjectPropertyExpression::from_pair(pair, b, p)?;
+                Ok(ClassExpression::ObjectHasSelf(expr))
             }
             Rule::ObjectMinCardinality => {
                 let mut pair = inner.into_inner();
@@ -531,8 +533,8 @@ impl FromPair for ClassExpression {
                 let mut pair = inner.into_inner();
                 let n = u32::from_pair(pair.next().unwrap(), b, p)?;
                 let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectExactCardinality { n, o, ce })
+                let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectExactCardinality { n, o, bce })
             }
             Rule::DataSomeValuesFrom => {
                 unimplemented!()
