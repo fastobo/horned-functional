@@ -392,14 +392,11 @@ impl FromPair for AnnotatedAxiom {
             Rule::AnnotationAssertion => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let property = AnnotationProperty::from_pair(inner.next().unwrap(), b, p)?;
+                let ap = AnnotationProperty::from_pair(inner.next().unwrap(), b, p)?;
                 let subject = IRI::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
-                let value = AnnotationValue::from_pair(inner.next().unwrap(), b, p)?;
+                let av = AnnotationValue::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
-                    AnnotationAssertion::new(subject, Annotation {
-                        annotation_property: property,
-                        annotation_value: value,
-                    }),
+                    AnnotationAssertion::new(subject, Annotation { ap, av }),
                     annotations,
                 ))
             }
@@ -439,8 +436,8 @@ impl FromPair for Annotation {
         )?;
 
         Ok(Annotation {
-            annotation_property: FromPair::from_pair(inner.next().unwrap(), b, p)?,
-            annotation_value: FromPair::from_pair(inner.next().unwrap(), b, p)?,
+            ap: FromPair::from_pair(inner.next().unwrap(), b, p)?,
+            av: FromPair::from_pair(inner.next().unwrap(), b, p)?,
         })
     }
 }
@@ -477,64 +474,74 @@ impl FromPair for ClassExpression {
                 Class::from_pair(inner, b, p).map(ClassExpression::Class)
             }
             Rule::ObjectIntersectionOf => {
-                let o = inner.into_inner().map(|pair| Self::from_pair(pair, b, p)).collect::<Result<_>>()?;
-                Ok(ClassExpression::ObjectIntersectionOf { o })
+                inner
+                    .into_inner()
+                    .map(|pair| Self::from_pair(pair, b, p))
+                    .collect::<Result<_>>()
+                    .map(ClassExpression::ObjectIntersectionOf)
             }
             Rule::ObjectUnionOf => {
-                let o = inner.into_inner().map(|pair| Self::from_pair(pair, b, p)).collect::<Result<_>>()?;
-                Ok(ClassExpression::ObjectUnionOf { o })
+                inner
+                    .into_inner()
+                    .map(|pair| Self::from_pair(pair, b, p))
+                    .collect::<Result<_>>()
+                    .map(ClassExpression::ObjectUnionOf)
             }
             Rule::ObjectComplementOf => {
-                let bce = Self::from_pair(inner.into_inner().next().unwrap(), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectComplementOf { bce })
+                Self::from_pair(inner.into_inner().next().unwrap(), b, p)
+                    .map(Box::new)
+                    .map(ClassExpression::ObjectComplementOf)
             }
             Rule::ObjectOneOf => {
-                let o: Result<_> = inner.into_inner().map(|pair| NamedIndividual::from_pair(pair, b, p)).collect();
-                o.map(|o| ClassExpression::ObjectOneOf { o })
+                inner
+                    .into_inner()
+                    .map(|pair| NamedIndividual::from_pair(pair, b, p))
+                    .collect::<Result<_>>()
+                    .map(ClassExpression::ObjectOneOf)
             }
             Rule::ObjectSomeValuesFrom => {
                 let mut pairs = inner.into_inner();
-                let o = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pairs.next().unwrap(), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectSomeValuesFrom { o, ce })
+                let ope = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
+                let bce = Self::from_pair(pairs.next().unwrap(), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectSomeValuesFrom { ope, bce })
             }
             Rule::ObjectAllValuesFrom => {
                 let mut pairs = inner.into_inner();
-                let o = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pairs.next().unwrap(), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectAllValuesFrom { o, ce })
+                let ope = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
+                let bce = Self::from_pair(pairs.next().unwrap(), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectAllValuesFrom { ope, bce })
             }
             Rule::ObjectHasValue => {
                 let mut pairs = inner.into_inner();
-                let o = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
+                let ope = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
                 let i = NamedIndividual::from_pair(pairs.next().unwrap(), b, p)?;
-                Ok(ClassExpression::ObjectHasValue { o, i })
+                Ok(ClassExpression::ObjectHasValue { ope, i })
             }
             Rule::ObjectHasSelf => {
-                let mut pair = inner.into_inner().next().unwrap();
+                let pair = inner.into_inner().next().unwrap();
                 let expr = ObjectPropertyExpression::from_pair(pair, b, p)?;
                 Ok(ClassExpression::ObjectHasSelf(expr))
             }
             Rule::ObjectMinCardinality => {
                 let mut pair = inner.into_inner();
                 let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectMinCardinality { n, o, ce })
+                let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectMinCardinality { n, ope, bce })
             }
             Rule::ObjectMaxCardinality => {
                 let mut pair = inner.into_inner();
                 let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let ce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectMaxCardinality { n, o, ce })
+                let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
+                Ok(ClassExpression::ObjectMaxCardinality { n, ope, bce })
             }
             Rule::ObjectExactCardinality => {
                 let mut pair = inner.into_inner();
                 let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let o = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
+                let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
                 let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectExactCardinality { n, o, bce })
+                Ok(ClassExpression::ObjectExactCardinality { n, ope, bce })
             }
             Rule::DataSomeValuesFrom => {
                 unimplemented!()
