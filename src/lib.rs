@@ -23,13 +23,13 @@ pub use self::error::Error;
 pub use self::error::Result;
 pub use self::from_fn_str::FromFunctional;
 
-/// Parse an entire OWL document from the given string.
+/// Parse an entire OWL document from a string.
 #[inline]
 pub fn from_str<S: AsRef<str>>(src: S) -> Result<(Ontology, PrefixMapping)> {
     FromFunctional::from_ofn_str(src.as_ref())
 }
 
-/// Parse an entire OWL document from the given string.
+/// Parse an entire OWL document from a `Read` implementor.
 #[inline]
 pub fn from_reader<R: Read + 'static>(mut r: R) -> Result<(Ontology, PrefixMapping)> {
     let mut s = String::new();
@@ -38,10 +38,9 @@ pub fn from_reader<R: Read + 'static>(mut r: R) -> Result<(Ontology, PrefixMappi
 }
 
 
-/// Parse an entire OWL document from the given string.
+/// Parse an entire OWL document from a file on the local filesystem..
 #[inline]
 pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(Ontology, PrefixMapping)> {
     //let f = File::open(path).map_err(Error::from)?;
     from_reader(File::open(path)?)
 }
-
