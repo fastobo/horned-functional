@@ -1,6 +1,6 @@
 # `horned-functional` [![Star me](https://img.shields.io/github/stars/fastobo/horned-functional.svg?style=social&label=Star&maxAge=3600)](https://github.com/fastobo/horned-functional/stargazers)
 
-*An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser for `horned-owl`*
+*An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser for [`horned-owl`](https://github.com/phillord/horned-owl)*
 
 [![TravisCI](https://img.shields.io/travis/fastobo/horned-functional/master.svg?maxAge=600&style=flat-square)](https://travis-ci.org/fastobo/horned-functional/branches)
 [![Codecov](https://img.shields.io/codecov/c/gh/fastobo/horned-functional/master.svg?style=flat-square&maxAge=600)](https://codecov.io/gh/fastobo/horned-functional)
@@ -10,3 +10,63 @@
 [![Documentation](https://img.shields.io/badge/docs.rs-latest-4d76ae.svg?maxAge=2678400&style=flat-square)](https://docs.rs/horned-functional)
 [![Changelog](https://img.shields.io/badge/keep%20a-changelog-8A0707.svg?maxAge=2678400&style=flat-square)](https://github.com/fastobo/horned-functional/blob/master/CHANGELOG.md)
 [![GitHub issues](https://img.shields.io/github/issues/fastobo/horned-functional.svg?style=flat-square)](https://github.com/fastobo/horned-functional/issues)
+
+## Overview
+
+This library provides an OWL Functional-style parser implementation for the
+`horned-owl` library, which provides the complete OWL2 model as a Rust library.
+
+The parser is implemented as a `pest` parser, using a translation of the BNF
+grammar. It provides spanned errors to easily identify the faulty parts of an
+invalid OWL2 document.
+
+All OWL2 entities also receive an implementation of `FromFunctional`, which can
+be used to deserialize each entity independently from their functional syntax
+representation. Since the deserialization is context-dependent when not
+considering the entire document, it is possible to provide a custom prefix
+mapping to handle compact identifiers in situations where one is needed.
+
+## Usage
+
+Add `horned-owl` and `horned-functional` to the `[dependencies]` sections of
+your `Cargo.toml` manifest:
+```toml
+[dependencies]
+horned-functional = "0.1.0"
+```
+
+The `from_reader` function is the easiest way to deserialize an OWL Functional
+document from a `Read` implementor:
+```rust,no_run
+extern crate ureq;
+extern crate horned_functional;
+
+fn main() {
+    let url = "https://raw.githubusercontent.com/ha-mo-we/Racer/master/examples/owl2/owl-primer-mod.ofn";
+
+    let response = ureq::get(url).call();
+    let mut reader = response.into_reader();
+
+    match horned_functional::from_reader(reader) {
+      Ok((ont, _)) => println!("Number of axioms: {}", ont.iter().count()),
+      Err(e) => panic!("could not parse document: {}", e)
+    };
+}
+```
+
+
+## Feedback
+
+Found a bug ? Have an enhancement request ? Head over to the
+[GitHub issue tracker](https://github.com/fastobo/horned-functional/issues) of the project if
+you need to report or ask something. If you are filling in on a bug, please include as much
+information as you can about the issue, and try to recreate the same bug in a simple, easily
+reproducible situation.
+
+
+## About
+
+This project was developed by [Martin Larralde](https://github.com/althonos)
+as part of a Master's Degree internship in the [BBOP team](http://berkeleybop.org/) of the
+[Lawrence Berkeley National Laboratory](https://www.lbl.gov/), under the supervision of
+[Chris Mungall](http://biosciences.lbl.gov/profiles/chris-mungall/).

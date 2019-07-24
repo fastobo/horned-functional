@@ -1,3 +1,6 @@
+#![cfg_attr(feature = "_doc", feature(doc_cfg, external_doc))]
+#![cfg_attr(feature = "_doc", doc(include = "../README.md"))]
+
 #[macro_use]
 extern crate err_derive;
 #[macro_use]
@@ -31,7 +34,7 @@ pub fn from_str<S: AsRef<str>>(src: S) -> Result<(Ontology, PrefixMapping)> {
 
 /// Parse an entire OWL document from a `Read` implementor.
 #[inline]
-pub fn from_reader<R: Read + 'static>(mut r: R) -> Result<(Ontology, PrefixMapping)> {
+pub fn from_reader<R: Read>(mut r: R) -> Result<(Ontology, PrefixMapping)> {
     let mut s = String::new();
     r.read_to_string(&mut s)?;
     from_str(s)
@@ -40,6 +43,5 @@ pub fn from_reader<R: Read + 'static>(mut r: R) -> Result<(Ontology, PrefixMappi
 /// Parse an entire OWL document from a file on the local filesystem..
 #[inline]
 pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(Ontology, PrefixMapping)> {
-    //let f = File::open(path).map_err(Error::from)?;
-    from_reader(File::open(path)?)
+    File::open(path).map_err(Error::from).and_then(from_reader)
 }
