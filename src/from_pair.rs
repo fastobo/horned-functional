@@ -27,18 +27,16 @@ pub trait FromPair: Sized {
 
     /// Create a new instance from a `Pair`.
     fn from_pair(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
-        if cfg!(debug_assertions) {
-            if !Self::RULES.contains(&pair.as_rule()) {
-                return Err(Error::from(
-                    pest::error::Error::new_from_span(
-                        pest::error::ErrorVariant::ParsingError {
-                            positives: vec![pair.as_rule().clone()],
-                            negatives: Self::RULES.iter().cloned().collect(),
-                        },
-                        pair.as_span(),
-                    )
-                ));
-            }
+        if cfg!(debug_assertions) && !Self::RULES.contains(&pair.as_rule()) {
+            return Err(Error::from(
+                pest::error::Error::new_from_span(
+                    pest::error::ErrorVariant::ParsingError {
+                        positives: vec![pair.as_rule()],
+                        negatives: Self::RULES.to_vec(),
+                    },
+                    pair.as_span(),
+                )
+            ));
         }
         Self::from_pair_unchecked(pair, build, prefixes)
     }
