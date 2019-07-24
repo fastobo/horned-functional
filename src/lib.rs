@@ -37,7 +37,6 @@ pub fn from_reader<R: Read + 'static>(mut r: R) -> Result<(Ontology, PrefixMappi
     from_str(s)
 }
 
-
 /// Parse an entire OWL document from a file on the local filesystem..
 #[inline]
 pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(Ontology, PrefixMapping)> {

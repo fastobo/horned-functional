@@ -702,10 +702,7 @@ impl FromPair for IRI {
                 let prefix = pname.next().unwrap().into_inner().next();
                 let local = pname.next().unwrap();
                 let curie = Curie::new(prefix.map(|p| p.as_str()), local.as_str());
-                match prefixes.expand_curie(&curie) {
-                    Ok(iri) => Ok(build.iri(iri)),
-                    Err(e) => Err(e.into()),
-                }
+                prefixes.expand_curie(&curie).map_err(Error::from).map(|s| build.iri(s))
             }
             Rule::FullIRI => {
                 let iri = pair.into_inner().next().unwrap();
@@ -866,7 +863,8 @@ impl FromPair for (Ontology, PrefixMapping) {
             let iri = decl.next().unwrap().into_inner().next().unwrap();
 
             if let Some(prefix) = pname.next().unwrap().into_inner().next() {
-                prefixes.add_prefix(prefix.as_str(), iri.as_str())?;
+                prefixes.add_prefix(prefix.as_str(), iri.as_str())
+                    .expect("grammar does not allow invalid prefixes");
             } else {
                 prefixes.set_default(iri.as_str());
             }

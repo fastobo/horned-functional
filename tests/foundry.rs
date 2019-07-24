@@ -1,3 +1,5 @@
+//! Test parser on OWL Functional files converted from OBO with ROBOT.
+
 extern crate horned_functional;
 
 macro_rules! foundrytest {
@@ -19,6 +21,7 @@ macro_rules! foundrytest {
     );
 }
 
+// Small test files.
 foundrytest!(aero);
 foundrytest!(apo);
 foundrytest!(cio);
@@ -35,7 +38,6 @@ foundrytest!(#[ignore] cl);
 foundrytest!(#[ignore] ro);
 
 // Too large to load in memory
-//
 // foundrytest!(oba);
 // foundrytest!(tto);
 // foundrytest!(uberon);
