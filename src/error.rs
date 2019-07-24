@@ -20,6 +20,9 @@ pub enum Error {
 
     #[error(display = "invalid facet: {}", 0)]
     InvalidFacet(String),
+
+    #[error(display = "unsupported: {} (see {})", 0, 1)]
+    Unsupported(&'static str, &'static str),
 }
 
 impl From<pest::error::Error<Rule>> for Error {

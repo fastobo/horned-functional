@@ -146,7 +146,7 @@ impl FromPair for AnnotatedAxiom {
                     Rule::DataPropertyDeclaration => DeclareDataProperty::from_pair(decl, b, p)?.into(),
                     Rule::AnnotationPropertyDeclaration => DeclareAnnotationProperty::from_pair(decl, b, p)?.into(),
                     Rule::NamedIndividualDeclaration => DeclareNamedIndividual::from_pair(decl, b, p)?.into(),
-                    _ => unreachable!(),
+                    rule => unreachable!("unexpected rule in AnnotatedAxiom::Declaration: {:?}", rule),
                 };
 
                 Ok(Self::new(axiom, annotations))
@@ -184,15 +184,10 @@ impl FromPair for AnnotatedAxiom {
             Rule::SubObjectPropertyOf => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-
                 let sub = SubObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 let sup = ObjectPropertyExpression::from_pair(
                     inner.next().unwrap().into_inner().next().unwrap(), b, p)?;
-
-                Ok(Self::new(
-                    SubObjectPropertyOf { sup, sub },
-                    annotations,
-                ))
+                Ok(Self::new(SubObjectPropertyOf { sup, sub }, annotations))
             }
             Rule::EquivalentObjectProperties => {
                 let mut inner = pair.into_inner();
@@ -276,10 +271,7 @@ impl FromPair for AnnotatedAxiom {
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let sub = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let sup = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                Ok(Self::new(
-                    SubDataPropertyOf { sub, sup },
-                    annotations,
-                ))
+                Ok(Self::new(SubDataPropertyOf { sub, sup }, annotations))
             }
             Rule::EquivalentDataProperties => {
                 let mut inner = pair.into_inner();
@@ -323,7 +315,10 @@ impl FromPair for AnnotatedAxiom {
 
             // HasKey
             Rule::HasKey => {
-                unimplemented!()
+                Err(Error::Unsupported(
+                    "horned-owl does not have proper HasKey definition",
+                    "https://github.com/phillord/horned-owl/issues/21",
+                ))
             }
 
             // Assertion
@@ -360,7 +355,7 @@ impl FromPair for AnnotatedAxiom {
                 let ope = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
                 let from = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
                 let to = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?;
-                Ok(Self::new(ObjectPropertyAssertion::new(ope, from, to), annotations))
+                Ok(Self::new(ObjectPropertyAssertion { ope, from, to }, annotations))
             }
             Rule::NegativeObjectPropertyAssertion => {
                 // FIXME: support for anonymous individual
@@ -424,7 +419,7 @@ impl FromPair for AnnotatedAxiom {
                 let iri = IRI::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(AnnotationPropertyRange::new(ap, iri), annotations))
             }
-            _ => unreachable!("invalid Rule in AnnotatedAxiom::from_pair"),
+            _ => unreachable!("unexpected rule in AnnotatedAxiom::from_pair"),
         }
     }
 }
@@ -572,18 +567,32 @@ impl FromPair for ClassExpression {
                 impl_ce_obj_cardinality!(b, p, inner, ObjectExactCardinality)
             }
             Rule::DataSomeValuesFrom => {
-                unimplemented!(
-                    "{} (see {})",
-                    "DataSomeValuesFrom unsupported by horned-owl ",
-                    "https://github.com/phillord/horned-owl/issues/17"
-                )
+                let mut pair = inner.into_inner();
+                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
+                let next = pair.next().unwrap();
+                if next.as_rule() == Rule::DataProperty {
+                    Err(Error::Unsupported(
+                        "data property chaining in DataSomeValuesFrom",
+                        "https://github.com/phillord/horned-owl/issues/17"
+                    ))
+                } else {
+                    let dr = DataRange::from_pair(next, b, p)?;
+                    Ok(ClassExpression::DataSomeValuesFrom { dp, dr })
+                }
             }
             Rule::DataAllValuesFrom => {
-                unimplemented!(
-                    "{} (see {})",
-                    "DataAllValuesFrom unsupported by horned-owl ",
-                    "https://github.com/phillord/horned-owl/issues/17"
-                )
+                let mut pair = inner.into_inner();
+                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
+                let next = pair.next().unwrap();
+                if next.as_rule() == Rule::DataProperty {
+                    Err(Error::Unsupported(
+                        "data property chaining in DataAllValuesFrom",
+                        "https://github.com/phillord/horned-owl/issues/17"
+                    ))
+                } else {
+                    let dr = DataRange::from_pair(next, b, p)?;
+                    Ok(ClassExpression::DataAllValuesFrom { dp, dr })
+                }
             }
             Rule::DataHasValue => {
                 let mut pair = inner.into_inner();
@@ -600,7 +609,7 @@ impl FromPair for ClassExpression {
             Rule::DataExactCardinality => {
                 impl_ce_data_cardinality!(b, p, inner, DataExactCardinality)
             }
-            _ => unreachable!("invalid rule in ClassExpression::from_pair"),
+            rule => unreachable!("unexpected rule in ClassExpression::from_pair: {:?}", rule),
         }
     }
 }
@@ -650,7 +659,7 @@ impl FromPair for DataRange {
                         .collect::<Result<_>>()?
                 ))
             }
-            _ => unreachable!("unexpected rule in DataRange::from_pair"),
+            rule => unreachable!("unexpected rule in DataRange::from_pair: {:?}", rule),
         }
     }
 }
@@ -704,7 +713,7 @@ impl FromPair for IRI {
                 let iri = pair.into_inner().next().unwrap();
                 Ok(build.iri(iri.as_str()))
             }
-            _ => unreachable!("invalid rule in IRI::from_pair: {:?}", pair),
+            rule => unreachable!("unexpected rule in IRI::from_pair: {:?}", rule),
         }
     }
 }
@@ -718,12 +727,15 @@ impl FromPair for NamedIndividual {
             Rule::Individual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
             Rule::SourceIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
             Rule::TargetIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
-            Rule::AnonymousIndividual => unimplemented!("AnonymousIndividual are unsupported"),
             Rule::NamedIndividual => {
                 IRI::from_pair(pair.into_inner().next().unwrap(), b, p)
                     .map(NamedIndividual)
             }
-            _ => unreachable!("invalid rule in NamedIndividual::from_pair")
+            Rule::AnonymousIndividual => Err(Error::Unsupported(
+                "anonymous individual",
+                "https://github.com/fastobo/horned-functional/issues/1"
+            )),
+            rule => unreachable!("unexpected rule in NamedIndividual::from_pair: {:?}", rule)
         }
     }
 }
@@ -766,7 +778,7 @@ impl FromPair for Literal {
                     lang: None,
                 })
             }
-            _ => unreachable!("invalid rule in Literal::from_pair"),
+            rule => unreachable!("unexpected rule in Literal::from_pair: {:?}", rule),
         }
     }
 }
@@ -782,7 +794,7 @@ impl FromPair for ObjectPropertyExpression {
                 .map(ObjectPropertyExpression::ObjectProperty),
             Rule::InverseObjectProperty => ObjectProperty::from_pair(inner.into_inner().next().unwrap(), b, p)
                 .map(ObjectPropertyExpression::InverseObjectProperty),
-            _ => unreachable!("invalid rule in ObjectPropertyExpression.from_pair: {:?}", inner),
+            rule => unreachable!("unexpected rule in ObjectPropertyExpression::from_pair: {:?}", rule),
         }
     }
 }
@@ -893,12 +905,11 @@ impl FromPair for SubObjectPropertyExpression {
             Rule::PropertyExpressionChain => {
                 let mut objs = Vec::new();
                 for pair in inner.into_inner() {
-                    // FIXME: https://github.com/phillord/horned-owl/issues/14
                     objs.push(ObjectPropertyExpression::from_pair(pair, b, p)?);
                 }
                 Ok(SubObjectPropertyExpression::ObjectPropertyChain(objs))
             }
-            _ => unreachable!("unexpected rule in SubObjectProperty::from_pair"),
+            rule => unreachable!("unexpected rule in SubObjectProperty::from_pair: {:?}", rule),
         }
     }
 }
