@@ -1,6 +1,6 @@
 [package]
 name = "horned-functional"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["Martin Larralde <martin.larralde@ens-paris-saclay.fr>"]
 edition = "2018"
 license = "MIT"
@@ -24,7 +24,7 @@ status     = "actively-developed"
 [dependencies]
 pest = "2.1.0"
 pest_derive = "2.1.0"
-horned-owl = { git = "https://github.com/phillord/horned-owl" }
+horned-owl = "0.6.0"
 curie = "0.0.8"
 enum_meta = "0.6.0"
 err-derive = "0.1.5"
