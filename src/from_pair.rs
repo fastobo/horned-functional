@@ -2,6 +2,8 @@ use std::collections::BTreeSet;
 use std::str::FromStr;
 
 use horned_owl::model::*;
+use horned_owl::vocab::OWL;
+use horned_owl::vocab::OWL2Datatype;
 use horned_owl::vocab::WithIRI;
 use enum_meta::Meta;
 use curie::Curie;
@@ -427,6 +429,8 @@ impl FromPair for AnnotatedAxiom {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for Annotation {
     const RULES: &'static [Rule] = &[Rule::Annotation];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -442,6 +446,8 @@ impl FromPair for Annotation {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for AnnotationValue {
     const RULES: &'static [Rule] = &[Rule::AnnotationValue];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -455,6 +461,8 @@ impl FromPair for AnnotationValue {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for BTreeSet<Annotation> {
     const RULES: &'static [Rule] = &[Rule::AnnotationAnnotations, Rule::AxiomAnnotations];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -463,6 +471,38 @@ impl FromPair for BTreeSet<Annotation> {
             .map(|pair| Annotation::from_pair(pair, b, p))
             .collect()
     }
+}
+
+// ---------------------------------------------------------------------------
+
+macro_rules! impl_ce_data_cardinality {
+    ($b:ident, $p:ident, $inner:ident, $dt:ident) => {{
+        let mut pair = $inner.into_inner();
+        let n = u32::from_pair(pair.next().unwrap(), $b, $p)?;
+        let dp = DataProperty::from_pair(pair.next().unwrap(), $b, $p)?;
+        let dr = match pair.next() {
+            // No data range is equivalent to `rdfs:Literal` as a data range.
+            // see https://www.w3.org/TR/owl2-syntax/#Data_Property_Cardinality_Restrictions
+            None => $b.datatype(OWL2Datatype::RDFSLiteral.iri_s()).into(),
+            Some(pair) => DataRange::from_pair(pair, $b, $p)?,
+        };
+        Ok(ClassExpression::$dt { n, dp, dr })
+    }}
+}
+
+macro_rules! impl_ce_obj_cardinality {
+    ($b:ident, $p:ident, $inner:ident, $dt:ident) => {{
+        let mut pair = $inner.into_inner();
+        let n = u32::from_pair(pair.next().unwrap(), $b, $p)?;
+        let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), $b, $p)?;
+        let bce = match pair.next() {
+            // Missing class expression is equivalent to `owl:Thing` as class expression.
+            // see https://www.w3.org/TR/owl2-syntax/#Object_Property_Cardinality_Restrictions
+            None => Box::new(ClassExpression::Class($b.class(OWL::Thing.iri_s()))),
+            Some(x) => Self::from_pair(x, $b, $p).map(Box::new)?,
+        };
+        Ok(ClassExpression::ObjectMinCardinality { n, ope, bce })
+    }}
 }
 
 impl FromPair for ClassExpression {
@@ -523,60 +563,49 @@ impl FromPair for ClassExpression {
                 Ok(ClassExpression::ObjectHasSelf(expr))
             }
             Rule::ObjectMinCardinality => {
-                let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectMinCardinality { n, ope, bce })
+                impl_ce_obj_cardinality!(b, p, inner, ObjectMinCardinality)
             }
             Rule::ObjectMaxCardinality => {
-                let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectMaxCardinality { n, ope, bce })
+                impl_ce_obj_cardinality!(b, p, inner, ObjectMaxCardinality)
             }
             Rule::ObjectExactCardinality => {
-                let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), b, p)?;
-                let bce = Self::from_pair(pair.next().expect("unsupported"), b, p).map(Box::new)?;
-                Ok(ClassExpression::ObjectExactCardinality { n, ope, bce })
+                impl_ce_obj_cardinality!(b, p, inner, ObjectExactCardinality)
             }
             Rule::DataSomeValuesFrom => {
-                unimplemented!()
+                unimplemented!(
+                    "{} (see {})",
+                    "DataSomeValuesFrom unsupported by horned-owl ",
+                    "https://github.com/phillord/horned-owl/issues/17"
+                )
             }
             Rule::DataAllValuesFrom => {
-                unimplemented!()
+                unimplemented!(
+                    "{} (see {})",
+                    "DataAllValuesFrom unsupported by horned-owl ",
+                    "https://github.com/phillord/horned-owl/issues/17"
+                )
             }
             Rule::DataHasValue => {
-                unimplemented!()
+                let mut pair = inner.into_inner();
+                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
+                let l = Literal::from_pair(pair.next().unwrap(), b, p)?;
+                Ok(ClassExpression::DataHasValue { dp, l })
             }
             Rule::DataMinCardinality => {
-                let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
-                let dr = DataRange::from_pair(pair.next().expect("unsupported"), b, p)?;
-                Ok(ClassExpression::DataMinCardinality { n, dp, dr })
+                impl_ce_data_cardinality!(b, p, inner, DataMinCardinality)
             }
             Rule::DataMaxCardinality => {
-                let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
-                let dr = DataRange::from_pair(pair.next().expect("unsupported"), b, p)?;
-                Ok(ClassExpression::DataMaxCardinality { n, dp, dr })
+                impl_ce_data_cardinality!(b, p, inner, DataMaxCardinality)
             }
             Rule::DataExactCardinality => {
-                let mut pair = inner.into_inner();
-                let n = u32::from_pair(pair.next().unwrap(), b, p)?;
-                let dp = DataProperty::from_pair(pair.next().unwrap(), b, p)?;
-                let dr = DataRange::from_pair(pair.next().expect("unsupported"), b, p)?;
-                Ok(ClassExpression::DataExactCardinality { n, dp, dr })
+                impl_ce_data_cardinality!(b, p, inner, DataExactCardinality)
             }
             _ => unreachable!("invalid rule in ClassExpression::from_pair"),
         }
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for DataRange {
     const RULES: &'static [Rule] = &[Rule::DataRange];
@@ -626,6 +655,8 @@ impl FromPair for DataRange {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for Facet {
     const RULES: &'static [Rule] = &[Rule::ConstrainingFacet];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -637,6 +668,8 @@ impl FromPair for Facet {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for FacetRestriction {
     const RULES: &'static [Rule] = &[Rule::FacetRestriction];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -646,6 +679,8 @@ impl FromPair for FacetRestriction {
         Ok(FacetRestriction { f, l })
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for IRI {
     const RULES: &'static [Rule] = &[Rule::IRI, Rule::AbbreviatedIRI, Rule::FullIRI];
@@ -674,6 +709,8 @@ impl FromPair for IRI {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for NamedIndividual {
     const RULES: &'static [Rule] = &[Rule::Individual, Rule::SourceIndividual, Rule::TargetIndividual, Rule::AnonymousIndividual, Rule::NamedIndividual];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -690,6 +727,8 @@ impl FromPair for NamedIndividual {
         }
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for Literal {
     const RULES: &'static [Rule] = &[Rule::Literal, Rule::TypedLiteral, Rule::StringLiteralWithLanguage, Rule::StringLiteralNoLanguage];
@@ -732,6 +771,8 @@ impl FromPair for Literal {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for ObjectPropertyExpression {
     const RULES: &'static [Rule] = &[Rule::ObjectPropertyExpression];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
@@ -745,6 +786,8 @@ impl FromPair for ObjectPropertyExpression {
         }
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for Ontology {
     const RULES: &'static [Rule] = &[Rule::Ontology];
@@ -787,12 +830,16 @@ impl FromPair for Ontology {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for OntologyAnnotation {
     const RULES: &'static [Rule] = &[Rule::Annotation];
     fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
         Annotation::from_pair(pair, build, prefixes).map(OntologyAnnotation)
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for (Ontology, PrefixMapping) {
     const RULES: &'static [Rule] = &[Rule::OntologyDocument];
@@ -821,6 +868,8 @@ impl FromPair for (Ontology, PrefixMapping) {
     }
 }
 
+// ---------------------------------------------------------------------------
+
 impl FromPair for String {
     const RULES: &'static [Rule] = &[Rule::QuotedString];
     fn from_pair_unchecked(pair: Pair<Rule>, _build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
@@ -829,6 +878,8 @@ impl FromPair for String {
         Ok(s.replace(r"\\", r"\").replace(r#"\""#, r#"""#))
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for SubObjectPropertyExpression {
     const RULES: &'static [Rule] = &[Rule::SubObjectPropertyExpression];
@@ -851,6 +902,8 @@ impl FromPair for SubObjectPropertyExpression {
         }
     }
 }
+
+// ---------------------------------------------------------------------------
 
 impl FromPair for u32 {
     const RULES: &'static [Rule] = &[Rule::NonNegativeInteger];
