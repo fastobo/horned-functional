@@ -77,18 +77,6 @@ pub enum Error {
     Unsupported(&'static str, &'static str),
 }
 
-impl From<pest::error::Error<Rule>> for Error {
-    fn from(e: pest::error::Error<Rule>) -> Self {
-        Error::PestError(e)
-    }
-}
-
-impl From<std::io::Error> for Error {
-    fn from(e: std::io::Error) -> Self {
-        Error::IOError(e)
-    }
-}
-
 impl From<curie::ExpansionError> for Error {
     fn from(e: curie::ExpansionError) -> Self {
         Error::ExpansionError(e)
