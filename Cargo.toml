@@ -27,7 +27,7 @@ pest_derive = "2.1.0"
 horned-owl = "0.6.0"
 curie = "0.0.8"
 enum_meta = "0.6.0"
-err-derive = "0.1.5"
+err-derive = "0.2.0"
 
 [dev-dependencies]
 matches = "0.1.8"
