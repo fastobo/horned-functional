@@ -1,6 +1,6 @@
 [package]
 name = "horned-functional"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Martin Larralde <martin.larralde@ens-paris-saclay.fr>"]
 edition = "2018"
 license = "MIT"
@@ -10,7 +10,6 @@ readme = "README.md"
 keywords = ["owl", "syntax", "parser", "functional", "owl2"]
 categories = ["science", "parser-implementations"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [badges.travis-ci]
 repository = "fastobo/horned-functional"
 [badges.codecov]
