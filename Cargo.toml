@@ -30,7 +30,7 @@ err-derive = "0.2.4"
 
 [dev-dependencies]
 matches = "0.1.8"
-ureq = "0.12.0"
+ureq = "1.0.0"
 
 [features]
 _doc = []
