@@ -2,7 +2,7 @@
 #![cfg_attr(feature = "_doc", doc(include = "../README.md"))]
 
 #[macro_use]
-extern crate err_derive;
+extern crate thiserror;
 #[macro_use]
 extern crate pest_derive;
 

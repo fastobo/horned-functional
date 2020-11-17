@@ -21,8 +21,8 @@ pub enum Error {
     /// let res = Ontology::from_ofn_str("Ontology(");
     /// assert_matches!(res, Err(horned_functional::Error::PestError(_)));
     /// ```
-    #[error(display = "{}", 0)]
-    PestError(#[error(cause)] pest::error::Error<Rule>),
+    #[error(transparent)]
+    PestError(#[from] pest::error::Error<Rule>),
 
     /// An error that happened at the I/O level.
     ///
@@ -32,8 +32,8 @@ pub enum Error {
     /// let res = horned_functional::from_file("/some/missing/file").map(|x| x.0);
     /// assert_matches!(res, Err(horned_functional::Error::IOError(_)));
     /// ```
-    #[error(display = "{}", 0)]
-    IOError(#[error(cause)] std::io::Error),
+    #[error(transparent)]
+    IOError(#[from] std::io::Error),
 
     /// A CURIE expansion went wrong.
     ///
@@ -50,7 +50,7 @@ pub enum Error {
     /// let res = IRI::from_ofn_str("example:Entity");
     /// assert_matches!(res, Err(horned_functional::Error::ExpansionError(_)));
     /// ```
-    #[error(display = "expansion error: {:?}", 0)]
+    #[error("expansion error: {0:?}")]
     ExpansionError(curie::ExpansionError),
 
     /// An unknown IRI was used as a facet.
@@ -64,7 +64,7 @@ pub enum Error {
     /// let res = Facet::from_ofn_str("<http://example.com/thing>");
     /// assert_matches!(res, Err(horned_functional::Error::InvalidFacet(_)));
     /// ```
-    #[error(display = "invalid facet: {}", 0)]
+    #[error("invalid facet: {0}")]
     InvalidFacet(String),
 
     /// An unsupported construct was used.
@@ -73,7 +73,7 @@ pub enum Error {
     /// issue has been resolved, please open an issue on the
     /// [`fastobo/horned-functional`](https://github.com/fastobo/horned-functional)
     /// repository so that it can be fixed.
-    #[error(display = "unsupported: {} (see {})", 0, 1)]
+    #[error("unsupported: {0} (see {1})")]
     Unsupported(&'static str, &'static str),
 }
 
