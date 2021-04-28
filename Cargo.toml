@@ -30,7 +30,7 @@ thiserror = "1.0.0"
 
 [dev-dependencies]
 matches = "0.1.8"
-ureq = "1.0.0"
+ureq = "2.1.1"
 
 [features]
 _doc = []
