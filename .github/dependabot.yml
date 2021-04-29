@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: ureq
+    versions:
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+  - dependency-name: horned-owl
+    versions:
+    - 0.8.0
