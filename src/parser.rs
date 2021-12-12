@@ -1,5 +1,5 @@
-use pest::iterators::Pairs;
 use super::error::Result;
+use pest::iterators::Pairs;
 
 /// The OWL2 Functional-style Syntax parser.
 ///
@@ -94,5 +94,4 @@ mod tests {
     fn string_literal_with_language() {
         assert_parse!(Rule::StringLiteralWithLanguage, r#""Alan Ruttenberg"@en"#);
     }
-
 }

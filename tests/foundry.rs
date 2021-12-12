@@ -33,9 +33,18 @@ foundrytest!(symp);
 foundrytest!(to);
 
 // Failing because of invalid IRIs created by `owltools` conversion.
-foundrytest!(#[ignore] ecocore);
-foundrytest!(#[ignore] cl);
-foundrytest!(#[ignore] ro);
+foundrytest!(
+    #[ignore]
+    ecocore
+);
+foundrytest!(
+    #[ignore]
+    cl
+);
+foundrytest!(
+    #[ignore]
+    ro
+);
 
 // Too large to load in memory
 // foundrytest!(oba);
