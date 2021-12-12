@@ -2,7 +2,7 @@
 
 *An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser for [`horned-owl`](https://github.com/phillord/horned-owl)*
 
-[![TravisCI](https://img.shields.io/travis/fastobo/horned-functional/master.svg?maxAge=600&style=flat-square)](https://travis-ci.org/fastobo/horned-functional/branches)
+[![Actions](https://img.shields.io/github/workflow/status/fastobo/horned-functional/Test?style=flat-square&maxAge=600)](https://github.com/fastobo/horned-functional/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/fastobo/horned-functional/master.svg?style=flat-square&maxAge=600)](https://codecov.io/gh/fastobo/horned-functional)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&maxAge=2678400)](https://choosealicense.com/licenses/mit/)
 [![Source](https://img.shields.io/badge/source-GitHub-303030.svg?maxAge=2678400&style=flat-square)](https://github.com/fastobo/horned-functional)
@@ -77,4 +77,3 @@ as part of a Master's Degree internship in the [BBOP team](http://berkeleybop.or
 *Larralde M.* **Developing Python and Rust libraries to improve the ontology ecosystem**
 *\[version 1; not peer reviewed\].* F1000Research 2019, 8(ISCB Comm J):1500 (poster)
 ([https://doi.org/10.7490/f1000research.1117405.1](https://doi.org/10.7490/f1000research.1117405.1))
-
