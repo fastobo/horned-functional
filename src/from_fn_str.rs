@@ -2,6 +2,7 @@ use std::collections::BTreeSet;
 
 use curie::PrefixMapping;
 use horned_owl::model::*;
+use horned_owl::ontology::set::SetOntology;
 
 use crate::error::Error;
 use crate::error::Result;
@@ -98,32 +99,35 @@ implement!(
     Literal,
     ObjectPropertyExpression,
     ObjectProperty,
-    Ontology,
+    SetOntology,
     OntologyAnnotation,
-    (Ontology, PrefixMapping),
+    (SetOntology, PrefixMapping),
     String,
     SubObjectPropertyExpression,
     u32
 );
 
-
-
 #[cfg(test)]
 mod tests {
 
-    use horned_owl::model::DeclareClass;
     use super::*;
+    use horned_owl::model::DeclareClass;
 
     #[test]
     fn test_remaining_input() {
-        match DeclareClass::from_ofn_str("Class(<http://example.com/a>) Class(<http://example.com/b>)") {
+        match DeclareClass::from_ofn_str(
+            "Class(<http://example.com/a>) Class(<http://example.com/b>)",
+        ) {
             Ok(ok) => panic!("unexpected success: {:?}", ok),
             Err(Error::PestError(e)) => {
-                assert_eq!(e.variant, pest::error::ErrorVariant::CustomError {
-                    message: "remaining input".to_string(),
-                })
+                assert_eq!(
+                    e.variant,
+                    pest::error::ErrorVariant::CustomError {
+                        message: "remaining input".to_string(),
+                    }
+                )
             }
-            Err(other) => panic!("unexpected error: {:?}", other)
+            Err(other) => panic!("unexpected error: {:?}", other),
         }
     }
 }

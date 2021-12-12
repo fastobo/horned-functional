@@ -15,10 +15,10 @@ pub enum Error {
     /// ```rust
     /// # #[macro_use] extern crate matches;
     /// # extern crate horned_owl;
-    /// # use horned_owl::model::Ontology;
+    /// # use horned_owl::ontology::set::SetOntology;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = Ontology::from_ofn_str("Ontology(");
+    /// let res = SetOntology::from_ofn_str("Ontology(");
     /// assert_matches!(res, Err(horned_functional::Error::PestError(_)));
     /// ```
     #[error(transparent)]
