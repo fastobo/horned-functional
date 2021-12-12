@@ -35,7 +35,7 @@ Add `horned-owl` and `horned-functional` to the `[dependencies]` sections of
 your `Cargo.toml` manifest:
 ```toml
 [dependencies]
-horned-functional = "0.1.3"
+horned-functional = "0.2.0"
 ```
 
 The `from_reader` function is the easiest way to deserialize an OWL Functional

@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.2.0...HEAD
+
+
+## [v0.2.0] - 2020-12-12
+
+### Changed
+- Bumped `horned-owl` to `v0.10.0` ([#19](https://github.com/fastobo/horned-functional/pull/19) by [@paulalesius](https://github.com/paulalesius)).
+
+[v0.2.0]: https://github.com/fastobo/horned-functional/compare/v0.1.3...v0.2.0
 
 
 ## [v0.1.3] - 2020-11-18
