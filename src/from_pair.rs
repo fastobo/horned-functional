@@ -433,7 +433,9 @@ impl FromPair for AnnotatedAxiom {
                             .map(Individual::Named)?,
                         Rule::AnonymousIndividual => AnonymousIndividual::from_pair(inner2, b, p)
                             .map(Individual::Anonymous)?,
-                        rule => unreachable!("unexpected rule in Individual::from_pair: {:?}", rule),
+                        rule => {
+                            unreachable!("unexpected rule in Individual::from_pair: {:?}", rule)
+                        }
                     }
                 };
                 let av = AnnotationValue::from_pair(inner.next().unwrap(), b, p)?;
@@ -503,7 +505,9 @@ impl FromPair for AnnotationValue {
             Rule::Literal => Literal::from_pair(inner, b, p).map(AnnotationValue::Literal),
             // FIXME: when horned-owl is updated, replace with
             //        AnonymousIndividual::from_pair(inner, b, p).map(AnnotationValue::Anonymous)
-            Rule::AnonymousIndividual => unimplemented!("horned-owl does not support AnonymousIndividual as annotation values"),
+            Rule::AnonymousIndividual => unimplemented!(
+                "horned-owl does not support AnonymousIndividual as annotation values"
+            ),
             _ => unreachable!(),
         }
     }
@@ -513,9 +517,14 @@ impl FromPair for AnnotationValue {
 
 impl FromPair for AnonymousIndividual {
     const RULES: &'static [Rule] = &[Rule::AnonymousIndividual];
-    fn from_pair_unchecked(pair: Pair<Rule>, _build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
+    fn from_pair_unchecked(
+        pair: Pair<Rule>,
+        _build: &Build,
+        _prefixes: &PrefixMapping,
+    ) -> Result<Self> {
         // FIXME: use a builder here when possible to reuse the string.
-        let inner = pair.into_inner().next().unwrap();
+        let nodeid = pair.into_inner().next().unwrap();
+        let inner = nodeid.into_inner().next().unwrap();
         Ok(AnonymousIndividual(From::from(inner.as_str())))
     }
 }
@@ -736,11 +745,19 @@ impl FromPair for FacetRestriction {
 
 impl FromPair for Individual {
     const RULES: &'static [Rule] = &[Rule::Individual];
-    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+    fn from_pair_unchecked(
+        pair: Pair<Rule>,
+        build: &Build,
+        prefixes: &PrefixMapping,
+    ) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
-            Rule::NamedIndividual => NamedIndividual::from_pair(inner, build, prefixes).map(Individual::Named),
-            Rule::AnonymousIndividual => AnonymousIndividual::from_pair(inner, build, prefixes).map(Individual::Anonymous),
+            Rule::NamedIndividual => {
+                NamedIndividual::from_pair(inner, build, prefixes).map(Individual::Named)
+            }
+            Rule::AnonymousIndividual => {
+                AnonymousIndividual::from_pair(inner, build, prefixes).map(Individual::Anonymous)
+            }
             rule => unreachable!("unexpected rule in Individual::from_pair: {:?}", rule),
         }
     }
@@ -1019,6 +1036,21 @@ mod tests {
     }
 
     #[test]
+    fn anonymous_individual() {
+        let build = Build::default();
+        let mut prefixes = PrefixMapping::default();
+
+        assert_parse_into!(
+            AnonymousIndividual,
+            Rule::AnonymousIndividual,
+            build,
+            prefixes,
+            "_:anon",
+            AnonymousIndividual(From::from("anon"))
+        );
+    }
+
+    #[test]
     fn has_key() {
         let build = Build::default();
         let mut prefixes = PrefixMapping::default();
@@ -1032,12 +1064,12 @@ mod tests {
             build,
             prefixes,
             "HasKey( owl:Thing () (<http://www.example.com/issn>) )",
-            AnnotatedAxiom::from(
-                HasKey::new(
-                    ClassExpression::Class(build.class("http://www.w3.org/2002/07/owl#Thing")),
-                    vec![PropertyExpression::DataProperty(build.data_property("http://www.example.com/issn"))],
-                )
-            )
+            AnnotatedAxiom::from(HasKey::new(
+                ClassExpression::Class(build.class("http://www.w3.org/2002/07/owl#Thing")),
+                vec![PropertyExpression::DataProperty(
+                    build.data_property("http://www.example.com/issn")
+                )],
+            ))
         );
     }
 
@@ -1132,6 +1164,27 @@ mod tests {
         assert_eq!(
             doc.1.mappings().collect::<HashSet<_>>(),
             expected.mappings().collect::<HashSet<_>>()
+        );
+    }
+
+    #[test]
+    fn same_individual() {
+        let build = Build::default();
+        let mut prefixes = PrefixMapping::default();
+        prefixes
+            .add_prefix("owl", "http://www.w3.org/2002/07/owl#")
+            .unwrap();
+
+        assert_parse_into!(
+            AnnotatedAxiom,
+            Rule::SameIndividual,
+            build,
+            prefixes,
+            "SameIndividual( owl:Thing _:thing )",
+            AnnotatedAxiom::from(SameIndividual(vec![
+                Individual::Named(build.named_individual("http://www.w3.org/2002/07/owl#Thing")),
+                Individual::Anonymous(AnonymousIndividual(From::from("thing"))),
+            ]))
         );
     }
 }

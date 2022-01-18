@@ -89,7 +89,7 @@ CARET    = _{ "^" }
 NonNegativeInteger = @{ ASCII_DIGIT+ }
 LanguageTag = ${ "@" ~ BCP47_LanguageTag }
 QuotedString = ${ "\"" ~ ( !"\"" ~ ("\\\\" | "\\\"" | ANY) )* ~ "\"" }
-NodeID = { BlankNodeLabel }
+NodeID = _{ BlankNodeLabel }
 
 //
 
