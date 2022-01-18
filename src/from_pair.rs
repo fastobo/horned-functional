@@ -332,10 +332,22 @@ impl FromPair for AnnotatedAxiom {
             }
 
             // HasKey
-            Rule::HasKey => Err(Error::Unsupported(
-                "horned-owl does not have proper HasKey definition",
-                "https://github.com/phillord/horned-owl/issues/21",
-            )),
+            Rule::HasKey => {
+                let mut inner = pair.into_inner();
+                let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let ce = FromPair::from_pair(inner.next().unwrap(), b, p)?;
+                let vpe: Result<Vec<PropertyExpression>> = inner
+                    .map(|pair| match pair.as_rule() {
+                        Rule::ObjectPropertyExpression => FromPair::from_pair(pair, b, p)
+                            .map(PropertyExpression::ObjectPropertyExpression),
+                        Rule::DataProperty => {
+                            FromPair::from_pair(pair, b, p).map(PropertyExpression::DataProperty)
+                        }
+                        _ => unreachable!(),
+                    })
+                    .collect();
+                Ok(Self::new(HasKey::new(ce, vpe?), annotations))
+            }
 
             // Assertion
             Rule::SameIndividual => {
@@ -1006,6 +1018,29 @@ mod tests {
                 ),
             }
         };
+    }
+
+    #[test]
+    fn has_key() {
+        let build = Build::default();
+        let mut prefixes = PrefixMapping::default();
+        prefixes
+            .add_prefix("owl", "http://www.w3.org/2002/07/owl#")
+            .unwrap();
+
+        assert_parse_into!(
+            AnnotatedAxiom,
+            Rule::HasKey,
+            build,
+            prefixes,
+            "HasKey( owl:Thing () (<http://www.example.com/issn>) )",
+            AnnotatedAxiom::from(
+                HasKey::new(
+                    ClassExpression::Class(build.class("http://www.w3.org/2002/07/owl#Thing")),
+                    vec![PropertyExpression::DataProperty(build.data_property("http://www.example.com/issn"))],
+                )
+            )
+        );
     }
 
     #[test]
