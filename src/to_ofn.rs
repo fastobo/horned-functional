@@ -3,6 +3,7 @@ use std::fmt::Formatter;
 use std::fmt::Error;
 
 use horned_owl::model as owl;
+use horned_owl::vocab::WithIRI;
 
 /// Write a string literal while escaping `"` and `\` characters.
 fn quote(mut s: &str, f: &mut Formatter<'_>) -> Result<(), Error> {
@@ -109,6 +110,12 @@ impl Display for Functional<'_, owl::AnnotationValue> {
             owl::AnnotationValue::Literal(lit) => lit.as_ofn().fmt(f),
             owl::AnnotationValue::IRI(iri) => iri.as_ofn().fmt(f),
         }
+    }
+}
+
+impl Display for Functional<'_, owl::AnonymousIndividual> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        self.0.fmt(f)
     }
 }
 
@@ -277,9 +284,15 @@ impl Display for Functional<'_, owl::DataRange> {
     }
 }
 
+impl Display for Functional<'_, owl::Facet> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        f.write_str(self.0.iri_str())
+    }
+}
+
 impl Display for Functional<'_, owl::FacetRestriction> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        unimplemented!()
+        write!(f, "{} {}", self.0.f.as_ofn(), self.0.l.as_ofn())
     }
 }
 
@@ -325,7 +338,10 @@ impl Display for Functional<'_, owl::IRI> {
 
 impl Display for Functional<'_, owl::Individual> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        unimplemented!()
+        match self.0 {
+            owl::Individual::Named(i) => i.as_ofn().fmt(f),
+            owl::Individual::Anonymous(i) => i.as_ofn().fmt(f),
+        }
     }
 }
 
