@@ -14,18 +14,20 @@ mod error;
 mod from_ofn;
 mod from_pair;
 mod parser;
+mod to_ofn;
 
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
 
 use curie::PrefixMapping;
-
 use horned_owl::ontology::set::SetOntology;
 
 pub use self::error::Error;
 pub use self::error::Result;
 pub use self::from_ofn::FromFunctional;
+pub use self::to_ofn::AsFunctional;
+pub use self::to_ofn::Functional;
 
 /// Parse an entire OWL document from a string.
 #[inline]

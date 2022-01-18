@@ -20,7 +20,7 @@ use crate::parser::Rule;
 /// A trait for OWL elements that can be obtained from OWL Functional tokens.
 ///
 /// `Pair<Rule>` values can be obtained from the `OwlFunctionalParser` struct
-/// after parsing a
+/// after parsing a document.
 pub trait FromPair: Sized {
     /// The valid production rules for the implementor.
     const RULES: &'static [Rule];
