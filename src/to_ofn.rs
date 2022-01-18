@@ -317,7 +317,7 @@ impl Display for Functional<'_, owl::IRI> {
         if let Some(prefixes) = self.1.as_ref().and_then(|ctx| ctx.prefixes) {
             match prefixes.shrink_iri(self.0) {
                 Ok(curie) => write!(f, "{}", curie),
-                Err(iri) => write!(f, "<{}>", iri),
+                Err(_) => write!(f, "<{}>", self.0),
             }
         } else {
             write!(f, "<{}>", self.0)
@@ -374,6 +374,15 @@ impl Display for Functional<'_, owl::SubObjectPropertyExpression> {
                 write!(f, "ObjectPropertyChain({})", Functional(chain, self.1))
             }
         }
+    }
+}
+
+impl Display for Functional<'_, curie::PrefixMapping> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        for (name, value) in self.0.mappings() {
+            writeln!(f, "Prefix({}:={})", name, value)?;
+        }
+        Ok(())
     }
 }
 
@@ -511,13 +520,17 @@ mod tests {
 
     #[test]
     fn test_ofn_curie() {
-        let mut prefixes = curie::PrefixMapping::default();
-        prefixes.add_prefix("obo", "http://purl.obolibrary.org/obo/");
-
         let build = owl::Build::new();
-        let decl = owl::DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
+        let mut prefixes = curie::PrefixMapping::default();
+        prefixes.add_prefix("obo", "http://purl.obolibrary.org/obo/").ok();
+        let context = Context::from(&prefixes);
 
-        let ofn = format!("{}", decl.as_ofn_ctx(&Context::from(&prefixes)));
+        let decl = owl::DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
+        let ofn = format!("{}", decl.as_ofn_ctx(&context));
         assert_eq!("Declaration(Class(obo:BFO_0000001))", ofn);
+
+        let decl = owl::DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
+        let ofn = format!("{}", decl.as_ofn_ctx(&context));
+        assert_eq!("Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))", ofn);
     }
 }
