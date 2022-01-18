@@ -5,6 +5,8 @@ use std::fmt::Error;
 use horned_owl::model as owl;
 use horned_owl::vocab::WithIRI;
 
+use super::Context;
+
 /// Write a string literal while escaping `"` and `\` characters.
 fn quote(mut s: &str, f: &mut Formatter<'_>) -> Result<(), Error> {
     f.write_str("\"")?;
@@ -23,7 +25,7 @@ fn quote(mut s: &str, f: &mut Formatter<'_>) -> Result<(), Error> {
 
 /// A wrapper for displaying an OWL2 element in functional syntax.
 #[derive(Debug)]
-pub struct Functional<'t, T: ?Sized>(&'t T);
+pub struct Functional<'t, T: ?Sized + AsFunctional>(&'t T, Option<&'t Context<'t>>);
 
 macro_rules! derive_display {
     ($ty:ty) => {
@@ -35,7 +37,7 @@ macro_rules! derive_display {
                 write!(
                     f,
                     $template,
-                    $(self.0.$field.as_ofn()),*
+                    $(Functional(&self.0.$field, self.1)),*
                 )
             }
         }
@@ -97,18 +99,19 @@ impl Display for Functional<'_, owl::AnnotationAssertion> {
         write!(
             f,
             "AnnotationAssertion({} {} {})",
-            self.0.ann.ap.as_ofn(),
-            self.0.subject.as_ofn(),
-            self.0.ann.av.as_ofn(),
+            Functional(&self.0.ann.ap, self.1),
+            Functional(&self.0.subject, self.1),
+            Functional(&self.0.ann.av, self.1),
         )
     }
 }
 
 impl Display for Functional<'_, owl::AnnotationValue> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        match self.0 {
-            owl::AnnotationValue::Literal(lit) => lit.as_ofn().fmt(f),
-            owl::AnnotationValue::IRI(iri) => iri.as_ofn().fmt(f),
+        use owl::AnnotationValue::*;
+        match &self.0 {
+            Literal(lit) => Functional(lit, self.1).fmt(f),
+            IRI(iri) => Functional(iri, self.1).fmt(f),
         }
     }
 }
@@ -125,7 +128,7 @@ impl Display for Functional<'_, owl::Axiom> {
             ($($variant:ident,)*) => {
                 match self.0 {
                     $(owl::Axiom::$variant(axiom) => {
-                        axiom.as_ofn().fmt(f)
+                        Functional(axiom, self.1).fmt(f)
                     }),*
                 }
             }
@@ -183,57 +186,57 @@ impl Display for Functional<'_, owl::ClassExpression> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::ClassExpression::*;
         match self.0 {
-            Class(exp) => exp.as_ofn().fmt(f),
+            Class(exp) => Functional(exp, self.1).fmt(f),
             ObjectIntersectionOf(classes) => {
-                write!(f, "ObjectIntersectionOf({})", classes.as_ofn())
+                write!(f, "ObjectIntersectionOf({})", Functional(classes, self.1))
             },
             ObjectUnionOf(classes) => {
-                write!(f, "ObjectUnionOf({})", classes.as_ofn())
+                write!(f, "ObjectUnionOf({})", Functional(classes, self.1))
             },
             ObjectComplementOf(class) => {
-                write!(f, "ObjectComplementOf({})", class.as_ofn())
+                write!(f, "ObjectComplementOf({})", Functional(class.as_ref(), self.1))
             },
             ObjectOneOf(individuals) => {
-                write!(f, "ObjectOneOf({})", individuals.as_ofn())
+                write!(f, "ObjectOneOf({})", Functional(individuals, self.1))
             },
             ObjectSomeValuesFrom { ope, bce } => {
-                write!(f, "ObjectSomeValuesFrom({} {})", ope.as_ofn(), bce.as_ofn())
+                write!(f, "ObjectSomeValuesFrom({} {})", Functional(ope, self.1), Functional(bce.as_ref(), self.1))
             },
             ObjectAllValuesFrom { ope, bce } => {
-                write!(f, "ObjectAllValuesFrom({} {})", ope.as_ofn(), bce.as_ofn())
+                write!(f, "ObjectAllValuesFrom({} {})", Functional(ope, self.1), Functional(bce.as_ref(), self.1))
             },
             ObjectHasValue { ope, i } => {
-                write!(f, "ObjectHasValue({} {})", ope.as_ofn(), i.as_ofn())
+                write!(f, "ObjectHasValue({} {})", Functional(ope, self.1), Functional(i, self.1))
             },
             ObjectHasSelf(ope) => {
-                write!(f, "ObjectHasSelf({})", ope.as_ofn())
+                write!(f, "ObjectHasSelf({})", Functional(ope, self.1))
             },
             ObjectMinCardinality { n, ope, bce } => {
-                write!(f, "ObjectMinCardinality({} {} {})", n, ope.as_ofn(), bce.as_ofn())
+                write!(f, "ObjectMinCardinality({} {} {})", n, Functional(ope, self.1), Functional(bce.as_ref(), self.1))
             }
             ObjectMaxCardinality { n, ope, bce } => {
-                write!(f, "ObjectMaxCardinality({} {} {})", n, ope.as_ofn(), bce.as_ofn())
+                write!(f, "ObjectMaxCardinality({} {} {})", n, Functional(ope, self.1), Functional(bce.as_ref(), self.1))
             }
             ObjectExactCardinality { n, ope, bce } => {
-                write!(f, "ObjectExactCardinality({} {} {})", n, ope.as_ofn(), bce.as_ofn())
+                write!(f, "ObjectExactCardinality({} {} {})", n, Functional(ope, self.1), Functional(bce.as_ref(), self.1))
             }
             DataSomeValuesFrom { dp, dr } => {
-                write!(f, "DataSomeValuesFrom({} {})", dp.as_ofn(), dr.as_ofn())
+                write!(f, "DataSomeValuesFrom({} {})", Functional(dp, self.1), Functional(dr, self.1))
             }
             DataAllValuesFrom { dp, dr } => {
-                write!(f, "DataAllValuesFrom({} {})", dp.as_ofn(), dr.as_ofn())
+                write!(f, "DataAllValuesFrom({} {})", Functional(dp, self.1), Functional(dr, self.1))
             }
             DataHasValue { dp, l } => {
-                write!(f, "DataHasValue({} {})", dp.as_ofn(), l.as_ofn())
+                write!(f, "DataHasValue({} {})", Functional(dp, self.1), Functional(l, self.1))
             }
             DataMinCardinality { n, dp, dr } => {
-                write!(f, "DataMinCardinality({} {} {})", n, dp.as_ofn(), dr.as_ofn())
+                write!(f, "DataMinCardinality({} {} {})", n, Functional(dp, self.1), Functional(dr, self.1))
             }
             DataMaxCardinality { n, dp, dr } => {
-                write!(f, "DataMaxCardinality({} {} {})", n, dp.as_ofn(), dr.as_ofn())
+                write!(f, "DataMaxCardinality({} {} {})", n, Functional(dp, self.1), Functional(dr, self.1))
             }
             DataExactCardinality { n, dp, dr } => {
-                write!(f, "DataMaxCardinality({} {} {})", n, dp.as_ofn(), dr.as_ofn())
+                write!(f, "DataMaxCardinality({} {} {})", n, Functional(dp, self.1), Functional(dr, self.1))
             }
         }
     }
@@ -243,42 +246,21 @@ impl Display for Functional<'_, owl::DataRange> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::DataRange::*;
         match self.0 {
-            Datatype(dt) => dt.as_ofn().fmt(f),
+            Datatype(dt) => Functional(dt, self.1).fmt(f),
             DataIntersectionOf(dts) => {
-                f.write_str("DataIntersectionOf(")?;
-                for (i, dt) in dts.iter().enumerate() {
-                    if i != 0 {
-                        f.write_str(" ")?;
-                    }
-                    write!(f, "{}", dt.as_ofn())?;
-                }
-                f.write_str(")")
+                write!(f, "DataIntersectionOf({})", Functional(dts, self.1))
             },
             DataUnionOf(dts) => {
-                f.write_str("DataUnionOf(")?;
-                for (i, dt) in dts.iter().enumerate() {
-                    if i != 0 {
-                        f.write_str(" ")?;
-                    }
-                    write!(f, "{}", dt.as_ofn())?;
-                }
-                f.write_str(")")
+                write!(f, "DataUnionOf({})", Functional(dts, self.1))
             },
             DataComplementOf(dt) => {
-                write!(f, "DataComplementOf({})", dt.as_ofn())
+                write!(f, "DataComplementOf({})", Functional(dt.as_ref(), self.1))
             },
             DataOneOf(lits) => {
-                f.write_str("DataOneOf(")?;
-                for (i, lit) in lits.iter().enumerate() {
-                    if i != 0 {
-                        f.write_str(" ")?;
-                    }
-                    write!(f, "{}", lit.as_ofn())?;
-                }
-                f.write_str(")")
+                write!(f, "DataUnionOf({})", Functional(lits, self.1))
             },
             DatatypeRestriction(dt, frs) => {
-                write!(f, "DatatypeRestriction({} {})", dt.as_ofn(), frs.as_ofn())
+                write!(f, "DatatypeRestriction({} {})", Functional(dt, self.1), Functional(frs, self.1))
             },
         }
     }
@@ -292,13 +274,13 @@ impl Display for Functional<'_, owl::Facet> {
 
 impl Display for Functional<'_, owl::FacetRestriction> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        write!(f, "{} {}", self.0.f.as_ofn(), self.0.l.as_ofn())
+        write!(f, "{} {}", Functional(&self.0.f, self.1), Functional(&self.0.l, self.1))
     }
 }
 
 impl Display for Functional<'_, owl::HasKey> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        write!(f, "HasKey({}", self.0.ce.as_ofn())?;
+        write!(f, "HasKey({} ", Functional(&self.0.ce, self.1))?;
 
         f.write_str("(")?;
         let mut n = 0;
@@ -307,7 +289,7 @@ impl Display for Functional<'_, owl::HasKey> {
                 if n != 0 {
                     f.write_str(" ")?;
                 }
-                ope.as_ofn().fmt(f)?;
+                Functional(ope, self.1).fmt(f)?;
                 n += 1
             }
         }
@@ -320,7 +302,7 @@ impl Display for Functional<'_, owl::HasKey> {
                 if n != 0 {
                     f.write_str(" ")?;
                 }
-                dp.as_ofn().fmt(f)?;
+                Functional(dp, self.1).fmt(f)?;
                 n += 1
             }
         }
@@ -332,15 +314,23 @@ impl Display for Functional<'_, owl::HasKey> {
 
 impl Display for Functional<'_, owl::IRI> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        write!(f, "<{}>", self.0)
+        if let Some(prefixes) = self.1.as_ref().and_then(|ctx| ctx.prefixes) {
+            match prefixes.shrink_iri(self.0) {
+                Ok(curie) => write!(f, "{}", curie),
+                Err(iri) => write!(f, "<{}>", iri),
+            }
+        } else {
+            write!(f, "<{}>", self.0)
+        }
     }
 }
 
 impl Display for Functional<'_, owl::Individual> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        use owl::Individual::*;
         match self.0 {
-            owl::Individual::Named(i) => i.as_ofn().fmt(f),
-            owl::Individual::Anonymous(i) => i.as_ofn().fmt(f),
+            Named(i) => Functional(i, self.1).fmt(f),
+            Anonymous(i) => Functional(i, self.1).fmt(f),
         }
     }
 }
@@ -357,7 +347,7 @@ impl Display for Functional<'_, owl::Literal> {
             }
             owl::Literal::Datatype { literal, datatype_iri } => {
                 quote(&literal, f)?;
-                write!(f, "^^{}", datatype_iri.as_ofn())
+                write!(f, "^^{}", Functional(datatype_iri, self.1))
             }
         }
     }
@@ -367,9 +357,9 @@ impl Display for Functional<'_, owl::ObjectPropertyExpression> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::ObjectPropertyExpression::*;
         match self.0 {
-            ObjectProperty(op) => op.as_ofn().fmt(f),
+            ObjectProperty(op) => Functional(op, self.1).fmt(f),
             InverseObjectProperty(op) => {
-                write!(f, "ObjectInverseOf({})", op.as_ofn())
+                write!(f, "ObjectInverseOf({})", Functional(op, self.1))
             }
         }
     }
@@ -379,9 +369,9 @@ impl Display for Functional<'_, owl::SubObjectPropertyExpression> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::SubObjectPropertyExpression::*;
         match self.0 {
-            ObjectPropertyExpression(ope) => ope.as_ofn().fmt(f),
+            ObjectPropertyExpression(ope) => Functional(ope, self.1).fmt(f),
             ObjectPropertyChain(chain) => {
-                write!(f, "ObjectPropertyChain({})", chain.as_ofn())
+                write!(f, "ObjectPropertyChain({})", Functional(chain, self.1))
             }
         }
     }
@@ -396,7 +386,7 @@ where
             if i != 0 {
                 f.write_str(" ")?;
             }
-            write!(f, "{}", x.as_ofn())?;
+            write!(f, "{}", Functional(x, self.1))?;
         }
         Ok(())
     }
@@ -404,11 +394,11 @@ where
 
 /// A trait for OWL elements that can be serialized to OWL Functional syntax.
 pub trait AsFunctional {
-    /// Get a handle for displaying the object in functional syntax.
+    /// Get a handle for displaying the element in functional syntax.
     ///
     /// Instead of returning a `String`, this method returns an opaque struct
-    /// that implements `Display`, allowing to write it to a file without
-    /// building a fully-serialized string first, or to just get a string
+    /// that implements `Display`, which can be used to write to a file without
+    /// having to build a fully-serialized string first, or to just get a string
     /// with the `ToString` implementation.
     ///
     /// # Example
@@ -417,14 +407,40 @@ pub trait AsFunctional {
     /// # let build = horned_owl::model::Build::new();
     /// use horned_functional::AsFunctional;
     ///
-    /// let axiom = DeclareClass(build.class("https://example.com/a"));
+    /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
     /// assert_eq!(
     ///     axiom.as_ofn().to_string(),
-    ///     "Declaration(Class(<https://example.com/a>))"
+    ///     "Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))"
     /// );
     /// ```
     fn as_ofn<'t>(&'t self) -> Functional<'t, Self> {
-        Functional(&self)
+        Functional(&self, None)
+    }
+
+    /// Get a handle for displaying the element, using the given context.
+    ///
+    /// Use the context to pass around a `PrefixMapping`, allowing the
+    /// functional representation to be written using abbreviated IRIs
+    /// when possible.
+    ///
+    /// # Example
+    /// ```
+    /// # use horned_owl::model::DeclareClass;
+    /// # let build = horned_owl::model::Build::new();
+    /// use horned_functional::AsFunctional;
+    /// use horned_functional::Context;
+    ///
+    /// let mut prefixes = curie::PrefixMapping::default();
+    /// prefixes.add_prefix("foaf", "http://xmlns.com/foaf/0.1/");
+    ///
+    /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
+    /// assert_eq!(
+    ///     axiom.as_ofn_ctx(&Context::from(&prefixes)).to_string(),
+    ///     "Declaration(Class(foaf:Person))"
+    /// );
+    /// ```
+    fn as_ofn_ctx<'t>(&'t self, context: &'t Context<'t>) -> Functional<'t, Self> {
+        Functional(&self, Some(context))
     }
 }
 
@@ -491,5 +507,17 @@ mod tests {
         let import = owl::Import(build.iri("http://example.com/"));
         let ofn = format!("{}", import.as_ofn());
         assert_eq!("Import(<http://example.com/>)", ofn);
+    }
+
+    #[test]
+    fn test_ofn_curie() {
+        let mut prefixes = curie::PrefixMapping::default();
+        prefixes.add_prefix("obo", "http://purl.obolibrary.org/obo/");
+
+        let build = owl::Build::new();
+        let decl = owl::DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
+
+        let ofn = format!("{}", decl.as_ofn_ctx(&Context::from(&prefixes)));
+        assert_eq!("Declaration(Class(obo:BFO_0000001))", ofn);
     }
 }

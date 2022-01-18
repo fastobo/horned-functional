@@ -21,6 +21,7 @@ use std::io::Read;
 use std::path::Path;
 
 use curie::PrefixMapping;
+use horned_owl::model::Build;
 use horned_owl::ontology::set::SetOntology;
 
 pub use self::error::Error;
@@ -28,6 +29,31 @@ pub use self::error::Result;
 pub use self::from_ofn::FromFunctional;
 pub use self::to_ofn::AsFunctional;
 pub use self::to_ofn::Functional;
+
+/// A context to pass around while parsing and writing OWL functional documents.
+#[derive(Debug, Default)]
+pub struct Context<'a> {
+    build: Option<&'a Build>,
+    prefixes: Option<&'a PrefixMapping>,
+}
+
+impl<'a> From<&'a Build> for Context<'a> {
+    fn from(build: &'a Build) -> Context<'a> {
+        Self {
+            build: Some(build),
+            prefixes: None,
+        }
+    }
+}
+
+impl<'a> From<&'a PrefixMapping> for Context<'a> {
+    fn from(prefixes: &'a PrefixMapping) -> Context<'a> {
+        Self {
+            build: None,
+            prefixes: Some(prefixes),
+        }
+    }
+}
 
 /// Parse an entire OWL document from a string.
 #[inline]
