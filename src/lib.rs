@@ -10,11 +10,11 @@ extern crate curie;
 extern crate horned_owl;
 extern crate pest;
 
+mod as_ofn;
 mod error;
 mod from_ofn;
 mod from_pair;
 mod parser;
-mod to_ofn;
 
 use std::fs::File;
 use std::io::Read;
@@ -24,11 +24,11 @@ use curie::PrefixMapping;
 use horned_owl::model::Build;
 use horned_owl::ontology::set::SetOntology;
 
+pub use self::as_ofn::AsFunctional;
+pub use self::as_ofn::Functional;
 pub use self::error::Error;
 pub use self::error::Result;
 pub use self::from_ofn::FromFunctional;
-pub use self::to_ofn::AsFunctional;
-pub use self::to_ofn::Functional;
 
 /// A context to pass around while parsing and writing OWL functional documents.
 #[derive(Debug, Default)]
