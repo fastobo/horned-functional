@@ -351,70 +351,55 @@ impl FromPair for AnnotatedAxiom {
 
             // Assertion
             Rule::SameIndividual => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let individuals: Result<Vec<NamedIndividual>> = inner
-                    .map(|pair| NamedIndividual::from_pair(pair, b, p))
+                let individuals: Result<Vec<Individual>> = inner
+                    .map(|pair| Individual::from_pair(pair, b, p))
                     .collect();
-                let individuals: Vec<Individual> =
-                    individuals?.iter().map(|i| i.to_owned().into()).collect();
-                Ok(Self::new(SameIndividual(individuals), annotations))
+                Ok(Self::new(SameIndividual(individuals?), annotations))
             }
             Rule::DifferentIndividuals => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
-                let individuals: Result<Vec<NamedIndividual>> = inner
-                    .map(|pair| NamedIndividual::from_pair(pair, b, p))
+                let individuals: Result<Vec<Individual>> = inner
+                    .map(|pair| Individual::from_pair(pair, b, p))
                     .collect();
-                let individuals: Vec<Individual> =
-                    individuals?.iter().map(|i| i.to_owned().into()).collect();
-                Ok(Self::new(DifferentIndividuals(individuals), annotations))
+                Ok(Self::new(DifferentIndividuals(individuals?), annotations))
             }
             Rule::ClassAssertion => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ce = ClassExpression::from_pair(inner.next().unwrap(), b, p)?;
-                let i = NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
+                let i = Individual::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(ClassAssertion::new(ce, i), annotations))
             }
             Rule::ObjectPropertyAssertion => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ope = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
-                let from: Individual =
-                    NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
-                let to: Individual =
-                    NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
+                let from = Individual::from_pair(inner.next().unwrap(), b, p)?;
+                let to = Individual::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
                     ObjectPropertyAssertion { ope, from, to },
                     annotations,
                 ))
             }
             Rule::NegativeObjectPropertyAssertion => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ope = ObjectPropertyExpression::from_pair(inner.next().unwrap(), b, p)?;
-                let from: Individual =
-                    NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
-                let to: Individual =
-                    NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
+                let from = Individual::from_pair(inner.next().unwrap(), b, p)?.into();
+                let to = Individual::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
                     NegativeObjectPropertyAssertion::new(ope, from, to),
                     annotations,
                 ))
             }
             Rule::DataPropertyAssertion => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ope = DataProperty::from_pair(inner.next().unwrap(), b, p)?;
-                let from: Individual =
-                    NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
+                let from = Individual::from_pair(inner.next().unwrap(), b, p)?;
                 let to = Literal::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
                     DataPropertyAssertion::new(ope, from, to),
@@ -422,12 +407,10 @@ impl FromPair for AnnotatedAxiom {
                 ))
             }
             Rule::NegativeDataPropertyAssertion => {
-                // FIXME: support for anonymous individual
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ope = DataProperty::from_pair(inner.next().unwrap(), b, p)?;
-                let from: Individual =
-                    NamedIndividual::from_pair(inner.next().unwrap(), b, p)?.into();
+                let from = Individual::from_pair(inner.next().unwrap(), b, p)?;
                 let to = Literal::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
                     NegativeDataPropertyAssertion::new(ope, from, to),
@@ -440,9 +423,19 @@ impl FromPair for AnnotatedAxiom {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), b, p)?;
                 let ap = AnnotationProperty::from_pair(inner.next().unwrap(), b, p)?;
-                let subject: Individual =
-                    IRI::from_pair(inner.next().unwrap().into_inner().next().unwrap(), b, p)?
-                        .into();
+                let subject = {
+                    let inner2 = inner.next().unwrap().into_inner().next().unwrap();
+                    match inner2.as_rule() {
+                        // FIXME: likely to change after discussion in
+                        //        https://github.com/phillord/horned-owl/pull/32
+                        Rule::IRI => IRI::from_pair(inner2, b, p)
+                            .map(NamedIndividual::from)
+                            .map(Individual::Named)?,
+                        Rule::AnonymousIndividual => AnonymousIndividual::from_pair(inner2, b, p)
+                            .map(Individual::Anonymous)?,
+                        rule => unreachable!("unexpected rule in Individual::from_pair: {:?}", rule),
+                    }
+                };
                 let av = AnnotationValue::from_pair(inner.next().unwrap(), b, p)?;
                 Ok(Self::new(
                     AnnotationAssertion::new(subject, Annotation { ap, av }),
@@ -508,9 +501,22 @@ impl FromPair for AnnotationValue {
         match inner.as_rule() {
             Rule::IRI => IRI::from_pair(inner, b, p).map(AnnotationValue::IRI),
             Rule::Literal => Literal::from_pair(inner, b, p).map(AnnotationValue::Literal),
-            Rule::AnonymousIndividual => unimplemented!("AnonymousIndividual"),
+            // FIXME: when horned-owl is updated, replace with
+            //        AnonymousIndividual::from_pair(inner, b, p).map(AnnotationValue::Anonymous)
+            Rule::AnonymousIndividual => unimplemented!("horned-owl does not support AnonymousIndividual as annotation values"),
             _ => unreachable!(),
         }
+    }
+}
+
+// ---------------------------------------------------------------------------
+
+impl FromPair for AnonymousIndividual {
+    const RULES: &'static [Rule] = &[Rule::AnonymousIndividual];
+    fn from_pair_unchecked(pair: Pair<Rule>, _build: &Build, _prefixes: &PrefixMapping) -> Result<Self> {
+        // FIXME: use a builder here when possible to reuse the string.
+        let inner = pair.into_inner().next().unwrap();
+        Ok(AnonymousIndividual(From::from(inner.as_str())))
     }
 }
 
@@ -578,13 +584,9 @@ impl FromPair for ClassExpression {
                 .map(ClassExpression::ObjectComplementOf),
             Rule::ObjectOneOf => inner
                 .into_inner()
-                .map(|pair| NamedIndividual::from_pair(pair, b, p))
-                .collect::<Result<Vec<NamedIndividual>>>()
-                .map(|i| {
-                    ClassExpression::ObjectOneOf(
-                        i.into_iter().map(|i| i.into()).collect::<Vec<Individual>>(),
-                    )
-                }),
+                .map(|pair| Individual::from_pair(pair, b, p))
+                .collect::<Result<Vec<Individual>>>()
+                .map(ClassExpression::ObjectOneOf),
             Rule::ObjectSomeValuesFrom => {
                 let mut pairs = inner.into_inner();
                 let ope = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
@@ -600,8 +602,8 @@ impl FromPair for ClassExpression {
             Rule::ObjectHasValue => {
                 let mut pairs = inner.into_inner();
                 let ope = ObjectPropertyExpression::from_pair(pairs.next().unwrap(), b, p)?;
-                let i = NamedIndividual::from_pair(pairs.next().unwrap(), b, p)?;
-                Ok(ClassExpression::ObjectHasValue { ope, i: i.into() })
+                let i = Individual::from_pair(pairs.next().unwrap(), b, p)?;
+                Ok(ClassExpression::ObjectHasValue { ope, i })
             }
             Rule::ObjectHasSelf => {
                 let pair = inner.into_inner().next().unwrap();
@@ -732,6 +734,20 @@ impl FromPair for FacetRestriction {
 
 // ---------------------------------------------------------------------------
 
+impl FromPair for Individual {
+    const RULES: &'static [Rule] = &[Rule::Individual];
+    fn from_pair_unchecked(pair: Pair<Rule>, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+        let inner = pair.into_inner().next().unwrap();
+        match inner.as_rule() {
+            Rule::NamedIndividual => NamedIndividual::from_pair(inner, build, prefixes).map(Individual::Named),
+            Rule::AnonymousIndividual => AnonymousIndividual::from_pair(inner, build, prefixes).map(Individual::Anonymous),
+            rule => unreachable!("unexpected rule in Individual::from_pair: {:?}", rule),
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+
 impl FromPair for IRI {
     const RULES: &'static [Rule] = &[Rule::IRI, Rule::AbbreviatedIRI, Rule::FullIRI];
     fn from_pair_unchecked(
@@ -766,27 +782,9 @@ impl FromPair for IRI {
 // ---------------------------------------------------------------------------
 
 impl FromPair for NamedIndividual {
-    const RULES: &'static [Rule] = &[
-        Rule::Individual,
-        Rule::SourceIndividual,
-        Rule::TargetIndividual,
-        Rule::AnonymousIndividual,
-        Rule::NamedIndividual,
-    ];
+    const RULES: &'static [Rule] = &[Rule::NamedIndividual];
     fn from_pair_unchecked(pair: Pair<Rule>, b: &Build, p: &PrefixMapping) -> Result<Self> {
-        match pair.as_rule() {
-            Rule::Individual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
-            Rule::SourceIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
-            Rule::TargetIndividual => Self::from_pair(pair.into_inner().next().unwrap(), b, p),
-            Rule::NamedIndividual => {
-                IRI::from_pair(pair.into_inner().next().unwrap(), b, p).map(NamedIndividual)
-            }
-            Rule::AnonymousIndividual => Err(Error::Unsupported(
-                "anonymous individual",
-                "https://github.com/fastobo/horned-functional/issues/1",
-            )),
-            rule => unreachable!("unexpected rule in NamedIndividual::from_pair: {:?}", rule),
-        }
+        IRI::from_pair(pair.into_inner().next().unwrap(), b, p).map(NamedIndividual)
     }
 }
 
