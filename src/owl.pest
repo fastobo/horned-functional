@@ -288,8 +288,8 @@ HasKey = { LIT_HAS_KEY  ~ LBRACKET ~ AxiomAnnotations ~ ClassExpression ~ LBRACK
 
 Assertion = {  SameIndividual | DifferentIndividuals | ClassAssertion | ObjectPropertyAssertion | NegativeObjectPropertyAssertion | DataPropertyAssertion | NegativeDataPropertyAssertion }
 
-SourceIndividual = { Individual }
-TargetIndividual = { Individual }
+SourceIndividual = _{ Individual }
+TargetIndividual = _{ Individual }
 
 SameIndividual = { LIT_SAME_INDIVIDUAL ~ LBRACKET ~ AxiomAnnotations ~ Individual{2,} ~ RBRACKET }
 DifferentIndividuals = {LIT_DIFFERENT_INDIVIDUALS ~ LBRACKET ~ AxiomAnnotations ~ Individual{2,} ~ RBRACKET }
