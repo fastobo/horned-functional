@@ -9,7 +9,7 @@ use crate::error::Result;
 use crate::from_pair::FromPair;
 use crate::parser::OwlFunctionalParser;
 
-/// A trait for OWL elements that can be deserialized from OWL strings.
+/// A trait for OWL elements that can be deserialized from OWL Functional syntax.
 ///
 /// The deserialization will fail if the entirety of the input string cannot
 /// be deserialized into the declared type.

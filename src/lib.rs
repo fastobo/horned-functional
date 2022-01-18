@@ -11,7 +11,7 @@ extern crate horned_owl;
 extern crate pest;
 
 mod error;
-mod from_fn_str;
+mod from_ofn;
 mod from_pair;
 mod parser;
 
@@ -25,7 +25,7 @@ use horned_owl::ontology::set::SetOntology;
 
 pub use self::error::Error;
 pub use self::error::Result;
-pub use self::from_fn_str::FromFunctional;
+pub use self::from_ofn::FromFunctional;
 
 /// Parse an entire OWL document from a string.
 #[inline]
