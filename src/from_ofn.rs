@@ -4,11 +4,11 @@ use curie::PrefixMapping;
 use horned_owl::model::*;
 use horned_owl::ontology::set::SetOntology;
 
-use crate::Context;
 use crate::error::Error;
 use crate::error::Result;
 use crate::from_pair::FromPair;
 use crate::parser::OwlFunctionalParser;
+use crate::Context;
 
 /// A trait for OWL elements that can be deserialized from OWL Functional syntax.
 ///
@@ -108,9 +108,8 @@ mod tests {
 
     #[test]
     fn test_remaining_input() {
-        match DeclareClass::from_ofn(
-            "Class(<http://example.com/a>) Class(<http://example.com/b>)",
-        ) {
+        match DeclareClass::from_ofn("Class(<http://example.com/a>) Class(<http://example.com/b>)")
+        {
             Ok(ok) => panic!("unexpected success: {:?}", ok),
             Err(Error::PestError(e)) => {
                 assert_eq!(

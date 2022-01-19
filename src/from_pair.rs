@@ -11,10 +11,10 @@ use horned_owl::vocab::WithIRI;
 use horned_owl::vocab::OWL;
 use pest::iterators::Pair;
 
-use crate::Context;
 use crate::error::Error;
 use crate::error::Result;
 use crate::parser::Rule;
+use crate::Context;
 
 // ---------------------------------------------------------------------------
 
@@ -196,7 +196,8 @@ impl FromPair for AnnotatedAxiom {
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
                 let sub = SubObjectPropertyExpression::from_pair(inner.next().unwrap(), ctx)?;
                 let sup = ObjectPropertyExpression::from_pair(
-                    inner.next().unwrap().into_inner().next().unwrap(), ctx,
+                    inner.next().unwrap().into_inner().next().unwrap(),
+                    ctx,
                 )?;
                 Ok(Self::new(SubObjectPropertyOf { sup, sub }, annotations))
             }
@@ -350,17 +351,15 @@ impl FromPair for AnnotatedAxiom {
             Rule::SameIndividual => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
-                let individuals: Result<Vec<Individual>> = inner
-                    .map(|pair| Individual::from_pair(pair, ctx))
-                    .collect();
+                let individuals: Result<Vec<Individual>> =
+                    inner.map(|pair| Individual::from_pair(pair, ctx)).collect();
                 Ok(Self::new(SameIndividual(individuals?), annotations))
             }
             Rule::DifferentIndividuals => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
-                let individuals: Result<Vec<Individual>> = inner
-                    .map(|pair| Individual::from_pair(pair, ctx))
-                    .collect();
+                let individuals: Result<Vec<Individual>> =
+                    inner.map(|pair| Individual::from_pair(pair, ctx)).collect();
                 Ok(Self::new(DifferentIndividuals(individuals?), annotations))
             }
             Rule::ClassAssertion => {
@@ -514,9 +513,7 @@ impl FromPair for AnnotationValue {
 
 impl FromPair for AnonymousIndividual {
     const RULES: &'static [Rule] = &[Rule::AnonymousIndividual];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>, _ctx: &Context<'_>,
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, _ctx: &Context<'_>) -> Result<Self> {
         // FIXME: use a builder here when possible to reuse the string.
         let nodeid = pair.into_inner().next().unwrap();
         let inner = nodeid.into_inner().next().unwrap();
@@ -740,15 +737,10 @@ impl FromPair for FacetRestriction {
 
 impl FromPair for Individual {
     const RULES: &'static [Rule] = &[Rule::Individual];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>,
-        ctx: &Context<'_>
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
         let inner = pair.into_inner().next().unwrap();
         match inner.as_rule() {
-            Rule::NamedIndividual => {
-                NamedIndividual::from_pair(inner, ctx).map(Individual::Named)
-            }
+            Rule::NamedIndividual => NamedIndividual::from_pair(inner, ctx).map(Individual::Named),
             Rule::AnonymousIndividual => {
                 AnonymousIndividual::from_pair(inner, ctx).map(Individual::Anonymous)
             }
@@ -761,10 +753,7 @@ impl FromPair for Individual {
 
 impl FromPair for IRI {
     const RULES: &'static [Rule] = &[Rule::IRI, Rule::AbbreviatedIRI, Rule::FullIRI];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>,
-        ctx: &Context<'_>
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
         match pair.as_rule() {
             Rule::IRI => {
                 let inner = pair.into_inner().next().unwrap();
@@ -776,7 +765,10 @@ impl FromPair for IRI {
                 let local = pname.next().unwrap();
                 let curie = Curie::new(prefix.map(|p| p.as_str()), local.as_str());
                 if let Some(prefixes) = ctx.prefixes {
-                    prefixes.expand_curie(&curie).map_err(Error::from).map(|s| ctx.iri(s))
+                    prefixes
+                        .expand_curie(&curie)
+                        .map_err(Error::from)
+                        .map(|s| ctx.iri(s))
                 } else {
                     Err(Error::ExpansionError(curie::ExpansionError::Invalid))
                 }
@@ -862,10 +854,7 @@ impl FromPair for ObjectPropertyExpression {
 
 impl FromPair for SetOntology {
     const RULES: &'static [Rule] = &[Rule::Ontology];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>,
-        ctx: &Context<'_>
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
         debug_assert!(pair.as_rule() == Rule::Ontology);
         let mut pairs = pair.into_inner();
         let mut pair = pairs.next().unwrap();
@@ -907,10 +896,7 @@ impl FromPair for SetOntology {
 
 impl FromPair for OntologyAnnotation {
     const RULES: &'static [Rule] = &[Rule::Annotation];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>,
-        ctx: &Context<'_>,
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
         Annotation::from_pair(pair, ctx).map(OntologyAnnotation)
     }
 }
@@ -919,10 +905,7 @@ impl FromPair for OntologyAnnotation {
 
 impl FromPair for (SetOntology, PrefixMapping) {
     const RULES: &'static [Rule] = &[Rule::OntologyDocument];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>,
-        ctx: &Context<'_>,
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
         let mut pairs = pair.into_inner();
 
         // Build the prefix mapping and use it to build the ontology
@@ -956,10 +939,7 @@ impl FromPair for (SetOntology, PrefixMapping) {
 
 impl FromPair for String {
     const RULES: &'static [Rule] = &[Rule::QuotedString];
-    fn from_pair_unchecked(
-        pair: Pair<Rule>,
-        _ctx: &Context<'_>,
-    ) -> Result<Self> {
+    fn from_pair_unchecked(pair: Pair<Rule>, _ctx: &Context<'_>) -> Result<Self> {
         let l = pair.as_str().len();
         let s = &pair.as_str()[1..l - 1];
         Ok(s.replace(r"\\", r"\").replace(r#"\""#, r#"""#))
@@ -1015,8 +995,7 @@ mod tests {
             let ctx = Context::new(&$build, &$prefixes);
             match OwlFunctionalParser::parse($rule, doc) {
                 Ok(mut pairs) => {
-                    let res =
-                        <$ty as FromPair>::from_pair(pairs.next().unwrap(), &ctx);
+                    let res = <$ty as FromPair>::from_pair(pairs.next().unwrap(), &ctx);
                     assert_eq!(res.unwrap(), $expected);
                 }
                 Err(e) => panic!(

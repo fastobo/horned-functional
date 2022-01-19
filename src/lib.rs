@@ -37,7 +37,6 @@ pub struct Context<'a> {
 }
 
 impl<'a> Context<'a> {
-
     pub fn new<B, P>(build: B, prefixes: P) -> Self
     where
         B: Into<Option<&'a Build>>,
@@ -45,7 +44,7 @@ impl<'a> Context<'a> {
     {
         Self {
             build: build.into(),
-            prefixes: prefixes.into()
+            prefixes: prefixes.into(),
         }
     }
 
