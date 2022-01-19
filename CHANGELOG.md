@@ -7,7 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.1...HEAD
+
+
+## [v0.3.1] - 2022-01-19
+
+[v0.3.1]: https://github.com/fastobo/horned-functional/compare/v0.3.0...v0.3.1
+
+### Changed
+- Renamed `Error` variants for less redudancy (removed `Error` suffix where applicable).
+
 
 
 ## [v0.3.0] - 2022-01-19
@@ -15,12 +24,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [v0.3.0]: https://github.com/fastobo/horned-functional/compare/v0.2.0...v0.3.0
 
 ### Added
-- `Context` struct to pass optional `horned_owl::model::Build` and `curie::PrefixMapping`
-  references to use while parsing and serializing.
-- `AsFunctional` trait to render OWL elements in Functional-style syntax
-  format.
-- `FromFunctional` implementation for `Axiom` based on the `Axiom` implementation
-  discarding the annotations.
+- `Context` struct to pass optional `horned_owl::model::Build` and `curie::PrefixMapping` references to use while parsing and serializing.
+- `AsFunctional` trait to render OWL elements in Functional-style syntax format.
+- `FromFunctional` implementation for `Axiom` based on the `Axiom` implementation discarding the annotations.
 - Update `FromPair` code to support `AnonymousIndividual` where possible.
 - `horned_functional::to_string` function to render an `Ontology`.
 
