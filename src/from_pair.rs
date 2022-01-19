@@ -1012,6 +1012,17 @@ mod tests {
         );
 
         assert_parse_into!(
+            Axiom,
+            Rule::Axiom,
+            build,
+            prefixes,
+            "Declaration(Class(owl:Thing))",
+            Axiom::DeclareClass(DeclareClass(
+                build.class("http://www.w3.org/2002/07/owl#Thing")
+            ))
+        );
+
+        assert_parse_into!(
             AnnotatedAxiom,
             Rule::Axiom,
             build,

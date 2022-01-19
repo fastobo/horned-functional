@@ -15,11 +15,16 @@ mod from_ofn;
 mod from_pair;
 mod parser;
 
+use std::collections::HashMap;
+use std::fmt::Debug;
+use std::fmt::Formatter;
+use std::fmt::Write;
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
 
 use curie::PrefixMapping;
+use horned_owl::model::AnnotatedAxiom;
 use horned_owl::model::Build;
 use horned_owl::ontology::set::SetOntology;
 
@@ -30,10 +35,28 @@ pub use self::error::Result;
 pub use self::from_ofn::FromFunctional;
 
 /// A context to pass around while parsing and writing OWL functional documents.
-#[derive(Debug, Default)]
+#[derive(Default)]
 pub struct Context<'a> {
     build: Option<&'a Build>,
     prefixes: Option<&'a PrefixMapping>,
+}
+
+// Before `v0.1.1`, `curie::PrefixMapping` doesn't implement `Debug`.
+impl<'a> Debug for Context<'a> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> std::result::Result<(), std::fmt::Error> {
+        f.debug_struct("Context")
+            .field("build", &self.build)
+            .field(
+                "prefixes",
+                &match &self.prefixes {
+                    None => format!("{}", "None"),
+                    Some(p) => {
+                        format!("{:?}", p.mappings().collect::<HashMap<_, _>>())
+                    }
+                },
+            )
+            .finish()
+    }
 }
 
 impl<'a> Context<'a> {
@@ -93,8 +116,30 @@ pub fn from_reader<R: Read>(mut r: R) -> Result<(SetOntology, PrefixMapping)> {
     from_str(s)
 }
 
-/// Parse an entire OWL document from a file on the local filesystem..
+/// Parse an entire OWL document from a file on the local filesystem.
 #[inline]
 pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(SetOntology, PrefixMapping)> {
     File::open(path).map_err(Error::from).and_then(from_reader)
+}
+
+/// Render an entire OWL document to a string.
+#[inline]
+pub fn to_string<'a, O, P>(ontology: O, prefixes: P) -> String
+where
+    O: Iterator<Item = &'a AnnotatedAxiom>,
+    P: Into<Option<&'a PrefixMapping>>,
+{
+    let p = prefixes.into();
+    let mut dest = String::new();
+
+    if let Some(pm) = p {
+        write!(dest, "{}", pm.as_ofn()).expect("cannot fail to write to String");
+    }
+
+    let ctx = Context::new(None, p);
+    for axiom in ontology {
+        writeln!(dest, "{}", axiom.as_ofn_ctx(&ctx)).expect("cannot fail to write to String");
+    }
+
+    dest
 }
