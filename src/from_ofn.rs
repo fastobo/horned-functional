@@ -97,7 +97,7 @@ mod tests {
         match DeclareClass::from_ofn("Class(<http://example.com/a>) Class(<http://example.com/b>)")
         {
             Ok(ok) => panic!("unexpected success: {:?}", ok),
-            Err(Error::PestError(e)) => {
+            Err(Error::Pest(e)) => {
                 assert_eq!(
                     e.variant,
                     pest::error::ErrorVariant::CustomError {

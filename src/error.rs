@@ -19,10 +19,10 @@ pub enum Error {
     /// use horned_functional::FromFunctional;
     ///
     /// let res = SetOntology::from_ofn("Ontology(");
-    /// assert_matches!(res, Err(horned_functional::Error::PestError(_)));
+    /// assert_matches!(res, Err(horned_functional::Error::Pest(_)));
     /// ```
     #[error(transparent)]
-    PestError(#[from] pest::error::Error<Rule>),
+    Pest(#[from] pest::error::Error<Rule>),
 
     /// An error that happened at the I/O level.
     ///
@@ -30,10 +30,10 @@ pub enum Error {
     /// ```rust
     /// # #[macro_use] extern crate matches;
     /// let res = horned_functional::from_file("/some/missing/file").map(|x| x.0);
-    /// assert_matches!(res, Err(horned_functional::Error::IOError(_)));
+    /// assert_matches!(res, Err(horned_functional::Error::IO(_)));
     /// ```
     #[error(transparent)]
-    IOError(#[from] std::io::Error),
+    IO(#[from] std::io::Error),
 
     /// A CURIE expansion went wrong.
     ///
@@ -49,10 +49,10 @@ pub enum Error {
     /// use horned_functional::FromFunctional;
     ///
     /// let res = IRI::from_ofn("example:Entity");
-    /// assert_matches!(res, Err(horned_functional::Error::ExpansionError(_)));
+    /// assert_matches!(res, Err(horned_functional::Error::Expansion(_)));
     /// ```
     #[error("expansion error: {0:?}")]
-    ExpansionError(curie::ExpansionError),
+    Expansion(curie::ExpansionError),
 
     /// An unknown IRI was used as a facet.
     ///
@@ -80,6 +80,6 @@ pub enum Error {
 
 impl From<curie::ExpansionError> for Error {
     fn from(e: curie::ExpansionError) -> Self {
-        Error::ExpansionError(e)
+        Error::Expansion(e)
     }
 }

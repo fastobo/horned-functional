@@ -725,7 +725,7 @@ impl FromPair for IRI {
                         .map_err(Error::from)
                         .map(|s| ctx.iri(s))
                 } else {
-                    Err(Error::ExpansionError(curie::ExpansionError::Invalid))
+                    Err(Error::from(curie::ExpansionError::Invalid))
                 }
             }
             Rule::FullIRI => {
