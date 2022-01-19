@@ -37,6 +37,7 @@ pub struct Context<'a> {
 }
 
 impl<'a> Context<'a> {
+    /// Create a new context with the given IRI builder and prefix mapping.
     pub fn new<B, P>(build: B, prefixes: P) -> Self
     where
         B: Into<Option<&'a Build>>,
@@ -48,6 +49,7 @@ impl<'a> Context<'a> {
         }
     }
 
+    /// Obtain an IRI for the given string, using the internal builder if any.
     pub fn iri<S: Into<String>>(&self, s: S) -> horned_owl::model::IRI
     where
         S: Into<String>,
