@@ -30,34 +30,21 @@ macro_rules! implement {
     ($($ty:ty),+) => {
         $(impl FromFunctional for $ty {
             fn from_ofn_ctx(s: &str, context: &Context<'_>) -> Result<Self> {
-                if let Ok(mut pairs) = OwlFunctionalParser::parse(Self::RULE, s) {
-                    if pairs.as_str().len() == s.len() {
-                        return Self::from_pair(pairs.next().unwrap(), context);
-                    } else {
-                        return Err(
-                            Error::from(
-                                pest::error::Error::new_from_span(
-                                    pest::error::ErrorVariant::CustomError {
-                                        message: "remaining input".to_string(),
-                                    },
-                                    pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap()
-                                )
+                let mut pairs = OwlFunctionalParser::parse(Self::RULE, s)?;
+                if pairs.as_str().len() == s.len() {
+                     Self::from_pair(pairs.next().unwrap(), context)
+                } else {
+                    Err(
+                        Error::from(
+                            pest::error::Error::new_from_span(
+                                pest::error::ErrorVariant::CustomError {
+                                    message: "remaining input".to_string(),
+                                },
+                                pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap()
                             )
                         )
-                    }
-                }
-
-                return Err(
-                    Error::from(
-                        pest::error::Error::new_from_span(
-                            pest::error::ErrorVariant::ParsingError {
-                                positives: Vec::new(),
-                                negatives: vec![Self::RULE],
-                            },
-                            pest::Span::new(s, 0, s.len()).unwrap()
-                        )
                     )
-                );
+                }
             }
         })*
     }
@@ -69,6 +56,7 @@ implement!(
     Annotation,
     AnnotationValue,
     AnonymousIndividual,
+    Axiom,
     BTreeSet<Annotation>,
     Class,
     ClassExpression,

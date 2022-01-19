@@ -472,6 +472,15 @@ impl FromPair for AnonymousIndividual {
 
 // ---------------------------------------------------------------------------
 
+impl FromPair for Axiom {
+    const RULE: Rule = Rule::Axiom;
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
+        AnnotatedAxiom::from_pair_unchecked(pair, ctx).map(|aa| aa.axiom)
+    }
+}
+
+// ---------------------------------------------------------------------------
+
 impl FromPair for BTreeSet<Annotation> {
     const RULE: Rule = Rule::Annotations;
     fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {

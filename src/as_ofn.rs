@@ -27,8 +27,11 @@ fn quote(mut s: &str, f: &mut Formatter<'_>) -> Result<(), Error> {
 /// A wrapper for displaying an OWL2 element in functional syntax.
 #[derive(Debug)]
 pub struct Functional<'t, T: ?Sized + AsFunctional>(
+    // the element to display
     &'t T,
+    // an eventual context to use (for IRI prefixes)
     Option<&'t Context<'t>>,
+    // an eventual set of annotations (to render inside axioms)
     Option<&'t BTreeSet<owl::Annotation>>,
 );
 
