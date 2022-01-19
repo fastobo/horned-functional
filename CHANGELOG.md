@@ -7,10 +7,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.0...HEAD
 
 
-## [v0.2.0] - 2020-12-12
+## [v0.3.0] - 2022-01-19
+
+[v0.3.0]: https://github.com/fastobo/horned-functional/compare/v0.2.0...v0.3.0
+
+### Added
+- `Context` struct to pass optional `horned_owl::model::Build` and `curie::PrefixMapping`
+  references to use while parsing and serializing.
+- `AsFunctional` trait to render OWL elements in Functional-style syntax
+  format.
+- `FromFunctional` implementation for `Axiom` based on the `Axiom` implementation
+  discarding the annotations.
+- Update `FromPair` code to support `AnonymousIndividual` where possible.
+- `horned_functional::to_string` function to render an `Ontology`.
+
+### Changed
+- Renamed `FromFunctional` methods to `from_ofn` and `from_ofn_ctx`.
+- `FromPair` implementors can only be derived from a single `pest` rule.
+
+
+## [v0.2.0] - 2021-12-12
 
 ### Changed
 - Bumped `horned-owl` to `v0.10.0` ([#19](https://github.com/fastobo/horned-functional/pull/19) by [@paulalesius](https://github.com/paulalesius)).

@@ -1,6 +1,6 @@
 # `horned-functional` [![Star me](https://img.shields.io/github/stars/fastobo/horned-functional.svg?style=social&label=Star&maxAge=3600)](https://github.com/fastobo/horned-functional/stargazers)
 
-*An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser for [`horned-owl`](https://github.com/phillord/horned-owl)*
+*An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser for [`horned-owl`](https://github.com/phillord/horned-owl).*
 
 [![Actions](https://img.shields.io/github/workflow/status/fastobo/horned-functional/Test?style=flat-square&maxAge=600)](https://github.com/fastobo/horned-functional/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/fastobo/horned-functional/master.svg?style=flat-square&maxAge=600)](https://codecov.io/gh/fastobo/horned-functional)
