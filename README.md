@@ -13,52 +13,105 @@
 [![DOI](https://img.shields.io/badge/doi-10.7490%2Ff1000research.1117405.1-brightgreen?style=flat-square&maxAge=31536000)](https://f1000research.com/posters/8-1500)
 
 
-## Overview
+## 🗺️ Overview
 
-This library provides an OWL Functional-style parser implementation for the
-`horned-owl` library, which provides the complete OWL2 model as a Rust library.
+This library provides extensions to the [`horned-owl`](https://crates.io/crates/horned-owl)
+crate to work with the [OWL Functional-Style](https://www.w3.org/TR/owl2-syntax) syntax.
+It provides a parser written with [`pest`](https://pest.rs) and a serializer.
 
-The parser is implemented as a `pest` parser, using a translation of the BNF
-grammar. It provides spanned errors to easily identify the faulty parts of an
-invalid OWL2 document.
+## 🔌 Usage
 
-All OWL2 entities also receive an implementation of `FromFunctional`, which can
-be used to deserialize each entity independently from their functional syntax
-representation. Since the deserialization is context-dependent when not
-considering the entire document, it is possible to provide a custom prefix
-mapping to handle compact identifiers in situations where one is needed.
-
-
-## Usage
-
-Add `horned-owl` and `horned-functional` to the `[dependencies]` sections of
-your `Cargo.toml` manifest:
+Add the latest versions of `horned-owl` and `horned-functional` to the
+`[dependencies]` sections of your `Cargo.toml` manifest:
 ```toml
 [dependencies]
-horned-functional = "0.2.0"
+horned-owl = "0.10.0"
+horned-functional = "0.3.0"
 ```
 
-The `from_reader` function is the easiest way to deserialize an OWL Functional
-document from a `Read` implementor:
-```rust,no_run
-extern crate ureq;
-extern crate horned_functional;
+### 🔍 Parser
 
-fn main() {
-    let url = "https://raw.githubusercontent.com/ha-mo-we/Racer/master/examples/owl2/owl-primer-mod.ofn";
+To easily read an entire OWL document, including prefixes, use the
+[`horned_functional::to_string`](https://docs.rs/horned-functional/latest/horned_functional/fn.from_str.html) function:
 
-    let response = ureq::get(url).call().unwrap();
-    let mut reader = response.into_reader();
+```rust
+let s = std::fs::read_to_string("tests/data/ms.obo.ofn")
+    .expect("failed to read OWL file");
+let (ontology, prefixes) = horned_functional::from_str(&s)
+    .expect("failed to parse OWL file");
+```
 
-    match horned_functional::from_reader(reader) {
-      Ok((ont, _)) => println!("Number of axioms: {}", ont.iter().count()),
-      Err(e) => panic!("could not parse document: {}", e)
-    };
-}
+All OWL elements can be parsed from functional syntax as well, using the
+`FromFunctional` trait to read a from a serialized string with the `from_ofn`
+method:
+
+```rust
+use horned_owl::model::Axiom;
+use horned_functional::FromFunctional;
+
+let axiom = Axiom::from_ofn("Declaration(Class(<http://purl.obolibrary.org/obo/MS_1000031>))")
+    .expect("failed to parse axiom");
+```
+
+If the serialized version contains abbreviated IRIs, you can pass a custom
+prefix mapping to the `from_ofn_ctx` method:
+
+```rust
+use horned_owl::model::Axiom;
+use horned_functional::FromFunctional;
+
+let mut mapping = curie::PrefixMapping::default();
+mapping.add_prefix("obo", "http://purl.obolibrary.org/obo/").ok();
+
+let ctx = horned_functional::Context::from(&mapping);
+let axiom = Axiom::from_ofn_ctx("Declaration(Class(obo:MS_1000031))", &ctx)
+    .expect("failed to parse axiom");
 ```
 
 
-## Feedback
+### ✏️ Serializer
+
+To easily serialize an entire OWL document, including prefixes, use the
+[`horned_functional::to_string`](https://docs.rs/horned-functional/latest/horned_functional/fn.to_string.html) function:
+
+```rust
+let mut file = std::fs::File::open("tests/data/ms.owx")
+    .map(std::io::BufReader::new)
+    .expect("failed to open OWL file");
+let (ontology, prefixes) = horned_owl::io::owx::reader::read(&mut file)
+    .expect("failed to read OWL file");
+
+// serialize using the same prefixes as the input OWL/XML file
+let ofn = horned_functional::to_string(ontology.iter(), &prefixes);
+
+// serialize without abbreviated IRIs
+let ofn = horned_functional::to_string(ontology.iter(), None);
+```
+
+All OWL elements can be displayed in functional syntax as well, using
+a custom `Display` implementation, allowing the functional syntax in
+[`format!`](https://doc.rust-lang.org/std/macro.format.html),
+[`println!`](https://doc.rust-lang.org/std/macro.println.html) or
+[`write!`](https://doc.rust-lang.org/std/macro.write.html) macros.
+Just add the [`AsFunctional`](https://docs.rs/horned-functional/latest/horned_functional/trait.AsFunctional.html) trait to the scope, and use the `as_ofn` method
+to get a displayable type for any supported element:
+
+```rust
+use horned_owl::model::*;
+use horned_functional::AsFunctional;
+
+let build = Build::new();
+
+// build a Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002175>))
+let op = build.object_property("http://purl.obolibrary.org/obo/RO_0002175");
+let axiom = Axiom::from(DeclareObjectProperty(op));
+
+println!("Axiom: {}", axiom.as_ofn());
+```
+
+## 💭 Feedback
+
+### ⚠️ Issue Tracker
 
 Found a bug ? Have an enhancement request ? Head over to the
 [GitHub issue tracker](https://github.com/fastobo/horned-functional/issues) of the project if
@@ -66,8 +119,18 @@ you need to report or ask something. If you are filling in on a bug, please incl
 information as you can about the issue, and try to recreate the same bug in a simple, easily
 reproducible situation.
 
+## 📋 Changelog
 
-## About
+This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
+and provides a [changelog](https://github.com/althonos/pubchem.rs/blob/master/CHANGELOG.md)
+in the [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) format.
+
+## 📜 License
+
+This library is provided under the open-source
+[MIT license](https://choosealicense.com/licenses/mit/).
+
+## 📰 Citation
 
 This project was developed by [Martin Larralde](https://github.com/althonos)
 as part of a Master's Degree internship in the [BBOP team](http://berkeleybop.org/) of the

@@ -9,6 +9,7 @@ repository = "https://github.com/fastobo/horned-functional"
 readme = "README.md"
 keywords = ["owl", "syntax", "parser", "functional", "owl2"]
 categories = ["science", "parser-implementations"]
+exclude = ["tests/data/*"]
 
 [badges.travis-ci]
 repository = "fastobo/horned-functional"
