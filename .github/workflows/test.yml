@@ -99,7 +99,7 @@ jobs:
         args: '--token ${{ secrets.CRATES_IO_TOKEN }}'
   release:
     name: Release
-    environment: Release
+    environment: GitHub Releases
     needs: publish
     runs-on: ubuntu-latest
     if: "startsWith(github.ref, 'refs/tags/v')"
