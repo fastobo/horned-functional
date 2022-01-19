@@ -18,7 +18,7 @@ pub enum Error {
     /// # use horned_owl::ontology::set::SetOntology;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = SetOntology::from_ofn_str("Ontology(");
+    /// let res = SetOntology::from_ofn("Ontology(");
     /// assert_matches!(res, Err(horned_functional::Error::PestError(_)));
     /// ```
     #[error(transparent)]
@@ -38,7 +38,8 @@ pub enum Error {
     /// A CURIE expansion went wrong.
     ///
     /// This error can be encountered in documents where a CURIE used an
-    /// undefined prefix.
+    /// undefined prefix, or when attempting to parse an abbreviated IRI
+    /// without providing a prefix mapping.
     ///
     /// # Example
     /// ```rust
@@ -47,7 +48,7 @@ pub enum Error {
     /// # use horned_owl::model::IRI;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = IRI::from_ofn_str("example:Entity");
+    /// let res = IRI::from_ofn("example:Entity");
     /// assert_matches!(res, Err(horned_functional::Error::ExpansionError(_)));
     /// ```
     #[error("expansion error: {0:?}")]
@@ -61,7 +62,7 @@ pub enum Error {
     /// # use horned_owl::model::Facet;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = Facet::from_ofn_str("<http://example.com/thing>");
+    /// let res = Facet::from_ofn("<http://example.com/thing>");
     /// assert_matches!(res, Err(horned_functional::Error::InvalidFacet(_)));
     /// ```
     #[error("invalid facet: {0}")]

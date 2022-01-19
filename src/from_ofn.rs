@@ -4,6 +4,7 @@ use curie::PrefixMapping;
 use horned_owl::model::*;
 use horned_owl::ontology::set::SetOntology;
 
+use crate::Context;
 use crate::error::Error;
 use crate::error::Result;
 use crate::from_pair::FromPair;
@@ -15,22 +16,12 @@ use crate::parser::OwlFunctionalParser;
 /// be deserialized into the declared type.
 pub trait FromFunctional: Sized + FromPair {
     /// Deserialize a string containing an OWL element in functional syntax.
-    fn from_ofn(s: &str, build: &Build, prefixes: &PrefixMapping) -> Result<Self>;
-
     #[inline]
-    fn from_ofn_with_build(s: &str, build: &Build) -> Result<Self> {
-        Self::from_ofn(s, build, &PrefixMapping::default())
+    fn from_ofn(s: &str) -> Result<Self> {
+        Self::from_ofn_ctx(s, &Context::default())
     }
 
-    #[inline]
-    fn from_ofn_with_prefixes(s: &str, prefixes: &PrefixMapping) -> Result<Self> {
-        Self::from_ofn(s, &Build::default(), prefixes)
-    }
-
-    #[inline]
-    fn from_ofn_str(s: &str) -> Result<Self> {
-        Self::from_ofn(s, &Build::default(), &PrefixMapping::default())
-    }
+    fn from_ofn_ctx(s: &str, context: &Context<'_>) -> Result<Self>;
 }
 
 // We use a macro instead of a blanket impl to have all types displayed in
@@ -38,11 +29,11 @@ pub trait FromFunctional: Sized + FromPair {
 macro_rules! implement {
     ($($ty:ty),+) => {
         $(impl FromFunctional for $ty {
-            fn from_ofn(s: &str, build: &Build, prefixes: &PrefixMapping) -> Result<Self> {
+            fn from_ofn_ctx(s: &str, context: &Context<'_>) -> Result<Self> {
                 for rule in Self::RULES {
                     if let Ok(mut pairs) = OwlFunctionalParser::parse(*rule, s) {
                         if pairs.as_str().len() == s.len() {
-                            return Self::from_pair(pairs.next().unwrap(), build, prefixes);
+                            return Self::from_pair(pairs.next().unwrap(), context);
                         } else {
                             return Err(
                                 Error::from(
@@ -117,7 +108,7 @@ mod tests {
 
     #[test]
     fn test_remaining_input() {
-        match DeclareClass::from_ofn_str(
+        match DeclareClass::from_ofn(
             "Class(<http://example.com/a>) Class(<http://example.com/b>)",
         ) {
             Ok(ok) => panic!("unexpected success: {:?}", ok),

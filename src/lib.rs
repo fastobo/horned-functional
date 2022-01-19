@@ -36,6 +36,30 @@ pub struct Context<'a> {
     prefixes: Option<&'a PrefixMapping>,
 }
 
+impl<'a> Context<'a> {
+
+    pub fn new<B, P>(build: B, prefixes: P) -> Self
+    where
+        B: Into<Option<&'a Build>>,
+        P: Into<Option<&'a PrefixMapping>>,
+    {
+        Self {
+            build: build.into(),
+            prefixes: prefixes.into()
+        }
+    }
+
+    pub fn iri<S: Into<String>>(&self, s: S) -> horned_owl::model::IRI
+    where
+        S: Into<String>,
+    {
+        match self.build {
+            Some(b) => b.iri(s),
+            None => Build::default().iri(s),
+        }
+    }
+}
+
 impl<'a> From<&'a Build> for Context<'a> {
     fn from(build: &'a Build) -> Context<'a> {
         Self {
@@ -57,7 +81,7 @@ impl<'a> From<&'a PrefixMapping> for Context<'a> {
 /// Parse an entire OWL document from a string.
 #[inline]
 pub fn from_str<S: AsRef<str>>(src: S) -> Result<(SetOntology, PrefixMapping)> {
-    FromFunctional::from_ofn_str(src.as_ref())
+    FromFunctional::from_ofn(src.as_ref())
 }
 
 /// Parse an entire OWL document from a `Read` implementor.

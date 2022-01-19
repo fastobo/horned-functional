@@ -47,7 +47,7 @@ extern crate horned_functional;
 fn main() {
     let url = "https://raw.githubusercontent.com/ha-mo-we/Racer/master/examples/owl2/owl-primer-mod.ofn";
 
-    let response = ureq::get(url).call();
+    let response = ureq::get(url).call().unwrap();
     let mut reader = response.into_reader();
 
     match horned_functional::from_reader(reader) {
