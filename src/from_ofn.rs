@@ -30,22 +30,20 @@ macro_rules! implement {
     ($($ty:ty),+) => {
         $(impl FromFunctional for $ty {
             fn from_ofn_ctx(s: &str, context: &Context<'_>) -> Result<Self> {
-                for rule in Self::RULES {
-                    if let Ok(mut pairs) = OwlFunctionalParser::parse(*rule, s) {
-                        if pairs.as_str().len() == s.len() {
-                            return Self::from_pair(pairs.next().unwrap(), context);
-                        } else {
-                            return Err(
-                                Error::from(
-                                    pest::error::Error::new_from_span(
-                                        pest::error::ErrorVariant::CustomError {
-                                            message: "remaining input".to_string(),
-                                        },
-                                        pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap()
-                                    )
+                if let Ok(mut pairs) = OwlFunctionalParser::parse(Self::RULE, s) {
+                    if pairs.as_str().len() == s.len() {
+                        return Self::from_pair(pairs.next().unwrap(), context);
+                    } else {
+                        return Err(
+                            Error::from(
+                                pest::error::Error::new_from_span(
+                                    pest::error::ErrorVariant::CustomError {
+                                        message: "remaining input".to_string(),
+                                    },
+                                    pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap()
                                 )
                             )
-                        }
+                        )
                     }
                 }
 
@@ -54,7 +52,7 @@ macro_rules! implement {
                         pest::error::Error::new_from_span(
                             pest::error::ErrorVariant::ParsingError {
                                 positives: Vec::new(),
-                                negatives: Self::RULES.iter().cloned().collect(),
+                                negatives: vec![Self::RULE],
                             },
                             pest::Span::new(s, 0, s.len()).unwrap()
                         )
