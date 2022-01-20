@@ -6,11 +6,6 @@ updates:
     interval: daily
   open-pull-requests-limit: 10
   ignore:
-  - dependency-name: ureq
+  - dependency-name: curie
     versions:
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-  - dependency-name: horned-owl
-    versions:
-    - 0.8.0
+    - 0.0.8
