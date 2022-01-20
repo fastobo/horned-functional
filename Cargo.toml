@@ -25,7 +25,7 @@ status     = "actively-developed"
 pest = "2.1.0"
 pest_derive = "2.1.0"
 horned-owl = "0.10.0"
-curie = "0.0.8"
+curie = "0.1.1"
 enum_meta = "0.6.0"
 thiserror = "1.0.0"
 
