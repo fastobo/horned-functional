@@ -7,6 +7,8 @@ extern crate pest_derive;
 
 extern crate curie;
 extern crate horned_owl;
+#[cfg(feature = "memmap")]
+extern crate memmap;
 extern crate pest;
 
 mod as_ofn;
@@ -27,7 +29,6 @@ use curie::PrefixMapping;
 use horned_owl::model::Build;
 use horned_owl::model::Ontology;
 use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
-use horned_owl::ontology::set::SetOntology;
 
 pub use self::as_ofn::AsFunctional;
 pub use self::as_ofn::Functional;
@@ -132,7 +133,21 @@ where
     O: Ontology + FromFunctional,
     P: AsRef<Path>,
 {
-    File::open(path).map_err(Error::from).and_then(from_reader)
+    let f = File::open(path)?; // .and_then(from_reader)
+    #[cfg(not(feature = "memmap"))]
+    return from_reader(f);
+
+    #[cfg(feature = "memmap")]
+    unsafe {
+        let map = memmap::Mmap::map(f)?;
+        match std::str::from_utf8(&map) {
+            Ok(text) => from_str(text),
+            Err(error) => Err(Error::IO(std::io::Error::new(
+                std::io::ErrorKind::InvalidData,
+                error,
+            ))),
+        }
+    }
 }
 
 /// Render an entire OWL document to a string.
