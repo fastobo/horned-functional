@@ -7,7 +7,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.2...HEAD
+
+
+## [v0.3.2] - 2022-01-21
+
+[v0.3.2]: https://github.com/fastobo/horned-functional/compare/v0.3.1...v0.3.2
+
+### Added
+- `AsFunctional` implementation for `AxiomMappedOntology`.
+- Optional `memmap` support to read from a memory-mapped file.
+
+### Fixed
+- Invalid rendering of ontologies by `horned_functional::to_string`.
+
+### Changed
+- Loader functions can take any `Ontology + FromFunctional` implementor, allowing to build either a `SetOntology` or an `AxiomMappedOntology`.
 
 
 ## [v0.3.1] - 2022-01-19
@@ -16,7 +31,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Renamed `Error` variants for less redudancy (removed `Error` suffix where applicable).
-
 
 
 ## [v0.3.0] - 2022-01-19
