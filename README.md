@@ -82,10 +82,10 @@ let (ontology, prefixes) = horned_owl::io::owx::reader::read(&mut file)
     .expect("failed to read OWL file");
 
 // serialize using the same prefixes as the input OWL/XML file
-let ofn = horned_functional::to_string(ontology.iter(), &prefixes);
+let ofn = horned_functional::to_string(ontology, &prefixes);
 
 // serialize without abbreviated IRIs
-let ofn = horned_functional::to_string(ontology.iter(), None);
+let ofn = horned_functional::to_string(ontology, None);
 ```
 
 All OWL elements can be displayed in functional syntax as well, using

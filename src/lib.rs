@@ -24,8 +24,8 @@ use std::io::Read;
 use std::path::Path;
 
 use curie::PrefixMapping;
-use horned_owl::model::AnnotatedAxiom;
 use horned_owl::model::Build;
+use horned_owl::model::Ontology;
 use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
 use horned_owl::ontology::set::SetOntology;
 
@@ -105,13 +105,21 @@ impl<'a> From<&'a PrefixMapping> for Context<'a> {
 
 /// Parse an entire OWL document from a string.
 #[inline]
-pub fn from_str<S: AsRef<str>>(src: S) -> Result<(SetOntology, PrefixMapping)> {
+pub fn from_str<O, S>(src: S) -> Result<(O, PrefixMapping)>
+where
+    O: Ontology + FromFunctional,
+    S: AsRef<str>,
+{
     FromFunctional::from_ofn(src.as_ref())
 }
 
 /// Parse an entire OWL document from a `Read` implementor.
 #[inline]
-pub fn from_reader<R: Read>(mut r: R) -> Result<(SetOntology, PrefixMapping)> {
+pub fn from_reader<O, R>(mut r: R) -> Result<(O, PrefixMapping)>
+where
+    O: Ontology + FromFunctional,
+    R: Read,
+{
     let mut s = String::new();
     r.read_to_string(&mut s)?;
     from_str(s)
@@ -119,28 +127,29 @@ pub fn from_reader<R: Read>(mut r: R) -> Result<(SetOntology, PrefixMapping)> {
 
 /// Parse an entire OWL document from a file on the local filesystem.
 #[inline]
-pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(SetOntology, PrefixMapping)> {
+pub fn from_file<O, P>(path: P) -> Result<(O, PrefixMapping)>
+where
+    O: Ontology + FromFunctional,
+    P: AsRef<Path>,
+{
     File::open(path).map_err(Error::from).and_then(from_reader)
 }
 
 /// Render an entire OWL document to a string.
 #[inline]
-pub fn to_string<'a, P>(ontology: AxiomMappedOntology, prefixes: P) -> String
+pub fn to_string<'a, P>(ontology: &AxiomMappedOntology, prefixes: P) -> String
 where
     P: Into<Option<&'a PrefixMapping>>,
 {
-    let p = prefixes.into();
     let mut dest = String::new();
-
     // write the prefixes
+    let p = prefixes.into();
     if let Some(pm) = p {
-        write!(dest, "{}", pm.as_ofn()).expect("cannot fail to write to String");
+        write!(dest, "{}", pm.as_ofn()).expect("infallible");
     }
-
     // write the ontology
     let ctx = Context::new(None, p);
-    write!(dest, "{}", ontology.as_ofn_ctx(&ctx));
-
+    write!(dest, "{}", ontology.as_ofn_ctx(&ctx)).expect("infallible");
     // return the final string
     dest
 }

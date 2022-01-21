@@ -5,6 +5,7 @@ use curie::Curie;
 use curie::PrefixMapping;
 use enum_meta::Meta;
 use horned_owl::model::*;
+use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
 use horned_owl::ontology::set::SetOntology;
 use horned_owl::vocab::OWL2Datatype;
 use horned_owl::vocab::WithIRI;
@@ -803,45 +804,53 @@ impl FromPair for ObjectPropertyExpression {
 
 // ---------------------------------------------------------------------------
 
-impl FromPair for SetOntology {
-    const RULE: Rule = Rule::Ontology;
-    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
-        debug_assert!(pair.as_rule() == Rule::Ontology);
-        let mut pairs = pair.into_inner();
-        let mut pair = pairs.next().unwrap();
+macro_rules! impl_ontology {
+    ($ty:ident) => {
+        impl FromPair for $ty {
+            const RULE: Rule = Rule::Ontology;
+            fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
+                debug_assert!(pair.as_rule() == Rule::Ontology);
+                let mut pairs = pair.into_inner();
+                let mut pair = pairs.next().unwrap();
 
-        let mut ontology = SetOntology::new();
+                let mut ontology = $ty::default();
+                let mut ontology_id = ontology.mut_id();
 
-        // Parse ontology IRI and Version IRI if any
-        if pair.as_rule() == Rule::OntologyIRI {
-            let inner = pair.into_inner().next().unwrap();
-            ontology.mut_id().iri = Some(IRI::from_pair(inner, ctx)?);
-            pair = pairs.next().unwrap();
-            if pair.as_rule() == Rule::VersionIRI {
-                let inner = pair.into_inner().next().unwrap();
-                ontology.mut_id().viri = Some(IRI::from_pair(inner, ctx)?);
-                pair = pairs.next().unwrap();
+                // Parse ontology IRI and Version IRI if any
+                if pair.as_rule() == Rule::OntologyIRI {
+                    let inner = pair.into_inner().next().unwrap();
+                    ontology_id.iri = Some(IRI::from_pair(inner, ctx)?);
+                    pair = pairs.next().unwrap();
+                    if pair.as_rule() == Rule::VersionIRI {
+                        let inner = pair.into_inner().next().unwrap();
+                        ontology_id.viri = Some(IRI::from_pair(inner, ctx)?);
+                        pair = pairs.next().unwrap();
+                    }
+                }
+
+                // Process imports
+                for p in pair.into_inner() {
+                    ontology.insert(Import::from_pair(p, ctx)?);
+                }
+
+                // Process ontology annotations
+                for pair in pairs.next().unwrap().into_inner() {
+                    ontology.insert(OntologyAnnotation::from_pair(pair, ctx)?);
+                }
+
+                // Process axioms
+                for pair in pairs.next().unwrap().into_inner() {
+                    ontology.insert(AnnotatedAxiom::from_pair(pair, ctx)?);
+                }
+
+                Ok(ontology)
             }
         }
-
-        // Process imports
-        for p in pair.into_inner() {
-            ontology.insert(Import::from_pair(p, ctx)?);
-        }
-
-        // Process ontology annotations
-        for pair in pairs.next().unwrap().into_inner() {
-            ontology.insert(OntologyAnnotation::from_pair(pair, ctx)?);
-        }
-
-        // Process axioms
-        for pair in pairs.next().unwrap().into_inner() {
-            ontology.insert(AnnotatedAxiom::from_pair(pair, ctx)?);
-        }
-
-        Ok(ontology)
-    }
+    };
 }
+
+impl_ontology!(SetOntology);
+impl_ontology!(AxiomMappedOntology);
 
 // ---------------------------------------------------------------------------
 
@@ -854,7 +863,10 @@ impl FromPair for OntologyAnnotation {
 
 // ---------------------------------------------------------------------------
 
-impl FromPair for (SetOntology, PrefixMapping) {
+impl<O> FromPair for (O, PrefixMapping)
+where
+    O: Ontology + FromPair,
+{
     const RULE: Rule = Rule::OntologyDocument;
     fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_>) -> Result<Self> {
         let mut pairs = pair.into_inner();
@@ -879,7 +891,7 @@ impl FromPair for (SetOntology, PrefixMapping) {
         }
 
         let context = Context::new(ctx.build, &prefixes);
-        SetOntology::from_pair(inner, &context).map(|ont| (ont, prefixes))
+        O::from_pair(inner, &context).map(|ont| (ont, prefixes))
     }
 }
 

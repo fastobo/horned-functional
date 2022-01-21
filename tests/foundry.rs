@@ -1,6 +1,9 @@
 //! Test parser on OWL Functional files converted from OBO with ROBOT.
 
 extern crate horned_functional;
+extern crate horned_owl;
+
+use horned_owl::ontology::set::SetOntology;
 
 macro_rules! foundrytest {
     ( $(#[$attr:meta])* $name:ident) => (
@@ -14,7 +17,7 @@ macro_rules! foundrytest {
                 .join(stringify!($name))
                 .with_extension("obo.ofn");
             let txt = std::fs::read_to_string(&path).unwrap();
-            if let Err(e) = horned_functional::from_str(&txt) {
+            if let Err(e) = horned_functional::from_str::<SetOntology, _>(&txt) {
                 panic!("could not parse {}: {}", stringify!($name), e);
             }
         }

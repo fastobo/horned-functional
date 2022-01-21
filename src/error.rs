@@ -29,7 +29,9 @@ pub enum Error {
     /// # Example:
     /// ```rust
     /// # #[macro_use] extern crate matches;
-    /// let res = horned_functional::from_file("/some/missing/file").map(|x| x.0);
+    /// # use horned_owl::ontology::set::SetOntology;
+    /// let res = horned_functional::from_file::<SetOntology, _>("/some/missing/file")
+    ///     .map(|x| x.0);
     /// assert_matches!(res, Err(horned_functional::Error::IO(_)));
     /// ```
     #[error(transparent)]
