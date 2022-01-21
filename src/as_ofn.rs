@@ -763,7 +763,7 @@ impl AsFunctional for owl::SubObjectPropertyExpression {}
 impl<'a> Display for Functional<'a, curie::PrefixMapping> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         for (name, value) in self.0.mappings() {
-            writeln!(f, "Prefix({}:={})", name, value)?;
+            writeln!(f, "Prefix({}:=<{}>)", name, value)?;
         }
         Ok(())
     }
@@ -780,9 +780,11 @@ impl<'a> Display for Functional<'a, AxiomMappedOntology> {
         // write the IRI and Version IRI if any
         let id = self.0.id();
         if let Some(iri) = &id.iri {
-            writeln!(f, "{}", Functional(iri, self.1, None))?;
+            write!(f, "{}", Functional(iri, self.1, None))?;
             if let Some(viri) = &id.viri {
                 writeln!(f, " {}", Functional(viri, self.1, None))?;
+            } else {
+                writeln!(f)?;
             }
         }
         // write imports first
