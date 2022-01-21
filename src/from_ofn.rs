@@ -2,6 +2,7 @@ use std::collections::BTreeSet;
 
 use curie::PrefixMapping;
 use horned_owl::model::*;
+use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
 use horned_owl::ontology::set::SetOntology;
 
 use crate::error::Error;
@@ -22,6 +23,25 @@ pub trait FromFunctional: Sized + FromPair {
     }
 
     fn from_ofn_ctx(s: &str, context: &Context<'_>) -> Result<Self>;
+}
+
+impl<O> FromFunctional for (O, PrefixMapping)
+where
+    O: FromFunctional + Ontology,
+{
+    fn from_ofn_ctx(s: &str, context: &Context<'_>) -> Result<Self> {
+        let mut pairs = OwlFunctionalParser::parse(Self::RULE, s)?;
+        if pairs.as_str().len() == s.len() {
+            Self::from_pair(pairs.next().unwrap(), context)
+        } else {
+            Err(Error::from(pest::error::Error::new_from_span(
+                pest::error::ErrorVariant::CustomError {
+                    message: "remaining input".to_string(),
+                },
+                pest::Span::new(s, pairs.as_str().len(), s.len()).unwrap(),
+            )))
+        }
+    }
 }
 
 // We use a macro instead of a blanket impl to have all types displayed in
@@ -57,6 +77,7 @@ implement!(
     AnnotationValue,
     AnonymousIndividual,
     Axiom,
+    AxiomMappedOntology,
     BTreeSet<Annotation>,
     Class,
     ClassExpression,
@@ -80,7 +101,6 @@ implement!(
     ObjectProperty,
     SetOntology,
     OntologyAnnotation,
-    (SetOntology, PrefixMapping),
     String,
     SubObjectPropertyExpression,
     u32
