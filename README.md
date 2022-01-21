@@ -35,9 +35,11 @@ To easily read an entire OWL document, including prefixes, use the
 [`horned_functional::to_string`](https://docs.rs/horned-functional/latest/horned_functional/fn.from_str.html) function:
 
 ```rust
+use horned_owl::ontology::set::SetOntology;
+
 let s = std::fs::read_to_string("tests/data/ms.obo.ofn")
     .expect("failed to read OWL file");
-let (ontology, prefixes) = horned_functional::from_str(&s)
+let (ontology, prefixes) = horned_functional::from_str::<SetOntology, _>(&s)
     .expect("failed to parse OWL file");
 ```
 
@@ -81,11 +83,14 @@ let mut file = std::fs::File::open("tests/data/ms.owx")
 let (ontology, prefixes) = horned_owl::io::owx::reader::read(&mut file)
     .expect("failed to read OWL file");
 
+// `horned_functional::to_string` needs an AxiomMappedOntology
+let axiom_mapped = ontology.into();
+
 // serialize using the same prefixes as the input OWL/XML file
-let ofn = horned_functional::to_string(ontology, &prefixes);
+let ofn = horned_functional::to_string(&axiom_mapped, &prefixes);
 
 // serialize without abbreviated IRIs
-let ofn = horned_functional::to_string(ontology, None);
+let ofn = horned_functional::to_string(&axiom_mapped, None);
 ```
 
 All OWL elements can be displayed in functional syntax as well, using

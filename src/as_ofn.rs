@@ -27,9 +27,61 @@ fn quote(mut s: &str, f: &mut Formatter<'_>) -> Result<(), Error> {
     f.write_str("\"")
 }
 
+/// A trait for OWL elements that can be serialized to OWL Functional syntax.
+pub trait AsFunctional {
+    /// Get a handle for displaying the element in functional syntax.
+    ///
+    /// Instead of returning a `String`, this method returns an opaque struct
+    /// that implements `Display`, which can be used to write to a file without
+    /// having to build a fully-serialized string first, or to just get a string
+    /// with the `ToString` implementation.
+    ///
+    /// # Example
+    /// ```
+    /// # use horned_owl::model::DeclareClass;
+    /// # let build = horned_owl::model::Build::new();
+    /// use horned_functional::AsFunctional;
+    ///
+    /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
+    /// assert_eq!(
+    ///     axiom.as_ofn().to_string(),
+    ///     "Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))"
+    /// );
+    /// ```
+    fn as_ofn<'t>(&'t self) -> Functional<'t, Self> {
+        Functional(&self, None, None)
+    }
+
+    /// Get a handle for displaying the element, using the given context.
+    ///
+    /// Use the context to pass around a `PrefixMapping`, allowing the
+    /// functional representation to be written using abbreviated IRIs
+    /// when possible.
+    ///
+    /// # Example
+    /// ```
+    /// # use horned_owl::model::DeclareClass;
+    /// # let build = horned_owl::model::Build::new();
+    /// use horned_functional::AsFunctional;
+    /// use horned_functional::Context;
+    ///
+    /// let mut prefixes = curie::PrefixMapping::default();
+    /// prefixes.add_prefix("foaf", "http://xmlns.com/foaf/0.1/");
+    ///
+    /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
+    /// assert_eq!(
+    ///     axiom.as_ofn_ctx(&Context::from(&prefixes)).to_string(),
+    ///     "Declaration(Class(foaf:Person))"
+    /// );
+    /// ```
+    fn as_ofn_ctx<'t>(&'t self, context: &'t Context<'t>) -> Functional<'t, Self> {
+        Functional(&self, Some(context), None)
+    }
+}
+
 /// A wrapper for displaying an OWL2 element in functional syntax.
 #[derive(Debug)]
-pub struct Functional<'t, T: ?Sized + AsFunctional>(
+pub struct Functional<'t, T: ?Sized>(
     // the element to display
     &'t T,
     // an eventual context to use (for IRI prefixes)
@@ -38,9 +90,126 @@ pub struct Functional<'t, T: ?Sized + AsFunctional>(
     Option<&'t BTreeSet<owl::Annotation>>,
 );
 
+// ---------------------------------------------------------------------------
+
+macro_rules! derive_vec {
+    (owl::$t:ident) => {
+        impl<'a> Display for Functional<'a, Vec<owl::$t>> {
+            fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+                for (i, x) in self.0.iter().enumerate() {
+                    if i != 0 {
+                        f.write_str(" ")?;
+                    }
+                    write!(f, "{}", Functional(x, self.1, None))?;
+                }
+                Ok(())
+            }
+        }
+    };
+}
+
+derive_vec!(owl::ClassExpression);
+derive_vec!(owl::DataRange);
+derive_vec!(owl::Individual);
+derive_vec!(owl::ObjectPropertyExpression);
+derive_vec!(owl::FacetRestriction);
+derive_vec!(owl::Literal);
+derive_vec!(owl::DataProperty);
+
+// ---------------------------------------------------------------------------
+
+macro_rules! derive_tuple1 {
+    ($t:ty) => {
+        impl<'a> Display for Functional<'a, (&$t,)> {
+            fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+                write!(f, "{}", Functional(self.0 .0, self.1, None),)
+            }
+        }
+    };
+}
+
+derive_tuple1!(owl::IRI);
+derive_tuple1!(owl::DataProperty);
+derive_tuple1!(owl::ObjectPropertyExpression);
+derive_tuple1!(Vec<owl::Individual>);
+derive_tuple1!(Vec<owl::ClassExpression>);
+derive_tuple1!(Vec<owl::DataProperty>);
+derive_tuple1!(Vec<owl::ObjectPropertyExpression>);
+
+macro_rules! derive_tuple2 {
+    ($t1:ty, $t2:ty) => {
+        impl<'a> Display for Functional<'a, (&$t1, &$t2)> {
+            fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+                write!(
+                    f,
+                    "{} {}",
+                    Functional(self.0 .0, self.1, None),
+                    Functional(self.0 .1, self.1, None),
+                )
+            }
+        }
+    };
+}
+
+derive_tuple2!(owl::Class, Vec<horned_owl::model::ClassExpression>);
+derive_tuple2!(owl::Datatype, owl::DataRange);
+derive_tuple2!(owl::ClassExpression, owl::Individual);
+derive_tuple2!(owl::ObjectProperty, owl::ObjectProperty);
+derive_tuple2!(owl::ObjectPropertyExpression, owl::ClassExpression);
+derive_tuple2!(owl::AnnotationProperty, owl::AnnotationValue);
+derive_tuple2!(owl::AnnotationProperty, owl::IRI);
+derive_tuple2!(owl::ClassExpression, owl::ClassExpression);
+derive_tuple2!(owl::AnnotationProperty, owl::AnnotationProperty);
+derive_tuple2!(owl::DataProperty, owl::DataProperty);
+derive_tuple2!(owl::DataProperty, owl::DataRange);
+derive_tuple2!(owl::DataProperty, owl::ClassExpression);
+derive_tuple2!(
+    owl::SubObjectPropertyExpression,
+    owl::ObjectPropertyExpression
+);
+
+macro_rules! derive_tuple3 {
+    ($t1:ty, $t2:ty, $t3:ty) => {
+        impl<'a> Display for Functional<'a, (&$t1, &$t2, &$t3)> {
+            fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+                write!(
+                    f,
+                    "{} {} {}",
+                    Functional(self.0 .0, self.1, None),
+                    Functional(self.0 .1, self.1, None),
+                    Functional(self.0 .2, self.1, None),
+                )
+            }
+        }
+    };
+}
+
+derive_tuple3!(owl::DataProperty, owl::Individual, owl::Literal);
+derive_tuple3!(
+    owl::ObjectPropertyExpression,
+    owl::Individual,
+    owl::Individual
+);
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, BTreeSet<owl::Annotation>> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        for (i, x) in self.0.iter().enumerate() {
+            if i != 0 {
+                f.write_str(" ")?;
+            }
+            write!(f, "{}", Functional(x, self.1, None))?;
+        }
+        Ok(())
+    }
+}
+
+// ---------------------------------------------------------------------------
+
 macro_rules! derive_declaration {
     (owl::$ty:ident, $inner:ident) => {
-        impl Display for Functional<'_, owl::$ty> {
+        impl<'a> Display for Functional<'a, owl::$ty> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(
                     f,
@@ -49,6 +218,8 @@ macro_rules! derive_declaration {
                 )
             }
         }
+
+        impl AsFunctional for owl::$ty {}
     };
 }
 
@@ -59,13 +230,17 @@ derive_declaration!(owl::DeclareDataProperty, DataProperty);
 derive_declaration!(owl::DeclareNamedIndividual, NamedIndividual);
 derive_declaration!(owl::DeclareDatatype, Datatype);
 
+// ---------------------------------------------------------------------------
+
 macro_rules! derive_wrapper {
     (owl::$ty:ident) => {
-        impl Display for Functional<'_, owl::$ty> {
+        impl<'a> Display for Functional<'a, owl::$ty> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(f, "{}", Functional(&self.0 .0, self.1, None))
             }
         }
+
+        impl AsFunctional for owl::$ty {}
     };
 }
 
@@ -77,9 +252,11 @@ derive_wrapper!(owl::NamedIndividual);
 derive_wrapper!(owl::OntologyAnnotation);
 derive_wrapper!(owl::ObjectProperty);
 
+// ---------------------------------------------------------------------------
+
 macro_rules! derive_axiom {
     (owl::$ty:ident ( $($field:tt),* )) => {
-        impl Display for Functional<'_, owl::$ty> {
+        impl<'a> Display for Functional<'a, owl::$ty> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 if let Some(annotations) = self.2 {
                     write!(
@@ -97,6 +274,8 @@ macro_rules! derive_axiom {
                 }
             }
         }
+
+        impl AsFunctional for owl::$ty {}
     };
 }
 
@@ -137,13 +316,19 @@ derive_axiom!(owl::SubObjectPropertyOf(sub, sup));
 derive_axiom!(owl::SymmetricObjectProperty(0));
 derive_axiom!(owl::TransitiveObjectProperty(0));
 
-impl Display for Functional<'_, owl::AnnotatedAxiom> {
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::AnnotatedAxiom> {
     fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
         Functional(&self.0.axiom, self.1, Some(&self.0.ann)).fmt(f)
     }
 }
 
-impl Display for Functional<'_, owl::AnnotationAssertion> {
+impl AsFunctional for owl::AnnotatedAxiom {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::AnnotationAssertion> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         write!(
             f,
@@ -155,7 +340,11 @@ impl Display for Functional<'_, owl::AnnotationAssertion> {
     }
 }
 
-impl Display for Functional<'_, owl::AnnotationValue> {
+impl AsFunctional for owl::AnnotationAssertion {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::AnnotationValue> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::AnnotationValue::*;
         match &self.0 {
@@ -165,13 +354,21 @@ impl Display for Functional<'_, owl::AnnotationValue> {
     }
 }
 
-impl Display for Functional<'_, owl::AnonymousIndividual> {
+impl AsFunctional for owl::AnnotationValue {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::AnonymousIndividual> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         self.0.fmt(f)
     }
 }
 
-impl Display for Functional<'_, owl::Axiom> {
+impl AsFunctional for owl::AnonymousIndividual {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::Axiom> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         macro_rules! enum_impl {
             ($($variant:ident,)*) => {
@@ -231,7 +428,11 @@ impl Display for Functional<'_, owl::Axiom> {
     }
 }
 
-impl Display for Functional<'_, owl::ClassExpression> {
+impl AsFunctional for owl::Axiom {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::ClassExpression> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::ClassExpression::*;
         match self.0 {
@@ -365,7 +566,11 @@ impl Display for Functional<'_, owl::ClassExpression> {
     }
 }
 
-impl Display for Functional<'_, owl::DataRange> {
+impl AsFunctional for owl::ClassExpression {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::DataRange> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::DataRange::*;
         match self.0 {
@@ -398,13 +603,21 @@ impl Display for Functional<'_, owl::DataRange> {
     }
 }
 
-impl Display for Functional<'_, owl::Facet> {
+impl AsFunctional for owl::DataRange {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::Facet> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         f.write_str(self.0.iri_str())
     }
 }
 
-impl Display for Functional<'_, owl::FacetRestriction> {
+impl AsFunctional for owl::Facet {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::FacetRestriction> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         write!(
             f,
@@ -415,7 +628,11 @@ impl Display for Functional<'_, owl::FacetRestriction> {
     }
 }
 
-impl Display for Functional<'_, owl::HasKey> {
+impl AsFunctional for owl::FacetRestriction {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::HasKey> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         write!(f, "HasKey({} ", Functional(&self.0.ce, self.1, None))?;
 
@@ -449,7 +666,11 @@ impl Display for Functional<'_, owl::HasKey> {
     }
 }
 
-impl Display for Functional<'_, owl::IRI> {
+impl AsFunctional for owl::HasKey {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::IRI> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         if let Some(prefixes) = self.1.as_ref().and_then(|ctx| ctx.prefixes) {
             match prefixes.shrink_iri(self.0) {
@@ -462,7 +683,11 @@ impl Display for Functional<'_, owl::IRI> {
     }
 }
 
-impl Display for Functional<'_, owl::Individual> {
+impl AsFunctional for owl::IRI {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::Individual> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::Individual::*;
         match self.0 {
@@ -472,7 +697,11 @@ impl Display for Functional<'_, owl::Individual> {
     }
 }
 
-impl Display for Functional<'_, owl::Literal> {
+impl AsFunctional for owl::Individual {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::Literal> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         match self.0 {
             owl::Literal::Simple { literal } => quote(&literal, f),
@@ -491,7 +720,11 @@ impl Display for Functional<'_, owl::Literal> {
     }
 }
 
-impl Display for Functional<'_, owl::ObjectPropertyExpression> {
+impl AsFunctional for owl::Literal {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::ObjectPropertyExpression> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::ObjectPropertyExpression::*;
         match self.0 {
@@ -503,7 +736,11 @@ impl Display for Functional<'_, owl::ObjectPropertyExpression> {
     }
 }
 
-impl Display for Functional<'_, owl::SubObjectPropertyExpression> {
+impl AsFunctional for owl::ObjectPropertyExpression {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, owl::SubObjectPropertyExpression> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::SubObjectPropertyExpression::*;
         match self.0 {
@@ -519,7 +756,11 @@ impl Display for Functional<'_, owl::SubObjectPropertyExpression> {
     }
 }
 
-impl Display for Functional<'_, curie::PrefixMapping> {
+impl AsFunctional for owl::SubObjectPropertyExpression {}
+
+// ---------------------------------------------------------------------------
+
+impl<'a> Display for Functional<'a, curie::PrefixMapping> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         for (name, value) in self.0.mappings() {
             writeln!(f, "Prefix({}:={})", name, value)?;
@@ -528,78 +769,11 @@ impl Display for Functional<'_, curie::PrefixMapping> {
     }
 }
 
-impl<'a, T: 'a> Display for Functional<'a, BTreeSet<T>>
-where
-    Functional<'a, T>: Display,
-{
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        for (i, x) in self.0.iter().enumerate() {
-            if i != 0 {
-                f.write_str(" ")?;
-            }
-            write!(f, "{}", Functional(x, self.1, None))?;
-        }
-        Ok(())
-    }
-}
+impl AsFunctional for curie::PrefixMapping {}
 
-impl<'a, T: 'a> Display for Functional<'a, Vec<T>>
-where
-    Functional<'a, T>: Display,
-{
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        for (i, x) in self.0.iter().enumerate() {
-            if i != 0 {
-                f.write_str(" ")?;
-            }
-            write!(f, "{}", Functional(x, self.1, None))?;
-        }
-        Ok(())
-    }
-}
+// ---------------------------------------------------------------------------
 
-impl<'a, A: 'a> Display for Functional<'a, (&A,)>
-where
-    Functional<'a, A>: Display,
-{
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        write!(f, "{}", Functional(self.0 .0, self.1, None),)
-    }
-}
-
-impl<'a, A: 'a, B: 'a> Display for Functional<'a, (&A, &B)>
-where
-    Functional<'a, A>: Display,
-    Functional<'a, B>: Display,
-{
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        write!(
-            f,
-            "{} {}",
-            Functional(self.0 .0, self.1, None),
-            Functional(self.0 .1, self.1, None),
-        )
-    }
-}
-
-impl<'a, A: 'a, B: 'a, C: 'a> Display for Functional<'a, (&A, &B, &C)>
-where
-    Functional<'a, A>: Display,
-    Functional<'a, B>: Display,
-    Functional<'a, C>: Display,
-{
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        write!(
-            f,
-            "{} {} {}",
-            Functional(self.0 .0, self.1, None),
-            Functional(self.0 .1, self.1, None),
-            Functional(self.0 .2, self.1, None)
-        )
-    }
-}
-
-impl Display for Functional<'_, AxiomMappedOntology> {
+impl<'a> Display for Functional<'a, AxiomMappedOntology> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         // open the Ontology element
         f.write_str("Ontology(")?;
@@ -631,59 +805,7 @@ impl Display for Functional<'_, AxiomMappedOntology> {
     }
 }
 
-/// A trait for OWL elements that can be serialized to OWL Functional syntax.
-pub trait AsFunctional {
-    /// Get a handle for displaying the element in functional syntax.
-    ///
-    /// Instead of returning a `String`, this method returns an opaque struct
-    /// that implements `Display`, which can be used to write to a file without
-    /// having to build a fully-serialized string first, or to just get a string
-    /// with the `ToString` implementation.
-    ///
-    /// # Example
-    /// ```
-    /// # use horned_owl::model::DeclareClass;
-    /// # let build = horned_owl::model::Build::new();
-    /// use horned_functional::AsFunctional;
-    ///
-    /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
-    /// assert_eq!(
-    ///     axiom.as_ofn().to_string(),
-    ///     "Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))"
-    /// );
-    /// ```
-    fn as_ofn<'t>(&'t self) -> Functional<'t, Self> {
-        Functional(&self, None, None)
-    }
-
-    /// Get a handle for displaying the element, using the given context.
-    ///
-    /// Use the context to pass around a `PrefixMapping`, allowing the
-    /// functional representation to be written using abbreviated IRIs
-    /// when possible.
-    ///
-    /// # Example
-    /// ```
-    /// # use horned_owl::model::DeclareClass;
-    /// # let build = horned_owl::model::Build::new();
-    /// use horned_functional::AsFunctional;
-    /// use horned_functional::Context;
-    ///
-    /// let mut prefixes = curie::PrefixMapping::default();
-    /// prefixes.add_prefix("foaf", "http://xmlns.com/foaf/0.1/");
-    ///
-    /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
-    /// assert_eq!(
-    ///     axiom.as_ofn_ctx(&Context::from(&prefixes)).to_string(),
-    ///     "Declaration(Class(foaf:Person))"
-    /// );
-    /// ```
-    fn as_ofn_ctx<'t>(&'t self, context: &'t Context<'t>) -> Functional<'t, Self> {
-        Functional(&self, Some(context), None)
-    }
-}
-
-impl<'t, T: 't> AsFunctional for T where Functional<'t, T>: Display {}
+impl AsFunctional for AxiomMappedOntology {}
 
 #[cfg(test)]
 mod tests {
