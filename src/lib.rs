@@ -139,7 +139,7 @@ where
 
     #[cfg(feature = "memmap")]
     unsafe {
-        let map = memmap::Mmap::map(f)?;
+        let map = memmap::Mmap::map(&f)?;
         match std::str::from_utf8(&map) {
             Ok(text) => from_str(text),
             Err(error) => Err(Error::IO(std::io::Error::new(
