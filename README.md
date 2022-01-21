@@ -26,7 +26,7 @@ Add the latest versions of `horned-owl` and `horned-functional` to the
 ```toml
 [dependencies]
 horned-owl = "0.10.0"
-horned-functional = "0.3.1"
+horned-functional = "0.3.3"
 ```
 
 ### 🔍 Parser

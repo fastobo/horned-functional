@@ -7,7 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.2...HEAD
+[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.3...HEAD
+
+
+## [v0.3.3] - 2022-01-21
+
+[v0.3.3]: https://github.com/fastobo/horned-functional/compare/v0.3.2...v0.3.3
+
+### Fixed
+- `AsFunctional` implementation of `curie::PrefixMapping` not writing the IRI delimiters.
+
 
 
 ## [v0.3.2] - 2022-01-21
