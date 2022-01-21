@@ -4,6 +4,9 @@ use std::fmt::Error;
 use std::fmt::Formatter;
 
 use horned_owl::model as owl;
+use horned_owl::model::Kinded;
+use horned_owl::model::Ontology;
+use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
 use horned_owl::vocab::WithIRI;
 
 use super::Context;
@@ -593,6 +596,38 @@ where
             Functional(self.0 .1, self.1, None),
             Functional(self.0 .2, self.1, None)
         )
+    }
+}
+
+impl Display for Functional<'_, AxiomMappedOntology> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        // open the Ontology element
+        f.write_str("Ontology(")?;
+        // write the IRI and Version IRI if any
+        let id = self.0.id();
+        if let Some(iri) = &id.iri {
+            writeln!(f, "{}", Functional(iri, self.1, None))?;
+            if let Some(viri) = &id.viri {
+                writeln!(f, " {}", Functional(viri, self.1, None))?;
+            }
+        }
+        // write imports first
+        for axiom in self.0.i().import() {
+            writeln!(f, "{}", Functional(axiom, self.1, None))?;
+        }
+        // then write ontology annotations
+        for axiom in self.0.i().ontology_annotation() {
+            writeln!(f, "{}", Functional(axiom, self.1, None))?;
+        }
+        // then write the rest
+        for axiom in self.0.i().iter() {
+            let kind = axiom.axiom.kind();
+            if kind != owl::AxiomKind::OntologyAnnotation && kind != owl::AxiomKind::Import {
+                writeln!(f, "{}", Functional(axiom, self.1, None))?;
+            }
+        }
+        // and close the Ontology element
+        f.write_str(")")
     }
 }
 
