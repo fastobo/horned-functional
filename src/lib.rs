@@ -26,6 +26,7 @@ use std::path::Path;
 use curie::PrefixMapping;
 use horned_owl::model::AnnotatedAxiom;
 use horned_owl::model::Build;
+use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
 use horned_owl::ontology::set::SetOntology;
 
 pub use self::as_ofn::AsFunctional;
@@ -124,22 +125,22 @@ pub fn from_file<P: AsRef<Path>>(path: P) -> Result<(SetOntology, PrefixMapping)
 
 /// Render an entire OWL document to a string.
 #[inline]
-pub fn to_string<'a, O, P>(ontology: O, prefixes: P) -> String
+pub fn to_string<'a, P>(ontology: AxiomMappedOntology, prefixes: P) -> String
 where
-    O: Iterator<Item = &'a AnnotatedAxiom>,
     P: Into<Option<&'a PrefixMapping>>,
 {
     let p = prefixes.into();
     let mut dest = String::new();
 
+    // write the prefixes
     if let Some(pm) = p {
         write!(dest, "{}", pm.as_ofn()).expect("cannot fail to write to String");
     }
 
+    // write the ontology
     let ctx = Context::new(None, p);
-    for axiom in ontology {
-        writeln!(dest, "{}", axiom.as_ofn_ctx(&ctx)).expect("cannot fail to write to String");
-    }
+    write!(dest, "{}", ontology.as_ofn_ctx(&ctx));
 
+    // return the final string
     dest
 }
