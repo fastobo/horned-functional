@@ -24,8 +24,8 @@ status     = "actively-developed"
 [dependencies]
 pest = "2.1.0"
 pest_derive = "2.1.0"
-horned-owl = { version = "0.10.1-alpha", git = 'https://github.com/phillord/horned-owl', branch = "devel" }
-curie = "0.0.8"
+horned-owl = { git = 'https://github.com/phillord/horned-owl', branch = "devel" }
+curie = "0.1.1"
 enum_meta = "0.6.0"
 thiserror = "1.0.0"
 [dependencies.memmap]
