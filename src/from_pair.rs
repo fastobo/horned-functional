@@ -374,11 +374,10 @@ impl FromPair for AnnotatedAxiom {
                     match inner2.as_rule() {
                         // FIXME: likely to change after discussion in
                         //        https://github.com/phillord/horned-owl/pull/32
-                        Rule::IRI => IRI::from_pair(inner2, ctx)
-                            .map(NamedIndividual::from)
-                            .map(Individual::Named)?,
+                        Rule::IRI => IRI::from_pair(inner2, ctx).map(AnnotationSubject::from)?,
+                        // .map(Individual::Named)?,
                         Rule::AnonymousIndividual => AnonymousIndividual::from_pair(inner2, ctx)
-                            .map(Individual::Anonymous)?,
+                            .map(AnnotationSubject::from)?,
                         rule => {
                             unreachable!("unexpected rule in Individual::from_pair: {:?}", rule)
                         }

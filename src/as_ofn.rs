@@ -344,6 +344,20 @@ impl AsFunctional for owl::AnnotationAssertion {}
 
 // ---------------------------------------------------------------------------
 
+impl<'a> Display for Functional<'a, owl::AnnotationSubject> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        use owl::AnnotationSubject::*;
+        match &self.0 {
+            IRI(iri) => Functional(iri, self.1, None).fmt(f),
+            AnonymousIndividual(anon) => Functional(anon, self.1, None).fmt(f),
+        }
+    }
+}
+
+impl AsFunctional for owl::AnnotationSubject {}
+
+// ---------------------------------------------------------------------------
+
 impl<'a> Display for Functional<'a, owl::AnnotationValue> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         use owl::AnnotationValue::*;

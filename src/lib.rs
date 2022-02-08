@@ -77,7 +77,7 @@ impl<'a> Context<'a> {
     /// Obtain an IRI for the given string, using the internal builder if any.
     pub fn iri<S: Into<String>>(&self, s: S) -> horned_owl::model::IRI
     where
-        S: Into<String>,
+        S: AsRef<str>,
     {
         match self.build {
             Some(b) => b.iri(s),
