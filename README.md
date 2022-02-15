@@ -25,8 +25,8 @@ Add the latest versions of `horned-owl` and `horned-functional` to the
 `[dependencies]` sections of your `Cargo.toml` manifest:
 ```toml
 [dependencies]
-horned-owl = "0.10.0"
-horned-functional = "0.3.3"
+horned-owl = "0.11.0"
+horned-functional = "0.4.0"
 ```
 
 ### 🔍 Parser

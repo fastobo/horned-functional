@@ -7,7 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.3.3...HEAD
+[Unreleased]: https://github.com/fastobo/horned-functional/compare/v0.4.0...HEAD
+
+
+## [v0.4.0] - 2022-02-15
+
+[v0.4.0]: https://github.com/fastobo/horned-functional/compare/v0.3.3...v0.4.0
+
+### Changed
+- Bumped `horned-owl` to `v0.10.1`.
+- Bumped `curie` to `v0.1.1`.
 
 
 ## [v0.3.3] - 2022-01-21
