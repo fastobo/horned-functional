@@ -1,6 +1,6 @@
 # `horned-functional` [![Star me](https://img.shields.io/github/stars/fastobo/horned-functional.svg?style=social&label=Star&maxAge=3600)](https://github.com/fastobo/horned-functional/stargazers)
 
-*An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser for [`horned-owl`](https://github.com/phillord/horned-owl).*
+*An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser and serializer for [`horned-owl`](https://github.com/phillord/horned-owl).*
 
 [![Actions](https://img.shields.io/github/workflow/status/fastobo/horned-functional/Test?style=flat-square&maxAge=600)](https://github.com/fastobo/horned-functional/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/fastobo/horned-functional/master.svg?style=flat-square&maxAge=600)](https://codecov.io/gh/fastobo/horned-functional)
@@ -17,7 +17,7 @@
 
 This library provides extensions to the [`horned-owl`](https://crates.io/crates/horned-owl)
 crate to work with the [OWL Functional-Style](https://www.w3.org/TR/owl2-syntax) syntax.
-It provides a parser written with [`pest`](https://pest.rs) and a serializer.
+It provides a parser written with [`pest`](https://pest.rs) and a zero-copy serializer.
 
 ## 🔌 Usage
 
@@ -127,7 +127,7 @@ reproducible situation.
 ## 📋 Changelog
 
 This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
-and provides a [changelog](https://github.com/althonos/pubchem.rs/blob/master/CHANGELOG.md)
+and provides a [changelog](https://github.com/fastobo/horned-functional/blob/master/CHANGELOG.md)
 in the [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) format.
 
 ## 📜 License
