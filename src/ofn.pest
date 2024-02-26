@@ -101,7 +101,7 @@ IRI = {FullIRI | AbbreviatedIRI}
 //
 
 
-OntologyDocument = { PrefixDeclaration* ~ Ontology ~ EOI }
+OntologyDocument = { SOI ~ PrefixDeclaration* ~ Ontology ~ EOI }
 
 PrefixDeclaration = { LIT_PREFIX ~ LBRACKET ~ PrefixName ~ EQ ~ FullIRI ~ RBRACKET }
 

@@ -17,7 +17,7 @@ macro_rules! foundrytest {
                 .join(stringify!($name))
                 .with_extension("obo.ofn");
             let txt = std::fs::read_to_string(&path).unwrap();
-            if let Err(e) = horned_functional::from_str::<SetOntology, _>(&txt) {
+            if let Err(e) = horned_functional::from_str::<String, SetOntology<String>, _>(&txt) {
                 panic!("could not parse {}: {}", stringify!($name), e);
             }
         }

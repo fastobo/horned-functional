@@ -17,6 +17,7 @@ mod from_ofn;
 mod from_pair;
 mod parser;
 
+use std::borrow::Borrow;
 use std::collections::HashMap;
 use std::fmt::Debug;
 use std::fmt::Formatter;
@@ -27,7 +28,9 @@ use std::path::Path;
 
 use curie::PrefixMapping;
 use horned_owl::model::Build;
+use horned_owl::model::ForIRI;
 use horned_owl::model::Ontology;
+use horned_owl::model::IRI;
 use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
 
 pub use self::as_ofn::AsFunctional;
@@ -37,35 +40,26 @@ pub use self::error::Result;
 pub use self::from_ofn::FromFunctional;
 
 /// A context to pass around while parsing and writing OWL functional documents.
-#[derive(Default)]
-pub struct Context<'a> {
-    build: Option<&'a Build>,
+#[derive(Debug)]
+pub struct Context<'a, A: ForIRI> {
+    build: Option<&'a Build<A>>,
     prefixes: Option<&'a PrefixMapping>,
 }
 
-// Before `v0.1.1`, `curie::PrefixMapping` doesn't implement `Debug`.
-impl<'a> Debug for Context<'a> {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::result::Result<(), std::fmt::Error> {
-        f.debug_struct("Context")
-            .field("build", &self.build)
-            .field(
-                "prefixes",
-                &match &self.prefixes {
-                    None => format!("{}", "None"),
-                    Some(p) => {
-                        format!("{:?}", p.mappings().collect::<HashMap<_, _>>())
-                    }
-                },
-            )
-            .finish()
+impl<'a, A: ForIRI> Default for Context<'a, A> {
+    fn default() -> Self {
+        Self {
+            build: None,
+            prefixes: None,
+        }
     }
 }
 
-impl<'a> Context<'a> {
+impl<'a, A: ForIRI> Context<'a, A> {
     /// Create a new context with the given IRI builder and prefix mapping.
     pub fn new<B, P>(build: B, prefixes: P) -> Self
     where
-        B: Into<Option<&'a Build>>,
+        B: Into<Option<&'a Build<A>>>,
         P: Into<Option<&'a PrefixMapping>>,
     {
         Self {
@@ -75,19 +69,19 @@ impl<'a> Context<'a> {
     }
 
     /// Obtain an IRI for the given string, using the internal builder if any.
-    pub fn iri<S: Into<String>>(&self, s: S) -> horned_owl::model::IRI
+    pub fn iri<S>(&self, s: S) -> IRI<A>
     where
-        S: AsRef<str>,
+        S: Borrow<str>,
     {
         match self.build {
             Some(b) => b.iri(s),
-            None => Build::default().iri(s),
+            None => Build::new().iri(s),
         }
     }
 }
 
-impl<'a> From<&'a Build> for Context<'a> {
-    fn from(build: &'a Build) -> Context<'a> {
+impl<'a, A: ForIRI> From<&'a Build<A>> for Context<'a, A> {
+    fn from(build: &'a Build<A>) -> Self {
         Self {
             build: Some(build),
             prefixes: None,
@@ -95,8 +89,8 @@ impl<'a> From<&'a Build> for Context<'a> {
     }
 }
 
-impl<'a> From<&'a PrefixMapping> for Context<'a> {
-    fn from(prefixes: &'a PrefixMapping) -> Context<'a> {
+impl<'a, A: ForIRI> From<&'a PrefixMapping> for Context<'a, A> {
+    fn from(prefixes: &'a PrefixMapping) -> Self {
         Self {
             build: None,
             prefixes: Some(prefixes),
@@ -106,9 +100,10 @@ impl<'a> From<&'a PrefixMapping> for Context<'a> {
 
 /// Parse an entire OWL document from a string.
 #[inline]
-pub fn from_str<O, S>(src: S) -> Result<(O, PrefixMapping)>
+pub fn from_str<A, O, S>(src: S) -> Result<(O, PrefixMapping)>
 where
-    O: Ontology + FromFunctional,
+    A: ForIRI,
+    O: Ontology<A> + FromFunctional<A>,
     S: AsRef<str>,
 {
     FromFunctional::from_ofn(src.as_ref())
@@ -116,9 +111,10 @@ where
 
 /// Parse an entire OWL document from a `Read` implementor.
 #[inline]
-pub fn from_reader<O, R>(mut r: R) -> Result<(O, PrefixMapping)>
+pub fn from_reader<A, O, R>(mut r: R) -> Result<(O, PrefixMapping)>
 where
-    O: Ontology + FromFunctional,
+    A: ForIRI,
+    O: Ontology<A> + FromFunctional<A>,
     R: Read,
 {
     let mut s = String::new();
@@ -128,9 +124,10 @@ where
 
 /// Parse an entire OWL document from a file on the local filesystem.
 #[inline]
-pub fn from_file<O, P>(path: P) -> Result<(O, PrefixMapping)>
+pub fn from_file<A, O, P>(path: P) -> Result<(O, PrefixMapping)>
 where
-    O: Ontology + FromFunctional,
+    A: ForIRI,
+    O: Ontology<A> + FromFunctional<A>,
     P: AsRef<Path>,
 {
     let f = File::open(path)?; // .and_then(from_reader)
@@ -150,21 +147,21 @@ where
     }
 }
 
-/// Render an entire OWL document to a string.
-#[inline]
-pub fn to_string<'a, P>(ontology: &AxiomMappedOntology, prefixes: P) -> String
-where
-    P: Into<Option<&'a PrefixMapping>>,
-{
-    let mut dest = String::new();
-    // write the prefixes
-    let p = prefixes.into();
-    if let Some(pm) = p {
-        write!(dest, "{}", pm.as_ofn()).expect("infallible");
-    }
-    // write the ontology
-    let ctx = Context::new(None, p);
-    write!(dest, "{}", ontology.as_ofn_ctx(&ctx)).expect("infallible");
-    // return the final string
-    dest
-}
+// /// Render an entire OWL document to a string.
+// #[inline]
+// pub fn to_string<'a, P>(ontology: &AxiomMappedOntology, prefixes: P) -> String
+// where
+//     P: Into<Option<&'a PrefixMapping>>,
+// {
+//     let mut dest = String::new();
+//     // write the prefixes
+//     let p = prefixes.into();
+//     if let Some(pm) = p {
+//         write!(dest, "{}", pm.as_ofn()).expect("infallible");
+//     }
+//     // write the ontology
+//     let ctx = Context::new(None, p);
+//     write!(dest, "{}", ontology.as_ofn_ctx(&ctx)).expect("infallible");
+//     // return the final string
+//     dest
+// }
