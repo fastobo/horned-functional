@@ -32,6 +32,7 @@ use horned_owl::model::ForIRI;
 use horned_owl::model::Ontology;
 use horned_owl::model::IRI;
 use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
+use horned_owl::ontology::indexed::ForIndex;
 
 pub use self::as_ofn::AsFunctional;
 pub use self::as_ofn::Functional;
@@ -147,21 +148,23 @@ where
     }
 }
 
-// /// Render an entire OWL document to a string.
-// #[inline]
-// pub fn to_string<'a, P>(ontology: &AxiomMappedOntology, prefixes: P) -> String
-// where
-//     P: Into<Option<&'a PrefixMapping>>,
-// {
-//     let mut dest = String::new();
-//     // write the prefixes
-//     let p = prefixes.into();
-//     if let Some(pm) = p {
-//         write!(dest, "{}", pm.as_ofn()).expect("infallible");
-//     }
-//     // write the ontology
-//     let ctx = Context::new(None, p);
-//     write!(dest, "{}", ontology.as_ofn_ctx(&ctx)).expect("infallible");
-//     // return the final string
-//     dest
-// }
+/// Render an entire OWL document to a string.
+#[inline]
+pub fn to_string<'a, A, AA, P>(ontology: &AxiomMappedOntology<A, AA>, prefixes: P) -> String
+where
+    A: ForIRI,
+    AA: ForIndex<A>,
+    P: Into<Option<&'a PrefixMapping>>,
+{
+    let mut dest = String::new();
+    // write the prefixes
+    let p = prefixes.into();
+    if let Some(pm) = p {
+        write!(dest, "{}", <PrefixMapping as AsFunctional<A>>::as_ofn(pm)).expect("infallible");
+    }
+    // write the ontology
+    let ctx = Context::new(None, p);
+    write!(dest, "{}", ontology.as_ofn_ctx(&ctx)).expect("infallible");
+    // return the final string
+    dest
+}

@@ -3,10 +3,9 @@ use std::fmt::Display;
 use std::fmt::Error;
 use std::fmt::Formatter;
 
-use horned_owl::model as owl;
-use horned_owl::model::Kinded;
-use horned_owl::model::Ontology;
+use horned_owl::model::*;
 use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
+use horned_owl::ontology::indexed::ForIndex;
 use horned_owl::vocab::WithIRI;
 
 use super::Context;
@@ -28,7 +27,7 @@ fn quote(mut s: &str, f: &mut Formatter<'_>) -> Result<(), Error> {
 }
 
 /// A trait for OWL elements that can be serialized to OWL Functional syntax.
-pub trait AsFunctional {
+pub trait AsFunctional<A: ForIRI> {
     /// Get a handle for displaying the element in functional syntax.
     ///
     /// Instead of returning a `String`, this method returns an opaque struct
@@ -39,7 +38,7 @@ pub trait AsFunctional {
     /// # Example
     /// ```
     /// # use horned_owl::model::DeclareClass;
-    /// # let build = horned_owl::model::Build::new();
+    /// # let build = horned_owl::model::Build::new_arc();
     /// use horned_functional::AsFunctional;
     ///
     /// let axiom = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
@@ -48,7 +47,7 @@ pub trait AsFunctional {
     ///     "Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))"
     /// );
     /// ```
-    fn as_ofn<'t>(&'t self) -> Functional<'t, Self> {
+    fn as_ofn<'t>(&'t self) -> Functional<'t, Self, A> {
         Functional(&self, None, None)
     }
 
@@ -61,7 +60,7 @@ pub trait AsFunctional {
     /// # Example
     /// ```
     /// # use horned_owl::model::DeclareClass;
-    /// # let build = horned_owl::model::Build::new();
+    /// # let build = horned_owl::model::Build::new_arc();
     /// use horned_functional::AsFunctional;
     /// use horned_functional::Context;
     ///
@@ -74,27 +73,27 @@ pub trait AsFunctional {
     ///     "Declaration(Class(foaf:Person))"
     /// );
     /// ```
-    fn as_ofn_ctx<'t>(&'t self, context: &'t Context<'t>) -> Functional<'t, Self> {
+    fn as_ofn_ctx<'t>(&'t self, context: &'t Context<'t, A>) -> Functional<'t, Self, A> {
         Functional(&self, Some(context), None)
     }
 }
 
 /// A wrapper for displaying an OWL2 element in functional syntax.
 #[derive(Debug)]
-pub struct Functional<'t, T: ?Sized>(
+pub struct Functional<'t, T: ?Sized, A: ForIRI>(
     // the element to display
     &'t T,
     // an eventual context to use (for IRI prefixes)
-    Option<&'t Context<'t>>,
+    Option<&'t Context<'t, A>>,
     // an eventual set of annotations (to render inside axioms)
-    Option<&'t BTreeSet<owl::Annotation>>,
+    Option<&'t BTreeSet<Annotation<A>>>,
 );
 
 // ---------------------------------------------------------------------------
 
 macro_rules! derive_vec {
-    (owl::$t:ident) => {
-        impl<'a> Display for Functional<'a, Vec<owl::$t>> {
+    ($A:ident, $t:ty) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, Vec<$t>, $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 for (i, x) in self.0.iter().enumerate() {
                     if i != 0 {
@@ -108,19 +107,19 @@ macro_rules! derive_vec {
     };
 }
 
-derive_vec!(owl::ClassExpression);
-derive_vec!(owl::DataRange);
-derive_vec!(owl::Individual);
-derive_vec!(owl::ObjectPropertyExpression);
-derive_vec!(owl::FacetRestriction);
-derive_vec!(owl::Literal);
-derive_vec!(owl::DataProperty);
+derive_vec!(A, ClassExpression<A>);
+derive_vec!(A, DataRange<A>);
+derive_vec!(A, Individual<A>);
+derive_vec!(A, ObjectPropertyExpression<A>);
+derive_vec!(A, FacetRestriction<A>);
+derive_vec!(A, Literal<A>);
+derive_vec!(A, DataProperty<A>);
 
 // ---------------------------------------------------------------------------
 
 macro_rules! derive_tuple1 {
-    ($t:ty) => {
-        impl<'a> Display for Functional<'a, (&$t,)> {
+    ($A:ident, $t:ty) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, (&$t,), $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(f, "{}", Functional(self.0 .0, self.1, None),)
             }
@@ -128,17 +127,17 @@ macro_rules! derive_tuple1 {
     };
 }
 
-derive_tuple1!(owl::IRI);
-derive_tuple1!(owl::DataProperty);
-derive_tuple1!(owl::ObjectPropertyExpression);
-derive_tuple1!(Vec<owl::Individual>);
-derive_tuple1!(Vec<owl::ClassExpression>);
-derive_tuple1!(Vec<owl::DataProperty>);
-derive_tuple1!(Vec<owl::ObjectPropertyExpression>);
+derive_tuple1!(A, IRI<A>);
+derive_tuple1!(A, DataProperty<A>);
+derive_tuple1!(A, ObjectPropertyExpression<A>);
+derive_tuple1!(A, Vec<Individual<A>>);
+derive_tuple1!(A, Vec<ClassExpression<A>>);
+derive_tuple1!(A, Vec<DataProperty<A>>);
+derive_tuple1!(A, Vec<ObjectPropertyExpression<A>>);
 
 macro_rules! derive_tuple2 {
-    ($t1:ty, $t2:ty) => {
-        impl<'a> Display for Functional<'a, (&$t1, &$t2)> {
+    ($A:ident, $t1:ty, $t2:ty) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, (&$t1, &$t2), $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(
                     f,
@@ -151,26 +150,27 @@ macro_rules! derive_tuple2 {
     };
 }
 
-derive_tuple2!(owl::Class, Vec<horned_owl::model::ClassExpression>);
-derive_tuple2!(owl::Datatype, owl::DataRange);
-derive_tuple2!(owl::ClassExpression, owl::Individual);
-derive_tuple2!(owl::ObjectProperty, owl::ObjectProperty);
-derive_tuple2!(owl::ObjectPropertyExpression, owl::ClassExpression);
-derive_tuple2!(owl::AnnotationProperty, owl::AnnotationValue);
-derive_tuple2!(owl::AnnotationProperty, owl::IRI);
-derive_tuple2!(owl::ClassExpression, owl::ClassExpression);
-derive_tuple2!(owl::AnnotationProperty, owl::AnnotationProperty);
-derive_tuple2!(owl::DataProperty, owl::DataProperty);
-derive_tuple2!(owl::DataProperty, owl::DataRange);
-derive_tuple2!(owl::DataProperty, owl::ClassExpression);
+derive_tuple2!(A, Class<A>, Vec<ClassExpression<A>>);
+derive_tuple2!(A, Datatype<A>, DataRange<A>);
+derive_tuple2!(A, ClassExpression<A>, Individual<A>);
+derive_tuple2!(A, ObjectProperty<A>, ObjectProperty<A>);
+derive_tuple2!(A, ObjectPropertyExpression<A>, ClassExpression<A>);
+derive_tuple2!(A, AnnotationProperty<A>, AnnotationValue<A>);
+derive_tuple2!(A, AnnotationProperty<A>, IRI<A>);
+derive_tuple2!(A, ClassExpression<A>, ClassExpression<A>);
+derive_tuple2!(A, AnnotationProperty<A>, AnnotationProperty<A>);
+derive_tuple2!(A, DataProperty<A>, DataProperty<A>);
+derive_tuple2!(A, DataProperty<A>, DataRange<A>);
+derive_tuple2!(A, DataProperty<A>, ClassExpression<A>);
 derive_tuple2!(
-    owl::SubObjectPropertyExpression,
-    owl::ObjectPropertyExpression
+    A,
+    SubObjectPropertyExpression<A>,
+    ObjectPropertyExpression<A>
 );
 
 macro_rules! derive_tuple3 {
-    ($t1:ty, $t2:ty, $t3:ty) => {
-        impl<'a> Display for Functional<'a, (&$t1, &$t2, &$t3)> {
+    ($A:ident, $t1:ty, $t2:ty, $t3:ty) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, (&$t1, &$t2, &$t3), $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(
                     f,
@@ -184,16 +184,12 @@ macro_rules! derive_tuple3 {
     };
 }
 
-derive_tuple3!(owl::DataProperty, owl::Individual, owl::Literal);
-derive_tuple3!(
-    owl::ObjectPropertyExpression,
-    owl::Individual,
-    owl::Individual
-);
+derive_tuple3!(A, DataProperty<A>, Individual<A>, Literal<A>);
+derive_tuple3!(A, ObjectPropertyExpression<A>, Individual<A>, Individual<A>);
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, BTreeSet<owl::Annotation>> {
+impl<'a, A: ForIRI> Display for Functional<'a, BTreeSet<Annotation<A>>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         for (i, x) in self.0.iter().enumerate() {
             if i != 0 {
@@ -208,127 +204,182 @@ impl<'a> Display for Functional<'a, BTreeSet<owl::Annotation>> {
 // ---------------------------------------------------------------------------
 
 macro_rules! derive_declaration {
-    (owl::$ty:ident, $inner:ident) => {
-        impl<'a> Display for Functional<'a, owl::$ty> {
+    ($A:ident, $ty:ty, $inner:ty, $name:ident) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, $ty, $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(
                     f,
-                    concat!("Declaration(", stringify!($inner), "({}))"),
+                    concat!("Declaration(", stringify!($name), "({}))"),
                     Functional(&self.0 .0, self.1, None)
                 )
             }
         }
 
-        impl AsFunctional for owl::$ty {}
+        impl<$A: ForIRI> AsFunctional<$A> for $ty {}
     };
 }
 
-derive_declaration!(owl::DeclareClass, Class);
-derive_declaration!(owl::DeclareAnnotationProperty, AnnotationProperty);
-derive_declaration!(owl::DeclareObjectProperty, ObjectProperty);
-derive_declaration!(owl::DeclareDataProperty, DataProperty);
-derive_declaration!(owl::DeclareNamedIndividual, NamedIndividual);
-derive_declaration!(owl::DeclareDatatype, Datatype);
+derive_declaration!(A, DeclareClass<A>, Class<A>, Class);
+derive_declaration!(
+    A,
+    DeclareAnnotationProperty<A>,
+    AnnotationProperty<A>,
+    AnnotationProperty
+);
+derive_declaration!(
+    A,
+    DeclareObjectProperty<A>,
+    ObjectProperty<A>,
+    ObjectProperty
+);
+derive_declaration!(A, DeclareDataProperty<A>, DataProperty<A>, DataProperty);
+derive_declaration!(
+    A,
+    DeclareNamedIndividual<A>,
+    NamedIndividual<A>,
+    NamedIndividual
+);
+derive_declaration!(A, DeclareDatatype<A>, Datatype<A>, Datatype);
 
 // ---------------------------------------------------------------------------
 
 macro_rules! derive_wrapper {
-    (owl::$ty:ident) => {
-        impl<'a> Display for Functional<'a, owl::$ty> {
+    ($A:ident, $ty:ty) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, $ty, $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 write!(f, "{}", Functional(&self.0 .0, self.1, None))
             }
         }
 
-        impl AsFunctional for owl::$ty {}
+        impl<$A: ForIRI> AsFunctional<$A> for $ty {}
     };
 }
 
-derive_wrapper!(owl::AnnotationProperty);
-derive_wrapper!(owl::Class);
-derive_wrapper!(owl::DataProperty);
-derive_wrapper!(owl::Datatype);
-derive_wrapper!(owl::NamedIndividual);
-derive_wrapper!(owl::OntologyAnnotation);
-derive_wrapper!(owl::ObjectProperty);
+derive_wrapper!(A, AnnotationProperty<A>);
+derive_wrapper!(A, Class<A>);
+derive_wrapper!(A, DataProperty<A>);
+derive_wrapper!(A, Datatype<A>);
+derive_wrapper!(A, NamedIndividual<A>);
+derive_wrapper!(A, OntologyAnnotation<A>);
+derive_wrapper!(A, ObjectProperty<A>);
 
 // ---------------------------------------------------------------------------
 
 macro_rules! derive_axiom {
-    (owl::$ty:ident ( $($field:tt),* )) => {
-        impl<'a> Display for Functional<'a, owl::$ty> {
+    ($A:ident, $ty:ty, $name:ident ( $($field:tt),* )) => {
+        impl<'a, $A: ForIRI> Display for Functional<'a, $ty, $A> {
             fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
                 if let Some(annotations) = self.2 {
                     write!(
                         f,
-                        concat!(stringify!($ty), "({} {})"),
+                        concat!(stringify!($name), "({} {})"),
                         Functional(annotations, self.1, None),
                         Functional(&($(&self.0.$field,)*), self.1, None)
                     )
                 } else {
                     write!(
                         f,
-                        concat!(stringify!($ty), "({})"),
+                        concat!(stringify!($name), "({})"),
                         Functional(&($(&self.0.$field,)*), self.1, None)
                     )
                 }
             }
         }
 
-        impl AsFunctional for owl::$ty {}
+        impl<$A: ForIRI> AsFunctional<$A> for $ty {}
     };
 }
 
-derive_axiom!(owl::Annotation(ap, av));
-derive_axiom!(owl::AnnotationPropertyRange(ap, iri));
-derive_axiom!(owl::AnnotationPropertyDomain(ap, iri));
-derive_axiom!(owl::AsymmetricObjectProperty(0));
-derive_axiom!(owl::ClassAssertion(ce, i));
-derive_axiom!(owl::DataPropertyAssertion(dp, from, to));
-derive_axiom!(owl::DataPropertyDomain(dp, ce));
-derive_axiom!(owl::DataPropertyRange(dp, dr));
-derive_axiom!(owl::DatatypeDefinition(kind, range));
-derive_axiom!(owl::DifferentIndividuals(0));
-derive_axiom!(owl::DisjointClasses(0));
-derive_axiom!(owl::DisjointDataProperties(0));
-derive_axiom!(owl::DisjointObjectProperties(0));
-derive_axiom!(owl::DisjointUnion(0, 1));
-derive_axiom!(owl::EquivalentClasses(0));
-derive_axiom!(owl::EquivalentDataProperties(0));
-derive_axiom!(owl::EquivalentObjectProperties(0));
-derive_axiom!(owl::FunctionalObjectProperty(0));
-derive_axiom!(owl::FunctionalDataProperty(0));
-derive_axiom!(owl::Import(0));
-derive_axiom!(owl::InverseFunctionalObjectProperty(0));
-derive_axiom!(owl::InverseObjectProperties(0, 1));
-derive_axiom!(owl::IrreflexiveObjectProperty(0));
-derive_axiom!(owl::NegativeDataPropertyAssertion(dp, from, to));
-derive_axiom!(owl::NegativeObjectPropertyAssertion(ope, from, to));
-derive_axiom!(owl::ObjectPropertyAssertion(ope, from, to));
-derive_axiom!(owl::ObjectPropertyDomain(ope, ce));
-derive_axiom!(owl::ObjectPropertyRange(ope, ce));
-derive_axiom!(owl::ReflexiveObjectProperty(0));
-derive_axiom!(owl::SameIndividual(0));
-derive_axiom!(owl::SubClassOf(sub, sup));
-derive_axiom!(owl::SubAnnotationPropertyOf(sub, sup));
-derive_axiom!(owl::SubDataPropertyOf(sub, sup));
-derive_axiom!(owl::SubObjectPropertyOf(sub, sup));
-derive_axiom!(owl::SymmetricObjectProperty(0));
-derive_axiom!(owl::TransitiveObjectProperty(0));
+derive_axiom!(A, Annotation<A>, Annotation(ap, av));
+derive_axiom!(
+    A,
+    AnnotationPropertyRange<A>,
+    AnnotationPropertyRange(ap, iri)
+);
+derive_axiom!(
+    A,
+    AnnotationPropertyDomain<A>,
+    AnnotationPropertyDomain(ap, iri)
+);
+derive_axiom!(A, AsymmetricObjectProperty<A>, AsymmetricObjectProperty(0));
+derive_axiom!(A, ClassAssertion<A>, ClassAssertion(ce, i));
+derive_axiom!(
+    A,
+    DataPropertyAssertion<A>,
+    DataPropertyAssertion(dp, from, to)
+);
+derive_axiom!(A, DataPropertyDomain<A>, DataPropertyDomain(dp, ce));
+derive_axiom!(A, DataPropertyRange<A>, DataPropertyRange(dp, dr));
+derive_axiom!(A, DatatypeDefinition<A>, DatatypeDefinition(kind, range));
+derive_axiom!(A, DifferentIndividuals<A>, DifferentIndividuals(0));
+derive_axiom!(A, DisjointClasses<A>, DisjointClasses(0));
+derive_axiom!(A, DisjointDataProperties<A>, DisjointDataProperties(0));
+derive_axiom!(A, DisjointObjectProperties<A>, DisjointObjectProperties(0));
+derive_axiom!(A, DisjointUnion<A>, DisjointUnion(0, 1));
+derive_axiom!(A, EquivalentClasses<A>, EquivalentClasses(0));
+derive_axiom!(A, EquivalentDataProperties<A>, EquivalentDataProperties(0));
+derive_axiom!(
+    A,
+    EquivalentObjectProperties<A>,
+    EquivalentObjectProperties(0)
+);
+derive_axiom!(A, FunctionalObjectProperty<A>, FunctionalObjectProperty(0));
+derive_axiom!(A, FunctionalDataProperty<A>, FunctionalDataProperty(0));
+derive_axiom!(A, Import<A>, Import(0));
+derive_axiom!(
+    A,
+    InverseFunctionalObjectProperty<A>,
+    InverseFunctionalObjectProperty(0)
+);
+derive_axiom!(A, InverseObjectProperties<A>, InverseObjectProperties(0, 1));
+derive_axiom!(
+    A,
+    IrreflexiveObjectProperty<A>,
+    IrreflexiveObjectProperty(0)
+);
+derive_axiom!(
+    A,
+    NegativeDataPropertyAssertion<A>,
+    NegativeDataPropertyAssertion(dp, from, to)
+);
+derive_axiom!(
+    A,
+    NegativeObjectPropertyAssertion<A>,
+    NegativeObjectPropertyAssertion(ope, from, to)
+);
+derive_axiom!(
+    A,
+    ObjectPropertyAssertion<A>,
+    ObjectPropertyAssertion(ope, from, to)
+);
+derive_axiom!(A, ObjectPropertyDomain<A>, ObjectPropertyDomain(ope, ce));
+derive_axiom!(A, ObjectPropertyRange<A>, ObjectPropertyRange(ope, ce));
+derive_axiom!(A, ReflexiveObjectProperty<A>, ReflexiveObjectProperty(0));
+derive_axiom!(A, SameIndividual<A>, SameIndividual(0));
+derive_axiom!(A, SubClassOf<A>, SubClassOf(sub, sup));
+derive_axiom!(
+    A,
+    SubAnnotationPropertyOf<A>,
+    SubAnnotationPropertyOf(sub, sup)
+);
+derive_axiom!(A, SubDataPropertyOf<A>, SubDataPropertyOf(sub, sup));
+derive_axiom!(A, SubObjectPropertyOf<A>, SubObjectPropertyOf(sub, sup));
+derive_axiom!(A, SymmetricObjectProperty<A>, SymmetricObjectProperty(0));
+derive_axiom!(A, TransitiveObjectProperty<A>, TransitiveObjectProperty(0));
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::AnnotatedAxiom> {
+impl<'a, A: ForIRI> Display for Functional<'a, AnnotatedAxiom<A>, A> {
     fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
         Functional(&self.0.axiom, self.1, Some(&self.0.ann)).fmt(f)
     }
 }
 
-impl AsFunctional for owl::AnnotatedAxiom {}
+impl<A: ForIRI> AsFunctional<A> for AnnotatedAxiom<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::AnnotationAssertion> {
+impl<'a, A: ForIRI> Display for Functional<'a, AnnotationAssertion<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         write!(
             f,
@@ -340,13 +391,13 @@ impl<'a> Display for Functional<'a, owl::AnnotationAssertion> {
     }
 }
 
-impl AsFunctional for owl::AnnotationAssertion {}
+impl<A: ForIRI> AsFunctional<A> for AnnotationAssertion<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::AnnotationSubject> {
+impl<'a, A: ForIRI> Display for Functional<'a, AnnotationSubject<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::AnnotationSubject::*;
+        use AnnotationSubject::*;
         match &self.0 {
             IRI(iri) => Functional(iri, self.1, None).fmt(f),
             AnonymousIndividual(anon) => Functional(anon, self.1, None).fmt(f),
@@ -354,13 +405,13 @@ impl<'a> Display for Functional<'a, owl::AnnotationSubject> {
     }
 }
 
-impl AsFunctional for owl::AnnotationSubject {}
+impl<A: ForIRI> AsFunctional<A> for AnnotationSubject<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::AnnotationValue> {
+impl<'a, A: ForIRI> Display for Functional<'a, AnnotationValue<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::AnnotationValue::*;
+        use AnnotationValue::*;
         match &self.0 {
             Literal(lit) => Functional(lit, self.1, None).fmt(f),
             IRI(iri) => Functional(iri, self.1, None).fmt(f),
@@ -368,26 +419,26 @@ impl<'a> Display for Functional<'a, owl::AnnotationValue> {
     }
 }
 
-impl AsFunctional for owl::AnnotationValue {}
+impl<A: ForIRI> AsFunctional<A> for AnnotationValue<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::AnonymousIndividual> {
+impl<'a, A: ForIRI> Display for Functional<'a, AnonymousIndividual<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         self.0.fmt(f)
     }
 }
 
-impl AsFunctional for owl::AnonymousIndividual {}
+impl<A: ForIRI> AsFunctional<A> for AnonymousIndividual<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::Axiom> {
+impl<'a, A: ForIRI> Display for Functional<'a, Axiom<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         macro_rules! enum_impl {
             ($($variant:ident,)*) => {
                 match self.0 {
-                    $(owl::Axiom::$variant(axiom) => {
+                    $(Axiom::$variant(axiom) => {
                         Functional(axiom, self.1, self.2).fmt(f)
                     }),*
                 }
@@ -442,13 +493,13 @@ impl<'a> Display for Functional<'a, owl::Axiom> {
     }
 }
 
-impl AsFunctional for owl::Axiom {}
+impl<A: ForIRI> AsFunctional<A> for Axiom<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::ClassExpression> {
+impl<'a, A: ForIRI> Display for Functional<'a, ClassExpression<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::ClassExpression::*;
+        use ClassExpression::*;
         match self.0 {
             Class(exp) => Functional(exp, self.1, None).fmt(f),
             ObjectIntersectionOf(classes) => {
@@ -580,13 +631,13 @@ impl<'a> Display for Functional<'a, owl::ClassExpression> {
     }
 }
 
-impl AsFunctional for owl::ClassExpression {}
+impl<A: ForIRI> AsFunctional<A> for ClassExpression<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::DataRange> {
+impl<'a, A: ForIRI> Display for Functional<'a, DataRange<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::DataRange::*;
+        use DataRange::*;
         match self.0 {
             Datatype(dt) => Functional(dt, self.1, None).fmt(f),
             DataIntersectionOf(dts) => {
@@ -617,21 +668,21 @@ impl<'a> Display for Functional<'a, owl::DataRange> {
     }
 }
 
-impl AsFunctional for owl::DataRange {}
+impl<A: ForIRI> AsFunctional<A> for DataRange<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::Facet> {
+impl<'a, A: ForIRI> Display for Functional<'a, Facet, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         f.write_str(self.0.iri_str())
     }
 }
 
-impl AsFunctional for owl::Facet {}
+impl<A: ForIRI> AsFunctional<A> for Facet {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::FacetRestriction> {
+impl<'a, A: ForIRI> Display for Functional<'a, FacetRestriction<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         write!(
             f,
@@ -642,18 +693,18 @@ impl<'a> Display for Functional<'a, owl::FacetRestriction> {
     }
 }
 
-impl AsFunctional for owl::FacetRestriction {}
+impl<A: ForIRI> AsFunctional<A> for FacetRestriction<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::HasKey> {
+impl<'a, A: ForIRI> Display for Functional<'a, HasKey<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         write!(f, "HasKey({} ", Functional(&self.0.ce, self.1, None))?;
 
         f.write_str("(")?;
         let mut n = 0;
         for pe in self.0.vpe.iter() {
-            if let owl::PropertyExpression::ObjectPropertyExpression(ope) = pe {
+            if let PropertyExpression::ObjectPropertyExpression(ope) = pe {
                 if n != 0 {
                     f.write_str(" ")?;
                 }
@@ -666,7 +717,7 @@ impl<'a> Display for Functional<'a, owl::HasKey> {
         f.write_str("(")?;
         let mut n = 0;
         for pe in self.0.vpe.iter() {
-            if let owl::PropertyExpression::DataProperty(dp) = pe {
+            if let PropertyExpression::DataProperty(dp) = pe {
                 if n != 0 {
                     f.write_str(" ")?;
                 }
@@ -680,11 +731,11 @@ impl<'a> Display for Functional<'a, owl::HasKey> {
     }
 }
 
-impl AsFunctional for owl::HasKey {}
+impl<A: ForIRI> AsFunctional<A> for HasKey<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::IRI> {
+impl<'a, A: ForIRI> Display for Functional<'a, IRI<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         if let Some(prefixes) = self.1.as_ref().and_then(|ctx| ctx.prefixes) {
             match prefixes.shrink_iri(self.0) {
@@ -697,13 +748,13 @@ impl<'a> Display for Functional<'a, owl::IRI> {
     }
 }
 
-impl AsFunctional for owl::IRI {}
+impl<A: ForIRI> AsFunctional<A> for IRI<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::Individual> {
+impl<'a, A: ForIRI> Display for Functional<'a, Individual<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::Individual::*;
+        use Individual::*;
         match self.0 {
             Named(i) => Functional(i, self.1, None).fmt(f),
             Anonymous(i) => Functional(i, self.1, None).fmt(f),
@@ -711,19 +762,19 @@ impl<'a> Display for Functional<'a, owl::Individual> {
     }
 }
 
-impl AsFunctional for owl::Individual {}
+impl<A: ForIRI> AsFunctional<A> for Individual<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::Literal> {
+impl<'a, A: ForIRI> Display for Functional<'a, Literal<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         match self.0 {
-            owl::Literal::Simple { literal } => quote(&literal, f),
-            owl::Literal::Language { literal, lang } => {
+            Literal::Simple { literal } => quote(&literal, f),
+            Literal::Language { literal, lang } => {
                 quote(&literal, f)?;
                 write!(f, "@{}", lang)
             }
-            owl::Literal::Datatype {
+            Literal::Datatype {
                 literal,
                 datatype_iri,
             } => {
@@ -734,13 +785,13 @@ impl<'a> Display for Functional<'a, owl::Literal> {
     }
 }
 
-impl AsFunctional for owl::Literal {}
+impl<A: ForIRI> AsFunctional<A> for Literal<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::ObjectPropertyExpression> {
+impl<'a, A: ForIRI> Display for Functional<'a, ObjectPropertyExpression<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::ObjectPropertyExpression::*;
+        use ObjectPropertyExpression::*;
         match self.0 {
             ObjectProperty(op) => Functional(op, self.1, None).fmt(f),
             InverseObjectProperty(op) => {
@@ -750,13 +801,13 @@ impl<'a> Display for Functional<'a, owl::ObjectPropertyExpression> {
     }
 }
 
-impl AsFunctional for owl::ObjectPropertyExpression {}
+impl<A: ForIRI> AsFunctional<A> for ObjectPropertyExpression<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, owl::SubObjectPropertyExpression> {
+impl<'a, A: ForIRI> Display for Functional<'a, SubObjectPropertyExpression<A>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
-        use owl::SubObjectPropertyExpression::*;
+        use SubObjectPropertyExpression::*;
         match self.0 {
             ObjectPropertyExpression(ope) => Functional(ope, self.1, None).fmt(f),
             ObjectPropertyChain(chain) => {
@@ -770,11 +821,11 @@ impl<'a> Display for Functional<'a, owl::SubObjectPropertyExpression> {
     }
 }
 
-impl AsFunctional for owl::SubObjectPropertyExpression {}
+impl<A: ForIRI> AsFunctional<A> for SubObjectPropertyExpression<A> {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, curie::PrefixMapping> {
+impl<'a, A: ForIRI> Display for Functional<'a, curie::PrefixMapping, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         for (name, value) in self.0.mappings() {
             writeln!(f, "Prefix({}:=<{}>)", name, value)?;
@@ -783,11 +834,11 @@ impl<'a> Display for Functional<'a, curie::PrefixMapping> {
     }
 }
 
-impl AsFunctional for curie::PrefixMapping {}
+impl<A: ForIRI> AsFunctional<A> for curie::PrefixMapping {}
 
 // ---------------------------------------------------------------------------
 
-impl<'a> Display for Functional<'a, AxiomMappedOntology> {
+impl<'a, A: ForIRI, AA: ForIndex<A>> Display for Functional<'a, AxiomMappedOntology<A, AA>, A> {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         // open the Ontology element
         f.write_str("Ontology(")?;
@@ -812,7 +863,7 @@ impl<'a> Display for Functional<'a, AxiomMappedOntology> {
         // then write the rest
         for axiom in self.0.i().iter() {
             let kind = axiom.axiom.kind();
-            if kind != owl::AxiomKind::OntologyAnnotation && kind != owl::AxiomKind::Import {
+            if kind != AxiomKind::OntologyAnnotation && kind != AxiomKind::Import {
                 writeln!(f, "{}", Functional(axiom, self.1, None))?;
             }
         }
@@ -821,7 +872,7 @@ impl<'a> Display for Functional<'a, AxiomMappedOntology> {
     }
 }
 
-impl AsFunctional for AxiomMappedOntology {}
+impl<A: ForIRI, AA: ForIndex<A>> AsFunctional<A> for AxiomMappedOntology<A, AA> {}
 
 #[cfg(test)]
 mod tests {
@@ -830,8 +881,8 @@ mod tests {
 
     #[test]
     fn test_ofn_declareclass() {
-        let build = owl::Build::new();
-        let decl = owl::DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
+        let build = Build::new_arc();
+        let decl = DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
         let ofn = format!("{}", decl.as_ofn());
         assert_eq!(
             "Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))",
@@ -841,19 +892,19 @@ mod tests {
 
     #[test]
     fn test_ofn_literal_simple() {
-        let lit = owl::Literal::Simple {
+        let lit = Literal::<String>::Simple {
             literal: String::from("test"),
         };
         let ofn = format!("{}", lit.as_ofn());
         assert_eq!(r#""test""#, &ofn);
 
-        let lit = owl::Literal::Simple {
+        let lit = Literal::<String>::Simple {
             literal: String::from("test\""),
         };
         let ofn = format!("{}", lit.as_ofn());
         assert_eq!(r#""test\"""#, &ofn);
 
-        let lit = owl::Literal::Simple {
+        let lit = Literal::<String>::Simple {
             literal: String::from("test\\"),
         };
         let ofn = format!("{}", lit.as_ofn());
@@ -862,7 +913,7 @@ mod tests {
 
     #[test]
     fn test_ofn_literal_language() {
-        let lit = owl::Literal::Language {
+        let lit = Literal::<String>::Language {
             literal: String::from("hello"),
             lang: String::from("en"),
         };
@@ -872,8 +923,8 @@ mod tests {
 
     #[test]
     fn test_ofn_literal_datatype() {
-        let build = owl::Build::new();
-        let lit = owl::Literal::Datatype {
+        let build = Build::new_arc();
+        let lit = Literal::Datatype {
             literal: String::from("hello"),
             datatype_iri: build.iri("http://www.w3.org/2001/XMLSchema#string"),
         };
@@ -886,26 +937,26 @@ mod tests {
 
     #[test]
     fn test_ofn_import() {
-        let build = owl::Build::new();
-        let import = owl::Import(build.iri("http://example.com/"));
+        let build = Build::new_arc();
+        let import = Import(build.iri("http://example.com/"));
         let ofn = format!("{}", import.as_ofn());
         assert_eq!("Import(<http://example.com/>)", ofn);
     }
 
     #[test]
     fn test_ofn_curie() {
-        let build = owl::Build::new();
+        let build = Build::new_arc();
         let mut prefixes = curie::PrefixMapping::default();
         prefixes
             .add_prefix("obo", "http://purl.obolibrary.org/obo/")
             .ok();
         let context = Context::from(&prefixes);
 
-        let decl = owl::DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
+        let decl = DeclareClass(build.class("http://purl.obolibrary.org/obo/BFO_0000001"));
         let ofn = format!("{}", decl.as_ofn_ctx(&context));
         assert_eq!("Declaration(Class(obo:BFO_0000001))", ofn);
 
-        let decl = owl::DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
+        let decl = DeclareClass(build.class("http://xmlns.com/foaf/0.1/Person"));
         let ofn = format!("{}", decl.as_ofn_ctx(&context));
         assert_eq!(
             "Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))",
@@ -915,7 +966,7 @@ mod tests {
 
     #[test]
     fn test_annotated_axiom() {
-        let build = owl::Build::new();
+        let build = Build::new_arc();
         let mut prefixes = curie::PrefixMapping::default();
         prefixes
             .add_prefix("obo", "http://purl.obolibrary.org/obo/")
@@ -925,16 +976,16 @@ mod tests {
             .ok();
         let context = Context::from(&prefixes);
 
-        let axiom = owl::EquivalentClasses(vec![
-            owl::ClassExpression::Class(build.class("http://purl.obolibrary.org/obo/HAO_0000935")),
-            owl::ClassExpression::Class(build.class("http://purl.obolibrary.org/obo/HAO_0000933")),
+        let axiom = EquivalentClasses(vec![
+            ClassExpression::Class(build.class("http://purl.obolibrary.org/obo/HAO_0000935")),
+            ClassExpression::Class(build.class("http://purl.obolibrary.org/obo/HAO_0000933")),
         ]);
-        let annotated = owl::AnnotatedAxiom {
-            axiom: owl::Axiom::EquivalentClasses(axiom),
-            ann: BTreeSet::from_iter([owl::Annotation {
+        let annotated = AnnotatedAxiom {
+            axiom: Axiom::EquivalentClasses(axiom),
+            ann: BTreeSet::from_iter([Annotation {
                 ap: build
                     .annotation_property("http://www.geneontology.org/formats/oboInOwl#hasDbXref"),
-                av: owl::AnnotationValue::Literal(owl::Literal::Simple {
+                av: AnnotationValue::Literal(Literal::Simple {
                     literal: "http://api.hymao.org/api/ref/67791".into(),
                 }),
             }]),

@@ -39,7 +39,7 @@ use horned_owl::ontology::set::SetOntology;
 
 let s = std::fs::read_to_string("tests/data/ms.obo.ofn")
     .expect("failed to read OWL file");
-let (ontology, prefixes) = horned_functional::from_str::<SetOntology, _>(&s)
+let (ontology, prefixes) = horned_functional::from_str::<_, SetOntology<String>, _>(&s)
     .expect("failed to parse OWL file");
 ```
 
@@ -51,7 +51,7 @@ method:
 use horned_owl::model::Axiom;
 use horned_functional::FromFunctional;
 
-let axiom = Axiom::from_ofn("Declaration(Class(<http://purl.obolibrary.org/obo/MS_1000031>))")
+let axiom = Axiom::<String>::from_ofn("Declaration(Class(<http://purl.obolibrary.org/obo/MS_1000031>))")
     .expect("failed to parse axiom");
 ```
 
@@ -66,7 +66,7 @@ let mut mapping = curie::PrefixMapping::default();
 mapping.add_prefix("obo", "http://purl.obolibrary.org/obo/").ok();
 
 let ctx = horned_functional::Context::from(&mapping);
-let axiom = Axiom::from_ofn_ctx("Declaration(Class(obo:MS_1000031))", &ctx)
+let axiom = Axiom::<String>::from_ofn_ctx("Declaration(Class(obo:MS_1000031))", &ctx)
     .expect("failed to parse axiom");
 ```
 
@@ -77,14 +77,18 @@ To easily serialize an entire OWL document, including prefixes, use the
 [`horned_functional::to_string`](https://docs.rs/horned-functional/latest/horned_functional/fn.to_string.html) function:
 
 ```rust
+use std::rc::Rc;
+use horned_owl::ontology::axiom_mapped::AxiomMappedOntology;
+
 let mut file = std::fs::File::open("tests/data/ms.owx")
     .map(std::io::BufReader::new)
     .expect("failed to open OWL file");
-let (ontology, prefixes) = horned_owl::io::owx::reader::read(&mut file)
+let cfg = Default::default();
+let (ontology, prefixes) = horned_owl::io::owx::reader::read(&mut file, cfg)
     .expect("failed to read OWL file");
 
 // `horned_functional::to_string` needs an AxiomMappedOntology
-let axiom_mapped = ontology.into();
+let axiom_mapped: AxiomMappedOntology<Rc<str>, Rc<_>> = ontology.into();
 
 // serialize using the same prefixes as the input OWL/XML file
 let ofn = horned_functional::to_string(&axiom_mapped, &prefixes);
@@ -105,7 +109,7 @@ to get a displayable type for any supported element:
 use horned_owl::model::*;
 use horned_functional::AsFunctional;
 
-let build = Build::new();
+let build = Build::new_arc();
 
 // build a Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002175>))
 let op = build.object_property("http://purl.obolibrary.org/obo/RO_0002175");

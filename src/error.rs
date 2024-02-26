@@ -18,7 +18,7 @@ pub enum Error {
     /// # use horned_owl::ontology::set::SetOntology;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = SetOntology::from_ofn("Ontology(");
+    /// let res = SetOntology::<String>::from_ofn("Ontology(");
     /// assert_matches!(res, Err(horned_functional::Error::Pest(_)));
     /// ```
     #[error(transparent)]
@@ -30,7 +30,7 @@ pub enum Error {
     /// ```rust
     /// # #[macro_use] extern crate matches;
     /// # use horned_owl::ontology::set::SetOntology;
-    /// let res = horned_functional::from_file::<SetOntology, _>("/some/missing/file")
+    /// let res = horned_functional::from_file::<_, SetOntology::<String>, _>("/some/missing/file")
     ///     .map(|x| x.0);
     /// assert_matches!(res, Err(horned_functional::Error::IO(_)));
     /// ```
@@ -50,7 +50,7 @@ pub enum Error {
     /// # use horned_owl::model::IRI;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = IRI::from_ofn("example:Entity");
+    /// let res = IRI::<String>::from_ofn("example:Entity");
     /// assert_matches!(res, Err(horned_functional::Error::Expansion(_)));
     /// ```
     #[error("expansion error: {0:?}")]
@@ -64,7 +64,7 @@ pub enum Error {
     /// # use horned_owl::model::Facet;
     /// use horned_functional::FromFunctional;
     ///
-    /// let res = Facet::from_ofn("<http://example.com/thing>");
+    /// let res = <Facet as FromFunctional<String>>::from_ofn("<http://example.com/thing>");
     /// assert_matches!(res, Err(horned_functional::Error::InvalidFacet(_)));
     /// ```
     #[error("invalid facet: {0}")]
