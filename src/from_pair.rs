@@ -917,7 +917,11 @@ impl<A: ForIRI> FromPair<A> for String {
     fn from_pair_unchecked(pair: Pair<Rule>, _ctx: &Context<'_, A>) -> Result<Self> {
         let l = pair.as_str().len();
         let s = &pair.as_str()[1..l - 1];
-        Ok(s.replace(r"\\", r"\").replace(r#"\""#, r#"""#))
+        if s.contains(r"\\") || s.contains(r#"\""#) {
+            Ok(s.replace(r"\\", r"\").replace(r#"\""#, r#"""#))
+        } else {
+            Ok(s.to_string())
+        }
     }
 }
 
