@@ -6,7 +6,10 @@ use pest::iterators::Pairs;
 /// You shouldn't have to use this type directly: instead, use the top level
 /// `parse` function to parse an ontology document.
 #[derive(Debug, Parser)]
-#[grammar = "owl.pest"]
+#[grammar = "bcp47.pest"]
+#[grammar = "rfc3987.pest"]
+#[grammar = "sparql.pest"]
+#[grammar = "ofn.pest"]
 pub struct OwlFunctionalParser;
 
 impl OwlFunctionalParser {
