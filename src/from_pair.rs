@@ -266,14 +266,14 @@ impl<A: ForIRI> FromPair<A> for AnnotatedAxiom<A> {
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
                 let dp = FromPair::from_pair(inner.next().unwrap(), ctx)?;
                 let ce = FromPair::from_pair(inner.next().unwrap(), ctx)?;
-                Ok(Self::new(ObjectPropertyDomain::new(dp, ce), annotations))
+                Ok(Self::new(DataPropertyDomain::new(dp, ce), annotations))
             }
             Rule::DataPropertyRange => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
                 let dp = FromPair::from_pair(inner.next().unwrap(), ctx)?;
                 let ce = FromPair::from_pair(inner.next().unwrap(), ctx)?;
-                Ok(Self::new(ObjectPropertyRange::new(dp, ce), annotations))
+                Ok(Self::new(DataPropertyRange::new(dp, ce), annotations))
             }
             Rule::FunctionalDataProperty => {
                 let mut inner = pair.into_inner();
