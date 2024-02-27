@@ -37,7 +37,7 @@ To easily read an entire OWL document, including prefixes, use the
 ```rust
 use horned_owl::ontology::set::SetOntology;
 
-let s = std::fs::read_to_string("tests/data/ms.obo.ofn")
+let s = std::fs::read_to_string("tests/data/bfo.ofn")
     .expect("failed to read OWL file");
 let (ontology, prefixes) = horned_functional::from_str::<_, SetOntology<String>, _>(&s)
     .expect("failed to parse OWL file");
