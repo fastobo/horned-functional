@@ -2,7 +2,7 @@
 
 *An [OWL2 Functional-style Syntax](https://www.w3.org/TR/owl2-syntax/) parser and serializer for [`horned-owl`](https://github.com/phillord/horned-owl).*
 
-[![Actions](https://img.shields.io/github/workflow/status/fastobo/horned-functional/Test?style=flat-square&maxAge=600)](https://github.com/fastobo/horned-functional/actions)
+[![Actions](https://img.shields.io/github/actions/workflow/status/fastobo/horned-functional/test.yml?style=flat-square&maxAge=600)](https://github.com/fastobo/horned-functional/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/fastobo/horned-functional/master.svg?style=flat-square&maxAge=600)](https://codecov.io/gh/fastobo/horned-functional)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&maxAge=2678400)](https://choosealicense.com/licenses/mit/)
 [![Source](https://img.shields.io/badge/source-GitHub-303030.svg?maxAge=2678400&style=flat-square)](https://github.com/fastobo/horned-functional)
