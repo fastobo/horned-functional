@@ -1,0 +1,2813 @@
+Prefix(:=<http://purl.obolibrary.org/obo/NOMEN#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/NOMEN>
+
+Declaration(Class(obo:IAO_0000028))
+Declaration(Class(obo:NOMEN_0000003))
+Declaration(Class(obo:NOMEN_0000005))
+Declaration(Class(obo:NOMEN_0000006))
+Declaration(Class(obo:NOMEN_0000007))
+Declaration(Class(obo:NOMEN_0000008))
+Declaration(Class(obo:NOMEN_0000009))
+Declaration(Class(obo:NOMEN_0000010))
+Declaration(Class(obo:NOMEN_0000011))
+Declaration(Class(obo:NOMEN_0000013))
+Declaration(Class(obo:NOMEN_0000014))
+Declaration(Class(obo:NOMEN_0000015))
+Declaration(Class(obo:NOMEN_0000016))
+Declaration(Class(obo:NOMEN_0000019))
+Declaration(Class(obo:NOMEN_0000020))
+Declaration(Class(obo:NOMEN_0000021))
+Declaration(Class(obo:NOMEN_0000022))
+Declaration(Class(obo:NOMEN_0000024))
+Declaration(Class(obo:NOMEN_0000025))
+Declaration(Class(obo:NOMEN_0000026))
+Declaration(Class(obo:NOMEN_0000027))
+Declaration(Class(obo:NOMEN_0000028))
+Declaration(Class(obo:NOMEN_0000029))
+Declaration(Class(obo:NOMEN_0000030))
+Declaration(Class(obo:NOMEN_0000032))
+Declaration(Class(obo:NOMEN_0000033))
+Declaration(Class(obo:NOMEN_0000034))
+Declaration(Class(obo:NOMEN_0000036))
+Declaration(Class(obo:NOMEN_0000037))
+Declaration(Class(obo:NOMEN_0000038))
+Declaration(Class(obo:NOMEN_0000039))
+Declaration(Class(obo:NOMEN_0000040))
+Declaration(Class(obo:NOMEN_0000041))
+Declaration(Class(obo:NOMEN_0000043))
+Declaration(Class(obo:NOMEN_0000045))
+Declaration(Class(obo:NOMEN_0000046))
+Declaration(Class(obo:NOMEN_0000047))
+Declaration(Class(obo:NOMEN_0000048))
+Declaration(Class(obo:NOMEN_0000049))
+Declaration(Class(obo:NOMEN_0000050))
+Declaration(Class(obo:NOMEN_0000051))
+Declaration(Class(obo:NOMEN_0000052))
+Declaration(Class(obo:NOMEN_0000053))
+Declaration(Class(obo:NOMEN_0000055))
+Declaration(Class(obo:NOMEN_0000056))
+Declaration(Class(obo:NOMEN_0000057))
+Declaration(Class(obo:NOMEN_0000058))
+Declaration(Class(obo:NOMEN_0000059))
+Declaration(Class(obo:NOMEN_0000060))
+Declaration(Class(obo:NOMEN_0000062))
+Declaration(Class(obo:NOMEN_0000063))
+Declaration(Class(obo:NOMEN_0000064))
+Declaration(Class(obo:NOMEN_0000065))
+Declaration(Class(obo:NOMEN_0000066))
+Declaration(Class(obo:NOMEN_0000067))
+Declaration(Class(obo:NOMEN_0000068))
+Declaration(Class(obo:NOMEN_0000069))
+Declaration(Class(obo:NOMEN_0000070))
+Declaration(Class(obo:NOMEN_0000071))
+Declaration(Class(obo:NOMEN_0000072))
+Declaration(Class(obo:NOMEN_0000073))
+Declaration(Class(obo:NOMEN_0000074))
+Declaration(Class(obo:NOMEN_0000075))
+Declaration(Class(obo:NOMEN_0000076))
+Declaration(Class(obo:NOMEN_0000077))
+Declaration(Class(obo:NOMEN_0000078))
+Declaration(Class(obo:NOMEN_0000079))
+Declaration(Class(obo:NOMEN_0000080))
+Declaration(Class(obo:NOMEN_0000081))
+Declaration(Class(obo:NOMEN_0000082))
+Declaration(Class(obo:NOMEN_0000083))
+Declaration(Class(obo:NOMEN_0000084))
+Declaration(Class(obo:NOMEN_0000085))
+Declaration(Class(obo:NOMEN_0000086))
+Declaration(Class(obo:NOMEN_0000087))
+Declaration(Class(obo:NOMEN_0000088))
+Declaration(Class(obo:NOMEN_0000089))
+Declaration(Class(obo:NOMEN_0000090))
+Declaration(Class(obo:NOMEN_0000091))
+Declaration(Class(obo:NOMEN_0000092))
+Declaration(Class(obo:NOMEN_0000103))
+Declaration(Class(obo:NOMEN_0000104))
+Declaration(Class(obo:NOMEN_0000105))
+Declaration(Class(obo:NOMEN_0000107))
+Declaration(Class(obo:NOMEN_0000109))
+Declaration(Class(obo:NOMEN_0000110))
+Declaration(Class(obo:NOMEN_0000111))
+Declaration(Class(obo:NOMEN_0000113))
+Declaration(Class(obo:NOMEN_0000114))
+Declaration(Class(obo:NOMEN_0000115))
+Declaration(Class(obo:NOMEN_0000116))
+Declaration(Class(obo:NOMEN_0000117))
+Declaration(Class(obo:NOMEN_0000118))
+Declaration(Class(obo:NOMEN_0000119))
+Declaration(Class(obo:NOMEN_0000120))
+Declaration(Class(obo:NOMEN_0000125))
+Declaration(Class(obo:NOMEN_0000126))
+Declaration(Class(obo:NOMEN_0000127))
+Declaration(Class(obo:NOMEN_0000128))
+Declaration(Class(obo:NOMEN_0000129))
+Declaration(Class(obo:NOMEN_0000130))
+Declaration(Class(obo:NOMEN_0000168))
+Declaration(Class(obo:NOMEN_0000169))
+Declaration(Class(obo:NOMEN_0000170))
+Declaration(Class(obo:NOMEN_0000171))
+Declaration(Class(obo:NOMEN_0000172))
+Declaration(Class(obo:NOMEN_0000173))
+Declaration(Class(obo:NOMEN_0000174))
+Declaration(Class(obo:NOMEN_0000175))
+Declaration(Class(obo:NOMEN_0000176))
+Declaration(Class(obo:NOMEN_0000177))
+Declaration(Class(obo:NOMEN_0000178))
+Declaration(Class(obo:NOMEN_0000179))
+Declaration(Class(obo:NOMEN_0000180))
+Declaration(Class(obo:NOMEN_0000181))
+Declaration(Class(obo:NOMEN_0000182))
+Declaration(Class(obo:NOMEN_0000183))
+Declaration(Class(obo:NOMEN_0000184))
+Declaration(Class(obo:NOMEN_0000185))
+Declaration(Class(obo:NOMEN_0000186))
+Declaration(Class(obo:NOMEN_0000187))
+Declaration(Class(obo:NOMEN_0000188))
+Declaration(Class(obo:NOMEN_0000189))
+Declaration(Class(obo:NOMEN_0000190))
+Declaration(Class(obo:NOMEN_0000191))
+Declaration(Class(obo:NOMEN_0000192))
+Declaration(Class(obo:NOMEN_0000193))
+Declaration(Class(obo:NOMEN_0000194))
+Declaration(Class(obo:NOMEN_0000195))
+Declaration(Class(obo:NOMEN_0000196))
+Declaration(Class(obo:NOMEN_0000197))
+Declaration(Class(obo:NOMEN_0000198))
+Declaration(Class(obo:NOMEN_0000199))
+Declaration(Class(obo:NOMEN_0000200))
+Declaration(Class(obo:NOMEN_0000201))
+Declaration(Class(obo:NOMEN_0000202))
+Declaration(Class(obo:NOMEN_0000203))
+Declaration(Class(obo:NOMEN_0000204))
+Declaration(Class(obo:NOMEN_0000205))
+Declaration(Class(obo:NOMEN_0000206))
+Declaration(Class(obo:NOMEN_0000207))
+Declaration(Class(obo:NOMEN_0000208))
+Declaration(Class(obo:NOMEN_0000209))
+Declaration(Class(obo:NOMEN_0000210))
+Declaration(Class(obo:NOMEN_0000211))
+Declaration(Class(obo:NOMEN_0000212))
+Declaration(Class(obo:NOMEN_0000213))
+Declaration(Class(obo:NOMEN_0000214))
+Declaration(Class(obo:NOMEN_0000218))
+Declaration(Class(obo:NOMEN_0000219))
+Declaration(Class(obo:NOMEN_0000221))
+Declaration(Class(obo:NOMEN_0000222))
+Declaration(Class(obo:NOMEN_0000223))
+Declaration(Class(obo:NOMEN_0000224))
+Declaration(Class(obo:NOMEN_0000225))
+Declaration(Class(obo:NOMEN_0000226))
+Declaration(Class(obo:NOMEN_0000228))
+Declaration(Class(obo:NOMEN_0000229))
+Declaration(Class(obo:NOMEN_0000293))
+Declaration(Class(obo:NOMEN_0000295))
+Declaration(Class(obo:NOMEN_0000296))
+Declaration(Class(obo:NOMEN_0000297))
+Declaration(Class(obo:NOMEN_0000298))
+Declaration(Class(obo:NOMEN_0000299))
+Declaration(Class(obo:NOMEN_0000300))
+Declaration(Class(obo:NOMEN_0000301))
+Declaration(Class(obo:NOMEN_0000302))
+Declaration(Class(obo:NOMEN_0000304))
+Declaration(Class(obo:NOMEN_0000305))
+Declaration(Class(obo:NOMEN_0000306))
+Declaration(Class(obo:NOMEN_0000307))
+Declaration(Class(obo:NOMEN_0000308))
+Declaration(Class(obo:NOMEN_0000309))
+Declaration(Class(obo:NOMEN_0000310))
+Declaration(Class(obo:NOMEN_0000311))
+Declaration(Class(obo:NOMEN_0000312))
+Declaration(Class(obo:NOMEN_0000313))
+Declaration(Class(obo:NOMEN_0000314))
+Declaration(Class(obo:NOMEN_0000315))
+Declaration(Class(obo:NOMEN_0000316))
+Declaration(Class(obo:NOMEN_0000317))
+Declaration(Class(obo:NOMEN_0000318))
+Declaration(Class(obo:NOMEN_0000319))
+Declaration(Class(obo:NOMEN_0000320))
+Declaration(Class(obo:NOMEN_0000321))
+Declaration(Class(obo:NOMEN_0000322))
+Declaration(Class(obo:NOMEN_0000323))
+Declaration(Class(obo:NOMEN_0000324))
+Declaration(Class(obo:NOMEN_0000325))
+Declaration(Class(obo:NOMEN_0000326))
+Declaration(Class(obo:NOMEN_0000327))
+Declaration(Class(obo:NOMEN_0000328))
+Declaration(Class(obo:NOMEN_0000329))
+Declaration(Class(obo:NOMEN_0000330))
+Declaration(Class(obo:NOMEN_0000331))
+Declaration(Class(obo:NOMEN_0000332))
+Declaration(Class(obo:NOMEN_0000333))
+Declaration(Class(obo:NOMEN_0000334))
+Declaration(Class(obo:NOMEN_0000335))
+Declaration(Class(obo:NOMEN_0000336))
+Declaration(Class(obo:NOMEN_0000337))
+Declaration(Class(obo:NOMEN_0000338))
+Declaration(Class(obo:NOMEN_0000339))
+Declaration(Class(obo:NOMEN_0000341))
+Declaration(Class(obo:NOMEN_0000342))
+Declaration(Class(obo:NOMEN_0000343))
+Declaration(Class(obo:NOMEN_0000344))
+Declaration(Class(obo:NOMEN_0000345))
+Declaration(Class(obo:NOMEN_0000346))
+Declaration(Class(obo:NOMEN_0000347))
+Declaration(Class(obo:NOMEN_0000348))
+Declaration(Class(obo:NOMEN_0000349))
+Declaration(Class(obo:NOMEN_0000350))
+Declaration(Class(obo:NOMEN_0000351))
+Declaration(Class(obo:NOMEN_0000352))
+Declaration(Class(obo:NOMEN_0000353))
+Declaration(Class(obo:NOMEN_0000354))
+Declaration(Class(obo:NOMEN_0000355))
+Declaration(Class(obo:NOMEN_0000356))
+Declaration(Class(obo:NOMEN_0000357))
+Declaration(Class(obo:NOMEN_0000358))
+Declaration(Class(obo:NOMEN_0000359))
+Declaration(Class(obo:NOMEN_0000360))
+Declaration(Class(obo:NOMEN_0000361))
+Declaration(Class(obo:NOMEN_0000363))
+Declaration(Class(obo:NOMEN_0000364))
+Declaration(Class(obo:NOMEN_0000365))
+Declaration(Class(obo:NOMEN_0000366))
+Declaration(Class(obo:NOMEN_0000367))
+Declaration(Class(obo:NOMEN_0000368))
+Declaration(Class(obo:NOMEN_0000377))
+Declaration(Class(obo:NOMEN_0000378))
+Declaration(Class(obo:NOMEN_0000379))
+Declaration(Class(obo:NOMEN_0000380))
+Declaration(Class(obo:NOMEN_0000381))
+Declaration(Class(obo:NOMEN_0000382))
+Declaration(Class(obo:NOMEN_0000383))
+Declaration(Class(obo:NOMEN_0000384))
+Declaration(Class(obo:NOMEN_0000385))
+Declaration(Class(obo:NOMEN_0000386))
+Declaration(Class(obo:NOMEN_0000387))
+Declaration(Class(obo:NOMEN_0000388))
+Declaration(Class(obo:NOMEN_0001000))
+Declaration(Class(obo:NOMEN_0001001))
+Declaration(Class(obo:NOMEN_0001002))
+Declaration(Class(obo:NOMEN_0001003))
+Declaration(Class(obo:NOMEN_0001004))
+Declaration(Class(obo:NOMEN_0001005))
+Declaration(Class(obo:NOMEN_0001006))
+Declaration(Class(obo:NOMEN_0001007))
+Declaration(Class(obo:NOMEN_0001012))
+Declaration(Class(obo:NOMEN_0001013))
+Declaration(Class(obo:NOMEN_0001014))
+Declaration(Class(obo:NOMEN_0001051))
+Declaration(Class(obo:NOMEN_0001052))
+Declaration(Class(obo:NOMEN_0001053))
+Declaration(Class(obo:NOMEN_0001054))
+Declaration(Class(obo:NOMEN_0001055))
+Declaration(Class(obo:NOMEN_0001057))
+Declaration(Class(obo:NOMEN_0001058))
+Declaration(Class(obo:NOMEN_0001059))
+Declaration(Class(obo:NOMEN_0001060))
+Declaration(Class(obo:NOMEN_0001061))
+Declaration(Class(<http://purl.obolibrary.org/obo/NOMEN:0003000>))
+Declaration(ObjectProperty(obo:NOMEN_0000004))
+Declaration(ObjectProperty(obo:NOMEN_0000023))
+Declaration(ObjectProperty(obo:NOMEN_0000031))
+Declaration(ObjectProperty(obo:NOMEN_0000035))
+Declaration(ObjectProperty(obo:NOMEN_0000042))
+Declaration(ObjectProperty(obo:NOMEN_0000044))
+Declaration(ObjectProperty(obo:NOMEN_0000061))
+Declaration(ObjectProperty(obo:NOMEN_0000093))
+Declaration(ObjectProperty(obo:NOMEN_0000094))
+Declaration(ObjectProperty(obo:NOMEN_0000095))
+Declaration(ObjectProperty(obo:NOMEN_0000096))
+Declaration(ObjectProperty(obo:NOMEN_0000097))
+Declaration(ObjectProperty(obo:NOMEN_0000098))
+Declaration(ObjectProperty(obo:NOMEN_0000099))
+Declaration(ObjectProperty(obo:NOMEN_0000100))
+Declaration(ObjectProperty(obo:NOMEN_0000101))
+Declaration(ObjectProperty(obo:NOMEN_0000102))
+Declaration(ObjectProperty(obo:NOMEN_0000106))
+Declaration(ObjectProperty(obo:NOMEN_0000108))
+Declaration(ObjectProperty(obo:NOMEN_0000112))
+Declaration(ObjectProperty(obo:NOMEN_0000121))
+Declaration(ObjectProperty(obo:NOMEN_0000122))
+Declaration(ObjectProperty(obo:NOMEN_0000123))
+Declaration(ObjectProperty(obo:NOMEN_0000124))
+Declaration(ObjectProperty(obo:NOMEN_0000131))
+Declaration(ObjectProperty(obo:NOMEN_0000132))
+Declaration(ObjectProperty(obo:NOMEN_0000133))
+Declaration(ObjectProperty(obo:NOMEN_0000134))
+Declaration(ObjectProperty(obo:NOMEN_0000135))
+Declaration(ObjectProperty(obo:NOMEN_0000230))
+Declaration(ObjectProperty(obo:NOMEN_0000231))
+Declaration(ObjectProperty(obo:NOMEN_0000232))
+Declaration(ObjectProperty(obo:NOMEN_0000233))
+Declaration(ObjectProperty(obo:NOMEN_0000264))
+Declaration(ObjectProperty(obo:NOMEN_0000266))
+Declaration(ObjectProperty(obo:NOMEN_0000268))
+Declaration(ObjectProperty(obo:NOMEN_0000269))
+Declaration(ObjectProperty(obo:NOMEN_0000270))
+Declaration(ObjectProperty(obo:NOMEN_0000271))
+Declaration(ObjectProperty(obo:NOMEN_0000272))
+Declaration(ObjectProperty(obo:NOMEN_0000273))
+Declaration(ObjectProperty(obo:NOMEN_0000274))
+Declaration(ObjectProperty(obo:NOMEN_0000275))
+Declaration(ObjectProperty(obo:NOMEN_0000276))
+Declaration(ObjectProperty(obo:NOMEN_0000277))
+Declaration(ObjectProperty(obo:NOMEN_0000278))
+Declaration(ObjectProperty(obo:NOMEN_0000279))
+Declaration(ObjectProperty(obo:NOMEN_0000280))
+Declaration(ObjectProperty(obo:NOMEN_0000281))
+Declaration(ObjectProperty(obo:NOMEN_0000282))
+Declaration(ObjectProperty(obo:NOMEN_0000283))
+Declaration(ObjectProperty(obo:NOMEN_0000284))
+Declaration(ObjectProperty(obo:NOMEN_0000285))
+Declaration(ObjectProperty(obo:NOMEN_0000287))
+Declaration(ObjectProperty(obo:NOMEN_0000289))
+Declaration(ObjectProperty(obo:NOMEN_0000290))
+Declaration(ObjectProperty(obo:NOMEN_0000291))
+Declaration(ObjectProperty(obo:NOMEN_0000292))
+Declaration(ObjectProperty(obo:NOMEN_0000369))
+Declaration(ObjectProperty(obo:NOMEN_0000370))
+Declaration(ObjectProperty(obo:NOMEN_0000371))
+Declaration(ObjectProperty(obo:NOMEN_0000372))
+Declaration(ObjectProperty(obo:NOMEN_0000374))
+Declaration(ObjectProperty(obo:NOMEN_0000375))
+Declaration(ObjectProperty(obo:NOMEN_0000376))
+Declaration(ObjectProperty(obo:NOMEN_0000389))
+Declaration(ObjectProperty(obo:NOMEN_0000391))
+Declaration(ObjectProperty(obo:NOMEN_0000392))
+Declaration(ObjectProperty(obo:NOMEN_0000393))
+Declaration(ObjectProperty(obo:NOMEN_0000394))
+Declaration(ObjectProperty(obo:NOMEN_0000395))
+Declaration(ObjectProperty(obo:NOMEN_0000396))
+Declaration(ObjectProperty(obo:NOMEN_0001008))
+Declaration(ObjectProperty(obo:NOMEN_0001009))
+Declaration(ObjectProperty(obo:NOMEN_0001010))
+Declaration(ObjectProperty(obo:NOMEN_0001011))
+Declaration(ObjectProperty(obo:NOMEN_0001015))
+Declaration(ObjectProperty(obo:NOMEN_0001016))
+Declaration(ObjectProperty(obo:NOMEN_0001017))
+Declaration(ObjectProperty(obo:NOMEN_0001018))
+Declaration(ObjectProperty(obo:NOMEN_0001019))
+Declaration(ObjectProperty(obo:NOMEN_0001020))
+Declaration(ObjectProperty(obo:NOMEN_0001021))
+Declaration(ObjectProperty(obo:NOMEN_0001022))
+Declaration(ObjectProperty(obo:NOMEN_0001023))
+Declaration(ObjectProperty(obo:NOMEN_0001024))
+Declaration(ObjectProperty(obo:NOMEN_0001025))
+Declaration(ObjectProperty(obo:NOMEN_0001026))
+Declaration(ObjectProperty(obo:NOMEN_0001027))
+Declaration(ObjectProperty(obo:NOMEN_0001028))
+Declaration(ObjectProperty(obo:NOMEN_0001029))
+Declaration(ObjectProperty(obo:NOMEN_0001030))
+Declaration(ObjectProperty(obo:NOMEN_0001031))
+Declaration(ObjectProperty(obo:NOMEN_0001032))
+Declaration(ObjectProperty(obo:NOMEN_0001033))
+Declaration(ObjectProperty(obo:NOMEN_0001034))
+Declaration(ObjectProperty(obo:NOMEN_0001035))
+Declaration(ObjectProperty(obo:NOMEN_0001036))
+Declaration(ObjectProperty(obo:NOMEN_0001037))
+Declaration(ObjectProperty(obo:NOMEN_0001038))
+Declaration(ObjectProperty(obo:NOMEN_0001039))
+Declaration(ObjectProperty(obo:NOMEN_0001040))
+Declaration(ObjectProperty(obo:NOMEN_0001041))
+Declaration(ObjectProperty(obo:NOMEN_0001042))
+Declaration(ObjectProperty(obo:NOMEN_0001043))
+Declaration(ObjectProperty(obo:NOMEN_0001044))
+Declaration(ObjectProperty(obo:NOMEN_0001045))
+Declaration(ObjectProperty(obo:NOMEN_0001046))
+Declaration(ObjectProperty(obo:NOMEN_0001047))
+Declaration(ObjectProperty(obo:NOMEN_0001048))
+Declaration(ObjectProperty(obo:NOMEN_0001056))
+Declaration(ObjectProperty(obo:NOMEN_0001064))
+Declaration(AnnotationProperty(obo:NOMEN_0000000))
+Declaration(AnnotationProperty(obo:NOMEN_0000001))
+Declaration(AnnotationProperty(obo:NOMEN_0000002))
+Declaration(AnnotationProperty(obo:NOMEN_0000012))
+Declaration(AnnotationProperty(obo:NOMEN_0000017))
+Declaration(AnnotationProperty(obo:NOMEN_0000018))
+Declaration(AnnotationProperty(obo:NOMEN_0000054))
+Declaration(AnnotationProperty(obo:NOMEN_0001050))
+Declaration(AnnotationProperty(obo:NOMEN_0001062))
+Declaration(AnnotationProperty(obo:NOMEN_0001063))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:NOMEN_0000000 (code applicablility start date)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000000 "code applicablility start date"@en)
+
+# Annotation Property: obo:NOMEN_0000001 (code applicability end date)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000001 "code applicability end date"@en)
+
+# Annotation Property: obo:NOMEN_0000002 (ICZN article)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000002 "ICZN article"@en)
+
+# Annotation Property: obo:NOMEN_0000012 (ICN article)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000012 "ICN article"@en)
+
+# Annotation Property: obo:NOMEN_0000017 (synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000017 "synonym"@en)
+
+# Annotation Property: obo:NOMEN_0000018 (abbreviation)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000018 "abbreviation"@en)
+
+# Annotation Property: obo:NOMEN_0000054 (GBIF status)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000054 "GBIF status"@en)
+
+# Annotation Property: obo:NOMEN_0001050 (parent rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001050 "parent rank"@en)
+
+# Annotation Property: obo:NOMEN_0001062 (Zoonom status)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001062 "Zoonom status"@en)
+
+# Annotation Property: obo:NOMEN_0001063 (Zoonom_ARK)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001063 "Zoonom_ARK"@en)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:NOMEN_0000004 (ICN basionym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000004 "ICN basionym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000004 obo:NOMEN_0000393)
+
+# Object Property: obo:NOMEN_0000023 (ICZN conserved work)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000023 "conservandum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000023 "ICZN conserved work"@en)
+SubObjectPropertyOf(obo:NOMEN_0000023 obo:NOMEN_0000264)
+
+# Object Property: obo:NOMEN_0000031 (ICZN potentially validating)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000031 "ICZN potentially validating"@en)
+SubObjectPropertyOf(obo:NOMEN_0000031 obo:NOMEN_0000233)
+
+# Object Property: obo:NOMEN_0000035 (ICN sanctioned name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000035 "ICN sanctioned name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000035 obo:NOMEN_0000370)
+
+# Object Property: obo:NOMEN_0000042 (ICZN family name based on genus synonym replaced before 1961)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000042 "1960")
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000042 "40.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000042 "ICZN family name based on genus synonym replaced before 1961"@en)
+SubObjectPropertyOf(obo:NOMEN_0000042 obo:NOMEN_0000031)
+
+# Object Property: obo:NOMEN_0000044 (ICZN incorrect original spelling)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000044 "32.4")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000044 "negatum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000044 "ICZN incorrect original spelling"@en)
+SubObjectPropertyOf(obo:NOMEN_0000044 obo:NOMEN_0000273)
+
+# Object Property: obo:NOMEN_0000061 (ICZN family-group name form)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000061 "35"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000061 "ICZN family-group name form"@en)
+SubObjectPropertyOf(obo:NOMEN_0000061 obo:NOMEN_0000273)
+
+# Object Property: obo:NOMEN_0000093 (ICNP unaccepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000093 "ICNP unaccepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0000093 obo:NOMEN_0000231)
+
+# Object Property: obo:NOMEN_0000094 (ICNP accepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000094 "ICNP accepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0000094 obo:NOMEN_0000231)
+
+# Object Property: obo:NOMEN_0000095 (ICNP conserved name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000095 "ICNP conserved name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000095 obo:NOMEN_0000094)
+
+# Object Property: obo:NOMEN_0000096 (ICNP synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000096 "ICNP synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000096 obo:NOMEN_0000093)
+
+# Object Property: obo:NOMEN_0000097 (ICNP homonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000097 "ICNP homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000097 obo:NOMEN_0000093)
+
+# Object Property: obo:NOMEN_0000098 (ICNP usage)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000098 "ICNP usage"@en)
+SubObjectPropertyOf(obo:NOMEN_0000098 obo:NOMEN_0000093)
+
+# Object Property: obo:NOMEN_0000099 (ICNP misspelling)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000099 "ICNP misspelling"@en)
+SubObjectPropertyOf(obo:NOMEN_0000099 obo:NOMEN_0000098)
+
+# Object Property: obo:NOMEN_0000100 (ICNP misapplication)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000100 "ICNP misapplication"@en)
+SubObjectPropertyOf(obo:NOMEN_0000100 obo:NOMEN_0000093)
+
+# Object Property: obo:NOMEN_0000101 (ICNP homotypic synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000101 "ICNP homotypic synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000101 obo:NOMEN_0000096)
+
+# Object Property: obo:NOMEN_0000102 (ICNP heterotypic synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000102 "ICNP heterotypic synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000102 obo:NOMEN_0000096)
+
+# Object Property: obo:NOMEN_0000106 (ICZN forgotten homonym)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000106 "1899"^^xsd:integer)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000106 "57.2.1")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000106 "oblitum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000106 "ICZN forgotten homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000106 obo:NOMEN_0000290)
+
+# Object Property: obo:NOMEN_0000108 (ICZN suppressed homonym)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000108 "rejiciendum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000108 "ICZN suppressed homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000108 obo:NOMEN_0000290)
+
+# Object Property: obo:NOMEN_0000112 (ICZN replaced homonym)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000112 "60.3"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000112 "ICZN replaced homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000112 obo:NOMEN_0000277)
+
+# Object Property: obo:NOMEN_0000121 (ICTV accepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000121 "ICTV accepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0000121 obo:NOMEN_0000230)
+
+# Object Property: obo:NOMEN_0000122 (ICTV unaccepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000122 "ICTV unaccepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0000122 obo:NOMEN_0000230)
+
+# Object Property: obo:NOMEN_0000123 (ICTV supressed)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000123 "ICTV supressed"@en)
+SubObjectPropertyOf(obo:NOMEN_0000123 obo:NOMEN_0000122)
+
+# Object Property: obo:NOMEN_0000124 (ICTV uncertain placement)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000124 "ICTV uncertain placement"@en)
+SubObjectPropertyOf(obo:NOMEN_0000124 obo:NOMEN_0000121)
+
+# Object Property: obo:NOMEN_0000131 (ICZN subsequent combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000131 "ICZN subsequent combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0000131 obo:NOMEN_0000273)
+
+# Object Property: obo:NOMEN_0000132 (ICZN original combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000132 "ICZN original combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0000132 obo:NOMEN_0000273)
+
+# Object Property: obo:NOMEN_0000133 (ICZN family-group name original form)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000133 "ICZN family-group name original form"@en)
+SubObjectPropertyOf(obo:NOMEN_0000133 obo:NOMEN_0000273)
+
+# Object Property: obo:NOMEN_0000134 (ICNP original combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000134 "ICNP original combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0000134 obo:NOMEN_0000098)
+
+# Object Property: obo:NOMEN_0000135 (ICNP subsequent combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000135 "ICNP subsequent combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0000135 obo:NOMEN_0000098)
+
+# Object Property: obo:NOMEN_0000230 (ICTV)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000230 "ICTV"@en)
+DisjointObjectProperties(obo:NOMEN_0000230 obo:NOMEN_0000231 obo:NOMEN_0000232 obo:NOMEN_0000233)
+
+# Object Property: obo:NOMEN_0000231 (ICNP)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000231 "ICNP"@en)
+
+# Object Property: obo:NOMEN_0000232 (ICN)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000232 "ICN"@en)
+
+# Object Property: obo:NOMEN_0000233 (ICZN)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000233 "1758")
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000233 "9999")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000233 "ICZN"@en)
+
+# Object Property: obo:NOMEN_0000264 (ICZN validating)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000264 "valid")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000264 "ICZN validating"@en)
+SubObjectPropertyOf(obo:NOMEN_0000264 obo:NOMEN_0000233)
+ObjectPropertyDomain(obo:NOMEN_0000264 obo:NOMEN_0000224)
+DisjointObjectProperties(obo:NOMEN_0000264 obo:NOMEN_0000272)
+
+# Object Property: obo:NOMEN_0000266 (ICZN uncertain placement)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000266 "Incertae Sedis")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000266 "ICZN uncertain placement"@en)
+SubObjectPropertyOf(obo:NOMEN_0000266 obo:NOMEN_0000264)
+
+# Object Property: obo:NOMEN_0000268 (ICZN conserved name)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000268 "nomen protectum")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000268 "conservandum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000268 "ICZN conserved name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000268 obo:NOMEN_0000264)
+ObjectPropertyRange(obo:NOMEN_0000268 obo:NOMEN_0000219)
+
+# Object Property: obo:NOMEN_0000269 (ICZN reinstated name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000269 "ICZN reinstated name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000269 obo:NOMEN_0000031)
+
+# Object Property: obo:NOMEN_0000270 (ICZN replacement name)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000270 "13.1.3")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000270 "alloneonym")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000270 "neonym")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000270 "nomen novum")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000270 "substitute name")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000270 "nom. nov.")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000270 "novum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000270 "ICZN replacement name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000270 obo:NOMEN_0000031)
+
+# Object Property: obo:NOMEN_0000271 (ICZN first revisor action)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000271 "ICZN first revisor action"@en)
+SubObjectPropertyOf(obo:NOMEN_0000271 obo:NOMEN_0000031)
+
+# Object Property: obo:NOMEN_0000272 (ICZN invalidating)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000272 "invalidum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000272 "ICZN invalidating"@en)
+SubObjectPropertyOf(obo:NOMEN_0000272 obo:NOMEN_0000233)
+ObjectPropertyDomain(obo:NOMEN_0000272 obo:NOMEN_0000226)
+
+# Object Property: obo:NOMEN_0000273 (ICZN usage)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000273 "ICZN usage"@en)
+SubObjectPropertyOf(obo:NOMEN_0000273 obo:NOMEN_0000272)
+
+# Object Property: obo:NOMEN_0000274 (ICZN misapplication)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000274 "misidentification")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000274 "ambigua")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000274 "ICZN misapplication"@en)
+SubObjectPropertyOf(obo:NOMEN_0000274 obo:NOMEN_0000272)
+
+# Object Property: obo:NOMEN_0000275 (ICZN misspelling)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000275 "ameletograph")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000275 "nullum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000275 "ICZN misspelling"@en)
+SubObjectPropertyOf(obo:NOMEN_0000275 obo:NOMEN_0000273)
+
+# Object Property: obo:NOMEN_0000276 (ICZN synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000276 "ICZN synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000276 obo:NOMEN_0000272)
+ObjectPropertyRange(obo:NOMEN_0000276 obo:NOMEN_0000224)
+
+# Object Property: obo:NOMEN_0000277 (ICZN objective synonym)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000277 "Homotypic synonym")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000277 "ICZN objective synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000277 obo:NOMEN_0000276)
+
+# Object Property: obo:NOMEN_0000278 (ICZN unjustified emendation)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000278 "33.2.3")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000278 "autoneonym")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000278 "ICZN unjustified emendation"@en)
+SubObjectPropertyOf(obo:NOMEN_0000278 obo:NOMEN_0000277)
+
+# Object Property: obo:NOMEN_0000279 (ICZN unnecessary replacement name)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000279 "superfluum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000279 "ICZN unnecessary replacement name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000279 obo:NOMEN_0000277)
+
+# Object Property: obo:NOMEN_0000280 (ICZN suppression)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000280 "rejiciendum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000280 "ICZN suppression"@en)
+SubObjectPropertyOf(obo:NOMEN_0000280 obo:NOMEN_0000276)
+
+# Object Property: obo:NOMEN_0000281 (ICZN partial  suppression)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000281 "81.2.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000281 "ICZN partial  suppression"@en)
+SubObjectPropertyOf(obo:NOMEN_0000281 obo:NOMEN_0000280)
+
+# Object Property: obo:NOMEN_0000282 (ICZN conditional suppression)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000282 "81.2.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000282 "ICZN conditional suppression"@en)
+SubObjectPropertyOf(obo:NOMEN_0000282 obo:NOMEN_0000280)
+
+# Object Property: obo:NOMEN_0000283 (ICZN total suppression)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000283 "81.2.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000283 "ICZN total suppression"@en)
+SubObjectPropertyOf(obo:NOMEN_0000283 obo:NOMEN_0000280)
+
+# Object Property: obo:NOMEN_0000284 (ICZN forgotten name)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000284 "1899"^^xsd:integer)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000284 "32.9.2")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000284 "nomen oblitum")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000284 "oblitum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000284 "ICZN forgotten name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000284 obo:NOMEN_0000276)
+
+# Object Property: obo:NOMEN_0000285 (ICZN subjective synonym)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000285 "Heterotypic synonym")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000285 "ICZN subjective synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000285 obo:NOMEN_0000276)
+
+# Object Property: obo:NOMEN_0000287 (ICZN synonymic homonym)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000287 "isonym")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000287 "ICZN synonymic homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000287 obo:NOMEN_0000277)
+
+# Object Property: obo:NOMEN_0000289 (ICZN homonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000289 "ICZN homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000289 obo:NOMEN_0000272)
+
+# Object Property: obo:NOMEN_0000290 (ICZN primary homonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000290 "ICZN primary homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000290 obo:NOMEN_0000289)
+
+# Object Property: obo:NOMEN_0000291 (ICZN secondary homonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000291 "ICZN secondary homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000291 obo:NOMEN_0000289)
+
+# Object Property: obo:NOMEN_0000292 (ICZN secondary homonym replaced before 1961)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000292 "1960")
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000292 "59.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000292 "ICZN secondary homonym replaced before 1961"@en)
+SubObjectPropertyOf(obo:NOMEN_0000292 obo:NOMEN_0000291)
+
+# Object Property: obo:NOMEN_0000369 (ICN unaccepting)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000369 "invalidum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000369 "ICN unaccepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0000369 obo:NOMEN_0000232)
+ObjectPropertyDomain(obo:NOMEN_0000369 obo:NOMEN_0000377)
+DisjointObjectProperties(obo:NOMEN_0000369 obo:NOMEN_0000370)
+
+# Object Property: obo:NOMEN_0000370 (ICN accepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000370 "ICN accepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0000370 obo:NOMEN_0000232)
+ObjectPropertyDomain(obo:NOMEN_0000370 obo:NOMEN_0000383)
+
+# Object Property: obo:NOMEN_0000371 (ICN alternative family name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000371 "ICN alternative family name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000371 obo:NOMEN_0000370)
+
+# Object Property: obo:NOMEN_0000372 (ICN synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000372 "ICN synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000372 obo:NOMEN_0000369)
+
+# Object Property: obo:NOMEN_0000374 (ICN usage)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000374 "ICN usage"@en)
+SubObjectPropertyOf(obo:NOMEN_0000374 obo:NOMEN_0000369)
+
+# Object Property: obo:NOMEN_0000375 (ICN misspelling)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000375 "nullum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000375 "ICN misspelling"@en)
+SubObjectPropertyOf(obo:NOMEN_0000375 obo:NOMEN_0000374)
+
+# Object Property: obo:NOMEN_0000376 (ICN misapplication)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000376 "ICN Misidentification")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000376 "auct. non")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000376 "ambigua")
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000376 "")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000376 "ICN misapplication"@en)
+SubObjectPropertyOf(obo:NOMEN_0000376 obo:NOMEN_0000369)
+
+# Object Property: obo:NOMEN_0000389 (ICN conserved name)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000389 "nom. cons.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000389 "ICN conserved name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000389 obo:NOMEN_0000370)
+
+# Object Property: obo:NOMEN_0000391 (ICN homonym)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000391 "nom. rej.")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000391 "rejiciendum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000391 "ICN homonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000391 obo:NOMEN_0000369)
+
+# Object Property: obo:NOMEN_0000392 (ICN heterotypic synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000392 "ICN heterotypic synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000392 obo:NOMEN_0000372)
+
+# Object Property: obo:NOMEN_0000393 (ICN homotypic synonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000393 "ICN homotypic synonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000393 obo:NOMEN_0000372)
+
+# Object Property: obo:NOMEN_0000394 (ICN alternative name)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000394 "alternativum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000394 "ICN alternative name"@en)
+SubObjectPropertyOf(obo:NOMEN_0000394 obo:NOMEN_0000393)
+
+# Object Property: obo:NOMEN_0000395 (ICN orthographic variant)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000395 "orthographia")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000395 "ICN orthographic variant"@en)
+SubObjectPropertyOf(obo:NOMEN_0000395 obo:NOMEN_0000393)
+
+# Object Property: obo:NOMEN_0000396 (ICN isonym)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000396 "")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000396 "ICN isonym"@en)
+SubObjectPropertyOf(obo:NOMEN_0000396 obo:NOMEN_0000393)
+
+# Object Property: obo:NOMEN_0001008 (ICNCP)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001008 "ICNCP"@en)
+
+# Object Property: obo:NOMEN_0001009 (ICNCP accepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001009 "ICNCP accepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0001009 obo:NOMEN_0001008)
+
+# Object Property: obo:NOMEN_0001010 (ICNCP unaccepting)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001010 "ICNCP unaccepting"@en)
+SubObjectPropertyOf(obo:NOMEN_0001010 obo:NOMEN_0001008)
+
+# Object Property: obo:NOMEN_0001011 (ICNCP conserved name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001011 "ICNCP conserved name"@en)
+SubObjectPropertyOf(obo:NOMEN_0001011 obo:NOMEN_0001009)
+
+# Object Property: obo:NOMEN_0001015 (ICNCP superfluous)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001015 "ICNCP superfluous"@en)
+SubObjectPropertyOf(obo:NOMEN_0001015 obo:NOMEN_0001010)
+
+# Object Property: obo:NOMEN_0001016 (ICNCP replaced name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001016 "ICNCP replaced name"@en)
+SubObjectPropertyOf(obo:NOMEN_0001016 obo:NOMEN_0001010)
+
+# Object Property: obo:NOMEN_0001017 (typification)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001017 "typification"@en)
+
+# Object Property: obo:NOMEN_0001018 (family)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001018 "family"@en)
+SubObjectPropertyOf(obo:NOMEN_0001018 obo:NOMEN_0001017)
+
+# Object Property: obo:NOMEN_0001019 (genus)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001019 "genus"@en)
+SubObjectPropertyOf(obo:NOMEN_0001019 obo:NOMEN_0001017)
+
+# Object Property: obo:NOMEN_0001020 (species)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001020 "species"@en)
+SubObjectPropertyOf(obo:NOMEN_0001020 obo:NOMEN_0001017)
+
+# Object Property: obo:NOMEN_0001021 (fixed in the original publication)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001021 "68"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001021 "fixed in the original publication"@en)
+SubObjectPropertyOf(obo:NOMEN_0001021 obo:NOMEN_0001019)
+
+# Object Property: obo:NOMEN_0001022 (not fixed in the original publication)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001022 "69"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001022 "not fixed in the original publication"@en)
+SubObjectPropertyOf(obo:NOMEN_0001022 obo:NOMEN_0001019)
+
+# Object Property: obo:NOMEN_0001023 (type species by tautonomy)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001023 "68.1"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001023 "type species by tautonomy"@en)
+SubObjectPropertyOf(obo:NOMEN_0001023 obo:NOMEN_0001021)
+
+# Object Property: obo:NOMEN_0001024 (type species by absolute tautonomy)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001024 "68.4"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001024 "type species by absolute tautonomy"@en)
+SubObjectPropertyOf(obo:NOMEN_0001024 obo:NOMEN_0001023)
+
+# Object Property: obo:NOMEN_0001025 (type species by Linnaean tautonomy)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001025 "68.5"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001025 "type species by Linnaean tautonomy"@en)
+SubObjectPropertyOf(obo:NOMEN_0001025 obo:NOMEN_0001023)
+
+# Object Property: obo:NOMEN_0001026 (type species by using the plenary power by the Commission)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001026 "81.1"@en)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001026 "type species by using the plenary power by the Commission")
+SubObjectPropertyOf(obo:NOMEN_0001026 obo:NOMEN_0001022)
+
+# Object Property: obo:NOMEN_0001027 (type species by subsequent designation)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001027 "69.1"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001027 "type species by subsequent designation"@en)
+SubObjectPropertyOf(obo:NOMEN_0001027 obo:NOMEN_0001022)
+
+# Object Property: obo:NOMEN_0001028 (type species by subsequent monotypy)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001028 "69.3"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001028 "type species by subsequent monotypy"@en)
+SubObjectPropertyOf(obo:NOMEN_0001028 obo:NOMEN_0001022)
+
+# Object Property: obo:NOMEN_0001029 (type species by original designation)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001029 "68.2"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001029 "type species by original designation"@en)
+SubObjectPropertyOf(obo:NOMEN_0001029 obo:NOMEN_0001021)
+
+# Object Property: obo:NOMEN_0001030 (type species by original monotypy)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001030 "68.3"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001030 "type species by original monotypy"@en)
+SubObjectPropertyOf(obo:NOMEN_0001030 obo:NOMEN_0001021)
+
+# Object Property: obo:NOMEN_0001031 (holotype)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001031 "73.1"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001031 "holotype"@en)
+SubObjectPropertyOf(obo:NOMEN_0001031 obo:NOMEN_0001020)
+
+# Object Property: obo:NOMEN_0001032 (neotype)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001032 "75"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001032 "neotype"@en)
+SubObjectPropertyOf(obo:NOMEN_0001032 obo:NOMEN_0001020)
+
+# Object Property: obo:NOMEN_0001033 (paratype)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001033 "72.4.5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0001033 "paratype"@en)
+SubObjectPropertyOf(obo:NOMEN_0001033 obo:NOMEN_0001020)
+
+# Object Property: obo:NOMEN_0001034 (lectotype)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001034 "74"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001034 "lectotype"@en)
+SubObjectPropertyOf(obo:NOMEN_0001034 obo:NOMEN_0001020)
+
+# Object Property: obo:NOMEN_0001035 (paralectotype)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001035 "74.1.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0001035 "paralectotype"@en)
+SubObjectPropertyOf(obo:NOMEN_0001035 obo:NOMEN_0001020)
+
+# Object Property: obo:NOMEN_0001036 (syntypes)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001036 "73.2"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001036 "syntypes"@en)
+SubObjectPropertyOf(obo:NOMEN_0001036 obo:NOMEN_0001020)
+
+# Object Property: obo:NOMEN_0001037 (type genus)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001037 "65"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001037 "type genus"@en)
+SubObjectPropertyOf(obo:NOMEN_0001037 obo:NOMEN_0001018)
+
+# Object Property: obo:NOMEN_0001038 (ICZN original genus)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001038 "ICZN original genus"@en)
+SubObjectPropertyOf(obo:NOMEN_0001038 obo:NOMEN_0000132)
+
+# Object Property: obo:NOMEN_0001039 (ICZN original subgenus)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001039 "ICZN original subgenus"@en)
+SubObjectPropertyOf(obo:NOMEN_0001039 obo:NOMEN_0000132)
+
+# Object Property: obo:NOMEN_0001040 (ICZN original species)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001040 "ICZN original species"@en)
+SubObjectPropertyOf(obo:NOMEN_0001040 obo:NOMEN_0000132)
+
+# Object Property: obo:NOMEN_0001041 (ICZN original subspecies)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001041 "ICZN original subspecies"@en)
+SubObjectPropertyOf(obo:NOMEN_0001041 obo:NOMEN_0000132)
+
+# Object Property: obo:NOMEN_0001042 (ICZN original variety)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001042 "ICZN original variety"@en)
+SubObjectPropertyOf(obo:NOMEN_0001042 obo:NOMEN_0000132)
+
+# Object Property: obo:NOMEN_0001043 (ICZN original form)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001043 "ICZN original form"@en)
+SubObjectPropertyOf(obo:NOMEN_0001043 obo:NOMEN_0000132)
+
+# Object Property: obo:NOMEN_0001044 (ICZN genus in combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001044 "ICZN genus in combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0001044 obo:NOMEN_0000131)
+
+# Object Property: obo:NOMEN_0001045 (ICZN subgenus in combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001045 "ICZN subgenus in combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0001045 obo:NOMEN_0000131)
+
+# Object Property: obo:NOMEN_0001046 (ICZN species in combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001046 "ICZN species in combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0001046 obo:NOMEN_0000131)
+
+# Object Property: obo:NOMEN_0001047 (ICZN subspecies in combination)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001047 "ICZN subspecies in combination"@en)
+SubObjectPropertyOf(obo:NOMEN_0001047 obo:NOMEN_0000131)
+
+# Object Property: obo:NOMEN_0001048 (classified as)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001048 "classified as"@en)
+
+# Object Property: obo:NOMEN_0001056 (ICPN)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001056 "ICPN"@en)
+
+# Object Property: obo:NOMEN_0001064 (ICN originally invalid)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001064 "ICN originally invalid"@en)
+SubObjectPropertyOf(obo:NOMEN_0001064 obo:NOMEN_0000369)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:IAO_0000028 (symbol)
+
+AnnotationAssertion(rdfs:comment obo:IAO_0000028 "An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000028 "symbol"@en)
+
+# Class: obo:NOMEN_0000003 (ICZN nanorder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000003 obo:NOMEN_0000330)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000003 "ICZN nanorder"@en)
+SubClassOf(obo:NOMEN_0000003 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000005 (ICN autonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000005 "ICN autonym"@en)
+SubClassOf(obo:NOMEN_0000005 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000006 (ICN subdivision of species and infraspecies)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000006 "ICN subdivision of species and infraspecies"@en)
+SubClassOf(obo:NOMEN_0000006 obo:NOMEN_0000339)
+
+# Class: obo:NOMEN_0000007 (ICN validly published name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000007 "6.2; 32-45")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000007 "ICN validly published name"@en)
+SubClassOf(obo:NOMEN_0000007 obo:NOMEN_0000383)
+DisjointClasses(obo:NOMEN_0000007 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000008 (ICN invalidly published name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000008 "6.2; 32-45")
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000008 "invalidum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000008 "ICN invalidly published name"@en)
+SubClassOf(obo:NOMEN_0000008 obo:NOMEN_0000383)
+
+# Class: obo:NOMEN_0000009 (ICN conserved name)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000009 "nom. cons.")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000009 "conservandum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000009 "ICN conserved name"@en)
+SubClassOf(obo:NOMEN_0000009 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000010 (ICN correct name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000010 "11.1")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000010 "valid")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000010 "ICN correct name"@en)
+SubClassOf(obo:NOMEN_0000010 obo:NOMEN_0000384)
+DisjointClasses(obo:NOMEN_0000010 obo:NOMEN_0000011)
+
+# Class: obo:NOMEN_0000011 (ICN incorrect name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000011 "6.5; 11")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000011 "invalidum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000011 "ICN incorrect name"@en)
+SubClassOf(obo:NOMEN_0000011 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000013 (ICN not Latin)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000013 "32")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000013 "ICN not Latin"@en)
+SubClassOf(obo:NOMEN_0000013 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000014 (ICN incorrect original spelling)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000014 "negatum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000014 "ICN incorrect original spelling"@en)
+SubClassOf(obo:NOMEN_0000014 obo:NOMEN_0000386)
+
+# Class: obo:NOMEN_0000015 (ICN superfluous)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000015 "52")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000015 "superfluum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000015 "ICN superfluous"@en)
+SubClassOf(obo:NOMEN_0000015 obo:NOMEN_0000386)
+
+# Class: obo:NOMEN_0000016 (ICN homonym)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000016 "53")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000016 "ICN homonym"@en)
+SubClassOf(obo:NOMEN_0000016 obo:NOMEN_0000386)
+
+# Class: obo:NOMEN_0000019 (ICN as synonym)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000019 "36")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000019 "pro syn.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000019 "ICN as synonym"@en)
+SubClassOf(obo:NOMEN_0000019 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000020 (ICN conserved spelling)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000020 "orth. cons.")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000020 "conservandum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000020 "ICN conserved spelling"@en)
+SubClassOf(obo:NOMEN_0000020 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000021 (ICN adopted by Fries)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000021 ": Fr.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000021 "ICN adopted by Fries"@en)
+SubClassOf(obo:NOMEN_0000021 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000022 (ICN adopted by Persoon)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000022 ": Pers.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000022 "ICN adopted by Persoon"@en)
+SubClassOf(obo:NOMEN_0000022 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000024 (ICZN Official Index of Rejected and Invalid Works in Zoology)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000024 "ICZN Official Index of Rejected and Invalid Works in Zoology"@en)
+SubClassOf(obo:NOMEN_0000024 obo:NOMEN_0000219)
+
+# Class: obo:NOMEN_0000025 (ICZN Official List of Works Approved as Available)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000025 "80.6.5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000025 "ICZN Official List of Works Approved as Available"@en)
+SubClassOf(obo:NOMEN_0000025 obo:NOMEN_0000223)
+
+# Class: obo:NOMEN_0000026 (ICZN excluded)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000026 "nullum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000026 "ICZN excluded"@en)
+SubClassOf(obo:NOMEN_0000026 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000027 (nomenclatural rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000027 "nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0000027 obo:IAO_0000028)
+
+# Class: obo:NOMEN_0000028 (string)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000028 "An ordered set of symbols.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000028 "string"@en)
+AnnotationAssertion(owl:deprecated obo:NOMEN_0000028 "true"^^xsd:boolean)
+
+# Class: obo:NOMEN_0000029 (name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000029 "The symbol that identifies a thing.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000029 "name"@en)
+AnnotationAssertion(owl:deprecated obo:NOMEN_0000029 "true"^^xsd:boolean)
+
+# Class: obo:NOMEN_0000030 (biological name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000030 "The symbol that identifies a biological thing.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000030 "biological name"@en)
+SubClassOf(obo:NOMEN_0000030 obo:IAO_0000028)
+
+# Class: obo:NOMEN_0000032 (latinized string)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000032 "The symbol that is latinized.")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000032 "latinized string"@en)
+SubClassOf(obo:NOMEN_0000032 obo:IAO_0000028)
+
+# Class: obo:NOMEN_0000033 (above nomenclatural codes)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000033 "above nomenclatural codes"@en)
+SubClassOf(obo:NOMEN_0000033 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0000034 (domain)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000034 "empire")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000034 "domain"@en)
+SubClassOf(obo:NOMEN_0000034 obo:NOMEN_0000033)
+
+# Class: obo:NOMEN_0000036 (scientific name)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000036 "1")
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000036 "9999")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000036 "")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000036 "scientific name"@en)
+SubClassOf(obo:NOMEN_0000036 obo:NOMEN_0000030)
+
+# Class: obo:NOMEN_0000037 (vernacular name)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000037 "common name")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000037 "vernacular name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000037 "http://data.loterre.fr/ark:/67375/FM8-P6ND9Q6D-6")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000037 "vernacular name"@en)
+SubClassOf(obo:NOMEN_0000037 obo:NOMEN_0000030)
+
+# Class: obo:NOMEN_0000038 (ICZN electronic only publication before 2012)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000038 "2011")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000038 "ICZN electronic only publication before 2012"@en)
+SubClassOf(obo:NOMEN_0000038 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000039 (ICZN electronic publication without ISSN or ISBN)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000039 "2012")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000039 "ICZN electronic publication without ISSN or ISBN"@en)
+SubClassOf(obo:NOMEN_0000039 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000040 (ICZN electronic publication  not in PDF format)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000040 "2012")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000040 "ICZN electronic publication  not in PDF format"@en)
+SubClassOf(obo:NOMEN_0000040 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000041 (ICZN electronic publication not registered in ZooBank)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000041 "2012")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000041 "ICZN electronic publication not registered in ZooBank"@en)
+SubClassOf(obo:NOMEN_0000041 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000043 (ICZN homonym)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000043 "junior homonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000043 "http://data.loterre.fr/ark:/67375/FM8-TB61NVV2-C")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000043 "ICZN homonym"@en)
+SubClassOf(obo:NOMEN_0000043 obo:NOMEN_0000226)
+
+# Class: obo:NOMEN_0000045 (gender)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000045 "gender")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000045 "http://data.loterre.fr/ark:/67375/FM8-N7SWQ663-6")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000045 "gender"@en)
+SubClassOf(obo:NOMEN_0000045 obo:NOMEN_0000032)
+
+# Class: obo:NOMEN_0000046 (parts_of_speech)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000046 "parts_of_speech"@en)
+SubClassOf(obo:NOMEN_0000046 obo:NOMEN_0000032)
+
+# Class: obo:NOMEN_0000047 (feminine)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000047 "feminine"@en)
+SubClassOf(obo:NOMEN_0000047 obo:NOMEN_0000045)
+
+# Class: obo:NOMEN_0000048 (masculine)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000048 "masculine"@en)
+SubClassOf(obo:NOMEN_0000048 obo:NOMEN_0000045)
+
+# Class: obo:NOMEN_0000049 (neuter)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000049 "neuter"@en)
+SubClassOf(obo:NOMEN_0000049 obo:NOMEN_0000045)
+
+# Class: obo:NOMEN_0000050 (adjective)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000050 "adjective"@en)
+SubClassOf(obo:NOMEN_0000050 obo:NOMEN_0000046)
+
+# Class: obo:NOMEN_0000051 (noun in apposition)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000051 "noun in apposition"@en)
+SubClassOf(obo:NOMEN_0000051 obo:NOMEN_0000046)
+
+# Class: obo:NOMEN_0000052 (noun in genitive case)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000052 "noun in genitive case"@en)
+SubClassOf(obo:NOMEN_0000052 obo:NOMEN_0000046)
+
+# Class: obo:NOMEN_0000053 (participle)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000053 "participle"@en)
+SubClassOf(obo:NOMEN_0000053 obo:NOMEN_0000046)
+
+# Class: obo:NOMEN_0000055 (ICZN fossil)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000055 "23.7.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000055 "ICZN fossil"@en)
+SubClassOf(obo:NOMEN_0000055 obo:NOMEN_0000107)
+
+# Class: obo:NOMEN_0000056 (ICN hybrid)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000056 "ICN hybrid"@en)
+SubClassOf(obo:NOMEN_0000056 obo:NOMEN_0000109)
+
+# Class: obo:NOMEN_0000057 (ICN fossil)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000057 "ICN fossil"@en)
+SubClassOf(obo:NOMEN_0000057 obo:NOMEN_0000109)
+
+# Class: obo:NOMEN_0000058 (ICZN Official Index of Rejected and Invalid Generic Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000058 "80"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000058 "ICZN Official Index of Rejected and Invalid Generic Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000058 obo:NOMEN_0000219)
+
+# Class: obo:NOMEN_0000059 (ICZN Official Index of Rejected and Invalid Specific Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000059 "80"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000059 "ICZN Official Index of Rejected and Invalid Specific Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000059 obo:NOMEN_0000219)
+
+# Class: obo:NOMEN_0000060 (ICZN Official List of Specific Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000060 "80"^^xsd:integer)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000060 "ICZN Official List of Specific Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000060 obo:NOMEN_0000223)
+
+# Class: obo:NOMEN_0000062 (ICNP nomenclatural rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000062 "ICNP nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0000062 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0000063 (ICNP above family-group)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000063 "ICNP above family-group"@en)
+SubClassOf(obo:NOMEN_0000063 obo:NOMEN_0000062)
+
+# Class: obo:NOMEN_0000064 (ICNP family-group)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000064 "ICNP family-group"@en)
+SubClassOf(obo:NOMEN_0000064 obo:NOMEN_0000062)
+
+# Class: obo:NOMEN_0000065 (ICNP genus-group)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000065 "ICNP genus-group"@en)
+SubClassOf(obo:NOMEN_0000065 obo:NOMEN_0000062)
+
+# Class: obo:NOMEN_0000066 (ICNP species-group)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000066 "ICNP species-group"@en)
+SubClassOf(obo:NOMEN_0000066 obo:NOMEN_0000062)
+
+# Class: obo:NOMEN_0000067 (ICNP species)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000067 obo:NOMEN_0000070)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000067 "ICNP species"@en)
+SubClassOf(obo:NOMEN_0000067 obo:NOMEN_0000066)
+
+# Class: obo:NOMEN_0000068 (ICNP subspecies)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000068 obo:NOMEN_0000067)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000068 "ICNP subspecies"@en)
+SubClassOf(obo:NOMEN_0000068 obo:NOMEN_0000066)
+
+# Class: obo:NOMEN_0000069 (ICNP genus)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000069 obo:NOMEN_0000074)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000069 "ICNP genus"@en)
+SubClassOf(obo:NOMEN_0000069 obo:NOMEN_0000065)
+
+# Class: obo:NOMEN_0000070 (ICNP subgenus)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000070 obo:NOMEN_0000069)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000070 "ICNP subgenus"@en)
+SubClassOf(obo:NOMEN_0000070 obo:NOMEN_0000065)
+
+# Class: obo:NOMEN_0000071 (ICNP family)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000071 obo:NOMEN_0000076)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000071 "ICNP family"@en)
+SubClassOf(obo:NOMEN_0000071 obo:NOMEN_0000064)
+
+# Class: obo:NOMEN_0000072 (ICNP subfamily)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000072 obo:NOMEN_0000071)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000072 "ICNP subfamily"@en)
+SubClassOf(obo:NOMEN_0000072 obo:NOMEN_0000064)
+
+# Class: obo:NOMEN_0000073 (ICNP tribe)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000073 obo:NOMEN_0000072)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000073 "ICNP tribe"@en)
+SubClassOf(obo:NOMEN_0000073 obo:NOMEN_0000064)
+
+# Class: obo:NOMEN_0000074 (ICNP subtribe)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000074 obo:NOMEN_0000073)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000074 "ICNP subtribe"@en)
+SubClassOf(obo:NOMEN_0000074 obo:NOMEN_0000064)
+
+# Class: obo:NOMEN_0000075 (ICNP order)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000075 obo:NOMEN_0000078)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000075 "ICNP order"@en)
+SubClassOf(obo:NOMEN_0000075 obo:NOMEN_0000063)
+
+# Class: obo:NOMEN_0000076 (ICNP suborder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000076 obo:NOMEN_0000075)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000076 "ICNP suborder"@en)
+SubClassOf(obo:NOMEN_0000076 obo:NOMEN_0000063)
+
+# Class: obo:NOMEN_0000077 (ICNP class)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000077 obo:NOMEN_0000080)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000077 "ICNP class"@en)
+SubClassOf(obo:NOMEN_0000077 obo:NOMEN_0000063)
+
+# Class: obo:NOMEN_0000078 (ICNP subclass)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000078 obo:NOMEN_0000077)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000078 "ICNP subclass"@en)
+SubClassOf(obo:NOMEN_0000078 obo:NOMEN_0000063)
+
+# Class: obo:NOMEN_0000079 (ICNP kingdom)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000079 obo:NOMEN_0000062)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000079 "ICNP kingdom"@en)
+SubClassOf(obo:NOMEN_0000079 obo:NOMEN_0000063)
+
+# Class: obo:NOMEN_0000080 (ICNP phylum)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000080 obo:NOMEN_0000079)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000080 "ICNP phylum"@en)
+SubClassOf(obo:NOMEN_0000080 obo:NOMEN_0000063)
+
+# Class: obo:NOMEN_0000081 (ICNP effectively published name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000081 "ICNP effectively published name"@en)
+SubClassOf(obo:NOMEN_0000081 obo:NOMEN_0000110)
+
+# Class: obo:NOMEN_0000082 (ICNP not effectively published name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000082 "ICNP not effectively published name"@en)
+SubClassOf(obo:NOMEN_0000082 obo:NOMEN_0000110)
+
+# Class: obo:NOMEN_0000083 (ICNP invalidly published name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000083 "ICNP invalidly published name"@en)
+SubClassOf(obo:NOMEN_0000083 obo:NOMEN_0000081)
+
+# Class: obo:NOMEN_0000084 (ICNP validly published name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000084 "ICNP validly published name"@en)
+SubClassOf(obo:NOMEN_0000084 obo:NOMEN_0000081)
+
+# Class: obo:NOMEN_0000085 (ICNP illegitimate name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000085 "ICNP illegitimate name"@en)
+SubClassOf(obo:NOMEN_0000085 obo:NOMEN_0000084)
+
+# Class: obo:NOMEN_0000086 (ICNP legitimate name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000086 "ICNP legitimate name"@en)
+SubClassOf(obo:NOMEN_0000086 obo:NOMEN_0000084)
+
+# Class: obo:NOMEN_0000087 (ICNP correct name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000087 "ICNP correct name"@en)
+SubClassOf(obo:NOMEN_0000087 obo:NOMEN_0000086)
+
+# Class: obo:NOMEN_0000088 (ICNP incorrect name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000088 "ICNP incorrect name"@en)
+SubClassOf(obo:NOMEN_0000088 obo:NOMEN_0000086)
+
+# Class: obo:NOMEN_0000089 (ICNP nomen novum)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000089 "ICNP nomen novum"@en)
+SubClassOf(obo:NOMEN_0000089 obo:NOMEN_0000086)
+
+# Class: obo:NOMEN_0000090 (ICNP nomen nudum)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000090 "ICNP nomen nudum"@en)
+SubClassOf(obo:NOMEN_0000090 obo:NOMEN_0000083)
+
+# Class: obo:NOMEN_0000091 (ICNP homonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000091 "ICNP homonym"@en)
+SubClassOf(obo:NOMEN_0000091 obo:NOMEN_0000085)
+
+# Class: obo:NOMEN_0000092 (ICNP candidatus)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000092 "ICNP candidatus"@en)
+SubClassOf(obo:NOMEN_0000092 obo:NOMEN_0000086)
+
+# Class: obo:NOMEN_0000103 (ICNP Official List)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000103 "ICNP Official List"@en)
+SubClassOf(obo:NOMEN_0000103 obo:NOMEN_0000086)
+
+# Class: obo:NOMEN_0000104 (ICNP rejected)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000104 "ICNP rejected"@en)
+SubClassOf(obo:NOMEN_0000104 obo:NOMEN_0000085)
+
+# Class: obo:NOMEN_0000105 (ICNP not in Official List)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000105 "ICNP not in Official List"@en)
+SubClassOf(obo:NOMEN_0000105 obo:NOMEN_0000085)
+
+# Class: obo:NOMEN_0000107 (ICZN name)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000107 "1758")
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000107 "9999")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000107 "nomen")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000107 "http://data.loterre.fr/ark:/67375/FM8-HWT1L3JG-0")
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000107 "International Code of Zoological Nomenclature (ICZN)")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000107 "ICZN name"@en)
+SubClassOf(obo:NOMEN_0000107 obo:NOMEN_0000036)
+
+# Class: obo:NOMEN_0000109 (ICN name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000109 "International Code of Nomenclature for algae, fungi, and plants (ICN)")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000109 "ICN name"@en)
+SubClassOf(obo:NOMEN_0000109 obo:NOMEN_0000036)
+
+# Class: obo:NOMEN_0000110 (ICNP name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000110 "International Code of Nomenclature of Prokaryotes (ICNP)")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000110 "ICNP name"@en)
+SubClassOf(obo:NOMEN_0000110 obo:NOMEN_0000036)
+
+# Class: obo:NOMEN_0000111 (ICVCN name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000111 "The International Code of Virus Classification and Nomenclature (ICVCN)")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000111 "ICVCN name"@en)
+SubClassOf(obo:NOMEN_0000111 obo:NOMEN_0000036)
+
+# Class: obo:NOMEN_0000113 (ICVCN nomenclatural rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000113 "ICVCN nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0000113 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0000114 (ICVCN order)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000114 "ord.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000114 obo:NOMEN_0001054)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000114 "ICVCN order"@en)
+SubClassOf(obo:NOMEN_0000114 obo:NOMEN_0000113)
+
+# Class: obo:NOMEN_0000115 (ICVCN family)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000115 "fam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000115 obo:NOMEN_0000114)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000115 "ICVCN family"@en)
+SubClassOf(obo:NOMEN_0000115 obo:NOMEN_0000113)
+
+# Class: obo:NOMEN_0000116 (ICVCN subfamily)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000116 "subfam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000116 obo:NOMEN_0000115)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000116 "ICVCN subfamily"@en)
+SubClassOf(obo:NOMEN_0000116 obo:NOMEN_0000113)
+
+# Class: obo:NOMEN_0000117 (ICVCN genus)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000117 "gen.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000117 obo:NOMEN_0000116)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000117 "ICVCN genus"@en)
+SubClassOf(obo:NOMEN_0000117 obo:NOMEN_0000113)
+
+# Class: obo:NOMEN_0000118 (ICVCN species)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000118 "sp.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000118 obo:NOMEN_0000117)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000118 "ICVCN species"@en)
+SubClassOf(obo:NOMEN_0000118 obo:NOMEN_0000113)
+
+# Class: obo:NOMEN_0000119 (ICZN homonymy of type genus)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000119 "39"^^xsd:integer)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000119 "rhizomonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000119 "http://data.loterre.fr/ark:/67375/FM8-W3HQ7RVC-9")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000119 "ICZN homonymy of type genus"@en)
+SubClassOf(obo:NOMEN_0000119 obo:NOMEN_0000226)
+
+# Class: obo:NOMEN_0000120 (ICZN suppression of type genus)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000120 "ICZN suppression of type genus"@en)
+SubClassOf(obo:NOMEN_0000120 obo:NOMEN_0000226)
+
+# Class: obo:NOMEN_0000125 (ICVCN valid)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000125 "ICVCN valid"@en)
+SubClassOf(obo:NOMEN_0000125 obo:NOMEN_0000111)
+
+# Class: obo:NOMEN_0000126 (ICVCN invalid)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000126 "ICVCN invalid"@en)
+SubClassOf(obo:NOMEN_0000126 obo:NOMEN_0000111)
+
+# Class: obo:NOMEN_0000127 (ICVCN accepted)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000127 "ICVCN accepted"@en)
+SubClassOf(obo:NOMEN_0000127 obo:NOMEN_0000125)
+
+# Class: obo:NOMEN_0000128 (ICVCN unaccepted)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000128 "ICVCN unaccepted"@en)
+SubClassOf(obo:NOMEN_0000128 obo:NOMEN_0000125)
+
+# Class: obo:NOMEN_0000129 (ICZN nomen inquirendum)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000129 "67.2.5")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000129 "dubium")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000129 "ICZN nomen inquirendum"@en)
+SubClassOf(obo:NOMEN_0000129 obo:NOMEN_0000224)
+
+# Class: obo:NOMEN_0000130 (ICNCP name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000130 "International Code of Nomenclature for Cultivated Plants (ICNCP)")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000130 "ICNCP name"@en)
+SubClassOf(obo:NOMEN_0000130 obo:NOMEN_0000036)
+
+# Class: obo:NOMEN_0000168 (ICZN unavailable)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000168 "invalidum")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000168 "anoplonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000168 "http://data.loterre.fr/ark:/67375/FM8-DJW6GC2L-R")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000168 "ICZN unavailable"@en)
+SubClassOf(obo:NOMEN_0000168 obo:NOMEN_0000107)
+DisjointClasses(obo:NOMEN_0000168 obo:NOMEN_0000223)
+
+# Class: obo:NOMEN_0000169 (ICZN non binominal)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000169 "apeironym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000169 "http://data.loterre.fr/ark:/67375/FM8-BFZW5J1V-W")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000169 "ICZN non binominal"@en)
+SubClassOf(obo:NOMEN_0000169 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000170 (ICZN not uninominal)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000170 "4.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000170 "ICZN not uninominal"@en)
+SubClassOf(obo:NOMEN_0000170 obo:NOMEN_0000169)
+SubClassOf(obo:NOMEN_0000170 ObjectComplementOf(obo:NOMEN_0000311))
+DisjointClasses(obo:NOMEN_0000170 obo:NOMEN_0000311)
+
+# Class: obo:NOMEN_0000171 (ICZN subgenus not intercalare)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000171 "4.2; 6.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000171 "ICZN subgenus not intercalare"@en)
+SubClassOf(obo:NOMEN_0000171 obo:NOMEN_0000169)
+SubClassOf(obo:NOMEN_0000171 ObjectComplementOf(obo:NOMEN_0000295))
+SubClassOf(obo:NOMEN_0000171 ObjectComplementOf(obo:NOMEN_0000311))
+
+# Class: obo:NOMEN_0000172 (ICZN species not binominal)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000172 "5.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000172 "ICZN species not binominal"@en)
+SubClassOf(obo:NOMEN_0000172 obo:NOMEN_0000169)
+
+# Class: obo:NOMEN_0000173 (ICZN subspecies not trinominal)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000173 "5.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000173 "ICZN subspecies not trinominal"@en)
+SubClassOf(obo:NOMEN_0000173 obo:NOMEN_0000169)
+
+# Class: obo:NOMEN_0000174 (ICZN nomen nudum)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000174 "nom. nud.")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000174 "nudum")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000174 "gymnonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000174 "http://data.loterre.fr/ark:/67375/FM8-ZQ6WJ16L-P")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000174 "ICZN nomen nudum"@en)
+SubClassOf(obo:NOMEN_0000174 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000175 (ICZN citation of unavailable name)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000175 "11.5.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000175 "ICZN citation of unavailable name"@en)
+SubClassOf(obo:NOMEN_0000175 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000176 (ICZN conditionally proposed after 1960)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000176 "1961"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000176 "11.5.1; 15.1")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000176 "eulabonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000176 "http://data.loterre.fr/ark:/67375/FM8-SRJM0893-Z")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000176 "ICZN conditionally proposed after 1960"@en)
+SubClassOf(obo:NOMEN_0000176 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000177 (ICZN published as synonym after 1960)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000177 "1961"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000177 "11.6.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000177 "ICZN published as synonym after 1960"@en)
+SubClassOf(obo:NOMEN_0000177 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000178 (ICZN published as synonym and not validated before 1961)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000178 "1960"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000178 "11.6.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000178 "ICZN published as synonym and not validated before 1961"@en)
+SubClassOf(obo:NOMEN_0000178 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000179 (ICZN ambiguous generic placement)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000179 "11.9.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000179 "ICZN ambiguous generic placement"@en)
+SubClassOf(obo:NOMEN_0000179 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000180 (ICZN interpolated name)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000180 "6.2; 11.9.3.5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000180 "ICZN interpolated name"@en)
+SubClassOf(obo:NOMEN_0000180 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000181 (ICZN no description)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000181 "12.1; 13.1.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000181 "ICZN no description"@en)
+SubClassOf(obo:NOMEN_0000181 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000182 (ICZN no diagnosis after 1930)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000182 "1931"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000182 "13.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000182 "ICZN no diagnosis after 1930"@en)
+SubClassOf(obo:NOMEN_0000182 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000183 (ICZN no type fixation after 1930)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000183 "1931"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000183 "13.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000183 "ICZN no type fixation after 1930"@en)
+SubClassOf(obo:NOMEN_0000183 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000184 (ICZN replacement name without type fixation after 1930)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000184 "1931"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000184 "13.3.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000184 "ICZN replacement name without type fixation after 1930"@en)
+SubClassOf(obo:NOMEN_0000184 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000185 (ICZN ichnotaxon without type-species after 1999)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000185 "2000"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000185 "13.3.3; 16.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000185 "ICZN ichnotaxon without type-species after 1999"@en)
+SubClassOf(obo:NOMEN_0000185 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000186 (ICZN anonymous authorship after 1950)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000186 "1951"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000186 "14")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000186 "ICZN anonymous authorship after 1950"@en)
+SubClassOf(obo:NOMEN_0000186 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000187 (ICZN not indicated as new after 1999)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000187 "2000"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000187 "16.1")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000187 "agnostonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000187 "http://data.loterre.fr/ark:/67375/FM8-QCPTP23S-W")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000187 "ICZN not indicated as new after 1999"@en)
+SubClassOf(obo:NOMEN_0000187 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000188 (ICZN no type-genus citation after 1999)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000188 "2000"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000188 "16.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000188 "ICZN no type-genus citation after 1999"@en)
+SubClassOf(obo:NOMEN_0000188 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000189 (ICZN no type-specimen fixation after 1999)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000189 "2000"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000189 "16.4.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000189 "ICZN no type-specimen fixation after 1999"@en)
+SubClassOf(obo:NOMEN_0000189 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000190 (ICZN no type deposition statement after 1999)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000190 "2000"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000190 "16.4.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000190 "ICZN no type deposition statement after 1999"@en)
+SubClassOf(obo:NOMEN_0000190 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000191 (ICZN hypothetical concept)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000191 "1.3.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000191 "ICZN hypothetical concept"@en)
+SubClassOf(obo:NOMEN_0000191 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000192 (ICZN name for teratological specimen)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000192 "1.3.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000192 "ICZN name for teratological specimen"@en)
+SubClassOf(obo:NOMEN_0000192 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000193 (ICZN name for hybrid)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000193 "1.3.3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000193 "ICZN name for hybrid"@en)
+SubClassOf(obo:NOMEN_0000193 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000194 (ICZN temporary name)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000194 "1.3.5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000194 "ICZN temporary name"@en)
+SubClassOf(obo:NOMEN_0000194 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000195 (ICZN work of extant animal after 1930)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000195 "1931"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000195 "1.3.6")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000195 "ICZN work of extant animal after 1930"@en)
+SubClassOf(obo:NOMEN_0000195 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000196 (ICZN zoological formula)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000196 "1.3.7")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000196 "ICZN zoological formula"@en)
+SubClassOf(obo:NOMEN_0000196 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000197 (ICZN not for nomenclature)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000197 "1.3.5; 8.3")
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000197 "unpublished work")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000197 "ICZN not for nomenclature"@en)
+SubClassOf(obo:NOMEN_0000197 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000198 (ICZN variety or form after 1960)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000198 "1961"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000198 "10.2; 15.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000198 "ICZN variety or form after 1960"@en)
+SubClassOf(obo:NOMEN_0000198 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000199 (ICZN infrasubspecific)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000199 "1.3.4; 10.2; 45.6.4.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000199 "ICZN infrasubspecific"@en)
+SubClassOf(obo:NOMEN_0000199 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000200 (ICZN unavailable under ICN)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000200 "10.5")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000200 "abortivum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000200 "ICZN unavailable under ICN"@en)
+SubClassOf(obo:NOMEN_0000200 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000201 (ICZN not Latin)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000201 "11.2; 11.9.4")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000201 "ICZN not Latin"@en)
+SubClassOf(obo:NOMEN_0000201 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000202 (ICZN not nominative plural)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000202 "11.7.1.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000202 "ICZN not nominative plural"@en)
+SubClassOf(obo:NOMEN_0000202 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000203 (ICZN not from genus name)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000203 "11.7.1.1; 13.5; 29.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000203 "ICZN not from genus name"@en)
+SubClassOf(obo:NOMEN_0000203 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000204 (ICZN not based on available genus name)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000204 "11.7.1.1; 13.2; 64")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000204 "ICZN not based on available genus name"@en)
+SubClassOf(obo:NOMEN_0000204 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0000205 (ICZN not scientific plural)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000205 "11.7.1.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000205 "ICZN not scientific plural"@en)
+SubClassOf(obo:NOMEN_0000205 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000206 (ICZN based on fossil genus formula)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000206 "11.7.1.4")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000206 "ICZN based on fossil genus formula"@en)
+SubClassOf(obo:NOMEN_0000206 obo:NOMEN_0000026)
+
+# Class: obo:NOMEN_0000207 (ICZN based on suppressed genus)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000207 "11.7.1.5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000207 "ICZN based on suppressed genus"@en)
+SubClassOf(obo:NOMEN_0000207 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000208 (ICZN not latinized after 1899)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000208 "1900"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000208 "11.7.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000208 "ICZN not latinized after 1899"@en)
+SubClassOf(obo:NOMEN_0000208 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000209 (ICZN not latinized before 1900 and not accepted)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000209 "1899"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000209 "11.7.2")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000209 "ICZN not latinized before 1900 and not accepted"@en)
+SubClassOf(obo:NOMEN_0000209 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000210 (ICZN less than two letters)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000210 "11.8; 11.9.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000210 "ICZN less than two letters"@en)
+SubClassOf(obo:NOMEN_0000210 obo:NOMEN_0000168)
+DisjointClasses(obo:NOMEN_0000210 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000211 (ICZN not noun in nominative singular)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000211 "11.8")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000211 "ICZN not noun in nominative singular"@en)
+SubClassOf(obo:NOMEN_0000211 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000212 (ICZN not noun or adjective)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000212 "11.9.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000212 "ICZN not noun or adjective"@en)
+SubClassOf(obo:NOMEN_0000212 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000213 (ICZN unavailable and not used as valid before 2000)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000213 "1931"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000213 "1960"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000213 "13.2.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000213 "ICZN unavailable and not used as valid before 2000"@en)
+SubClassOf(obo:NOMEN_0000213 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000214 (ICZN unavailable and rejected by author before 2000)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000214 "1931"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000214 "1960"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000214 "13.2.1")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000214 "ICZN unavailable and rejected by author before 2000"@en)
+SubClassOf(obo:NOMEN_0000214 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000218 (ICZN pre-Linnean)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0000218 "0"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0000218 "1757"^^xsd:dateTime)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000218 "3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000218 "ICZN pre-Linnean"@en)
+SubClassOf(obo:NOMEN_0000218 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000219 (ICZN suppressed)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000219 "rejiciendum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000219 "ICZN suppressed"@en)
+SubClassOf(obo:NOMEN_0000219 obo:NOMEN_0000168)
+
+# Class: obo:NOMEN_0000221 (ICZN not in Official List of Available Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000221 "10.7")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000221 "ICZN not in Official List of Available Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000221 obo:NOMEN_0000219)
+
+# Class: obo:NOMEN_0000222 (ICZN Official Index of Rejected and Invalid Family-Group Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000222 "80")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000222 "ICZN Official Index of Rejected and Invalid Family-Group Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000222 obo:NOMEN_0000219)
+
+# Class: obo:NOMEN_0000223 (ICZN available)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000223 "available")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000223 "hoplonym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000223 "http://data.loterre.fr/ark:/67375/FM8-MQ09G3C8-X")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000223 "ICZN available"@en)
+SubClassOf(obo:NOMEN_0000223 obo:NOMEN_0000107)
+
+# Class: obo:NOMEN_0000224 (ICZN valid)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000224 "valid")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000224 "kyronym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000224 "http://data.loterre.fr/ark:/67375/FM8-VWRSW7NM-S")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000224 "ICZN valid"@en)
+SubClassOf(obo:NOMEN_0000224 obo:NOMEN_0000223)
+DisjointClasses(obo:NOMEN_0000224 obo:NOMEN_0000226)
+
+# Class: obo:NOMEN_0000225 (ICZN nomen dubium)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000225 "75.5"^^xsd:decimal)
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000225 "dubium")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000225 "aporionym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000225 "http://data.loterre.fr/ark:/67375/FM8-JSZVH87D-F")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000225 "ICZN nomen dubium"@en)
+SubClassOf(obo:NOMEN_0000225 obo:NOMEN_0000224)
+
+# Class: obo:NOMEN_0000226 (ICZN invalid)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000226 "invalidum")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000226 "akyronym")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000226 "http://data.loterre.fr/ark:/67375/FM8-H25VWWJK-R")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000226 "ICZN invalid"@en)
+SubClassOf(obo:NOMEN_0000226 obo:NOMEN_0000223)
+
+# Class: obo:NOMEN_0000228 (ICZN Official List of Generic Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000228 "80")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000228 "ICZN Official List of Generic Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000228 obo:NOMEN_0000223)
+
+# Class: obo:NOMEN_0000229 (ICZN Official List of Family-Group Names in Zoology)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0000229 "80")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000229 "ICZN Official List of Family-Group Names in Zoology"@en)
+SubClassOf(obo:NOMEN_0000229 obo:NOMEN_0000223)
+
+# Class: obo:NOMEN_0000293 (ICZN nomenclatural rank)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000293 "nomenclatural rank")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000293 "http://data.loterre.fr/ark:/67375/FM8-ZG7FTZFD-J")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000293 "ICZN nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0000293 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0000295 (ICZN family-group)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000295 "family-group name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000295 "http://data.loterre.fr/ark:/67375/FM8-Q3TF37GX-S")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000295 "ICZN family-group"@en)
+SubClassOf(obo:NOMEN_0000295 obo:NOMEN_0000293)
+
+# Class: obo:NOMEN_0000296 (ICZN epifamily)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000296 obo:NOMEN_0000302)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000296 "ICZN epifamily"@en)
+SubClassOf(obo:NOMEN_0000296 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000297 (ICZN family)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000297 "fam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000297 obo:NOMEN_0000296)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000297 "family name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000297 "http://data.loterre.fr/ark:/67375/FM8-VFCR3MGZ-6")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000297 "ICZN family"@en)
+SubClassOf(obo:NOMEN_0000297 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000298 (ICZN infrafamily)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000298 obo:NOMEN_0000299)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000298 "ICZN infrafamily"@en)
+SubClassOf(obo:NOMEN_0000298 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000299 (ICZN subfamily)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000299 "subfam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000299 obo:NOMEN_0000300)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000299 "subfamily name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000299 "http://data.loterre.fr/ark:/67375/FM8-CMZP78CL-G")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000299 "ICZN subfamily"@en)
+SubClassOf(obo:NOMEN_0000299 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000300 (ICZN supersubfamily)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000300 obo:NOMEN_0000297)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000300 "ICZN supersubfamily"@en)
+SubClassOf(obo:NOMEN_0000300 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000301 (ICZN subtribe)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000301 "subtr.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000301 obo:NOMEN_0000305)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000301 "subtribe name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000301 "http://data.loterre.fr/ark:/67375/FM8-TVV5XD01-5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000301 "ICZN subtribe"@en)
+SubClassOf(obo:NOMEN_0000301 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000302 (ICZN superfamily)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000302 "superfam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000302 obo:NOMEN_0000003)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000302 "superfamily name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000302 "http://data.loterre.fr/ark:/67375/FM8-GBHSBCWL-S")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000302 "ICZN superfamily"@en)
+SubClassOf(obo:NOMEN_0000302 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000304 (ICZN supertribe)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000304 "supertr.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000304 obo:NOMEN_0000298)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000304 "ICZN supertribe"@en)
+SubClassOf(obo:NOMEN_0000304 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000305 (ICZN tribe)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000305 "tr.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000305 obo:NOMEN_0000304)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000305 "tribe name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000305 "http://data.loterre.fr/ark:/67375/FM8-GBS5WRSW-3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000305 "ICZN tribe"@en)
+SubClassOf(obo:NOMEN_0000305 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0000306 (ICZN genus-group)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000306 "genus-group name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000306 "http://data.loterre.fr/ark:/67375/FM8-N50VT6SW-M")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000306 "ICZN genus-group"@en)
+SubClassOf(obo:NOMEN_0000306 obo:NOMEN_0000293)
+
+# Class: obo:NOMEN_0000307 (ICZN genus)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000307 "gen.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000307 obo:NOMEN_0000308)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000307 "ICZN genus"@en)
+SubClassOf(obo:NOMEN_0000307 obo:NOMEN_0000306)
+
+# Class: obo:NOMEN_0000308 (ICZN supergenus)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000308 obo:NOMEN_0001053)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000308 "ICZN supergenus"@en)
+SubClassOf(obo:NOMEN_0000308 obo:NOMEN_0000306)
+
+# Class: obo:NOMEN_0000309 (ICZN infragenus)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000309 obo:NOMEN_0000310)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000309 "ICZN infragenus"@en)
+SubClassOf(obo:NOMEN_0000309 obo:NOMEN_0000306)
+
+# Class: obo:NOMEN_0000310 (ICZN subgenus)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000310 "sgen.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000310 obo:NOMEN_0001051)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000310 "subgeneric name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000310 "http://data.loterre.fr/ark:/67375/FM8-TW3B8QJ4-S")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000310 "ICZN subgenus"@en)
+SubClassOf(obo:NOMEN_0000310 obo:NOMEN_0000306)
+
+# Class: obo:NOMEN_0000311 (ICZN species-group)
+
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000311 "species-group name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000311 "http://data.loterre.fr/ark:/67375/FM8-CD6397CK-5")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000311 "ICZN species-group"@en)
+SubClassOf(obo:NOMEN_0000311 obo:NOMEN_0000293)
+
+# Class: obo:NOMEN_0000312 (ICZN species)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000312 "sp.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000312 obo:NOMEN_0000315)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000312 "species name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000312 "http://data.loterre.fr/ark:/67375/FM8-BCRH3FHN-9")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000312 "ICZN species"@en)
+SubClassOf(obo:NOMEN_0000312 obo:NOMEN_0000311)
+
+# Class: obo:NOMEN_0000313 (ICZN superspecies)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000313 obo:NOMEN_0000314)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000313 "ICZN superspecies"@en)
+SubClassOf(obo:NOMEN_0000313 obo:NOMEN_0000311)
+
+# Class: obo:NOMEN_0000314 (ICZN supersuperspecies)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000314 obo:NOMEN_0000309)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000314 "ICZN supersuperspecies"@en)
+SubClassOf(obo:NOMEN_0000314 obo:NOMEN_0000311)
+
+# Class: obo:NOMEN_0000315 (ICZN subsuperspecies)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000315 obo:NOMEN_0000313)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000315 "ICZN subsuperspecies"@en)
+SubClassOf(obo:NOMEN_0000315 obo:NOMEN_0000311)
+DisjointUnion(obo:NOMEN_0000315 obo:NOMEN_0000067 obo:NOMEN_0000118 obo:NOMEN_0000312 obo:NOMEN_0000363)
+
+# Class: obo:NOMEN_0000316 (ICZN subspecies)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000316 "subsp.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000316 obo:NOMEN_0000312)
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0000316 "subspecific name")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0000316 "http://data.loterre.fr/ark:/67375/FM8-Z2RTK54P-3")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000316 "ICZN subspecies"@en)
+SubClassOf(obo:NOMEN_0000316 obo:NOMEN_0000311)
+
+# Class: obo:NOMEN_0000317 (ICZN higher classification group)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000317 "ICZN higher classification group"@en)
+SubClassOf(obo:NOMEN_0000317 obo:NOMEN_0000293)
+
+# Class: obo:NOMEN_0000318 (ICZN class)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000318 obo:NOMEN_0000334)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000318 "ICZN class"@en)
+SubClassOf(obo:NOMEN_0000318 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000319 (ICZN cohort)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000319 obo:NOMEN_0000335)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000319 "ICZN cohort"@en)
+SubClassOf(obo:NOMEN_0000319 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000320 (ICZN infraclass)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000320 obo:NOMEN_0000329)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000320 "ICZN infraclass"@en)
+SubClassOf(obo:NOMEN_0000320 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000321 (ICZN infrakingdom)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000321 obo:NOMEN_0000331)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000321 "ICZN infrakingdom"@en)
+SubClassOf(obo:NOMEN_0000321 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000322 (ICZN infraorder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000322 obo:NOMEN_0000332)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000322 "ICZN infraorder"@en)
+SubClassOf(obo:NOMEN_0000322 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000323 (ICZN infraphylum)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000323 obo:NOMEN_0000333)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000323 "ICZN infraphylum"@en)
+SubClassOf(obo:NOMEN_0000323 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000324 (ICZN kingdom)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000324 obo:NOMEN_0000336)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000324 "ICZN kingdom"@en)
+SubClassOf(obo:NOMEN_0000324 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000325 (ICZN magnorder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000325 obo:NOMEN_0000319)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000325 "ICZN magnorder"@en)
+SubClassOf(obo:NOMEN_0000325 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000326 (ICZN mirorder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000326 obo:NOMEN_0000337)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000326 "ICZN mirorder"@en)
+SubClassOf(obo:NOMEN_0000326 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000327 (ICZN order)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000327 obo:NOMEN_0000326)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000327 "ICZN order"@en)
+SubClassOf(obo:NOMEN_0000327 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000328 (ICZN phylum)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000328 obo:NOMEN_0000338)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000328 "ICZN phylum"@en)
+SubClassOf(obo:NOMEN_0000328 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000329 (ICZN subclass)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000329 obo:NOMEN_0000318)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000329 "ICZN subclass"@en)
+SubClassOf(obo:NOMEN_0000329 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000330 (ICZN parvorder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000330 obo:NOMEN_0000322)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000330 "ICZN parvorder"@en)
+SubClassOf(obo:NOMEN_0000330 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000331 (ICZN subkingdom)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000331 obo:NOMEN_0000324)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000331 "ICZN subkingdom"@en)
+SubClassOf(obo:NOMEN_0000331 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000332 (ICZN suborder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000332 obo:NOMEN_0000327)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000332 "ICZN suborder"@en)
+SubClassOf(obo:NOMEN_0000332 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000333 (ICZN subphylum)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000333 obo:NOMEN_0000328)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000333 "ICZN subphylum"@en)
+SubClassOf(obo:NOMEN_0000333 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000334 (ICZN superclass)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000334 obo:NOMEN_0000323)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000334 "ICZN superclass"@en)
+SubClassOf(obo:NOMEN_0000334 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000335 (ICZN supercohort)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000335 obo:NOMEN_0000320)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000335 "ICZN supercohort"@en)
+SubClassOf(obo:NOMEN_0000335 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000336 (ICZN superkingdom)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000336 obo:NOMEN_0000293)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000336 "ICZN superkingdom"@en)
+SubClassOf(obo:NOMEN_0000336 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000337 (ICZN superorder)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000337 obo:NOMEN_0000325)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000337 "ICZN superorder"@en)
+SubClassOf(obo:NOMEN_0000337 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000338 (ICZN superphylum)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000338 obo:NOMEN_0000321)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000338 "ICZN superphylum"@en)
+SubClassOf(obo:NOMEN_0000338 obo:NOMEN_0000317)
+
+# Class: obo:NOMEN_0000339 (ICN nomenclatural rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000339 "ICN nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0000339 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0000341 (ICN subdivision of family)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000341 "ICN subdivision of family"@en)
+SubClassOf(obo:NOMEN_0000341 obo:NOMEN_0000339)
+
+# Class: obo:NOMEN_0000342 (ICN family)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000342 "familia")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000342 "fam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000342 obo:NOMEN_0000359)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000342 "ICN family"@en)
+SubClassOf(obo:NOMEN_0000342 obo:NOMEN_0000341)
+
+# Class: obo:NOMEN_0000343 (ICN subfamily)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000343 "subfamilia")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000343 "subfam.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000343 obo:NOMEN_0000342)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000343 "ICN subfamily"@en)
+SubClassOf(obo:NOMEN_0000343 obo:NOMEN_0000341)
+
+# Class: obo:NOMEN_0000344 (ICN subtribe)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000344 "subtr.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000344 obo:NOMEN_0000345)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000344 "ICN subtribe"@en)
+SubClassOf(obo:NOMEN_0000344 obo:NOMEN_0000341)
+
+# Class: obo:NOMEN_0000345 (ICN tribe)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000345 "tr.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000345 obo:NOMEN_0000343)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000345 "ICN tribe"@en)
+SubClassOf(obo:NOMEN_0000345 obo:NOMEN_0000341)
+
+# Class: obo:NOMEN_0000346 (ICN subdivision of genus)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000346 "ICN subdivision of genus"@en)
+SubClassOf(obo:NOMEN_0000346 obo:NOMEN_0000339)
+
+# Class: obo:NOMEN_0000347 (ICN genus)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000347 "gen.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000347 obo:NOMEN_0000344)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000347 "ICN genus"@en)
+SubClassOf(obo:NOMEN_0000347 obo:NOMEN_0000346)
+
+# Class: obo:NOMEN_0000348 (ICN subgenus)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000348 "sgen.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000348 obo:NOMEN_0000347)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000348 "ICN subgenus"@en)
+SubClassOf(obo:NOMEN_0000348 obo:NOMEN_0000346)
+
+# Class: obo:NOMEN_0000349 (ICN section)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000349 "sectio")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000349 "sect.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000349 obo:NOMEN_0000348)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000349 "ICN section"@en)
+SubClassOf(obo:NOMEN_0000349 obo:NOMEN_0000346)
+
+# Class: obo:NOMEN_0000350 (ICN series)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000350 "ser.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000350 obo:NOMEN_0000351)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000350 "ICN series"@en)
+SubClassOf(obo:NOMEN_0000350 obo:NOMEN_0000346)
+
+# Class: obo:NOMEN_0000351 (ICN subsection)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000351 "subsectio")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000351 "subsect.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000351 obo:NOMEN_0000349)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000351 "ICN subsection"@en)
+SubClassOf(obo:NOMEN_0000351 obo:NOMEN_0000346)
+
+# Class: obo:NOMEN_0000352 (ICN subseries)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000352 "subser.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000352 obo:NOMEN_0000350)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000352 "ICN subseries"@en)
+SubClassOf(obo:NOMEN_0000352 obo:NOMEN_0000346)
+
+# Class: obo:NOMEN_0000353 (ICN subdivision above family)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000353 "ICN subdivision above family"@en)
+SubClassOf(obo:NOMEN_0000353 obo:NOMEN_0000339)
+
+# Class: obo:NOMEN_0000354 (ICN class)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000354 "classis")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000354 "cl.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000354 obo:NOMEN_0000360)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000354 "ICN class"@en)
+SubClassOf(obo:NOMEN_0000354 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000355 (ICN order)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000355 "cohors, nixus, alliance, reihe, ordo")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000355 "ord.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000355 obo:NOMEN_0000358)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000355 "ICN order"@en)
+SubClassOf(obo:NOMEN_0000355 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000356 (ICN phylum)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000356 "division")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000356 obo:NOMEN_0000361)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000356 "ICN phylum"@en)
+SubClassOf(obo:NOMEN_0000356 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000357 (ICN kingdom)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000357 "regnum")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000357 obo:NOMEN_0000339)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000357 "ICN kingdom"@en)
+SubClassOf(obo:NOMEN_0000357 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000358 (ICN subclass)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000358 "subclassis")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000358 obo:NOMEN_0000354)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000358 "ICN subclass"@en)
+SubClassOf(obo:NOMEN_0000358 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000359 (ICN suborder)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000359 "subordo")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000359 obo:NOMEN_0000355)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000359 "ICN suborder"@en)
+SubClassOf(obo:NOMEN_0000359 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000360 (ICN subphylum)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000360 "subdivision")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000360 obo:NOMEN_0000356)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000360 "ICN subphylum"@en)
+SubClassOf(obo:NOMEN_0000360 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000361 (ICN subkingdom)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000361 "subregnum")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000361 obo:NOMEN_0000357)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000361 "ICN subkingdom"@en)
+SubClassOf(obo:NOMEN_0000361 obo:NOMEN_0000353)
+
+# Class: obo:NOMEN_0000363 (ICN species)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000363 "sp.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000363 obo:NOMEN_0000352)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000363 "ICN species"@en)
+SubClassOf(obo:NOMEN_0000363 obo:NOMEN_0000006)
+
+# Class: obo:NOMEN_0000364 (ICN form)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000364 "forma")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000364 "f.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000364 obo:NOMEN_0000366)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000364 "ICN form"@en)
+SubClassOf(obo:NOMEN_0000364 obo:NOMEN_0000006)
+
+# Class: obo:NOMEN_0000365 (ICN subform)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000365 "subforma")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000365 "subf.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000365 obo:NOMEN_0000364)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000365 "ICN subform"@en)
+SubClassOf(obo:NOMEN_0000365 obo:NOMEN_0000006)
+
+# Class: obo:NOMEN_0000366 (ICN subvariety)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000366 "subvarietas")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000366 "subvar.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000366 obo:NOMEN_0000367)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000366 "ICN subvariety"@en)
+SubClassOf(obo:NOMEN_0000366 obo:NOMEN_0000006)
+
+# Class: obo:NOMEN_0000367 (ICN variety)
+
+AnnotationAssertion(obo:NOMEN_0000017 obo:NOMEN_0000367 "varietas")
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000367 "var.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000367 obo:NOMEN_0000368)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000367 "ICN variety"@en)
+SubClassOf(obo:NOMEN_0000367 obo:NOMEN_0000006)
+
+# Class: obo:NOMEN_0000368 (ICN subspecies)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000368 "subsp.")
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0000368 obo:NOMEN_0000363)
+AnnotationAssertion(rdfs:label obo:NOMEN_0000368 "ICN subspecies"@en)
+SubClassOf(obo:NOMEN_0000368 obo:NOMEN_0000006)
+
+# Class: obo:NOMEN_0000377 (ICN not effectively published name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000377 "6.1; 29; 30; 31")
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000377 "invalidum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000377 "ICN not effectively published name"@en)
+SubClassOf(obo:NOMEN_0000377 obo:NOMEN_0000109)
+DisjointClasses(obo:NOMEN_0000377 obo:NOMEN_0000383)
+
+# Class: obo:NOMEN_0000378 (ICN non binomial)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000378 "ICN non binomial"@en)
+SubClassOf(obo:NOMEN_0000378 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000379 (ICN nomen nudum)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000379 "nom.nud.")
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000379 "nudum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000379 "ICN nomen nudum"@en)
+SubClassOf(obo:NOMEN_0000379 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000380 (ICN rejected publication)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000380 "oppressa")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000380 "ICN rejected publication"@en)
+SubClassOf(obo:NOMEN_0000380 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000381 (ICN provisional name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0000381 "provisorium")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000381 "ICN provisional name"@en)
+SubClassOf(obo:NOMEN_0000381 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000382 (ICN tautonym)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000382 "ICN tautonym"@en)
+SubClassOf(obo:NOMEN_0000382 obo:NOMEN_0000008)
+
+# Class: obo:NOMEN_0000383 (ICN effectively published name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000383 "6.1; 29; 30; 31")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000383 "ICN effectively published name"@en)
+SubClassOf(obo:NOMEN_0000383 obo:NOMEN_0000109)
+
+# Class: obo:NOMEN_0000384 (ICN legitimate name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000384 "6.3; 6.4")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000384 "legitimate")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000384 "ICN legitimate name"@en)
+SubClassOf(obo:NOMEN_0000384 obo:NOMEN_0000007)
+DisjointClasses(obo:NOMEN_0000384 obo:NOMEN_0000386)
+
+# Class: obo:NOMEN_0000385 (ICN sanctioned name)
+
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000385 "rejiciendum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000385 "ICN sanctioned name"@en)
+SubClassOf(obo:NOMEN_0000385 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000386 (ICN illegitimate name)
+
+AnnotationAssertion(obo:NOMEN_0000012 obo:NOMEN_0000386 "6.3; 6.4")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000386 "illegitimum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000386 "ICN illegitimate name"@en)
+SubClassOf(obo:NOMEN_0000386 obo:NOMEN_0000007)
+
+# Class: obo:NOMEN_0000387 (ICN nomen novum)
+
+AnnotationAssertion(obo:NOMEN_0000018 obo:NOMEN_0000387 "nom. nov.")
+AnnotationAssertion(obo:NOMEN_0000054 obo:NOMEN_0000387 "novum")
+AnnotationAssertion(rdfs:label obo:NOMEN_0000387 "ICN nomen novum"@en)
+SubClassOf(obo:NOMEN_0000387 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0000388 (ICN nothotaxon)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0000388 "ICN nothotaxon"@en)
+SubClassOf(obo:NOMEN_0000388 obo:NOMEN_0000384)
+
+# Class: obo:NOMEN_0001000 (ICNCP cultivar)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001000 obo:NOMEN_0001001)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001000 "ICNCP cultivar"@en)
+SubClassOf(obo:NOMEN_0001000 obo:NOMEN_0001003)
+
+# Class: obo:NOMEN_0001001 (ICNCP Group)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001001 obo:NOMEN_0001002)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001001 "ICNCP Group"@en)
+SubClassOf(obo:NOMEN_0001001 obo:NOMEN_0001003)
+
+# Class: obo:NOMEN_0001002 (ICNCP grex)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001002 obo:NOMEN_0001003)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001002 "ICNCP grex"@en)
+SubClassOf(obo:NOMEN_0001002 obo:NOMEN_0001003)
+
+# Class: obo:NOMEN_0001003 (ICNCP nomenclatural rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001003 "ICNCP nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0001003 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0001004 (ICNCP established name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001004 "ICNCP established name"@en)
+SubClassOf(obo:NOMEN_0001004 obo:NOMEN_0000130)
+
+# Class: obo:NOMEN_0001005 (ICNCP accepted name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001005 "ICNCP accepted name"@en)
+SubClassOf(obo:NOMEN_0001005 obo:NOMEN_0001004)
+
+# Class: obo:NOMEN_0001006 (ICNCP graft-chimaera)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001006 obo:NOMEN_0001003)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001006 "ICNCP graft-chimaera"@en)
+SubClassOf(obo:NOMEN_0001006 obo:NOMEN_0001003)
+
+# Class: obo:NOMEN_0001007 (ICNCP conserved name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001007 "ICNCP conserved name"@en)
+SubClassOf(obo:NOMEN_0001007 obo:NOMEN_0001005)
+
+# Class: obo:NOMEN_0001012 (ICNCP rejected name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001012 "ICNCP rejected name"@en)
+SubClassOf(obo:NOMEN_0001012 obo:NOMEN_0001004)
+
+# Class: obo:NOMEN_0001013 (ICNCP unestablished name)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001013 "ICNCP unestablished name"@en)
+SubClassOf(obo:NOMEN_0001013 obo:NOMEN_0000130)
+
+# Class: obo:NOMEN_0001014 (ICNCP superfluous)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001014 "ICNCP superfluous"@en)
+SubClassOf(obo:NOMEN_0001014 obo:NOMEN_0001012)
+
+# Class: obo:NOMEN_0001051 (ICZN supersubgenus)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001051 obo:NOMEN_0001052)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001051 "ICZN supersubgenus"@en)
+SubClassOf(obo:NOMEN_0001051 obo:NOMEN_0000306)
+
+# Class: obo:NOMEN_0001052 (ICZN supersupersubgenus)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001052 obo:NOMEN_0000307)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001052 "ICZN supersupersubgenus"@en)
+SubClassOf(obo:NOMEN_0001052 obo:NOMEN_0000306)
+
+# Class: obo:NOMEN_0001053 (ICZN infratribe)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001053 obo:NOMEN_0000301)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001053 "ICZN infratribe"@en)
+SubClassOf(obo:NOMEN_0001053 obo:NOMEN_0000295)
+
+# Class: obo:NOMEN_0001054 (ICVCN kingdom)
+
+AnnotationAssertion(obo:NOMEN_0001050 obo:NOMEN_0001054 obo:NOMEN_0000113)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001054 "ICVCN kingdom"@en)
+SubClassOf(obo:NOMEN_0001054 obo:NOMEN_0000113)
+
+# Class: obo:NOMEN_0001055 (ICPN nomenclatural rank)
+
+AnnotationAssertion(rdfs:label obo:NOMEN_0001055 "ICPN nomenclatural rank"@en)
+SubClassOf(obo:NOMEN_0001055 obo:NOMEN_0000027)
+
+# Class: obo:NOMEN_0001057 (ICPN name)
+
+AnnotationAssertion(rdfs:comment obo:NOMEN_0001057 "International Code of Phytosociological Nomenclature (ICPN)")
+AnnotationAssertion(rdfs:label obo:NOMEN_0001057 "ICPN name"@en)
+SubClassOf(obo:NOMEN_0001057 obo:NOMEN_0000036)
+
+# Class: obo:NOMEN_0001058 (ICZN ichnotaxon)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001058 "23.7.3")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0001058 "ichnotaxon")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0001058 "http://data.loterre.fr/ark:/67375/FM8-MNKZZ564-T")
+AnnotationAssertion(rdfs:label obo:NOMEN_0001058 "ICZN ichnotaxon"@en)
+SubClassOf(obo:NOMEN_0001058 obo:NOMEN_0000055)
+
+# Class: obo:NOMEN_0001059 (ICZN collective group)
+
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001059 "42.2.1")
+AnnotationAssertion(obo:NOMEN_0001062 obo:NOMEN_0001059 "collective group")
+AnnotationAssertion(obo:NOMEN_0001063 obo:NOMEN_0001059 "http://data.loterre.fr/ark:/67375/FM8-FV0Q8594-L")
+AnnotationAssertion(rdfs:label obo:NOMEN_0001059 "ICZN collective group"@en)
+SubClassOf(obo:NOMEN_0001059 obo:NOMEN_0000107)
+
+# Class: obo:NOMEN_0001060 (ICZN no diagnosis after 1930 and rejected before 2000)
+
+AnnotationAssertion(obo:NOMEN_0000000 obo:NOMEN_0001060 "1931"^^xsd:integer)
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0001060 "1960"^^xsd:integer)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001060 "13.2.1"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001060 "ICZN no diagnosis after 1930 and rejected before 2000"@en)
+SubClassOf(obo:NOMEN_0001060 obo:NOMEN_0000174)
+
+# Class: obo:NOMEN_0001061 (ICZN synonymy of type genus before 1961)
+
+AnnotationAssertion(obo:NOMEN_0000001 obo:NOMEN_0001061 "1960"^^xsd:integer)
+AnnotationAssertion(obo:NOMEN_0000002 obo:NOMEN_0001061 "40.2"^^xsd:decimal)
+AnnotationAssertion(rdfs:label obo:NOMEN_0001061 "ICZN synonymy of type genus before 1961"@en)
+SubClassOf(obo:NOMEN_0001061 obo:NOMEN_0000226)
+
+# Class: <http://purl.obolibrary.org/obo/NOMEN:0003000> (ICN emendavit)
+
+AnnotationAssertion(obo:NOMEN_0000012 <http://purl.obolibrary.org/obo/NOMEN:0003000> "47.1"^^xsd:decimal)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NOMEN:0003000> "ICN emendavit"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/NOMEN:0003000> obo:NOMEN_0000384)
+
+
+DisjointClasses(obo:NOMEN_0000003 obo:NOMEN_0000296 obo:NOMEN_0000297 obo:NOMEN_0000298 obo:NOMEN_0000299 obo:NOMEN_0000300 obo:NOMEN_0000301 obo:NOMEN_0000302 obo:NOMEN_0000304 obo:NOMEN_0000305)
+DisjointClasses(obo:NOMEN_0000107 obo:NOMEN_0000109 obo:NOMEN_0000110 obo:NOMEN_0000111)
+DisjointClasses(obo:NOMEN_0000119 obo:NOMEN_0000306 obo:NOMEN_0000311 obo:NOMEN_0000317)
+DisjointClasses(obo:NOMEN_0000120 obo:NOMEN_0000306 obo:NOMEN_0000311 obo:NOMEN_0000317)
+DisjointClasses(obo:NOMEN_0000170 obo:NOMEN_0000171 obo:NOMEN_0000172 obo:NOMEN_0000173)
+DisjointClasses(obo:NOMEN_0000171 obo:NOMEN_0000295 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000172 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000173 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000179 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000180 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000183 obo:NOMEN_0000295 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000184 obo:NOMEN_0000295 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000185 obo:NOMEN_0000295 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000188 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000189 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000190 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000198 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000199 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000202 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000203 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000204 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000205 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000206 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000207 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000208 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000209 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000211 obo:NOMEN_0000295 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000212 obo:NOMEN_0000295 obo:NOMEN_0000306)
+DisjointClasses(obo:NOMEN_0000213 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000214 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000295 obo:NOMEN_0000306 obo:NOMEN_0000311)
+DisjointClasses(obo:NOMEN_0000295 obo:NOMEN_0000311 obo:NOMEN_0000317 obo:NOMEN_0001059)
+DisjointClasses(obo:NOMEN_0000306 obo:NOMEN_0000311 obo:NOMEN_0000317 obo:NOMEN_0001060)
+DisjointClasses(obo:NOMEN_0000306 obo:NOMEN_0000311 obo:NOMEN_0000317 obo:NOMEN_0001061)
+DisjointClasses(obo:NOMEN_0000307 obo:NOMEN_0000308 obo:NOMEN_0000309 obo:NOMEN_0000310)
+DisjointClasses(obo:NOMEN_0000312 obo:NOMEN_0000313 obo:NOMEN_0000314 obo:NOMEN_0000315 obo:NOMEN_0000316)
+DisjointClasses(obo:NOMEN_0000318 obo:NOMEN_0000319 obo:NOMEN_0000320 obo:NOMEN_0000321 obo:NOMEN_0000322 obo:NOMEN_0000323 obo:NOMEN_0000324 obo:NOMEN_0000325 obo:NOMEN_0000326 obo:NOMEN_0000327 obo:NOMEN_0000328 obo:NOMEN_0000329 obo:NOMEN_0000330 obo:NOMEN_0000331 obo:NOMEN_0000332 obo:NOMEN_0000333 obo:NOMEN_0000334 obo:NOMEN_0000335 obo:NOMEN_0000336 obo:NOMEN_0000337 obo:NOMEN_0000338)
+DisjointClasses(obo:NOMEN_0000342 obo:NOMEN_0000343 obo:NOMEN_0000344 obo:NOMEN_0000345)
+DisjointClasses(obo:NOMEN_0000347 obo:NOMEN_0000348 obo:NOMEN_0000349 obo:NOMEN_0000350 obo:NOMEN_0000351 obo:NOMEN_0000352)
+DisjointClasses(obo:NOMEN_0000354 obo:NOMEN_0000355 obo:NOMEN_0000356 obo:NOMEN_0000357 obo:NOMEN_0000358 obo:NOMEN_0000359 obo:NOMEN_0000360 obo:NOMEN_0000361)
+DisjointClasses(obo:NOMEN_0000364 obo:NOMEN_0000365 obo:NOMEN_0000366 obo:NOMEN_0000367 obo:NOMEN_0000368)
+AnnotationAssertion(obo:NOMEN_0000054 owl:topObjectProperty "")
+)

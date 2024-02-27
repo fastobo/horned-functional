@@ -1,0 +1,1130 @@
+Prefix(:=<http://identifiers.org/mamo#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://identifiers.org/mamo>
+Annotation(owl:versionInfo "2023-02-03"^^xsd:dateTime)
+
+Declaration(Class(:MAMO_0000206))
+Declaration(Class(:MAMO_0000207))
+Declaration(Class(:MAMO_0000208))
+Declaration(Class(:MAMO_0000209))
+Declaration(Class(:MAMO_0000210))
+Declaration(Class(:MAMO_0000211))
+Declaration(Class(:continuous_variable))
+Declaration(Class(:ordinal_variable))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000003>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000004>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000008>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000009>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000010>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000017>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000018>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000019>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000020>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000021>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000022>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000023>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000024>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000025>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000026>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000027>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000028>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000029>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000030>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000031>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000032>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000033>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000034>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000035>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000036>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000037>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000038>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000039>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000040>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000041>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000043>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000044>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000045>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000046>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000047>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000048>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000049>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000050>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000051>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000052>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000053>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000054>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000055>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000056>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000057>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000058>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000059>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000060>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000061>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000062>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000063>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000064>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000069>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000070>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000071>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000072>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000073>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000074>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000075>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000076>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000077>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000078>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000080>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000081>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000082>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000083>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000084>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000085>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000086>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000087>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000088>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000089>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000090>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000180>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000181>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000182>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000183>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000184>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000185>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000186>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000187>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000188>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000189>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000190>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000191>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000192>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000193>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000194>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000195>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000196>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000197>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000198>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000199>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000200>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000202>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000203>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000204>))
+Declaration(Class(<http://identifiers.org/mamo/MAMO_0000205>))
+Declaration(ObjectProperty(:hasFeature))
+Declaration(ObjectProperty(:isUsedToModel))
+Declaration(ObjectProperty(:lacksFeature))
+Declaration(AnnotationProperty(:owlDef))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#hiddenLabel>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: :owlDef (:owlDef)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :owlDef "owlDef"@en)
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#altLabel> (alternative label)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#altLabel> "The range of skos:altLabel is the class of RDF plain literals."@en)
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#altLabel> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#altLabel> "http://www.w3.org/2004/02/skos/core"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#altLabel> "alternative label"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#altLabel> "An alternative lexical label for a resource."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2004/02/skos/core#altLabel> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en)
+SubAnnotationPropertyOf(<http://www.w3.org/2004/02/skos/core#altLabel> rdfs:label)
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#definition> (definition)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#definition> "http://www.w3.org/2004/02/skos/core"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#definition> "definition"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en)
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#example> (example)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#example> "http://www.w3.org/2004/02/skos/core"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#example> "example"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#example> "An example of the use of a concept."@en)
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#hiddenLabel> (hidden label)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#hiddenLabel> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#hiddenLabel> "http://www.w3.org/2004/02/skos/core"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#hiddenLabel> "hidden label"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#hiddenLabel> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2004/02/skos/core#hiddenLabel> "The range of skos:hiddenLabel is the class of RDF plain literals."@en)
+SubAnnotationPropertyOf(<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdfs:label)
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#prefLabel> (preferred label)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#prefLabel> "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en)
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#prefLabel> "The range of skos:prefLabel is the class of RDF plain literals."@en)
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#prefLabel> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#prefLabel> "http://www.w3.org/2004/02/skos/core"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#prefLabel> "preferred label"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#prefLabel> "The preferred lexical label for a resource, in a given language."@en)
+SubAnnotationPropertyOf(<http://www.w3.org/2004/02/skos/core#prefLabel> rdfs:label)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasFeature (:hasFeature)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :hasFeature "hasFeature"@en)
+ObjectPropertyRange(:hasFeature <http://identifiers.org/mamo/MAMO_0000054>)
+DisjointObjectProperties(:hasFeature :lacksFeature)
+
+# Object Property: :isUsedToModel (:isUsedToModel)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :isUsedToModel "isUsedToModel"@en)
+ObjectPropertyDomain(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000003>)
+ObjectPropertyRange(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000180>)
+
+# Object Property: :lacksFeature (:lacksFeature)
+
+AnnotationAssertion(:owlDef :lacksFeature "?X subclassOf: not (hasFeature some ?Y)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :lacksFeature "An object property to be used in the OBO version of MAMO to express negation."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :lacksFeature "lacksFeature"@en)
+ObjectPropertyRange(:lacksFeature <http://identifiers.org/mamo/MAMO_0000054>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :MAMO_0000206 (:MAMO_0000206)
+
+AnnotationAssertion(Annotation(rdfs:comment "Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."@en) rdfs:seeAlso :MAMO_0000206 "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2"@en)
+AnnotationAssertion(rdfs:seeAlso :MAMO_0000206 "https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :MAMO_0000206 "Compartmental models simplify the mathematical modelling of infectious diseases. The population is assigned to compartments with labels - for example, S, I, or R, (Susceptible, Infectious, or Recovered). People may progress between compartments. The order of the labels usually shows the flow patterns between the compartments; for example SEIS means susceptible, exposed, infectious, then susceptible again."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :MAMO_0000206 "epidemiological compartmental model"@en)
+SubClassOf(:MAMO_0000206 <http://identifiers.org/mamo/MAMO_0000028>)
+SubClassOf(:MAMO_0000206 <http://identifiers.org/mamo/MAMO_0000180>)
+SubClassOf(:MAMO_0000206 ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: :MAMO_0000207 (:MAMO_0000207)
+
+AnnotationAssertion(Annotation(rdfs:comment "Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."@en) rdfs:seeAlso :MAMO_0000207 "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2"@en)
+AnnotationAssertion(Annotation(rdfs:comment "Kermack, W. O. and McKendrick, A. G. \"A Contribution to the Mathematical Theory of Epidemics.\" Proc. Roy. Soc. Lond. A 115, 700-721, 1927."@en) rdfs:seeAlso :MAMO_0000207 "http://identifiers.org/doi/10.1098/rspa.1927.0118"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000207 "SIR"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000207 "susceptible-infectious-removed"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000207 "susceptible-infectious-removed model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :MAMO_0000207 "A compartmental epidemiological model with three compartments: susceptible S, infectious I, and removed R. The passage of individuals is modelled from S to I to R."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :MAMO_0000207 "SIR model"@en)
+SubClassOf(:MAMO_0000207 :MAMO_0000206)
+
+# Class: :MAMO_0000208 (:MAMO_0000208)
+
+AnnotationAssertion(Annotation(rdfs:comment "Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."@en) rdfs:seeAlso :MAMO_0000208 "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000208 "SIS"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000208 "susceptible-infectious-susceptible"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000208 "susceptible-infectious-susceptible model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :MAMO_0000208 "A compartmental epidemiological model with two compartments: susceptible S and infectious I. The passage of individuals is modelled from S to I and back."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :MAMO_0000208 "SIS model"@en)
+SubClassOf(:MAMO_0000208 :MAMO_0000206)
+
+# Class: :MAMO_0000209 (:MAMO_0000209)
+
+AnnotationAssertion(Annotation(rdfs:comment "Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."@en) rdfs:seeAlso :MAMO_0000209 "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000209 "SEIR"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000209 "susceptible-exposed-infectious-recovered"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000209 "susceptible-exposed-infectious-recovered model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :MAMO_0000209 "A compartmental epidemiological model with four compartments: susceptible S, exposed E, infectious I, and removed R. The passage of individuals is modelled from S to E to I to R."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :MAMO_0000209 "SEIR model"@en)
+SubClassOf(:MAMO_0000209 :MAMO_0000206)
+
+# Class: :MAMO_0000210 (:MAMO_0000210)
+
+AnnotationAssertion(Annotation(rdfs:comment "Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."@en) rdfs:seeAlso :MAMO_0000210 "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000210 "SEIS"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000210 "susceptible-exposed-infectious-susceptible"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000210 "susceptible-exposed-infectious-susceptible model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :MAMO_0000210 "A compartmental epidemiological model with three compartments: susceptible S, exposed E, and infectious I. The passage of individuals is modelled from S to E to I to S."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :MAMO_0000210 "SEIS model"@en)
+SubClassOf(:MAMO_0000210 :MAMO_0000206)
+
+# Class: :MAMO_0000211 (:MAMO_0000211)
+
+AnnotationAssertion(Annotation(rdfs:comment "Derendorf H, Lesko LJ, Chaikin P, Colburn WA, Lee P, Miller R, Powell R, Rhodes G, Stanski D, Venitz J. Pharmacokinetic/pharmacodynamic modeling in drug research and development. J Clin Pharmacol. 2000 Dec;40(12 Pt 2):1399-418."@en) rdfs:seeAlso :MAMO_0000211 "http://identifiers.org/pubmed/11185661"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :MAMO_0000211 "PK-PD model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :MAMO_0000211 "Pharmacokinetic/pharmacodynamic (PK/PD) relationships and modeling builds the bridge between the two classical disciplines of clinical pharmacology: pharmacokinetics and pharmacodynamics. It links the concentration-time profile as assessed by pharmacokinetics to the intensity of observed response as quantified by pharmacodynamics. The resulting so-called integrated PK/PD-models allow the description of the complete time course of the desired and/or undesired effects in response to a drug therapy."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :MAMO_0000211 "pharmacokinetic-pharmacodynamic model"@en)
+SubClassOf(:MAMO_0000211 <http://identifiers.org/mamo/MAMO_0000181>)
+
+# Class: :continuous_variable (:continuous_variable)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :continuous_variable "statistical data whose individual element can take any real number value.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :continuous_variable "continuous data variable")
+SubClassOf(:continuous_variable <http://identifiers.org/mamo/MAMO_0000086>)
+
+# Class: :ordinal_variable (:ordinal_variable)
+
+AnnotationAssertion(rdfs:seeAlso :ordinal_variable "https://en.wikipedia.org/wiki/Ordinal_data")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :ordinal_variable "ordinal categorical data variable")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ordinal_variable "statistical variable whose elements take values that exist on an ordinal scale, i.e. an arbitrary numerical scale where the exact numerical quantity of a particular value has no significance beyond its ability to establish a ranking over a set of data points.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> :ordinal_variable "ordinal data variable")
+SubClassOf(:ordinal_variable <http://identifiers.org/mamo/MAMO_0000086>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000003> (<http://identifiers.org/mamo/MAMO_0000003>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000003> "http://en.wikipedia.org/wiki/Mathematical_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000003> "Description of a system using mathematical concepts and language.  The model is composed of a set of variables and a set of equations that establish relationships between the variables. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://identifiers.org/mamo/MAMO_0000003> "A set of ordinary differential equation describing a physical process."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000003> "mathematical model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000003> <http://identifiers.org/mamo/MAMO_0000037>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000004> (<http://identifiers.org/mamo/MAMO_0000004>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000004> "http://en.wikipedia.org/wiki/Statistical_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000004> "Model that describes how one or more random variables are related to one or more random variables."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://identifiers.org/mamo/MAMO_0000004> "The relationship between the size and the age."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000004> "statistical model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000004> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000004> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000008> (<http://identifiers.org/mamo/MAMO_0000008>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000008> "http://en.wikipedia.org/wiki/Steady_state_%28chemistry%29"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000008> "Model which describes a system where the state variable values do not vary."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000008> "steady-state model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000008> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000008> <http://identifiers.org/mamo/MAMO_0000008>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000008> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000056>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000009> (<http://identifiers.org/mamo/MAMO_0000009>)
+
+AnnotationAssertion(rdfs:comment <http://identifiers.org/mamo/MAMO_0000009> "Can be analysed using flux balance analysis [http://identifiers.org/biomodels.kisao/KISAO_0000437]."@en)
+AnnotationAssertion(Annotation(rdfs:comment "Reed JL, Palsson BO (2003) Thirteen years of building constraint-based in silico models of Escherichia coli. J Bacteriol, 185(9):2692-9.
+"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000009> "http://identifiers.org/pubmed/12700248"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000009> "The constraint-based modeling procedure does not strive to find a single solution but rather finds a collection of all allowable solutions to the governing equations that can be defined (a solution space). The subsequent application of additional constraints further reduces the solution space and, consequently, reduces the number of allowable solutions that a cell can utilize."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000009> "constraint-based model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000009> <http://identifiers.org/mamo/MAMO_0000008>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000009> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000010> (<http://identifiers.org/mamo/MAMO_0000010>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000010> "http://en.wikipedia.org/wiki/Variable_%28mathematics%29"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000010> "Value that may change within the scope of a given model or set of operations."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000010> "variable"@en)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000017> (<http://identifiers.org/mamo/MAMO_0000017>)
+
+AnnotationAssertion(rdfs:comment <http://identifiers.org/mamo/MAMO_0000017> "Synonyms: input variable"@en)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000017> "https://en.wikipedia.org/wiki/Dependent_and_independent_variables;"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000017> "https://www.ncsu.edu/labwrite/po/independentvar.htm"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000017> "variable which is controlled in an experiment, and that affects other variables during the experiment. An independent variable does not depend on other variables of the model."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000017> "independent variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000017> <http://identifiers.org/mamo/MAMO_0000010>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000017> <http://identifiers.org/mamo/MAMO_0000018>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000018> (<http://identifiers.org/mamo/MAMO_0000018>)
+
+AnnotationAssertion(rdfs:comment <http://identifiers.org/mamo/MAMO_0000018> "Synonyms: output variable"@en)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000018> "https://en.wikipedia.org/wiki/Dependent_and_independent_variables;"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000018> "https://www.ncsu.edu/labwrite/po/dependentvar.htm"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000018> "variable which is measured in an experiment, and that is affected during the experiment. A dependent variable depends on other variables"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://identifiers.org/mamo/MAMO_0000018> "Example: in an experiment one controls x and measure y, with a relationship y = ax+b, y is depending on x."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000018> "dependent variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000018> <http://identifiers.org/mamo/MAMO_0000010>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000019> (<http://identifiers.org/mamo/MAMO_0000019>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000019> "https://en.wikipedia.org/wiki/Pharmacokinetics"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000019> "pharmacokinetics model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000019> "Model dedicated to the determination of the fate of substances administered externally to a living organism. Pharmacokinetics models are divided into several areas including the extent and rate of absorption, distribution, metabolism and excretion (ADME) to which Liberation is sometimes added (LADME)."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000019> "pharmacokinetic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000019> <http://identifiers.org/mamo/MAMO_0000181>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000019> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000019> <http://identifiers.org/mamo/MAMO_0000020>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000020> (<http://identifiers.org/mamo/MAMO_0000020>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000020> "https://en.wikipedia.org/wiki/Pharmacodynamics"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000020> "pharmacodynamics model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000020> "Models dedicated to the study of the biochemical and physiological effects of drugs on the body or on microorganisms or parasites within or on the body and the mechanisms of drug action and the relationship between drug concentration and effect."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000020> "pharmacodynamic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000020> <http://identifiers.org/mamo/MAMO_0000181>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000020> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000021> (<http://identifiers.org/mamo/MAMO_0000021>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000021> "http://en.wikipedia.org/wiki/Multiphysics"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000021> "Multiphysics treats simulations that involve multiple physical models or multiple simultaneous physical phenomena. For example, combining chemical kinetics and fluid mechanics or combining finite elements with molecular dynamics. Multiphysics typically involves solving coupled systems of partial differential equations."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000021> "multiphysics model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000021> <http://identifiers.org/mamo/MAMO_0000180>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000021> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000022> (<http://identifiers.org/mamo/MAMO_0000022>)
+
+AnnotationAssertion(rdfs:comment <http://identifiers.org/mamo/MAMO_0000022> "Rule-based modeling is especially effective in cases where the rule-set is significantly simpler than the model it implies, meaning that the model is a repeated manifestation of a limited number of patterns. "@en)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000022> "http://en.wikipedia.org/wiki/Rule-based_modeling#For_biochemical_systems"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000022> "Model that uses a set of rules used to describe other model instances. The rule-set can be used to create a model, or suitable tools can use a rule-set in place of a model. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000022> "rule-based model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000022> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000022> ObjectComplementOf(ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>)))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000022> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000023> (<http://identifiers.org/mamo/MAMO_0000023>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000023> "http://en.wikipedia.org/wiki/Computational_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000023> "mathematical model that requires computer simulations to study the behavior of a complex system. The system under study is often a complex nonlinear system for which simple, intuitive analytical solutions are not readily available. Rather than deriving a mathematical analytical solution to the problem, experimentation with the model is done by adjusting the parameters of the system in the computer, and studying the differences in the outcome of the experiments. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://identifiers.org/mamo/MAMO_0000023> "weather forecasting models, earth simulator models, flight simulator models, molecular protein folding models, neural network models."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000023> "computational model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000023> <http://identifiers.org/mamo/MAMO_0000003>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000024> (<http://identifiers.org/mamo/MAMO_0000024>)
+
+AnnotationAssertion(rdfs:comment <http://identifiers.org/mamo/MAMO_0000024> "Synonym: multi-agent model"@en)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000024> "http://en.wikipedia.org/wiki/Agent-based_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000024> "model simulating the actions and interactions of autonomous agents (both individual or collective entities such as organizations or groups) with a view to assessing their effects on the system as a whole"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000024> "agent-based model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000024> <http://identifiers.org/mamo/MAMO_0000023>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000024> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000024> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000025> (<http://identifiers.org/mamo/MAMO_0000025>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000025> "http://en.wikipedia.org/wiki/Petri_net"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000025> "directed bipartite graph, in which the nodes represent transitions (i.e. events that may occur, signified by bars) and places (i.e. conditions, signified by circles). The directed arcs describe which places are pre- and/or postconditions for which transitions (signified by arrows) occurs."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000025> "Petri net"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000025> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000025> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000057>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000026> (<http://identifiers.org/mamo/MAMO_0000026>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000026> "http://en.wikipedia.org/wiki/Computational_neuroscience"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000026> "Computational Neuroscience emphasizes descriptions of functional and biologically realistic neurons (and neural systems) and their physiology and dynamics. These models capture the essential features of the biological system at multiple spatial-temporal scales, from membrane currents, protein, and chemical coupling to network oscillations, columnar and topographic architecture, and learning and memory. These computational models are used to frame hypotheses that can be directly tested by current or future biological and/or psychological experiments."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000026> "computational Neuroscience model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000026> <http://identifiers.org/mamo/MAMO_0000180>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000026> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000056>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000027> (<http://identifiers.org/mamo/MAMO_0000027>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000027> "information obtained about a system by the application of an analysis procedure to a model of this system"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://identifiers.org/mamo/MAMO_0000027> "timecourse of a concentation; EC50"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000027> "readout"@en)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000028> (<http://identifiers.org/mamo/MAMO_0000028>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000028> "http://en.wikipedia.org/wiki/Population_models"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000028> "type of mathematical model that is applied to the study of population dynamics. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000028> "population model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000028> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000028> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000029> (<http://identifiers.org/mamo/MAMO_0000029>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000029> "http://en.wikipedia.org/wiki/Matrix_population_models"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000029> "specific type of population model that uses matrix algebra. Matrix algebra, in turn, is simply a form of algebraic shorthand for summarizing a larger number of often repetitious and tedious algebraic computations."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000029> "matrix population model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000029> <http://identifiers.org/mamo/MAMO_0000028>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000030> (<http://identifiers.org/mamo/MAMO_0000030>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000030> "http://en.wikipedia.org/wiki/Algebraic_logic"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000030> "algebraic logic model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000030> "logic model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000030> "model where the discrete values of variables (also called levels) is determined by logical combinations of the values of other variables."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000030> "logical model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000030> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000030> ObjectComplementOf(ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>)))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000031> (<http://identifiers.org/mamo/MAMO_0000031>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000031> "evolution of a variable value over time"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000031> "timecourse"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000031> <http://identifiers.org/mamo/MAMO_0000027>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000032> (<http://identifiers.org/mamo/MAMO_0000032>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000032> "model which take into account the spatial distribution or geometric characteristics of the entities described by its variables."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000032> "spatial characteristic"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000032> <http://identifiers.org/mamo/MAMO_0000054>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000033> (<http://identifiers.org/mamo/MAMO_0000033>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000033> "http://en.wikipedia.org/wiki/Reaction_diffusion_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000033> "mathematical model which explains how the concentration of one or more substances distributed in space changes under the influence of two processes: local chemical reactions in which the substances are transformed into each other, and diffusion which causes the substances to spread out over a domain in space."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000033> "chemical reaction diffusion model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000033> <http://identifiers.org/mamo/MAMO_0000180>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000033> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000056>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000034> (<http://identifiers.org/mamo/MAMO_0000034>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000034> "http://en.wikipedia.org/wiki/Finite_Element_Method"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000034> "model where the space is split into a number of subspaces (sometimes called voxels) that are each considered homegenous and isotropic."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000034> "finite element spatial model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000034> <http://identifiers.org/mamo/MAMO_0000033>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000035> (<http://identifiers.org/mamo/MAMO_0000035>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000035> "model based on a network of nodes or vertices, linked by edges or arcs. nodes can be physical entities, processes, events or logic operators. Edges can represent fluxs, interactions, influences etc.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000035> "network model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000035> <http://identifiers.org/mamo/MAMO_0000180>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000036> (<http://identifiers.org/mamo/MAMO_0000036>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000036> "http://en.wikipedia.org/wiki/Biochemical_system"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000036> "Biochemical network studies chemical processes within and relating to, living organisms."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000036> "biochemical network"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000036> <http://identifiers.org/mamo/MAMO_0000035>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000037> (<http://identifiers.org/mamo/MAMO_0000037>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000037> "model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000037> "Purposeful simplification of reality, designed to imitate certain phenomena or characteristics of a system while downplaying non-essential aspects. Its value lies in the ability to generalise insights from the model to a broader class of systems."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000037> "model"@en)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000038> (<http://identifiers.org/mamo/MAMO_0000038>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Albert R, Wang R (2009) Discrete dynamic modeling of cellular signaling networks. Methods Enzymol 467:281–306"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000038> "http://identifiers.org/pubmed/19897097"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000038> "Signal transduction is a process for cellular communication where the cell receives (and responds to) external stimuli from other cells and from the environment."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000038> "signalling network"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000038> <http://identifiers.org/mamo/MAMO_0000036>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000039> (<http://identifiers.org/mamo/MAMO_0000039>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Schlitt T, Brazma A (2007) Current approaches to gene regulatory network modelling. BMC Bioinf 8(Suppl 6):S9"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000039> "http://identifiers.org/pubmed/17903290"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000039> "Gene regulation controls the expression of genes and, consequently, all cellular functions. Gene expression is a process that involves transcription of the gene into mRNA, followed by translation to a protein, which may be subject to post-translational modification. The transcription process is controlled by transcription factors (TFs) that can work as activators or inhibitors. TFs are themselves encoded by genes and subject to regulation, which altogether forms complex regulatory networks."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000039> "gene regulatory network"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000039> <http://identifiers.org/mamo/MAMO_0000036>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000040> (<http://identifiers.org/mamo/MAMO_0000040>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Palsson B (2006) Systems Biology: Properties of Reconstructed Networks.
+Cambridge University Press"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000040> "http://identifiers.org/isbn/9780521859035"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000040> "Metabolism is a mechanism composed by a set of biochemical reactions, by which the cell sustains its growth and energy requirements. It includes several catabolic and anabolic pathways of enzyme-catalyzed reactions that import substrates from the environment and transform them into energy and building blocks required to build the cellular components. Metabolic pathways are interconnected through intermediate metabolites, forming complex networks."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000040> "metabolic network"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000040> <http://identifiers.org/mamo/MAMO_0000036>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000041> (<http://identifiers.org/mamo/MAMO_0000041>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000041> "http://en.wikipedia.org/wiki/Bayesian_network"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000041> "Bayes model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000041> "Bayes network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000041> "Bayesian network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000041> "belief network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000041> "probabilistic DAG model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000041> "probabilistic directed acyclic graphical model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000041> "Bayesian networks are a special type of probabilistic graphs. Their nodes represent random variables (discrete or continuous) and the edges represent conditional dependencies, forming a directed acyclic graph. Each node contains a probabilistic function that is dependent on the values of its input nodes."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000041> "Bayesian model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000041> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000041> ObjectComplementOf(ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>)))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000041> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000041> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000038>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000041> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000039>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000043> (<http://identifiers.org/mamo/MAMO_0000043>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Zou M, Conzen S (2005) A new dynamic Bayesian network (DBN) approach for identifying gene regulatory networks from time course microarray data. Bioinformatics 21(1):71–79"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000043> "http://identifiers.org/pubmed/15308537"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic Bayes model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic Bayes network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic Bayesian network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic belief network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic probabilistic DAG model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic probabilistic directed acyclic graphical model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000043> "A dynamic Bayesian network is a Bayesian network that overcomes the inability to model feedback loops. In this case, the variables are replicated for each time step and the feedback is modeled by connecting the nodes at adjacent time steps."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000043> "dynamic Bayesian model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000043> <http://identifiers.org/mamo/MAMO_0000041>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000043> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000056>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000044> (<http://identifiers.org/mamo/MAMO_0000044>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000044> "http://en.wikipedia.org/wiki/Process_calculus"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000044> "process calculus"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000044> "Process algebras are a family of formal languages for modeling concurrent systems. They generally consist on a set of process primitives, operators for sequential and parallel composition of processes, and communication channels."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000044> "process algebra"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000044> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000044> ObjectComplementOf(ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>)))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000044> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000045> (<http://identifiers.org/mamo/MAMO_0000045>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000045> "http://en.wikipedia.org/wiki/Differential_equation"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000045> "differential equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000045> "model based on differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000045> "model using differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000045> "Differential equations describe the rate of change of continuous variables. They are typically used for modeling dynamical systems in several areas."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000045> "differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000045> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000045> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000058>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000045> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000060>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000045> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000038>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000045> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000039>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000045> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000040>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000046> (<http://identifiers.org/mamo/MAMO_0000046>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000046> "http://en.wikipedia.org/wiki/Ordinary_differential_equation"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000046> "ODE model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000046> "model based on ordinary differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000046> "model using ordinary differential equation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000046> "ordinary differential equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000046> "model using equations containing a function of one independent variable and its derivatives."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000046> "ordinary differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000046> <http://identifiers.org/mamo/MAMO_0000045>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000046> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000063>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000047> (<http://identifiers.org/mamo/MAMO_0000047>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000047> "http://en.wikipedia.org/wiki/Stochastic_differential_equation"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000047> "SDE model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000047> "model based on stochastic differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000047> "model using stochastic differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000047> "stochastic differential equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000047> "model using differential equations in which one or more of the terms is a stochastic process, resulting in a solution which is itself a stochastic process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000047> "stochastic differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000047> <http://identifiers.org/mamo/MAMO_0000045>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000047> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000048> (<http://identifiers.org/mamo/MAMO_0000048>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000048> "http://en.wikipedia.org/wiki/Partial_differential_equation"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000048> "PDE model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000048> "model based on partial differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000048> "model using partial differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000048> "partial differential equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000048> "model using differential equations that contains unknown multivariable functions and their partial derivatives."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000048> "partial differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000048> <http://identifiers.org/mamo/MAMO_0000045>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000048> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000063>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000049> (<http://identifiers.org/mamo/MAMO_0000049>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000049> "http://en.wikipedia.org/wiki/Finite-state_machine"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000049> "Interacting state machines are diagram-based formalisms that describe the temporal behavior of a system based on the changes in the states of its parts. They differ from other approaches as they define a system in terms of its states rather than its components."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000049> "interacting state machine"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000049> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000049> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000056>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000049> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000049> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000049> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000038>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000050> (<http://identifiers.org/mamo/MAMO_0000050>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000050> "http://en.wikipedia.org/wiki/Cellular_automaton"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000050> "Cellular automata are discrete dynamic models that consist on a grid of cells with a finite number of states. A cellular automaton has an initial configuration that changes at each time step through a predefined rule that calculates the state of each cell as a function of the state of its neighbors at the previous step."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000050> "cellular automaton"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000050> <http://identifiers.org/mamo/MAMO_0000023>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000050> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000050> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000038>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000050> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000039>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000050> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000040>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000051> (<http://identifiers.org/mamo/MAMO_0000051>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Wishart DS, Yang R, Arndt D, Tang P, Cruz J (2005) Dynamic cellular automata: an alternative approach to cellular simulation. In Silico Biol., 5(2):139-61."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000051> "http://identifiers.org/pubmed/15972011"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000051> "DSA"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000051> "Dynamic cellular automata are a variation of cellular automata that allows for movement of the cell contents inside the grid, mimicking brownian motion."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000051> "dynamic cellular automaton"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000051> <http://identifiers.org/mamo/MAMO_0000050>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000051> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000056>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000052> (<http://identifiers.org/mamo/MAMO_0000052>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000052> "http://en.wikipedia.org/wiki/Stochastic_cellular_automaton"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000052> "Cellular automaton whose updating rule is stochastic, which means the new entity's state is not chosen deterministically based on the neighbours' states, but according to some probability distributions depending on the neighbours' states."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000052> "stochastic cellular automaton"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000052> <http://identifiers.org/mamo/MAMO_0000050>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000052> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000053> (<http://identifiers.org/mamo/MAMO_0000053>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000053> "http://en.wikipedia.org/wiki/Boolean_network"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "Kauffman S (1969) Metabolic stability and epigenesis in randomly constructed genetic nets. J Theor Biol 22(3):437–467"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000053> "http://identifiers.org/pubmed/5803332"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000053> "Boolean models model networks of genes by boolean variables that represent active and inactive states. At each time step, the state of each gene is determined by a logic rule which is a function of the state of its regulators. The state of all genes forms a global state that changes synchronously."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000053> "boolean model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000053> <http://identifiers.org/mamo/MAMO_0000030>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000053> ObjectSomeValuesFrom(:isUsedToModel <http://identifiers.org/mamo/MAMO_0000039>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000054> (<http://identifiers.org/mamo/MAMO_0000054>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000054> "modeling entity feature"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000054> "Dependent entity which another modelling entity has, i.e., that entity exhibits its property. Other common terms for property in natural language are characteristic, property, quality, etc."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000054> "modelling entity feature"@en)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000055> (<http://identifiers.org/mamo/MAMO_0000055>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000055> "http://en.wikipedia.org/wiki/Temporality"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000055> "Characterises the evolution of a modelling entity over time."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000055> "temporal quality"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000055> <http://identifiers.org/mamo/MAMO_0000054>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000056> (<http://identifiers.org/mamo/MAMO_0000056>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000056> "http://en.wikipedia.org/wiki/Dynamical"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000056> "Characterises a modelling entity that evolves over time."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000056> "dynamical characteristic"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000056> <http://identifiers.org/mamo/MAMO_0000055>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000056> <http://identifiers.org/mamo/MAMO_0000057>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000057> (<http://identifiers.org/mamo/MAMO_0000057>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000057> "http://en.wiktionary.org/wiki/static"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000057> "Characterises a modelling entity that does not evolve over time."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000057> "static characteristic"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000057> <http://identifiers.org/mamo/MAMO_0000055>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000058> (<http://identifiers.org/mamo/MAMO_0000058>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000058> "http://en.wiktionary.org/wiki/qualitative"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000058> "http://en.wiktionary.org/wiki/quantitative"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000058> "Characterises the possibility to be measured numerically."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000058> "quantitative characteristic"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000058> <http://identifiers.org/mamo/MAMO_0000054>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000059> (<http://identifiers.org/mamo/MAMO_0000059>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000059> "http://en.wiktionary.org/wiki/discrete"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000059> "Which values can be enumerated."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000059> "discrete characteristic"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000059> <http://identifiers.org/mamo/MAMO_0000058>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000059> <http://identifiers.org/mamo/MAMO_0000060>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000060> (<http://identifiers.org/mamo/MAMO_0000060>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000060> "http://en.wiktionary.org/wiki/continuous"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000060> "Which values cannot be enumerated. Whatever two values, there is always another value in between."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000060> "continuous characteristic"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000060> <http://identifiers.org/mamo/MAMO_0000058>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000061> (<http://identifiers.org/mamo/MAMO_0000061>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000061> " http://en.wikipedia.org/wiki/Nonlinear"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000061> "http://en.wikipedia.org/wiki/Linear_system"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000061> "Which satisfies the principles of superposition and scaling."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000061> "linear quality"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000061> <http://identifiers.org/mamo/MAMO_0000054>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000062> (<http://identifiers.org/mamo/MAMO_0000062>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000062> " http://en.wikipedia.org/wiki/Uncertainty"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000062> "Characterises the certainty, or lack of, of the modelling entity feature."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000062> "uncertainty level"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000062> <http://identifiers.org/mamo/MAMO_0000054>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000063> (<http://identifiers.org/mamo/MAMO_0000063>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000063> "http://en.wikipedia.org/wiki/Deterministic"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000063> "Which value or behaviour is certain."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000063> "deterministic nature"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000063> <http://identifiers.org/mamo/MAMO_0000062>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000063> <http://identifiers.org/mamo/MAMO_0000064>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000064> (<http://identifiers.org/mamo/MAMO_0000064>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000064> "http://en.wikipedia.org/wiki/Probabilistic"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000064> "stochastic nature"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000064> "Which can exhibit alternative values or behaviours with differnent probability."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000064> "probabilistic nature"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000064> <http://identifiers.org/mamo/MAMO_0000062>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000069> (<http://identifiers.org/mamo/MAMO_0000069>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000069> "http://en.wikipedia.org/wiki/Coloured_Petri_net"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "Jensen K, Kristensen LM. Coloured Petri Nets: Modeling and Validation of Concurrent Systems. Berlin: Springer, 2009."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000069> "http://identifiers.org/isbn/978-3-642-00284-7"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000069> "CP-net"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000069> "CPN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000069> "colored Petri net"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000069> "graphical language for modelling and validating concurrent and distributed systems, and other systems in which concurrency plays a major role"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000069> "coloured Petri net"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000069> <http://identifiers.org/mamo/MAMO_0000025>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000070> (<http://identifiers.org/mamo/MAMO_0000070>)
+
+AnnotationAssertion(Annotation(rdfs:comment "David R, Alla H. Discrete, continuous, and hybrid Petri Nets. Berlin, London: Springer, 2010."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000070> "http://identifiers.org/isbn/978-3-642-10669-9"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000070> "continuous PN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000070> "Petri net model in which the number of marks in the places are real numbers instead of integers"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000070> "continuous Petri net"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000070> <http://identifiers.org/mamo/MAMO_0000025>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000070> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000060>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000071> (<http://identifiers.org/mamo/MAMO_0000071>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Chaouiya C. Petri net modelling of biological networks. Brief Bioinform. 2007;8(4):210-9."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000071> "http://identifiers.org/pubmed/17626066"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000071> "functional PN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000071> "functional PNs"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000071> "self-modified PN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000071> "self-modified PNs"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000071> "self-modified Petri net"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000071> " A Petri net that allows the flow relations between places and transitions to depend on the marking."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000071> "functional Petri net "@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000071> <http://identifiers.org/mamo/MAMO_0000025>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000072> (<http://identifiers.org/mamo/MAMO_0000072>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Matsuno H, Tanaka Y, Aoshima H, Doi A, Matsui M, Miyano S. Biopathways representation and simulation on hybrid functional Petri net. In Silico Biol. 2003;3(3):389-404."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000072> "http://identifiers.org/pubmed/12954096"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000072> "HFPN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000072> "HFPNs"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000072> "Hybrid functional PNs"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000072> "hybrid functional PN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000072> "hybrid Petri nets with additional features: continuous transition firing rates can depend on the values of the input places and the weights of arcs can be defined as a function of the markings of the connected places."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000072> "hybrid functional Petri net"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000072> <http://identifiers.org/mamo/MAMO_0000071>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000072> <http://identifiers.org/mamo/MAMO_0000073>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000073> (<http://identifiers.org/mamo/MAMO_0000073>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Chaouiya C. Petri net modelling of biological networks. Brief Bioinform. 2007;8(4):210-9."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000073> "http://identifiers.org/pubmed/17626066"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000073> "HPN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000073> "HPNs"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000073> "hybrid PN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000073> "Petri nets that allow the coexistence of both continuous and discrete processes. They include discrete places (marked with tokens) and continuous places associated with real variables (e.g. concentration levels). "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000073> "hybrid Petri net"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000073> <http://identifiers.org/mamo/MAMO_0000025>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000074> (<http://identifiers.org/mamo/MAMO_0000074>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000074> "http://en.wikipedia.org/wiki/Stochastic_Petri_net"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000074> "SPN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000074> "stochastic PN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000074> "form of Petri net where the transitions fire after a probabilistic delay determined by a random variable."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000074> "stochastic Petri net"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000074> <http://identifiers.org/mamo/MAMO_0000025>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000074> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000074> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000075> (<http://identifiers.org/mamo/MAMO_0000075>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000075> "https://en.wikipedia.org/wiki/Logistic_regression"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000075> "logit regression"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000075> "type of probabilistic classification model used for predicting the outcome of a categorical dependent variable (i.e., a class label) based on one or more predictor variables (features)."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000075> "logistic regression"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000075> <http://identifiers.org/mamo/MAMO_0000004>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000076> (<http://identifiers.org/mamo/MAMO_0000076>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000076> "http://en.wikipedia.org/wiki/Mixed_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000076> "statistical model containing both fixed effects and random effects, that is mixed effects."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000076> "mixed model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000076> <http://identifiers.org/mamo/MAMO_0000004>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000076> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000063>))
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000076> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000077> (<http://identifiers.org/mamo/MAMO_0000077>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000077> "https://en.wikipedia.org/wiki/Multinomial_logistic_regression"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000077> "multinomial logit"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000077> "softmax regression"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000077> "regression model which generalizes logistic regression by allowing more than two discrete outcomes."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000077> "multinomial logistic regression"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000077> <http://identifiers.org/mamo/MAMO_0000004>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000078> (<http://identifiers.org/mamo/MAMO_0000078>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000078> "https://en.wikipedia.org/wiki/Poisson_regression"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000078> "form of regression analysis used to model count data and contingency tables. Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000078> "Poisson regression"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000078> <http://identifiers.org/mamo/MAMO_0000004>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000080> (<http://identifiers.org/mamo/MAMO_0000080>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000080> "https://en.wikipedia.org/wiki/Binary_data"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000080> "Data whose individual element can take on only two possible values, traditionally termed 0 and 1 in accordance with the binary numeral system and Boolean algebra. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000080> "binary data variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000080> <http://identifiers.org/mamo/MAMO_0000086>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000080> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000081> (<http://identifiers.org/mamo/MAMO_0000081>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000081> "https://en.wikipedia.org/wiki/Categorical_data"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000081> "nominal categorical data variable")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000081> "Statistical data type consisting of categorical variables, used for observed data whose value is one of a fixed number of nominal categories, or for data that has been converted into that form, for example as grouped data."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000081> "categorical data variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000081> <http://identifiers.org/mamo/MAMO_0000086>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000081> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000082> (<http://identifiers.org/mamo/MAMO_0000082>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000082> "https://en.wikipedia.org/wiki/Count_variable"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000082> "Statistical data type, a type of data in which the observations can take only the non-negative integer values {0, 1, 2, 3, ...}, and where these integers arise from counting rather than ranking."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000082> "count data variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000082> <http://identifiers.org/mamo/MAMO_0000086>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000082> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000083> (<http://identifiers.org/mamo/MAMO_0000083>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000083> "http://en.wikipedia.org/wiki/Longitudinal_study"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000083> "repeated observations of the same variables over time."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000083> "longitudinal data variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000083> <http://identifiers.org/mamo/MAMO_0000086>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000084> (<http://identifiers.org/mamo/MAMO_0000084>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000084> "https://en.wikipedia.org/wiki/Phase_portrait"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000084> "representation of the trajectories of a dynamical system in the phase plane. Each set of initial conditions is represented by a different curve, or point."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000084> "phase portrait"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000084> <http://identifiers.org/mamo/MAMO_0000027>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000085> (<http://identifiers.org/mamo/MAMO_0000085>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000085> "https://en.wikipedia.org/wiki/Steady-state"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000085> "value that does not change over time"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000085> "steady state value"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000085> <http://identifiers.org/mamo/MAMO_0000027>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000086> (<http://identifiers.org/mamo/MAMO_0000086>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000086> "https://en.wikipedia.org/wiki/Statistical_data_type"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000086> "In statistics, groups of individual data points may be classified as belonging to any of various statistical data types, e.g. categorical (\"red\", \"blue\", \"green\"), real number (1.68, -5, 1.7e+6), etc."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000086> "statistical variable"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000086> <http://identifiers.org/mamo/MAMO_0000010>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000087> (<http://identifiers.org/mamo/MAMO_0000087>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Guidance for Industry, Population Pharmacokinetics, U.S. Department of Health and Human Services, Food and Drug Administration, Center for Drug Evaluation and Research (CDER), Center for Biologics Evaluation and Research (CBER)February 1999."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000087> "http://www.fda.gov/downloads/Drugs/Guidances/UCM072137.pdf"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000087> "Model to study the sources and correlates of variability in drug concentrations among individuals who are the target patient population receiving clinically relevant doses of a drug of interest."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000087> "population pharmacokinetics model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000087> <http://identifiers.org/mamo/MAMO_0000019>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000088> (<http://identifiers.org/mamo/MAMO_0000088>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Tolle D., Le Novère N. Particle-based Stochastic Simulation in Systems Biology. Current Bioinformatics (2006), 1: 315-320."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000088> "http://lenoverelab.org/perso/lenov/PUBLIS/Tolle2006.pdf"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000088> "mesoscopic model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000088> "model where the reactions and diffusion of each particle in a population is described and followed over time. Sometimes called mesoscopic model, because more abstract than an atomic or molecular dynamic model, but more detailed than a concentration based reaction diffusion model. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000088> "single particle spatial model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000088> <http://identifiers.org/mamo/MAMO_0000180>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000089> (<http://identifiers.org/mamo/MAMO_0000089>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000089> "https://en.wikipedia.org/wiki/Delay_differential_equation"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000089> "DDE model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000089> "delayed differential equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000089> "model based on delayed differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000089> "model using delayed differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000089> "model using a type of differential equation in which the derivative of the unknown function at a certain time is given in terms of the values of the function at previous times."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000089> "delayed differential equation model "@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000089> <http://identifiers.org/mamo/MAMO_0000045>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000090> (<http://identifiers.org/mamo/MAMO_0000090>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000090> "https://en.wikipedia.org/wiki/Differential_algebraic_equation"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000090> "DAE model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000090> "differential algebraic equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000090> "model based on differential algebraic equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000090> "model using differential algebraic equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000090> "general form of (systems of) differential equations for vector–valued functions x in one independent variable,"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000090> "differential algebraic equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000090> <http://identifiers.org/mamo/MAMO_0000045>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000180> (<http://identifiers.org/mamo/MAMO_0000180>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000180> "domain model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000180> <http://identifiers.org/mamo/MAMO_0000037>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000181> (<http://identifiers.org/mamo/MAMO_0000181>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000181> "https://en.wikipedia.org/wiki/Pharmacometrics")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000181> "model used to describe and quantify interactions between xenobiotics and patients.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000181> "pharmacometrics model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000181> <http://identifiers.org/mamo/MAMO_0000180>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000182> (<http://identifiers.org/mamo/MAMO_0000182>)
+
+AnnotationAssertion(Annotation(rdfs:comment "P Van Ham. How to deal with variables with more than two levels. In Kinetic Logic A Boolean Approach to the Analysis of Complex Regulatory Systems. Lecture Notes in Biomathematics Vol 29, 1979, pp 326-343"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000182> "http://identifiers.org/isbn/978-3-540-09556-9"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000182> "logical model in which variables can take more than two levels."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000182> "multi-value logic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000182> <http://identifiers.org/mamo/MAMO_0000030>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000183> (<http://identifiers.org/mamo/MAMO_0000183>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Graner F and Glazier JA. Simulation of biological cell sorting using a two-dimensional extended Potts model, Phys. Rev. Lett. 69, 2013 - Published 28 September 1992."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000183> "http://dx.doi.org/10.1103/PhysRevLett.69.2013"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000183> "http://en.wikipedia.org/wiki/Cellular_Potts_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000183> "Glazier and Graner model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000183> "extended large-q Potts model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000183> "generalized version of a Potts model, where the cell associated with a spin can be composed of several elements, called pixels. Simulations progress by updating the pixels."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000183> "cellular Potts model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000183> <http://identifiers.org/mamo/MAMO_0000050>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000184> (<http://identifiers.org/mamo/MAMO_0000184>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000184> "http://en.wikipedia.org/wiki/Potts_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000184> "cellular Potts model in which each cell is made up of only one pixel (q-spin). The standard Potts model is a generalisation of the Ising model where the spin can take a discret number of values regularly distributed."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000184> "standard Potts model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000184> <http://identifiers.org/mamo/MAMO_0000183>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000185> (<http://identifiers.org/mamo/MAMO_0000185>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000185> "http://en.wikipedia.org/wiki/Ising_model"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "Duke TA, Bray D. Heightened sensitivity of a lattice of membrane receptors. Proc Natl Acad Sci U S A. 1999;96(18):10104-8."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000185> "http://identifiers.org/pubmed/10468569"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000185> "model that consists of discrete variables, called spins, that can be in one of two states (+1 or −1). The spins are arranged in a graph, usually, a lattice,"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000185> "Ising model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000185> <http://identifiers.org/mamo/MAMO_0000184>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000186> (<http://identifiers.org/mamo/MAMO_0000186>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Aldridge BB, Saez-Rodriguez J, Muhlich JL, Sorger PK, Lauffenburger DA. Fuzzy logic analysis of kinase pathway crosstalk in TNF/EGF/insulin-induced signaling. PLoS Comput Biol. 2009;5(4):e1000340."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000186> "http://identifiers.org/pubmed/19343194"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000186> "logical model which rely on fuzzy logic for deciding the new values of variables, that is the use of truth values instead of truth table to interpret the inputs and the resulting output."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000186> "fuzzy logic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000186> <http://identifiers.org/mamo/MAMO_0000030>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000187> (<http://identifiers.org/mamo/MAMO_0000187>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Snoussi EH. Qualitative dynamics of piecewise-linear differential equations: a discrete mapping approach. Dyn Stab Syst 1989, 4(3-4): 565-583"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000187> "http://identifiers.org/doi/10.1080/02681118908806072"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000187> "multi-valued logical model with multiple thresholds to assign variable values, logical parameters controlling the assignments, and asynchronous update."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000187> "generalized logical model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000187> <http://identifiers.org/mamo/MAMO_0000182>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000188> (<http://identifiers.org/mamo/MAMO_0000188>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000188> "http://en.wikipedia.org/wiki/Biochemical_systems_theory"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "Savageau MA. Biochemical systems analysis. II. The steady-state solutions for an n-pool system using a power-law approximation. J Theor Biol. 1969 Dec;25(3):370-9."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000188> "http://identifier.org/pubmed/5387047"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000188> "model in which the creation and destruction of a molecular species are represented using two power-law expansions in the species of the system. Reactions are not represented independently, but are subsumed in the apparent global reaction order (not necessarily integer) for the species affecting its rate."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000188> "S system model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000188> <http://identifiers.org/mamo/MAMO_0000036>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000188> <http://identifiers.org/mamo/MAMO_0000046>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000189> (<http://identifiers.org/mamo/MAMO_0000189>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 57"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000189> "http://identifier.org/isbn/978-0387-27197-2"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000189> "https://en.wikipedia.org/wiki/Linear_model#Time_series_models"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000189> "pharmacokinetic model expressed as differential equations in which partial derivatives with respect to any of the model parameters are independent of the other parameters"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000189> "linear pharmacokinetic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000189> <http://identifiers.org/mamo/MAMO_0000019>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000189> <http://identifiers.org/mamo/MAMO_0000191>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000190> (<http://identifiers.org/mamo/MAMO_0000190>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 181"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000190> "http://identifier.org/isbn/978-0387-27197-2"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000190> "linear pharmacokinetic model which contain both fixed and random effects (mixed)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000190> "linear mixed effect pharmacokinetic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000190> <http://identifiers.org/mamo/MAMO_0000189>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000191> (<http://identifiers.org/mamo/MAMO_0000191>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 93"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000191> "http://identifier.org/isbn/978-0387-27197-2"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000191> "pharmacokinetic model expressed as differential equations in which any partial derivatives with respect to any of the model parameters are dependent on any other model parameter or for which the derivatives do not exist or are discontinuous"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000191> "nonlinear pharmacokinetic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000191> <http://identifiers.org/mamo/MAMO_0000019>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000192> (<http://identifiers.org/mamo/MAMO_0000192>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 205"@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000192> "http://identifier.org/isbn/978-0387-27197-2"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000192> "nonlinear pharmacokinetic model which contain both fixed and random effects (mixed)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000192> "nonlinear mixed effect pharmacokinetic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000192> <http://identifiers.org/mamo/MAMO_0000191>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000193> (<http://identifiers.org/mamo/MAMO_0000193>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000193> "https://en.wikipedia.org/wiki/Markov_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000193> "a stochastic model, that models a process where the state depends on previous states in a non-deterministic way, and assumes the Markov property: the conditional probability distribution of future states of the process (conditional on both past and present values) depends only upon the present state; that is, given the present, the future does not depend on the past."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000193> "Markov model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000193> <http://identifiers.org/mamo/MAMO_0000003>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000193> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000064>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000194> (<http://identifiers.org/mamo/MAMO_0000194>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000194> "http://en.wikipedia.org/wiki/Hidden_Markov_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000194> "HMM"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000194> "a Markov model in which the system being modeled is autonomous and its state is only partially observable. In other words, observations are related to the state of the system, but they are typically insufficient to precisely determine the state."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000194> "hidden Markov model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000194> <http://identifiers.org/mamo/MAMO_0000193>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000195> (<http://identifiers.org/mamo/MAMO_0000195>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000195> "http://en.wikipedia.org/wiki/Markov_chain"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000195> "DTMC"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000195> "discrete-time Markov chain"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000195> "a Markov model that models the state of a system with a random variable that changes through time. In this context, the Markov property suggests that the distribution for this variable depends only on the distribution of the previous state. The system is autonomous and its state is fully observable."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000195> "Markov chain"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000195> <http://identifiers.org/mamo/MAMO_0000193>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000196> (<http://identifiers.org/mamo/MAMO_0000196>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000196> "http://en.wikipedia.org/wiki/Markov_decision_process"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000196> "MDP"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000196> "a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000196> "Markov decision process"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000196> <http://identifiers.org/mamo/MAMO_0000193>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000197> (<http://identifiers.org/mamo/MAMO_0000197>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000197> "http://en.wikipedia.org/wiki/Markov_random_field"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000197> "MRF"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000197> "Markov network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000197> "undirected graphical model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000197> "a set of random variables having a Markov property described by an undirected graph. A Markov random field may be considered to be a generalization of a Markov chain in multiple dimensions. In a Markov chain, state depends only on the previous state in time, whereas in a Markov random field, each state depends on its neighbors in any of multiple directions. A Markov random field may be visualized as a field or graph of random variables, where the distribution of each random variable depends on the neighboring variables with which it is connected."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000197> "Markov random field"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000197> <http://identifiers.org/mamo/MAMO_0000193>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000198> (<http://identifiers.org/mamo/MAMO_0000198>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000198> "http://en.wikipedia.org/wiki/Piecewise_linear_function"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "Glass L, Kauffman SA. The logical analysis of continuous, non-linear biochemical control networks. J Theor Biol. 1973;39(1):103-29."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000198> "http://identifiers.org/pubmed/4741704"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000198> "model based on piecewise linear differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000198> "model using piecewise linear differential equations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000198> "piecewise linear differential equations model"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000198> "model using functions that respond to parameter values via threshold (Heavyside) functions."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000198> "piecewise linear differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000198> <http://identifiers.org/mamo/MAMO_0000045>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000199> (<http://identifiers.org/mamo/MAMO_0000199>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Coutinho R, Fernandez B, Lima R, Meyroneinc A. Discrete time piecewise affine models of genetic regulatory networks. J Math Biol. 2006 Apr;52(4):524-70. Epub 2006 Mar 6."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000199> "http://identifiers.org/pubmed/16521027"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000199> "model using piecewise linear differential equations in which variables are updated only at certain times."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000199> "discrete time piecewise linear differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000199> <http://identifiers.org/mamo/MAMO_0000198>)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000199> ObjectSomeValuesFrom(:hasFeature <http://identifiers.org/mamo/MAMO_0000059>))
+
+# Class: <http://identifiers.org/mamo/MAMO_0000200> (<http://identifiers.org/mamo/MAMO_0000200>)
+
+AnnotationAssertion(Annotation(rdfs:comment "De Jong H1, Gouze JL, Hernandez C, Page M, Sari T, Geiselmann J. Qualitative simulation of genetic regulatory networks using piecewise-linear models. Bull Math Biol. 2004 Mar;66(2):301-40."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000200> "http://identifiers.org/pubmed/14871568"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000200> "piecewise linear differential equation model in which the variables can only take a discrete number of levels."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000200> "qualitative piecewise linear differential equation model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000200> <http://identifiers.org/mamo/MAMO_0000198>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000202> (<http://identifiers.org/mamo/MAMO_0000202>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000202> "http://en.wikipedia.org/wiki/Protein%E2%80%93protein_interaction"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "Koh et al. Analyzing protein-protein interaction networks. J Proteome Res. 2012; 11(4):2014-31."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000202> "http://identifiers.org/pubmed/22385417"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000202> "PIN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000202> "PPI"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000202> "PPI network"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000202> "PPIN"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000202> "PPIs"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000202> "A network representing intentional physical contacts established between two or more proteins as a result of biochemical events and/or electrostatic forces."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000202> "protein-protein interaction network"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000202> <http://identifiers.org/mamo/MAMO_0000036>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000203> (<http://identifiers.org/mamo/MAMO_0000203>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000203> "http://en.wikipedia.org/wiki/Physiologically_based_pharmacokinetic_modelling"^^xsd:anyURI)
+AnnotationAssertion(Annotation(rdfs:comment "HM Jones and K Rowland-Yeo Basic Concepts in Physiologically Based Pharmacokinetic Modeling in Drug Discovery and Development (2013) Pharmacometrics Syst Pharmacol. 2(8): e63."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000203> "http://identifiers.org/pubmed/23945604"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://identifiers.org/mamo/MAMO_0000203> "PBPK"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000203> "A model using a series of differential equations that are parametrized with known physiological variables and represent a quantitative mechanistic framework by which the absorption, distribution, metabolism, and excretion (ADME) of new drugs can be described."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000203> "physiologically based pharmacokinetic model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000203> <http://identifiers.org/mamo/MAMO_0000019>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000204> (<http://identifiers.org/mamo/MAMO_0000204>)
+
+AnnotationAssertion(rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000204> "https://en.wikipedia.org/wiki/Square-lattice_Ising_model"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000204> "2D Ising model [http://identifiers.org/mamo/MAMO_0000185] of interacting magnetic spins on a square lattice."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000204> "square-lattice Ising model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000204> <http://identifiers.org/mamo/MAMO_0000185>)
+
+# Class: <http://identifiers.org/mamo/MAMO_0000205> (<http://identifiers.org/mamo/MAMO_0000205>)
+
+AnnotationAssertion(Annotation(rdfs:comment "Karr et al. A whole-cell computational model predicts phenotype from genotype. Cell. 2012; 150(2):389-401."@en) rdfs:seeAlso <http://identifiers.org/mamo/MAMO_0000205> "http://identifiers.org/pubmed/22817898"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://identifiers.org/mamo/MAMO_0000205> "Computational model that includes all of the molecular components of a biological cell and their interactions."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://identifiers.org/mamo/MAMO_0000205> "whole-cell model"@en)
+SubClassOf(<http://identifiers.org/mamo/MAMO_0000205> <http://identifiers.org/mamo/MAMO_0000180>)
+
+
+DisjointClasses(:MAMO_0000207 :MAMO_0000208 :MAMO_0000209 :MAMO_0000210)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000010> <http://identifiers.org/mamo/MAMO_0000027> <http://identifiers.org/mamo/MAMO_0000037> <http://identifiers.org/mamo/MAMO_0000054>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000038> <http://identifiers.org/mamo/MAMO_0000039> <http://identifiers.org/mamo/MAMO_0000040> <http://identifiers.org/mamo/MAMO_0000202>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000046> <http://identifiers.org/mamo/MAMO_0000047> <http://identifiers.org/mamo/MAMO_0000048>)
+DisjointClasses(<http://identifiers.org/mamo/MAMO_0000055> <http://identifiers.org/mamo/MAMO_0000058> <http://identifiers.org/mamo/MAMO_0000061> <http://identifiers.org/mamo/MAMO_0000062>)
+)

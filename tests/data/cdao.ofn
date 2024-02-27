@@ -1,0 +1,1611 @@
+Prefix(:=<http://purl.obolibrary.org/obo/cdao.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/cdao.owl>
+<http://purl.obolibrary.org/obo/cdao/2024-01-25/cdao.owl>
+Import(<http://purl.obolibrary.org/obo/iao/ontology-metadata.owl>)
+Annotation(terms:coverage "Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.")
+Annotation(terms:creator "CDAO Team"@en)
+Annotation(terms:description "The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called 'OTUs' (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the 'character-state data model'.  For a given character, such as 'beak length', each OTU has a state, such as 'short' or 'long'.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.")
+Annotation(terms:license <http://creativecommons.org/publicdomain/zero/1.0/>)
+Annotation(terms:subject "comparative analysis; comparative data analysis; evolutionary comparative analysis; evolution;  phylogeny; phylogenetics"@en)
+Annotation(terms:title "Comparative Data Analysis Ontology"@en)
+
+Declaration(Class(obo:CDAO_0000002))
+Declaration(Class(obo:CDAO_0000003))
+Declaration(Class(obo:CDAO_0000004))
+Declaration(Class(obo:CDAO_0000005))
+Declaration(Class(obo:CDAO_0000006))
+Declaration(Class(obo:CDAO_0000007))
+Declaration(Class(obo:CDAO_0000008))
+Declaration(Class(obo:CDAO_0000009))
+Declaration(Class(obo:CDAO_0000010))
+Declaration(Class(obo:CDAO_0000011))
+Declaration(Class(obo:CDAO_0000012))
+Declaration(Class(obo:CDAO_0000013))
+Declaration(Class(obo:CDAO_0000014))
+Declaration(Class(obo:CDAO_0000015))
+Declaration(Class(obo:CDAO_0000016))
+Declaration(Class(obo:CDAO_0000017))
+Declaration(Class(obo:CDAO_0000018))
+Declaration(Class(obo:CDAO_0000019))
+Declaration(Class(obo:CDAO_0000020))
+Declaration(Class(obo:CDAO_0000021))
+Declaration(Class(obo:CDAO_0000022))
+Declaration(Class(obo:CDAO_0000023))
+Declaration(Class(obo:CDAO_0000024))
+Declaration(Class(obo:CDAO_0000025))
+Declaration(Class(obo:CDAO_0000026))
+Declaration(Class(obo:CDAO_0000027))
+Declaration(Class(obo:CDAO_0000029))
+Declaration(Class(obo:CDAO_0000030))
+Declaration(Class(obo:CDAO_0000031))
+Declaration(Class(obo:CDAO_0000032))
+Declaration(Class(obo:CDAO_0000033))
+Declaration(Class(obo:CDAO_0000034))
+Declaration(Class(obo:CDAO_0000035))
+Declaration(Class(obo:CDAO_0000039))
+Declaration(Class(obo:CDAO_0000040))
+Declaration(Class(obo:CDAO_0000041))
+Declaration(Class(obo:CDAO_0000042))
+Declaration(Class(obo:CDAO_0000043))
+Declaration(Class(obo:CDAO_0000044))
+Declaration(Class(obo:CDAO_0000045))
+Declaration(Class(obo:CDAO_0000046))
+Declaration(Class(obo:CDAO_0000047))
+Declaration(Class(obo:CDAO_0000048))
+Declaration(Class(obo:CDAO_0000049))
+Declaration(Class(obo:CDAO_0000050))
+Declaration(Class(obo:CDAO_0000051))
+Declaration(Class(obo:CDAO_0000052))
+Declaration(Class(obo:CDAO_0000053))
+Declaration(Class(obo:CDAO_0000055))
+Declaration(Class(obo:CDAO_0000056))
+Declaration(Class(obo:CDAO_0000057))
+Declaration(Class(obo:CDAO_0000058))
+Declaration(Class(obo:CDAO_0000059))
+Declaration(Class(obo:CDAO_0000060))
+Declaration(Class(obo:CDAO_0000061))
+Declaration(Class(obo:CDAO_0000062))
+Declaration(Class(obo:CDAO_0000063))
+Declaration(Class(obo:CDAO_0000064))
+Declaration(Class(obo:CDAO_0000065))
+Declaration(Class(obo:CDAO_0000066))
+Declaration(Class(obo:CDAO_0000067))
+Declaration(Class(obo:CDAO_0000068))
+Declaration(Class(obo:CDAO_0000069))
+Declaration(Class(obo:CDAO_0000070))
+Declaration(Class(obo:CDAO_0000071))
+Declaration(Class(obo:CDAO_0000072))
+Declaration(Class(obo:CDAO_0000073))
+Declaration(Class(obo:CDAO_0000074))
+Declaration(Class(obo:CDAO_0000075))
+Declaration(Class(obo:CDAO_0000076))
+Declaration(Class(obo:CDAO_0000077))
+Declaration(Class(obo:CDAO_0000078))
+Declaration(Class(obo:CDAO_0000079))
+Declaration(Class(obo:CDAO_0000080))
+Declaration(Class(obo:CDAO_0000081))
+Declaration(Class(obo:CDAO_0000082))
+Declaration(Class(obo:CDAO_0000083))
+Declaration(Class(obo:CDAO_0000084))
+Declaration(Class(obo:CDAO_0000085))
+Declaration(Class(obo:CDAO_0000086))
+Declaration(Class(obo:CDAO_0000087))
+Declaration(Class(obo:CDAO_0000088))
+Declaration(Class(obo:CDAO_0000089))
+Declaration(Class(obo:CDAO_0000090))
+Declaration(Class(obo:CDAO_0000091))
+Declaration(Class(obo:CDAO_0000092))
+Declaration(Class(obo:CDAO_0000093))
+Declaration(Class(obo:CDAO_0000094))
+Declaration(Class(obo:CDAO_0000095))
+Declaration(Class(obo:CDAO_0000096))
+Declaration(Class(obo:CDAO_0000097))
+Declaration(Class(obo:CDAO_0000098))
+Declaration(Class(obo:CDAO_0000099))
+Declaration(Class(obo:CDAO_0000100))
+Declaration(Class(obo:CDAO_0000101))
+Declaration(Class(obo:CDAO_0000102))
+Declaration(Class(obo:CDAO_0000103))
+Declaration(Class(obo:CDAO_0000104))
+Declaration(Class(obo:CDAO_0000105))
+Declaration(Class(obo:CDAO_0000107))
+Declaration(Class(obo:CDAO_0000108))
+Declaration(Class(obo:CDAO_0000109))
+Declaration(Class(obo:CDAO_0000110))
+Declaration(Class(obo:CDAO_0000111))
+Declaration(Class(obo:CDAO_0000112))
+Declaration(Class(obo:CDAO_0000113))
+Declaration(Class(obo:CDAO_0000114))
+Declaration(Class(obo:CDAO_0000115))
+Declaration(Class(obo:CDAO_0000116))
+Declaration(Class(obo:CDAO_0000117))
+Declaration(Class(obo:CDAO_0000118))
+Declaration(Class(obo:CDAO_0000120))
+Declaration(Class(obo:CDAO_0000121))
+Declaration(Class(obo:CDAO_0000122))
+Declaration(Class(obo:CDAO_0000124))
+Declaration(Class(obo:CDAO_0000125))
+Declaration(Class(obo:CDAO_0000126))
+Declaration(Class(obo:CDAO_0000127))
+Declaration(Class(obo:CDAO_0000128))
+Declaration(Class(obo:CDAO_0000129))
+Declaration(Class(obo:CDAO_0000130))
+Declaration(Class(obo:CDAO_0000131))
+Declaration(Class(obo:CDAO_0000132))
+Declaration(Class(obo:CDAO_0000133))
+Declaration(Class(obo:CDAO_0000134))
+Declaration(Class(obo:CDAO_0000136))
+Declaration(Class(obo:CDAO_0000137))
+Declaration(Class(obo:CDAO_0000138))
+Declaration(Class(obo:CDAO_0000139))
+Declaration(Class(obo:CDAO_0000140))
+Declaration(Class(obo:CDAO_0000141))
+Declaration(ObjectProperty(obo:CDAO_0000142))
+Declaration(ObjectProperty(obo:CDAO_0000143))
+Declaration(ObjectProperty(obo:CDAO_0000144))
+Declaration(ObjectProperty(obo:CDAO_0000145))
+Declaration(ObjectProperty(obo:CDAO_0000146))
+Declaration(ObjectProperty(obo:CDAO_0000147))
+Declaration(ObjectProperty(obo:CDAO_0000148))
+Declaration(ObjectProperty(obo:CDAO_0000149))
+Declaration(ObjectProperty(obo:CDAO_0000150))
+Declaration(ObjectProperty(obo:CDAO_0000151))
+Declaration(ObjectProperty(obo:CDAO_0000152))
+Declaration(ObjectProperty(obo:CDAO_0000153))
+Declaration(ObjectProperty(obo:CDAO_0000154))
+Declaration(ObjectProperty(obo:CDAO_0000155))
+Declaration(ObjectProperty(obo:CDAO_0000156))
+Declaration(ObjectProperty(obo:CDAO_0000157))
+Declaration(ObjectProperty(obo:CDAO_0000158))
+Declaration(ObjectProperty(obo:CDAO_0000159))
+Declaration(ObjectProperty(obo:CDAO_0000160))
+Declaration(ObjectProperty(obo:CDAO_0000161))
+Declaration(ObjectProperty(obo:CDAO_0000162))
+Declaration(ObjectProperty(obo:CDAO_0000163))
+Declaration(ObjectProperty(obo:CDAO_0000164))
+Declaration(ObjectProperty(obo:CDAO_0000165))
+Declaration(ObjectProperty(obo:CDAO_0000166))
+Declaration(ObjectProperty(obo:CDAO_0000167))
+Declaration(ObjectProperty(obo:CDAO_0000168))
+Declaration(ObjectProperty(obo:CDAO_0000169))
+Declaration(ObjectProperty(obo:CDAO_0000170))
+Declaration(ObjectProperty(obo:CDAO_0000171))
+Declaration(ObjectProperty(obo:CDAO_0000172))
+Declaration(ObjectProperty(obo:CDAO_0000173))
+Declaration(ObjectProperty(obo:CDAO_0000174))
+Declaration(ObjectProperty(obo:CDAO_0000175))
+Declaration(ObjectProperty(obo:CDAO_0000176))
+Declaration(ObjectProperty(obo:CDAO_0000177))
+Declaration(ObjectProperty(obo:CDAO_0000178))
+Declaration(ObjectProperty(obo:CDAO_0000179))
+Declaration(ObjectProperty(obo:CDAO_0000180))
+Declaration(ObjectProperty(obo:CDAO_0000181))
+Declaration(ObjectProperty(obo:CDAO_0000182))
+Declaration(ObjectProperty(obo:CDAO_0000183))
+Declaration(ObjectProperty(obo:CDAO_0000184))
+Declaration(ObjectProperty(obo:CDAO_0000185))
+Declaration(ObjectProperty(obo:CDAO_0000186))
+Declaration(ObjectProperty(obo:CDAO_0000187))
+Declaration(ObjectProperty(obo:CDAO_0000188))
+Declaration(ObjectProperty(obo:CDAO_0000189))
+Declaration(ObjectProperty(obo:CDAO_0000190))
+Declaration(ObjectProperty(obo:CDAO_0000191))
+Declaration(ObjectProperty(obo:CDAO_0000192))
+Declaration(ObjectProperty(obo:CDAO_0000193))
+Declaration(ObjectProperty(obo:CDAO_0000194))
+Declaration(ObjectProperty(obo:CDAO_0000195))
+Declaration(ObjectProperty(obo:CDAO_0000196))
+Declaration(ObjectProperty(obo:CDAO_0000197))
+Declaration(ObjectProperty(obo:CDAO_0000198))
+Declaration(ObjectProperty(obo:CDAO_0000199))
+Declaration(ObjectProperty(obo:CDAO_0000200))
+Declaration(ObjectProperty(obo:CDAO_0000201))
+Declaration(ObjectProperty(obo:CDAO_0000202))
+Declaration(ObjectProperty(obo:CDAO_0000203))
+Declaration(ObjectProperty(obo:CDAO_0000204))
+Declaration(ObjectProperty(obo:CDAO_0000205))
+Declaration(ObjectProperty(obo:CDAO_0000206))
+Declaration(ObjectProperty(obo:CDAO_0000207))
+Declaration(ObjectProperty(obo:CDAO_0000208))
+Declaration(ObjectProperty(obo:CDAO_0000209))
+Declaration(ObjectProperty(obo:CDAO_0000210))
+Declaration(DataProperty(obo:CDAO_0000211))
+Declaration(DataProperty(obo:CDAO_0000212))
+Declaration(DataProperty(obo:CDAO_0000213))
+Declaration(DataProperty(obo:CDAO_0000214))
+Declaration(DataProperty(obo:CDAO_0000215))
+Declaration(DataProperty(obo:CDAO_0000216))
+Declaration(DataProperty(obo:CDAO_0000217))
+Declaration(DataProperty(obo:CDAO_0000218))
+Declaration(DataProperty(obo:CDAO_0000219))
+Declaration(NamedIndividual(obo:CDAO_0000220))
+Declaration(NamedIndividual(obo:CDAO_0000221))
+Declaration(NamedIndividual(obo:CDAO_0000222))
+Declaration(NamedIndividual(obo:CDAO_0000223))
+Declaration(NamedIndividual(obo:CDAO_0000224))
+Declaration(NamedIndividual(obo:CDAO_0000225))
+Declaration(NamedIndividual(obo:CDAO_0000226))
+Declaration(NamedIndividual(obo:CDAO_0000227))
+Declaration(AnnotationProperty(dc:coverage))
+Declaration(AnnotationProperty(dc:creator))
+Declaration(AnnotationProperty(dc:date))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:identifier))
+Declaration(AnnotationProperty(dc:language))
+Declaration(AnnotationProperty(dc:rights))
+Declaration(AnnotationProperty(dc:source))
+Declaration(AnnotationProperty(dc:subject))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(terms:coverage))
+Declaration(AnnotationProperty(terms:creator))
+Declaration(AnnotationProperty(terms:description))
+Declaration(AnnotationProperty(terms:subject))
+Declaration(AnnotationProperty(terms:title))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:CDAO_0000142 (has_Character)
+
+AnnotationAssertion(terms:description obo:CDAO_0000142 "This property associates a character data matrix with a character (a column) represented in the matrix.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000142 "has_Character")
+SubObjectPropertyOf(obo:CDAO_0000142 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000142 obo:CDAO_0000056)
+ObjectPropertyRange(obo:CDAO_0000142 obo:CDAO_0000071)
+
+# Object Property: obo:CDAO_0000143 (belongs_to_Edge_as_Child)
+
+AnnotationAssertion(terms:description obo:CDAO_0000143 "The property links a Node to the Edge it belongs to in the child position.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000143 "belongs_to_Edge_as_Child")
+SubObjectPropertyOf(obo:CDAO_0000143 obo:CDAO_0000146)
+InverseObjectProperties(obo:CDAO_0000143 obo:CDAO_0000209)
+ObjectPropertyDomain(obo:CDAO_0000143 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000143 obo:CDAO_0000139)
+
+# Object Property: obo:CDAO_0000144 (has_Ancestor)
+
+AnnotationAssertion(terms:description obo:CDAO_0000144 "The property links a node to any of the other nodes that are its ancestors in a rooted tree.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000144 "has_Ancestor")
+SubObjectPropertyOf(obo:CDAO_0000144 obo:CDAO_0000178)
+InverseObjectProperties(obo:CDAO_0000144 obo:CDAO_0000174)
+TransitiveObjectProperty(obo:CDAO_0000144)
+ObjectPropertyDomain(obo:CDAO_0000144 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000144 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000145 (has_Nucleotide_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000145 "This property associates a nucleotide character-state instance with a state value from the domain of nucleotide states.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000145 "has_Nucleotide_State")
+SubObjectPropertyOf(obo:CDAO_0000145 obo:CDAO_0000184)
+ObjectPropertyDomain(obo:CDAO_0000145 obo:CDAO_0000002)
+ObjectPropertyRange(obo:CDAO_0000145 ObjectUnionOf(obo:CDAO_0000015 obo:CDAO_0000133))
+
+# Object Property: obo:CDAO_0000146 (belongs_to_Edge)
+
+AnnotationAssertion(terms:description obo:CDAO_0000146 "The property links a Node to one of the edges that are incident on such node.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000146 "belongs_to_Edge")
+SubObjectPropertyOf(obo:CDAO_0000146 obo:CDAO_0000190)
+ObjectPropertyDomain(obo:CDAO_0000146 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000146 obo:CDAO_0000099)
+
+# Object Property: obo:CDAO_0000147 (belongs_to_Character_State_Data_Matrix)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000147 "belongs_to_Character_State_Data_Matrix")
+SubObjectPropertyOf(obo:CDAO_0000147 obo:CDAO_0000190)
+ObjectPropertyDomain(obo:CDAO_0000147 ObjectUnionOf(obo:CDAO_0000071 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000147 obo:CDAO_0000056)
+
+# Object Property: obo:CDAO_0000148 (has_Root)
+
+AnnotationAssertion(terms:description obo:CDAO_0000148 "The property links a rooted tree to the specific node that represents the unique root of the tree.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000148 "has_Root")
+SubObjectPropertyOf(obo:CDAO_0000148 obo:CDAO_0000178)
+InverseObjectProperties(obo:CDAO_0000148 obo:CDAO_0000203)
+FunctionalObjectProperty(obo:CDAO_0000148)
+ObjectPropertyDomain(obo:CDAO_0000148 obo:CDAO_0000012)
+ObjectPropertyRange(obo:CDAO_0000148 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000149 (has_Child)
+
+AnnotationAssertion(terms:description obo:CDAO_0000149 "The property links a node to a node that is an immediate descendant in the tree.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000149 "has_Child")
+SubObjectPropertyOf(obo:CDAO_0000149 obo:CDAO_0000174)
+InverseObjectProperties(obo:CDAO_0000149 obo:CDAO_0000179)
+ObjectPropertyDomain(obo:CDAO_0000149 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000149 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000150 (has_First_Coordinate_Item)
+
+AnnotationAssertion(terms:description obo:CDAO_0000150 "The property that relates a coordinate list to the first item in the list.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000150 "has_First_Coordinate_Item")
+SubObjectPropertyOf(obo:CDAO_0000150 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000150 obo:CDAO_0000092)
+ObjectPropertyRange(obo:CDAO_0000150 ObjectUnionOf(obo:CDAO_0000003 obo:CDAO_0000095))
+
+# Object Property: obo:CDAO_0000151 (has_Coordinate)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000151 "has_Coordinate")
+SubObjectPropertyOf(obo:CDAO_0000151 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000151 obo:CDAO_0000098)
+ObjectPropertyRange(obo:CDAO_0000151 obo:CDAO_0000022)
+
+# Object Property: obo:CDAO_0000152 (belongs_to_Continuous_Character)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000152 "belongs_to_Continuous_Character")
+SubObjectPropertyOf(obo:CDAO_0000152 obo:CDAO_0000205)
+FunctionalObjectProperty(obo:CDAO_0000152)
+ObjectPropertyDomain(obo:CDAO_0000152 obo:CDAO_0000019)
+ObjectPropertyRange(obo:CDAO_0000152 obo:CDAO_0000068)
+
+# Object Property: obo:CDAO_0000153 (has_Datum)
+
+AnnotationAssertion(terms:description obo:CDAO_0000153 "This property relates a character to a state datum for the character.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000153 "has_Datum")
+SubObjectPropertyOf(obo:CDAO_0000153 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000153 ObjectUnionOf(obo:CDAO_0000071 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000153 obo:CDAO_0000098)
+
+# Object Property: obo:CDAO_0000154 (has_Standard_Datum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000154 "has_Standard_Datum")
+SubObjectPropertyOf(obo:CDAO_0000154 obo:CDAO_0000183)
+ObjectPropertyDomain(obo:CDAO_0000154 ObjectUnionOf(obo:CDAO_0000075 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000154 obo:CDAO_0000008)
+
+# Object Property: obo:CDAO_0000155 (subtree_of)
+
+AnnotationAssertion(terms:description obo:CDAO_0000155 "This property links two networks where the latter is a substructure of the former")
+AnnotationAssertion(rdfs:label obo:CDAO_0000155 "subtree_of")
+ObjectPropertyDomain(obo:CDAO_0000155 obo:CDAO_0000006)
+ObjectPropertyRange(obo:CDAO_0000155 obo:CDAO_0000006)
+
+# Object Property: obo:CDAO_0000156 (has_Amino_Acid_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000156 "This property associates a amino acid character-state instance with a state value from the domain of amino acid states.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000156 "has_Amino_Acid_State")
+SubObjectPropertyOf(obo:CDAO_0000156 obo:CDAO_0000184)
+ObjectPropertyDomain(obo:CDAO_0000156 obo:CDAO_0000112)
+ObjectPropertyRange(obo:CDAO_0000156 ObjectUnionOf(obo:CDAO_0000015 obo:CDAO_0000076))
+
+# Object Property: obo:CDAO_0000157 (is_annotation_of)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000157 "is_annotation_of")
+InverseObjectProperties(obo:CDAO_0000157 obo:CDAO_0000193)
+ObjectPropertyDomain(obo:CDAO_0000157 obo:CDAO_0000040)
+
+# Object Property: obo:CDAO_0000158 (has_RNA_Datum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000158 "has_RNA_Datum")
+SubObjectPropertyOf(obo:CDAO_0000158 obo:CDAO_0000206)
+
+# Object Property: obo:CDAO_0000159 (has_Left_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000159 "This property relates a transformation to a 'left' state (the state associated with the 'left' node).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000159 "has_Left_State")
+SubObjectPropertyOf(obo:CDAO_0000159 obo:CDAO_0000182)
+ObjectPropertyDomain(obo:CDAO_0000159 obo:CDAO_0000097)
+ObjectPropertyRange(obo:CDAO_0000159 obo:CDAO_0000091)
+
+# Object Property: obo:CDAO_0000160 (precedes)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000160 "precedes")
+
+# Object Property: obo:CDAO_0000161 (exclude)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000161 "exclude")
+
+# Object Property: obo:CDAO_0000162 (has_Node)
+
+AnnotationAssertion(terms:description obo:CDAO_0000162 "Property that associates to each Edge the Nodes it connects.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000162 "has_Node")
+SubObjectPropertyOf(obo:CDAO_0000162 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000162 obo:CDAO_0000099)
+ObjectPropertyRange(obo:CDAO_0000162 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000163 (nca_node_of)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000163 "nca_node_of")
+ObjectPropertyDomain(obo:CDAO_0000163 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000163 obo:CDAO_0000059)
+
+# Object Property: obo:CDAO_0000164 (has_External_Reference)
+
+AnnotationAssertion(rdfs:comment obo:CDAO_0000164 "Associates a TU to some external taxonomy reference."^^rdfs:Literal)
+AnnotationAssertion(rdfs:label obo:CDAO_0000164 "has_External_Reference")
+ObjectPropertyDomain(obo:CDAO_0000164 obo:CDAO_0000138)
+
+# Object Property: obo:CDAO_0000165 (has_Coordinate_System)
+
+AnnotationAssertion(terms:description obo:CDAO_0000165 "This property links a coordinate to the coordinate system it references.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000165 "has_Coordinate_System")
+ObjectPropertyDomain(obo:CDAO_0000165 obo:CDAO_0000022)
+ObjectPropertyRange(obo:CDAO_0000165 obo:CDAO_0000104)
+
+# Object Property: obo:CDAO_0000166 (belongs_to_Nucleotide_Character)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000166 "belongs_to_Nucleotide_Character")
+SubObjectPropertyOf(obo:CDAO_0000166 obo:CDAO_0000205)
+FunctionalObjectProperty(obo:CDAO_0000166)
+ObjectPropertyDomain(obo:CDAO_0000166 obo:CDAO_0000002)
+ObjectPropertyRange(obo:CDAO_0000166 obo:CDAO_0000094)
+
+# Object Property: obo:CDAO_0000167 (connects_to)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000167 "connects_to")
+InverseObjectProperties(obo:CDAO_0000167 obo:CDAO_0000167)
+SymmetricObjectProperty(obo:CDAO_0000167)
+
+# Object Property: obo:CDAO_0000168 (has_Amino_Acid_Datum)
+
+AnnotationAssertion(terms:description obo:CDAO_0000168 "This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000168 "has_Amino_Acid_Datum")
+SubObjectPropertyOf(obo:CDAO_0000168 obo:CDAO_0000206)
+ObjectPropertyDomain(obo:CDAO_0000168 ObjectUnionOf(obo:CDAO_0000131 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000168 obo:CDAO_0000112)
+
+# Object Property: obo:CDAO_0000169 (hereditary_change_of)
+
+AnnotationAssertion(terms:description obo:CDAO_0000169 "This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000169 "hereditary_change_of")
+ObjectPropertyRange(obo:CDAO_0000169 obo:CDAO_0000071)
+
+# Object Property: obo:CDAO_0000170 (has_Compound_Datum)
+
+AnnotationAssertion(terms:description obo:CDAO_0000170 "This property relates a compound character (a character with some states that are subdividable) to a state datum for the character.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000170 "has_Compound_Datum")
+SubObjectPropertyOf(obo:CDAO_0000170 obo:CDAO_0000183)
+ObjectPropertyDomain(obo:CDAO_0000170 ObjectUnionOf(obo:CDAO_0000078 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000170 obo:CDAO_0000136)
+
+# Object Property: obo:CDAO_0000171 (has_Descendants)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000171 "has_Descendants")
+SubObjectPropertyOf(obo:CDAO_0000171 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000171 obo:CDAO_0000080)
+ObjectPropertyRange(obo:CDAO_0000171 obo:CDAO_0000059)
+
+# Object Property: obo:CDAO_0000172 (reconciliation_of)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000172 "reconciliation_of")
+ObjectPropertyDomain(obo:CDAO_0000172 obo:CDAO_0000030)
+ObjectPropertyRange(obo:CDAO_0000172 obo:CDAO_0000110)
+
+# Object Property: obo:CDAO_0000173 (belongs_to_Amino_Acid_Character)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000173 "belongs_to_Amino_Acid_Character")
+SubObjectPropertyOf(obo:CDAO_0000173 obo:CDAO_0000205)
+FunctionalObjectProperty(obo:CDAO_0000173)
+ObjectPropertyDomain(obo:CDAO_0000173 obo:CDAO_0000112)
+ObjectPropertyRange(obo:CDAO_0000173 obo:CDAO_0000131)
+
+# Object Property: obo:CDAO_0000174 (has_Descendant)
+
+AnnotationAssertion(terms:description obo:CDAO_0000174 "A property that links a node to any of its descendants in a rooted tree.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000174 "has_Descendant")
+SubObjectPropertyOf(obo:CDAO_0000174 obo:CDAO_0000178)
+TransitiveObjectProperty(obo:CDAO_0000174)
+ObjectPropertyDomain(obo:CDAO_0000174 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000174 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000175 (has_Continuous_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000175 "This property associates a character-state instance with a state value on a continuous numeric scale.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000175 "has_Continuous_State")
+SubObjectPropertyOf(obo:CDAO_0000175 obo:CDAO_0000184)
+ObjectPropertyDomain(obo:CDAO_0000175 obo:CDAO_0000019)
+ObjectPropertyRange(obo:CDAO_0000175 obo:CDAO_0000031)
+
+# Object Property: obo:CDAO_0000176 (has_Type)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000176 "has_Type")
+SubObjectPropertyOf(obo:CDAO_0000176 obo:CDAO_0000178)
+
+# Object Property: obo:CDAO_0000177 (belongs_to_Edge_as_Parent)
+
+AnnotationAssertion(terms:description obo:CDAO_0000177 "The property links a Node to one of the Edges where the node appears in the parent position (i.e., closer to the root).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000177 "belongs_to_Edge_as_Parent")
+SubObjectPropertyOf(obo:CDAO_0000177 obo:CDAO_0000146)
+InverseObjectProperties(obo:CDAO_0000177 obo:CDAO_0000201)
+ObjectPropertyDomain(obo:CDAO_0000177 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000177 obo:CDAO_0000139)
+
+# Object Property: obo:CDAO_0000178 (has)
+
+AnnotationAssertion(terms:description obo:CDAO_0000178 "Generic 'has' property.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000178 "has")
+InverseObjectProperties(obo:CDAO_0000178 obo:CDAO_0000190)
+
+# Object Property: obo:CDAO_0000179 (has_Parent)
+
+AnnotationAssertion(terms:description obo:CDAO_0000179 "The property that links a node to its unique parent in a rooted tree.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000179 "has_Parent")
+SubObjectPropertyOf(obo:CDAO_0000179 obo:CDAO_0000144)
+ObjectPropertyDomain(obo:CDAO_0000179 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000179 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000180 (belongs_to_Compound_Character)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000180 "belongs_to_Compound_Character")
+SubObjectPropertyOf(obo:CDAO_0000180 obo:CDAO_0000205)
+ObjectPropertyDomain(obo:CDAO_0000180 obo:CDAO_0000136)
+ObjectPropertyRange(obo:CDAO_0000180 obo:CDAO_0000078)
+
+# Object Property: obo:CDAO_0000181 (homologous_to)
+
+AnnotationAssertion(terms:description obo:CDAO_0000181 "This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000181 "homologous_to")
+ObjectPropertyDomain(obo:CDAO_0000181 obo:CDAO_0000098)
+ObjectPropertyRange(obo:CDAO_0000181 obo:CDAO_0000098)
+
+# Object Property: obo:CDAO_0000182 (has_Change_Component)
+
+AnnotationAssertion(terms:description obo:CDAO_0000182 "This property relates a transformation to the components that compose it.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000182 "has_Change_Component")
+SubObjectPropertyOf(obo:CDAO_0000182 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000182 obo:CDAO_0000097)
+
+# Object Property: obo:CDAO_0000183 (has_Categorical_Datum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000183 "has_Categorical_Datum")
+SubObjectPropertyOf(obo:CDAO_0000183 obo:CDAO_0000153)
+
+# Object Property: obo:CDAO_0000184 (has_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000184 "This property associates a character-state instance with its state value, e.g., a state value expressed in terms of an imported domain ontology.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000184 "has_State")
+SubObjectPropertyOf(obo:CDAO_0000184 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000184 obo:CDAO_0000098)
+ObjectPropertyRange(obo:CDAO_0000184 obo:CDAO_0000091)
+
+# Object Property: obo:CDAO_0000185 (has_Left_Node)
+
+AnnotationAssertion(terms:description obo:CDAO_0000185 "This property relates a transformation to a 'left' node (the node that has the 'left' state).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000185 "has_Left_Node")
+SubObjectPropertyOf(obo:CDAO_0000185 obo:CDAO_0000182)
+ObjectPropertyDomain(obo:CDAO_0000185 obo:CDAO_0000097)
+ObjectPropertyRange(obo:CDAO_0000185 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000186 (has_Right_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000186 "This property relates a transformation to a 'right' state (the state associated with the 'right' node).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000186 "has_Right_State")
+SubObjectPropertyOf(obo:CDAO_0000186 obo:CDAO_0000182)
+ObjectPropertyDomain(obo:CDAO_0000186 obo:CDAO_0000097)
+ObjectPropertyRange(obo:CDAO_0000186 obo:CDAO_0000091)
+
+# Object Property: obo:CDAO_0000187 (represents_TU)
+
+AnnotationAssertion(terms:description obo:CDAO_0000187 "This property relates a TU or taxonomic unit (typically associated with character data) to a phylogenetic history (Tree).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000187 "represents_TU")
+InverseObjectProperties(obo:CDAO_0000187 obo:CDAO_0000196)
+FunctionalObjectProperty(obo:CDAO_0000187)
+ObjectPropertyDomain(obo:CDAO_0000187 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000187 obo:CDAO_0000138)
+
+# Object Property: obo:CDAO_0000188 (exclude_Node)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000188 "exclude_Node")
+SubObjectPropertyOf(obo:CDAO_0000188 obo:CDAO_0000161)
+ObjectPropertyRange(obo:CDAO_0000188 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000189 (has_Compound_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000189 "This property associates a compound character-state instance with its compound state value.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000189 "has_Compound_State")
+SubObjectPropertyOf(obo:CDAO_0000189 obo:CDAO_0000184)
+ObjectPropertyDomain(obo:CDAO_0000189 obo:CDAO_0000136)
+ObjectPropertyRange(obo:CDAO_0000189 ObjectUnionOf(obo:CDAO_0000015 obo:CDAO_0000055))
+
+# Object Property: obo:CDAO_0000190 (belongs_to)
+
+AnnotationAssertion(terms:description obo:CDAO_0000190 "Generic property that links a concept to another concept it is a constituent of. The property is a synonym of part_of.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000190 "belongs_to")
+EquivalentObjectProperties(obo:CDAO_0000190 obo:CDAO_0000194)
+
+# Object Property: obo:CDAO_0000191 (belongs_to_TU)
+
+AnnotationAssertion(terms:description obo:CDAO_0000191 "This property relates a character-state datum to its TU.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000191 "belongs_to_TU")
+SubObjectPropertyOf(obo:CDAO_0000191 obo:CDAO_0000190)
+FunctionalObjectProperty(obo:CDAO_0000191)
+ObjectPropertyDomain(obo:CDAO_0000191 obo:CDAO_0000098)
+ObjectPropertyRange(obo:CDAO_0000191 obo:CDAO_0000138)
+
+# Object Property: obo:CDAO_0000192 (belongs_to_Network)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000192 "belongs_to_Network")
+SubObjectPropertyOf(obo:CDAO_0000192 obo:CDAO_0000190)
+ObjectPropertyDomain(obo:CDAO_0000192 ObjectUnionOf(obo:CDAO_0000099 obo:CDAO_0000140))
+ObjectPropertyRange(obo:CDAO_0000192 obo:CDAO_0000006)
+
+# Object Property: obo:CDAO_0000193 (has_Annotation)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000193 "has_Annotation")
+SubObjectPropertyOf(obo:CDAO_0000193 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000193 owl:Thing)
+ObjectPropertyRange(obo:CDAO_0000193 obo:CDAO_0000040)
+
+# Object Property: obo:CDAO_0000194 (obsolete part_of)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000194 "obsolete part_of")
+AnnotationAssertion(owl:deprecated obo:CDAO_0000194 "true"^^xsd:boolean)
+
+# Object Property: obo:CDAO_0000195 (has_Nucleotide_Datum)
+
+AnnotationAssertion(terms:description obo:CDAO_0000195 "This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000195 "has_Nucleotide_Datum")
+SubObjectPropertyOf(obo:CDAO_0000195 obo:CDAO_0000206)
+ObjectPropertyDomain(obo:CDAO_0000195 ObjectUnionOf(obo:CDAO_0000094 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000195 obo:CDAO_0000002)
+
+# Object Property: obo:CDAO_0000196 (represented_by_Node)
+
+AnnotationAssertion(terms:description obo:CDAO_0000196 "This property relates a TU to a node that represents it in a network.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000196 "represented_by_Node")
+ObjectPropertyDomain(obo:CDAO_0000196 obo:CDAO_0000138)
+ObjectPropertyRange(obo:CDAO_0000196 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000197 (has_Remaining_Coordinate_List)
+
+AnnotationAssertion(terms:description obo:CDAO_0000197 "The property that relates a coordinate list to the item in the list beyond the first item.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000197 "has_Remaining_Coordinate_List")
+SubObjectPropertyOf(obo:CDAO_0000197 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000197 obo:CDAO_0000092)
+ObjectPropertyRange(obo:CDAO_0000197 obo:CDAO_0000092)
+
+# Object Property: obo:CDAO_0000198 (has_Element)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000198 "has_Element")
+SubObjectPropertyOf(obo:CDAO_0000198 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000198 obo:CDAO_0000118)
+
+# Object Property: obo:CDAO_0000199 (exclude_Subtree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000199 "exclude_Subtree")
+SubObjectPropertyOf(obo:CDAO_0000199 obo:CDAO_0000161)
+ObjectPropertyRange(obo:CDAO_0000199 obo:CDAO_0000070)
+
+# Object Property: obo:CDAO_0000200 (belongs_to_Tree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000200 "belongs_to_Tree")
+SubObjectPropertyOf(obo:CDAO_0000200 obo:CDAO_0000190)
+ObjectPropertyDomain(obo:CDAO_0000200 ObjectUnionOf(obo:CDAO_0000099 obo:CDAO_0000140))
+ObjectPropertyRange(obo:CDAO_0000200 obo:CDAO_0000110)
+
+# Object Property: obo:CDAO_0000201 (has_Parent_Node)
+
+AnnotationAssertion(terms:description obo:CDAO_0000201 "Associates to a Directed Edge the Node that is in the parent position in the edge (i.e., the node touched by the edge and closer to the root of the tree)")
+AnnotationAssertion(rdfs:label obo:CDAO_0000201 "has_Parent_Node")
+SubObjectPropertyOf(obo:CDAO_0000201 obo:CDAO_0000162)
+FunctionalObjectProperty(obo:CDAO_0000201)
+ObjectPropertyDomain(obo:CDAO_0000201 obo:CDAO_0000139)
+ObjectPropertyRange(obo:CDAO_0000201 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000202 (has_Lineage_node)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000202 "has_Lineage_node")
+SubObjectPropertyOf(obo:CDAO_0000202 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000202 obo:CDAO_0000004)
+ObjectPropertyRange(obo:CDAO_0000202 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000203 (belongs_to_Tree_as_Root)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000203 "belongs_to_Tree_as_Root")
+SubObjectPropertyOf(obo:CDAO_0000203 obo:CDAO_0000190)
+ObjectPropertyDomain(obo:CDAO_0000203 obo:CDAO_0000140)
+ObjectPropertyRange(obo:CDAO_0000203 obo:CDAO_0000110)
+
+# Object Property: obo:CDAO_0000204 (has_Hereditary_Change)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000204 "has_Hereditary_Change")
+SubObjectPropertyOf(obo:CDAO_0000204 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000204 obo:CDAO_0000099)
+ObjectPropertyRange(obo:CDAO_0000204 obo:CDAO_0000097)
+
+# Object Property: obo:CDAO_0000205 (belongs_to_Character)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000205 "belongs_to_Character")
+SubObjectPropertyOf(obo:CDAO_0000205 obo:CDAO_0000190)
+FunctionalObjectProperty(obo:CDAO_0000205)
+ObjectPropertyDomain(obo:CDAO_0000205 obo:CDAO_0000098)
+ObjectPropertyRange(obo:CDAO_0000205 obo:CDAO_0000071)
+
+# Object Property: obo:CDAO_0000206 (has_Molecular_Datum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000206 "has_Molecular_Datum")
+SubObjectPropertyOf(obo:CDAO_0000206 obo:CDAO_0000183)
+ObjectPropertyDomain(obo:CDAO_0000206 ObjectUnionOf(obo:CDAO_0000115 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000206 obo:CDAO_0000050)
+
+# Object Property: obo:CDAO_0000207 (has_Continuous_Datum)
+
+AnnotationAssertion(terms:description obo:CDAO_0000207 "This property relates a continuous character to a state datum for the character.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000207 "has_Continuous_Datum")
+SubObjectPropertyOf(obo:CDAO_0000207 obo:CDAO_0000153)
+ObjectPropertyDomain(obo:CDAO_0000207 ObjectUnionOf(obo:CDAO_0000068 obo:CDAO_0000138))
+ObjectPropertyRange(obo:CDAO_0000207 obo:CDAO_0000019)
+
+# Object Property: obo:CDAO_0000208 (has_TU)
+
+AnnotationAssertion(terms:description obo:CDAO_0000208 "This property associates a character data matrix with a TU (a row) represented in the matrix.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000208 "has_TU")
+SubObjectPropertyOf(obo:CDAO_0000208 obo:CDAO_0000178)
+ObjectPropertyDomain(obo:CDAO_0000208 obo:CDAO_0000056)
+ObjectPropertyRange(obo:CDAO_0000208 obo:CDAO_0000138)
+
+# Object Property: obo:CDAO_0000209 (has_Child_Node)
+
+AnnotationAssertion(terms:description obo:CDAO_0000209 "The property associates to a Directed Edge the Node that is in the child position in the edge, i.e., the node touched by the edge and closer to the leaves of the tree.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000209 "has_Child_Node")
+SubObjectPropertyOf(obo:CDAO_0000209 obo:CDAO_0000162)
+FunctionalObjectProperty(obo:CDAO_0000209)
+ObjectPropertyDomain(obo:CDAO_0000209 obo:CDAO_0000139)
+ObjectPropertyRange(obo:CDAO_0000209 obo:CDAO_0000140)
+
+# Object Property: obo:CDAO_0000210 (has_Right_Node)
+
+AnnotationAssertion(terms:description obo:CDAO_0000210 "This property relates a transformation to a 'right' node (the node that has the 'right' state).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000210 "has_Right_Node")
+SubObjectPropertyOf(obo:CDAO_0000210 obo:CDAO_0000182)
+ObjectPropertyDomain(obo:CDAO_0000210 obo:CDAO_0000097)
+ObjectPropertyRange(obo:CDAO_0000210 obo:CDAO_0000140)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:CDAO_0000211 (has_Precision)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000211 "has_Precision")
+DataPropertyRange(obo:CDAO_0000211 xsd:float)
+
+# Data Property: obo:CDAO_0000212 (has_Point_Coordinate_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000212 "has_Point_Coordinate_Value")
+DataPropertyDomain(obo:CDAO_0000212 obo:CDAO_0000003)
+DataPropertyRange(obo:CDAO_0000212 xsd:integer)
+
+# Data Property: obo:CDAO_0000213 (has_Int_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000213 "has_Int_Value")
+SubDataPropertyOf(obo:CDAO_0000213 obo:CDAO_0000215)
+DataPropertyRange(obo:CDAO_0000213 xsd:int)
+
+# Data Property: obo:CDAO_0000214 (has_Support_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000214 "has_Support_Value")
+DataPropertyRange(obo:CDAO_0000214 xsd:float)
+
+# Data Property: obo:CDAO_0000215 (has_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000215 "has_Value")
+
+# Data Property: obo:CDAO_0000216 (has_Uncertainty_Factor)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000216 "has_Uncertainty_Factor")
+DataPropertyRange(obo:CDAO_0000216 xsd:float)
+
+# Data Property: obo:CDAO_0000217 (has_Range_End_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000217 "has_Range_End_Value")
+DataPropertyDomain(obo:CDAO_0000217 obo:CDAO_0000095)
+DataPropertyRange(obo:CDAO_0000217 xsd:integer)
+
+# Data Property: obo:CDAO_0000218 (has_Float_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000218 "has_Float_Value")
+SubDataPropertyOf(obo:CDAO_0000218 obo:CDAO_0000215)
+DataPropertyRange(obo:CDAO_0000218 xsd:float)
+
+# Data Property: obo:CDAO_0000219 (has_Range_Start_Value)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000219 "has_Range_Start_Value")
+DataPropertyDomain(obo:CDAO_0000219 obo:CDAO_0000095)
+DataPropertyRange(obo:CDAO_0000219 xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:CDAO_0000002 (DesoxiRibonucleotideResidueStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000002 "DesoxiRibonucleotideResidueStateDatum")
+SubClassOf(obo:CDAO_0000002 obo:CDAO_0000050)
+
+# Class: obo:CDAO_0000003 (CoordinatePoint)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000003 "CoordinatePoint")
+SubClassOf(obo:CDAO_0000003 obo:CDAO_0000022)
+
+# Class: obo:CDAO_0000004 (Lineage)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000004 "Lineage")
+SubClassOf(obo:CDAO_0000004 obo:CDAO_0000012)
+SubClassOf(obo:CDAO_0000004 ObjectSomeValuesFrom(obo:CDAO_0000202 obo:CDAO_0000140))
+
+# Class: obo:CDAO_0000005 (Phylo4Tree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000005 "Phylo4Tree")
+SubClassOf(obo:CDAO_0000005 obo:CDAO_0000074)
+
+# Class: obo:CDAO_0000006 (Network)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000006 "Network")
+SubClassOf(obo:CDAO_0000006 ObjectAllValuesFrom(obo:CDAO_0000178 ObjectUnionOf(obo:CDAO_0000099 obo:CDAO_0000140)))
+
+# Class: obo:CDAO_0000007 (ModelDescription)
+
+AnnotationAssertion(terms:description obo:CDAO_0000007 "Description of a model of transformations.")
+AnnotationAssertion(rdfs:comment obo:CDAO_0000007 "This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transformation to various parameters.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000007 "ModelDescription")
+SubClassOf(obo:CDAO_0000007 obo:CDAO_0000040)
+
+# Class: obo:CDAO_0000008 (StandardStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000008 "StandardStateDatum")
+SubClassOf(obo:CDAO_0000008 obo:CDAO_0000089)
+
+# Class: obo:CDAO_0000009 (ContinuousCharacterLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000009 "ContinuousCharacterLengthType")
+SubClassOf(obo:CDAO_0000009 obo:CDAO_0000063)
+
+# Class: obo:CDAO_0000010 (ContinuousCharBayesianLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000010 "ContinuousCharBayesianLengthType")
+SubClassOf(obo:CDAO_0000010 obo:CDAO_0000009)
+
+# Class: obo:CDAO_0000011 (NEXUSTreeBlock)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000011 "NEXUSTreeBlock")
+SubClassOf(obo:CDAO_0000011 obo:CDAO_0000074)
+
+# Class: obo:CDAO_0000012 (RootedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000012 "RootedTree")
+SubClassOf(obo:CDAO_0000012 obo:CDAO_0000110)
+SubClassOf(obo:CDAO_0000012 ObjectAllValuesFrom(obo:CDAO_0000155 obo:CDAO_0000012))
+SubClassOf(obo:CDAO_0000012 ObjectAllValuesFrom(obo:CDAO_0000178 ObjectUnionOf(obo:CDAO_0000139 obo:CDAO_0000140)))
+SubClassOf(obo:CDAO_0000012 ObjectExactCardinality(1 obo:CDAO_0000148 obo:CDAO_0000140))
+DisjointClasses(obo:CDAO_0000012 obo:CDAO_0000088)
+
+# Class: obo:CDAO_0000013 (Kimura2Parameters)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000013 "Kimura2Parameters")
+SubClassOf(obo:CDAO_0000013 obo:CDAO_0000020)
+
+# Class: obo:CDAO_0000014 (TreeProcedure)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000014 "TreeProcedure")
+SubClassOf(obo:CDAO_0000014 obo:CDAO_0000044)
+
+# Class: obo:CDAO_0000015 (Generic_State)
+
+AnnotationAssertion(terms:description obo:CDAO_0000015 "This concept is tied to the verbally ambiguous 'gap' concept and to the use of a gap character (often the en dash '-') in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.")
+AnnotationAssertion(rdfs:comment obo:CDAO_0000015 "This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000015 "Generic_State")
+EquivalentClasses(obo:CDAO_0000015 ObjectOneOf(obo:CDAO_0000221 obo:CDAO_0000222 obo:CDAO_0000223))
+SubClassOf(obo:CDAO_0000015 obo:CDAO_0000039)
+
+# Class: obo:CDAO_0000016 (UnrootedSubtree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000016 "UnrootedSubtree")
+SubClassOf(obo:CDAO_0000016 obo:CDAO_0000070)
+
+# Class: obo:CDAO_0000017 (UnresolvedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000017 "UnresolvedTree")
+SubClassOf(obo:CDAO_0000017 obo:CDAO_0000110)
+
+# Class: obo:CDAO_0000018 (BifurcatingTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000018 "BifurcatingTree")
+EquivalentClasses(obo:CDAO_0000018 obo:CDAO_0000130)
+SubClassOf(obo:CDAO_0000018 obo:CDAO_0000110)
+
+# Class: obo:CDAO_0000019 (ContinuousStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000019 "ContinuousStateDatum")
+SubClassOf(obo:CDAO_0000019 obo:CDAO_0000098)
+
+# Class: obo:CDAO_0000020 (SubstitutionModel)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000020 "SubstitutionModel")
+SubClassOf(obo:CDAO_0000020 obo:CDAO_0000007)
+
+# Class: obo:CDAO_0000021 (JukesCantor)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000021 "JukesCantor")
+SubClassOf(obo:CDAO_0000021 obo:CDAO_0000020)
+
+# Class: obo:CDAO_0000022 (DatumCoordinate)
+
+AnnotationAssertion(terms:description obo:CDAO_0000022 "A positional coordinate giving the source of a character state, used for molecular sequences.")
+AnnotationAssertion(rdfs:comment obo:CDAO_0000022 "drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on")
+AnnotationAssertion(rdfs:label obo:CDAO_0000022 "DatumCoordinate")
+SubClassOf(obo:CDAO_0000022 ObjectExactCardinality(1 obo:CDAO_0000165 obo:CDAO_0000104))
+
+# Class: obo:CDAO_0000023 (UnresolvedRootedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000023 "UnresolvedRootedTree")
+SubClassOf(obo:CDAO_0000023 obo:CDAO_0000012)
+SubClassOf(obo:CDAO_0000023 obo:CDAO_0000017)
+
+# Class: obo:CDAO_0000024 (Branch)
+
+AnnotationAssertion(terms:description obo:CDAO_0000024 "'Branch' is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000024 "Branch")
+EquivalentClasses(obo:CDAO_0000024 obo:CDAO_0000099)
+
+# Class: obo:CDAO_0000025 (CharacterStateDataMatrixAnnotation)
+
+AnnotationAssertion(terms:description obo:CDAO_0000025 "Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000025 "CharacterStateDataMatrixAnnotation")
+SubClassOf(obo:CDAO_0000025 ObjectIntersectionOf(obo:CDAO_0000040 ObjectSomeValuesFrom(obo:CDAO_0000157 obo:CDAO_0000056)))
+
+# Class: obo:CDAO_0000026 (AncestralNode)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000026 "AncestralNode")
+SubClassOf(obo:CDAO_0000026 obo:CDAO_0000140)
+SubClassOf(obo:CDAO_0000026 ObjectSomeValuesFrom(obo:CDAO_0000174 obo:CDAO_0000140))
+SubClassOf(obo:CDAO_0000026 ObjectSomeValuesFrom(obo:CDAO_0000190 obo:CDAO_0000012))
+
+# Class: obo:CDAO_0000027 (UnresolvedUnrootedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000027 "UnresolvedUnrootedTree")
+SubClassOf(obo:CDAO_0000027 obo:CDAO_0000017)
+SubClassOf(obo:CDAO_0000027 obo:CDAO_0000088)
+
+# Class: obo:CDAO_0000029 (UncertainStateDomain)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000029 "UncertainStateDomain")
+SubClassOf(obo:CDAO_0000029 obo:CDAO_0000091)
+SubClassOf(obo:CDAO_0000029 DataSomeValuesFrom(obo:CDAO_0000216 xsd:float))
+
+# Class: obo:CDAO_0000030 (ReconcileTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000030 "ReconcileTree")
+SubClassOf(obo:CDAO_0000030 obo:CDAO_0000110)
+SubClassOf(obo:CDAO_0000030 ObjectMinCardinality(2 obo:CDAO_0000172 obo:CDAO_0000110))
+
+# Class: obo:CDAO_0000031 (Continuous)
+
+AnnotationAssertion(terms:description obo:CDAO_0000031 "This class describes a continuous value. The link to the actual float value is through the property has_Value. It could have also other properties attached (e.g., has_Precision).")
+AnnotationAssertion(rdfs:label obo:CDAO_0000031 "Continuous")
+SubClassOf(obo:CDAO_0000031 obo:CDAO_0000091)
+SubClassOf(obo:CDAO_0000031 DataExactCardinality(1 obo:CDAO_0000215))
+
+# Class: obo:CDAO_0000032 (AlignmentProcedure)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000032 "AlignmentProcedure")
+SubClassOf(obo:CDAO_0000032 obo:CDAO_0000025)
+
+# Class: obo:CDAO_0000033 (Dichotomy)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000033 "Dichotomy")
+EquivalentClasses(obo:CDAO_0000033 obo:CDAO_0000124)
+SubClassOf(obo:CDAO_0000033 obo:CDAO_0000026)
+DisjointClasses(obo:CDAO_0000033 obo:CDAO_0000042)
+
+# Class: obo:CDAO_0000034 (Molecular)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000034 "Molecular")
+SubClassOf(obo:CDAO_0000034 obo:CDAO_0000039)
+
+# Class: obo:CDAO_0000035 (ContinuousCharParsimonyLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000035 "ContinuousCharParsimonyLengthType")
+SubClassOf(obo:CDAO_0000035 obo:CDAO_0000009)
+
+# Class: obo:CDAO_0000039 (Categorical)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000039 "Categorical")
+SubClassOf(obo:CDAO_0000039 obo:CDAO_0000091)
+
+# Class: obo:CDAO_0000040 (CDAOAnnotation)
+
+AnnotationAssertion(terms:description obo:CDAO_0000040 "The base class of annotations in CDAO.")
+AnnotationAssertion(rdfs:comment obo:CDAO_0000040 "Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000040 "CDAOAnnotation")
+
+# Class: obo:CDAO_0000041 (originationEvent)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000041 "originationEvent")
+SubClassOf(obo:CDAO_0000041 ObjectSomeValuesFrom(obo:CDAO_0000190 obo:CDAO_0000097))
+
+# Class: obo:CDAO_0000042 (Polytomy)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000042 "Polytomy")
+EquivalentClasses(obo:CDAO_0000042 ObjectMinCardinality(3 obo:CDAO_0000177))
+SubClassOf(obo:CDAO_0000042 obo:CDAO_0000026)
+DisjointClasses(obo:CDAO_0000042 obo:CDAO_0000124)
+
+# Class: obo:CDAO_0000043 (PolymorphicStateDomain)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000043 "PolymorphicStateDomain")
+SubClassOf(obo:CDAO_0000043 obo:CDAO_0000091)
+SubClassOf(obo:CDAO_0000043 DataHasValue(obo:CDAO_0000216 "1.0"^^xsd:float))
+
+# Class: obo:CDAO_0000044 (TreeAnnotation)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000044 "TreeAnnotation")
+SubClassOf(obo:CDAO_0000044 ObjectIntersectionOf(obo:CDAO_0000040 ObjectSomeValuesFrom(obo:CDAO_0000157 obo:CDAO_0000110)))
+
+# Class: obo:CDAO_0000045 (Standard)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000045 "Standard")
+SubClassOf(obo:CDAO_0000045 obo:CDAO_0000039)
+
+# Class: obo:CDAO_0000046 (EdgeLength)
+
+AnnotationAssertion(terms:description obo:CDAO_0000046 "The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.")
+AnnotationAssertion(rdfs:comment obo:CDAO_0000046 "Its possible that this should not be classed as an 'annotation' since it contains data rather than meta-data.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000046 "EdgeLength")
+SubClassOf(obo:CDAO_0000046 obo:CDAO_0000101)
+SubClassOf(obo:CDAO_0000046 ObjectSomeValuesFrom(obo:CDAO_0000176 obo:CDAO_0000063))
+SubClassOf(obo:CDAO_0000046 DataSomeValuesFrom(obo:CDAO_0000215 rdfs:Literal))
+
+# Class: obo:CDAO_0000047 (RibonucleotideResidue)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000047 "RibonucleotideResidue")
+SubClassOf(obo:CDAO_0000047 obo:CDAO_0000034)
+
+# Class: obo:CDAO_0000048 (Clade)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000048 "Clade")
+EquivalentClasses(obo:CDAO_0000048 obo:CDAO_0000129)
+SubClassOf(obo:CDAO_0000048 obo:CDAO_0000110)
+
+# Class: obo:CDAO_0000049 (DiscreteCharParsimonyLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000049 "DiscreteCharParsimonyLengthType")
+SubClassOf(obo:CDAO_0000049 obo:CDAO_0000100)
+
+# Class: obo:CDAO_0000050 (MolecularStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000050 "MolecularStateDatum")
+SubClassOf(obo:CDAO_0000050 obo:CDAO_0000089)
+
+# Class: obo:CDAO_0000051 (PolyphyleticGroup)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000051 "PolyphyleticGroup")
+SubClassOf(obo:CDAO_0000051 obo:CDAO_0000006)
+SubClassOf(obo:CDAO_0000051 ObjectSomeValuesFrom(obo:CDAO_0000188 obo:CDAO_0000140))
+DisjointClasses(obo:CDAO_0000051 obo:CDAO_0000127)
+
+# Class: obo:CDAO_0000052 (NexusDataBlock)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000052 "NexusDataBlock")
+SubClassOf(obo:CDAO_0000052 obo:CDAO_0000107)
+
+# Class: obo:CDAO_0000053 (BranchingNode)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000053 "BranchingNode")
+EquivalentClasses(obo:CDAO_0000053 ObjectMinCardinality(2 obo:CDAO_0000177))
+SubClassOf(obo:CDAO_0000053 obo:CDAO_0000026)
+
+# Class: obo:CDAO_0000055 (Compound)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000055 "Compound")
+SubClassOf(obo:CDAO_0000055 obo:CDAO_0000039)
+
+# Class: obo:CDAO_0000056 (CharacterStateDataMatrix)
+
+AnnotationAssertion(terms:description obo:CDAO_0000056 "A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix")
+AnnotationAssertion(rdfs:label obo:CDAO_0000056 "CharacterStateDataMatrix")
+SubClassOf(obo:CDAO_0000056 ObjectSomeValuesFrom(obo:CDAO_0000142 obo:CDAO_0000071))
+SubClassOf(obo:CDAO_0000056 ObjectSomeValuesFrom(obo:CDAO_0000178 obo:CDAO_0000025))
+SubClassOf(obo:CDAO_0000056 ObjectSomeValuesFrom(obo:CDAO_0000208 obo:CDAO_0000138))
+
+# Class: obo:CDAO_0000057 (RibonucleotideResidueStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000057 "RibonucleotideResidueStateDatum")
+SubClassOf(obo:CDAO_0000057 obo:CDAO_0000050)
+
+# Class: obo:CDAO_0000058 (TimeCalibratedLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000058 "TimeCalibratedLengthType")
+SubClassOf(obo:CDAO_0000058 obo:CDAO_0000063)
+
+# Class: obo:CDAO_0000059 (SetOfNodes)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000059 "SetOfNodes")
+SubClassOf(obo:CDAO_0000059 ObjectIntersectionOf(obo:CDAO_0000118 ObjectAllValuesFrom(obo:CDAO_0000198 obo:CDAO_0000140)))
+
+# Class: obo:CDAO_0000060 (MRCANode)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000060 "MRCANode")
+SubClassOf(obo:CDAO_0000060 obo:CDAO_0000080)
+SubClassOf(obo:CDAO_0000060 ObjectMinCardinality(1 obo:CDAO_0000163 obo:CDAO_0000118))
+
+# Class: obo:CDAO_0000061 (FASTADataMatrix)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000061 "FASTADataMatrix")
+SubClassOf(obo:CDAO_0000061 obo:CDAO_0000107)
+
+# Class: obo:CDAO_0000062 (evolutionaryTransition)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000062 "evolutionaryTransition")
+EquivalentClasses(obo:CDAO_0000062 obo:CDAO_0000065)
+SubClassOf(obo:CDAO_0000062 obo:CDAO_0000097)
+SubClassOf(obo:CDAO_0000062 ObjectExactCardinality(1 obo:CDAO_0000159 obo:CDAO_0000091))
+SubClassOf(obo:CDAO_0000062 ObjectExactCardinality(1 obo:CDAO_0000169 obo:CDAO_0000071))
+SubClassOf(obo:CDAO_0000062 ObjectExactCardinality(1 obo:CDAO_0000186 obo:CDAO_0000091))
+
+# Class: obo:CDAO_0000063 (EdgeLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000063 "EdgeLengthType")
+
+# Class: obo:CDAO_0000064 (cladogeneticChange)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000064 "cladogeneticChange")
+SubClassOf(obo:CDAO_0000064 obo:CDAO_0000097)
+
+# Class: obo:CDAO_0000065 (anageneticChange)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000065 "anageneticChange")
+SubClassOf(obo:CDAO_0000065 obo:CDAO_0000097)
+
+# Class: obo:CDAO_0000066 (TUAnnotation)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000066 "TUAnnotation")
+SubClassOf(obo:CDAO_0000066 ObjectIntersectionOf(obo:CDAO_0000040 ObjectSomeValuesFrom(obo:CDAO_0000157 obo:CDAO_0000138)))
+
+# Class: obo:CDAO_0000067 (PhyloTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000067 "PhyloTree")
+SubClassOf(obo:CDAO_0000067 obo:CDAO_0000074)
+
+# Class: obo:CDAO_0000068 (ContinuousCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000068 "ContinuousCharacter")
+SubClassOf(obo:CDAO_0000068 obo:CDAO_0000071)
+SubClassOf(obo:CDAO_0000068 ObjectSomeValuesFrom(obo:CDAO_0000207 obo:CDAO_0000019))
+SubClassOf(obo:CDAO_0000068 ObjectAllValuesFrom(obo:CDAO_0000153 obo:CDAO_0000019))
+
+# Class: obo:CDAO_0000069 (PHYLIPTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000069 "PHYLIPTree")
+SubClassOf(obo:CDAO_0000069 obo:CDAO_0000074)
+
+# Class: obo:CDAO_0000070 (Subtree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000070 "Subtree")
+SubClassOf(obo:CDAO_0000070 obo:CDAO_0000110)
+SubClassOf(obo:CDAO_0000070 ObjectSomeValuesFrom(obo:CDAO_0000155 obo:CDAO_0000110))
+
+# Class: obo:CDAO_0000071 (Character)
+
+AnnotationAssertion(rdfs:comment obo:CDAO_0000071 "Traits shown to be relevant for phylogenetic classification")
+AnnotationAssertion(rdfs:label obo:CDAO_0000071 "Character")
+SubClassOf(obo:CDAO_0000071 ObjectSomeValuesFrom(obo:CDAO_0000153 obo:CDAO_0000098))
+
+# Class: obo:CDAO_0000072 (GalledTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000072 "GalledTree")
+SubClassOf(obo:CDAO_0000072 obo:CDAO_0000006)
+
+# Class: obo:CDAO_0000073 (SpeciesTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000073 "SpeciesTree")
+SubClassOf(obo:CDAO_0000073 obo:CDAO_0000110)
+
+# Class: obo:CDAO_0000074 (TreeFormat)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000074 "TreeFormat")
+SubClassOf(obo:CDAO_0000074 obo:CDAO_0000044)
+
+# Class: obo:CDAO_0000075 (StandardCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000075 "StandardCharacter")
+SubClassOf(obo:CDAO_0000075 obo:CDAO_0000111)
+
+# Class: obo:CDAO_0000076 (AminoAcidResidue)
+
+AnnotationAssertion(terms:description obo:CDAO_0000076 "This class will be declared equivalent ot the amino acid class description imported")
+AnnotationAssertion(rdfs:label obo:CDAO_0000076 "AminoAcidResidue")
+SubClassOf(obo:CDAO_0000076 obo:CDAO_0000034)
+
+# Class: obo:CDAO_0000077 (geneDuplication)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000077 "geneDuplication")
+SubClassOf(obo:CDAO_0000077 obo:CDAO_0000064)
+
+# Class: obo:CDAO_0000078 (CompoundCharacter)
+
+AnnotationAssertion(terms:description obo:CDAO_0000078 "A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000078 "CompoundCharacter")
+SubClassOf(obo:CDAO_0000078 obo:CDAO_0000111)
+SubClassOf(obo:CDAO_0000078 ObjectSomeValuesFrom(obo:CDAO_0000142 obo:CDAO_0000071))
+SubClassOf(obo:CDAO_0000078 ObjectSomeValuesFrom(obo:CDAO_0000170 obo:CDAO_0000136))
+SubClassOf(obo:CDAO_0000078 ObjectAllValuesFrom(obo:CDAO_0000153 obo:CDAO_0000136))
+
+# Class: obo:CDAO_0000079 (SIMMAPTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000079 "SIMMAPTree")
+SubClassOf(obo:CDAO_0000079 obo:CDAO_0000074)
+
+# Class: obo:CDAO_0000080 (CommonAncestralNode)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000080 "CommonAncestralNode")
+SubClassOf(obo:CDAO_0000080 obo:CDAO_0000026)
+SubClassOf(obo:CDAO_0000080 ObjectUnionOf(obo:CDAO_0000053 ObjectSomeValuesFrom(obo:CDAO_0000174 obo:CDAO_0000053)))
+
+# Class: obo:CDAO_0000081 (NewickTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000081 "NewickTree")
+SubClassOf(obo:CDAO_0000081 obo:CDAO_0000074)
+
+# Class: obo:CDAO_0000082 (TimeProportionalLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000082 "TimeProportionalLengthType")
+SubClassOf(obo:CDAO_0000082 obo:CDAO_0000063)
+
+# Class: obo:CDAO_0000083 (DiscreteCharDistanceLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000083 "DiscreteCharDistanceLengthType")
+SubClassOf(obo:CDAO_0000083 obo:CDAO_0000100)
+
+# Class: obo:CDAO_0000084 (StarTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000084 "StarTree")
+SubClassOf(obo:CDAO_0000084 obo:CDAO_0000012)
+SubClassOf(obo:CDAO_0000084 ObjectAllValuesFrom(obo:CDAO_0000149 obo:CDAO_0000108))
+
+# Class: obo:CDAO_0000085 (FullyResolvedUnrootedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000085 "FullyResolvedUnrootedTree")
+SubClassOf(obo:CDAO_0000085 obo:CDAO_0000018)
+SubClassOf(obo:CDAO_0000085 obo:CDAO_0000088)
+
+# Class: obo:CDAO_0000086 (ParaphyleticGroup)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000086 "ParaphyleticGroup")
+SubClassOf(obo:CDAO_0000086 obo:CDAO_0000127)
+SubClassOf(obo:CDAO_0000086 ObjectSomeValuesFrom(obo:CDAO_0000199 obo:CDAO_0000070))
+DisjointClasses(obo:CDAO_0000086 obo:CDAO_0000129)
+
+# Class: obo:CDAO_0000087 (geneticEvent)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000087 "geneticEvent")
+SubClassOf(obo:CDAO_0000087 obo:CDAO_0000041)
+
+# Class: obo:CDAO_0000088 (UnrootedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000088 "UnrootedTree")
+SubClassOf(obo:CDAO_0000088 obo:CDAO_0000110)
+
+# Class: obo:CDAO_0000089 (CategoricalStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000089 "CategoricalStateDatum")
+SubClassOf(obo:CDAO_0000089 obo:CDAO_0000098)
+
+# Class: obo:CDAO_0000090 (DiscreteCharLikelihoodLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000090 "DiscreteCharLikelihoodLengthType")
+SubClassOf(obo:CDAO_0000090 obo:CDAO_0000100)
+
+# Class: obo:CDAO_0000091 (CharacterStateDomain)
+
+AnnotationAssertion(terms:description obo:CDAO_0000091 "The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000091 "CharacterStateDomain")
+
+# Class: obo:CDAO_0000092 (CoordinateList)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000092 "CoordinateList")
+SubClassOf(obo:CDAO_0000092 obo:CDAO_0000022)
+
+# Class: obo:CDAO_0000093 (GammaDistribution)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000093 "GammaDistribution")
+SubClassOf(obo:CDAO_0000093 obo:CDAO_0000020)
+
+# Class: obo:CDAO_0000094 (DesoxiRibonucleotideResidueCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000094 "DesoxiRibonucleotideResidueCharacter")
+SubClassOf(obo:CDAO_0000094 obo:CDAO_0000115)
+SubClassOf(obo:CDAO_0000094 ObjectSomeValuesFrom(obo:CDAO_0000195 obo:CDAO_0000002))
+SubClassOf(obo:CDAO_0000094 ObjectAllValuesFrom(obo:CDAO_0000153 obo:CDAO_0000002))
+
+# Class: obo:CDAO_0000095 (CoordinateRange)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000095 "CoordinateRange")
+SubClassOf(obo:CDAO_0000095 obo:CDAO_0000022)
+
+# Class: obo:CDAO_0000096 (ReticulateEvolution)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000096 "ReticulateEvolution")
+SubClassOf(obo:CDAO_0000096 obo:CDAO_0000006)
+
+# Class: obo:CDAO_0000097 (hereditaryChange)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000097 "hereditaryChange")
+SubClassOf(obo:CDAO_0000097 ObjectExactCardinality(1 obo:CDAO_0000159 obo:CDAO_0000091))
+SubClassOf(obo:CDAO_0000097 ObjectExactCardinality(1 obo:CDAO_0000169 obo:CDAO_0000071))
+SubClassOf(obo:CDAO_0000097 ObjectExactCardinality(1 obo:CDAO_0000186 obo:CDAO_0000091))
+
+# Class: obo:CDAO_0000098 (CharacterStateDatum)
+
+AnnotationAssertion(terms:description obo:CDAO_0000098 "The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000098 "CharacterStateDatum")
+SubClassOf(obo:CDAO_0000098 ObjectExactCardinality(1 obo:CDAO_0000191 obo:CDAO_0000138))
+SubClassOf(obo:CDAO_0000098 ObjectExactCardinality(1 obo:CDAO_0000205 obo:CDAO_0000071))
+
+# Class: obo:CDAO_0000099 (Edge)
+
+AnnotationAssertion(terms:description obo:CDAO_0000099 "An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a 'branch'.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a 'split' or bipartition, since each edge in a tree divides the terminal nodes into two sets.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000099 "Edge")
+SubClassOf(obo:CDAO_0000099 ObjectSomeValuesFrom(obo:CDAO_0000193 obo:CDAO_0000101))
+SubClassOf(obo:CDAO_0000099 ObjectExactCardinality(2 obo:CDAO_0000162 obo:CDAO_0000140))
+
+# Class: obo:CDAO_0000100 (DiscreteCharacterLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000100 "DiscreteCharacterLengthType")
+SubClassOf(obo:CDAO_0000100 obo:CDAO_0000063)
+
+# Class: obo:CDAO_0000101 (EdgeAnnotation)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000101 "EdgeAnnotation")
+SubClassOf(obo:CDAO_0000101 ObjectIntersectionOf(obo:CDAO_0000040 ObjectSomeValuesFrom(obo:CDAO_0000157 obo:CDAO_0000099)))
+
+# Class: obo:CDAO_0000102 (FullyResolvedRootedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000102 "FullyResolvedRootedTree")
+SubClassOf(obo:CDAO_0000102 obo:CDAO_0000012)
+SubClassOf(obo:CDAO_0000102 obo:CDAO_0000018)
+SubClassOf(obo:CDAO_0000102 ObjectAllValuesFrom(obo:CDAO_0000178 ObjectUnionOf(obo:CDAO_0000033 obo:CDAO_0000099 obo:CDAO_0000108)))
+
+# Class: obo:CDAO_0000103 (GrafenLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000103 "GrafenLengthType")
+SubClassOf(obo:CDAO_0000103 obo:CDAO_0000063)
+
+# Class: obo:CDAO_0000104 (CoordinateSystem)
+
+AnnotationAssertion(terms:description obo:CDAO_0000104 "A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000104 "CoordinateSystem")
+
+# Class: obo:CDAO_0000105 (GenBankDataMatrix)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000105 "GenBankDataMatrix")
+SubClassOf(obo:CDAO_0000105 obo:CDAO_0000107)
+
+# Class: obo:CDAO_0000107 (DataMatrixFormat)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000107 "DataMatrixFormat")
+SubClassOf(obo:CDAO_0000107 obo:CDAO_0000025)
+
+# Class: obo:CDAO_0000108 (TerminalNode)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000108 "TerminalNode")
+EquivalentClasses(obo:CDAO_0000108 ObjectIntersectionOf(obo:CDAO_0000140 ObjectAllValuesFrom(obo:CDAO_0000149 ObjectComplementOf(obo:CDAO_0000140))))
+SubClassOf(obo:CDAO_0000108 obo:CDAO_0000140)
+
+# Class: obo:CDAO_0000109 (RibonucleotideResidueCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000109 "RibonucleotideResidueCharacter")
+SubClassOf(obo:CDAO_0000109 obo:CDAO_0000115)
+SubClassOf(obo:CDAO_0000109 ObjectAllValuesFrom(obo:CDAO_0000153 obo:CDAO_0000057))
+
+# Class: obo:CDAO_0000110 (Tree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000110 "Tree")
+SubClassOf(obo:CDAO_0000110 obo:CDAO_0000006)
+
+# Class: obo:CDAO_0000111 (CategoricalCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000111 "CategoricalCharacter")
+SubClassOf(obo:CDAO_0000111 obo:CDAO_0000071)
+
+# Class: obo:CDAO_0000112 (AminoAcidResidueStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000112 "AminoAcidResidueStateDatum")
+SubClassOf(obo:CDAO_0000112 obo:CDAO_0000050)
+
+# Class: obo:CDAO_0000113 (PHYLIPDataMatrix)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000113 "PHYLIPDataMatrix")
+SubClassOf(obo:CDAO_0000113 obo:CDAO_0000107)
+
+# Class: obo:CDAO_0000114 (ContinuousCharLikelihoodLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000114 "ContinuousCharLikelihoodLengthType")
+SubClassOf(obo:CDAO_0000114 obo:CDAO_0000009)
+
+# Class: obo:CDAO_0000115 (MolecularCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000115 "MolecularCharacter")
+SubClassOf(obo:CDAO_0000115 obo:CDAO_0000111)
+
+# Class: obo:CDAO_0000116 (hereditaryPersistance)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000116 "hereditaryPersistance")
+SubClassOf(obo:CDAO_0000116 ObjectSomeValuesFrom(obo:CDAO_0000190 obo:CDAO_0000097))
+
+# Class: obo:CDAO_0000117 (SetOfCharacters)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000117 "SetOfCharacters")
+SubClassOf(obo:CDAO_0000117 ObjectIntersectionOf(obo:CDAO_0000118 ObjectAllValuesFrom(obo:CDAO_0000198 obo:CDAO_0000071)))
+
+# Class: obo:CDAO_0000118 (SetOfThings)
+
+AnnotationAssertion(terms:description obo:CDAO_0000118 "The class is used to describe colletions of phylogenetic data elements. Examples include sets of trees for annotating consensus tree provenance, and sets of characters or higher order grouping (e.g., groups of groups of characters) that extends the CharSet block of NEXUS.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000118 "SetOfThings")
+
+# Class: obo:CDAO_0000120 (Sequence)
+
+AnnotationAssertion(terms:description obo:CDAO_0000120 "A set of ordered states, typically the residues in a macromolecular sequence.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000120 "Sequence")
+SubClassOf(obo:CDAO_0000120 ObjectSomeValuesFrom(obo:CDAO_0000178 obo:CDAO_0000098))
+SubClassOf(obo:CDAO_0000120 ObjectAllValuesFrom(obo:CDAO_0000178 ObjectMinCardinality(1 obo:CDAO_0000151 obo:CDAO_0000022)))
+
+# Class: obo:CDAO_0000121 (speciation)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000121 "speciation")
+EquivalentClasses(obo:CDAO_0000121 obo:CDAO_0000122)
+SubClassOf(obo:CDAO_0000121 obo:CDAO_0000064)
+
+# Class: obo:CDAO_0000122 (cladogenesis)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000122 "cladogenesis")
+SubClassOf(obo:CDAO_0000122 obo:CDAO_0000064)
+
+# Class: obo:CDAO_0000124 (Bifurcation)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000124 "Bifurcation")
+SubClassOf(obo:CDAO_0000124 obo:CDAO_0000026)
+SubClassOf(obo:CDAO_0000124 ObjectExactCardinality(2 obo:CDAO_0000177))
+
+# Class: obo:CDAO_0000125 (DiscreteCharBayesianLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000125 "DiscreteCharBayesianLengthType")
+SubClassOf(obo:CDAO_0000125 obo:CDAO_0000100)
+
+# Class: obo:CDAO_0000126 (TaxonomicLink)
+
+AnnotationAssertion(terms:description obo:CDAO_0000126 "Link to an externally defined taxonomic hierarchy.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000126 "TaxonomicLink")
+SubClassOf(obo:CDAO_0000126 obo:CDAO_0000066)
+
+# Class: obo:CDAO_0000127 (MonophyleticGroup)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000127 "MonophyleticGroup")
+SubClassOf(obo:CDAO_0000127 obo:CDAO_0000006)
+
+# Class: obo:CDAO_0000128 (molecularRecombination)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000128 "molecularRecombination")
+SubClassOf(obo:CDAO_0000128 obo:CDAO_0000132)
+
+# Class: obo:CDAO_0000129 (HolophyleticGroup)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000129 "HolophyleticGroup")
+SubClassOf(obo:CDAO_0000129 obo:CDAO_0000127)
+
+# Class: obo:CDAO_0000130 (FullyResolvedTree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000130 "FullyResolvedTree")
+SubClassOf(obo:CDAO_0000130 obo:CDAO_0000110)
+
+# Class: obo:CDAO_0000131 (AminoAcidResidueCharacter)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000131 "AminoAcidResidueCharacter")
+SubClassOf(obo:CDAO_0000131 obo:CDAO_0000115)
+SubClassOf(obo:CDAO_0000131 ObjectSomeValuesFrom(obo:CDAO_0000168 obo:CDAO_0000112))
+SubClassOf(obo:CDAO_0000131 ObjectAllValuesFrom(obo:CDAO_0000153 obo:CDAO_0000112))
+
+# Class: obo:CDAO_0000132 (recombination)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000132 "recombination")
+SubClassOf(obo:CDAO_0000132 obo:CDAO_0000087)
+
+# Class: obo:CDAO_0000133 (DesoxiRibonucleotideResidue)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000133 "DesoxiRibonucleotideResidue")
+SubClassOf(obo:CDAO_0000133 obo:CDAO_0000034)
+
+# Class: obo:CDAO_0000134 (RootedSubtree)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000134 "RootedSubtree")
+SubClassOf(obo:CDAO_0000134 obo:CDAO_0000012)
+SubClassOf(obo:CDAO_0000134 obo:CDAO_0000070)
+
+# Class: obo:CDAO_0000136 (CompoundStateDatum)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000136 "CompoundStateDatum")
+SubClassOf(obo:CDAO_0000136 obo:CDAO_0000089)
+
+# Class: obo:CDAO_0000137 (GapCost)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000137 "GapCost")
+SubClassOf(obo:CDAO_0000137 obo:CDAO_0000007)
+
+# Class: obo:CDAO_0000138 (TU)
+
+AnnotationAssertion(terms:description obo:CDAO_0000138 "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000138 "TU")
+
+# Class: obo:CDAO_0000139 (DirectedEdge)
+
+AnnotationAssertion(terms:description obo:CDAO_0000139 "A directed edge. Rooted trees have directed edges. The direction is specified by way of the parent and child relationships of nodes that the edge connects.")
+AnnotationAssertion(rdfs:label obo:CDAO_0000139 "DirectedEdge")
+EquivalentClasses(obo:CDAO_0000139 ObjectIntersectionOf(obo:CDAO_0000099 ObjectExactCardinality(1 obo:CDAO_0000201 obo:CDAO_0000140) ObjectExactCardinality(1 obo:CDAO_0000209 obo:CDAO_0000140)))
+
+# Class: obo:CDAO_0000140 (Node)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000140 "Node")
+SubClassOf(obo:CDAO_0000140 ObjectSomeValuesFrom(obo:CDAO_0000190 obo:CDAO_0000006))
+SubClassOf(obo:CDAO_0000140 ObjectMaxCardinality(1 obo:CDAO_0000143 obo:CDAO_0000139))
+
+# Class: obo:CDAO_0000141 (ContinuousCharDistanceLengthType)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000141 "ContinuousCharDistanceLengthType")
+SubClassOf(obo:CDAO_0000141 obo:CDAO_0000009)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:CDAO_0000220 (dA)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000220 "dA")
+ClassAssertion(obo:CDAO_0000133 obo:CDAO_0000220)
+
+# Individual: obo:CDAO_0000221 (absent)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000221 "absent")
+ClassAssertion(obo:CDAO_0000015 obo:CDAO_0000221)
+
+# Individual: obo:CDAO_0000222 (unknown)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000222 "unknown")
+ClassAssertion(obo:CDAO_0000015 obo:CDAO_0000222)
+
+# Individual: obo:CDAO_0000223 (gap)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000223 "gap")
+ClassAssertion(obo:CDAO_0000015 obo:CDAO_0000223)
+
+# Individual: obo:CDAO_0000224 (dG)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000224 "dG")
+ClassAssertion(obo:CDAO_0000133 obo:CDAO_0000224)
+
+# Individual: obo:CDAO_0000225 (rU)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000225 "rU")
+ClassAssertion(obo:CDAO_0000057 obo:CDAO_0000225)
+
+# Individual: obo:CDAO_0000226 (dC)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000226 "dC")
+ClassAssertion(obo:CDAO_0000133 obo:CDAO_0000226)
+
+# Individual: obo:CDAO_0000227 (dT)
+
+AnnotationAssertion(rdfs:label obo:CDAO_0000227 "dT")
+ClassAssertion(obo:CDAO_0000133 obo:CDAO_0000227)
+
+
+DisjointClasses(obo:CDAO_0000002 obo:CDAO_0000019 obo:CDAO_0000112)
+DisjointClasses(obo:CDAO_0000068 obo:CDAO_0000094 obo:CDAO_0000131)
+SubObjectPropertyOf(ObjectPropertyChain(obo:CDAO_0000143 obo:CDAO_0000201) obo:CDAO_0000179)
+SubObjectPropertyOf(ObjectPropertyChain(obo:CDAO_0000177 obo:CDAO_0000209) obo:CDAO_0000149)
+)

@@ -1,0 +1,694 @@
+Prefix(:=<http://purl.obolibrary.org/obo/zfs.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(zfs:=<http://purl.obolibrary.org/obo/zfs#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/zfs.owl>
+<http://purl.obolibrary.org/obo/zfs/releases/2020-03-10/zfs.owl>
+Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3-beta5")
+Annotation(oboInOwl:date "05:11:2014 08:39")
+Annotation(oboInOwl:default-namespace "zebrafish_stages")
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
+Annotation(oboInOwl:saved-by "yvonne")
+
+Declaration(Class(obo:ZFS_0000000))
+Declaration(Class(obo:ZFS_0000001))
+Declaration(Class(obo:ZFS_0000002))
+Declaration(Class(obo:ZFS_0000003))
+Declaration(Class(obo:ZFS_0000004))
+Declaration(Class(obo:ZFS_0000005))
+Declaration(Class(obo:ZFS_0000006))
+Declaration(Class(obo:ZFS_0000007))
+Declaration(Class(obo:ZFS_0000008))
+Declaration(Class(obo:ZFS_0000009))
+Declaration(Class(obo:ZFS_0000010))
+Declaration(Class(obo:ZFS_0000011))
+Declaration(Class(obo:ZFS_0000012))
+Declaration(Class(obo:ZFS_0000013))
+Declaration(Class(obo:ZFS_0000014))
+Declaration(Class(obo:ZFS_0000015))
+Declaration(Class(obo:ZFS_0000016))
+Declaration(Class(obo:ZFS_0000017))
+Declaration(Class(obo:ZFS_0000018))
+Declaration(Class(obo:ZFS_0000019))
+Declaration(Class(obo:ZFS_0000020))
+Declaration(Class(obo:ZFS_0000021))
+Declaration(Class(obo:ZFS_0000022))
+Declaration(Class(obo:ZFS_0000023))
+Declaration(Class(obo:ZFS_0000024))
+Declaration(Class(obo:ZFS_0000025))
+Declaration(Class(obo:ZFS_0000026))
+Declaration(Class(obo:ZFS_0000027))
+Declaration(Class(obo:ZFS_0000028))
+Declaration(Class(obo:ZFS_0000029))
+Declaration(Class(obo:ZFS_0000030))
+Declaration(Class(obo:ZFS_0000031))
+Declaration(Class(obo:ZFS_0000032))
+Declaration(Class(obo:ZFS_0000033))
+Declaration(Class(obo:ZFS_0000034))
+Declaration(Class(obo:ZFS_0000035))
+Declaration(Class(obo:ZFS_0000036))
+Declaration(Class(obo:ZFS_0000037))
+Declaration(Class(obo:ZFS_0000038))
+Declaration(Class(obo:ZFS_0000039))
+Declaration(Class(obo:ZFS_0000040))
+Declaration(Class(obo:ZFS_0000041))
+Declaration(Class(obo:ZFS_0000042))
+Declaration(Class(obo:ZFS_0000043))
+Declaration(Class(obo:ZFS_0000044))
+Declaration(Class(obo:ZFS_0000045))
+Declaration(Class(obo:ZFS_0000046))
+Declaration(Class(obo:ZFS_0000047))
+Declaration(Class(obo:ZFS_0000048))
+Declaration(Class(obo:ZFS_0000049))
+Declaration(Class(obo:ZFS_0000050))
+Declaration(Class(obo:ZFS_0000051))
+Declaration(Class(obo:ZFS_0007000))
+Declaration(Class(obo:ZFS_0100000))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000062))
+Declaration(ObjectProperty(obo:RO_0002087))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(zfs:PLURAL))
+Declaration(AnnotationProperty(zfs:granular_stage))
+Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
+Declaration(AnnotationProperty(oboInOwl:SynonymTypeProperty))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:created_by))
+Declaration(AnnotationProperty(oboInOwl:creation_date))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(oboInOwl:shorthand))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: zfs:PLURAL (PLURAL)
+
+AnnotationAssertion(rdfs:label zfs:PLURAL "PLURAL")
+SubAnnotationPropertyOf(zfs:PLURAL oboInOwl:SynonymTypeProperty)
+
+# Annotation Property: zfs:granular_stage (zfs:granular_stage)
+
+AnnotationAssertion(rdfs:comment zfs:granular_stage "Subset consisting of classes describing highly granular developmental stages (for instance, '23-year-old'). Such stages might be useful for annotation purpose, but might be folded into less granular parents for display purpose.")
+SubAnnotationPropertyOf(zfs:granular_stage oboInOwl:SubsetProperty)
+
+# Annotation Property: oboInOwl:SubsetProperty (subset_property)
+
+AnnotationAssertion(rdfs:label oboInOwl:SubsetProperty "subset_property")
+
+# Annotation Property: oboInOwl:SynonymTypeProperty (synonym_type_property)
+
+AnnotationAssertion(rdfs:label oboInOwl:SynonymTypeProperty "synonym_type_property")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+# Annotation Property: oboInOwl:shorthand (shorthand)
+
+AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:BFO_0000050 "BFO:0000050")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BFO_0000050 "zebrafish_anatomical_ontology")
+AnnotationAssertion(oboInOwl:id obo:BFO_0000050 "part_of")
+AnnotationAssertion(oboInOwl:shorthand obo:BFO_0000050 "part_of")
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of")
+TransitiveObjectProperty(obo:BFO_0000050)
+
+# Object Property: obo:BFO_0000062 (preceded_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000062 "X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X)")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BFO_0000062 "BFO:0000062")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BFO_0000062 "zebrafish_anatomical_ontology")
+AnnotationAssertion(oboInOwl:id obo:BFO_0000062 "preceded_by")
+AnnotationAssertion(oboInOwl:shorthand obo:BFO_0000062 "preceded_by")
+AnnotationAssertion(rdfs:label obo:BFO_0000062 "preceded_by")
+TransitiveObjectProperty(obo:BFO_0000062)
+
+# Object Property: obo:RO_0002087 (immediately_preceded_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002087 "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)")
+AnnotationAssertion(oboInOwl:hasDbXref obo:RO_0002087 "RO:0002087")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:RO_0002087 "zebrafish_anatomical_ontology")
+AnnotationAssertion(oboInOwl:id obo:RO_0002087 "immediately_preceded_by")
+AnnotationAssertion(oboInOwl:shorthand obo:RO_0002087 "immediately_preceded_by")
+AnnotationAssertion(rdfs:label obo:RO_0002087 "immediately_preceded_by")
+SubObjectPropertyOf(obo:RO_0002087 obo:BFO_0000062)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:ZFS_0000000 (Unknown)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000000 "ZFIN:ZDB-STAGE-050211-1")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000000 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000000 "ZFS:0000000")
+AnnotationAssertion(rdfs:label obo:ZFS_0000000 "Unknown")
+SubClassOf(obo:ZFS_0000000 obo:ZFS_0100000)
+
+# Class: obo:ZFS_0000001 (Zygote:1-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000001 "ZFIN:ZDB-STAGE-010723-4")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000001 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000001 "ZFS:0000001")
+AnnotationAssertion(rdfs:label obo:ZFS_0000001 "Zygote:1-cell")
+SubClassOf(obo:ZFS_0000001 obo:ZFS_0100000)
+
+# Class: obo:ZFS_0000002 (Cleavage:2-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000002 "ZFIN:ZDB-STAGE-010723-15")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000002 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000002 "ZFS:0000002")
+AnnotationAssertion(rdfs:label obo:ZFS_0000002 "Cleavage:2-cell")
+SubClassOf(obo:ZFS_0000002 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000046))
+SubClassOf(obo:ZFS_0000002 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000001))
+
+# Class: obo:ZFS_0000003 (Cleavage:4-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000003 "ZFIN:ZDB-STAGE-010723-11")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000003 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000003 "ZFS:0000003")
+AnnotationAssertion(rdfs:label obo:ZFS_0000003 "Cleavage:4-cell")
+SubClassOf(obo:ZFS_0000003 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000046))
+SubClassOf(obo:ZFS_0000003 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000002))
+
+# Class: obo:ZFS_0000004 (Cleavage:8-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000004 "ZFIN:ZDB-STAGE-010723-33")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000004 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000004 "ZFS:0000004")
+AnnotationAssertion(rdfs:label obo:ZFS_0000004 "Cleavage:8-cell")
+SubClassOf(obo:ZFS_0000004 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000046))
+SubClassOf(obo:ZFS_0000004 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000003))
+
+# Class: obo:ZFS_0000005 (Cleavage:16-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000005 "ZFIN:ZDB-STAGE-010723-20")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000005 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000005 "ZFS:0000005")
+AnnotationAssertion(rdfs:label obo:ZFS_0000005 "Cleavage:16-cell")
+SubClassOf(obo:ZFS_0000005 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000005 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000046))
+SubClassOf(obo:ZFS_0000005 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000004))
+
+# Class: obo:ZFS_0000006 (Cleavage:32-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000006 "ZFIN:ZDB-STAGE-010723-25")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000006 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000006 "ZFS:0000006")
+AnnotationAssertion(rdfs:label obo:ZFS_0000006 "Cleavage:32-cell")
+SubClassOf(obo:ZFS_0000006 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000006 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000046))
+SubClassOf(obo:ZFS_0000006 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000005))
+
+# Class: obo:ZFS_0000007 (Cleavage:64-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000007 "ZFIN:ZDB-STAGE-010723-28")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000007 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000007 "ZFS:0000007")
+AnnotationAssertion(rdfs:label obo:ZFS_0000007 "Cleavage:64-cell")
+SubClassOf(obo:ZFS_0000007 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000007 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000046))
+SubClassOf(obo:ZFS_0000007 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000006))
+
+# Class: obo:ZFS_0000008 (Blastula:128-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000008 "ZFIN:ZDB-STAGE-010723-7")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000008 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000008 "ZFS:0000008")
+AnnotationAssertion(rdfs:label obo:ZFS_0000008 "Blastula:128-cell")
+SubClassOf(obo:ZFS_0000008 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000008 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000008 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000007))
+
+# Class: obo:ZFS_0000009 (Blastula:256-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000009 "ZFIN:ZDB-STAGE-010723-1")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000009 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000009 "ZFS:0000009")
+AnnotationAssertion(rdfs:label obo:ZFS_0000009 "Blastula:256-cell")
+SubClassOf(obo:ZFS_0000009 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000009 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000009 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000008))
+
+# Class: obo:ZFS_0000010 (Blastula:512-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000010 "ZFIN:ZDB-STAGE-010723-14")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000010 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000010 "ZFS:0000010")
+AnnotationAssertion(rdfs:label obo:ZFS_0000010 "Blastula:512-cell")
+SubClassOf(obo:ZFS_0000010 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000010 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000009))
+
+# Class: obo:ZFS_0000011 (Blastula:1k-cell)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000011 "ZFIN:ZDB-STAGE-010723-22")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000011 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000011 "ZFS:0000011")
+AnnotationAssertion(rdfs:label obo:ZFS_0000011 "Blastula:1k-cell")
+SubClassOf(obo:ZFS_0000011 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000011 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000011 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000010))
+
+# Class: obo:ZFS_0000012 (Blastula:High)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000012 "ZFIN:ZDB-STAGE-010723-27")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000012 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000012 "ZFS:0000012")
+AnnotationAssertion(rdfs:label obo:ZFS_0000012 "Blastula:High")
+SubClassOf(obo:ZFS_0000012 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000012 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000012 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000011))
+
+# Class: obo:ZFS_0000013 (Blastula:Oblong)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000013 "ZFIN:ZDB-STAGE-010723-24")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000013 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000013 "ZFS:0000013")
+AnnotationAssertion(rdfs:label obo:ZFS_0000013 "Blastula:Oblong")
+SubClassOf(obo:ZFS_0000013 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000013 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000013 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000012))
+
+# Class: obo:ZFS_0000014 (Blastula:Sphere)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000014 "ZFIN:ZDB-STAGE-010723-21")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000014 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000014 "ZFS:0000014")
+AnnotationAssertion(rdfs:label obo:ZFS_0000014 "Blastula:Sphere")
+SubClassOf(obo:ZFS_0000014 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000014 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000014 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000013))
+
+# Class: obo:ZFS_0000015 (Blastula:Dome)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000015 "ZFIN:ZDB-STAGE-010723-19")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000015 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000015 "ZFS:0000015")
+AnnotationAssertion(rdfs:label obo:ZFS_0000015 "Blastula:Dome")
+SubClassOf(obo:ZFS_0000015 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000015 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000015 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000014))
+
+# Class: obo:ZFS_0000016 (Blastula:30%-epiboly)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000016 "ZFIN:ZDB-STAGE-010723-17")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000016 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000016 "ZFS:0000016")
+AnnotationAssertion(rdfs:label obo:ZFS_0000016 "Blastula:30%-epiboly")
+SubClassOf(obo:ZFS_0000016 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000045))
+SubClassOf(obo:ZFS_0000016 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000015))
+
+# Class: obo:ZFS_0000017 (Gastrula:50%-epiboly)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000017 "ZFIN:ZDB-STAGE-010723-6")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000017 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000017 "ZFS:0000017")
+AnnotationAssertion(rdfs:label obo:ZFS_0000017 "Gastrula:50%-epiboly")
+SubClassOf(obo:ZFS_0000017 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000047))
+SubClassOf(obo:ZFS_0000017 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000016))
+
+# Class: obo:ZFS_0000018 (Gastrula:Germ-ring)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000018 "ZFIN:ZDB-STAGE-010723-3")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000018 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000018 "ZFS:0000018")
+AnnotationAssertion(rdfs:label obo:ZFS_0000018 "Gastrula:Germ-ring")
+SubClassOf(obo:ZFS_0000018 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000018 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000047))
+SubClassOf(obo:ZFS_0000018 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000017))
+
+# Class: obo:ZFS_0000019 (Gastrula:Shield)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000019 "ZFIN:ZDB-STAGE-010723-2")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000019 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000019 "ZFS:0000019")
+AnnotationAssertion(rdfs:label obo:ZFS_0000019 "Gastrula:Shield")
+SubClassOf(obo:ZFS_0000019 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000019 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000047))
+SubClassOf(obo:ZFS_0000019 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000018))
+
+# Class: obo:ZFS_0000020 (Gastrula:75%-epiboly)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000020 "ZFIN:ZDB-STAGE-010723-18")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000020 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000020 "ZFS:0000020")
+AnnotationAssertion(rdfs:label obo:ZFS_0000020 "Gastrula:75%-epiboly")
+SubClassOf(obo:ZFS_0000020 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000020 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000047))
+SubClassOf(obo:ZFS_0000020 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000019))
+
+# Class: obo:ZFS_0000021 (Gastrula:90%-epiboly)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000021 "ZFIN:ZDB-STAGE-010723-29")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000021 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000021 "ZFS:0000021")
+AnnotationAssertion(rdfs:label obo:ZFS_0000021 "Gastrula:90%-epiboly")
+SubClassOf(obo:ZFS_0000021 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000047))
+SubClassOf(obo:ZFS_0000021 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000020))
+
+# Class: obo:ZFS_0000022 (Gastrula:Bud)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000022 "ZFIN:ZDB-STAGE-010723-12")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000022 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000022 "ZFS:0000022")
+AnnotationAssertion(rdfs:label obo:ZFS_0000022 "Gastrula:Bud")
+SubClassOf(obo:ZFS_0000022 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000022 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000047))
+SubClassOf(obo:ZFS_0000022 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000021))
+
+# Class: obo:ZFS_0000023 (Segmentation:1-4 somites)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000023 "ZFIN:ZDB-STAGE-010723-23")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000023 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000023 "ZFS:0000023")
+AnnotationAssertion(rdfs:label obo:ZFS_0000023 "Segmentation:1-4 somites")
+SubClassOf(obo:ZFS_0000023 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000023 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000049))
+SubClassOf(obo:ZFS_0000023 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000022))
+
+# Class: obo:ZFS_0000024 (Segmentation:5-9 somites)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000024 "ZFIN:ZDB-STAGE-010723-5")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000024 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000024 "ZFS:0000024")
+AnnotationAssertion(rdfs:label obo:ZFS_0000024 "Segmentation:5-9 somites")
+SubClassOf(obo:ZFS_0000024 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000024 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000049))
+SubClassOf(obo:ZFS_0000024 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000023))
+
+# Class: obo:ZFS_0000025 (Segmentation:10-13 somites)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000025 "ZFIN:ZDB-STAGE-020626-1")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000025 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000025 "ZFS:0000025")
+AnnotationAssertion(rdfs:label obo:ZFS_0000025 "Segmentation:10-13 somites")
+SubClassOf(obo:ZFS_0000025 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000025 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000049))
+SubClassOf(obo:ZFS_0000025 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000024))
+
+# Class: obo:ZFS_0000026 (Segmentation:14-19 somites)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000026 "ZFIN:ZDB-STAGE-010723-30")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000026 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000026 "ZFS:0000026")
+AnnotationAssertion(rdfs:label obo:ZFS_0000026 "Segmentation:14-19 somites")
+SubClassOf(obo:ZFS_0000026 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000026 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000049))
+SubClassOf(obo:ZFS_0000026 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000025))
+
+# Class: obo:ZFS_0000027 (Segmentation:20-25 somites)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000027 "ZFIN:ZDB-STAGE-010723-16")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000027 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000027 "ZFS:0000027")
+AnnotationAssertion(rdfs:label obo:ZFS_0000027 "Segmentation:20-25 somites")
+SubClassOf(obo:ZFS_0000027 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000027 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000049))
+SubClassOf(obo:ZFS_0000027 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000026))
+
+# Class: obo:ZFS_0000028 (Segmentation:26+ somites)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000028 "ZFIN:ZDB-STAGE-010723-34")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000028 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000028 "ZFS:0000028")
+AnnotationAssertion(rdfs:label obo:ZFS_0000028 "Segmentation:26+ somites")
+SubClassOf(obo:ZFS_0000028 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000028 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000049))
+SubClassOf(obo:ZFS_0000028 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000027))
+
+# Class: obo:ZFS_0000029 (Pharyngula:Prim-5)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000029 "ZFIN:ZDB-STAGE-010723-10")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000029 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000029 "ZFS:0000029")
+AnnotationAssertion(rdfs:label obo:ZFS_0000029 "Pharyngula:Prim-5")
+SubClassOf(obo:ZFS_0000029 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000029 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000050))
+SubClassOf(obo:ZFS_0000029 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000028))
+
+# Class: obo:ZFS_0000030 (Pharyngula:Prim-15)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000030 "ZFIN:ZDB-STAGE-010723-32")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000030 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000030 "ZFS:0000030")
+AnnotationAssertion(rdfs:label obo:ZFS_0000030 "Pharyngula:Prim-15")
+SubClassOf(obo:ZFS_0000030 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000030 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000050))
+SubClassOf(obo:ZFS_0000030 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000029))
+
+# Class: obo:ZFS_0000031 (Pharyngula:Prim-25)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000031 "ZFIN:ZDB-STAGE-010723-13")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000031 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000031 "ZFS:0000031")
+AnnotationAssertion(rdfs:label obo:ZFS_0000031 "Pharyngula:Prim-25")
+SubClassOf(obo:ZFS_0000031 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000031 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000050))
+SubClassOf(obo:ZFS_0000031 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000030))
+
+# Class: obo:ZFS_0000032 (Pharyngula:High-pec)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000032 "ZFIN:ZDB-STAGE-010723-31")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000032 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000032 "ZFS:0000032")
+AnnotationAssertion(rdfs:label obo:ZFS_0000032 "Pharyngula:High-pec")
+SubClassOf(obo:ZFS_0000032 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000032 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000050))
+SubClassOf(obo:ZFS_0000032 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000031))
+
+# Class: obo:ZFS_0000033 (Hatching:Long-pec)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000033 "ZFIN:ZDB-STAGE-010723-9")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000033 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000033 "ZFS:0000033")
+AnnotationAssertion(rdfs:label obo:ZFS_0000033 "Hatching:Long-pec")
+SubClassOf(obo:ZFS_0000033 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000033 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0007000))
+SubClassOf(obo:ZFS_0000033 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000032))
+
+# Class: obo:ZFS_0000034 (Hatching:Pec-fin)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000034 "ZFIN:ZDB-STAGE-010723-26")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000034 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000034 "ZFS:0000034")
+AnnotationAssertion(rdfs:label obo:ZFS_0000034 "Hatching:Pec-fin")
+SubClassOf(obo:ZFS_0000034 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000034 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0007000))
+SubClassOf(obo:ZFS_0000034 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000033))
+
+# Class: obo:ZFS_0000035 (Larval:Protruding-mouth)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000035 "ZFIN:ZDB-STAGE-010723-8")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000035 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000035 "ZFS:0000035")
+AnnotationAssertion(rdfs:label obo:ZFS_0000035 "Larval:Protruding-mouth")
+SubClassOf(obo:ZFS_0000035 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000035 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000035 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000034))
+
+# Class: obo:ZFS_0000036 (Larval:Day 4)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000036 "ZFIN:ZDB-STAGE-010723-35")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000036 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000036 "ZFS:0000036")
+AnnotationAssertion(rdfs:label obo:ZFS_0000036 "Larval:Day 4")
+SubClassOf(obo:ZFS_0000036 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000036 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000036 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000035))
+
+# Class: obo:ZFS_0000037 (Larval:Day 5)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000037 "ZFIN:ZDB-STAGE-010723-36")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000037 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000037 "ZFS:0000037")
+AnnotationAssertion(rdfs:label obo:ZFS_0000037 "Larval:Day 5")
+SubClassOf(obo:ZFS_0000037 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000037 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000037 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000036))
+
+# Class: obo:ZFS_0000038 (Larval:Day 6)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000038 "ZFIN:ZDB-STAGE-010723-37")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000038 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000038 "ZFS:0000038")
+AnnotationAssertion(rdfs:label obo:ZFS_0000038 "Larval:Day 6")
+SubClassOf(obo:ZFS_0000038 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000038 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000038 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000037))
+
+# Class: obo:ZFS_0000039 (Larval:Days 7-13)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000039 "ZFIN:ZDB-STAGE-010723-47")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000039 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000039 "ZFS:0000039")
+AnnotationAssertion(rdfs:label obo:ZFS_0000039 "Larval:Days 7-13")
+SubClassOf(obo:ZFS_0000039 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000039 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000039 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000038))
+
+# Class: obo:ZFS_0000040 (Larval:Days 14-20)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000040 "ZFIN:ZDB-STAGE-010723-48")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000040 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000040 "ZFS:0000040")
+AnnotationAssertion(rdfs:label obo:ZFS_0000040 "Larval:Days 14-20")
+SubClassOf(obo:ZFS_0000040 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000040 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000040 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000039))
+
+# Class: obo:ZFS_0000041 (Larval:Days 21-29)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000041 "ZFIN:ZDB-STAGE-010723-49")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000041 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000041 "ZFS:0000041")
+AnnotationAssertion(rdfs:label obo:ZFS_0000041 "Larval:Days 21-29")
+SubClassOf(obo:ZFS_0000041 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000041 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000048))
+SubClassOf(obo:ZFS_0000041 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000040))
+
+# Class: obo:ZFS_0000042 (Juvenile:Days 30-44)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000042 "ZFIN:ZDB-STAGE-010723-51")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000042 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000042 "ZFS:0000042")
+AnnotationAssertion(rdfs:label obo:ZFS_0000042 "Juvenile:Days 30-44")
+SubClassOf(obo:ZFS_0000042 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000042 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000051))
+SubClassOf(obo:ZFS_0000042 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000041))
+
+# Class: obo:ZFS_0000043 (Juvenile:Days 45-89)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000043 "ZFIN:ZDB-STAGE-010723-52")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000043 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000043 "ZFS:0000043")
+AnnotationAssertion(rdfs:label obo:ZFS_0000043 "Juvenile:Days 45-89")
+SubClassOf(obo:ZFS_0000043 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000043 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ZFS_0000051))
+SubClassOf(obo:ZFS_0000043 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000042))
+
+# Class: obo:ZFS_0000044 (adult)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:ZFS_0000044 "ZFIN:ZDB-STAGE-010723-39")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000044 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000044 "ZFS:0000044")
+AnnotationAssertion(rdfs:label obo:ZFS_0000044 "adult")
+SubClassOf(obo:ZFS_0000044 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000044 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000043))
+
+# Class: obo:ZFS_0000045 (blastula)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000045 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000045 "ZFS:0000045")
+AnnotationAssertion(rdfs:label obo:ZFS_0000045 "blastula")
+SubClassOf(obo:ZFS_0000045 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000045 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000046))
+
+# Class: obo:ZFS_0000046 (cleavage)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000046 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000046 "ZFS:0000046")
+AnnotationAssertion(rdfs:label obo:ZFS_0000046 "cleavage")
+SubClassOf(obo:ZFS_0000046 obo:ZFS_0100000)
+
+# Class: obo:ZFS_0000047 (gastrula)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000047 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000047 "ZFS:0000047")
+AnnotationAssertion(rdfs:label obo:ZFS_0000047 "gastrula")
+SubClassOf(obo:ZFS_0000047 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000047 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000045))
+
+# Class: obo:ZFS_0000048 (larva)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000048 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000048 "ZFS:0000048")
+AnnotationAssertion(rdfs:label obo:ZFS_0000048 "larva")
+SubClassOf(obo:ZFS_0000048 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000048 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0007000))
+
+# Class: obo:ZFS_0000049 (segmentation)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000049 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000049 "ZFS:0000049")
+AnnotationAssertion(rdfs:label obo:ZFS_0000049 "segmentation")
+SubClassOf(obo:ZFS_0000049 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000049 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000047))
+
+# Class: obo:ZFS_0000050 (pharyngula)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000050 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000050 "ZFS:0000050")
+AnnotationAssertion(rdfs:label obo:ZFS_0000050 "pharyngula")
+SubClassOf(obo:ZFS_0000050 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000050 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000049))
+
+# Class: obo:ZFS_0000051 (juvenile)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0000051 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0000051 "ZFS:0000051")
+AnnotationAssertion(rdfs:label obo:ZFS_0000051 "juvenile")
+SubClassOf(obo:ZFS_0000051 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0000051 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000048))
+
+# Class: obo:ZFS_0007000 (hatching)
+
+AnnotationAssertion(oboInOwl:created_by obo:ZFS_0007000 "yvonne")
+AnnotationAssertion(oboInOwl:creation_date obo:ZFS_0007000 "2014-11-05T08:33:09Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0007000 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0007000 "ZFS:0007000")
+AnnotationAssertion(rdfs:label obo:ZFS_0007000 "hatching")
+SubClassOf(obo:ZFS_0007000 obo:ZFS_0100000)
+SubClassOf(obo:ZFS_0007000 ObjectSomeValuesFrom(obo:RO_0002087 obo:ZFS_0000050))
+
+# Class: obo:ZFS_0100000 (zebrafish stage)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ZFS_0100000 "zebrafish_stages")
+AnnotationAssertion(oboInOwl:id obo:ZFS_0100000 "ZFS:0100000")
+AnnotationAssertion(rdfs:label obo:ZFS_0100000 "zebrafish stage")
+
+
+)

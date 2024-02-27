@@ -1,0 +1,89 @@
+Prefix(:=<http://purl.obolibrary.org/obo/MFOMD.owl#>)
+Prefix(MF:=<http://purl.obolibrary.org/obo/MF#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(doid:=<http://purl.obolibrary.org/obo/doid#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(snap:=<http://www.ifomis.org/bfo/1.1/snap#>)
+Prefix(span:=<http://www.ifomis.org/bfo/1.1/span#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(ace_lexicon:=<http://attempto.ifi.uzh.ch/ace_lexicon#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/MFOMD.owl>
+<http://purl.obolibrary.org/obo/MFOMD/2020-04-26/MFOMD.owl>
+Import(<http://purl.obolibrary.org/obo/MF.owl>)
+Import(<http://purl.obolibrary.org/obo/ogms.owl>)
+Import(<http://purl.obolibrary.org/obo/MF/internal/MD-core.owl>)
+Import(<http://purl.obolibrary.org/obo/MF/internal/MF-core.owl>)
+Annotation(dc:contributor "Barry Smith")
+Annotation(dc:contributor "Janna Hastings")
+Annotation(dc:contributor "Jeanette Alicia Chacón Candia")
+Annotation(dc:contributor "Mark Jensen")
+Annotation(dc:description "The Mental Disease Ontology is developed to facilitate representation for all aspects of mental disease. It is an extension of the Ontology for General Medical Science (OGMS) and Mental Functioning Ontology (MF).")
+Annotation(dc:title "Mental Disease Ontology")
+Annotation(rdfs:comment "The Mental Disease Ontology was first described in the publication 'Foundations for a realist ontology of mental disease' (Barry Smith and Werner Ceusters) which is available at http://www.jbiomedsem.com/content/1/1/10 . ")
+Annotation(owl:versionInfo "2020-04-26")
+
+Declaration(Class(obo:MFOMD_0000001))
+Declaration(Class(obo:MFOMD_0000004))
+Declaration(Class(obo:MFOMD_0000024))
+Declaration(Class(obo:MFOMD_0000025))
+Declaration(Class(obo:MFOMD_0000038))
+Declaration(Class(obo:MFOMD_0000040))
+Declaration(Class(obo:MFOMD_0000041))
+Declaration(ObjectProperty(MF:hasAgent))
+Declaration(ObjectProperty(MF:hasPart))
+Declaration(ObjectProperty(MF:hasParticipant))
+Declaration(ObjectProperty(MF:inhererOf))
+Declaration(ObjectProperty(MF:inheresIn))
+Declaration(ObjectProperty(MF:isAbout))
+Declaration(ObjectProperty(MF:manifestationOf))
+Declaration(ObjectProperty(MF:partOf))
+Declaration(ObjectProperty(MF:participantOf))
+Declaration(ObjectProperty(MF:realizationOf))
+Declaration(ObjectProperty(MF:specificallyDependsOn))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:MFOMD_0000001 (mental disease)
+
+SubClassOf(obo:MFOMD_0000001 obo:OGMS_0000031)
+
+# Class: obo:MFOMD_0000024 (pathological mental process)
+
+SubClassOf(obo:MFOMD_0000024 obo:OGMS_0000061)
+
+# Class: obo:MFOMD_0000025 (mental disease course)
+
+SubClassOf(obo:MFOMD_0000025 obo:OGMS_0000063)
+
+# Class: obo:MFOMD_0000038 (obo:MFOMD_0000038)
+
+SubClassOf(obo:MFOMD_0000038 obo:MF_0000030)
+
+# Class: obo:MFOMD_0000040 (diagnosis of mental disease)
+
+SubClassOf(obo:MFOMD_0000040 obo:OGMS_0000073)
+
+# Class: obo:MFOMD_0000041 (manifestation of a mental disease)
+
+SubClassOf(obo:MFOMD_0000041 obo:OGMS_0000022)
+
+
+)

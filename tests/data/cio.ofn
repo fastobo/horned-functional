@@ -1,0 +1,612 @@
+Prefix(:=<http://purl.obolibrary.org/obo/cio.owl#>)
+Prefix(cio:=<http://purl.obolibrary.org/obo/cio/#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/cio.owl>
+<http://purl.obolibrary.org/obo/cio/releases/2015-03-10/cio.owl>
+Annotation(oboInOwl:default-namespace "cio")
+Annotation(oboInOwl:hasOBOFormatVersion "1.4")
+
+Declaration(Class(obo:CIO_0000000))
+Declaration(Class(obo:CIO_0000001))
+Declaration(Class(obo:CIO_0000002))
+Declaration(Class(obo:CIO_0000003))
+Declaration(Class(obo:CIO_0000004))
+Declaration(Class(obo:CIO_0000005))
+Declaration(Class(obo:CIO_0000006))
+Declaration(Class(obo:CIO_0000007))
+Declaration(Class(obo:CIO_0000008))
+Declaration(Class(obo:CIO_0000009))
+Declaration(Class(obo:CIO_0000010))
+Declaration(Class(obo:CIO_0000011))
+Declaration(Class(obo:CIO_0000012))
+Declaration(Class(obo:CIO_0000013))
+Declaration(Class(obo:CIO_0000014))
+Declaration(Class(obo:CIO_0000015))
+Declaration(Class(obo:CIO_0000016))
+Declaration(Class(obo:CIO_0000017))
+Declaration(Class(obo:CIO_0000018))
+Declaration(Class(obo:CIO_0000019))
+Declaration(Class(obo:CIO_0000020))
+Declaration(Class(obo:CIO_0000021))
+Declaration(Class(obo:CIO_0000022))
+Declaration(Class(obo:CIO_0000023))
+Declaration(Class(obo:CIO_0000024))
+Declaration(Class(obo:CIO_0000025))
+Declaration(Class(obo:CIO_0000026))
+Declaration(Class(obo:CIO_0000027))
+Declaration(Class(obo:CIO_0000028))
+Declaration(Class(obo:CIO_0000029))
+Declaration(Class(obo:CIO_0000030))
+Declaration(Class(obo:CIO_0000031))
+Declaration(Class(obo:CIO_0000032))
+Declaration(Class(obo:CIO_0000033))
+Declaration(Class(obo:CIO_0000034))
+Declaration(Class(obo:CIO_0000035))
+Declaration(Class(obo:CIO_0000036))
+Declaration(Class(obo:CIO_0000037))
+Declaration(Class(obo:CIO_0000038))
+Declaration(Class(obo:CIO_0000039))
+Declaration(Class(obo:CIO_0000040))
+Declaration(Class(obo:CIO_0000041))
+Declaration(Class(obo:CIO_0000042))
+Declaration(Class(obo:CIO_0000043))
+Declaration(ObjectProperty(obo:has_confidence_element))
+Declaration(ObjectProperty(obo:has_confidence_level))
+Declaration(ObjectProperty(obo:has_evidence_concordance))
+Declaration(ObjectProperty(obo:has_evidence_type_concordance))
+Declaration(ObjectProperty(obo:provides_greater_confidence_than))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(cio:bgee_not_trusted))
+Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:inSubset))
+Declaration(AnnotationProperty(oboInOwl:shorthand))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: cio:bgee_not_trusted (cio:bgee_not_trusted)
+
+AnnotationAssertion(rdfs:comment cio:bgee_not_trusted "Terms that are considered not trusted by the Bgee team, related to assertions needing additional support.")
+SubAnnotationPropertyOf(cio:bgee_not_trusted oboInOwl:SubsetProperty)
+
+# Annotation Property: oboInOwl:SubsetProperty (subset_property)
+
+AnnotationAssertion(rdfs:label oboInOwl:SubsetProperty "subset_property")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:inSubset (in_subset)
+
+AnnotationAssertion(rdfs:label oboInOwl:inSubset "in_subset")
+
+# Annotation Property: oboInOwl:shorthand (shorthand)
+
+AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:has_confidence_element (has confidence element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:has_confidence_element "X has confidence element Y iff X is a confidence information statement and Y is an associated confidence information element, used to define the statement.")
+AnnotationAssertion(oboInOwl:shorthand obo:has_confidence_element "has_confidence_element")
+AnnotationAssertion(rdfs:label obo:has_confidence_element "has confidence element"@en)
+ObjectPropertyDomain(obo:has_confidence_element obo:CIO_0000000)
+ObjectPropertyRange(obo:has_confidence_element obo:CIO_0000040)
+
+# Object Property: obo:has_confidence_level (has confidence level)
+
+AnnotationAssertion(obo:IAO_0000115 obo:has_confidence_level "X has confidence level Y iff X is a confidence information statement and Y is it associated confidence information level.")
+AnnotationAssertion(oboInOwl:shorthand obo:has_confidence_level "has_confidence_level")
+AnnotationAssertion(rdfs:label obo:has_confidence_level "has confidence level"@en)
+SubObjectPropertyOf(obo:has_confidence_level obo:has_confidence_element)
+ObjectPropertyDomain(obo:has_confidence_level ObjectIntersectionOf(obo:CIO_0000000 ObjectAllValuesFrom(obo:has_evidence_concordance ObjectComplementOf(obo:CIO_0000035))))
+ObjectPropertyRange(obo:has_confidence_level obo:CIO_0000028)
+
+# Object Property: obo:has_evidence_concordance (has evidence concordance)
+
+AnnotationAssertion(obo:IAO_0000115 obo:has_evidence_concordance "X has evidence concordance Y iff X is a confidence information statement and Y is it associated evidence concordance.")
+AnnotationAssertion(oboInOwl:shorthand obo:has_evidence_concordance "has_evidence_concordance")
+AnnotationAssertion(rdfs:label obo:has_evidence_concordance "has evidence concordance"@en)
+SubObjectPropertyOf(obo:has_evidence_concordance obo:has_confidence_element)
+ObjectPropertyDomain(obo:has_evidence_concordance obo:CIO_0000000)
+ObjectPropertyRange(obo:has_evidence_concordance obo:CIO_0000032)
+
+# Object Property: obo:has_evidence_type_concordance (has evidence type concordance)
+
+AnnotationAssertion(obo:IAO_0000115 obo:has_evidence_type_concordance "X has evidence type concordance Y iff X is a confidence information statement and Y is it associated evidence type concordance.")
+AnnotationAssertion(oboInOwl:shorthand obo:has_evidence_type_concordance "has_evidence_type_concordance")
+AnnotationAssertion(rdfs:label obo:has_evidence_type_concordance "has evidence type concordance"@en)
+SubObjectPropertyOf(obo:has_evidence_type_concordance obo:has_confidence_element)
+ObjectPropertyDomain(obo:has_evidence_type_concordance ObjectIntersectionOf(obo:CIO_0000000 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000043)))
+ObjectPropertyRange(obo:has_evidence_type_concordance obo:CIO_0000041)
+
+# Object Property: obo:provides_greater_confidence_than (provides greater confidence than)
+
+AnnotationAssertion(obo:IAO_0000115 obo:provides_greater_confidence_than "X provides greater confidence than Y iff both X and Y provide a confidence information level, and the level of confidence provided by X is greater than the level of confidence provided by Y.")
+AnnotationAssertion(oboInOwl:shorthand obo:provides_greater_confidence_than "provides_greater_confidence_than")
+AnnotationAssertion(rdfs:label obo:provides_greater_confidence_than "provides greater confidence than"@en)
+TransitiveObjectProperty(obo:provides_greater_confidence_than)
+ObjectPropertyDomain(obo:provides_greater_confidence_than obo:CIO_0000028)
+ObjectPropertyRange(obo:provides_greater_confidence_than obo:CIO_0000028)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:CIO_0000000 (confidence information statement)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000000 "A statement providing information about the confidence in an assertion, meaning, an information about the level of certainty that an assertion is correct.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000000 "CIO:0000000")
+AnnotationAssertion(rdfs:comment obo:CIO_0000000 "Quality and confidence are distinct concepts: quality refers to the value of a source or of an annotation, whereas confidence refers to the level of certainty that an assertion is correct.")
+AnnotationAssertion(rdfs:label obo:CIO_0000000 "confidence information statement")
+EquivalentClasses(obo:CIO_0000000 ObjectIntersectionOf(ObjectMinCardinality(1 obo:has_confidence_element obo:CIO_0000040) ObjectMinCardinality(0 obo:has_confidence_level obo:CIO_0000028) ObjectMinCardinality(0 obo:has_evidence_type_concordance obo:CIO_0000041) ObjectExactCardinality(1 obo:has_evidence_concordance obo:CIO_0000032) ObjectMaxCardinality(3 obo:has_confidence_element obo:CIO_0000040) ObjectMaxCardinality(1 obo:has_confidence_level obo:CIO_0000028) ObjectMaxCardinality(1 obo:has_evidence_type_concordance obo:CIO_0000041)))
+EquivalentClasses(obo:CIO_0000000 ObjectUnionOf(ObjectIntersectionOf(ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000042) ObjectMinCardinality(1 obo:has_confidence_element obo:CIO_0000040) ObjectMinCardinality(0 obo:has_confidence_level obo:CIO_0000028) ObjectExactCardinality(0 obo:has_evidence_type_concordance obo:CIO_0000041) ObjectMaxCardinality(2 obo:has_confidence_element obo:CIO_0000040) ObjectMaxCardinality(1 obo:has_confidence_level obo:CIO_0000028)) ObjectIntersectionOf(ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000043) ObjectMinCardinality(2 obo:has_confidence_element obo:CIO_0000040) ObjectMinCardinality(0 obo:has_confidence_level obo:CIO_0000028) ObjectExactCardinality(1 obo:has_evidence_type_concordance obo:CIO_0000041) ObjectMaxCardinality(3 obo:has_confidence_element obo:CIO_0000040) ObjectMaxCardinality(1 obo:has_confidence_level obo:CIO_0000028))))
+SubClassOf(obo:CIO_0000000 ObjectMinCardinality(1 obo:has_confidence_element obo:CIO_0000040))
+SubClassOf(obo:CIO_0000000 ObjectMinCardinality(0 obo:has_confidence_level obo:CIO_0000028))
+SubClassOf(obo:CIO_0000000 ObjectMinCardinality(0 obo:has_evidence_type_concordance obo:CIO_0000041))
+SubClassOf(obo:CIO_0000000 ObjectExactCardinality(1 obo:has_evidence_concordance obo:CIO_0000032))
+SubClassOf(obo:CIO_0000000 ObjectMaxCardinality(3 obo:has_confidence_element obo:CIO_0000040))
+SubClassOf(obo:CIO_0000000 ObjectMaxCardinality(1 obo:has_confidence_level obo:CIO_0000028))
+SubClassOf(obo:CIO_0000000 ObjectMaxCardinality(1 obo:has_evidence_type_concordance obo:CIO_0000041))
+DisjointClasses(obo:CIO_0000000 obo:CIO_0000040)
+
+# Class: obo:CIO_0000001 (confidence statement from single evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000001 "A confidence information statement defined from a single evidence.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000001 "CIO:0000001")
+AnnotationAssertion(rdfs:label obo:CIO_0000001 "confidence statement from single evidence")
+EquivalentClasses(obo:CIO_0000001 ObjectIntersectionOf(obo:CIO_0000000 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000042) ObjectExactCardinality(0 obo:has_evidence_type_concordance obo:CIO_0000041)))
+SubClassOf(obo:CIO_0000001 obo:CIO_0000000)
+SubClassOf(obo:CIO_0000001 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000042))
+SubClassOf(obo:CIO_0000001 ObjectExactCardinality(0 obo:has_evidence_type_concordance obo:CIO_0000041))
+DisjointClasses(obo:CIO_0000001 obo:CIO_0000002)
+
+# Class: obo:CIO_0000002 (confidence statement from multiple evidence lines)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000002 "A confidence information statement defined from a set of evidence lines.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000002 "CIO:0000002")
+AnnotationAssertion(rdfs:label obo:CIO_0000002 "confidence statement from multiple evidence lines")
+EquivalentClasses(obo:CIO_0000002 ObjectIntersectionOf(obo:CIO_0000000 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000043) ObjectExactCardinality(1 obo:has_evidence_type_concordance obo:CIO_0000041)))
+SubClassOf(obo:CIO_0000002 obo:CIO_0000000)
+SubClassOf(obo:CIO_0000002 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000043))
+SubClassOf(obo:CIO_0000002 ObjectExactCardinality(1 obo:has_evidence_type_concordance obo:CIO_0000041))
+
+# Class: obo:CIO_0000003 (high confidence from single evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000003 "A confidence statement from single evidence related to assertions supported by a highly reliable evidence.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "neXtProt") oboInOwl:hasRelatedSynonym obo:CIO_0000003 "gold")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000003 "CIO:0000003")
+AnnotationAssertion(rdfs:label obo:CIO_0000003 "high confidence from single evidence")
+EquivalentClasses(obo:CIO_0000003 ObjectIntersectionOf(obo:CIO_0000001 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029)))
+SubClassOf(obo:CIO_0000003 obo:CIO_0000001)
+SubClassOf(obo:CIO_0000003 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029))
+DisjointClasses(obo:CIO_0000003 obo:CIO_0000004)
+DisjointClasses(obo:CIO_0000003 obo:CIO_0000005)
+DisjointClasses(obo:CIO_0000003 obo:CIO_0000039)
+
+# Class: obo:CIO_0000004 (medium confidence from single evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000004 "A confidence statement from single evidence related to assertions supported by moderately trusted evidence.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "neXtProt") oboInOwl:hasRelatedSynonym obo:CIO_0000004 "silver")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000004 "CIO:0000004")
+AnnotationAssertion(rdfs:label obo:CIO_0000004 "medium confidence from single evidence")
+EquivalentClasses(obo:CIO_0000004 ObjectIntersectionOf(obo:CIO_0000001 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030)))
+SubClassOf(obo:CIO_0000004 obo:CIO_0000001)
+SubClassOf(obo:CIO_0000004 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030))
+DisjointClasses(obo:CIO_0000004 obo:CIO_0000005)
+DisjointClasses(obo:CIO_0000004 obo:CIO_0000039)
+
+# Class: obo:CIO_0000005 (low confidence from single evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000005 "A confidence statement from single evidence related to assertions supported by not-trusted evidence.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "neXtProt") oboInOwl:hasRelatedSynonym obo:CIO_0000005 "bronze")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000005 "CIO:0000005")
+AnnotationAssertion(oboInOwl:inSubset obo:CIO_0000005 cio:bgee_not_trusted)
+AnnotationAssertion(rdfs:label obo:CIO_0000005 "low confidence from single evidence")
+EquivalentClasses(obo:CIO_0000005 ObjectIntersectionOf(obo:CIO_0000001 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031)))
+SubClassOf(obo:CIO_0000005 obo:CIO_0000001)
+SubClassOf(obo:CIO_0000005 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031))
+DisjointClasses(obo:CIO_0000005 obo:CIO_0000039)
+
+# Class: obo:CIO_0000006 (confidence statement from multiple evidence lines of same type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000006 "A confidence statement from multiple evidence lines, all using a same experimental or computational type.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000006 "CIO:0000006")
+AnnotationAssertion(rdfs:label obo:CIO_0000006 "confidence statement from multiple evidence lines of same type")
+EquivalentClasses(obo:CIO_0000006 ObjectIntersectionOf(obo:CIO_0000002 ObjectAllValuesFrom(obo:has_evidence_type_concordance obo:CIO_0000037)))
+SubClassOf(obo:CIO_0000006 obo:CIO_0000002)
+SubClassOf(obo:CIO_0000006 ObjectAllValuesFrom(obo:has_evidence_type_concordance obo:CIO_0000037))
+DisjointClasses(obo:CIO_0000006 obo:CIO_0000007)
+
+# Class: obo:CIO_0000007 (confidence statement from multiple evidence lines of multiple types)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000007 "A confidence statement from multiple evidence lines, of different experimental or computational types.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000007 "CIO:0000007")
+AnnotationAssertion(rdfs:label obo:CIO_0000007 "confidence statement from multiple evidence lines of multiple types")
+EquivalentClasses(obo:CIO_0000007 ObjectIntersectionOf(obo:CIO_0000002 ObjectAllValuesFrom(obo:has_evidence_type_concordance obo:CIO_0000038)))
+SubClassOf(obo:CIO_0000007 obo:CIO_0000002)
+SubClassOf(obo:CIO_0000007 ObjectAllValuesFrom(obo:has_evidence_type_concordance obo:CIO_0000038))
+
+# Class: obo:CIO_0000008 (confidence statement from congruent evidence lines of multiple types)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000008 "A confidence statement from multiple evidence lines of multiple types, that are all congruent.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000008 "CIO:0000008")
+AnnotationAssertion(rdfs:label obo:CIO_0000008 "confidence statement from congruent evidence lines of multiple types")
+EquivalentClasses(obo:CIO_0000008 ObjectIntersectionOf(obo:CIO_0000007 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000033)))
+SubClassOf(obo:CIO_0000008 obo:CIO_0000007)
+SubClassOf(obo:CIO_0000008 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000033))
+DisjointClasses(obo:CIO_0000008 obo:CIO_0000009)
+
+# Class: obo:CIO_0000009 (confidence statement from conflicting evidence lines of multiple types)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000009 "A confidence statement from multiple evidence lines of multiple types, some of which being contradictory.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000009 "CIO:0000009")
+AnnotationAssertion(rdfs:label obo:CIO_0000009 "confidence statement from conflicting evidence lines of multiple types")
+EquivalentClasses(obo:CIO_0000009 ObjectIntersectionOf(obo:CIO_0000007 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000034)))
+SubClassOf(obo:CIO_0000009 obo:CIO_0000007)
+SubClassOf(obo:CIO_0000009 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000034))
+
+# Class: obo:CIO_0000010 (confidence statement from strongly conflicting evidence lines of multiple types)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000010 "A confidence statement from conflicting evidence lines of multiple types, where evidence lines are in strong contradiction, meaning that the supporting evidence lines yield different conclusion, several of them being equally likely to be true.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000010 "CIO:0000010")
+AnnotationAssertion(oboInOwl:inSubset obo:CIO_0000010 cio:bgee_not_trusted)
+AnnotationAssertion(rdfs:label obo:CIO_0000010 "confidence statement from strongly conflicting evidence lines of multiple types")
+EquivalentClasses(obo:CIO_0000010 ObjectIntersectionOf(obo:CIO_0000009 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000035) ObjectExactCardinality(0 obo:has_confidence_level obo:CIO_0000028)))
+SubClassOf(obo:CIO_0000010 obo:CIO_0000009)
+SubClassOf(obo:CIO_0000010 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000035))
+SubClassOf(obo:CIO_0000010 ObjectExactCardinality(0 obo:has_confidence_level obo:CIO_0000028))
+DisjointClasses(obo:CIO_0000010 obo:CIO_0000011)
+
+# Class: obo:CIO_0000011 (confidence statement from weakly conflicting evidence lines of multiple types)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000011 "A confidence statement from conflicting evidence lines of multiple types, where evidence lines are in weak contradiction, meaning that the overall supported assertion is believed to be true, but a subset of less-reliable evidence lines are in contradiction.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000011 "CIO:0000011")
+AnnotationAssertion(rdfs:label obo:CIO_0000011 "confidence statement from weakly conflicting evidence lines of multiple types")
+EquivalentClasses(obo:CIO_0000011 ObjectIntersectionOf(obo:CIO_0000009 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000036)))
+SubClassOf(obo:CIO_0000011 obo:CIO_0000009)
+SubClassOf(obo:CIO_0000011 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000036))
+
+# Class: obo:CIO_0000012 (confidence statement from congruent evidence lines of multiple types, overall confidence high)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000012 "A confidence statement from congruent evidence lines of multiple types, of an overall high confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000012 "CIO:0000012")
+AnnotationAssertion(rdfs:comment obo:CIO_0000012 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000012 "confidence statement from congruent evidence lines of multiple types, overall confidence high")
+EquivalentClasses(obo:CIO_0000012 ObjectIntersectionOf(obo:CIO_0000008 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029)))
+SubClassOf(obo:CIO_0000012 obo:CIO_0000008)
+SubClassOf(obo:CIO_0000012 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029))
+DisjointClasses(obo:CIO_0000012 obo:CIO_0000013)
+DisjointClasses(obo:CIO_0000012 obo:CIO_0000014)
+
+# Class: obo:CIO_0000013 (confidence statement from congruent evidence lines of multiple types, overall confidence medium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000013 "A confidence statement from congruent evidence lines of multiple types, of an overall moderately trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000013 "CIO:0000013")
+AnnotationAssertion(rdfs:comment obo:CIO_0000013 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000013 "confidence statement from congruent evidence lines of multiple types, overall confidence medium")
+EquivalentClasses(obo:CIO_0000013 ObjectIntersectionOf(obo:CIO_0000008 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030)))
+SubClassOf(obo:CIO_0000013 obo:CIO_0000008)
+SubClassOf(obo:CIO_0000013 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030))
+DisjointClasses(obo:CIO_0000013 obo:CIO_0000014)
+
+# Class: obo:CIO_0000014 (confidence statement from congruent evidence lines of multiple types, overall confidence low)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000014 "A confidence statement from congruent evidence lines of multiple types, of an overall not-trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000014 "CIO:0000014")
+AnnotationAssertion(rdfs:comment obo:CIO_0000014 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000014 "confidence statement from congruent evidence lines of multiple types, overall confidence low")
+EquivalentClasses(obo:CIO_0000014 ObjectIntersectionOf(obo:CIO_0000008 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031)))
+SubClassOf(obo:CIO_0000014 obo:CIO_0000008)
+SubClassOf(obo:CIO_0000014 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031))
+
+# Class: obo:CIO_0000015 (confidence statement from conflicting evidence lines of same type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000015 "Confidence statement from multiple evidence lines of same type, some of which being contradictory.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000015 "CIO:0000015")
+AnnotationAssertion(rdfs:label obo:CIO_0000015 "confidence statement from conflicting evidence lines of same type")
+EquivalentClasses(obo:CIO_0000015 ObjectIntersectionOf(obo:CIO_0000006 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000034)))
+SubClassOf(obo:CIO_0000015 obo:CIO_0000006)
+SubClassOf(obo:CIO_0000015 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000034))
+DisjointClasses(obo:CIO_0000015 obo:CIO_0000016)
+
+# Class: obo:CIO_0000016 (confidence statement from congruent evidence lines of same type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000016 "Confidence statement from multiple evidence lines of same type, that are all congruent.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000016 "CIO:0000016")
+AnnotationAssertion(rdfs:label obo:CIO_0000016 "confidence statement from congruent evidence lines of same type")
+EquivalentClasses(obo:CIO_0000016 ObjectIntersectionOf(obo:CIO_0000006 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000033)))
+SubClassOf(obo:CIO_0000016 obo:CIO_0000006)
+SubClassOf(obo:CIO_0000016 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000033))
+
+# Class: obo:CIO_0000017 (confidence statement from congruent evidence lines of same type, overall confidence high)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000017 "A confidence statement from congruent evidence lines of same type, of an overall high confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000017 "CIO:0000017")
+AnnotationAssertion(rdfs:comment obo:CIO_0000017 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000017 "confidence statement from congruent evidence lines of same type, overall confidence high")
+EquivalentClasses(obo:CIO_0000017 ObjectIntersectionOf(obo:CIO_0000016 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029)))
+SubClassOf(obo:CIO_0000017 obo:CIO_0000016)
+SubClassOf(obo:CIO_0000017 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029))
+DisjointClasses(obo:CIO_0000017 obo:CIO_0000018)
+DisjointClasses(obo:CIO_0000017 obo:CIO_0000019)
+
+# Class: obo:CIO_0000018 (confidence statement from congruent evidence lines of same type, overall confidence low)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000018 "A confidence statement from congruent evidence lines of same type, of an overall not-trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000018 "CIO:0000018")
+AnnotationAssertion(rdfs:comment obo:CIO_0000018 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000018 "confidence statement from congruent evidence lines of same type, overall confidence low")
+EquivalentClasses(obo:CIO_0000018 ObjectIntersectionOf(obo:CIO_0000016 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031)))
+SubClassOf(obo:CIO_0000018 obo:CIO_0000016)
+SubClassOf(obo:CIO_0000018 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031))
+DisjointClasses(obo:CIO_0000018 obo:CIO_0000019)
+
+# Class: obo:CIO_0000019 (confidence statement from congruent evidence lines of same type, overall confidence medium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000019 "A confidence statement from congruent evidence lines of same type, of an overall moderately trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000019 "CIO:0000019")
+AnnotationAssertion(rdfs:comment obo:CIO_0000019 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000019 "confidence statement from congruent evidence lines of same type, overall confidence medium")
+EquivalentClasses(obo:CIO_0000019 ObjectIntersectionOf(obo:CIO_0000016 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030)))
+SubClassOf(obo:CIO_0000019 obo:CIO_0000016)
+SubClassOf(obo:CIO_0000019 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030))
+
+# Class: obo:CIO_0000020 (confidence statement from strongly conflicting evidence lines of same type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000020 "Confidence statement from conflicting evidence lines of same type, where evidence lines are in strong contradiction, meaning that the supporting evidence lines yield different conclusion, several of them being equally likely to be true.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000020 "CIO:0000020")
+AnnotationAssertion(oboInOwl:inSubset obo:CIO_0000020 cio:bgee_not_trusted)
+AnnotationAssertion(rdfs:label obo:CIO_0000020 "confidence statement from strongly conflicting evidence lines of same type")
+EquivalentClasses(obo:CIO_0000020 ObjectIntersectionOf(obo:CIO_0000015 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000035) ObjectExactCardinality(0 obo:has_confidence_level obo:CIO_0000028)))
+SubClassOf(obo:CIO_0000020 obo:CIO_0000015)
+SubClassOf(obo:CIO_0000020 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000035))
+SubClassOf(obo:CIO_0000020 ObjectExactCardinality(0 obo:has_confidence_level obo:CIO_0000028))
+DisjointClasses(obo:CIO_0000020 obo:CIO_0000021)
+
+# Class: obo:CIO_0000021 (confidence statement from weakly conflicting evidence lines of same type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000021 "Confidence statement from conflicting evidence lines of same type, where evidence lines are in weak contradiction, meaning that the overall supported assertion is believed to be true, but a subset of less-reliable evidence lines are in contradiction.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000021 "CIO:0000021")
+AnnotationAssertion(rdfs:label obo:CIO_0000021 "confidence statement from weakly conflicting evidence lines of same type")
+EquivalentClasses(obo:CIO_0000021 ObjectIntersectionOf(obo:CIO_0000015 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000036)))
+SubClassOf(obo:CIO_0000021 obo:CIO_0000015)
+SubClassOf(obo:CIO_0000021 ObjectAllValuesFrom(obo:has_evidence_concordance obo:CIO_0000036))
+
+# Class: obo:CIO_0000022 (confidence statement from weakly conflicting evidence lines of same type, overall confidence high)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000022 "Confidence statement from weakly conflicting evidence lines of same type, of an overall high confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000022 "CIO:0000022")
+AnnotationAssertion(rdfs:comment obo:CIO_0000022 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting (not contradicting) the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion, even if contradicted by one other low-confidence evidence). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000022 "confidence statement from weakly conflicting evidence lines of same type, overall confidence high")
+EquivalentClasses(obo:CIO_0000022 ObjectIntersectionOf(obo:CIO_0000021 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029)))
+SubClassOf(obo:CIO_0000022 obo:CIO_0000021)
+SubClassOf(obo:CIO_0000022 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029))
+DisjointClasses(obo:CIO_0000022 obo:CIO_0000023)
+DisjointClasses(obo:CIO_0000022 obo:CIO_0000024)
+
+# Class: obo:CIO_0000023 (confidence statement from weakly conflicting evidence lines of same type, overall confidence low)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000023 "Confidence statement from weakly conflicting evidence lines of same type, of an overall not-trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000023 "CIO:0000023")
+AnnotationAssertion(oboInOwl:inSubset obo:CIO_0000023 cio:bgee_not_trusted)
+AnnotationAssertion(rdfs:comment obo:CIO_0000023 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting (not contradicting) the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion, even if contradicted by one other low-confidence evidence). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000023 "confidence statement from weakly conflicting evidence lines of same type, overall confidence low")
+EquivalentClasses(obo:CIO_0000023 ObjectIntersectionOf(obo:CIO_0000021 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031)))
+SubClassOf(obo:CIO_0000023 obo:CIO_0000021)
+SubClassOf(obo:CIO_0000023 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031))
+DisjointClasses(obo:CIO_0000023 obo:CIO_0000024)
+
+# Class: obo:CIO_0000024 (confidence statement from weakly conflicting evidence lines of same type, overall confidence medium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000024 "Confidence statement from weakly conflicting evidence lines of same type, of an overall moderately trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000024 "CIO:0000024")
+AnnotationAssertion(rdfs:comment obo:CIO_0000024 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting (not contradicting) the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion, even if contradicted by one other low-confidence evidence). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000024 "confidence statement from weakly conflicting evidence lines of same type, overall confidence medium")
+EquivalentClasses(obo:CIO_0000024 ObjectIntersectionOf(obo:CIO_0000021 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030)))
+SubClassOf(obo:CIO_0000024 obo:CIO_0000021)
+SubClassOf(obo:CIO_0000024 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030))
+
+# Class: obo:CIO_0000025 (confidence statement from weakly conflicting evidence lines of multiple types, overall confidence high)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000025 "Confidence statement from weakly conflicting evidence lines of multiple types, of an overall high confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000025 "CIO:0000025")
+AnnotationAssertion(rdfs:comment obo:CIO_0000025 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting (not contradicting) the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion, even if contradicted by one other low-confidence evidence). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000025 "confidence statement from weakly conflicting evidence lines of multiple types, overall confidence high")
+EquivalentClasses(obo:CIO_0000025 ObjectIntersectionOf(obo:CIO_0000011 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029)))
+SubClassOf(obo:CIO_0000025 obo:CIO_0000011)
+SubClassOf(obo:CIO_0000025 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000029))
+DisjointClasses(obo:CIO_0000025 obo:CIO_0000026)
+DisjointClasses(obo:CIO_0000025 obo:CIO_0000027)
+
+# Class: obo:CIO_0000026 (confidence statement from weakly conflicting evidence lines of multiple types, overall confidence low)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000026 "Confidence statement from weakly conflicting evidence lines of multiple types, of an overall not-trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000026 "CIO:0000026")
+AnnotationAssertion(oboInOwl:inSubset obo:CIO_0000026 cio:bgee_not_trusted)
+AnnotationAssertion(rdfs:comment obo:CIO_0000026 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting (not contradicting) the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion, even if contradicted by one other low-confidence evidence). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000026 "confidence statement from weakly conflicting evidence lines of multiple types, overall confidence low")
+EquivalentClasses(obo:CIO_0000026 ObjectIntersectionOf(obo:CIO_0000011 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031)))
+SubClassOf(obo:CIO_0000026 obo:CIO_0000011)
+SubClassOf(obo:CIO_0000026 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000031))
+DisjointClasses(obo:CIO_0000026 obo:CIO_0000027)
+
+# Class: obo:CIO_0000027 (confidence statement from weakly conflicting evidence lines of multiple types, overall confidence medium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000027 "Confidence statement from weakly conflicting evidence lines of multiple types, of an overall moderately trusted confidence level.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000027 "CIO:0000027")
+AnnotationAssertion(rdfs:comment obo:CIO_0000027 "Different strategies can be used to define the overall confidence level: for instance, it could be defined based on the confidence level of the most trusted evidence, from the set of evidence lines supporting (not contradicting) the assertion; or, it could be defined based on the number of evidence lines supporting the assertion (e.g., 10 congruent low-confidence evidence lines could allow to have an overall high confidence in an assertion, even if contradicted by one other low-confidence evidence). It is the responsibility of annotation teams to define and communicate the parameters, pertinent to their field, allowing to produce overall confidence levels.")
+AnnotationAssertion(rdfs:label obo:CIO_0000027 "confidence statement from weakly conflicting evidence lines of multiple types, overall confidence medium")
+EquivalentClasses(obo:CIO_0000027 ObjectIntersectionOf(obo:CIO_0000011 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030)))
+SubClassOf(obo:CIO_0000027 obo:CIO_0000011)
+SubClassOf(obo:CIO_0000027 ObjectAllValuesFrom(obo:has_confidence_level obo:CIO_0000030))
+
+# Class: obo:CIO_0000028 (confidence level)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000028 "A confidence information element representing the different levels of confidence, used to compose confidence information statements.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000028 "CIO:0000028")
+AnnotationAssertion(rdfs:label obo:CIO_0000028 "confidence level")
+SubClassOf(obo:CIO_0000028 obo:CIO_0000040)
+DisjointClasses(obo:CIO_0000028 obo:CIO_0000032)
+DisjointClasses(obo:CIO_0000028 obo:CIO_0000041)
+
+# Class: obo:CIO_0000029 (high confidence level)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000029 "A confidence level representing a high trust in an evidence.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000029 "CIO:0000029")
+AnnotationAssertion(rdfs:label obo:CIO_0000029 "high confidence level")
+SubClassOf(obo:CIO_0000029 obo:CIO_0000028)
+SubClassOf(obo:CIO_0000029 ObjectSomeValuesFrom(obo:provides_greater_confidence_than obo:CIO_0000030))
+DisjointClasses(obo:CIO_0000029 obo:CIO_0000030)
+DisjointClasses(obo:CIO_0000029 obo:CIO_0000031)
+
+# Class: obo:CIO_0000030 (medium confidence level)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000030 "A confidence level representing a moderate trust in an evidence.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000030 "CIO:0000030")
+AnnotationAssertion(rdfs:label obo:CIO_0000030 "medium confidence level")
+SubClassOf(obo:CIO_0000030 obo:CIO_0000028)
+SubClassOf(obo:CIO_0000030 ObjectSomeValuesFrom(obo:provides_greater_confidence_than obo:CIO_0000031))
+DisjointClasses(obo:CIO_0000030 obo:CIO_0000031)
+
+# Class: obo:CIO_0000031 (low confidence level)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000031 "A confidence level representing an absence of trust in an evidence.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000031 "CIO:0000031")
+AnnotationAssertion(rdfs:label obo:CIO_0000031 "low confidence level")
+SubClassOf(obo:CIO_0000031 obo:CIO_0000028)
+
+# Class: obo:CIO_0000032 (evidence concordance)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000032 "A confidence information element representing the type of concordance of evidence lines supporting an assertion, used to compose confidence information statements.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000032 "CIO:0000032")
+AnnotationAssertion(rdfs:comment obo:CIO_0000032 "Subclasses are used to define whether there is a single evidence, or multiple evidence lines, in support of an assertion, and whether they are congruent or conflicting.")
+AnnotationAssertion(rdfs:label obo:CIO_0000032 "evidence concordance")
+SubClassOf(obo:CIO_0000032 obo:CIO_0000040)
+DisjointClasses(obo:CIO_0000032 obo:CIO_0000041)
+
+# Class: obo:CIO_0000033 (congruent)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000033 "An evidence concordance of multiple evidence lines that are congruent.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000033 "CIO:0000033")
+AnnotationAssertion(rdfs:comment obo:CIO_0000033 "The assumption here is that assertions supported by a single evidence are less trustworthy than assertions supported by multiple evidence lines.")
+AnnotationAssertion(rdfs:label obo:CIO_0000033 "congruent")
+SubClassOf(obo:CIO_0000033 obo:CIO_0000043)
+DisjointClasses(obo:CIO_0000033 obo:CIO_0000034)
+
+# Class: obo:CIO_0000034 (conflicting)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000034 "An evidence concordance of multiple evidence lines that are conflicting.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000034 "CIO:0000034")
+AnnotationAssertion(rdfs:comment obo:CIO_0000034 "An assertion can have several related evidence lines, some supporting the assertion, and some rejecting the assertion (e.g., using the NOT qualifier in GO annotations).")
+AnnotationAssertion(rdfs:label obo:CIO_0000034 "conflicting")
+SubClassOf(obo:CIO_0000034 obo:CIO_0000043)
+
+# Class: obo:CIO_0000035 (strongly conflicting)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000035 "A conflicting concordance for evidence lines that are strongly conflicting.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000035 "CIO:0000035")
+AnnotationAssertion(rdfs:comment obo:CIO_0000035 "We distinguish two levels of conflict: weak conflict between evidence lines, e.g., a low confidence evidence negating an assertion, versus several high confidence evidence lines supporting the assertion; and strong conflict between evidence lines, e.g., two high confidence evidence lines contradicting each other. Note that strongly conflicting evidence lines are not used to produce confidence information statements associated to a confidence level (low, medium, high): in that case, the supported assertion is believed to need further validation, as evidence lines yield different conclusions of similar confidence.")
+AnnotationAssertion(rdfs:label obo:CIO_0000035 "strongly conflicting")
+SubClassOf(obo:CIO_0000035 obo:CIO_0000034)
+DisjointClasses(obo:CIO_0000035 obo:CIO_0000036)
+
+# Class: obo:CIO_0000036 (weakly conflicting)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000036 "A conflicting concordance for evidence lines that are weakly conflicting.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000036 "CIO:0000036")
+AnnotationAssertion(rdfs:comment obo:CIO_0000036 "We distinguish two levels of conflict: weak conflict between evidence lines, e.g., a low confidence evidence negating an assertion, versus several high confidence evidence lines supporting the assertion; and strong conflict between evidence lines, e.g., two high confidence evidence lines contradicting each other.")
+AnnotationAssertion(rdfs:label obo:CIO_0000036 "weakly conflicting")
+SubClassOf(obo:CIO_0000036 obo:CIO_0000034)
+
+# Class: obo:CIO_0000037 (same type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000037 "An evidence type concordance for evidence lines that are from a same type.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000037 "CIO:0000037")
+AnnotationAssertion(rdfs:label obo:CIO_0000037 "same type")
+SubClassOf(obo:CIO_0000037 obo:CIO_0000041)
+DisjointClasses(obo:CIO_0000037 obo:CIO_0000038)
+
+# Class: obo:CIO_0000038 (different type)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000038 "An evidence type concordance for evidence lines that are from different types.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000038 "CIO:0000038")
+AnnotationAssertion(rdfs:label obo:CIO_0000038 "different type")
+SubClassOf(obo:CIO_0000038 obo:CIO_0000041)
+
+# Class: obo:CIO_0000039 (rejected)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000039 "A confidence statement from single evidence related to assertions that have been rejected, for instance, following paper retraction, author misinterpretation, or curator misinterpretation.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000039 "CIO:0000039")
+AnnotationAssertion(rdfs:comment obo:CIO_0000039 "When results are retracted, associated annotations are often removed. Consequently, end-users might not be aware that the result was annotated. Annotating an assertion with this confidence term allows to keep the information available. Such assertions should not interfer with aggregation of multiple evidence lines to generate a confidence level from the branch CIO:0000002 \"confidence from multiple evidence lines\". This is different from negative annotations, used to negate the interpretation of an annotation. It is also different from conflicting multiple evidence lines, where each single evidence has not been directly invalidated. Rejection is a stronger assertion about an annotation source than conflict, capturing that this evidence should no longer be used.")
+AnnotationAssertion(rdfs:label obo:CIO_0000039 "rejected")
+SubClassOf(obo:CIO_0000039 obo:CIO_0000001)
+
+# Class: obo:CIO_0000040 (confidence information element)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000040 "Confidence information element represent intrinsic properties of confidence information statements, allowing to compose them.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000040 "CIO:0000040")
+AnnotationAssertion(rdfs:label obo:CIO_0000040 "confidence information element")
+
+# Class: obo:CIO_0000041 (evidence type concordance)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000041 "A confidence information element representing the concordance of experimental or computational types of evidence lines supporting an assertion, used to compose confidence information statements.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000041 "CIO:0000041")
+AnnotationAssertion(rdfs:comment obo:CIO_0000041 "The assumption here is that assertions supported by evidence lines of different experimental or computational types are more trustworthy than assertions supported by evidence lines of a same experimental or computational type.")
+AnnotationAssertion(rdfs:label obo:CIO_0000041 "evidence type concordance")
+SubClassOf(obo:CIO_0000041 obo:CIO_0000040)
+
+# Class: obo:CIO_0000042 (single evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000042 "An evidence concordance for confidence information about an assertion produced from a single evidence.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000042 "CIO:0000042")
+AnnotationAssertion(rdfs:comment obo:CIO_0000042 "The assumption here is that assertions supported by a single evidence are less trustworthy than assertions supported by multiple evidence lines.")
+AnnotationAssertion(rdfs:label obo:CIO_0000042 "single evidence")
+SubClassOf(obo:CIO_0000042 obo:CIO_0000032)
+DisjointClasses(obo:CIO_0000042 obo:CIO_0000043)
+
+# Class: obo:CIO_0000043 (concordance of multiple evidence lines)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Bgee:fbb") obo:IAO_0000115 obo:CIO_0000043 "An evidence concordance for confidence information about an assertion produced from multiple evidence lines.")
+AnnotationAssertion(oboInOwl:id obo:CIO_0000043 "CIO:0000043")
+AnnotationAssertion(rdfs:comment obo:CIO_0000043 "The assumption here is that assertions supported by a single evidence are less trustworthy than assertions supported by multiple evidence lines.")
+AnnotationAssertion(rdfs:label obo:CIO_0000043 "concordance of multiple evidence lines")
+SubClassOf(obo:CIO_0000043 obo:CIO_0000032)
+
+
+)

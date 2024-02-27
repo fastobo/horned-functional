@@ -1,0 +1,1532 @@
+Prefix(:=<http://purl.obolibrary.org/obo/duo.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/duo.owl>
+<http://purl.obolibrary.org/obo/duo/releases/2021-02-23/duo.owl>
+Import(<http://purl.obolibrary.org/obo/iao.owl>)
+Annotation(dc:contributor "Contributors to the GA4GH Data Use Ontology workstream are listed at https://github.com/EBISPOT/DUO/blob/master/README.md#contributions")
+Annotation(dc:creator "Melanie Courtot")
+Annotation(terms:license "http://creativecommons.org/licenses/by/4.0/")
+
+Declaration(Class(obo:BFO_0000005))
+Declaration(Class(obo:DUO_0000001))
+Declaration(Class(obo:DUO_0000002))
+Declaration(Class(obo:DUO_0000003))
+Declaration(Class(obo:DUO_0000004))
+Declaration(Class(obo:DUO_00000044))
+Declaration(Class(obo:DUO_0000005))
+Declaration(Class(obo:DUO_0000006))
+Declaration(Class(obo:DUO_0000007))
+Declaration(Class(obo:DUO_0000011))
+Declaration(Class(obo:DUO_0000012))
+Declaration(Class(obo:DUO_0000014))
+Declaration(Class(obo:DUO_0000015))
+Declaration(Class(obo:DUO_0000016))
+Declaration(Class(obo:DUO_0000017))
+Declaration(Class(obo:DUO_0000018))
+Declaration(Class(obo:DUO_0000019))
+Declaration(Class(obo:DUO_0000020))
+Declaration(Class(obo:DUO_0000021))
+Declaration(Class(obo:DUO_0000022))
+Declaration(Class(obo:DUO_0000024))
+Declaration(Class(obo:DUO_0000025))
+Declaration(Class(obo:DUO_0000026))
+Declaration(Class(obo:DUO_0000027))
+Declaration(Class(obo:DUO_0000028))
+Declaration(Class(obo:DUO_0000029))
+Declaration(Class(obo:DUO_0000031))
+Declaration(Class(obo:DUO_0000032))
+Declaration(Class(obo:DUO_0000033))
+Declaration(Class(obo:DUO_0000034))
+Declaration(Class(obo:DUO_0000035))
+Declaration(Class(obo:DUO_0000036))
+Declaration(Class(obo:DUO_0000037))
+Declaration(Class(obo:DUO_0000038))
+Declaration(Class(obo:DUO_0000039))
+Declaration(Class(obo:DUO_0000040))
+Declaration(Class(obo:DUO_0000042))
+Declaration(Class(obo:DUO_0000043))
+Declaration(Class(obo:DUO_0000045))
+Declaration(Class(obo:DUO_0000046))
+Declaration(Class(obo:GAZ_00000448))
+Declaration(Class(obo:IAO_0000027))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:MONDO_0000001))
+Declaration(Class(obo:OBI_0000066))
+Declaration(Class(obo:topic_0003))
+Declaration(ObjectProperty(obo:DUO_0000010))
+Declaration(AnnotationProperty(obo:DUO_0000041))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:shorthand))
+Declaration(AnnotationProperty(skos:exactMatch))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:DUO_0000041 (DUO_preferred_label)
+
+AnnotationAssertion(rdfs:label obo:DUO_0000041 "DUO_preferred_label"@en)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:DUO_0000010 (is restricted to)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000010 "is_restricted_to")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000010 "A is restricted to B iff A is a consent code and B is an investigation and A may only participate in instances of a class C, of which B is an instance.")
+AnnotationAssertion(obo:IAO_0000117 obo:DUO_0000010 "J. Neil Otte")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000010 "E.g. A dataset is restricted to an instance of an investigation for a specific disease or at geographical location.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000010 "DUO:0000010")
+AnnotationAssertion(rdfs:label obo:DUO_0000010 "is restricted to")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:APOLLO_SV_00000008 (software development)
+
+SubClassOf(obo:APOLLO_SV_00000008 obo:OBI_0000011)
+
+# Class: obo:APOLLO_SV_00000032 (count)
+
+SubClassOf(obo:APOLLO_SV_00000032 obo:IAO_0000109)
+
+# Class: obo:APOLLO_SV_00000033 (counting)
+
+SubClassOf(obo:APOLLO_SV_00000033 obo:OBI_0000011)
+
+# Class: obo:APOLLO_SV_00000522 (source code repository)
+
+SubClassOf(obo:APOLLO_SV_00000522 obo:IAO_0000310)
+
+# Class: obo:APOLLO_SV_00000524 (compiling software)
+
+SubClassOf(obo:APOLLO_SV_00000524 obo:APOLLO_SV_00000008)
+
+# Class: obo:APOLLO_SV_00000796 (dataset creating)
+
+SubClassOf(obo:APOLLO_SV_00000796 obo:OBI_0000011)
+
+# Class: obo:BFO_0000001 (entity)
+
+SubClassOf(obo:BFO_0000001 owl:Thing)
+
+# Class: obo:BFO_0000002 (continuant)
+
+SubClassOf(obo:BFO_0000002 obo:BFO_0000001)
+
+# Class: obo:BFO_0000003 (occurrent)
+
+SubClassOf(obo:BFO_0000003 obo:BFO_0000001)
+
+# Class: obo:BFO_0000004 (independent continuant)
+
+SubClassOf(obo:BFO_0000004 obo:BFO_0000002)
+
+# Class: obo:BFO_0000005 (obo:BFO_0000005)
+
+SubClassOf(obo:BFO_0000005 oboInOwl:ObsoleteClass)
+
+# Class: obo:BFO_0000006 (spatial region)
+
+SubClassOf(obo:BFO_0000006 obo:BFO_0000141)
+
+# Class: obo:BFO_0000008 (temporal region)
+
+SubClassOf(obo:BFO_0000008 obo:BFO_0000003)
+
+# Class: obo:BFO_0000009 (two-dimensional spatial region)
+
+SubClassOf(obo:BFO_0000009 obo:BFO_0000006)
+
+# Class: obo:BFO_0000011 (spatiotemporal region)
+
+SubClassOf(obo:BFO_0000011 obo:BFO_0000003)
+
+# Class: obo:BFO_0000015 (process)
+
+SubClassOf(obo:BFO_0000015 obo:BFO_0000003)
+
+# Class: obo:BFO_0000016 (disposition)
+
+SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
+
+# Class: obo:BFO_0000017 (realizable entity)
+
+SubClassOf(obo:BFO_0000017 obo:BFO_0000020)
+
+# Class: obo:BFO_0000018 (zero-dimensional spatial region)
+
+SubClassOf(obo:BFO_0000018 obo:BFO_0000006)
+
+# Class: obo:BFO_0000019 (quality)
+
+SubClassOf(obo:BFO_0000019 obo:BFO_0000020)
+
+# Class: obo:BFO_0000020 (specifically dependent continuant)
+
+SubClassOf(obo:BFO_0000020 obo:BFO_0000002)
+
+# Class: obo:BFO_0000023 (role)
+
+SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
+
+# Class: obo:BFO_0000024 (fiat object part)
+
+SubClassOf(obo:BFO_0000024 obo:BFO_0000040)
+
+# Class: obo:BFO_0000026 (one-dimensional spatial region)
+
+SubClassOf(obo:BFO_0000026 obo:BFO_0000006)
+
+# Class: obo:BFO_0000027 (object aggregate)
+
+SubClassOf(obo:BFO_0000027 obo:BFO_0000040)
+
+# Class: obo:BFO_0000028 (three-dimensional spatial region)
+
+SubClassOf(obo:BFO_0000028 obo:BFO_0000006)
+
+# Class: obo:BFO_0000029 (site)
+
+SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
+
+# Class: obo:BFO_0000030 (object)
+
+SubClassOf(obo:BFO_0000030 obo:BFO_0000040)
+
+# Class: obo:BFO_0000031 (generically dependent continuant)
+
+SubClassOf(obo:BFO_0000031 obo:BFO_0000002)
+
+# Class: obo:BFO_0000034 (function)
+
+SubClassOf(obo:BFO_0000034 obo:BFO_0000016)
+
+# Class: obo:BFO_0000035 (process boundary)
+
+SubClassOf(obo:BFO_0000035 obo:BFO_0000003)
+
+# Class: obo:BFO_0000038 (one-dimensional temporal region)
+
+SubClassOf(obo:BFO_0000038 obo:BFO_0000008)
+
+# Class: obo:BFO_0000040 (material entity)
+
+SubClassOf(obo:BFO_0000040 obo:BFO_0000004)
+
+# Class: obo:BFO_0000140 (continuant fiat boundary)
+
+SubClassOf(obo:BFO_0000140 obo:BFO_0000141)
+
+# Class: obo:BFO_0000141 (immaterial entity)
+
+SubClassOf(obo:BFO_0000141 obo:BFO_0000004)
+
+# Class: obo:BFO_0000142 (one-dimensional continuant fiat boundary)
+
+SubClassOf(obo:BFO_0000142 obo:BFO_0000140)
+
+# Class: obo:BFO_0000144 (process profile)
+
+SubClassOf(obo:BFO_0000144 obo:BFO_0000015)
+
+# Class: obo:BFO_0000145 (relational quality)
+
+SubClassOf(obo:BFO_0000145 obo:BFO_0000019)
+
+# Class: obo:BFO_0000146 (two-dimensional continuant fiat boundary)
+
+SubClassOf(obo:BFO_0000146 obo:BFO_0000140)
+
+# Class: obo:BFO_0000147 (zero-dimensional continuant fiat boundary)
+
+SubClassOf(obo:BFO_0000147 obo:BFO_0000140)
+
+# Class: obo:BFO_0000148 (zero-dimensional temporal region)
+
+SubClassOf(obo:BFO_0000148 obo:BFO_0000008)
+
+# Class: obo:BFO_0000182 (history)
+
+SubClassOf(obo:BFO_0000182 obo:BFO_0000015)
+
+# Class: obo:DUO_0000001 (data use permission)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000001 "A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used."@en)
+AnnotationAssertion(obo:IAO_0000118 obo:DUO_0000001 "consent code")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000001 "DUO:0000001")
+AnnotationAssertion(rdfs:label obo:DUO_0000001 "data use permission"@en)
+SubClassOf(obo:DUO_0000001 obo:IAO_0000027)
+
+# Class: obo:DUO_0000002 (obsolete consent code primary category)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000002 "A categorical data item indicating the primary category the consent code belongs to according to Dyke et al. 2016.")
+AnnotationAssertion(obo:IAO_0000231 obo:DUO_0000002 "This term was depreacted as it is not used to tag datasets but instead as patterns for DUO codes capture. This is an archive specific requirement, e.g. \"one code from a primary category and one or more from a second category'
+This is better done by Schemablocks and constraining the pattern of usage of DUO terms at each archive level.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000002 "DUO:0000002")
+AnnotationAssertion(rdfs:label obo:DUO_0000002 "obsolete consent code primary category")
+AnnotationAssertion(owl:deprecated obo:DUO_0000002 "true"^^xsd:boolean)
+SubClassOf(obo:DUO_0000002 oboInOwl:ObsoleteClass)
+
+# Class: obo:DUO_0000003 (obsolete consent code secondary category)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000003 "A categorical data item indicating the secondary category the consent code belongs to according to Dyke et al. 2016.")
+AnnotationAssertion(obo:IAO_0000231 obo:DUO_0000003 "This term was depreacted as it is not used to tag datasets but instead as patterns for DUO codes capture. This is an archive specific requirement, e.g. \"one code from a primary category and one or more from a second category'
+This is better done by Schemablocks and constraining the pattern of usage of DUO terms at each archive level.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000003 "DUO:0000003")
+AnnotationAssertion(rdfs:label obo:DUO_0000003 "obsolete consent code secondary category")
+AnnotationAssertion(owl:deprecated obo:DUO_0000003 "true"^^xsd:boolean)
+SubClassOf(obo:DUO_0000003 oboInOwl:ObsoleteClass)
+
+# Class: obo:DUO_0000004 (no restriction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000004 "This data use permission indicates there is no restriction on use."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000004 "DUO:0000004")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000004 "NRES")
+AnnotationAssertion(rdfs:comment obo:DUO_0000004 "20180907, Meeting Moran Melanie: This is to be thought about more carefully - what is the intent when using 'no restriction' as usually users still need to be researchers.")
+AnnotationAssertion(rdfs:comment obo:DUO_0000004 "Note: the NRES alternative term may be confusing as in the UK it also stands for National Research Ethics Service")
+AnnotationAssertion(rdfs:label obo:DUO_0000004 "no restriction"@en)
+SubClassOf(obo:DUO_0000004 obo:DUO_0000001)
+
+# Class: obo:DUO_00000044 (population origins or ancestry research prohibited)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_00000044 "This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_00000044 "DUO:0000044")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_00000044 "NPOA")
+AnnotationAssertion(rdfs:label obo:DUO_00000044 "population origins or ancestry research prohibited"@en)
+SubClassOf(obo:DUO_00000044 obo:DUO_0000017)
+
+# Class: obo:DUO_0000005 (obsolete general research use and clinical care)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000005 "This data use limitation indicates that use is allowed for health/medical/biomedical purposes and other biological research, including the study of population origins or ancestry."@en)
+AnnotationAssertion(obo:IAO_0100001 obo:DUO_0000005 "General Research Use, DUO_0000042
+Clinical Care USe, DUO_0000043"@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000005 "DUO:0000005")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000005 "GRU-CC")
+AnnotationAssertion(rdfs:comment obo:DUO_0000005 "This term was made obsolete as per https://github.com/EBISPOT/DUO/issues/45"@en)
+AnnotationAssertion(rdfs:comment obo:DUO_0000005 "This term includes clinical care, which was not defined in the original consent codes paper. This term does not have a usage in our current use cases and we recommend using DUO:0000042, General Research Use, instead")
+AnnotationAssertion(rdfs:label obo:DUO_0000005 "obsolete general research use and clinical care"@en)
+SubClassOf(obo:DUO_0000005 oboInOwl:ObsoleteClass)
+
+# Class: obo:DUO_0000006 (health or medical or biomedical research)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000006 "This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000006 "DUO:0000006")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000006 "HMB")
+AnnotationAssertion(rdfs:label obo:DUO_0000006 "health or medical or biomedical research"@en)
+SubClassOf(obo:DUO_0000006 obo:DUO_0000042)
+
+# Class: obo:DUO_0000007 (disease specific research)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000007 "This data use permission indicates that use is allowed provided it is related to the specified disease."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000007 "DUO:0000007")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000007 "DS")
+AnnotationAssertion(rdfs:comment obo:DUO_0000007 "This term should be coupled with a term describing a disease from an ontology to specify the disease the restriction applies to. 
+
+DUO recommends MONDO be used, to provide the basis for automated evaluation. For more information see https://github.com/EBISPOT/DUO/blob/master/MONDO_Overview.md
+
+Other resources, such as the Disease Ontology, HPO, SNOMED-CT or others, can also be used. When those other resources are being used, this may require an extra mapping step to leverage automated matching algorithms."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000007 "disease specific research"@en)
+SubClassOf(obo:DUO_0000007 obo:DUO_0000006)
+SubClassOf(obo:DUO_0000007 ObjectSomeValuesFrom(obo:DUO_0000010 obo:MONDO_0000001))
+
+# Class: obo:DUO_0000011 (population origins or ancestry research only)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000011 "This data use permission indicates that use of the data is limited to the study of population origins or ancestry."@en)
+AnnotationAssertion(obo:IAO_0000118 obo:DUO_0000011 "population origins/ancestry research")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000011 "DUO:0000011")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000011 "POA")
+AnnotationAssertion(rdfs:label obo:DUO_0000011 "population origins or ancestry research only"@en)
+SubClassOf(obo:DUO_0000011 obo:DUO_0000001)
+
+# Class: obo:DUO_0000012 (research specific restrictions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000012 "This data use modifier indicates that use is limited to studies of a certain research type."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000012 "DUO:0000012")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000012 "RS")
+AnnotationAssertion(rdfs:label obo:DUO_0000012 "research specific restrictions"@en)
+SubClassOf(obo:DUO_0000012 obo:DUO_0000017)
+SubClassOf(obo:DUO_0000012 ObjectSomeValuesFrom(obo:DUO_0000010 obo:topic_0003))
+
+# Class: obo:DUO_0000014 (obsolete research use only)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000014 "This data use limitation indicates that use is limited to research purposes (e.g., does not include its use in clinical care)."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000014 "DUO:0000014")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000014 "RU")
+AnnotationAssertion(rdfs:comment obo:DUO_0000014 "Deprecated as GRU-CC was split into GRU and CC, so this is not applicable anymore as a qualifier of GRU-CC"@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000014 "obsolete research use only"@en)
+SubClassOf(obo:DUO_0000014 oboInOwl:ObsoleteClass)
+
+# Class: obo:DUO_0000015 (no general methods research)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000015 "This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms)."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000015 "DUO:0000015")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000015 "NMDS")
+AnnotationAssertion(rdfs:label obo:DUO_0000015 "no general methods research"@en)
+SubClassOf(obo:DUO_0000015 obo:DUO_0000017)
+
+# Class: obo:DUO_0000016 (genetic studies only)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000016 "This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)"@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000016 "DUO:0000016")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000016 "GSO")
+AnnotationAssertion(rdfs:label obo:DUO_0000016 "genetic studies only"@en)
+SubClassOf(obo:DUO_0000016 obo:DUO_0000017)
+
+# Class: obo:DUO_0000017 (data use modifier)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000017 "Data use modifiers indicate additional conditions for use."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000017 "DUO:0000017")
+AnnotationAssertion(rdfs:label obo:DUO_0000017 "data use modifier"@en)
+SubClassOf(obo:DUO_0000017 obo:IAO_0000027)
+
+# Class: obo:DUO_0000018 (not for profit, non commercial use only)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000018 "This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000018 "DUO:0000018")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000018 "NPUNCU")
+AnnotationAssertion(rdfs:label obo:DUO_0000018 "not for profit, non commercial use only"@en)
+SubClassOf(obo:DUO_0000018 obo:DUO_0000017)
+
+# Class: obo:DUO_0000019 (publication required)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000019 "This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000019 "DUO:0000019")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000019 "PUB")
+AnnotationAssertion(rdfs:label obo:DUO_0000019 "publication required"@en)
+SubClassOf(obo:DUO_0000019 obo:DUO_0000017)
+
+# Class: obo:DUO_0000020 (collaboration required)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000020 "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s)."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000020 "DUO:0000020")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000020 "COL")
+AnnotationAssertion(rdfs:comment obo:DUO_0000020 "This could be coupled with a string describing the primary study investigator(s)."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000020 "collaboration required"@en)
+SubClassOf(obo:DUO_0000020 obo:DUO_0000017)
+
+# Class: obo:DUO_0000021 (ethics approval required)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000021 "This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000021 "DUO:0000021")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000021 "IRB")
+AnnotationAssertion(rdfs:label obo:DUO_0000021 "ethics approval required"@en)
+SubClassOf(obo:DUO_0000021 obo:DUO_0000017)
+
+# Class: obo:DUO_0000022 (geographical restriction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000022 "This data use modifier indicates that use is limited to within a specific geographic region."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000022 "DUO:0000022")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000022 "GS")
+AnnotationAssertion(rdfs:comment obo:DUO_0000022 "This should be coupled with an ontology term describing the geographical location the restriction applies to."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000022 "geographical restriction"@en)
+SubClassOf(obo:DUO_0000022 obo:DUO_0000017)
+SubClassOf(obo:DUO_0000022 ObjectSomeValuesFrom(obo:DUO_0000010 obo:GAZ_00000448))
+
+# Class: obo:DUO_0000024 (publication moratorium)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000024 "This data use modifier indicates that requestor agrees not to publish results of studies until a specific date."@en)
+AnnotationAssertion(obo:IAO_0000118 obo:DUO_0000024 "publication embargo"@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000024 "DUO:0000024")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000024 "MOR")
+AnnotationAssertion(rdfs:comment obo:DUO_0000024 "This should be coupled with a date specified as ISO8601"@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000024 "publication moratorium"@en)
+SubClassOf(obo:DUO_0000024 obo:DUO_0000017)
+
+# Class: obo:DUO_0000025 (time limit on use)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000025 "This data use modifier indicates that use is approved for a specific number of months."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000025 "DUO:0000025")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000025 "TS")
+AnnotationAssertion(rdfs:comment obo:DUO_0000025 "This should be coupled with an integer value indicating the number of months."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000025 "time limit on use"@en)
+SubClassOf(obo:DUO_0000025 obo:DUO_0000017)
+
+# Class: obo:DUO_0000026 (user specific restriction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000026 "This data use modifier indicates that use is limited to use by approved users."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000026 "DUO:0000026")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000026 "US")
+AnnotationAssertion(rdfs:label obo:DUO_0000026 "user specific restriction"@en)
+SubClassOf(obo:DUO_0000026 obo:DUO_0000017)
+
+# Class: obo:DUO_0000027 (project specific restriction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000027 "This data use modifier indicates that use is limited to use within an approved project."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000027 "DUO:0000027")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000027 "PS")
+AnnotationAssertion(rdfs:label obo:DUO_0000027 "project specific restriction"@en)
+SubClassOf(obo:DUO_0000027 obo:DUO_0000017)
+
+# Class: obo:DUO_0000028 (institution specific restriction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000028 "This data use modifier indicates that use is limited to use within an approved institution."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000028 "DUO:0000028")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000028 "IS")
+AnnotationAssertion(rdfs:label obo:DUO_0000028 "institution specific restriction"@en)
+SubClassOf(obo:DUO_0000028 obo:DUO_0000017)
+
+# Class: obo:DUO_0000029 (return to database or resource)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000029 "This data use modifier indicates that the requestor must return derived/enriched data to the database/resource."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000029 "DUO:0000029")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000029 "RTN")
+AnnotationAssertion(rdfs:label obo:DUO_0000029 "return to database or resource"@en)
+SubClassOf(obo:DUO_0000029 obo:DUO_0000017)
+
+# Class: obo:DUO_0000031 (method development)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000031 "method development")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000031 "An investigation concerning development of methods, algorithms, software or analytical tools.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000031 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000031 "DUO:0000031")
+AnnotationAssertion(rdfs:label obo:DUO_0000031 "method development")
+SubClassOf(obo:DUO_0000031 obo:OBI_0000066)
+
+# Class: obo:DUO_0000032 (population research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000032 "population research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000032 "An investigation concerning a specific population group.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000032 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000032 "DUO:0000032")
+AnnotationAssertion(rdfs:comment obo:DUO_0000032 "Should be paired with the an ontology term representing this population (e.g., xxx).")
+AnnotationAssertion(rdfs:label obo:DUO_0000032 "population research")
+SubClassOf(obo:DUO_0000032 obo:OBI_0000066)
+
+# Class: obo:DUO_0000033 (ancestry research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000033 "ancestry research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000033 "An investigation concerning ancestry or population origins.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000033 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000033 "DUO:0000033")
+AnnotationAssertion(rdfs:label obo:DUO_0000033 "ancestry research")
+SubClassOf(obo:DUO_0000033 obo:OBI_0000066)
+
+# Class: obo:DUO_0000034 (age category research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000034 "age category research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000034 "An investigation concerning specific age categories.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000034 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000034 "DUO:0000034")
+AnnotationAssertion(rdfs:comment obo:DUO_0000034 "Should be paired with the an ontology term representing this population (e.g., xxx).")
+AnnotationAssertion(rdfs:label obo:DUO_0000034 "age category research")
+SubClassOf(obo:DUO_0000034 obo:OBI_0000066)
+
+# Class: obo:DUO_0000035 (gender category research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000035 "gender category research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000035 "An investigation concerning specific gender categories.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000035 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000035 "DUO:0000035")
+AnnotationAssertion(rdfs:comment obo:DUO_0000035 "Should be paired with the an ontology term representing this population (e.g., xxx).")
+AnnotationAssertion(rdfs:label obo:DUO_0000035 "gender category research")
+SubClassOf(obo:DUO_0000035 obo:OBI_0000066)
+
+# Class: obo:DUO_0000036 (research control)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000036 "research control")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000036 "An investigation concerning use of data as reference or control material.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000036 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000036 "DUO:0000036")
+AnnotationAssertion(rdfs:label obo:DUO_0000036 "research control")
+SubClassOf(obo:DUO_0000036 obo:OBI_0000066)
+
+# Class: obo:DUO_0000037 (biomedical research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000037 "biomedical research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000037 "An investigation concerning health, medical, or biomedical research.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000037 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000037 "DUO:0000037")
+AnnotationAssertion(rdfs:label obo:DUO_0000037 "biomedical research")
+SubClassOf(obo:DUO_0000037 obo:OBI_0000066)
+
+# Class: obo:DUO_0000038 (genetic research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000038 "genetic research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000038 "Biomedical research concerning genetics (i.e., the study of genes, genetic variations and heredity).")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000038 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000038 "DUO:0000038")
+AnnotationAssertion(rdfs:label obo:DUO_0000038 "genetic research")
+SubClassOf(obo:DUO_0000038 obo:DUO_0000037)
+
+# Class: obo:DUO_0000039 (drug development research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000039 "drug development research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000039 "Biomedical research concerning drug development.")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000039 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000039 "DUO:0000039")
+AnnotationAssertion(rdfs:label obo:DUO_0000039 "drug development research")
+SubClassOf(obo:DUO_0000039 obo:DUO_0000037)
+
+# Class: obo:DUO_0000040 (disease category research)
+
+AnnotationAssertion(obo:DUO_0000041 obo:DUO_0000040 "disease category research")
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000040 "Biomedical research research concerning specific disease/s")
+AnnotationAssertion(obo:IAO_0000232 obo:DUO_0000040 "This definition is a placeholder as a result of meetings at ICBO2018.")
+AnnotationAssertion(oboInOwl:id obo:DUO_0000040 "DUO:0000040")
+AnnotationAssertion(rdfs:label obo:DUO_0000040 "disease category research")
+SubClassOf(obo:DUO_0000040 obo:DUO_0000037)
+
+# Class: obo:DUO_0000042 (general research use)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000042 "This data use permission indicates that use is allowed for general research use for any research purpose."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000042 "DUO:0000042")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000042 "GRU")
+AnnotationAssertion(rdfs:comment obo:DUO_0000042 "This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000042 "general research use"@en)
+SubClassOf(obo:DUO_0000042 obo:DUO_0000001)
+
+# Class: obo:DUO_0000043 (clinical care use)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000043 "This data use modifier indicates that use is allowed for clinical use and care."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000043 "DUO:0000043")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000043 "CC")
+AnnotationAssertion(rdfs:comment obo:DUO_0000043 "Clinical Care is defined as Health care or services provided at home, in a healthcare facility or hospital. Data may be used for clinical decision making."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000043 "clinical care use"@en)
+SubClassOf(obo:DUO_0000043 obo:DUO_0000017)
+
+# Class: obo:DUO_0000045 (not for profit organisation use only)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000045 "This data use modifier indicates that use of the data is limited to not-for-profit organizations."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000045 "DUO:0000045")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000045 "NPU")
+AnnotationAssertion(rdfs:label obo:DUO_0000045 "not for profit organisation use only"@en)
+SubClassOf(obo:DUO_0000045 obo:DUO_0000018)
+
+# Class: obo:DUO_0000046 (non-commercial use only)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DUO_0000046 "This data use modifier indicates that use of the data is limited to not-for-profit use."@en)
+AnnotationAssertion(oboInOwl:id obo:DUO_0000046 "DUO:0000046")
+AnnotationAssertion(oboInOwl:shorthand obo:DUO_0000046 "NCU")
+AnnotationAssertion(rdfs:comment obo:DUO_0000046 "This indicates that data can be used by commercial organisations for research purposes, but not commercial purposes."@en)
+AnnotationAssertion(rdfs:label obo:DUO_0000046 "non-commercial use only"@en)
+SubClassOf(obo:DUO_0000046 obo:DUO_0000018)
+
+# Class: obo:GAZ_00000448 (geographic location)
+
+AnnotationAssertion(oboInOwl:id obo:GAZ_00000448 "GAZ:00000448")
+AnnotationAssertion(rdfs:label obo:GAZ_00000448 "geographic location")
+SubClassOf(obo:GAZ_00000448 obo:BFO_0000029)
+
+# Class: obo:IAO_0000001 (conditional specification)
+
+SubClassOf(obo:IAO_0000001 obo:IAO_0000033)
+
+# Class: obo:IAO_0000003 (measurement unit label)
+
+SubClassOf(obo:IAO_0000003 obo:IAO_0000009)
+
+# Class: obo:IAO_0000005 (objective specification)
+
+SubClassOf(obo:IAO_0000005 obo:IAO_0000033)
+
+# Class: obo:IAO_0000006 (narrative object)
+
+SubClassOf(obo:IAO_0000006 obo:IAO_0000030)
+
+# Class: obo:IAO_0000007 (action specification)
+
+SubClassOf(obo:IAO_0000007 obo:IAO_0000033)
+
+# Class: obo:IAO_0000008 (obsolete_artifact)
+
+SubClassOf(obo:IAO_0000008 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000009 (datum label)
+
+SubClassOf(obo:IAO_0000009 obo:IAO_0000030)
+
+# Class: obo:IAO_0000010 (software)
+
+SubClassOf(obo:IAO_0000010 obo:IAO_0000104)
+
+# Class: obo:IAO_0000012 (obsolete2_digital entity)
+
+SubClassOf(obo:IAO_0000012 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000013 (journal article)
+
+SubClassOf(obo:IAO_0000013 obo:IAO_0000088)
+SubClassOf(obo:IAO_0000013 obo:IAO_0000311)
+
+# Class: obo:IAO_0000015 (information carrier)
+
+SubClassOf(obo:IAO_0000015 obo:BFO_0000019)
+
+# Class: obo:IAO_0000017 (model number)
+
+SubClassOf(obo:IAO_0000017 obo:IAO_0000028)
+
+# Class: obo:IAO_0000018 (obsolete_material_entity)
+
+SubClassOf(obo:IAO_0000018 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000019 (obsolete2_binary digital entity)
+
+SubClassOf(obo:IAO_0000019 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000024 (obsolete_unit of measure)
+
+SubClassOf(obo:IAO_0000024 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000025 (programming language)
+
+SubClassOf(obo:IAO_0000025 obo:IAO_0000104)
+
+# Class: obo:IAO_0000027 (data item)
+
+SubClassOf(obo:IAO_0000027 obo:IAO_0000030)
+
+# Class: obo:IAO_0000028 (symbol)
+
+SubClassOf(obo:IAO_0000028 obo:IAO_0000030)
+
+# Class: obo:IAO_0000029 (numeral)
+
+SubClassOf(obo:IAO_0000029 obo:IAO_0000028)
+
+# Class: obo:IAO_0000030 (information content entity)
+
+SubClassOf(obo:IAO_0000030 obo:BFO_0000031)
+
+# Class: obo:IAO_0000031 (integer numeral)
+
+SubClassOf(obo:IAO_0000031 obo:IAO_0000029)
+
+# Class: obo:IAO_0000032 (scalar measurement datum)
+
+SubClassOf(obo:IAO_0000032 obo:IAO_0000109)
+
+# Class: obo:IAO_0000033 (directive information entity)
+
+SubClassOf(obo:IAO_0000033 obo:IAO_0000030)
+
+# Class: obo:IAO_0000034 (time trigger)
+
+SubClassOf(obo:IAO_0000034 obo:IAO_0000001)
+
+# Class: obo:IAO_0000035 (obsolete_study interpretation)
+
+SubClassOf(obo:IAO_0000035 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000037 (dot plot)
+
+SubClassOf(obo:IAO_0000037 obo:IAO_0000038)
+
+# Class: obo:IAO_0000038 (graph)
+
+SubClassOf(obo:IAO_0000038 obo:IAO_0000309)
+
+# Class: obo:IAO_0000047 (obsolete2_text based digital entity)
+
+SubClassOf(obo:IAO_0000047 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000055 (rule)
+
+SubClassOf(obo:IAO_0000055 obo:IAO_0000001)
+
+# Class: obo:IAO_0000057 (contour plot)
+
+SubClassOf(obo:IAO_0000057 obo:IAO_0000038)
+
+# Class: obo:IAO_0000059 (obsolete2_report figure)
+
+SubClassOf(obo:IAO_0000059 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000064 (algorithm)
+
+SubClassOf(obo:IAO_0000064 obo:IAO_0000104)
+
+# Class: obo:IAO_0000065 (software interpreter)
+
+SubClassOf(obo:IAO_0000065 obo:IAO_0000064)
+
+# Class: obo:IAO_0000078 (curation status specification)
+
+SubClassOf(obo:IAO_0000078 obo:IAO_0000102)
+
+# Class: obo:IAO_0000079 (density plot)
+
+SubClassOf(obo:IAO_0000079 obo:IAO_0000038)
+
+# Class: obo:IAO_0000088 (report)
+
+SubClassOf(obo:IAO_0000088 obo:IAO_0000310)
+
+# Class: obo:IAO_0000091 (obsolete_report element)
+
+SubClassOf(obo:IAO_0000091 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000093 (obsolete2_binary executable)
+
+SubClassOf(obo:IAO_0000093 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000096 (source code module)
+
+SubClassOf(obo:IAO_0000096 obo:IAO_0000033)
+
+# Class: obo:IAO_0000097 (obsolete_report table)
+
+SubClassOf(obo:IAO_0000097 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000098 (data format specification)
+
+SubClassOf(obo:IAO_0000098 obo:IAO_0000033)
+
+# Class: obo:IAO_0000100 (data set)
+
+SubClassOf(obo:IAO_0000100 obo:IAO_0000027)
+
+# Class: obo:IAO_0000101 (image)
+
+SubClassOf(obo:IAO_0000101 obo:IAO_0000308)
+
+# Class: obo:IAO_0000102 (data about an ontology part)
+
+SubClassOf(obo:IAO_0000102 obo:IAO_0000027)
+
+# Class: obo:IAO_0000104 (plan specification)
+
+SubClassOf(obo:IAO_0000104 obo:IAO_0000033)
+
+# Class: obo:IAO_0000105 (obsolete2_digital document)
+
+SubClassOf(obo:IAO_0000105 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000109 (measurement datum)
+
+SubClassOf(obo:IAO_0000109 obo:IAO_0000027)
+
+# Class: obo:IAO_0000128 (obsolete_identifier)
+
+SubClassOf(obo:IAO_0000128 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000129 (version number)
+
+SubClassOf(obo:IAO_0000129 obo:IAO_0000028)
+
+# Class: obo:IAO_0000131 (serial number)
+
+SubClassOf(obo:IAO_0000131 obo:IAO_0000028)
+
+# Class: obo:IAO_0000132 (lot number)
+
+SubClassOf(obo:IAO_0000132 obo:IAO_0000028)
+
+# Class: obo:IAO_0000140 (setting datum)
+
+SubClassOf(obo:IAO_0000140 obo:IAO_0000027)
+
+# Class: obo:IAO_0000141 (obsolete_digital quality)
+
+SubClassOf(obo:IAO_0000141 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000144 (conclusion textual entity)
+
+SubClassOf(obo:IAO_0000144 obo:IAO_0000300)
+
+# Class: obo:IAO_0000178 (material information bearer)
+
+SubClassOf(obo:IAO_0000178 obo:BFO_0000040)
+
+# Class: obo:IAO_0000179 (histogram)
+
+SubClassOf(obo:IAO_0000179 obo:IAO_0000038)
+
+# Class: obo:IAO_0000180 (heatmap)
+
+SubClassOf(obo:IAO_0000180 obo:IAO_0000038)
+
+# Class: obo:IAO_0000181 (Venn diagram)
+
+SubClassOf(obo:IAO_0000181 obo:IAO_0000038)
+
+# Class: obo:IAO_0000182 (obsolete_survival curve)
+
+SubClassOf(obo:IAO_0000182 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000183 (dendrogram)
+
+SubClassOf(obo:IAO_0000183 obo:IAO_0000038)
+
+# Class: obo:IAO_0000184 (scatter plot)
+
+SubClassOf(obo:IAO_0000184 obo:IAO_0000038)
+
+# Class: obo:IAO_0000185 (photograph)
+
+SubClassOf(obo:IAO_0000185 obo:IAO_0000101)
+
+# Class: obo:IAO_0000186 (photographic print)
+
+SubClassOf(obo:IAO_0000186 obo:IAO_0000178)
+
+# Class: obo:IAO_0000225 (obsolescence reason specification)
+
+SubClassOf(obo:IAO_0000225 obo:IAO_0000102)
+
+# Class: obo:IAO_0000300 (textual entity)
+
+SubClassOf(obo:IAO_0000300 obo:IAO_0000030)
+
+# Class: obo:IAO_0000301 (citation)
+
+SubClassOf(obo:IAO_0000301 obo:IAO_0000300)
+
+# Class: obo:IAO_0000302 (author identification)
+
+SubClassOf(obo:IAO_0000302 obo:IAO_0000590)
+
+# Class: obo:IAO_0000303 (institutional identification)
+
+SubClassOf(obo:IAO_0000303 obo:IAO_0000300)
+
+# Class: obo:IAO_0000304 (caption)
+
+SubClassOf(obo:IAO_0000304 obo:IAO_0000300)
+
+# Class: obo:IAO_0000305 (document title)
+
+SubClassOf(obo:IAO_0000305 obo:IAO_0000300)
+
+# Class: obo:IAO_0000306 (table)
+
+SubClassOf(obo:IAO_0000306 obo:IAO_0000300)
+
+# Class: obo:IAO_0000307 (table of abbreviations)
+
+SubClassOf(obo:IAO_0000307 obo:IAO_0000306)
+
+# Class: obo:IAO_0000308 (figure)
+
+SubClassOf(obo:IAO_0000308 obo:IAO_0000030)
+
+# Class: obo:IAO_0000309 (diagram)
+
+SubClassOf(obo:IAO_0000309 obo:IAO_0000308)
+
+# Class: obo:IAO_0000310 (document)
+
+SubClassOf(obo:IAO_0000310 obo:IAO_0000030)
+
+# Class: obo:IAO_0000311 (publication)
+
+SubClassOf(obo:IAO_0000311 obo:IAO_0000310)
+
+# Class: obo:IAO_0000312 (publication about an investigation)
+
+SubClassOf(obo:IAO_0000312 obo:IAO_0000311)
+
+# Class: obo:IAO_0000313 (patent)
+
+SubClassOf(obo:IAO_0000313 obo:IAO_0000310)
+
+# Class: obo:IAO_0000314 (document part)
+
+SubClassOf(obo:IAO_0000314 obo:IAO_0000030)
+
+# Class: obo:IAO_0000315 (abstract)
+
+SubClassOf(obo:IAO_0000315 obo:IAO_0000314)
+
+# Class: obo:IAO_0000316 (introduction to a publication about an investigation)
+
+SubClassOf(obo:IAO_0000316 obo:IAO_0000314)
+
+# Class: obo:IAO_0000317 (methods section)
+
+SubClassOf(obo:IAO_0000317 obo:IAO_0000314)
+
+# Class: obo:IAO_0000318 (results section)
+
+SubClassOf(obo:IAO_0000318 obo:IAO_0000314)
+
+# Class: obo:IAO_0000319 (discussion section of a publication about an investigation)
+
+SubClassOf(obo:IAO_0000319 obo:IAO_0000314)
+
+# Class: obo:IAO_0000320 (references section)
+
+SubClassOf(obo:IAO_0000320 obo:IAO_0000314)
+
+# Class: obo:IAO_0000321 (author list)
+
+SubClassOf(obo:IAO_0000321 obo:IAO_0000314)
+
+# Class: obo:IAO_0000322 (institution list)
+
+SubClassOf(obo:IAO_0000322 obo:IAO_0000314)
+
+# Class: obo:IAO_0000323 (author contributions section)
+
+SubClassOf(obo:IAO_0000323 obo:IAO_0000314)
+
+# Class: obo:IAO_0000324 (acknowledgements section)
+
+SubClassOf(obo:IAO_0000324 obo:IAO_0000314)
+
+# Class: obo:IAO_0000325 (footnote)
+
+SubClassOf(obo:IAO_0000325 obo:IAO_0000314)
+
+# Class: obo:IAO_0000326 (supplementary material to a document)
+
+SubClassOf(obo:IAO_0000326 obo:IAO_0000314)
+
+# Class: obo:IAO_0000327 (table of contents)
+
+SubClassOf(obo:IAO_0000327 obo:IAO_0000306)
+
+# Class: obo:IAO_0000328 (table of figures)
+
+SubClassOf(obo:IAO_0000328 obo:IAO_0000306)
+
+# Class: obo:IAO_0000329 (running title)
+
+SubClassOf(obo:IAO_0000329 obo:IAO_0000305)
+
+# Class: obo:IAO_0000330 (copyright section)
+
+SubClassOf(obo:IAO_0000330 obo:IAO_0000314)
+
+# Class: obo:IAO_0000400 (cartesian spatial coordinate datum)
+
+SubClassOf(obo:IAO_0000400 obo:IAO_0000027)
+
+# Class: obo:IAO_0000401 (one dimensional cartesian spatial coordinate datum)
+
+SubClassOf(obo:IAO_0000401 obo:IAO_0000400)
+
+# Class: obo:IAO_0000402 (two dimensional cartesian spatial coordinate datum)
+
+SubClassOf(obo:IAO_0000402 obo:IAO_0000400)
+
+# Class: obo:IAO_0000403 (three dimensional cartesian spatial coordinate datum)
+
+SubClassOf(obo:IAO_0000403 obo:IAO_0000400)
+
+# Class: obo:IAO_0000408 (length measurement datum)
+
+SubClassOf(obo:IAO_0000408 obo:IAO_0000032)
+
+# Class: obo:IAO_0000409 (denotator type)
+
+SubClassOf(obo:IAO_0000409 obo:IAO_0000102)
+
+# Class: obo:IAO_0000414 (mass measurement datum)
+
+SubClassOf(obo:IAO_0000414 obo:IAO_0000032)
+
+# Class: obo:IAO_0000415 (hypothesis textual entity)
+
+SubClassOf(obo:IAO_0000415 obo:IAO_0000300)
+
+# Class: obo:IAO_0000416 (time measurement datum)
+
+SubClassOf(obo:IAO_0000416 obo:IAO_0000032)
+
+# Class: obo:IAO_0000422 (postal address)
+
+SubClassOf(obo:IAO_0000422 obo:IAO_0000300)
+
+# Class: obo:IAO_0000429 (email address)
+
+SubClassOf(obo:IAO_0000429 obo:IAO_0000030)
+
+# Class: obo:IAO_0000442 (author role)
+
+SubClassOf(obo:IAO_0000442 obo:BFO_0000023)
+
+# Class: obo:IAO_0000443 (data item extraction from journal article)
+
+SubClassOf(obo:IAO_0000443 obo:OBI_0000011)
+
+# Class: obo:IAO_0000444 (publishing process)
+
+SubClassOf(obo:IAO_0000444 obo:OBI_0000011)
+
+# Class: obo:IAO_0000445 (document in preparation for publication)
+
+SubClassOf(obo:IAO_0000445 obo:IAO_0000310)
+
+# Class: obo:IAO_0000572 (documenting)
+
+SubClassOf(obo:IAO_0000572 obo:OBI_0000011)
+
+# Class: obo:IAO_0000573 (line graph)
+
+SubClassOf(obo:IAO_0000573 obo:IAO_0000038)
+
+# Class: obo:IAO_0000574 (assigning a centrally registered identifier)
+
+SubClassOf(obo:IAO_0000574 obo:OBI_0000011)
+
+# Class: obo:IAO_0000575 (associating information with a centrally registered identifier in its registry)
+
+SubClassOf(obo:IAO_0000575 obo:OBI_0000011)
+
+# Class: obo:IAO_0000576 (obsolete_establishing a CRID registry)
+
+SubClassOf(obo:IAO_0000576 oboInOwl:ObsoleteClass)
+
+# Class: obo:IAO_0000577 (centrally registered identifier symbol)
+
+SubClassOf(obo:IAO_0000577 obo:IAO_0000028)
+
+# Class: obo:IAO_0000578 (centrally registered identifier)
+
+SubClassOf(obo:IAO_0000578 obo:IAO_0020000)
+
+# Class: obo:IAO_0000579 (centrally registered identifier registry)
+
+SubClassOf(obo:IAO_0000579 obo:IAO_0000100)
+
+# Class: obo:IAO_0000580 (looking up a centrally registered identifier)
+
+SubClassOf(obo:IAO_0000580 obo:OBI_0000011)
+
+# Class: obo:IAO_0000582 (time stamped measurement datum)
+
+SubClassOf(obo:IAO_0000582 obo:IAO_0000109)
+
+# Class: obo:IAO_0000584 (time sampled measurement data set)
+
+SubClassOf(obo:IAO_0000584 obo:IAO_0000100)
+
+# Class: obo:IAO_0000590 (written name)
+
+SubClassOf(obo:IAO_0000590 obo:IAO_0000300)
+
+# Class: obo:IAO_0000591 (software method)
+
+SubClassOf(obo:IAO_0000591 obo:IAO_0000010)
+
+# Class: obo:IAO_0000592 (software module)
+
+SubClassOf(obo:IAO_0000592 obo:IAO_0000010)
+
+# Class: obo:IAO_0000593 (software library)
+
+SubClassOf(obo:IAO_0000593 obo:IAO_0000010)
+
+# Class: obo:IAO_0000594 (software application)
+
+SubClassOf(obo:IAO_0000594 obo:IAO_0000010)
+
+# Class: obo:IAO_0000595 (software script)
+
+SubClassOf(obo:IAO_0000595 obo:IAO_0000010)
+
+# Class: obo:IAO_0000605 (abbreviation textual entity)
+
+SubClassOf(obo:IAO_0000605 obo:IAO_0000300)
+
+# Class: obo:IAO_0000606 (abbreviations section)
+
+SubClassOf(obo:IAO_0000606 obo:IAO_0000314)
+
+# Class: obo:IAO_0000607 (author information section)
+
+SubClassOf(obo:IAO_0000607 obo:IAO_0000314)
+
+# Class: obo:IAO_0000608 (author information textual entity)
+
+SubClassOf(obo:IAO_0000608 obo:IAO_0000300)
+
+# Class: obo:IAO_0000609 (author summary section)
+
+SubClassOf(obo:IAO_0000609 obo:IAO_0000314)
+
+# Class: obo:IAO_0000610 (author summary textual entity)
+
+SubClassOf(obo:IAO_0000610 obo:IAO_0000300)
+
+# Class: obo:IAO_0000611 (availability section)
+
+SubClassOf(obo:IAO_0000611 obo:IAO_0000314)
+
+# Class: obo:IAO_0000612 (availability textual entity)
+
+SubClassOf(obo:IAO_0000612 obo:IAO_0000300)
+
+# Class: obo:IAO_0000613 (case report section)
+
+SubClassOf(obo:IAO_0000613 obo:IAO_0000314)
+
+# Class: obo:IAO_0000614 (case report textual entity)
+
+SubClassOf(obo:IAO_0000614 obo:IAO_0000300)
+
+# Class: obo:IAO_0000615 (conclusion section)
+
+SubClassOf(obo:IAO_0000615 obo:IAO_0000314)
+
+# Class: obo:IAO_0000616 (conflict of interest section)
+
+SubClassOf(obo:IAO_0000616 obo:IAO_0000314)
+
+# Class: obo:IAO_0000617 (conflict of interest textual entity)
+
+SubClassOf(obo:IAO_0000617 obo:IAO_0000300)
+
+# Class: obo:IAO_0000618 (consent section)
+
+SubClassOf(obo:IAO_0000618 obo:IAO_0000314)
+
+# Class: obo:IAO_0000619 (consent textual entity)
+
+SubClassOf(obo:IAO_0000619 obo:IAO_0000300)
+
+# Class: obo:IAO_0000620 (ethical approval section)
+
+SubClassOf(obo:IAO_0000620 obo:IAO_0000314)
+
+# Class: obo:IAO_0000621 (ethical approval textual entity)
+
+SubClassOf(obo:IAO_0000621 obo:IAO_0000300)
+
+# Class: obo:IAO_0000622 (figures section)
+
+SubClassOf(obo:IAO_0000622 obo:IAO_0000314)
+
+# Class: obo:IAO_0000623 (funding source declaration section)
+
+SubClassOf(obo:IAO_0000623 obo:IAO_0000314)
+
+# Class: obo:IAO_0000624 (funding source declaration textual entity)
+
+SubClassOf(obo:IAO_0000624 obo:IAO_0000300)
+
+# Class: obo:IAO_0000625 (future directions section)
+
+SubClassOf(obo:IAO_0000625 obo:IAO_0000314)
+
+# Class: obo:IAO_0000626 (future directions textual entity)
+
+SubClassOf(obo:IAO_0000626 obo:IAO_0000300)
+
+# Class: obo:IAO_0000627 (genome announcement section)
+
+SubClassOf(obo:IAO_0000627 obo:IAO_0000314)
+
+# Class: obo:IAO_0000628 (genome announcement textual entity)
+
+SubClassOf(obo:IAO_0000628 obo:IAO_0000300)
+
+# Class: obo:IAO_0000629 (keyword textual entity)
+
+SubClassOf(obo:IAO_0000629 obo:IAO_0000300)
+
+# Class: obo:IAO_0000630 (keywords section)
+
+SubClassOf(obo:IAO_0000630 obo:IAO_0000314)
+
+# Class: obo:IAO_0000631 (study limitations section)
+
+SubClassOf(obo:IAO_0000631 obo:IAO_0000314)
+
+# Class: obo:IAO_0000632 (study limitations textual entity)
+
+SubClassOf(obo:IAO_0000632 obo:IAO_0000300)
+
+# Class: obo:IAO_0000633 (materials section)
+
+SubClassOf(obo:IAO_0000633 obo:IAO_0000314)
+
+# Class: obo:IAO_0000634 (notes section)
+
+SubClassOf(obo:IAO_0000634 obo:IAO_0000314)
+
+# Class: obo:IAO_0000635 (patients section)
+
+SubClassOf(obo:IAO_0000635 obo:IAO_0000314)
+
+# Class: obo:IAO_0000636 (patients textual entity)
+
+SubClassOf(obo:IAO_0000636 obo:IAO_0000300)
+
+# Class: obo:IAO_0000637 (pre-publication history section)
+
+SubClassOf(obo:IAO_0000637 obo:IAO_0000314)
+
+# Class: obo:IAO_0000638 (pre-publication history textual entity)
+
+SubClassOf(obo:IAO_0000638 obo:IAO_0000300)
+
+# Class: obo:IAO_0000639 (related work section)
+
+SubClassOf(obo:IAO_0000639 obo:IAO_0000314)
+
+# Class: obo:IAO_0000640 (related work textual entity)
+
+SubClassOf(obo:IAO_0000640 obo:IAO_0000300)
+
+# Class: obo:IAO_0000641 (requirements section)
+
+SubClassOf(obo:IAO_0000641 obo:IAO_0000314)
+
+# Class: obo:IAO_0000642 (requirements textual entity)
+
+SubClassOf(obo:IAO_0000642 obo:IAO_0000300)
+
+# Class: obo:IAO_0000643 (statistical analysis textual entity)
+
+SubClassOf(obo:IAO_0000643 obo:IAO_0000300)
+
+# Class: obo:IAO_0000644 (statistical analysis section)
+
+SubClassOf(obo:IAO_0000644 obo:IAO_0000314)
+
+# Class: obo:IAO_0000645 (tables section)
+
+SubClassOf(obo:IAO_0000645 obo:IAO_0000314)
+
+# Class: obo:IAO_0000646 (postal code)
+
+SubClassOf(obo:IAO_0000646 obo:IAO_0020000)
+
+# Class: obo:IAO_0000647 (Postal delivery route)
+
+SubClassOf(obo:IAO_0000647 obo:IAO_0000104)
+
+# Class: obo:IAO_0000648 (zone improvement plan code)
+
+SubClassOf(obo:IAO_0000648 obo:IAO_0000646)
+
+# Class: obo:IAO_0000650 (database extract, transform, and load process)
+
+SubClassOf(obo:IAO_0000650 obo:OBI_0000011)
+
+# Class: obo:IAO_0000701 (descriptive data section)
+
+SubClassOf(obo:IAO_0000701 obo:IAO_0000314)
+
+# Class: obo:IAO_0000702 (additional results section)
+
+SubClassOf(obo:IAO_0000702 obo:IAO_0000318)
+
+# Class: obo:IAO_0000703 (research participants section)
+
+SubClassOf(obo:IAO_0000703 obo:IAO_0000314)
+
+# Class: obo:IAO_0000704 (measurement methods section)
+
+SubClassOf(obo:IAO_0000704 obo:IAO_0000317)
+
+# Class: obo:IAO_0000705 (research settings section)
+
+SubClassOf(obo:IAO_0000705 obo:IAO_0000314)
+
+# Class: obo:IAO_0000706 (study bias section)
+
+SubClassOf(obo:IAO_0000706 obo:IAO_0000631)
+
+# Class: obo:IAO_0000707 (graphical abstract)
+
+SubClassOf(obo:IAO_0000707 obo:IAO_0000315)
+
+# Class: obo:IAO_0020000 (identifier)
+
+SubClassOf(obo:IAO_0020000 obo:IAO_0000030)
+
+# Class: obo:IAO_8000000 (ontology module)
+
+SubClassOf(obo:IAO_8000000 obo:IAO_0000102)
+
+# Class: obo:IAO_8000001 (base ontology module)
+
+SubClassOf(obo:IAO_8000001 obo:IAO_8000000)
+
+# Class: obo:IAO_8000002 (editors ontology module)
+
+SubClassOf(obo:IAO_8000002 obo:IAO_8000000)
+
+# Class: obo:IAO_8000003 (main release ontology module)
+
+SubClassOf(obo:IAO_8000003 obo:IAO_8000000)
+
+# Class: obo:IAO_8000004 (bridge ontology module)
+
+SubClassOf(obo:IAO_8000004 obo:IAO_8000000)
+
+# Class: obo:IAO_8000005 (import ontology module)
+
+SubClassOf(obo:IAO_8000005 obo:IAO_8000006)
+
+# Class: obo:IAO_8000006 (subset ontology module)
+
+SubClassOf(obo:IAO_8000006 obo:IAO_8000000)
+
+# Class: obo:IAO_8000007 (curation subset ontology module)
+
+SubClassOf(obo:IAO_8000007 obo:IAO_8000006)
+
+# Class: obo:IAO_8000008 (analysis subset ontology module)
+
+SubClassOf(obo:IAO_8000008 obo:IAO_8000006)
+
+# Class: obo:IAO_8000009 (single layer subset ontology module)
+
+SubClassOf(obo:IAO_8000009 obo:IAO_8000006)
+
+# Class: obo:IAO_8000010 (exclusion subset ontology module)
+
+SubClassOf(obo:IAO_8000010 obo:IAO_8000006)
+
+# Class: obo:IAO_8000011 (external import ontology module)
+
+SubClassOf(obo:IAO_8000011 obo:IAO_8000005)
+
+# Class: obo:IAO_8000012 (species subset ontology module)
+
+SubClassOf(obo:IAO_8000012 obo:IAO_8000006)
+
+# Class: obo:IAO_8000013 (reasoned ontology module)
+
+SubClassOf(obo:IAO_8000013 obo:IAO_8000000)
+
+# Class: obo:IAO_8000014 (generated ontology module)
+
+SubClassOf(obo:IAO_8000014 obo:IAO_8000000)
+
+# Class: obo:IAO_8000015 (template generated ontology module)
+
+SubClassOf(obo:IAO_8000015 obo:IAO_8000014)
+
+# Class: obo:IAO_8000016 (taxonomic bridge ontology module)
+
+SubClassOf(obo:IAO_8000016 obo:IAO_8000004)
+
+# Class: obo:IAO_8000017 (ontology module subsetted by expressivity)
+
+SubClassOf(obo:IAO_8000017 obo:IAO_8000006)
+
+# Class: obo:IAO_8000018 (obo basic subset ontology module)
+
+SubClassOf(obo:IAO_8000018 obo:IAO_8000017)
+
+# Class: obo:IAO_8000019 (ontology module subsetted by OWL profile)
+
+SubClassOf(obo:IAO_8000019 obo:IAO_8000017)
+
+# Class: obo:IAO_8000020 (EL++ ontology module)
+
+SubClassOf(obo:IAO_8000020 obo:IAO_8000019)
+
+# Class: obo:MONDO_0000001 (disease or disorder)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MONDO_0000001 "A disease is a disposition to undergo pathological processes that exists in an organism because of one or more disorders in that organism.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "DOID:4")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "EFO:0000408")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "ICD10:N18")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "ICD9:799.9")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "MESH:D004194")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "NCIT:C2991")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "OGMS:0000031")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "Orphanet:377788")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "SCTID:64572001")
+AnnotationAssertion(oboInOwl:hasDbXref obo:MONDO_0000001 "UMLS:C0012634")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "condition")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "disease")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "disease or disorder")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "disease or disorder, non-neoplastic")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "diseases")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "diseases and disorders")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "disorder")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "disorders")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "medical condition")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:MONDO_0000001 "other disease")
+AnnotationAssertion(oboInOwl:id obo:MONDO_0000001 "MONDO:0000001")
+AnnotationAssertion(rdfs:label obo:MONDO_0000001 "disease or disorder")
+AnnotationAssertion(skos:exactMatch obo:MONDO_0000001 <http://identifiers.org/mesh/D004194>)
+AnnotationAssertion(skos:exactMatch obo:MONDO_0000001 <http://identifiers.org/snomedct/64572001>)
+AnnotationAssertion(skos:exactMatch obo:MONDO_0000001 <http://linkedlifedata.com/resource/umls/id/C0012634>)
+AnnotationAssertion(skos:exactMatch obo:MONDO_0000001 obo:DOID_4)
+AnnotationAssertion(skos:exactMatch obo:MONDO_0000001 obo:NCIT_C2991)
+AnnotationAssertion(skos:exactMatch obo:MONDO_0000001 <http://www.orpha.net/ORDO/Orphanet_377788>)
+SubClassOf(obo:MONDO_0000001 obo:BFO_0000016)
+
+# Class: obo:OBI_0000011 (planned process)
+
+SubClassOf(obo:OBI_0000011 obo:BFO_0000015)
+
+# Class: obo:OBI_0000066 (investigation)
+
+SubClassOf(obo:OBI_0000066 obo:OBI_0000011)
+
+# Class: obo:OBI_0000471 (study design execution)
+
+SubClassOf(obo:OBI_0000471 obo:OBI_0000011)
+
+# Class: obo:OBI_0200000 (data transformation)
+
+SubClassOf(obo:OBI_0200000 obo:OBI_0000011)
+
+# Class: obo:OBI_0500000 (study design)
+
+SubClassOf(obo:OBI_0500000 obo:IAO_0000104)
+
+# Class: obo:PATO_0000051 (morphology)
+
+SubClassOf(obo:PATO_0000051 obo:PATO_0001241)
+
+# Class: obo:PATO_0000122 (length)
+
+SubClassOf(obo:PATO_0000122 obo:PATO_0000051)
+
+# Class: obo:PATO_0000125 (mass)
+
+SubClassOf(obo:PATO_0000125 obo:PATO_0001018)
+
+# Class: obo:PATO_0001018 (physical quality)
+
+SubClassOf(obo:PATO_0001018 obo:PATO_0001241)
+
+# Class: obo:PATO_0001241 (physical object quality)
+
+SubClassOf(obo:PATO_0001241 obo:BFO_0000019)
+
+# Class: obo:UO_0000001 (length unit)
+
+SubClassOf(obo:UO_0000001 obo:IAO_0000003)
+
+# Class: obo:UO_0000002 (mass unit)
+
+SubClassOf(obo:UO_0000002 obo:IAO_0000003)
+
+# Class: obo:UO_0000003 (time unit)
+
+SubClassOf(obo:UO_0000003 obo:IAO_0000003)
+
+# Class: obo:topic_0003 (Topic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:topic_0003 "A category denoting a rather broad domain or field of interest, study, application, work, data, or technology. Topics have no clearly defined borders between each other.")
+AnnotationAssertion(oboInOwl:id obo:topic_0003 "topic:0003")
+AnnotationAssertion(rdfs:label obo:topic_0003 "Topic")
+SubClassOf(obo:topic_0003 obo:IAO_0000030)
+
+# Class: oboInOwl:ObsoleteClass (oboInOwl:ObsoleteClass)
+
+SubClassOf(oboInOwl:ObsoleteClass owl:Thing)
+
+
+)

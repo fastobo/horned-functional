@@ -1,0 +1,572 @@
+Prefix(:=<http://purl.obolibrary.org/obo/mcro.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(efo:=<http://www.ebi.ac.uk/efo/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(swo:=<http://www.ebi.ac.uk/swo/>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(mcro:=<http://sbmi.uth.edu/ontology/mcro#>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(edamontology:=<http://edamontology.org#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/mcro.owl>
+<http://purl.obolibrary.org/obo/2023-03-07/mcro.owl>
+Import(<http://purl.obolibrary.org/obo/iao.owl>)
+Import(<http://www.w3.org/2004/02/skos/core>)
+Import(<http://www.w3.org/ns/prov-o-20130430>)
+Import(<https://raw.githubusercontent.com/UTHealth-Ontology/mcro/main/import/swo_import_final.owl>)
+Annotation(terms:contributor "Degui Zhi")
+Annotation(terms:contributor "Kirk Roberts")
+Annotation(terms:contributor "Licong Cui")
+Annotation(terms:contributor "Xiaqian Jiang")
+Annotation(terms:creator "Tuan Amith and Cui Tao")
+Annotation(terms:description "An ontology representing the model card structure")
+Annotation(terms:license "https://creativecommons.org/licenses/by/3.0/")
+Annotation(terms:title "Model Card Ontology")
+Annotation(owl:versionInfo "2023-03-07")
+
+Declaration(Class(obo:IAO_0000301))
+Declaration(Class(obo:IAO_0000310))
+Declaration(Class(obo:IAO_0000314))
+Declaration(Class(obo:IAO_0000320))
+Declaration(Class(obo:MCRO_0000001))
+Declaration(Class(obo:MCRO_0000002))
+Declaration(Class(obo:MCRO_0000003))
+Declaration(Class(obo:MCRO_0000004))
+Declaration(Class(obo:MCRO_0000005))
+Declaration(Class(obo:MCRO_0000006))
+Declaration(Class(obo:MCRO_0000007))
+Declaration(Class(obo:MCRO_0000008))
+Declaration(Class(obo:MCRO_0000009))
+Declaration(Class(obo:MCRO_0000010))
+Declaration(Class(obo:MCRO_0000011))
+Declaration(Class(obo:MCRO_0000012))
+Declaration(Class(obo:MCRO_0000013))
+Declaration(Class(obo:MCRO_0000014))
+Declaration(Class(obo:MCRO_0000015))
+Declaration(Class(obo:MCRO_0000016))
+Declaration(Class(obo:MCRO_0000017))
+Declaration(Class(obo:MCRO_0000018))
+Declaration(Class(obo:MCRO_0000019))
+Declaration(Class(obo:MCRO_0000020))
+Declaration(Class(obo:MCRO_0000021))
+Declaration(Class(obo:MCRO_0000022))
+Declaration(Class(obo:MCRO_0000023))
+Declaration(Class(obo:MCRO_0000024))
+Declaration(Class(obo:MCRO_0000025))
+Declaration(Class(obo:MCRO_0000026))
+Declaration(Class(obo:MCRO_0000027))
+Declaration(Class(obo:MCRO_0000028))
+Declaration(Class(obo:MCRO_0000029))
+Declaration(Class(obo:MCRO_0000030))
+Declaration(Class(obo:MCRO_0000031))
+Declaration(Class(obo:MCRO_0000032))
+Declaration(Class(obo:MCRO_0000033))
+Declaration(Class(obo:MCRO_0000034))
+Declaration(Class(obo:MCRO_0000035))
+Declaration(Class(obo:MCRO_0000036))
+Declaration(Class(obo:MCRO_0000037))
+Declaration(Class(obo:MCRO_0000038))
+Declaration(Class(obo:MCRO_0000039))
+Declaration(Class(obo:MCRO_0000040))
+Declaration(Class(rdf:List))
+Declaration(Class(skos:Collection))
+Declaration(Class(foaf:Agent))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(swo:SWO_0004000))
+Declaration(ObjectProperty(swo:SWO_9001002))
+Declaration(DataProperty(obo:MCRO_0000041))
+Declaration(DataProperty(obo:MCRO_0000042))
+Declaration(DataProperty(obo:MCRO_0000043))
+Declaration(DataProperty(obo:MCRO_0000044))
+Declaration(DataProperty(obo:MCRO_0000045))
+Declaration(DataProperty(obo:MCRO_0000046))
+Declaration(DataProperty(obo:MCRO_0000047))
+Declaration(DataProperty(obo:MCRO_0000048))
+Declaration(DataProperty(obo:MCRO_0000049))
+Declaration(DataProperty(obo:MCRO_0000050))
+Declaration(DataProperty(obo:MCRO_0000051))
+Declaration(DataProperty(obo:MCRO_0000052))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o-20120312>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o#>))
+Declaration(AnnotationProperty(terms:contributor))
+Declaration(AnnotationProperty(terms:creator))
+Declaration(AnnotationProperty(terms:title))
+Declaration(AnnotationProperty(mcro:image))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: mcro:image (mcro:image)
+
+AnnotationPropertyDomain(mcro:image mcro:Graphic)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: swo:SWO_0004000 (has version)
+
+AnnotationAssertion(rdfs:label swo:SWO_0004000 "has version")
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:MCRO_0000041 (citation text)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000041 "additional information abou the citation associated with the model")
+AnnotationAssertion(rdfs:label obo:MCRO_0000041 "citation text")
+SubDataPropertyOf(obo:MCRO_0000041 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000041 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000042 (confidence interval value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000042 "value of the confidence interval attributed to the Performance Metric concept")
+AnnotationAssertion(rdfs:label obo:MCRO_0000042 "confidence interval value")
+SubDataPropertyOf(obo:MCRO_0000042 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000042 xsd:decimal)
+
+# Data Property: obo:MCRO_0000043 (contact text)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000043 "Data pertaining to the contact information of the model's contact information. This is associated to the Owner Information class of the Model Card Ontology")
+AnnotationAssertion(rdfs:label obo:MCRO_0000043 "contact text")
+SubDataPropertyOf(obo:MCRO_0000043 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000043 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000044 (custom_text)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000044 "Additional textual information attributed to the licensing information.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000044 "custom_text")
+SubDataPropertyOf(obo:MCRO_0000044 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000044 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000045 (documentation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000045 "Detailed textual information of the model card that is attributed to specific concepts of the Model Card Ontology. This contrasts with the \"overview\" data property as the \"overview\" has a summarized version of \"documentation\"")
+AnnotationAssertion(rdfs:label obo:MCRO_0000045 "documentation")
+SubDataPropertyOf(obo:MCRO_0000045 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000045 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000046 (model card text)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000046 "Model Card Report Ontology specific data properties that provide attributes to its concepts.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000046 "model card text")
+DataPropertyRange(obo:MCRO_0000046 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000047 (name text)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000047 "Name of the owner of the model. This is linked to the Owner Information concept of the Model Card Ontology")
+AnnotationAssertion(rdfs:label obo:MCRO_0000047 "name text")
+SubDataPropertyOf(obo:MCRO_0000047 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000047 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000048 (overview)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000048 "Summary textual information for the concepts of the Model Card Ontology")
+AnnotationAssertion(rdfs:label obo:MCRO_0000048 "overview")
+SubDataPropertyOf(obo:MCRO_0000048 obo:MCRO_0000046)
+FunctionalDataProperty(obo:MCRO_0000048)
+DataPropertyRange(obo:MCRO_0000048 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000049 (performance metric value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000049 "general numeric value associated with the Performance Metric concepts")
+AnnotationAssertion(rdfs:label obo:MCRO_0000049 "performance metric value")
+SubDataPropertyOf(obo:MCRO_0000049 obo:MCRO_0000046)
+FunctionalDataProperty(obo:MCRO_0000049)
+DataPropertyRange(obo:MCRO_0000049 xsd:decimal)
+
+# Data Property: obo:MCRO_0000050 (sensitive data)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000050 "\"A description of any sensitive data that may be present in adataset. Be sure to note PII information such as names, addresses, phone numbers, etc. Preferably, such info should be scrubbed from a dataset if possible. Note that even non-identifying information, such as zip code, age, race, and gender, can be used to identify individuals when aggregated. Please describe any such fields here\" Google LLC")
+AnnotationAssertion(rdfs:label obo:MCRO_0000050 "sensitive data")
+SubDataPropertyOf(obo:MCRO_0000050 obo:MCRO_0000046)
+DataPropertyDomain(obo:MCRO_0000050 obo:MCRO_0000034)
+DataPropertyRange(obo:MCRO_0000050 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000051 (slice)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000051 "This is data property is specific to Perfomance Metric concepts. It attributes information about the data partition used to experiment on the model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000051 "slice")
+SubDataPropertyOf(obo:MCRO_0000051 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000051 rdfs:Literal)
+
+# Data Property: obo:MCRO_0000052 (threshold value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000052 "This is a value pertaining to a threshold value that is attributed to the Performance Metric concept for the Model Card ontology.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000052 "threshold value")
+SubDataPropertyOf(obo:MCRO_0000052 obo:MCRO_0000046)
+DataPropertyRange(obo:MCRO_0000052 xsd:decimal)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:MCRO_0000001 (Model Card Report)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000001 "The Model Card (MC) is the document designed for transparent reporting of AI model provenance, usage, and ethics-informed evaluation. A report that details characteristics of machine learning model to supplement its release to the public.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000001 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000001 "Model Card Report")
+SubClassOf(obo:MCRO_0000001 obo:IAO_0000088)
+SubClassOf(obo:MCRO_0000001 ObjectSomeValuesFrom(obo:IAO_0000136 obo:IAO_0000064))
+SubClassOf(obo:MCRO_0000001 ObjectAllValuesFrom(obo:BFO_0000051 obo:MCRO_0000005))
+SubClassOf(obo:MCRO_0000001 ObjectAllValuesFrom(obo:BFO_0000051 obo:MCRO_0000021))
+SubClassOf(obo:MCRO_0000001 ObjectAllValuesFrom(obo:BFO_0000051 obo:MCRO_0000022))
+SubClassOf(obo:MCRO_0000001 ObjectAllValuesFrom(obo:BFO_0000051 obo:MCRO_0000031))
+
+# Class: obo:MCRO_0000002 (Accuracy Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000002 "Section content in this section should describe information in \"how close or far off a given set of measurements (observations or readings) are to their true value\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000002 "https://en.wikipedia.org/wiki/Accuracy_and_precision")
+AnnotationAssertion(rdfs:label obo:MCRO_0000002 "Accuracy Information Section")
+SubClassOf(obo:MCRO_0000002 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000003 (Area Under the Curve Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000003 "The content describes information pertaining to the area under the ROC curve.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000003 "Area Under the Curve Information Section")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000003 "AUC")
+SubClassOf(obo:MCRO_0000003 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000004 (Citation Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000004 "information relating to the citation for the targetted model. This is part of the model details component of the model card report")
+AnnotationAssertion(rdfs:label obo:MCRO_0000004 "Citation Information Section")
+SubClassOf(obo:MCRO_0000004 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000004 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000301))
+SubClassOf(obo:MCRO_0000004 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000004 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000005 (Consideration Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000005 "This section pertains to \"Factors\" of the model card report by Mitchell et al., 2019. The considerations section includes qualitative information about your model, including some analysis of its risks and limitations. As such, this section usually requires careful consideration, and conversations with many relevant  stakeholders, including other model developers, dataset producers, and downstream users likely to interact with your model, or be affected by its outputs.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000005 "Consideration Information Section")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000005 "Factors")
+SubClassOf(obo:MCRO_0000005 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000005 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000007))
+SubClassOf(obo:MCRO_0000005 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000017))
+SubClassOf(obo:MCRO_0000005 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000036))
+SubClassOf(obo:MCRO_0000005 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000038))
+SubClassOf(obo:MCRO_0000005 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000039))
+SubClassOf(obo:MCRO_0000005 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000005 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000006 (Dataset Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000006 "Information about the data that was used to develop the model")
+AnnotationAssertion(rdfs:label obo:MCRO_0000006 "Dataset Information Section")
+SubClassOf(obo:MCRO_0000006 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000006 ObjectSomeValuesFrom(obo:BFO_0000050 obo:MCRO_0000022))
+SubClassOf(obo:MCRO_0000006 ObjectSomeValuesFrom(obo:BFO_0000050 obo:MCRO_0000031))
+SubClassOf(obo:MCRO_0000006 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000622))
+SubClassOf(obo:MCRO_0000006 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000014))
+SubClassOf(obo:MCRO_0000006 ObjectSomeValuesFrom(obo:IAO_0000136 obo:IAO_0000100))
+
+# Class: obo:MCRO_0000007 (Ethical Consideration Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000007 "Content information that is a type of risk information that is specific to ethical consideration if using the model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000007 "Ethical Consideration Section")
+SubClassOf(obo:MCRO_0000007 obo:MCRO_0000033)
+
+# Class: obo:MCRO_0000008 (Evaluation Data Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000008 "The section is devoted in describing the evaluation dataset. \"Evaluation datasets should include datasets that are publicly available for third-party use. These could be existing datasets or new ones provided alongside the model card analyses to enable further benchmarking... the evaluation datasets should not only be representative of the model’s typical use cases but also anticipated test scenarios and challenging cases.\"
+
+Details on the dataset(s) used for the quantitative analyses in the card. 
+- Datasets 
+- Motivation 
+- Preprocessing\"
+
+(Mitchell et al., 2019)")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000008 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000008 "Evaluation Data Information Section")
+SubClassOf(obo:MCRO_0000008 obo:MCRO_0000006)
+
+# Class: obo:MCRO_0000009 (F1-Score Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000009 "The F1 score is the harmonic mean of the precision and recall. This section describes information relating to the F1 score revealed by the performance of the machine learning model.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000009 "https://en.wikipedia.org/wiki/F-score")
+AnnotationAssertion(rdfs:label obo:MCRO_0000009 "F1-Score Information Section")
+SubClassOf(obo:MCRO_0000009 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000010 (False Discovery Rate Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000010 "The section describes information about the false discovery rate of the machine learning model. 
+
+\"The false discovery rate (FDR) is a method of conceptualizing the rate of type I errors in null hypothesis testing when conducting multiple comparisons. FDR-controlling procedures are designed to control the FDR, which is the expected proportion of \"discoveries\" (rejected null hypotheses) that are false (incorrect rejections of the null)\". quivalently, the FDR is the expected ratio of the number of false positive classifications (false discoveries) to the total number of positive classifications (rejections of the null). The total number of rejections of the null include both the number of false positives (FP) and true positives (TP). Simply put, FDR = FP / (FP + TP). FDR-controlling procedures provide less stringent control of Type I errors compared to familywise error rate (FWER) controlling procedures (such as the Bonferroni correction), which control the probability of at least one Type I error. Thus, FDR-controlling procedures have greater power, at the cost of increased numbers of Type I errors.\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000010 "https://en.wikipedia.org/wiki/False_discovery_rate")
+AnnotationAssertion(rdfs:label obo:MCRO_0000010 "False Discovery Rate Information Section")
+SubClassOf(obo:MCRO_0000010 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000011 (False Ommission Rate Section Information)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000011 "This section describes information relating to false ommision rate of the performance of the machine learning model. FOR is the probability that the true value is positive.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000011 "False Ommission Rate Section Information")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000011 "FOR")
+SubClassOf(obo:MCRO_0000011 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000012 (False Positive Rate Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000012 "This content describes the information pertaining to the model's false postive rate. \"A false positive error, or false positive, is a result that indicates a given condition exists when it does not. For example, a pregnancy test which indicates a woman is pregnant when she is not, or the conviction of an innocent person. A false positive error is a type I error where the test is checking a single condition, and wrongly gives an affirmative (positive) decision.\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000012 "https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_positive_error")
+AnnotationAssertion(rdfs:label obo:MCRO_0000012 "False Positive Rate Information Section")
+SubClassOf(obo:MCRO_0000012 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000013 (Format Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000013 "This content summarizes the input and output data format for the model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000013 "Format Information Section")
+SubClassOf(obo:MCRO_0000013 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000013 ObjectSomeValuesFrom(obo:IAO_0000136 obo:IAO_0000098))
+
+# Class: obo:MCRO_0000014 (Graphic Collection Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000014 "A section describing the set of graphics accompanying the model card's dataset")
+AnnotationAssertion(rdfs:label obo:MCRO_0000014 "Graphic Collection Section")
+SubClassOf(obo:MCRO_0000014 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000014 skos:Collection)
+SubClassOf(obo:MCRO_0000014 ObjectSomeValuesFrom(obo:BFO_0000050 obo:IAO_0000622))
+
+# Class: obo:MCRO_0000015 (Input Format Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000015 "This secton content serves to describe the inputed data's format for the machine learning model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000015 "Input Format Information Section")
+SubClassOf(obo:MCRO_0000015 obo:MCRO_0000013)
+
+# Class: obo:MCRO_0000016 (License Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000016 "Section for information about the licensing for the machine learning model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000016 "License Information Section")
+SubClassOf(obo:MCRO_0000016 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000016 ObjectSomeValuesFrom(obo:IAO_0000136 swo:SWO_0000002))
+SubClassOf(obo:MCRO_0000016 DataSomeValuesFrom(obo:MCRO_0000044 xsd:string))
+SubClassOf(obo:MCRO_0000016 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000016 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000017 (Limitation Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000017 "Content section relating to the technical limits of the machine learning model (e.g. trained on ungeneralized data).")
+AnnotationAssertion(rdfs:label obo:MCRO_0000017 "Limitation Information Section")
+SubClassOf(obo:MCRO_0000017 obo:IAO_0000314)
+
+# Class: obo:MCRO_0000018 (Mitigation Strategy Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000018 "Content section of the model card that addresses the risk or ethical consideration of the model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000018 "Mitigation Strategy Section")
+SubClassOf(obo:MCRO_0000018 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000018 ObjectSomeValuesFrom(obo:BFO_0000050 obo:MCRO_0000033))
+
+# Class: obo:MCRO_0000019 (Model Architecture Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000019 "Content section summarizing the architecture of the model (software used, algortihm, etc.)")
+AnnotationAssertion(rdfs:label obo:MCRO_0000019 "Model Architecture Information Section")
+SubClassOf(obo:MCRO_0000019 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000019 ObjectSomeValuesFrom(obo:IAO_0000136 obo:IAO_0000064))
+SubClassOf(obo:MCRO_0000019 ObjectSomeValuesFrom(obo:IAO_0000136 swo:SWO_0000001))
+
+# Class: obo:MCRO_0000020 (Model Card Graphic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000020 "a graph content specifically for a model card report")
+AnnotationAssertion(rdfs:label obo:MCRO_0000020 "Model Card Graphic")
+SubClassOf(obo:MCRO_0000020 obo:IAO_0000038)
+
+# Class: obo:MCRO_0000021 (Model Detail Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000021 "Basic information about the model that includes licensing information, owner information, the architecture of the model (algorthim employed), references (cited papers), and versioning information.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000021 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000021 "Model Detail Section")
+SubClassOf(obo:MCRO_0000021 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000021 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000004))
+SubClassOf(obo:MCRO_0000021 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000016))
+SubClassOf(obo:MCRO_0000021 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000019))
+SubClassOf(obo:MCRO_0000021 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000025))
+SubClassOf(obo:MCRO_0000021 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000032))
+SubClassOf(obo:MCRO_0000021 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000040))
+SubClassOf(obo:MCRO_0000021 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000021 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000022 (Model Parameter Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000022 "Section summarizing the content relating to the parameters for the development of the model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000022 "Model Parameter Section")
+SubClassOf(obo:MCRO_0000022 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000022 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000006))
+SubClassOf(obo:MCRO_0000022 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000015))
+SubClassOf(obo:MCRO_0000022 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000019))
+SubClassOf(obo:MCRO_0000022 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000024))
+SubClassOf(obo:MCRO_0000022 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000022 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000023 (Out of Scope Use Case Section Information)
+
+AnnotationAssertion(obo:IAO_0000112 obo:MCRO_0000023 "\"for use on black-and-white images only; please consider our research group’s full-color-image classifier for color images.”")
+AnnotationAssertion(obo:IAO_0000112 obo:MCRO_0000023 "\"not for use on text examples shorter than 100 tokens\"")
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000023 "\"Here, the model card should highlight technology that the model might easily be confused with, or related contexts that users could try to apply the model to. This section may provide an opportunity to recommend a related or similar model that was designed to better meet that particular need, where possible. This section is inspired by warning labels on food and toys, and similar disclaimers presented in electronic datasheets.\" Content that is a type of use case information but specific to use cases that are out of scope of the intended use case.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000023 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000023 "Out of Scope Use Case Section Information")
+SubClassOf(obo:MCRO_0000023 obo:MCRO_0000038)
+
+# Class: obo:MCRO_0000024 (Output Format Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000024 "This secton content serves to describe the outputted data's format for the machine learning model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000024 "Output Format Information Section")
+SubClassOf(obo:MCRO_0000024 obo:MCRO_0000013)
+
+# Class: obo:MCRO_0000025 (Owner Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000025 "Section for the information about the individuals involved in the development of the machine learning model. This includes contact information, the names of the individuals, etc.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000025 "Owner Information Section")
+SubClassOf(obo:MCRO_0000025 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000025 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectUnionOf(prov:Organization prov:Person)))
+SubClassOf(obo:MCRO_0000025 DataSomeValuesFrom(obo:MCRO_0000043 rdfs:Literal))
+SubClassOf(obo:MCRO_0000025 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000025 DataSomeValuesFrom(obo:MCRO_0000047 rdfs:Literal))
+SubClassOf(obo:MCRO_0000025 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000026 (Percision-Recall Curve Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000026 "This section is for the description of the precision and recall information of the machine learning model's performance.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000026 "Percision-Recall Curve Information Section")
+SubClassOf(obo:MCRO_0000026 obo:MCRO_0000027)
+
+# Class: obo:MCRO_0000027 (Performance Metric Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000027 "Section content here summarizing the information about the metrics (precision, recall, f1 score, etc.) that measured the performance of the model. One can report the values and portion of the data (slice).")
+AnnotationAssertion(rdfs:label obo:MCRO_0000027 "Performance Metric Information Section")
+SubClassOf(obo:MCRO_0000027 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000027 DataSomeValuesFrom(obo:MCRO_0000042 xsd:decimal))
+SubClassOf(obo:MCRO_0000027 DataSomeValuesFrom(obo:MCRO_0000049 xsd:decimal))
+SubClassOf(obo:MCRO_0000027 DataSomeValuesFrom(obo:MCRO_0000051 rdfs:Literal))
+SubClassOf(obo:MCRO_0000027 DataSomeValuesFrom(obo:MCRO_0000052 xsd:decimal))
+
+# Class: obo:MCRO_0000028 (Personally Identifiable Data Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000028 "personally identifiable information as \"any information about an individual maintained by an agency, including (1) any information that can be used to distinguish or trace an individual's identity, such as name, social security number, date and place of birth, mother's maiden name, or biometric records; and (2) any other information that is linked or linkable to an individual, such as medical, educational, financial, and employment information.\" The section should specificially describe information about the personally identifiable datasets.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000028 "https://en.wikipedia.org/wiki/Personal_data")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000028 "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf")
+AnnotationAssertion(rdfs:label obo:MCRO_0000028 "Personally Identifiable Data Information Section")
+SubClassOf(obo:MCRO_0000028 obo:MCRO_0000034)
+
+# Class: obo:MCRO_0000029 (Primary Intended Use Case Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000029 "\"This section details whether the model was developed with general or specific tasks in mind (e.g., plant recognition worldwide or in the Pacific Northwest). The use cases may be as broadly or narrowly defined as the developers intend. For example, if the model was built simply to label images, then this task should be indicated as the primary intended use case.\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000029 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000029 "Primary Intended Use Case Information Section")
+SubClassOf(obo:MCRO_0000029 obo:MCRO_0000038)
+
+# Class: obo:MCRO_0000030 (Primary Intended User Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000030 "This section describes the primary intended user for the machine learning model. \"For example, was the model developed for entertainment purposes, for hobbyists, or enterprise solutions? This helps users gain insight into how robust the model may be to different kinds of inputs.\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000030 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000030 "Primary Intended User Information Section")
+SubClassOf(obo:MCRO_0000030 obo:MCRO_0000039)
+
+# Class: obo:MCRO_0000031 (Quantative Analysis Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000031 "content overview of the quantatitve analysis of the model, specifically the performance of the model")
+AnnotationAssertion(rdfs:label obo:MCRO_0000031 "Quantative Analysis Section")
+AnnotationAssertion(skos:editorialNote obo:MCRO_0000031 "need to connect evaluation data information and training data information")
+AnnotationAssertion(skos:editorialNote obo:MCRO_0000031 "should their be a specified graphic collection for Quantative Analysis?")
+AnnotationAssertion(skos:prefLabel obo:MCRO_0000031 "Quantative Analysis")
+SubClassOf(obo:MCRO_0000031 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000031 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000622))
+SubClassOf(obo:MCRO_0000031 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000006))
+SubClassOf(obo:MCRO_0000031 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000014))
+SubClassOf(obo:MCRO_0000031 ObjectSomeValuesFrom(obo:BFO_0000051 obo:MCRO_0000027))
+SubClassOf(obo:MCRO_0000031 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000031 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000032 (Reference Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000032 "information for any references related to the machine learning model (research papers, website, etc.)")
+AnnotationAssertion(rdfs:label obo:MCRO_0000032 "Reference Information Section")
+SubClassOf(obo:MCRO_0000032 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000032 ObjectSomeValuesFrom(prov:wasDerivedFrom obo:IAO_0000310))
+SubClassOf(obo:MCRO_0000032 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000032 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: obo:MCRO_0000033 (Risk Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000033 "Content information relating to potential uncertainity about utilizing the model")
+AnnotationAssertion(rdfs:label obo:MCRO_0000033 "Risk Information Section")
+SubClassOf(obo:MCRO_0000033 obo:IAO_0000314)
+
+# Class: obo:MCRO_0000034 (Sensitive Data Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000034 "Information relating to sensitive datasets that contain info like personal information that was used to develop the machine learning model")
+AnnotationAssertion(rdfs:label obo:MCRO_0000034 "Sensitive Data Information Section")
+SubClassOf(obo:MCRO_0000034 obo:MCRO_0000006)
+SubClassOf(obo:MCRO_0000034 DataSomeValuesFrom(obo:MCRO_0000050 rdfs:Literal))
+
+# Class: obo:MCRO_0000035 (Synthetic Evaluation Data Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000035 "The section is devoted in descrbing the synthetic evaluation datasets used for a machine learning model. Synthetic evaluation datasets are a type of evaluation dataset. \"It is often difficult to find datasets that represent populations outside of the initial domain used in training. In some of these situations, synthetically generated datasets may provide representation for use cases that would otherwise go unevaluated\" (Mitchell et al., 2019). This section should described the aforementioned.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000035 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000035 "Synthetic Evaluation Data Information Section")
+SubClassOf(obo:MCRO_0000035 obo:MCRO_0000008)
+
+# Class: obo:MCRO_0000036 (Trade-off Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000036 "Content involving known trade-offs for the use of the model. Trade offs might include performance or technical or ethical. \"This section should list additional concerns that were not covered in the previous sections. For example, did the results suggest any further testing? Were there any relevant groups that were not represented in the evaluation dataset? Are there additional recommendations for model use? What are the ideal characteristics of an evaluation dataset for this model?\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000036 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000036 "Trade-off Information Section")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000036 "Caveats")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000036 "Recommendations")
+SubClassOf(obo:MCRO_0000036 obo:IAO_0000314)
+
+# Class: obo:MCRO_0000037 (Training Data Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000037 "The section is for information about the training data used for evaluation of a machine learning model.")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000037 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000037 "Training Data Information Section")
+SubClassOf(obo:MCRO_0000037 obo:MCRO_0000006)
+
+# Class: obo:MCRO_0000038 (Use Case Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000038 "The content here involves information about intential uses of the model.
+\"This section should allow readers to quickly grasp what the model should and should not be used for, and why it was created. It can also help frame the statistical analysis presented in the rest of the card, including a short description of the user(s), use-case(s), and context(s) for which the model was originally developed.\"")
+AnnotationAssertion(obo:IAO_0000119 obo:MCRO_0000038 "Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, Timnit Gebru. 2019. Model Cards for Model Reporting. In FAT* ’19: Conference on Fairness, Accountability, and Transparency, January 29–31, 2019, Atlanta, GA, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3287560. 3287596")
+AnnotationAssertion(rdfs:label obo:MCRO_0000038 "Use Case Information Section")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000038 "Intended Use")
+SubClassOf(obo:MCRO_0000038 obo:IAO_0000314)
+
+# Class: obo:MCRO_0000039 (User Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000039 "Content information pertaining to intended users of the model. This includes individuals that may be impacted as an outcome of the use of the model.")
+AnnotationAssertion(rdfs:comment obo:MCRO_0000039 "target user for the model")
+AnnotationAssertion(rdfs:label obo:MCRO_0000039 "User Information Section")
+AnnotationAssertion(skos:altLabel obo:MCRO_0000039 "Intended User Information")
+SubClassOf(obo:MCRO_0000039 obo:IAO_0000314)
+
+# Class: obo:MCRO_0000040 (Version Information Section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MCRO_0000040 "This content section describes any versioning information for the machine learning model.")
+AnnotationAssertion(rdfs:label obo:MCRO_0000040 "Version Information Section")
+SubClassOf(obo:MCRO_0000040 obo:IAO_0000314)
+SubClassOf(obo:MCRO_0000040 ObjectSomeValuesFrom(obo:IAO_0000136 obo:IAO_0000129))
+SubClassOf(obo:MCRO_0000040 DataSomeValuesFrom(obo:MCRO_0000045 rdfs:Literal))
+SubClassOf(obo:MCRO_0000040 DataSomeValuesFrom(obo:MCRO_0000048 rdfs:Literal))
+
+# Class: swo:SWO_0000002 (software license)
+
+SubClassOf(swo:SWO_0000002 obo:IAO_0000030)
+
+
+
+)

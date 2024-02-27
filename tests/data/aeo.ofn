@@ -1,0 +1,2758 @@
+Prefix(:=<http://purl.obolibrary.org/obo/aeo.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/aeo.owl>
+<http://purl.obolibrary.org/obo/aeo/releases/2014-12-05/aeo.owl>
+Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.1.1-beta7")
+Annotation(oboInOwl:date "04:07:2013 20:24")
+Annotation(oboInOwl:default-namespace "anatomical_entity_ontology")
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
+Annotation(oboInOwl:saved-by "jonathanbard")
+Annotation(oboInOwl:typeref "anatomical_entity_ontology")
+Annotation(rdfs:comment "this version corrects the namespace and includes some flybase alt_IDs")
+
+Declaration(Class(obo:AEO_0000013))
+Declaration(Class(obo:AEO_0000078))
+Declaration(Class(obo:AEO_0000079))
+Declaration(Class(obo:AEO_0000080))
+Declaration(Class(obo:AEO_0000081))
+Declaration(Class(obo:AEO_0000082))
+Declaration(Class(obo:AEO_0000083))
+Declaration(Class(obo:AEO_0000085))
+Declaration(Class(obo:AEO_0000086))
+Declaration(Class(obo:AEO_0000087))
+Declaration(Class(obo:AEO_0000090))
+Declaration(Class(obo:AEO_0000091))
+Declaration(Class(obo:AEO_0000092))
+Declaration(Class(obo:AEO_0000093))
+Declaration(Class(obo:AEO_0000094))
+Declaration(Class(obo:AEO_0000095))
+Declaration(Class(obo:AEO_0000096))
+Declaration(Class(obo:AEO_0000097))
+Declaration(Class(obo:AEO_0000098))
+Declaration(Class(obo:AEO_0000099))
+Declaration(Class(obo:AEO_0000100))
+Declaration(Class(obo:AEO_0000103))
+Declaration(Class(obo:AEO_0000106))
+Declaration(Class(obo:AEO_0000108))
+Declaration(Class(obo:AEO_0000109))
+Declaration(Class(obo:AEO_0000111))
+Declaration(Class(obo:AEO_0000114))
+Declaration(Class(obo:AEO_0000115))
+Declaration(Class(obo:AEO_0000117))
+Declaration(Class(obo:AEO_0000118))
+Declaration(Class(obo:AEO_0000119f))
+Declaration(Class(obo:AEO_0000122))
+Declaration(Class(obo:AEO_0000123))
+Declaration(Class(obo:AEO_0000125))
+Declaration(Class(obo:AEO_0000126))
+Declaration(Class(obo:AEO_0000127))
+Declaration(Class(obo:AEO_0000129))
+Declaration(Class(obo:AEO_0000131))
+Declaration(Class(obo:AEO_0000132))
+Declaration(Class(obo:AEO_0000135))
+Declaration(Class(obo:AEO_0000136))
+Declaration(Class(obo:AEO_0000137))
+Declaration(Class(obo:AEO_0000138))
+Declaration(Class(obo:AEO_0000139))
+Declaration(Class(obo:AEO_0000140))
+Declaration(Class(obo:AEO_0000141))
+Declaration(Class(obo:AEO_0000142))
+Declaration(Class(obo:AEO_0000143))
+Declaration(Class(obo:AEO_0000144))
+Declaration(Class(obo:AEO_0000145))
+Declaration(Class(obo:AEO_0000146))
+Declaration(Class(obo:AEO_0000147))
+Declaration(Class(obo:AEO_0000148))
+Declaration(Class(obo:AEO_0000149))
+Declaration(Class(obo:AEO_0000150))
+Declaration(Class(obo:AEO_0000151))
+Declaration(Class(obo:AEO_0000152))
+Declaration(Class(obo:AEO_0000153))
+Declaration(Class(obo:AEO_0000154))
+Declaration(Class(obo:AEO_0000161))
+Declaration(Class(obo:AEO_0000162))
+Declaration(Class(obo:AEO_0000168))
+Declaration(Class(obo:AEO_0000169))
+Declaration(Class(obo:AEO_0000170))
+Declaration(Class(obo:AEO_0000171))
+Declaration(Class(obo:AEO_0000172))
+Declaration(Class(obo:AEO_0000173))
+Declaration(Class(obo:AEO_0000174))
+Declaration(Class(obo:AEO_0000175))
+Declaration(Class(obo:AEO_0000176))
+Declaration(Class(obo:AEO_0000177))
+Declaration(Class(obo:AEO_0000178))
+Declaration(Class(obo:AEO_0000179))
+Declaration(Class(obo:AEO_0000180))
+Declaration(Class(obo:AEO_0000181))
+Declaration(Class(obo:AEO_0000183))
+Declaration(Class(obo:AEO_0000185))
+Declaration(Class(obo:AEO_0000186))
+Declaration(Class(obo:AEO_0000187))
+Declaration(Class(obo:AEO_0000188))
+Declaration(Class(obo:AEO_0000189))
+Declaration(Class(obo:AEO_0000192))
+Declaration(Class(obo:AEO_0000193))
+Declaration(Class(obo:AEO_0000194))
+Declaration(Class(obo:AEO_0000195))
+Declaration(Class(obo:AEO_0000196))
+Declaration(Class(obo:AEO_0000198))
+Declaration(Class(obo:AEO_0000199))
+Declaration(Class(obo:AEO_0000200))
+Declaration(Class(obo:AEO_0000201))
+Declaration(Class(obo:AEO_0000202))
+Declaration(Class(obo:AEO_0000203))
+Declaration(Class(obo:AEO_0000204))
+Declaration(Class(obo:AEO_0000205))
+Declaration(Class(obo:AEO_0000206))
+Declaration(Class(obo:AEO_0000207))
+Declaration(Class(obo:AEO_0000208))
+Declaration(Class(obo:AEO_0000209))
+Declaration(Class(obo:AEO_0000210))
+Declaration(Class(obo:AEO_0000211))
+Declaration(Class(obo:AEO_0000212))
+Declaration(Class(obo:AEO_0000213))
+Declaration(Class(obo:AEO_0000214))
+Declaration(Class(obo:AEO_0000215))
+Declaration(Class(obo:AEO_0000216))
+Declaration(Class(obo:AEO_0000217))
+Declaration(Class(obo:AEO_0000218))
+Declaration(Class(obo:AEO_0000219))
+Declaration(Class(obo:AEO_0000220))
+Declaration(Class(obo:AEO_0000221))
+Declaration(Class(obo:AEO_0000222))
+Declaration(Class(obo:AEO_0000493))
+Declaration(Class(obo:AEO_0001000))
+Declaration(Class(obo:AEO_0001001))
+Declaration(Class(obo:AEO_0001002))
+Declaration(Class(obo:AEO_0001003))
+Declaration(Class(obo:AEO_0001004))
+Declaration(Class(obo:AEO_0001005))
+Declaration(Class(obo:AEO_0001006))
+Declaration(Class(obo:AEO_0001007))
+Declaration(Class(obo:AEO_0001008))
+Declaration(Class(obo:AEO_0001009))
+Declaration(Class(obo:AEO_0001010))
+Declaration(Class(obo:AEO_0001011))
+Declaration(Class(obo:AEO_0001012))
+Declaration(Class(obo:AEO_0001013))
+Declaration(Class(obo:AEO_0001014))
+Declaration(Class(obo:AEO_0001015))
+Declaration(Class(obo:AEO_0001016))
+Declaration(Class(obo:AEO_0001017))
+Declaration(Class(obo:AEO_0001018))
+Declaration(Class(obo:AEO_0001019))
+Declaration(Class(obo:AEO_0001020))
+Declaration(Class(obo:AEO_0001021))
+Declaration(Class(obo:CARO_0000000))
+Declaration(Class(obo:CARO_0000003))
+Declaration(Class(obo:CARO_0000004))
+Declaration(Class(obo:CARO_0000005))
+Declaration(Class(obo:CARO_0000006))
+Declaration(Class(obo:CARO_0000007))
+Declaration(Class(obo:CARO_0000008))
+Declaration(Class(obo:CARO_0000009))
+Declaration(Class(obo:CARO_0000010))
+Declaration(Class(obo:CARO_0000011))
+Declaration(Class(obo:CARO_0000012))
+Declaration(Class(obo:CARO_0000013))
+Declaration(Class(obo:CARO_0000014))
+Declaration(Class(obo:CARO_0000019))
+Declaration(Class(obo:CARO_0000021))
+Declaration(Class(obo:CARO_0000024))
+Declaration(Class(obo:CARO_0000027))
+Declaration(Class(obo:CARO_0000028))
+Declaration(Class(obo:CARO_0000029))
+Declaration(Class(obo:CARO_0000032))
+Declaration(Class(obo:CARO_0000040))
+Declaration(Class(obo:CARO_0000041))
+Declaration(Class(obo:CARO_0000042))
+Declaration(Class(obo:CARO_0000043))
+Declaration(Class(obo:CARO_0000045))
+Declaration(Class(obo:CARO_0000046))
+Declaration(Class(obo:CARO_0000048))
+Declaration(Class(obo:CARO_0000049))
+Declaration(Class(obo:CARO_0000050))
+Declaration(Class(obo:CARO_0000054))
+Declaration(Class(obo:CARO_0000055))
+Declaration(Class(obo:CARO_0000062))
+Declaration(Class(obo:CARO_0000063))
+Declaration(Class(obo:CARO_0000064))
+Declaration(Class(obo:CARO_0000065))
+Declaration(Class(obo:CARO_0000066))
+Declaration(Class(obo:CARO_0000067))
+Declaration(Class(obo:CARO_0000068))
+Declaration(Class(obo:CARO_0000069))
+Declaration(Class(obo:CARO_0000070))
+Declaration(Class(obo:CARO_0000071))
+Declaration(Class(obo:CARO_0000072))
+Declaration(Class(obo:CARO_0000073))
+Declaration(Class(obo:CARO_0000074))
+Declaration(Class(obo:CARO_0000077))
+Declaration(Class(obo:CL_0000000))
+Declaration(Class(obo:CL_0000003))
+Declaration(Class(obo:CL_0000012))
+Declaration(Class(obo:CL_0000015))
+Declaration(Class(obo:CL_0000021))
+Declaration(Class(obo:CL_0000029))
+Declaration(Class(obo:CL_0000031))
+Declaration(Class(obo:CL_0000034))
+Declaration(Class(obo:CL_0000039))
+Declaration(Class(obo:CL_0000055))
+Declaration(Class(obo:CL_0000057))
+Declaration(Class(obo:CL_0000058))
+Declaration(Class(obo:CL_0000062))
+Declaration(Class(obo:CL_0000063))
+Declaration(Class(obo:CL_0000066))
+Declaration(Class(obo:CL_0000068))
+Declaration(Class(obo:CL_0000071))
+Declaration(Class(obo:CL_0000075))
+Declaration(Class(obo:CL_0000076))
+Declaration(Class(obo:CL_0000079))
+Declaration(Class(obo:CL_0000080))
+Declaration(Class(obo:CL_0000081))
+Declaration(Class(obo:CL_0000095))
+Declaration(Class(obo:CL_0000099))
+Declaration(Class(obo:CL_0000101))
+Declaration(Class(obo:CL_0000107))
+Declaration(Class(obo:CL_0000125))
+Declaration(Class(obo:CL_0000126))
+Declaration(Class(obo:CL_0000127))
+Declaration(Class(obo:CL_0000128))
+Declaration(Class(obo:CL_0000129))
+Declaration(Class(obo:CL_0000134))
+Declaration(Class(obo:CL_0000136))
+Declaration(Class(obo:CL_0000138))
+Declaration(Class(obo:CL_0000144))
+Declaration(Class(obo:CL_0000151))
+Declaration(Class(obo:CL_0000165))
+Declaration(Class(obo:CL_0000187))
+Declaration(Class(obo:CL_0000188))
+Declaration(Class(obo:CL_0000192))
+Declaration(Class(obo:CL_0000196))
+Declaration(Class(obo:CL_0000211))
+Declaration(Class(obo:CL_0000224))
+Declaration(Class(obo:CL_0000228))
+Declaration(Class(obo:CL_0000243))
+Declaration(Class(obo:CL_0000327))
+Declaration(Class(obo:CL_0000335))
+Declaration(Class(obo:CL_0000393))
+Declaration(Class(obo:CL_0000414))
+Declaration(Class(obo:CL_0000444))
+Declaration(Class(obo:CL_0000445))
+Declaration(Class(obo:CL_0000468))
+Declaration(Class(obo:CL_0000499))
+Declaration(Class(obo:CL_0000525))
+Declaration(Class(obo:CL_0000526))
+Declaration(Class(obo:CL_0000527))
+Declaration(Class(obo:CL_0000540))
+Declaration(Class(obo:CL_0000586))
+Declaration(Class(obo:CL_0000658))
+Declaration(Class(obo:CL_0000667))
+Declaration(Class(obo:CL_0000670))
+Declaration(Class(obo:CL_0000680))
+Declaration(Class(obo:CL_0000737))
+Declaration(Class(obo:CL_0000746))
+Declaration(Class(obo:CL_0000988))
+Declaration(Class(obo:CL_0002242))
+Declaration(Class(obo:CL_0002319))
+Declaration(Class(obo:CL_0002320))
+Declaration(Class(obo:CL_0002371))
+Declaration(Class(obo:CL_0002372))
+Declaration(Class(obo:CL_0002573))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#derives_from>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#descends>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#develops_from>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#endStage>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#hasMapping>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#has_part>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#isReferenceForMapping>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#part_of>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#startStage>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#subEventOf>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/aeo#type>))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasAlternativeId))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(oboInOwl:typeref))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(owl:deprecated))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: oboInOwl:hasAlternativeId (has_alternative_id)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#derives_from> (derives_from)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#derives_from> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#derives_from> "derives_from")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#derives_from> "derives_from")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#descends> (descends)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#descends> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#descends> "descends")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#descends> "descends")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#develops_from> (develops_from)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#develops_from> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#develops_from> "develops_from")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#develops_from> "develops_from")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#endStage> (endStage)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#endStage> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#endStage> "endStage")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#endStage> "endStage")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#hasMapping> (hasMapping)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#hasMapping> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#hasMapping> "hasMapping")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#hasMapping> "hasMapping")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#has_part> (has_part)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#has_part> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#has_part> "has_part")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#has_part> "has_part")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#isReferenceForMapping> (isReferenceForMapping)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#isReferenceForMapping> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#isReferenceForMapping> "isReferenceForMapping")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#isReferenceForMapping> "isReferenceForMapping")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#part_of> (part_of)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#part_of> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#part_of> "part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#part_of> "part_of")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#startStage> (startStage)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#startStage> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#startStage> "startStage")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#startStage> "startStage")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#subEventOf> (subEventOf)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#subEventOf> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#subEventOf> "subEventOf")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#subEventOf> "subEventOf")
+
+# Object Property: <http://purl.obolibrary.org/obo/aeo#type> (type)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/aeo#type> "anatomical_entity_ontology")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/aeo#type> "type")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/aeo#type> "type")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:AEO_0000013 (single-cell tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:AEO_0000013 "Anatomical structure composed of a single cell.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000013 "EHDAA2:0003013")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000013 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000013 "AEO:0000013")
+AnnotationAssertion(rdfs:label obo:AEO_0000013 "single-cell tissue")
+SubClassOf(obo:AEO_0000013 obo:CARO_0000043)
+
+# Class: obo:AEO_0000078 (lumen of tube)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000078 "The inner space within a tube.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000078 "EHDAA2:0003078")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000078 "UBERON:0005082")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000078 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:AEO_0000078 "tube lumen")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000078 "AEO:0000078")
+AnnotationAssertion(rdfs:label obo:AEO_0000078 "lumen of tube")
+SubClassOf(obo:AEO_0000078 obo:AEO_0000221)
+
+# Class: obo:AEO_0000079 (lumen of epithelial sac)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000079 "A small cavity bounded by an epithelium.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000079 "EHDAA2:0003079")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000079 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:AEO_0000079 "cavity of vesicle")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000079 "AEO:0000079")
+AnnotationAssertion(rdfs:label obo:AEO_0000079 "lumen of epithelial sac")
+SubClassOf(obo:AEO_0000079 obo:AEO_0000222)
+
+# Class: obo:AEO_0000080 (foramen)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000080 "A hole in a tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000080 "EHDAA2:0003080")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000080 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000080 "AEO:0000080")
+AnnotationAssertion(rdfs:label obo:AEO_0000080 "foramen")
+SubClassOf(obo:AEO_0000080 obo:CARO_0000010)
+
+# Class: obo:AEO_0000081 (matrix-based tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000081 "A tissue whose predominant feature is extracellular matrix which may or may not be highly hydrated or calcified.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000081 "EHDAA2:0003081")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000081 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000081 "AEO:0000081")
+AnnotationAssertion(rdfs:label obo:AEO_0000081 "matrix-based tissue")
+SubClassOf(obo:AEO_0000081 obo:CARO_0000043)
+
+# Class: obo:AEO_0000082 (bone)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000082 "Ossified structure that is predominantly extracellular matrix and forms part of the support system of the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000082 "EHDAA2:0003082")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000082 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000082 "AEO:0000082")
+AnnotationAssertion(rdfs:label obo:AEO_0000082 "bone")
+SubClassOf(obo:AEO_0000082 obo:CARO_0000055)
+
+# Class: obo:AEO_0000083 (endochondral bone)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") Annotation(oboInOwl:hasDbXref "VAO:0000145") obo:IAO_0000115 obo:AEO_0000083 "Bone that is preformed in cartilage.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000083 "EHDAA2:0003083")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000083 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000083 "AEO:0000083")
+AnnotationAssertion(rdfs:label obo:AEO_0000083 "endochondral bone")
+SubClassOf(obo:AEO_0000083 obo:AEO_0000082)
+SubClassOf(obo:AEO_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000058))
+SubClassOf(obo:AEO_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000062))
+SubClassOf(obo:AEO_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000138))
+SubClassOf(obo:AEO_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000085 (membrane bone)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") Annotation(oboInOwl:hasDbXref "VAO:0000023") obo:IAO_0000115 obo:AEO_0000085 "Bone that forms directly from mesenchyme.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000085 "EHDAA2:0003085")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000085 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000085 "AEO:0000085")
+AnnotationAssertion(rdfs:label obo:AEO_0000085 "membrane bone")
+SubClassOf(obo:AEO_0000085 obo:AEO_0000082)
+SubClassOf(obo:AEO_0000085 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000062))
+SubClassOf(obo:AEO_0000085 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000086 (sesamoid bone)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") Annotation(oboInOwl:hasDbXref "VAO:0000137") obo:IAO_0000115 obo:AEO_0000086 "An endochondral bone that forms within tendenous or ligamentous matrix.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000086 "EHDAA2:0003086")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000086 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000086 "AEO:0000086")
+AnnotationAssertion(rdfs:label obo:AEO_0000086 "sesamoid bone")
+SubClassOf(obo:AEO_0000086 obo:AEO_0000083)
+SubClassOf(obo:AEO_0000086 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000058))
+SubClassOf(obo:AEO_0000086 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000138))
+SubClassOf(obo:AEO_0000086 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000087 (cartilage)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") Annotation(oboInOwl:hasDbXref "VAO:0000040") obo:IAO_0000115 obo:AEO_0000087 "Dense connective tissue made primarily of type II collagen.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000087 "EHDAA2:0003087")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000087 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000087 "AEO:0000087")
+AnnotationAssertion(rdfs:label obo:AEO_0000087 "cartilage")
+SubClassOf(obo:AEO_0000087 obo:AEO_0000081)
+SubClassOf(obo:AEO_0000087 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000090 (ligament)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000090 "A strap of predominantly extracellular matrix connecting two bones.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000090 "EHDAA2:0003090")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000090 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000090 "AEO:0000090")
+AnnotationAssertion(rdfs:label obo:AEO_0000090 "ligament")
+SubClassOf(obo:AEO_0000090 obo:AEO_0000081)
+SubClassOf(obo:AEO_0000090 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000057))
+SubClassOf(obo:AEO_0000090 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000327))
+SubClassOf(obo:AEO_0000090 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000091 (tendon)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000091 "A strap of predominantly extracellular matrix connecting a muscle to a bone.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000091 "EHDAA2:0003091")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000091 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000091 "AEO:0000091")
+AnnotationAssertion(rdfs:label obo:AEO_0000091 "tendon")
+SubClassOf(obo:AEO_0000091 obo:AEO_0000081)
+SubClassOf(obo:AEO_0000091 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000057))
+SubClassOf(obo:AEO_0000091 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000327))
+SubClassOf(obo:AEO_0000091 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000092 (aponeurosis)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000092 "A sheet of extracellular matrix.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000092 "EHDAA2:0003092")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000092 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000092 "AEO:0000092")
+AnnotationAssertion(rdfs:label obo:AEO_0000092 "aponeurosis")
+SubClassOf(obo:AEO_0000092 obo:AEO_0000081)
+SubClassOf(obo:AEO_0000092 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000327))
+SubClassOf(obo:AEO_0000092 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0002320))
+
+# Class: obo:AEO_0000093 (non-connected functional system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000093 "An anatomical group whose component structures share a common function.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000093 "EHDAA2:0003093")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000093 "FBbt:00007278")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000093 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000093 "AEO:0000093")
+AnnotationAssertion(rdfs:label obo:AEO_0000093 "non-connected functional system")
+SubClassOf(obo:AEO_0000093 obo:CARO_0000041)
+
+# Class: obo:AEO_0000094 (sense organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000094 "Multicellular anatomical structure with largely bona fide boundary that transduces some sensory stimulus to the nervous system.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000094 "EHDAA2:0003094f")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000094 "FBbt:00005155")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000094 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000094 "AEO:0000094")
+AnnotationAssertion(rdfs:label obo:AEO_0000094 "sense organ")
+SubClassOf(obo:AEO_0000094 obo:CARO_0000024)
+
+# Class: obo:AEO_0000095 (fluid-based anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000095 "Fluid anatomical entity containing cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000095 "EHDAA2:0003095")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000095 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000095 "AEO:0000095")
+AnnotationAssertion(rdfs:label obo:AEO_0000095 "fluid-based anatomical entity")
+SubClassOf(obo:AEO_0000095 obo:CARO_0000055)
+
+# Class: obo:AEO_0000096 (gland)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000096 "A multi-tissue structure that produces a secretion for use elsewhere in the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000096 "EHDAA2:0003096")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000096 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000096 "AEO:0000096")
+AnnotationAssertion(rdfs:label obo:AEO_0000096 "gland")
+SubClassOf(obo:AEO_0000096 obo:CARO_0000055)
+
+# Class: obo:AEO_0000097 (ducted gland)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000097 "A gland that releases its secretion through a duct.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000097 "EHDAA2:0003097")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000097 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:AEO_0000097 "exocrine gland.")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000097 "AEO:0000097")
+AnnotationAssertion(rdfs:label obo:AEO_0000097 "ducted gland")
+SubClassOf(obo:AEO_0000097 obo:AEO_0000096)
+
+# Class: obo:AEO_0000098 (ductless gland)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000098 "A gland that releases its secretion directly into the bloodstream, or equivalent for an invertebrate.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000098 "EHDAA2:0003098")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000098 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") oboInOwl:hasRelatedSynonym obo:AEO_0000098 "endocrine gland.")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000098 "AEO:0000098")
+AnnotationAssertion(rdfs:label obo:AEO_0000098 "ductless gland")
+SubClassOf(obo:AEO_0000098 obo:AEO_0000096)
+
+# Class: obo:AEO_0000099 (keratin-based structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000099 "Acellular anatomical structure whose predominant constituent is keratin.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000099 "EHDAA2:0003099")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000099 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000099 "AEO:0000099")
+AnnotationAssertion(rdfs:label obo:AEO_0000099 "keratin-based structure")
+SubClassOf(obo:AEO_0000099 obo:CARO_0000040)
+
+# Class: obo:AEO_0000100 (chitin-based structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000100 "Acellular anatomical structure whose predominant constituent is chitin.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000100 "EHDAA2:0003100")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000100 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000100 "AEO:0000100")
+AnnotationAssertion(rdfs:label obo:AEO_0000100 "chitin-based structure")
+SubClassOf(obo:AEO_0000100 obo:CARO_0000040)
+
+# Class: obo:AEO_0000103 (body)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000103 "The region of the organism associated with the visceral organs.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000103 "EHDAA2:0003103")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000103 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000103 "AEO:0000103")
+AnnotationAssertion(rdfs:label obo:AEO_0000103 "body")
+SubClassOf(obo:AEO_0000103 obo:CARO_0000032)
+
+# Class: obo:AEO_0000106 (head)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000106 "The region of the body containing the brain and mouth.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000106 "EHDAA2:0003106")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000106 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000106 "AEO:0000106")
+AnnotationAssertion(rdfs:label obo:AEO_0000106 "head")
+SubClassOf(obo:AEO_0000106 obo:CARO_0000032)
+
+# Class: obo:AEO_0000108 (neck)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000108 "The region of the body connecting the head and the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000108 "EHDAA2:0003108")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000108 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000108 "AEO:0000108")
+AnnotationAssertion(rdfs:label obo:AEO_0000108 "neck")
+SubClassOf(obo:AEO_0000108 obo:CARO_0000032)
+
+# Class: obo:AEO_0000109 (tail)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000109 "An external caudal extension of the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000109 "EHDAA2:0003109")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000109 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000109 "AEO:0000109")
+AnnotationAssertion(rdfs:label obo:AEO_0000109 "tail")
+SubClassOf(obo:AEO_0000109 obo:AEO_0000193)
+
+# Class: obo:AEO_0000111 (mesothelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000111 "Epithelium derived from mesenchyme.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000111 "EHDAA2:0003111")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000111 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000111 "AEO:0000111")
+AnnotationAssertion(rdfs:label obo:AEO_0000111 "mesothelium")
+SubClassOf(obo:AEO_0000111 obo:CARO_0000070)
+
+# Class: obo:AEO_0000114 (epithelial tube)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000114 "An epithelial structure capable of allowing fluid flow.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000114 "EHDAA2:0003114")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000114 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000114 "AEO:0000114")
+AnnotationAssertion(rdfs:label obo:AEO_0000114 "epithelial tube")
+SubClassOf(obo:AEO_0000114 obo:CARO_0000066)
+SubClassOf(obo:AEO_0000114 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000068))
+
+# Class: obo:AEO_0000115 (epithelial sac)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000115 "An epithelial pouch with a single opening.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000115 "EHDAA2:0003115")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000115 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000115 "AEO:0000115")
+AnnotationAssertion(rdfs:label obo:AEO_0000115 "epithelial sac")
+SubClassOf(obo:AEO_0000115 obo:CARO_0000066)
+SubClassOf(obo:AEO_0000115 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:AEO_0000117 (arborising epithelial duct system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000117 "A group of connected epithelial tubes with a single portal.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000117 "EHDAA2:0003117")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000117 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000117 "AEO:0000117")
+AnnotationAssertion(rdfs:label obo:AEO_0000117 "arborising epithelial duct system")
+SubClassOf(obo:AEO_0000117 obo:AEO_0000115)
+SubClassOf(obo:AEO_0000117 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000068))
+
+# Class: obo:AEO_0000118 (epithelial plexus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000118 "A network of interlinking epithelial tubes.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000118 "EHDAA2:0003118")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000118 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000118 "AEO:0000118")
+AnnotationAssertion(rdfs:label obo:AEO_0000118 "epithelial plexus")
+SubClassOf(obo:AEO_0000118 obo:AEO_0000114)
+SubClassOf(obo:AEO_0000118 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000068))
+
+# Class: obo:AEO_0000119f (epithelial vesicle)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000119f "A closed epithelium with a lumen.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000119f "EHDAA2:0003119")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000119f "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000119f "AEO:0000119f")
+AnnotationAssertion(rdfs:label obo:AEO_0000119f "epithelial vesicle")
+SubClassOf(obo:AEO_0000119f obo:CARO_0000066)
+SubClassOf(obo:AEO_0000119f ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:AEO_0000122 (muscle tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000122 "A tissue composed of myoblasts or muscle cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000122 "EHDAA2:0003122")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000122 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000122 "AEO:0000122")
+AnnotationAssertion(rdfs:label obo:AEO_0000122 "muscle tissue")
+SubClassOf(obo:AEO_0000122 obo:CARO_0000043)
+
+# Class: obo:AEO_0000123 (neural tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000123 "Tissue composed predominantly of neurons.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000123 "EHDAA2:0003123")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000123 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000123 "AEO:0000123")
+AnnotationAssertion(rdfs:label obo:AEO_0000123 "neural tissue")
+SubClassOf(obo:AEO_0000123 obo:CARO_0000043)
+
+# Class: obo:AEO_0000125 (developing anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000125 "A structure whose morphology or state of differentiation will change during normal development.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000125 "EHDAA2:0003125")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000125 "UBERON:0005423")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000125 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000125 "AEO:0000125")
+AnnotationAssertion(rdfs:label obo:AEO_0000125 "developing anatomical structure")
+SubClassOf(obo:AEO_0000125 obo:CARO_0000003)
+
+# Class: obo:AEO_0000126 (larva)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000126 "A post-embryonic juvenile form which will undergo metamorphosis to become the adult.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000126 "EHDAA2:0003126")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000126 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000126 "AEO:0000126")
+AnnotationAssertion(rdfs:label obo:AEO_0000126 "larva")
+SubClassOf(obo:AEO_0000126 obo:CARO_0000012)
+
+# Class: obo:AEO_0000127 (apoptosing developing anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000127 "An embryonic anatomical structure undergoing apoptosis.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000127 "EHDAA2:0003127")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000127 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000127 "AEO:0000127")
+AnnotationAssertion(rdfs:label obo:AEO_0000127 "apoptosing developing anatomical entity")
+SubClassOf(obo:AEO_0000127 obo:AEO_0000125)
+SubClassOf(obo:AEO_0000127 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000445))
+
+# Class: obo:AEO_0000129 (functioning and developing structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000129 "An embryonic entity that displays a physiological function but whose strucuture is not yet fully formed.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000129 "EHDAA2:0003129")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000129 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000129 "AEO:0000129")
+AnnotationAssertion(rdfs:label obo:AEO_0000129 "functioning and developing structure")
+SubClassOf(obo:AEO_0000129 obo:AEO_0000125)
+
+# Class: obo:AEO_0000131 (developing structure with stem cells)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000131 "Embronic structure that contains stem cellsr that may contribute to its future development or maintenance or to its future development or maintenance of another tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000131 "EHDAA2:0003131")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000131 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000131 "AEO:0000131")
+AnnotationAssertion(rdfs:label obo:AEO_0000131 "developing structure with stem cells")
+SubClassOf(obo:AEO_0000131 obo:AEO_0000125)
+SubClassOf(obo:AEO_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000034))
+
+# Class: obo:AEO_0000132 (transitional anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000132 "An embryonic anatomical entity that will turn into one or more other anatomical entities, perhaps with other anatomical entities, later in development.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000132 "EHDAA2:0003132")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000132 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000132 "AEO:0000132")
+AnnotationAssertion(rdfs:label obo:AEO_0000132 "transitional anatomical structure")
+SubClassOf(obo:AEO_0000132 obo:AEO_0000125)
+
+# Class: obo:AEO_0000135 (ganglion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000135 "A group of neurons, usually outside the CNS, which relay neuronal signals.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000135 "EHDAA2:0003135")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000135 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000135 "AEO:0000135")
+AnnotationAssertion(rdfs:label obo:AEO_0000135 "ganglion")
+SubClassOf(obo:AEO_0000135 obo:AEO_0000123)
+
+# Class: obo:AEO_0000136 (neuronal nucleus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000136 "A localised domain of predominantly neuronal tissue in the central nervous system.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000136 "EHDAA2:0003136")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000136 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000136 "AEO:0000136")
+AnnotationAssertion(rdfs:label obo:AEO_0000136 "neuronal nucleus")
+SubClassOf(obo:AEO_0000136 obo:AEO_0001012)
+SubClassOf(obo:AEO_0000136 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000127))
+SubClassOf(obo:AEO_0000136 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000128))
+SubClassOf(obo:AEO_0000136 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000129))
+
+# Class: obo:AEO_0000137 (nerve)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000137 "A group of neurons that provides a nervous supply.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000137 "EHDAA2:0003137")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000137 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000137 "AEO:0000137")
+AnnotationAssertion(rdfs:label obo:AEO_0000137 "nerve")
+SubClassOf(obo:AEO_0000137 obo:AEO_0000123)
+
+# Class: obo:AEO_0000138 (nerve plexus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000138 "A complex of interconnecting nerves.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000138 "EHDAA2:0003138")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000138 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000138 "AEO:0000138")
+AnnotationAssertion(rdfs:label obo:AEO_0000138 "nerve plexus")
+SubClassOf(obo:AEO_0000138 obo:AEO_0000123)
+SubClassOf(obo:AEO_0000138 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000526))
+SubClassOf(obo:AEO_0000138 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000527))
+
+# Class: obo:AEO_0000139 (nerve fiber tract)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:0001001") Annotation(oboInOwl:hasDbXref "GO:0043005") obo:IAO_0000115 obo:AEO_0000139 "A fasciculated bundle of neuron projections, largely or completely lacking synapses.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000139 "EHDAA2:0003139")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000139 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:0043005") oboInOwl:hasRelatedSynonym obo:AEO_0000139 "neuron projection bundle")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000139 "AEO:0000139")
+AnnotationAssertion(rdfs:label obo:AEO_0000139 "nerve fiber tract")
+SubClassOf(obo:AEO_0000139 obo:AEO_0001011)
+
+# Class: obo:AEO_0000140 (striated muscle tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000140 "A tissue composed of striated muscle cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000140 "EHDAA2:0003140")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000140 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000140 "AEO:0000140")
+AnnotationAssertion(rdfs:label obo:AEO_0000140 "striated muscle tissue")
+SubClassOf(obo:AEO_0000140 obo:AEO_0000122)
+SubClassOf(obo:AEO_0000140 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000737))
+
+# Class: obo:AEO_0000141 (smooth muscle tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000141 "A tissue composed of smooth muscle cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000141 "EHDAA2:0003141")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000141 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000141 "AEO:0000141")
+AnnotationAssertion(rdfs:label obo:AEO_0000141 "smooth muscle tissue")
+SubClassOf(obo:AEO_0000141 obo:AEO_0000122)
+SubClassOf(obo:AEO_0000141 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000192))
+
+# Class: obo:AEO_0000142 (cardiac muscle tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000142 "A tissue composed of cardiac muscle cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000142 "EHDAA2:0003142")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000142 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000142 "AEO:0000142")
+AnnotationAssertion(rdfs:label obo:AEO_0000142 "cardiac muscle tissue")
+SubClassOf(obo:AEO_0000142 obo:AEO_0000122)
+SubClassOf(obo:AEO_0000142 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000746))
+
+# Class: obo:AEO_0000143 (smooth muscle sphincter)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000143 "A ring of smooth muscle cells whose contraction closes the opening of the ring.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000143 "EHDAA2:0003143")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000143 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000143 "AEO:0000143")
+AnnotationAssertion(rdfs:label obo:AEO_0000143 "smooth muscle sphincter")
+SubClassOf(obo:AEO_0000143 obo:AEO_0000141)
+SubClassOf(obo:AEO_0000143 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000192))
+
+# Class: obo:AEO_0000144 (striated muscle sphincter)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000144 "A ring of striated muscle cells whose contraction closes the opening of the ring.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000144 "EHDAA2:0003144")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000144 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000144 "AEO:0000144")
+AnnotationAssertion(rdfs:label obo:AEO_0000144 "striated muscle sphincter")
+SubClassOf(obo:AEO_0000144 obo:AEO_0000140)
+SubClassOf(obo:AEO_0000144 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000737))
+
+# Class: obo:AEO_0000145 (mesenchymal tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000145 "A group of not-yet-terminally-differentiatied cells that can pack in three dimensions.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000145 "EHDAA2:0003145")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000145 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000145 "AEO:0000145")
+AnnotationAssertion(rdfs:label obo:AEO_0000145 "mesenchymal tissue")
+SubClassOf(obo:AEO_0000145 obo:CARO_0000043)
+
+# Class: obo:AEO_0000146 (dense mesenchyme tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000146 "Mesenchyme with little extracellular matrix.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000146 "EHDAA2:0003146")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000146 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000146 "AEO:0000146")
+AnnotationAssertion(rdfs:label obo:AEO_0000146 "dense mesenchyme tissue")
+SubClassOf(obo:AEO_0000146 obo:AEO_0000145)
+SubClassOf(obo:AEO_0000146 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000057))
+
+# Class: obo:AEO_0000147 (cartilagenous condensation)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") Annotation(oboInOwl:hasDbXref "GO:curator") Annotation(oboInOwl:hasDbXref "VAO:0000092") obo:IAO_0000115 obo:AEO_0000147 "Cell condensation that is an aggregation of mesenchymal cells that are committed to differentiate into chondroblasts and chondrocytes.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000147 "EHDAA2:0003147")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000147 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000147 "AEO:0000147")
+AnnotationAssertion(rdfs:label obo:AEO_0000147 "cartilagenous condensation")
+SubClassOf(obo:AEO_0000147 obo:AEO_0000148)
+SubClassOf(obo:AEO_0000147 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000058))
+
+# Class: obo:AEO_0000148 (developing mesenchymal condensation)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000148 "A delimited region of dense mesenchyme within looser mesenchyme.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000148 "EHDAA2:0003148")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000148 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000148 "AEO:0000148")
+AnnotationAssertion(rdfs:label obo:AEO_0000148 "developing mesenchymal condensation")
+SubClassOf(obo:AEO_0000148 obo:AEO_0000146)
+SubClassOf(obo:AEO_0000148 obo:AEO_0001016)
+SubClassOf(obo:AEO_0000148 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000335))
+
+# Class: obo:AEO_0000149 (pre-muscle condensation)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000149 "A delimited region of dense mesenchyme within looser mesenchyme whose cells are committed to become myoblasts.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000149 "EHDAA2:0003149")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000149 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000149 "AEO:0000149")
+AnnotationAssertion(rdfs:label obo:AEO_0000149 "pre-muscle condensation")
+SubClassOf(obo:AEO_0000149 obo:AEO_0000148)
+SubClassOf(obo:AEO_0000149 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000680))
+
+# Class: obo:AEO_0000150 (pre-cartilage condensation)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000150 "A delimited region of dense mesenchyme within looser mesenchyme whose cells are committed to become chondroblasts.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000150 "EHDAA2:0003150")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000150 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000150 "AEO:0000150")
+AnnotationAssertion(rdfs:label obo:AEO_0000150 "pre-cartilage condensation")
+SubClassOf(obo:AEO_0000150 obo:AEO_0000148)
+SubClassOf(obo:AEO_0000150 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000335))
+
+# Class: obo:AEO_0000151 (loose mesenchyme tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000151 "Mesenchyme whose cells are embedded in obvious amounts fo extracellular matrix.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000151 "EHDAA2:0003151")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000151 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000151 "AEO:0000151")
+AnnotationAssertion(rdfs:label obo:AEO_0000151 "loose mesenchyme tissue")
+SubClassOf(obo:AEO_0000151 obo:AEO_0000145)
+SubClassOf(obo:AEO_0000151 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000057))
+SubClassOf(obo:AEO_0000151 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000327))
+
+# Class: obo:AEO_0000152 (migrating mesenchyme population)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000152 "Mesenchymal cells that are migrating.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000152 "EHDAA2:0003152")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000152 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000152 "AEO:0000152")
+AnnotationAssertion(rdfs:label obo:AEO_0000152 "migrating mesenchyme population")
+SubClassOf(obo:AEO_0000152 obo:AEO_0000145)
+SubClassOf(obo:AEO_0000152 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000134))
+
+# Class: obo:AEO_0000153 (mesenchymal tissue with stem cells)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000153 "Multi-tissue mesenchymal structure one of whose parts contains stem cells that can replace other parts.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000153 "EHDAA2:0003153")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000153 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000153 "AEO:0000153")
+AnnotationAssertion(rdfs:label obo:AEO_0000153 "mesenchymal tissue with stem cells")
+SubClassOf(obo:AEO_0000153 obo:AEO_0000187)
+
+# Class: obo:AEO_0000154 (organism surfacef)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000154 "The collection of structures that form the exxtenal covering of the organism.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000154 "EHDAA2:0003154")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000154 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000154 "AEO:0000154")
+AnnotationAssertion(rdfs:label obo:AEO_0000154 "organism surfacef")
+SubClassOf(obo:AEO_0000154 obo:CARO_0000032)
+
+# Class: obo:AEO_0000161 (groove)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000161 "A furrow or an incomplete tube.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000161 "EHDAA2:0003161")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000161 "UBERON:0006846")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000161 "ZFA:0001690")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000161 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000161 "AEO:0000161")
+AnnotationAssertion(rdfs:label obo:AEO_0000161 "groove")
+SubClassOf(obo:AEO_0000161 obo:CARO_0000010)
+
+# Class: obo:AEO_0000162 (ridge)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000162 "A raised strip of tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000162 "EHDAA2:0003162")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000162 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000162 "AEO:0000162")
+AnnotationAssertion(rdfs:label obo:AEO_0000162 "ridge")
+SubClassOf(obo:AEO_0000162 obo:CARO_0000010)
+
+# Class: obo:AEO_0000168 (skeletal system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") Annotation(oboInOwl:hasDbXref "VAO:0000027") obo:IAO_0000115 obo:AEO_0000168 "The rigid support system for the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000168 "EHDAA2:0003168")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000168 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000168 "AEO:0000168")
+AnnotationAssertion(rdfs:label obo:AEO_0000168 "skeletal system")
+SubClassOf(obo:AEO_0000168 obo:CARO_0000011)
+
+# Class: obo:AEO_0000169 (embryo)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000169 "That part of the conceptus that will form the organism.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000169 "EHDAA2:0003169")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000169 "UBERON:0000922")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000169 "ZFA:0001105")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000169 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000169 "AEO:0000169")
+AnnotationAssertion(rdfs:label obo:AEO_0000169 "embryo")
+SubClassOf(obo:AEO_0000169 obo:CARO_0000012)
+SubClassOf(obo:AEO_0000169 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000194))
+
+# Class: obo:AEO_0000170 (anlage)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000170 "Anlagen are populations of contiguous cells, typically arranged in one plane, that are morphologically indistinct, but that already correspond in extent to a later organ/tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000170 "EHDAA2:0003170")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000170 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000170 "AEO:0000170")
+AnnotationAssertion(rdfs:label obo:AEO_0000170 "anlage")
+SubClassOf(obo:AEO_0000170 obo:AEO_0000125)
+
+# Class: obo:AEO_0000171 (primordium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000171 "Primordia are populations of contiguous cells that are morphologically distinct and already correspond in extent to a later organ/tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000171 "EHDAA2:0003171")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000171 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000171 "AEO:0000171")
+AnnotationAssertion(rdfs:label obo:AEO_0000171 "primordium")
+SubClassOf(obo:AEO_0000171 obo:AEO_0000125)
+
+# Class: obo:AEO_0000172 (limb)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000172 "Appendage of an animal used for locomotion or grasping.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000172 "EHDAA2:0003172")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000172 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000172 "AEO:0000172")
+AnnotationAssertion(rdfs:label obo:AEO_0000172 "limb")
+SubClassOf(obo:AEO_0000172 obo:AEO_0000193)
+
+# Class: obo:AEO_0000173 (surface sense organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000173 "Multicellular anatomical structure with largely bona fide boundary that extends outwards from or is part of the organism surface and transduces some sensory stimulus to the nervous system.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000173 "EHDAA2:0003173")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000173 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000173 "AEO:0000173")
+AnnotationAssertion(rdfs:label obo:AEO_0000173 "surface sense organ")
+SubClassOf(obo:AEO_0000173 obo:AEO_0000094)
+SubClassOf(obo:AEO_0000173 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000154))
+
+# Class: obo:AEO_0000174 (gender-specific anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000174 "A part of the body present only in a specific gender.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000174 "EHDAA2:0003174")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000174 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000174 "AEO:0000174")
+AnnotationAssertion(rdfs:label obo:AEO_0000174 "gender-specific anatomical structure")
+SubClassOf(obo:AEO_0000174 obo:CARO_0000003)
+
+# Class: obo:AEO_0000175 (male anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000175 "A part of the body present only in males.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000175 "EHDAA2:0003175")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000175 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000175 "AEO:0000175")
+AnnotationAssertion(rdfs:label obo:AEO_0000175 "male anatomical structure")
+SubClassOf(obo:AEO_0000175 obo:AEO_0000174)
+
+# Class: obo:AEO_0000176 (female anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000176 "A part of the body present only in females.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000176 "EHDAA2:0003176")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000176 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000176 "AEO:0000176")
+AnnotationAssertion(rdfs:label obo:AEO_0000176 "female anatomical structure")
+SubClassOf(obo:AEO_0000176 obo:AEO_0000174)
+
+# Class: obo:AEO_0000177 (hermaphrodite anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000177 "A part of the body present only in hermaphrodites.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000177 "EHDAA2:0003177")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000177 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000177 "AEO:0000177")
+AnnotationAssertion(rdfs:label obo:AEO_0000177 "hermaphrodite anatomical structure")
+SubClassOf(obo:AEO_0000177 obo:AEO_0000174)
+
+# Class: obo:AEO_0000178 (fibrous joint)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000178 "A flexible joint between two bones that is made of unossified connective tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000178 "EHDAA2:0003178")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000178 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000178 "AEO:0000178")
+AnnotationAssertion(rdfs:label obo:AEO_0000178 "fibrous joint")
+SubClassOf(obo:AEO_0000178 obo:AEO_0000081)
+SubClassOf(obo:AEO_0000178 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0002320))
+SubClassOf(obo:AEO_0000178 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000179 (joint-associated cartilage)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000179 "The articular cartilage covering of the region of bone within a synoval joint.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000179 "EHDAA2:0003179")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000179 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000179 "AEO:0000179")
+AnnotationAssertion(rdfs:label obo:AEO_0000179 "joint-associated cartilage")
+SubClassOf(obo:AEO_0000179 obo:AEO_0000087)
+SubClassOf(obo:AEO_0000179 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000058))
+SubClassOf(obo:AEO_0000179 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000138))
+SubClassOf(obo:AEO_0000179 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000083))
+SubClassOf(obo:AEO_0000179 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000183))
+
+# Class: obo:AEO_0000180 (non-joint-associated cartilage)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000180 "Cartilage that may provide the template for an endochondral bone or that may be a disinct entity in the skeleton.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000180 "EHDAA2:0003180")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000180 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000180 "AEO:0000180")
+AnnotationAssertion(rdfs:label obo:AEO_0000180 "non-joint-associated cartilage")
+SubClassOf(obo:AEO_0000180 obo:AEO_0000087)
+SubClassOf(obo:AEO_0000180 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000058))
+SubClassOf(obo:AEO_0000180 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000138))
+SubClassOf(obo:AEO_0000180 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000181 (synovial membrane)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000181 "The epithelial membrane between bone ends that forms the lateral borders of the synovial cavity and secretes synovial fluid.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000181 "EHDAA2:0003181")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000181 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000181 "AEO:0000181")
+AnnotationAssertion(rdfs:label obo:AEO_0000181 "synovial membrane")
+SubClassOf(obo:AEO_0000181 obo:CARO_0000069)
+SubClassOf(obo:AEO_0000181 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000079))
+SubClassOf(obo:AEO_0000181 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000183))
+
+# Class: obo:AEO_0000183 (synovial joint)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000183 "A joint connecting two or more bones with cartilage at the bone ends and a synovial membrane that secretes synovial fluid conecting the bones and sealing the synovial cavity.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000183 "EHDAA2:0003183")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000183 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000183 "AEO:0000183")
+AnnotationAssertion(rdfs:label obo:AEO_0000183 "synovial joint")
+SubClassOf(obo:AEO_0000183 obo:CARO_0000055)
+SubClassOf(obo:AEO_0000183 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000185 (exoskeletal tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000185 "A component of the exoskeleton.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000185 "EHDAA2:0003185")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000185 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000185 "AEO:0000185")
+AnnotationAssertion(rdfs:label obo:AEO_0000185 "exoskeletal tissue")
+SubClassOf(obo:AEO_0000185 obo:AEO_0000081)
+SubClassOf(obo:AEO_0000185 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000658))
+SubClassOf(obo:AEO_0000185 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000168))
+
+# Class: obo:AEO_0000186 (body cavity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000186 "The cavity within the body that contains the visceral organs.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000186 "EHDAA2:0003186")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000186 "UBERON:0002323")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000186 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000186 "AEO:0000186")
+AnnotationAssertion(rdfs:label obo:AEO_0000186 "body cavity")
+SubClassOf(obo:AEO_0000186 obo:CARO_0000005)
+
+# Class: obo:AEO_0000187 (multi-tissue structure with stem cells)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000187 "Multi-tissue structure one of whose parts contains stem cells that can replace other parts.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000187 "EHDAA2:0003187")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000187 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000187 "AEO:0000187")
+AnnotationAssertion(rdfs:label obo:AEO_0000187 "multi-tissue structure with stem cells")
+SubClassOf(obo:AEO_0000187 obo:CARO_0000055)
+
+# Class: obo:AEO_0000188 (acellular fluid anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000188 "An acellular fluid portion of organism substance that is produced by the organism for some non-waste purpose.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000188 "EHDAA2:0003188")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000188 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000188 "AEO:0000188")
+AnnotationAssertion(rdfs:label obo:AEO_0000188 "acellular fluid anatomical entity")
+SubClassOf(obo:AEO_0000188 obo:CARO_0000040)
+
+# Class: obo:AEO_0000189 (epithelial tissue with stem cells)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000189 "Multi-tissue epithelial structure one of whose parts contains stem cells that can replace other parts.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000189 "EHDAA2:0003189")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000189 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000189 "AEO:0000189")
+AnnotationAssertion(rdfs:label obo:AEO_0000189 "epithelial tissue with stem cells")
+SubClassOf(obo:AEO_0000189 obo:AEO_0000187)
+
+# Class: obo:AEO_0000192 (anatomical surface feature)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:AEO_0000192 "Non-material anatomical entity of two dimensions, that is demarcated by anatomical lines or points on the external or internal surfaces of anatomical structures.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000192 "EHDAA2:0003010")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000192 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:AEO_0000192 "anatomical surface.")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000192 "AEO:0000192")
+AnnotationAssertion(rdfs:label obo:AEO_0000192 "anatomical surface feature")
+AnnotationAssertion(owl:deprecated obo:AEO_0000192 "true"^^xsd:boolean)
+
+# Class: obo:AEO_0000193 (appendage)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:AEO_0000193 "Organ or organ part that is attached to the body of an organism. For example a limb[GO, modified]. An appendage is an external body part, or natural prolongation, that protrudes from an organism's body, such as a vertebrate's limbs.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000193 "EHDAA2:0003193")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000193 "UBERON:0000026")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000193 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000193 "AEO:0000193")
+AnnotationAssertion(rdfs:label obo:AEO_0000193 "appendage")
+SubClassOf(obo:AEO_0000193 obo:CARO_0000032)
+
+# Class: obo:AEO_0000194 (conceptus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000194 "All the products of the fertilized egg.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000194 "EHDAA2:0003205")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000194 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000194 "AEO:0000194")
+AnnotationAssertion(rdfs:label obo:AEO_0000194 "conceptus")
+SubClassOf(obo:AEO_0000194 obo:CARO_0000012)
+
+# Class: obo:AEO_0000195 (extraembryonic component)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000195 "The part of the conceptus that may be lost before birth or will be discarded at birth, or when the embryo becomes an independent organism.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000195 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000195 "AEO:0000195")
+AnnotationAssertion(rdfs:label obo:AEO_0000195 "extraembryonic component")
+SubClassOf(obo:AEO_0000195 obo:CARO_0000055)
+SubClassOf(obo:AEO_0000195 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000194))
+
+# Class: obo:AEO_0000196 (larval anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000196 "An anatomical structure present in the larval form of an animal.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000196 "HDAA2:0003126")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000196 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000196 "AEO:0000196")
+AnnotationAssertion(rdfs:label obo:AEO_0000196 "larval anatomical structure")
+SubClassOf(obo:AEO_0000196 obo:AEO_0000125)
+SubClassOf(obo:AEO_0000196 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000126))
+
+# Class: obo:AEO_0000198 (antenna)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:AEO_0000198 "A head-associated surface sense organ.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000198 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000198 "AEO:0000198")
+AnnotationAssertion(rdfs:label obo:AEO_0000198 "antenna")
+SubClassOf(obo:AEO_0000198 obo:AEO_0000173)
+SubClassOf(obo:AEO_0000198 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000106))
+SubClassOf(obo:AEO_0000198 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:AEO_0000154))
+
+# Class: obo:AEO_0000199 (mucous membrane)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000199 "A membranous structure with more than one cell type, one or more of which secretes mucus, that lines body passages which communicate with the exterior.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000199 "EHDAA2:0003234")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000199 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:AEO_0000199 "mucosa")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000199 "AEO:0000199")
+AnnotationAssertion(rdfs:label obo:AEO_0000199 "mucous membrane")
+SubClassOf(obo:AEO_0000199 obo:CARO_0000055)
+
+# Class: obo:AEO_0000200 (regenerating anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000200 "An anatomical structure that, as part of its normal physiology, undergoes regeneration. Examples include endometrium and antlers.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000200 "EHDAA2:0003233")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000200 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000200 "AEO:0000200")
+AnnotationAssertion(rdfs:label obo:AEO_0000200 "regenerating anatomical structure")
+SubClassOf(obo:AEO_0000200 obo:CARO_0000003)
+
+# Class: obo:AEO_0000201 (afferent nerve)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000201 "A group of neurons that provides a nervous response from a tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000201 "EHDAA2:0003200")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000201 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000201 "AEO:0000201")
+AnnotationAssertion(rdfs:label obo:AEO_0000201 "afferent nerve")
+SubClassOf(obo:AEO_0000201 obo:AEO_0000137)
+SubClassOf(obo:AEO_0000201 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000526))
+
+# Class: obo:AEO_0000202 (efferent nerve)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000202 "A group of neurons that provides a nervous signal to a tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000202 "EHDAA2:0003231")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000202 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000202 "AEO:0000202")
+AnnotationAssertion(rdfs:label obo:AEO_0000202 "efferent nerve")
+SubClassOf(obo:AEO_0000202 obo:AEO_0000137)
+SubClassOf(obo:AEO_0000202 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000527))
+
+# Class: obo:AEO_0000203 (syncytium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO.:JB") obo:IAO_0000115 obo:AEO_0000203 "An anatomical entity consisting of a single or a few multinucleated structures.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000203 "HDAA2:0003248")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000203 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000203 "AEO:0000203")
+AnnotationAssertion(rdfs:label obo:AEO_0000203 "syncytium")
+SubClassOf(obo:AEO_0000203 obo:CARO_0000043)
+SubClassOf(obo:AEO_0000203 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000228))
+
+# Class: obo:AEO_0000204 (pit)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000204 "An roughly circular indentation in a surface.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000204 "EHDAA2:003249")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000204 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000204 "AEO:0000204")
+AnnotationAssertion(rdfs:label obo:AEO_0000204 "pit")
+SubClassOf(obo:AEO_0000204 obo:CARO_0000010)
+
+# Class: obo:AEO_0000205 (protuberance)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000205 "A roughly circular bulge in a surface.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000205 "EHDAA2:0003250")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000205 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000205 "AEO:0000205")
+AnnotationAssertion(rdfs:label obo:AEO_0000205 "protuberance")
+SubClassOf(obo:AEO_0000205 obo:CARO_0000010)
+
+# Class: obo:AEO_0000206 (migrating epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000206 "An epithelium that extends its surface area by peripheral movement.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000206 "EHDAA2:0003251")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000206 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000206 "AEO:0000206")
+AnnotationAssertion(rdfs:label obo:AEO_0000206 "migrating epithelium")
+SubClassOf(obo:AEO_0000206 obo:CARO_0000066)
+SubClassOf(obo:AEO_0000206 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000066))
+
+# Class: obo:AEO_0000207 (blood vessel)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000207 "An epithelial tube that transports blood.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000207 "EHDAA2:0003252")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000207 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000207 "AEO:0000207")
+AnnotationAssertion(rdfs:label obo:AEO_0000207 "blood vessel")
+SubClassOf(obo:AEO_0000207 obo:AEO_0000114)
+SubClassOf(obo:AEO_0000207 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000071))
+
+# Class: obo:AEO_0000208 (artery)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000208 "An epithelial tube that transports blood away from the heart.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000208 "EHDAA2:0003253")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000208 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000208 "AEO:0000208")
+AnnotationAssertion(rdfs:label obo:AEO_0000208 "artery")
+SubClassOf(obo:AEO_0000208 obo:AEO_0000207)
+SubClassOf(obo:AEO_0000208 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000071))
+
+# Class: obo:AEO_0000209 (vein)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000209 "An epithelial tube that transports blood towards the heart.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000209 "EHDAA2:0003254")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000209 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000209 "AEO:0000209")
+AnnotationAssertion(rdfs:label obo:AEO_0000209 "vein")
+SubClassOf(obo:AEO_0000209 obo:AEO_0000207)
+SubClassOf(obo:AEO_0000209 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000071))
+
+# Class: obo:AEO_0000210 (row)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DBft:DOS") obo:IAO_0000115 obo:AEO_0000210 "Anatomical group whose component structures are arranged in a row.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000210 "FBbt:00100152")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000210 "HDAA2:0003255")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000210 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000210 "AEO:0000210")
+AnnotationAssertion(rdfs:label obo:AEO_0000210 "row")
+SubClassOf(obo:AEO_0000210 obo:CARO_0000054)
+
+# Class: obo:AEO_0000211 (non-connected developing functional system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBbt:DOS") obo:IAO_0000115 obo:AEO_0000211 "The sum of all the anlagen and primordia that will develop into a single functional system.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000211 "FBbt:0004003")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000211 "HDAA2:0003256")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000211 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000211 "AEO:0000211")
+AnnotationAssertion(rdfs:label obo:AEO_0000211 "non-connected developing functional system")
+SubClassOf(obo:AEO_0000211 obo:AEO_0000125)
+SubClassOf(obo:AEO_0000211 obo:CARO_0000041)
+
+# Class: obo:AEO_0000212 (sclerotome)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000212 "The mesenchymal derivative of a somite that will migrate to surround the neural tube and form vertebrae.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000212 "EHDAA2:0003257")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000212 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000212 "AEO:0000212")
+AnnotationAssertion(rdfs:label obo:AEO_0000212 "sclerotome")
+SubClassOf(obo:AEO_0000212 obo:AEO_0000152)
+SubClassOf(obo:AEO_0000212 obo:AEO_0001016)
+SubClassOf(obo:AEO_0000212 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000134))
+
+# Class: obo:AEO_0000213 (bone condensation)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000213 "A delimited region of osteoblasts representing the early stages of bone formation.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000213 "EHDAA2:0003258")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000213 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000213 "AEO:0000213")
+AnnotationAssertion(rdfs:label obo:AEO_0000213 "bone condensation")
+SubClassOf(obo:AEO_0000213 obo:AEO_0000148)
+SubClassOf(obo:AEO_0000213 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000062))
+
+# Class: obo:AEO_0000214 (dermomyotome)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000214 "The bilaminar epithelium formed from the myotome and dermatome.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000214 "EHDAA2:0003259")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000214 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000214 "AEO:0000214")
+AnnotationAssertion(rdfs:label obo:AEO_0000214 "dermomyotome")
+SubClassOf(obo:AEO_0000214 obo:AEO_0000132)
+SubClassOf(obo:AEO_0000214 obo:CARO_0000069)
+SubClassOf(obo:AEO_0000214 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:AEO_0000215 (open cavity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000215 "A volume that is mainly bounded but has an opening to another cavity or to the outside.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000215 "EHDAA2:0003078")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000215 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000215 "AEO:0000215")
+AnnotationAssertion(rdfs:label obo:AEO_0000215 "open cavity")
+SubClassOf(obo:AEO_0000215 obo:AEO_0000221)
+
+# Class: obo:AEO_0000216 (epithelial cord)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000216 "A cord of epithelial cells without a lumen and usually several cells thick.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000216 "EHDAA2:0004052")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000216 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000216 "AEO:0000216")
+AnnotationAssertion(rdfs:label obo:AEO_0000216 "epithelial cord")
+SubClassOf(obo:AEO_0000216 obo:CARO_0000066)
+SubClassOf(obo:AEO_0000216 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000079))
+
+# Class: obo:AEO_0000217 (migrating developing tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000217 "A simple coherent tissue or a localized population of similar cells that are actively migrating.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000217 "EHDAA2:0004053")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000217 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000217 "AEO:0000217")
+AnnotationAssertion(rdfs:label obo:AEO_0000217 "migrating developing tissue")
+SubClassOf(obo:AEO_0000217 obo:AEO_0000125)
+
+# Class: obo:AEO_0000218 (developing epithelial placode)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000218 "A domain of columnar epithelium in an embryo that represents the early stage of the development of the epithelial component of a new anatomical structure.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000218 "EHDAA2:0003112")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000218 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000218 "AEO:0000218")
+AnnotationAssertion(rdfs:label obo:AEO_0000218 "developing epithelial placode")
+SubClassOf(obo:AEO_0000218 obo:AEO_0001007)
+SubClassOf(obo:AEO_0000218 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:AEO_0000219 (vascular plexus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000219 "A network of interlinked veins.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000219 "EHDAA2:0004112")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000219 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000219 "AEO:0000219")
+AnnotationAssertion(rdfs:label obo:AEO_0000219 "vascular plexus")
+SubClassOf(obo:AEO_0000219 obo:AEO_0000118)
+SubClassOf(obo:AEO_0000219 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000071))
+
+# Class: obo:AEO_0000220 (tooth)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000220 "Each of a set of hard, bony enamel-coated structures in the jaws of most vertebrates, used for biting and chewing.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000220 "EHDAA2:0004605")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000220 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000220 "AEO:0000220")
+AnnotationAssertion(rdfs:label obo:AEO_0000220 "tooth")
+SubClassOf(obo:AEO_0000220 obo:CARO_0000055)
+
+# Class: obo:AEO_0000221 (open anatomical space)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000221 "An anatomical space with at least one opening to another space or the exterior.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000221 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000221 "AEO:0000221")
+AnnotationAssertion(rdfs:label obo:AEO_0000221 "open anatomical space")
+SubClassOf(obo:AEO_0000221 obo:CARO_0000005)
+
+# Class: obo:AEO_0000222 (enclosed anatomical space)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0000222 "An anatomical space with no opening to another space or to the exterior.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000222 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000222 "AEO:0000222")
+AnnotationAssertion(rdfs:label obo:AEO_0000222 "enclosed anatomical space")
+SubClassOf(obo:AEO_0000222 obo:CARO_0000005)
+
+# Class: obo:AEO_0000493 (fat tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0000493 "Tissue that is predominantly made of fat cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0000493 "EHDAA2:0003120")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0000493 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0000493 "AEO:0000493")
+AnnotationAssertion(rdfs:label obo:AEO_0000493 "fat tissue")
+SubClassOf(obo:AEO_0000493 obo:CARO_0000043)
+SubClassOf(obo:AEO_0000493 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000136))
+
+# Class: obo:AEO_0001000 (sensory ganglion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001000 "A ganglion containing sensory neurons.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001000 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001000 "AEO:0001000")
+AnnotationAssertion(rdfs:label obo:AEO_0001000 "sensory ganglion")
+SubClassOf(obo:AEO_0001000 obo:AEO_0000135)
+SubClassOf(obo:AEO_0001000 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000101))
+SubClassOf(obo:AEO_0001000 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000243))
+SubClassOf(obo:AEO_0001000 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0002573))
+
+# Class: obo:AEO_0001001 (autonomic ganglion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001001 "A ganglion that is part of the autonomic nervous system.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001001 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001001 "AEO:0001001")
+AnnotationAssertion(rdfs:label obo:AEO_0001001 "autonomic ganglion")
+SubClassOf(obo:AEO_0001001 obo:AEO_0000135)
+SubClassOf(obo:AEO_0001001 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000107))
+SubClassOf(obo:AEO_0001001 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000243))
+SubClassOf(obo:AEO_0001001 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000526))
+SubClassOf(obo:AEO_0001001 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000527))
+SubClassOf(obo:AEO_0001001 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0002573))
+
+# Class: obo:AEO_0001002 (capillary bed)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001002 "A localized group of blood capillaries.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001002 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001002 "AEO:0001002")
+AnnotationAssertion(rdfs:label obo:AEO_0001002 "capillary bed")
+SubClassOf(obo:AEO_0001002 obo:AEO_0000118)
+
+# Class: obo:AEO_0001003 (acellular extracellular matrix)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001003 "An acellular structure typically composed of collagen, glycoproteins and glycosaminoglycans.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001003 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001003 "AEO:0001003")
+AnnotationAssertion(rdfs:label obo:AEO_0001003 "acellular extracellular matrix")
+SubClassOf(obo:AEO_0001003 obo:CARO_0000040)
+
+# Class: obo:AEO_0001004 (fin)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") Annotation(oboInOwl:hasDbXref "VAO:0000099") obo:IAO_0000115 obo:AEO_0001004 "A flattened appendage on a marine animal.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001004 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001004 "AEO:0001004")
+AnnotationAssertion(rdfs:label obo:AEO_0001004 "fin")
+SubClassOf(obo:AEO_0001004 obo:AEO_0000193)
+
+# Class: obo:AEO_0001005 (secretion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001005 "A non-cellular substance released by a cell, gland or tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001005 "UBERON:0000456")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001005 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001005 "AEO:0001005")
+AnnotationAssertion(rdfs:label obo:AEO_0001005 "secretion")
+SubClassOf(obo:AEO_0001005 obo:CARO_0000004)
+
+# Class: obo:AEO_0001006 (excreta)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001006 "Excreta are bodily fluids consisting of waste matter, such as sweat or feces, discharged from the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001006 "UBERON:0000174")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001006 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001006 "AEO:0001006")
+AnnotationAssertion(rdfs:label obo:AEO_0001006 "excreta")
+SubClassOf(obo:AEO_0001006 obo:CARO_0000004)
+
+# Class: obo:AEO_0001007 (developing epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001007 "An epithelium within an embryo or larva that is undergoing a major developmental change.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001007 "EHDAA2:0004653")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001007 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001007 "AEO:0001007")
+AnnotationAssertion(rdfs:label obo:AEO_0001007 "developing epithelium")
+SubClassOf(obo:AEO_0001007 obo:AEO_0000125)
+SubClassOf(obo:AEO_0001007 obo:CARO_0000066)
+
+# Class: obo:AEO_0001008 (neuroepithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001008 "An embryonic or larval epithelium that is committed to form part of the nervous system.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001008 "EHDAA2:0004654")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001008 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001008 "AEO:0001008")
+AnnotationAssertion(rdfs:label obo:AEO_0001008 "neuroepithelium")
+SubClassOf(obo:AEO_0001008 obo:AEO_0001007)
+SubClassOf(obo:AEO_0001008 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:AEO_0001009 (proliferating neuroepithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001009 "An epithelium that is undergoing proliferation to provide large numbers of neuronal cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001009 "EHDAA2:0004655")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001009 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001009 "AEO:0001009")
+AnnotationAssertion(rdfs:label obo:AEO_0001009 "proliferating neuroepithelium")
+SubClassOf(obo:AEO_0001009 obo:AEO_0001008)
+SubClassOf(obo:AEO_0001009 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:AEO_0001010 (differentiating neuroepithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001010 "A neuroepithelium some of whose cells are undergoing terminal differentiation to become neuronal cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001010 "EHDAA2:0004656")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001010 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001010 "AEO:0001010")
+AnnotationAssertion(rdfs:label obo:AEO_0001010 "differentiating neuroepithelium")
+SubClassOf(obo:AEO_0001010 obo:AEO_0001008)
+SubClassOf(obo:AEO_0001010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000031))
+SubClassOf(obo:AEO_0001010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000468))
+
+# Class: obo:AEO_0001011 (neuronal white matter)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001011 "Neuronal tissue composed predominantly of axons.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001011 "EHDAA2:0004657")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001011 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001011 "AEO:0001011")
+AnnotationAssertion(rdfs:label obo:AEO_0001011 "neuronal white matter")
+SubClassOf(obo:AEO_0001011 obo:AEO_0000123)
+
+# Class: obo:AEO_0001012 (neuronal grey matter)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001012 "A neuronal tissue composed predominantly of nerve bodies and neuronal support cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001012 "EHDAA2:0004658")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001012 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001012 "AEO:0001012")
+AnnotationAssertion(rdfs:label obo:AEO_0001012 "neuronal grey matter")
+SubClassOf(obo:AEO_0001012 obo:AEO_0000123)
+
+# Class: obo:AEO_0001013 (neuronal column)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001013 "An extended columnar domain of predominantly neuronal tissue in the central nervous system.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001013 "EHDAA2:0004659")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001013 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001013 "AEO:0001013")
+AnnotationAssertion(rdfs:label obo:AEO_0001013 "neuronal column")
+SubClassOf(obo:AEO_0001013 obo:AEO_0001012)
+SubClassOf(obo:AEO_0001013 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000127))
+SubClassOf(obo:AEO_0001013 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000128))
+SubClassOf(obo:AEO_0001013 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000129))
+
+# Class: obo:AEO_0001014 (differentiating neuronal condensation)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001014 "A compact group of cells differentiating to become a ganglion or a neuronal nucleus.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:AEO_0001014 "EHDAA2:0004660")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001014 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001014 "AEO:0001014")
+AnnotationAssertion(rdfs:label obo:AEO_0001014 "differentiating neuronal condensation")
+SubClassOf(obo:AEO_0001014 obo:AEO_0000125)
+SubClassOf(obo:AEO_0001014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000031))
+SubClassOf(obo:AEO_0001014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000468))
+
+# Class: obo:AEO_0001015 (somite)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:AEO") obo:IAO_0000115 obo:AEO_0001015 "An epithelial ball that forms from paraxial mesoderm.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001015 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001015 "AEO:0001015")
+AnnotationAssertion(rdfs:label obo:AEO_0001015 "somite")
+SubClassOf(obo:AEO_0001015 obo:AEO_0000119f)
+
+# Class: obo:AEO_0001016 (developing mesenchymal structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001016 "A mesenchyme-derived anatomical entity undergoing a transtion to become another structure.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001016 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001016 "AEO:0001016")
+AnnotationAssertion(rdfs:label obo:AEO_0001016 "developing mesenchymal structure")
+SubClassOf(obo:AEO_0001016 obo:AEO_0000125)
+
+# Class: obo:AEO_0001017 (dermatome)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001017 "A transitional population of migrating mesenchymal cells that derive from somites and that will become dermal cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001017 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001017 "AEO:0001017")
+AnnotationAssertion(rdfs:label obo:AEO_0001017 "dermatome")
+SubClassOf(obo:AEO_0001017 obo:AEO_0000217)
+SubClassOf(obo:AEO_0001017 obo:AEO_0001016)
+
+# Class: obo:AEO_0001018 (myotome)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001018 "A transitional population of migrating mesenchymal cells that derive from somites and that will become muscle cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001018 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001018 "AEO:0001018")
+AnnotationAssertion(rdfs:label obo:AEO_0001018 "myotome")
+SubClassOf(obo:AEO_0001018 obo:AEO_0000217)
+SubClassOf(obo:AEO_0001018 obo:AEO_0001016)
+
+# Class: obo:AEO_0001019 (developing germ cell population)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001019 "A germ cell population that has not undergone meiosis.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001019 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001019 "AEO:0001019")
+AnnotationAssertion(rdfs:label obo:AEO_0001019 "developing germ cell population")
+SubClassOf(obo:AEO_0001019 obo:AEO_0000125)
+
+# Class: obo:AEO_0001020 (reproductive cell population)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001020 "A population of cells that are predominantly immature or mature germ cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001020 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001020 "AEO:0001020")
+AnnotationAssertion(rdfs:label obo:AEO_0001020 "reproductive cell population")
+SubClassOf(obo:AEO_0001020 obo:CARO_0000043)
+SubClassOf(obo:AEO_0001020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000039))
+
+# Class: obo:AEO_0001021 (stem cell population)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AEO:JB") obo:IAO_0000115 obo:AEO_0001021 "A group of cells capable of regenerating themselves and also of producing one or more populations of differentiated cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:AEO_0001021 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:AEO_0001021 "AEO:0001021")
+AnnotationAssertion(rdfs:label obo:AEO_0001021 "stem cell population")
+SubClassOf(obo:AEO_0001021 obo:CARO_0000043)
+
+# Class: obo:CARO_0000000 (anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000000 "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000000 "EHDAA2:0003000")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000000 "UBERON:0001062")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000000 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000000 "CARO:0000000")
+AnnotationAssertion(rdfs:label obo:CARO_0000000 "anatomical entity")
+
+# Class: obo:CARO_0000003 (anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000003 "Material anatomical entity that has inherent 3D shape and is generated by coordinated expression of the organism's own genome.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000003 "EHDAA2:0003003")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000003 "UBERON:0000061")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000003 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000003 "CARO:0000003")
+AnnotationAssertion(rdfs:label obo:CARO_0000003 "anatomical structure")
+SubClassOf(obo:CARO_0000003 obo:CARO_0000006)
+
+# Class: obo:CARO_0000004 (non-tissue substance)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000004 "Material anatomical entity in a gaseous, liquid, semisolid or solid state; produced by anatomical structures or derived from inhaled and ingested substances that have been modified by anatomical structures as they pass through the body.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000004 "EHDAA2:0003004")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000004 "UBERON:0000463")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000004 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CARO_0000004 "portion of organism substance")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000004 "CARO:0000004")
+AnnotationAssertion(rdfs:label obo:CARO_0000004 "non-tissue substance")
+SubClassOf(obo:CARO_0000004 obo:CARO_0000006)
+
+# Class: obo:CARO_0000005 (anatomical space)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000005 "Non-material anatomical entity of three dimensions, that is generated by morphogenetic or other physiologic processes; is surrounded by one or more anatomical structures; contains one or more organism substances or anatomical structures.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000005 "EHDAA2:0003005")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000005 "UBERON:0000464")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000005 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000005 "CARO:0000005")
+AnnotationAssertion(rdfs:label obo:CARO_0000005 "anatomical space")
+SubClassOf(obo:CARO_0000005 obo:CARO_0000007)
+
+# Class: obo:CARO_0000006 (material anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000006 "Anatomical entity that has mass.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000006 "EHDAA2:0003006")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000006 "UBERON:0000465")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000006 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000006 "CARO:0000006")
+AnnotationAssertion(rdfs:label obo:CARO_0000006 "material anatomical entity")
+SubClassOf(obo:CARO_0000006 obo:CARO_0000000)
+
+# Class: obo:CARO_0000007 (immaterial anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000007 "Anatomical entity that has no mass.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000007 "EHDAA2:0003007")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000007 "UBERON:0000466")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000007 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000007 "CARO:0000007")
+AnnotationAssertion(rdfs:label obo:CARO_0000007 "immaterial anatomical entity")
+SubClassOf(obo:CARO_0000007 obo:CARO_0000000)
+
+# Class: obo:CARO_0000008 (anatomical line)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000008 "Non-material anatomical entity of one dimension, which forms a boundary of an anatomical surface or is a modulation of an anatomical surface.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000008 "EHDAA2:0003008")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000008 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000008 "CARO:0000008")
+AnnotationAssertion(rdfs:label obo:CARO_0000008 "anatomical line")
+SubClassOf(obo:CARO_0000008 obo:CARO_0000007)
+
+# Class: obo:CARO_0000009 (anatomical point)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000009 "Non-material anatomical entity of zero dimension, which forms a boundary of an anatomical line or surface.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000009 "EHDAA2:0003009")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000009 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000009 "CARO:0000009")
+AnnotationAssertion(rdfs:label obo:CARO_0000009 "anatomical point")
+SubClassOf(obo:CARO_0000009 obo:CARO_0000007)
+
+# Class: obo:CARO_0000010 (anatomical surface)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000010 "Non-material anatomical entity of two dimensions, that is demarcated by anatomical lines or points on the external or internal surfaces of anatomical structures.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000010 "EHDAA2:0003192")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000010 "UBERON:0000015")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000010 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000010 "CARO:0000010")
+AnnotationAssertion(rdfs:label obo:CARO_0000010 "anatomical surface")
+SubClassOf(obo:CARO_0000010 obo:CARO_0000007)
+
+# Class: obo:CARO_0000011 (anatomical system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000011 "Anatomical group that is has as its parts distinct anatomical structures interconnected by anatomical structures at a lower level of granularity.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000011 "EHDAA2:0003011")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000011 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000011 "CARO:0000011")
+AnnotationAssertion(rdfs:label obo:CARO_0000011 "anatomical system")
+SubClassOf(obo:CARO_0000011 obo:CARO_0000054)
+
+# Class: obo:CARO_0000012 (multi-cellular organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "JB:DEF") obo:IAO_0000115 obo:CARO_0000012 "Anatomical structure that is an individual member of a species and consists of more than one cell.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000012 "EHDAA2:0003191")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000012 "UBERON:0000468")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000012 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000012 "CARO:0000012")
+AnnotationAssertion(rdfs:label obo:CARO_0000012 "multi-cellular organism")
+SubClassOf(obo:CARO_0000012 obo:CARO_0000003)
+
+# Class: obo:CARO_0000013 (cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000013 "Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000013 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000013 "CARO:0000013")
+AnnotationAssertion(rdfs:label obo:CARO_0000013 "cell")
+SubClassOf(obo:CARO_0000013 obo:CARO_0000003)
+
+# Class: obo:CARO_0000014 (cell component)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000014 "Anatomical structure that is a direct part of the cell.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000014 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000014 "CARO:0000014")
+AnnotationAssertion(rdfs:label obo:CARO_0000014 "cell component")
+SubClassOf(obo:CARO_0000014 obo:CARO_0000003)
+SubClassOf(obo:CARO_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:CARO_0000013))
+
+# Class: obo:CARO_0000019 (compound organ component)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000019 "Multi-tissue structure that is part of a compound organ.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000019 "EHDAA2:0003019")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000019 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000019 "CARO:0000019")
+AnnotationAssertion(rdfs:label obo:CARO_0000019 "compound organ component")
+SubClassOf(obo:CARO_0000019 obo:CARO_0000055)
+SubClassOf(obo:CARO_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:CARO_0000024))
+
+# Class: obo:CARO_0000021 (simple organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000021 "Multi-tissue structure that is not part of a compound organ.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000021 "EHDAA2:0003190")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000021 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000021 "CARO:0000021")
+AnnotationAssertion(rdfs:label obo:CARO_0000021 "simple organ")
+SubClassOf(obo:CARO_0000021 obo:CARO_0000055)
+
+# Class: obo:CARO_0000024 (compound organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000024 "Anatomical structure that has as its parts two or more multi-tissue structures of at least two different types and which through specific morphogenetic processes forms a single distinct structural unit demarcated by bona fide boundaries from other distinct anatomical structures of different types.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000024 "EHDAA2:0003024")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000024 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000024 "CARO:0000024")
+AnnotationAssertion(rdfs:label obo:CARO_0000024 "compound organ")
+SubClassOf(obo:CARO_0000024 obo:CARO_0000003)
+
+# Class: obo:CARO_0000027 (male organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000027 "Gonochoristic organism that can produce male gametes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000027 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000027 "CARO:0000027")
+AnnotationAssertion(rdfs:label obo:CARO_0000027 "male organism")
+SubClassOf(obo:CARO_0000027 obo:CARO_0000048)
+
+# Class: obo:CARO_0000028 (female organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000028 "Gonochoristic organism that can produce female gametes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000028 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000028 "CARO:0000028")
+AnnotationAssertion(rdfs:label obo:CARO_0000028 "female organism")
+SubClassOf(obo:CARO_0000028 obo:CARO_0000048)
+
+# Class: obo:CARO_0000029 (hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000029 "Multi-cellular organism that can produce both male and female gametes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000029 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CARO_0000029 "dioecious organism")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000029 "CARO:0000029")
+AnnotationAssertion(rdfs:label obo:CARO_0000029 "hermaphroditic organism")
+SubClassOf(obo:CARO_0000029 obo:CARO_0000012)
+
+# Class: obo:CARO_0000032 (organism subdivision)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000032 "Anatomical structure which is a primary subdivision of whole organism. The mereological sum of these is the whole organism.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000032 "EHDAA2:0003032")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000032 "UBERON:0000475")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000032 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000032 "CARO:0000032")
+AnnotationAssertion(rdfs:label obo:CARO_0000032 "organism subdivision")
+SubClassOf(obo:CARO_0000032 obo:CARO_0000003)
+
+# Class: obo:CARO_0000040 (acellular anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000040 "Anatomical structure that consists of cell parts and cell substances and together does not constitute a cell or a tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000040 "EHDAA2:0003040")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000040 "UBERON:0000476")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000040 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000040 "CARO:0000040")
+AnnotationAssertion(rdfs:label obo:CARO_0000040 "acellular anatomical structure")
+SubClassOf(obo:CARO_0000040 obo:CARO_0000003)
+
+# Class: obo:CARO_0000041 (anatomical cluster)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000041 "Anatomical group that has its parts adjacent to one another. Anatomical structure, which has as its parts a heterogeneous collection of organs, organ parts, cells or body part subdivisions that are adjacent to, or continuous with one another; does not constitute an organ, organ system or organ system subdivision, or body part or body part subdivision.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000041 "EHDAA2:0003041")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000041 "UBERON:0000477")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000041 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000041 "CARO:0000041")
+AnnotationAssertion(rdfs:label obo:CARO_0000041 "anatomical cluster")
+SubClassOf(obo:CARO_0000041 obo:CARO_0000054)
+
+# Class: obo:CARO_0000042 (extraembryonic structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000042 "Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue or cells that will not contribute to the embryo.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000042 "EHDAA2:0003042")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000042 "UBERON:0000478")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000042 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000042 "CARO:0000042")
+AnnotationAssertion(rdfs:label obo:CARO_0000042 "extraembryonic structure")
+SubClassOf(obo:CARO_0000042 obo:CARO_0000003)
+
+# Class: obo:CARO_0000043 (simple tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000043 "Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000043 "EHDAA2:0003043")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000043 "UBERON:0000479")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000043 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CARO_0000043 "portion of tissue.")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000043 "CARO:0000043")
+AnnotationAssertion(rdfs:label obo:CARO_0000043 "simple tissue")
+SubClassOf(obo:CARO_0000043 obo:CARO_0000003)
+
+# Class: obo:CARO_0000045 (sequential hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000045 "Hermaphroditic organism that produces gametes first of one sex, and then later of the other sex.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000045 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CARO_0000045 "consecutive hermaphroditic organism")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000045 "CARO:0000045")
+AnnotationAssertion(rdfs:label obo:CARO_0000045 "sequential hermaphroditic organism")
+SubClassOf(obo:CARO_0000045 obo:CARO_0000029)
+
+# Class: obo:CARO_0000046 (synchronous hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000046 "Hermaphroditic organism that produces both male and female gametes at the same time.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000046 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CARO_0000046 "serially hermaphroditic organism")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000046 "CARO:0000046")
+AnnotationAssertion(rdfs:label obo:CARO_0000046 "synchronous hermaphroditic organism")
+SubClassOf(obo:CARO_0000046 obo:CARO_0000029)
+
+# Class: obo:CARO_0000048 (gonochoristic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000048 "Multi-cellular organism that has male and female sexes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000048 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CARO_0000048 "monoecious organism")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000048 "CARO:0000048")
+AnnotationAssertion(rdfs:label obo:CARO_0000048 "gonochoristic organism")
+SubClassOf(obo:CARO_0000048 obo:CARO_0000012)
+
+# Class: obo:CARO_0000049 (protandrous hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000049 "Sequential hermaphroditic organism that produces gametes first of the male sex, and then later of the female sex.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000049 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000049 "CARO:0000049")
+AnnotationAssertion(rdfs:label obo:CARO_0000049 "protandrous hermaphroditic organism")
+SubClassOf(obo:CARO_0000049 obo:CARO_0000045)
+
+# Class: obo:CARO_0000050 (protogynous hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000050 "Sequential hermaphroditic organism that produces gametes first of the female sex, and then later of the male sex.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000050 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000050 "CARO:0000050")
+AnnotationAssertion(rdfs:label obo:CARO_0000050 "protogynous hermaphroditic organism")
+SubClassOf(obo:CARO_0000050 obo:CARO_0000045)
+
+# Class: obo:CARO_0000054 (anatomical group)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000054 "Anatomical structure consisting of at least two non-overlapping organs, multi-tissue aggregates or portion of tissues or cells of different types that does not constitute an organism, organ, multi-tissue aggregate, or portion of tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000054 "EHDAA2:0003054")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000054 "UBERON:0000480")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000054 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000054 "CARO:0000054")
+AnnotationAssertion(rdfs:label obo:CARO_0000054 "anatomical group")
+SubClassOf(obo:CARO_0000054 obo:CARO_0000003)
+
+# Class: obo:CARO_0000055 (multi-tissue structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000055 "Anatomical structure that has as its parts two or more portions of tissue of at least two different types and which through specific morphogenetic processes forms a single distinct structural unit demarcated by bona-fide boundaries from other distinct structural units of different types.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000055 "EHDAA2:0003055")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000055 "UBERON:0000481")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000055 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000055 "CARO:0000055")
+AnnotationAssertion(rdfs:label obo:CARO_0000055 "multi-tissue structure")
+SubClassOf(obo:CARO_0000055 obo:CARO_0000003)
+
+# Class: obo:CARO_0000062 (cell space)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:mah") obo:IAO_0000115 obo:CARO_0000062 "Anatomical space that is part of a cell.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000062 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000062 "CARO:0000062")
+AnnotationAssertion(rdfs:label obo:CARO_0000062 "cell space")
+SubClassOf(obo:CARO_0000062 obo:CARO_0000005)
+
+# Class: obo:CARO_0000063 (asexual organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000063 "Multi-cellular organism that does not produce gametes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000063 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000063 "CARO:0000063")
+AnnotationAssertion(rdfs:label obo:CARO_0000063 "asexual organism")
+SubClassOf(obo:CARO_0000063 obo:CARO_0000012)
+
+# Class: obo:CARO_0000064 (single cell organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000064 "Cell that is an individual member of a species.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000064 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000064 "CARO:0000064")
+AnnotationAssertion(rdfs:label obo:CARO_0000064 "single cell organism")
+SubClassOf(obo:CARO_0000064 obo:CARO_0000013)
+
+# Class: obo:CARO_0000065 (basal lamina)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000065 "Acellular anatomical structure that consists of a thin sheet of fibrous proteins that underlie and support the cells of an epithelium. It separates the cells of an epithelium from any underlying tissue.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000065 "EHDAA2:0003065")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000065 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000065 "CARO:0000065")
+AnnotationAssertion(rdfs:label obo:CARO_0000065 "basal lamina")
+SubClassOf(obo:CARO_0000065 obo:CARO_0000040)
+SubClassOf(obo:CARO_0000065 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#part_of> obo:CARO_0000066))
+
+# Class: obo:CARO_0000066 (epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000066 "Portion of tissue, that consists of one or more layers of epithelial cells connected to each other by cell junctions and which is underlain by a basal lamina.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000066 "EHDAA2:0003066")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000066 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000066 "CARO:0000066")
+AnnotationAssertion(rdfs:label obo:CARO_0000066 "epithelium")
+SubClassOf(obo:CARO_0000066 obo:CARO_0000043)
+
+# Class: obo:CARO_0000067 (simple cuboidal epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000067 "Unilaminar epithelium that consists of a single layer of cuboidal cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000067 "EHDAA2:0003067")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000067 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000067 "CARO:0000067")
+AnnotationAssertion(rdfs:label obo:CARO_0000067 "simple cuboidal epithelium")
+SubClassOf(obo:CARO_0000067 obo:CARO_0000073)
+SubClassOf(obo:CARO_0000067 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000075))
+
+# Class: obo:CARO_0000068 (columnar epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000068 "Unilaminar epithelium that consists of a single layer of columnar cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000068 "EHDAA2:0003068")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000068 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000068 "CARO:0000068")
+AnnotationAssertion(rdfs:label obo:CARO_0000068 "columnar epithelium")
+SubClassOf(obo:CARO_0000068 obo:CARO_0000073)
+
+# Class: obo:CARO_0000069 (multilaminar epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000069 "Epithelium that consists of more than one layer of epithelial cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000069 "EHDAA2:0003069")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000069 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000069 "CARO:0000069")
+AnnotationAssertion(rdfs:label obo:CARO_0000069 "multilaminar epithelium")
+SubClassOf(obo:CARO_0000069 obo:CARO_0000066)
+
+# Class: obo:CARO_0000070 (simple squamous epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000070 "Unilaminar epithelium that consists of a single layer of squamous cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000070 "EHDAA2:0003070")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000070 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000070 "CARO:0000070")
+AnnotationAssertion(rdfs:label obo:CARO_0000070 "simple squamous epithelium")
+SubClassOf(obo:CARO_0000070 obo:CARO_0000073)
+SubClassOf(obo:CARO_0000070 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000076))
+
+# Class: obo:CARO_0000071 (atypical epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000071 "Epithelium that consists of epithelial cells not arranged in one ore more layers.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000071 "EHDAA2:0003071")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000071 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000071 "CARO:0000071")
+AnnotationAssertion(rdfs:label obo:CARO_0000071 "atypical epithelium")
+SubClassOf(obo:CARO_0000071 obo:CARO_0000066)
+SubClassOf(obo:CARO_0000071 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/aeo#has_part> obo:CL_0000066))
+
+# Class: obo:CARO_0000072 (cavitated compound organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000072 "Compound organ that contains one or more macroscopic anatomical spaces.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000072 "EHDAA2:0003072")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000072 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000072 "CARO:0000072")
+AnnotationAssertion(rdfs:label obo:CARO_0000072 "cavitated compound organ")
+SubClassOf(obo:CARO_0000072 obo:CARO_0000024)
+
+# Class: obo:CARO_0000073 (unilaminar epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000073 "Epithelium that consists of a single layer of epithelial cells.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000073 "EHDAA2:0003073")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000073 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000073 "CARO:0000073")
+AnnotationAssertion(rdfs:label obo:CARO_0000073 "unilaminar epithelium")
+SubClassOf(obo:CARO_0000073 obo:CARO_0000066)
+
+# Class: obo:CARO_0000074 (solid compound organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:CARO_0000074 "Compound organ that does not contain macroscopic anatomical spaces.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CARO_0000074 "EHDAA2:0003074")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000074 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000074 "CARO:0000074")
+AnnotationAssertion(rdfs:label obo:CARO_0000074 "solid compound organ")
+SubClassOf(obo:CARO_0000074 obo:CARO_0000024)
+
+# Class: obo:CARO_0000077 (epithelial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") Annotation(oboInOwl:hasDbXref "CL:0000066") obo:IAO_0000115 obo:CARO_0000077 "Cell which has as its part a cytoskeleton that allows for tight cell to cell contact and which has apical-basal cell polarity.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CARO_0000077 "http://www.xspan.org/obo.owl#")
+AnnotationAssertion(oboInOwl:id obo:CARO_0000077 "CARO:0000077")
+AnnotationAssertion(rdfs:label obo:CARO_0000077 "epithelial cell")
+SubClassOf(obo:CARO_0000077 obo:CARO_0000013)
+
+# Class: obo:CL_0000000 (cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:mah") obo:IAO_0000115 obo:CL_0000000 "Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000000 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000000 "CL:0000000")
+AnnotationAssertion(rdfs:label obo:CL_0000000 "cell")
+
+# Class: obo:CL_0000003 (cell in vivo)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000003 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000003 "CL:0000003")
+AnnotationAssertion(rdfs:label obo:CL_0000003 "cell in vivo")
+SubClassOf(obo:CL_0000003 obo:CL_0000000)
+
+# Class: obo:CL_0000012 (cell by class)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000012 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000012 "CL:0000012")
+AnnotationAssertion(rdfs:label obo:CL_0000012 "cell by class")
+SubClassOf(obo:CL_0000012 obo:CL_0000003)
+
+# Class: obo:CL_0000015 (male germ cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "PMID:15848391") obo:IAO_0000115 obo:CL_0000015 "A germline cell that contributes to the development of the oocyte by transferring cytoplasm directly to oocyte.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000015 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000015 "nurse cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000015 "CL:0000015")
+AnnotationAssertion(rdfs:label obo:CL_0000015 "male germ cell")
+SubClassOf(obo:CL_0000015 obo:CL_0000586)
+
+# Class: obo:CL_0000021 (female germ cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "PMID:11023867") Annotation(oboInOwl:hasDbXref "PMID:20454446") obo:IAO_0000115 obo:CL_0000021 "Female germ cell is a germ cell that supports female gamete production.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000021 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000021 "CL:0000021")
+AnnotationAssertion(rdfs:label obo:CL_0000021 "female germ cell")
+SubClassOf(obo:CL_0000021 obo:CL_0000586)
+
+# Class: obo:CL_0000029 (neuron neural crest derived)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000029 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000029 "CL:0000029")
+AnnotationAssertion(rdfs:label obo:CL_0000029 "neuron neural crest derived")
+SubClassOf(obo:CL_0000029 obo:CL_0000540)
+
+# Class: obo:CL_0000031 (neuroblast)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000031 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000031 "CL:0000031")
+AnnotationAssertion(rdfs:label obo:CL_0000031 "neuroblast")
+SubClassOf(obo:CL_0000031 obo:CL_0000055)
+
+# Class: obo:CL_0000034 (stem cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "MESH:A.11.872") obo:IAO_0000115 obo:CL_0000034 "A relatively undifferentiated cell that retains the ability to divide and proliferate throughout life to provide progenitor cells that can differentiate into specialized cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000034 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000034 "CL:0000034")
+AnnotationAssertion(rdfs:label obo:CL_0000034 "stem cell")
+SubClassOf(obo:CL_0000034 obo:CL_0000144)
+
+# Class: obo:CL_0000039 (germ line cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0721662544") obo:IAO_0000115 obo:CL_0000039 "A cell that is within the developmental lineage of gametes and is able to pass along its genetic material to offspring.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000039 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000039 "CL:0000039")
+AnnotationAssertion(rdfs:comment obo:CL_0000039 "Originally this term had some plant germ line cell children")
+AnnotationAssertion(rdfs:label obo:CL_0000039 "germ line cell")
+SubClassOf(obo:CL_0000039 obo:CL_0000144)
+
+# Class: obo:CL_0000055 (non-terminally differentiated cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SANBI:mhl") obo:IAO_0000115 obo:CL_0000055 "A precursor cell with a limited number of potential fates.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000055 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000055 "blast cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000055 "CL:0000055")
+AnnotationAssertion(rdfs:label obo:CL_0000055 "non-terminally differentiated cell")
+SubClassOf(obo:CL_0000055 obo:CL_0000012)
+
+# Class: obo:CL_0000057 (fibroblast)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0517223651") Annotation(oboInOwl:hasDbXref "MESH:A.11.329.228") Annotation(oboInOwl:hasDbXref "http://63.198.234.228/OpenFMA/Fibroblast.html") obo:IAO_0000115 obo:CL_0000057 "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000057 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000057 "CL:0000057")
+AnnotationAssertion(rdfs:label obo:CL_0000057 "fibroblast")
+SubClassOf(obo:CL_0000057 obo:CL_0002320)
+
+# Class: obo:CL_0000058 (chondroblast)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0618947256") obo:IAO_0000115 obo:CL_0000058 "An immature cartilage-producing cell found in growing cartilage.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000058 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000058 "chrondoplast")
+AnnotationAssertion(oboInOwl:id obo:CL_0000058 "CL:0000058")
+AnnotationAssertion(rdfs:label obo:CL_0000058 "chondroblast")
+SubClassOf(obo:CL_0000058 obo:CL_0000055)
+SubClassOf(obo:CL_0000058 obo:CL_0000667)
+
+# Class: obo:CL_0000062 (osteoblast)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.11.329.629") obo:IAO_0000115 obo:CL_0000062 "A bone-forming cell which secretes an extracellular matrix. Hydroxyapatite crystals are then deposited into the matrix to form bone.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000062 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000062 "CL:0000062")
+AnnotationAssertion(rdfs:label obo:CL_0000062 "osteoblast")
+SubClassOf(obo:CL_0000062 obo:CL_0000055)
+SubClassOf(obo:CL_0000062 obo:CL_0002320)
+
+# Class: obo:CL_0000063 (cell by histology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000063 "A classification of cells by their microscopic appearance.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000063 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000063 "CL:0000063")
+AnnotationAssertion(rdfs:label obo:CL_0000063 "cell by histology")
+SubClassOf(obo:CL_0000063 obo:CL_0000012)
+
+# Class: obo:CL_0000066 (epithelial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "MESH:A.11.436") obo:IAO_0000115 obo:CL_0000066 "A cell that is usually found in a two-dimensional sheet with a free surface. The cell has a cytoskeleton that allows for tight cell to cell contact and for cell polarity where apical part is directed towards the lumen and the basal part to the basal lamina.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000066 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000066 "Epitheliocyte")
+AnnotationAssertion(oboInOwl:id obo:CL_0000066 "CL:0000066")
+AnnotationAssertion(rdfs:label obo:CL_0000066 "epithelial cell")
+SubClassOf(obo:CL_0000066 obo:CL_0000063)
+
+# Class: obo:CL_0000068 (duct epithelial cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000068 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000068 "CL:0000068")
+AnnotationAssertion(rdfs:label obo:CL_0000068 "duct epithelial cell")
+SubClassOf(obo:CL_0000068 obo:CL_0000066)
+SubClassOf(obo:CL_0000068 obo:CL_0002371)
+
+# Class: obo:CL_0000071 (blood vessel endothelial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000071 "An endothelial cell that lines the vasculature.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000071 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000071 "Cuboidal endothelial cell of vascular tree")
+AnnotationAssertion(oboInOwl:id obo:CL_0000071 "CL:0000071")
+AnnotationAssertion(rdfs:label obo:CL_0000071 "blood vessel endothelial cell")
+SubClassOf(obo:CL_0000071 obo:CL_0000076)
+
+# Class: obo:CL_0000075 (columnar/cuboidal epithelial cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000075 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000075 "CL:0000075")
+AnnotationAssertion(rdfs:label obo:CL_0000075 "columnar/cuboidal epithelial cell")
+SubClassOf(obo:CL_0000075 obo:CL_0000066)
+SubClassOf(obo:CL_0000075 obo:CL_0002371)
+
+# Class: obo:CL_0000076 (squamous epithelial cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000076 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000076 "CL:0000076")
+AnnotationAssertion(rdfs:label obo:CL_0000076 "squamous epithelial cell")
+SubClassOf(obo:CL_0000076 obo:CL_0000066)
+
+# Class: obo:CL_0000079 (stratified epithelial cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000079 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000079 "CL:0000079")
+AnnotationAssertion(rdfs:label obo:CL_0000079 "stratified epithelial cell")
+SubClassOf(obo:CL_0000079 obo:CL_0000066)
+SubClassOf(obo:CL_0000079 obo:CL_0002371)
+
+# Class: obo:CL_0000080 (circulating cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:add") obo:IAO_0000115 obo:CL_0000080 "A cell which moves among different tissues of the body, via blood, lymph, or other medium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000080 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000080 "CL:0000080")
+AnnotationAssertion(rdfs:label obo:CL_0000080 "circulating cell")
+SubClassOf(obo:CL_0000080 obo:CL_0000144)
+
+# Class: obo:CL_0000081 (blood cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:add") Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000081 "A cell found predominately in the blood.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000081 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000081 "CL:0000081")
+AnnotationAssertion(rdfs:label obo:CL_0000081 "blood cell")
+SubClassOf(obo:CL_0000081 obo:CL_0000988)
+
+# Class: obo:CL_0000095 (neuron associated cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000095 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000095 "CL:0000095")
+AnnotationAssertion(rdfs:label obo:CL_0000095 "neuron associated cell")
+SubClassOf(obo:CL_0000095 obo:CL_0002319)
+
+# Class: obo:CL_0000099 (interneuron)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "MESH:A.08.663.358") obo:IAO_0000115 obo:CL_0000099 "Most generally any neuron which is not motor or sensory. Interneurons may also refer to neurons whose axons remain within a particular brain region as contrasted with projection neurons which have axons projecting to other brain regions.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000099 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000099 "CL:0000099")
+AnnotationAssertion(rdfs:label obo:CL_0000099 "interneuron")
+SubClassOf(obo:CL_0000099 obo:CL_0000540)
+
+# Class: obo:CL_0000101 (sensory neuron)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0721662544") obo:IAO_0000115 obo:CL_0000101 "Any neuron having a sensory function; an afferent neuron conveying sensory impulses.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000101 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000101 "CL:0000101")
+AnnotationAssertion(rdfs:label obo:CL_0000101 "sensory neuron")
+SubClassOf(obo:CL_0000101 obo:CL_0000526)
+
+# Class: obo:CL_0000107 (autonomic neuron)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000107 "A neruon whose cell body is within an autonomic ganglion.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000107 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000107 "CL:0000107")
+AnnotationAssertion(rdfs:label obo:CL_0000107 "autonomic neuron")
+SubClassOf(obo:CL_0000107 obo:CL_0000540)
+
+# Class: obo:CL_0000125 (glial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.08.637") obo:IAO_0000115 obo:CL_0000125 "A non-neuronal cell of the nervous system. They not only provide physical support, but also respond to injury, regulate the ionic and chemical composition of the extracellular milieu. Guide neuronal migration during development, and exchange metabolites with neurons.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000125 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000125 "neuroglia")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000125 "neuroglial cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000125 "CL:0000125")
+AnnotationAssertion(rdfs:label obo:CL_0000125 "glial cell")
+SubClassOf(obo:CL_0000125 obo:CL_0000095)
+
+# Class: obo:CL_0000126 (macroglial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0721662544") obo:IAO_0000115 obo:CL_0000126 "A neuroglial cell of ectodermal origin, i.e., the astrocytes and oligodendrocytes considered together.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000126 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000126 "Macrogliocyte")
+AnnotationAssertion(oboInOwl:id obo:CL_0000126 "CL:0000126")
+AnnotationAssertion(rdfs:label obo:CL_0000126 "macroglial cell")
+SubClassOf(obo:CL_0000126 obo:CL_0000243)
+
+# Class: obo:CL_0000127 (astrocyte)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:_tfm") Annotation(oboInOwl:hasDbXref "GOC:dsd") Annotation(oboInOwl:hasDbXref "MESH:A.08.637.200") Annotation(oboInOwl:hasDbXref "MESH:D001253") Annotation(oboInOwl:hasDbXref "PMID:11746784") Annotation(oboInOwl:hasDbXref "PMID:12162730") Annotation(oboInOwl:hasDbXref "PMID:12898703") Annotation(oboInOwl:hasDbXref "PMID:20942978") obo:IAO_0000115 obo:CL_0000127 "A class of large neuroglial (macroglial) cells in the central nervous system - the largest and most numerous neuroglial cells in the brain and spinal cord. Astrocytes (from 'star' cells) are irregularly shaped with many long processes, including those with 'end feet' which form the glial (limiting) membrane and directly and indirectly contribute to the blood-brain barrier. They regulate the extracellular ionic and chemical environment, and 'reactive astrocytes' (along with microglia) respond to injury.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000127 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000127 "astrocytic glia")
+AnnotationAssertion(oboInOwl:id obo:CL_0000127 "CL:0000127")
+AnnotationAssertion(rdfs:label obo:CL_0000127 "astrocyte")
+SubClassOf(obo:CL_0000127 obo:CL_0000128)
+
+# Class: obo:CL_0000128 (oligodendrocyte)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.08.637.600") obo:IAO_0000115 obo:CL_0000128 "A class of large neuroglial (macroglial) cells in the central nervous system. Form the insulating myelin sheath of axons in the central nervous system.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000128 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000128 "oligodendroglia")
+AnnotationAssertion(oboInOwl:id obo:CL_0000128 "CL:0000128")
+AnnotationAssertion(rdfs:label obo:CL_0000128 "oligodendrocyte")
+SubClassOf(obo:CL_0000128 obo:CL_0000126)
+
+# Class: obo:CL_0000129 (microglial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:add") Annotation(oboInOwl:hasDbXref "GOC:dsd") Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0721601464") Annotation(oboInOwl:hasDbXref "MESH:D017628") Annotation(oboInOwl:hasDbXref "PMID:11517395") Annotation(oboInOwl:hasDbXref "PMID:12430718") Annotation(oboInOwl:hasDbXref "PMID:14561199") Annotation(oboInOwl:hasDbXref "PMID:14612429") Annotation(oboInOwl:hasDbXref "PMID:16177057") Annotation(oboInOwl:hasDbXref "PMID:19461673") Annotation(oboInOwl:hasDbXref "PMID:2089275") obo:IAO_0000115 obo:CL_0000129 "A central nervous system macrophage found in the parenchyma of the central nervous system. Marker include CD11b-positive, F4/80-positive, and CD68-positive.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000129 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000129 "MF.microglia.CNS")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000129 "brain macrophage")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000129 "brain-resident macrophage")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.copewithcytokines.de/") oboInOwl:hasRelatedSynonym obo:CL_0000129 "hortega cells")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000129 "microglia")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.copewithcytokines.de/") oboInOwl:hasRelatedSynonym obo:CL_0000129 "microgliocyte")
+AnnotationAssertion(oboInOwl:id obo:CL_0000129 "CL:0000129")
+AnnotationAssertion(rdfs:label obo:CL_0000129 "microglial cell")
+SubClassOf(obo:CL_0000129 obo:CL_0000243)
+
+# Class: obo:CL_0000134 (mesenchymal cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") Annotation(oboInOwl:hasDbXref "GOC:dsd") Annotation(oboInOwl:hasDbXref "PMCID:PMC2613570") Annotation(oboInOwl:hasDbXref "PMID:10102814j") Annotation(oboInOwl:hasDbXref "PMID:16923606") Annotation(oboInOwl:hasDbXref "PMID:_17986482") Annotation(oboInOwl:hasDbXref "PMID:_19960544") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Mesenchymal_stem_cell") Annotation(oboInOwl:hasDbXref "http://www.copewithcytokines.de/cope.cgi?key=mesenchymal%20stem%20cells") obo:IAO_0000115 obo:CL_0000134 "A connective tissue cell that normally gives rise to other cells that are organized as three-dimensional masses. This cell type is CD73-positive, CD90-positive, CD105-positive, CD45-negative, CD34-negative, and MHCII-negative. They may further differentiate into osteoblasts, adipocytes, myocytes, neurons, or chondroblasts in vitro.  Originally described as residing in the bone marrow, this cell type is now known to reside in many, if not all, adult organs.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CL_0000134 "CL:0002452")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000134 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "BMSC")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "CFU-F")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11378515") oboInOwl:hasRelatedSynonym obo:CL_0000134 "MSC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:D044982") oboInOwl:hasRelatedSynonym obo:CL_0000134 "Stem Cells, Mesenchymal")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "bone marrow stromal cells")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "colony-forming unit-fibroblast")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11378515") oboInOwl:hasRelatedSynonym obo:CL_0000134 "marrow stromal cells")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "mesenchymal precursor cell")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:D044982") oboInOwl:hasRelatedSynonym obo:CL_0000134 "mesenchymal progenitor cells")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "mesenchymal stem cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "mesenchymal stromal cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000134 "mesenchymal stromal cells")
+AnnotationAssertion(oboInOwl:id obo:CL_0000134 "CL:0000134")
+AnnotationAssertion(rdfs:label obo:CL_0000134 "mesenchymal cell")
+SubClassOf(obo:CL_0000134 obo:CL_0000063)
+
+# Class: obo:CL_0000136 (fat cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.11.329.114") obo:IAO_0000115 obo:CL_0000136 "A fat-storing cell found mostly in the abdominal cavity and subcutaneous tissue of mammals. Fat is usually stored in the form of triglycerides.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CL_0000136 "CL:0000450")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000136 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000136 "adipocyte")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000136 "adipose cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000136 "CL:0000136")
+AnnotationAssertion(rdfs:label obo:CL_0000136 "fat cell")
+SubClassOf(obo:CL_0000136 obo:CL_0002320)
+
+# Class: obo:CL_0000138 (chondrocyte)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.11.329.171") obo:IAO_0000115 obo:CL_0000138 "Polymorphic cell that form cartilage.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000138 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000138 "cartilage cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000138 "CL:0000138")
+AnnotationAssertion(rdfs:label obo:CL_0000138 "chondrocyte")
+SubClassOf(obo:CL_0000138 obo:CL_0000667)
+
+# Class: obo:CL_0000144 (cell by function)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") obo:IAO_0000115 obo:CL_0000144 "A classification of cells by their primary end goal or behavior.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000144 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000144 "CL:0000144")
+AnnotationAssertion(rdfs:label obo:CL_0000144 "cell by function")
+SubClassOf(obo:CL_0000144 obo:CL_0000012)
+
+# Class: obo:CL_0000151 (secretory cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0721662544") obo:IAO_0000115 obo:CL_0000151 "A cell that specializes in controlled release of one or more substances.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000151 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000151 "CL:0000151")
+AnnotationAssertion(rdfs:label obo:CL_0000151 "secretory cell")
+SubClassOf(obo:CL_0000151 obo:CL_0000144)
+
+# Class: obo:CL_0000165 (neuroendocrine cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.06.688") obo:IAO_0000115 obo:CL_0000165 "An endocrine cell that has the specialized function to produce and secrete hormones in response to neuronal signals.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000165 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000165 "neurosecretory cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000165 "CL:0000165")
+AnnotationAssertion(rdfs:label obo:CL_0000165 "neuroendocrine cell")
+SubClassOf(obo:CL_0000165 obo:CL_0000393)
+
+# Class: obo:CL_0000187 (muscle cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.11.620") obo:IAO_0000115 obo:CL_0000187 "A mature contractile cell, commonly known as a myocyte. This cell has as part of its cytoplasm myofibrils organized in various patterns.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000187 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000187 "myocyte")
+AnnotationAssertion(oboInOwl:id obo:CL_0000187 "CL:0000187")
+AnnotationAssertion(rdfs:label obo:CL_0000187 "muscle cell")
+SubClassOf(obo:CL_0000187 obo:CL_0000393)
+SubClassOf(obo:CL_0000187 obo:CL_0002371)
+
+# Class: obo:CL_0000188 (skeletal muscle cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000188 "A somatic cell located in skeletal muscle.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000188 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000188 "CL:0000188")
+AnnotationAssertion(rdfs:label obo:CL_0000188 "skeletal muscle cell")
+SubClassOf(obo:CL_0000188 obo:CL_0000187)
+
+# Class: obo:CL_0000192 (smooth muscle cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.11.620.520") Annotation(oboInOwl:hasDbXref "MESH:D032389") Annotation(oboInOwl:hasDbXref "PMID:9315361") obo:IAO_0000115 obo:CL_0000192 "A non-striated, elongated, spindle-shaped cell found lining the digestive tract, uterus, and blood vessels. They develop from specialized myoblasts (smooth muscle myoblast).")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CL_0000192 "CL:0000191")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000192 "cell")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:9315361") oboInOwl:hasRelatedSynonym obo:CL_0000192 "SMCs")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:D032389") oboInOwl:hasRelatedSynonym obo:CL_0000192 "myocytes, smooth muscle")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000192 "non-striated muscle cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000192 "smooth muscle fiber")
+AnnotationAssertion(oboInOwl:id obo:CL_0000192 "CL:0000192")
+AnnotationAssertion(rdfs:label obo:CL_0000192 "smooth muscle cell")
+SubClassOf(obo:CL_0000192 obo:CL_0000187)
+
+# Class: obo:CL_0000196 (flight muscle cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000196 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000196 "CL:0000196")
+AnnotationAssertion(rdfs:label obo:CL_0000196 "flight muscle cell")
+SubClassOf(obo:CL_0000196 obo:CL_0000187)
+
+# Class: obo:CL_0000211 (electrically active cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") obo:IAO_0000115 obo:CL_0000211 "A cell whose function is determined by the generation or the reception of an electric signal.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000211 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000211 "CL:0000211")
+AnnotationAssertion(rdfs:label obo:CL_0000211 "electrically active cell")
+SubClassOf(obo:CL_0000211 obo:CL_0000144)
+
+# Class: obo:CL_0000224 (cell by nuclear number)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000224 "A classification of cells by the number of their nuclei.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000224 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000224 "CL:0000224")
+AnnotationAssertion(rdfs:label obo:CL_0000224 "cell by nuclear number")
+SubClassOf(obo:CL_0000224 obo:CL_0000012)
+
+# Class: obo:CL_0000228 (multinucleate cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") obo:IAO_0000115 obo:CL_0000228 "A cell with more than one nucleus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000228 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000228 "syncitium")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000228 "syncytial cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000228 "syncytium")
+AnnotationAssertion(oboInOwl:id obo:CL_0000228 "CL:0000228")
+AnnotationAssertion(rdfs:label obo:CL_0000228 "multinucleate cell")
+SubClassOf(obo:CL_0000228 obo:CL_0002242)
+
+# Class: obo:CL_0000243 (glial cell (sensu Vertebrata))
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.08.637") obo:IAO_0000115 obo:CL_0000243 "A non-neuronal cell of the nervous system. They not only provide physical support, but also respond to injury, regulate the ionic and chemical composition of the extracellular milieu. Form the myelin insulation of nervous pathways, guide neuronal migration during development, and exchange metabolites with neurons. Neuroglia have high-affinity transmitter uptake systems, voltage-dependent and transmitter-gated ion channels, and can release transmitters, but their role in signaling (as in many other functions) is unclear.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000243 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000243 "CL:0000243")
+AnnotationAssertion(rdfs:label obo:CL_0000243 "glial cell (sensu Vertebrata)")
+SubClassOf(obo:CL_0000243 obo:CL_0000125)
+
+# Class: obo:CL_0000327 (extracellular matrix secreting cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000327 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000327 "CL:0000327")
+AnnotationAssertion(rdfs:label obo:CL_0000327 "extracellular matrix secreting cell")
+SubClassOf(obo:CL_0000327 obo:CL_0000151)
+SubClassOf(obo:CL_0000327 obo:CL_0000499)
+
+# Class: obo:CL_0000335 (mesenchyme condensation cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "PMID:5025404") obo:IAO_0000115 obo:CL_0000335 "A mesenchymal cell in embryonic development found in a contracting mass and that gives rise to osteoprogenitors.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000335 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000335 "CL:0000335")
+AnnotationAssertion(rdfs:label obo:CL_0000335 "mesenchyme condensation cell")
+SubClassOf(obo:CL_0000335 obo:CL_0000134)
+
+# Class: obo:CL_0000393 (electrically responsive cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") obo:IAO_0000115 obo:CL_0000393 "A cell whose function is determined by its response to an electric signal.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000393 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000393 "CL:0000393")
+AnnotationAssertion(rdfs:label obo:CL_0000393 "electrically responsive cell")
+SubClassOf(obo:CL_0000393 obo:CL_0000211)
+
+# Class: obo:CL_0000414 (cell by ploidy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FB:ma") Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000414 "A classification of cells by the number of haploid genome equivalents of their nucleus or nuclei.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000414 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000414 "CL:0000414")
+AnnotationAssertion(rdfs:label obo:CL_0000414 "cell by ploidy")
+SubClassOf(obo:CL_0000414 obo:CL_0000012)
+
+# Class: obo:CL_0000444 (obliquely striated muscle cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000444 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000444 "CL:0000444")
+AnnotationAssertion(rdfs:label obo:CL_0000444 "obliquely striated muscle cell")
+SubClassOf(obo:CL_0000444 obo:CL_0000737)
+
+# Class: obo:CL_0000445 (apoptosis fated cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000445 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000445 "CL:0000445")
+AnnotationAssertion(rdfs:label obo:CL_0000445 "apoptosis fated cell")
+SubClassOf(obo:CL_0000445 obo:CL_0000144)
+
+# Class: obo:CL_0000468 (neuroglioblast)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000468 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000468 "CL:0000468")
+AnnotationAssertion(rdfs:label obo:CL_0000468 "neuroglioblast")
+SubClassOf(obo:CL_0000468 obo:CL_0000055)
+
+# Class: obo:CL_0000499 (stromal cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "MESH:A.11.329.830") obo:IAO_0000115 obo:CL_0000499 "A connective tissue cell of an organ found in the loose connective tissue. These are most often associated with the uterine mucosa and the ovary as well as the hematopoietic system and elsewhere.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000499 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000499 "CL:0000499")
+AnnotationAssertion(rdfs:label obo:CL_0000499 "stromal cell")
+SubClassOf(obo:CL_0000499 obo:CL_0002320)
+
+# Class: obo:CL_0000525 (syncytiotrophoblast cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0323052908") obo:IAO_0000115 obo:CL_0000525 "A cell from the outer syncytial layer of the trophoblast of an early mammalian embryo. It It secretes hCG in order to maintain progesterone secretion and sustain a pregnancy.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000525 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000525 "plasmidotrophoblast")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000525 "syncytial trophoblast")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000525 "syntrophoblast")
+AnnotationAssertion(oboInOwl:id obo:CL_0000525 "CL:0000525")
+AnnotationAssertion(rdfs:label obo:CL_0000525 "syncytiotrophoblast cell")
+SubClassOf(obo:CL_0000525 obo:CL_0000228)
+
+# Class: obo:CL_0000526 (afferent neuron)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "MESH:A.08.663.650") obo:IAO_0000115 obo:CL_0000526 "A neuron which conveys sensory information centrally from the periphery.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000526 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000526 "input neuron")
+AnnotationAssertion(oboInOwl:id obo:CL_0000526 "CL:0000526")
+AnnotationAssertion(rdfs:label obo:CL_0000526 "afferent neuron")
+SubClassOf(obo:CL_0000526 obo:CL_0000540)
+
+# Class: obo:CL_0000527 (efferent neuron)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.08.663.655") obo:IAO_0000115 obo:CL_0000527 "A neuron which sends impulses peripherally to activate muscles or secretory cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000527 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000527 "output neuron")
+AnnotationAssertion(oboInOwl:id obo:CL_0000527 "CL:0000527")
+AnnotationAssertion(rdfs:label obo:CL_0000527 "efferent neuron")
+SubClassOf(obo:CL_0000527 obo:CL_0000540)
+
+# Class: obo:CL_0000540 (neuron)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.08.663") Annotation(oboInOwl:hasDbXref "MESH:D009474") obo:IAO_0000115 obo:CL_0000540 "The basic cellular unit of nervous tissue. Each neuron consists of a body, an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000540 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000540 "nerve cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000540 "CL:0000540")
+AnnotationAssertion(rdfs:label obo:CL_0000540 "neuron")
+SubClassOf(obo:CL_0000540 obo:CL_0000393)
+
+# Class: obo:CL_0000586 (germ cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MESH:A.05.360.490") obo:IAO_0000115 obo:CL_0000586 "The reproductive cell in multicellular organisms.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000586 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000586 "CL:0000586")
+AnnotationAssertion(rdfs:label obo:CL_0000586 "germ cell")
+SubClassOf(obo:CL_0000586 obo:CL_0000039)
+
+# Class: obo:CL_0000658 (cuticle secreting cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000658 "An epithelial cell that secretes cuticle.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000658 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000658 "CL:0000658")
+AnnotationAssertion(rdfs:label obo:CL_0000658 "cuticle secreting cell")
+SubClassOf(obo:CL_0000658 obo:CL_0000066)
+SubClassOf(obo:CL_0000658 obo:CL_0000327)
+
+# Class: obo:CL_0000667 (collagen secreting cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0000667 "An extracellular matrix secreting cell that secretes collagen.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000667 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000667 "CL:0000667")
+AnnotationAssertion(rdfs:label obo:CL_0000667 "collagen secreting cell")
+SubClassOf(obo:CL_0000667 obo:CL_0000327)
+
+# Class: obo:CL_0000670 (primordial germ cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "PMID:1381289") obo:IAO_0000115 obo:CL_0000670 "A primordial germ cell is a diploid germ cell precursors that transiently exist in the embryo before they enter into close association with the somatic cells of the gonad and become irreversibly committed as germ cells.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000670 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000670 "Gonocyte")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000670 "Primitive germ cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000670 "CL:0000670")
+AnnotationAssertion(rdfs:label obo:CL_0000670 "primordial germ cell")
+SubClassOf(obo:CL_0000670 obo:CL_0000039)
+
+# Class: obo:CL_0000680 (muscle precursor cell)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000680 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000680 "CL:0000680")
+AnnotationAssertion(rdfs:label obo:CL_0000680 "muscle precursor cell")
+SubClassOf(obo:CL_0000680 obo:CL_0000055)
+SubClassOf(obo:CL_0000680 obo:CL_0002371)
+
+# Class: obo:CL_0000737 (striated muscle cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0721662544") obo:IAO_0000115 obo:CL_0000737 "Muscle cell which has as its direct parts myofilaments organized into sarcomeres.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000737 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000737 "CL:0000737")
+AnnotationAssertion(rdfs:label obo:CL_0000737 "striated muscle cell")
+SubClassOf(obo:CL_0000737 obo:CL_0000187)
+
+# Class: obo:CL_0000746 (cardiac muscle cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0323052908") obo:IAO_0000115 obo:CL_0000746 "A myocyte located in the heart. The contractile fiber resembles those of skeletal muscle but are only one third as large in diameter, are richer in sarcoplasm, and contain centrally located instead of peripheral nuclei.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000746 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000746 "cardiac myocyte")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000746 "cardiocyte")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000746 "cardiomyocyte")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000746 "heart muscle cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000746 "CL:0000746")
+AnnotationAssertion(rdfs:label obo:CL_0000746 "cardiac muscle cell")
+SubClassOf(obo:CL_0000746 obo:CL_0000737)
+
+# Class: obo:CL_0000988 (hematopoietic cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:add") Annotation(oboInOwl:hasDbXref "GO_REF:0000031") obo:IAO_0000115 obo:CL_0000988 "A cell of a hematopoietic lineage.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0000988 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000988 "haematopoietic cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000988 "haemopoietic cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0000988 "hemopoietic cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0000988 "CL:0000988")
+AnnotationAssertion(rdfs:label obo:CL_0000988 "hematopoietic cell")
+SubClassOf(obo:CL_0000988 obo:CL_0002371)
+
+# Class: obo:CL_0002242 (nucleate cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0002242 "A cell containing at least one nucleus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0002242 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0002242 "CL:0002242")
+AnnotationAssertion(rdfs:label obo:CL_0002242 "nucleate cell")
+SubClassOf(obo:CL_0002242 obo:CL_0000224)
+
+# Class: obo:CL_0002319 (neural cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0618947256") obo:IAO_0000115 obo:CL_0002319 "A cell that is part of the nervous system.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0002319 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0002319 "CL:0002319")
+AnnotationAssertion(rdfs:label obo:CL_0002319 "neural cell")
+SubClassOf(obo:CL_0002319 obo:CL_0002371)
+
+# Class: obo:CL_0002320 (connective tissue cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0618947256") obo:IAO_0000115 obo:CL_0002320 "A cell of the supporting or framework tissue of the body, arising chiefly from the embryonic mesoderm and including adipose tissue, cartilage, and bone.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CL_0002320 "CL:1000406")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0002320 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0002320 "CL:0002320")
+AnnotationAssertion(rdfs:label obo:CL_0002320 "connective tissue cell")
+SubClassOf(obo:CL_0002320 obo:CL_0002371)
+
+# Class: obo:CL_0002371 (somatic cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0721662544") obo:IAO_0000115 obo:CL_0002371 "A cell of an organism that does not pass on its genetic material to the organism's offspring (i.e. a non-germ line cell).")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0002371 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0002371 "CL:0002371")
+AnnotationAssertion(rdfs:label obo:CL_0002371 "somatic cell")
+SubClassOf(obo:CL_0002371 obo:CL_0000144)
+
+# Class: obo:CL_0002372 (myotube)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") Annotation(oboInOwl:hasDbXref "ISBN:0323052908") obo:IAO_0000115 obo:CL_0002372 "A myotube is a multinucleated cells that is formed when proliferating myoblasts exit the cell cycle, differentiate and fuse.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:CL_0002372 "CL:0000369")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0002372 "cell")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0002372 "myotubule")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0002372 "single cell sarcomere")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:CL_0002372 "skeletal muscle fiber")
+AnnotationAssertion(oboInOwl:id obo:CL_0002372 "CL:0002372")
+AnnotationAssertion(rdfs:label obo:CL_0002372 "myotube")
+SubClassOf(obo:CL_0002372 obo:CL_0000188)
+SubClassOf(obo:CL_0002372 obo:CL_0000228)
+SubClassOf(obo:CL_0002372 obo:CL_0000737)
+
+# Class: obo:CL_0002573 (Schwann cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:tfm") obo:IAO_0000115 obo:CL_0002573 "A glial cell that ensheathes axons of neuron in the peripheral nervous system and are necessary for their maintainance and function.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:CL_0002573 "cell")
+AnnotationAssertion(oboInOwl:id obo:CL_0002573 "CL:0002573")
+AnnotationAssertion(rdfs:label obo:CL_0002573 "Schwann cell")
+SubClassOf(obo:CL_0002573 obo:CL_0000243)
+
+
+)

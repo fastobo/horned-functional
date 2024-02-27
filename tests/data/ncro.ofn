@@ -1,0 +1,408 @@
+Prefix(:=<http://purl.obolibrary.org/obo/ncro.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(example:=<http://example.com/!>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/ncro.owl>
+<http://purl.obolibrary.org/obo/ncro/dev/ncro.owl>
+Import(<http://purl.obolibrary.org/obo/bfo.owl>)
+Import(<http://purl.obolibrary.org/obo/iao/ontology-metadata.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/chebi-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/clo-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/doid-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/go-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/iao-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/ncbi_taxon-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/ncro-mirna.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/obi-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/pr-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/ro-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/so-imports.owl>)
+Import(<http://purl.obolibrary.org/obo/ncro/dev/uberon-imports.owl>)
+Annotation(dc:contributor "Alan Ruttenberg")
+Annotation(dc:contributor "Asiyah Yu Lin")
+Annotation(dc:contributor "Harrison Strachan")
+Annotation(dc:contributor "He Zhang")
+Annotation(dc:contributor "Jingshan Huang")
+Annotation(rdfs:comment "December 2015: This ontology is currently undergoing changes. ID deprecation policies will start in the next couple of months. In the mean time, identifiers may be deleted and not marked obsolete."@en)
+Annotation(rdfs:seeAlso <http://purl.obolibrary.org/obo/ncro/issues>)
+Annotation(rdfs:seeAlso <http://purl.obolibrary.org/obo/ncro/repository>)
+Annotation(rdfs:seeAlso <http://www.ontobee.org/ontology/NCRO>)
+
+Declaration(Class(obo:NCRO_0000001))
+Declaration(Class(obo:NCRO_0000002))
+Declaration(Class(obo:NCRO_0000003))
+Declaration(Class(obo:NCRO_0000004))
+Declaration(Class(obo:NCRO_0000005))
+Declaration(Class(obo:NCRO_0000006))
+Declaration(Class(obo:NCRO_0000007))
+Declaration(Class(obo:NCRO_0000008))
+Declaration(Class(obo:NCRO_0000009))
+Declaration(Class(obo:NCRO_0000010))
+Declaration(Class(obo:NCRO_0000014))
+Declaration(Class(obo:NCRO_0000025))
+Declaration(Class(obo:NCRO_0000810))
+Declaration(Class(obo:NCRO_0004000))
+Declaration(Class(obo:NCRO_0004001))
+Declaration(Class(obo:NCRO_0004002))
+Declaration(Class(obo:NCRO_0004003))
+Declaration(Class(obo:NCRO_0004004))
+Declaration(Class(obo:NCRO_0004005))
+Declaration(Class(obo:NCRO_0004017))
+Declaration(Class(obo:NCRO_0004018))
+Declaration(Class(obo:NCRO_0004019))
+Declaration(Class(obo:NCRO_0004020))
+Declaration(Class(obo:NCRO_0004021))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:NCRO_0004010))
+Declaration(ObjectProperty(obo:NCRO_0004011))
+Declaration(ObjectProperty(obo:NCRO_0004012))
+Declaration(ObjectProperty(obo:NCRO_0004013))
+Declaration(ObjectProperty(obo:NCRO_0004014))
+Declaration(ObjectProperty(obo:NCRO_0004015))
+Declaration(ObjectProperty(obo:NCRO_0004016))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000412))
+Declaration(AnnotationProperty(obo:IAO_0000427))
+Declaration(AnnotationProperty(obo:IAO_0000589))
+Declaration(AnnotationProperty(oboInOwl:creation_date))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(foaf:page))
+Declaration(Datatype(xsd:date))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: obo:IAO_0000427 (antisymmetric property)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000427 "antisymmetric property")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:NCRO_0004010 (is_gene_template_of_mRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0004010 "is_gene_template_of_mRNA")
+ObjectPropertyDomain(obo:NCRO_0004010 obo:NCRO_0000025)
+ObjectPropertyRange(obo:NCRO_0004010 obo:NCRO_0000002)
+
+# Object Property: obo:NCRO_0004011 (is_model_of_disease)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0004011 "is_model_of_disease")
+ObjectPropertyDomain(obo:NCRO_0004011 obo:BFO_0000040)
+ObjectPropertyRange(obo:NCRO_0004011 obo:DOID_4)
+
+# Object Property: obo:NCRO_0004012 (is_predicted_target_of)
+
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004012 "He_Zhang")
+AnnotationAssertion(oboInOwl:creation_date obo:NCRO_0004012 "2015-05-17T07:52:46Z")
+AnnotationAssertion(rdfs:label obo:NCRO_0004012 "is_predicted_target_of")
+InverseObjectProperties(obo:NCRO_0004012 obo:NCRO_0004016)
+ObjectPropertyDomain(obo:NCRO_0004012 obo:SO_0000704)
+ObjectPropertyRange(obo:NCRO_0004012 obo:SO_0000276)
+
+# Object Property: obo:NCRO_0004013 (miRNA_expressed_in_tissue)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0004013 "miRNA_expressed_in_tissue")
+ObjectPropertyDomain(obo:NCRO_0004013 obo:NCRO_0000010)
+ObjectPropertyRange(obo:NCRO_0004013 obo:UBERON_0000479)
+
+# Object Property: obo:NCRO_0004014 (regulate_miRNA_transcription)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0004014 "regulate_miRNA_transcription")
+SubObjectPropertyOf(obo:NCRO_0004014 obo:RO_0002211)
+ObjectPropertyDomain(obo:NCRO_0004014 obo:PR_000000001)
+ObjectPropertyRange(obo:NCRO_0004014 obo:NCRO_0000014)
+
+# Object Property: obo:NCRO_0004015 (regulate_mRNA_translation)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0004015 "regulate_mRNA_translation")
+SubObjectPropertyOf(obo:NCRO_0004015 obo:RO_0002211)
+ObjectPropertyDomain(obo:NCRO_0004015 obo:NCRO_0000010)
+ObjectPropertyRange(obo:NCRO_0004015 obo:GO_0006412)
+
+# Object Property: obo:NCRO_0004016 (has_predicted_target)
+
+AnnotationAssertion(oboInOwl:creation_date obo:NCRO_0004016 "2015-05-17T07:51:13Z")
+AnnotationAssertion(rdfs:label obo:NCRO_0004016 "has_predicted_target")
+ObjectPropertyDomain(obo:NCRO_0004016 obo:SO_0000276)
+ObjectPropertyRange(obo:NCRO_0004016 obo:SO_0000704)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:BFO_0000023 (role)
+
+DisjointClasses(obo:BFO_0000023 obo:BFO_0000034)
+
+# Class: obo:CHEBI_17843 (transfer RNA)
+
+AnnotationAssertion(obo:IAO_0000118 obo:CHEBI_17843 "tRNA"@en)
+SubClassOf(obo:CHEBI_17843 obo:NCRO_0004000)
+
+# Class: obo:CHEBI_18111 (ribosomal RNA)
+
+AnnotationAssertion(obo:IAO_0000118 obo:CHEBI_18111 "rRNA"@en)
+SubClassOf(obo:CHEBI_18111 obo:NCRO_0004000)
+
+# Class: obo:CHEBI_23367 (molecular entity)
+
+SubClassOf(obo:CHEBI_23367 obo:BFO_0000040)
+
+# Class: obo:CHEBI_33697 (ribonucleic acid)
+
+AnnotationAssertion(obo:IAO_0000118 obo:CHEBI_33697 "RNA"@en)
+SubClassOf(obo:CHEBI_33697 obo:CHEBI_23367)
+
+# Class: obo:CHEBI_74035 (small nuclear RNA)
+
+AnnotationAssertion(obo:IAO_0000118 obo:CHEBI_74035 "snRNA"@en)
+SubClassOf(obo:CHEBI_74035 obo:NCRO_0004000)
+
+# Class: obo:CHEBI_8762 (RNA(circular))
+
+AnnotationAssertion(obo:IAO_0000118 obo:CHEBI_8762 "circRNA"@en)
+SubClassOf(obo:CHEBI_8762 obo:NCRO_0004000)
+
+# Class: obo:NCBITaxon_10239 (Viruses)
+
+
+# Class: obo:NCBITaxon_2 (Bacteria <prokaryote>)
+
+
+# Class: obo:NCBITaxon_40674 (Mammalia)
+
+
+# Class: obo:NCBITaxon_6239 (Caenorhabditis elegans)
+
+
+# Class: obo:NCBITaxon_7215 (Drosophila <fruit fly, genus>)
+
+
+# Class: obo:NCRO_0000001 (miRNA_target_gene_primary_transcript)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000001 "miRNA_target_gene_primary_transcript")
+SubClassOf(obo:NCRO_0000001 obo:SO_0000483)
+
+# Class: obo:NCRO_0000002 (miRNA_target_gene_mRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000002 "miRNA_target_gene_mRNA")
+SubClassOf(obo:NCRO_0000002 obo:SO_0000234)
+SubClassOf(obo:NCRO_0000002 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCRO_0000001))
+
+# Class: obo:NCRO_0000003 (miRNA_and_target_gene_binding)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000003 "miRNA_and_target_gene_binding")
+SubClassOf(obo:NCRO_0000003 obo:GO_0035198)
+SubClassOf(obo:NCRO_0000003 ObjectAllValuesFrom(obo:BFO_0000054 ObjectSomeValuesFrom(obo:BFO_0000055 obo:NCRO_0000003)))
+SubClassOf(obo:NCRO_0000003 ObjectAllValuesFrom(obo:BFO_0000054 ObjectSomeValuesFrom(obo:RO_0000057 ObjectSomeValuesFrom(ObjectInverseOf(obo:IAO_0000136) obo:NCRO_0000025))))
+
+# Class: obo:NCRO_0000004 (fly_miRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000004 "fly_miRNA")
+EquivalentClasses(obo:NCRO_0000004 ObjectIntersectionOf(obo:NCRO_0004001 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_7215)))
+
+# Class: obo:NCRO_0000005 (c_elegans_miRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000005 "c_elegans_miRNA")
+EquivalentClasses(obo:NCRO_0000005 ObjectIntersectionOf(obo:NCRO_0004019 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_6239)))
+
+# Class: obo:NCRO_0000006 (bacterial_miRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000006 "bacterial_miRNA")
+EquivalentClasses(obo:NCRO_0000006 ObjectIntersectionOf(obo:NCRO_0004019 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_2)))
+
+# Class: obo:NCRO_0000007 (virus_miRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000007 "virus_miRNA")
+EquivalentClasses(obo:NCRO_0000007 ObjectIntersectionOf(obo:NCRO_0004001 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_10239)))
+
+# Class: obo:NCRO_0000008 (non_mammalian_miRNA)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:NCRO_0000008 "miRBase:MI0003592")
+AnnotationAssertion(rdfs:label obo:NCRO_0000008 "non_mammalian_miRNA")
+EquivalentClasses(obo:NCRO_0000008 ObjectIntersectionOf(obo:NCRO_0004019 ObjectSomeValuesFrom(obo:RO_0002160 ObjectComplementOf(obo:NCBITaxon_40674))))
+SubClassOf(obo:NCRO_0000008 obo:NCRO_0004001)
+
+# Class: obo:NCRO_0000009 (mammalian_miRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000009 "mammalian_miRNA")
+EquivalentClasses(obo:NCRO_0000009 ObjectIntersectionOf(obo:NCRO_0004019 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_40674)))
+
+# Class: obo:NCRO_0000010 (miRNA_expression)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000010 "miRNA_expression")
+SubClassOf(obo:NCRO_0000010 obo:GO_0008152)
+SubClassOf(obo:NCRO_0000010 ObjectSomeValuesFrom(obo:NCRO_0004013 obo:UBERON_0000479))
+SubClassOf(obo:NCRO_0000010 ObjectSomeValuesFrom(obo:NCRO_0004015 obo:GO_0006412))
+SubClassOf(obo:NCRO_0000010 ObjectSomeValuesFrom(obo:RO_0000057 obo:SO_0000276))
+
+# Class: obo:NCRO_0000014 (transcription_of_miRNA)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0000014 "transcription_of_miRNA")
+SubClassOf(obo:NCRO_0000014 obo:GO_0006351)
+
+# Class: obo:NCRO_0000025 (miRNA_target_gene)
+
+AnnotationAssertion(oboInOwl:creation_date obo:NCRO_0000025 "2015-05-25T15:37:18Z")
+AnnotationAssertion(rdfs:label obo:NCRO_0000025 "miRNA_target_gene")
+SubClassOf(obo:NCRO_0000025 obo:CHEBI_23367)
+SubClassOf(obo:NCRO_0000025 ObjectSomeValuesFrom(obo:RO_0000053 obo:NCRO_0004017))
+SubClassOf(obo:NCRO_0000025 ObjectSomeValuesFrom(ObjectInverseOf(obo:IAO_0000136) obo:SO_0000704))
+
+# Class: obo:NCRO_0000810 (human_miRNA)
+
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0000810 "He_Zhang")
+AnnotationAssertion(oboInOwl:creation_date obo:NCRO_0000810 "2015-05-16T19:26:04Z")
+AnnotationAssertion(rdfs:label obo:NCRO_0000810 "human_miRNA")
+EquivalentClasses(obo:NCRO_0000810 ObjectIntersectionOf(obo:NCRO_0004019 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_9606)))
+
+# Class: obo:NCRO_0004000 (non-coding RNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004000 "A non-coding RNA (ncRNA) is an RNA molecule that is not translated into a protein."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004000 "Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:NCRO_0004000 "ncRNA"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:NCRO_0004000 "WEB:https://en.wikipedia.org/w/index.php?title=Non-coding_RNA&oldid=688555892#Non-coding RNA"@en)
+AnnotationAssertion(rdfs:label obo:NCRO_0004000 "non-coding RNA"@en)
+SubClassOf(obo:NCRO_0004000 obo:CHEBI_33697)
+
+# Class: obo:NCRO_0004001 (mature miRNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004001 "A short (20-24 nt) miRNA gene product that is derived from pre-miRNA that is exported from the nucleus and is capable of being involved in post-transcriptional regulation of gene expression in multicellular organisms by affecting both the stability and translation of mRNAs after being incorporated into a RNA-induced silencing complex (RISC), which recognizes target mRNAs through imperfect base pairing with the miRNA.")
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004001 "Alan Ruttenberg")
+AnnotationAssertion(obo:IAO_0000119 obo:NCRO_0004001 "RefSeq, Sep 2009")
+AnnotationAssertion(rdfs:label obo:NCRO_0004001 "mature miRNA"@en)
+SubClassOf(obo:NCRO_0004001 obo:NCRO_0004019)
+SubClassOf(obo:NCRO_0004001 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCRO_0004021))
+
+# Class: obo:NCRO_0004002 (genetic non-coding RNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004002 "A genetic non-coding RNA is a non-coding RNA that is created by transcription in a cell"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004002 "Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000232 obo:NCRO_0004002 "TODO: Add axiom linking GO transcription")
+AnnotationAssertion(rdfs:label obo:NCRO_0004002 "genetic non-coding RNA"@en)
+SubClassOf(obo:NCRO_0004002 obo:NCRO_0004000)
+SubClassOf(obo:NCRO_0004002 ObjectSomeValuesFrom(ObjectInverseOf(obo:IAO_0000136) obo:SO_0000655))
+DisjointClasses(obo:NCRO_0004002 obo:NCRO_0004003)
+
+# Class: obo:NCRO_0004003 (synthesized non-coding RNA)
+
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004003 "Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004003 "a RNA that is manufactured in a planned process"@en)
+AnnotationAssertion(obo:IAO_0000232 obo:NCRO_0004003 "TODO: Add axiom relating to OBI planned process and anything else from OBI that is relevant"@en)
+AnnotationAssertion(rdfs:label obo:NCRO_0004003 "synthesized non-coding RNA"@en)
+SubClassOf(obo:NCRO_0004003 obo:NCRO_0004000)
+
+# Class: obo:NCRO_0004004 (long non-coding RNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004004 "Long non-coding RNAs (long ncRNAs, lncRNA) are non-protein coding transcripts longer than 200 nucleotides."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:NCRO_0004004 "This somewhat arbitrary limit distinguishes long ncRNAs from small regulatory RNAs such as microRNAs (miRNAs), short interfering RNAs (siRNAs), Piwi-interacting RNAs (piRNAs), small nucleolar RNAs (snoRNAs), and other short RNAs"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004004 "Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:NCRO_0004004 "lncRNA"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:NCRO_0004004 "WEB:https://en.wikipedia.org/w/index.php?title=Long_non-coding_RNA&oldid=687562040#Long non-coding RNA"@en)
+AnnotationAssertion(obo:IAO_0000232 obo:NCRO_0004004 "Should requested and then imported from ChEBI"@en)
+AnnotationAssertion(rdfs:label obo:NCRO_0004004 "long non-coding RNA"@en)
+AnnotationAssertion(rdfs:seeAlso obo:NCRO_0004004 <https://sourceforge.net/p/chebi/curator-requests/2494/>)
+SubClassOf(obo:NCRO_0004004 obo:NCRO_0004000)
+
+# Class: obo:NCRO_0004005 (small interfering RNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004005 "small interfering RNA (siRNA) is a class of double-stranded RNA molecules, 20-25 base pairs in length. siRNA plays many roles, but it is most notable in the RNA interference (RNAi) pathway, where it interferes with thes expression of specific genes with complementary nucleotide sequences."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004005 "Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:NCRO_0004005 "siRNA"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:NCRO_0004005 "WEB:https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&page=Small_interfering_RNA&id=685334024#Small_interfering_RNA"@en)
+AnnotationAssertion(obo:IAO_0000232 obo:NCRO_0004005 "Should requested and then imported from ChEBI"@en)
+AnnotationAssertion(rdfs:label obo:NCRO_0004005 "small interfering RNA"@en)
+AnnotationAssertion(rdfs:seeAlso obo:NCRO_0004005 <https://sourceforge.net/p/chebi/curator-requests/2494/>)
+SubClassOf(obo:NCRO_0004005 obo:NCRO_0004000)
+
+# Class: obo:NCRO_0004017 (miRNA target disposition)
+
+AnnotationAssertion(rdfs:label obo:NCRO_0004017 "miRNA target disposition"@en)
+SubClassOf(obo:NCRO_0004017 obo:BFO_0000016)
+SubClassOf(obo:NCRO_0004017 ObjectAllValuesFrom(obo:BFO_0000054 ObjectSomeValuesFrom(obo:BFO_0000055 obo:NCRO_0000003)))
+
+# Class: obo:NCRO_0004018 (primary miRNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004018 "A miRNA gene product which is capped, inside the nucleus, with a specially modified nucleotide at the 5’ end, polyadenylated with multiple adenosines (a poly(A) tail),[49][53] and spliced, forming an RNA stem-loop that in turn is part of this miRNA precursor")
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004018 "Alan Ruttenberg")
+AnnotationAssertion(obo:IAO_0000119 obo:NCRO_0004018 "Refseq, Wikipedia")
+AnnotationAssertion(rdfs:label obo:NCRO_0004018 "primary miRNA"@en)
+SubClassOf(obo:NCRO_0004018 obo:NCRO_0004021)
+
+# Class: obo:NCRO_0004019 (miRNA gene product)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004019 "A non-coding RNA product initially transcribed from a DNA gene, or derived from such RNA by post-transcriptional processing to become capable of forming part of a RNA silencing complex and participating in gene silencing.")
+AnnotationAssertion(obo:IAO_0000116 obo:NCRO_0004019 "Alan Ruttenberg 2016-02-01: Stance on identity: pri-miNRA, pre-miRNA, and mature miRNA are disjoint. It is a process of derivation that results first from pri-miRNA to pre-miRNA then to miRNA. The identity of an miRNA gene product is determined by the molecule from which it is transcribed or derived and by its own nucleotide sequence.
+
+We have to be careful in the definitions to not undermine this position.")
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004019 "Alan Ruttenberg")
+AnnotationAssertion(rdfs:label obo:NCRO_0004019 "miRNA gene product"@en)
+SubClassOf(obo:NCRO_0004019 obo:NCRO_0004000)
+
+# Class: obo:NCRO_0004020 (pre-miRNA)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004020 "A miRNA gene product cleaved from a pri-miRNA by Drosha ribonuclease III enzyme to produce an approximately 70-nt stem-loop precursor to mature miRNA, which is cleaved from the pre-miRNA by cytoplasmic Dicer ribonuclease .")
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004020 "Alan Ruttenberg")
+AnnotationAssertion(obo:IAO_0000119 obo:NCRO_0004020 "Refseq, Wikipedia")
+AnnotationAssertion(rdfs:label obo:NCRO_0004020 "pre-miRNA"@en)
+SubClassOf(obo:NCRO_0004020 obo:NCRO_0004021)
+SubClassOf(obo:NCRO_0004020 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCRO_0004018))
+
+# Class: obo:NCRO_0004021 (miRNA precursor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:NCRO_0004021 "An miRNA gene product from which a mature miRNA is capable of being derived.")
+AnnotationAssertion(obo:IAO_0000117 obo:NCRO_0004021 "Alan Ruttenberg")
+AnnotationAssertion(rdfs:label obo:NCRO_0004021 "miRNA precursor"@en)
+SubClassOf(obo:NCRO_0004021 obo:NCRO_0004019)
+
+# Class: obo:OBI_0100026 (organism)
+
+SubClassOf(obo:OBI_0100026 obo:BFO_0000040)
+
+# Class: obo:SO_0000110 (sequence_feature)
+
+SubClassOf(obo:SO_0000110 obo:BFO_0000031)
+
+# Class: obo:SO_0000233 (mature_transcript)
+
+SubClassOf(obo:SO_0000233 ObjectSomeValuesFrom(obo:IAO_0000136 obo:NCRO_0004002))
+
+# Class: obo:SO_0000276 (miRNA feature)
+
+AnnotationAssertion(obo:IAO_0000232 obo:SO_0000276 "Removed axiom 'derives_from some miRNA_primary_transcript' pending review of status of SO terms. Changed relation of small regulatory ncRNA (superclass) into is about relationship")
+AnnotationAssertion(rdfs:seeAlso obo:SO_0000276 <https://sourceforge.net/p/chebi/curator-requests/2494/>)
+SubClassOf(obo:SO_0000276 ObjectSomeValuesFrom(ObjectInverseOf(obo:IAO_0000136) obo:SO_0000370))
+
+# Class: obo:UBERON_0000062 (organ)
+
+SubClassOf(obo:UBERON_0000062 obo:BFO_0000040)
+
+# Class: obo:UBERON_0000479 (tissue)
+
+SubClassOf(obo:UBERON_0000479 obo:BFO_0000027)
+
+
+DisjointClasses(obo:CHEBI_17843 obo:CHEBI_18111 obo:CHEBI_74035 obo:CHEBI_8762 obo:NCRO_0004001 obo:NCRO_0004004 obo:NCRO_0004005)
+DisjointClasses(obo:NCBITaxon_10239 obo:NCBITaxon_2 obo:NCBITaxon_40674 obo:NCBITaxon_6239 obo:NCBITaxon_7215)
+)

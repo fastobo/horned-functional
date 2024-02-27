@@ -1,0 +1,2403 @@
+Prefix(:=<http://purl.obolibrary.org/obo/clyh/clyh.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/clyh/clyh.owl>
+<http://purl.obolibrary.org/obo/clyh/releases/2020-05-29/clyh.owl>
+Annotation(dc:description "Anatomy, development and life cycle stages - planula, polyp, medusa/jellyfish - of the cnidarian hydrozoan species, Clytia hemiphaerica.")
+Annotation(dc:title "Clytia hemisphaerica Development and Anatomy Ontology (CLYH)")
+Annotation(terms:license <https://creativecommons.org/licenses/by/3.0/>)
+Annotation(rdfs:comment "Clytia hemisphaerica Development and Anatomy Ontology")
+
+Declaration(Class(obo:CLYH_0000001))
+Declaration(Class(obo:CLYH_0000002))
+Declaration(Class(obo:CLYH_0000003))
+Declaration(Class(obo:CLYH_0000004))
+Declaration(Class(obo:CLYH_0000005))
+Declaration(Class(obo:CLYH_0000006))
+Declaration(Class(obo:CLYH_0000007))
+Declaration(Class(obo:CLYH_0000008))
+Declaration(Class(obo:CLYH_0000009))
+Declaration(Class(obo:CLYH_0000010))
+Declaration(Class(obo:CLYH_0000011))
+Declaration(Class(obo:CLYH_0000012))
+Declaration(Class(obo:CLYH_0000013))
+Declaration(Class(obo:CLYH_0000014))
+Declaration(Class(obo:CLYH_0000015))
+Declaration(Class(obo:CLYH_0000016))
+Declaration(Class(obo:CLYH_0000017))
+Declaration(Class(obo:CLYH_0000018))
+Declaration(Class(obo:CLYH_0000019))
+Declaration(Class(obo:CLYH_0000020))
+Declaration(Class(obo:CLYH_0000021))
+Declaration(Class(obo:CLYH_0000022))
+Declaration(Class(obo:CLYH_0000023))
+Declaration(Class(obo:CLYH_0000024))
+Declaration(Class(obo:CLYH_0000025))
+Declaration(Class(obo:CLYH_0000026))
+Declaration(Class(obo:CLYH_0000027))
+Declaration(Class(obo:CLYH_0000028))
+Declaration(Class(obo:CLYH_0000029))
+Declaration(Class(obo:CLYH_0000030))
+Declaration(Class(obo:CLYH_0000031))
+Declaration(Class(obo:CLYH_0000032))
+Declaration(Class(obo:CLYH_0000033))
+Declaration(Class(obo:CLYH_0000034))
+Declaration(Class(obo:CLYH_0000035))
+Declaration(Class(obo:CLYH_0000036))
+Declaration(Class(obo:CLYH_0000037))
+Declaration(Class(obo:CLYH_0000038))
+Declaration(Class(obo:CLYH_0000040))
+Declaration(Class(obo:CLYH_0000041))
+Declaration(Class(obo:CLYH_0000042))
+Declaration(Class(obo:CLYH_0000043))
+Declaration(Class(obo:CLYH_0000044))
+Declaration(Class(obo:CLYH_0000045))
+Declaration(Class(obo:CLYH_0000046))
+Declaration(Class(obo:CLYH_0000047))
+Declaration(Class(obo:CLYH_0000049))
+Declaration(Class(obo:CLYH_0000050))
+Declaration(Class(obo:CLYH_0000051))
+Declaration(Class(obo:CLYH_0000052))
+Declaration(Class(obo:CLYH_0000053))
+Declaration(Class(obo:CLYH_0000054))
+Declaration(Class(obo:CLYH_0000055))
+Declaration(Class(obo:CLYH_0000056))
+Declaration(Class(obo:CLYH_0000057))
+Declaration(Class(obo:CLYH_0000059))
+Declaration(Class(obo:CLYH_0000060))
+Declaration(Class(obo:CLYH_0000061))
+Declaration(Class(obo:CLYH_0000062))
+Declaration(Class(obo:CLYH_0000063))
+Declaration(Class(obo:CLYH_0000064))
+Declaration(Class(obo:CLYH_0000065))
+Declaration(Class(obo:CLYH_0000066))
+Declaration(Class(obo:CLYH_0000067))
+Declaration(Class(obo:CLYH_0000068))
+Declaration(Class(obo:CLYH_0000069))
+Declaration(Class(obo:CLYH_1000001))
+Declaration(Class(obo:CLYH_1000002))
+Declaration(Class(obo:CLYH_1000003))
+Declaration(Class(obo:CLYH_1000004))
+Declaration(Class(obo:CLYH_1000005))
+Declaration(Class(obo:CLYH_1000006))
+Declaration(Class(obo:CLYH_1000007))
+Declaration(Class(obo:CLYH_1000008))
+Declaration(Class(obo:CLYH_1000009))
+Declaration(Class(obo:CLYH_1000010))
+Declaration(Class(obo:CLYH_1000011))
+Declaration(Class(obo:CLYH_1000012))
+Declaration(Class(obo:CLYH_1000013))
+Declaration(Class(obo:CLYH_1000014))
+Declaration(Class(obo:CLYH_1000015))
+Declaration(Class(obo:CLYH_1000016))
+Declaration(Class(obo:CLYH_1000017))
+Declaration(Class(obo:CLYH_1000018))
+Declaration(Class(obo:CLYH_1000019))
+Declaration(Class(obo:CLYH_1000020))
+Declaration(Class(obo:CLYH_1000021))
+Declaration(Class(obo:CLYH_1000022))
+Declaration(Class(obo:CLYH_1000023))
+Declaration(Class(obo:CLYH_1000024))
+Declaration(Class(obo:CLYH_1000025))
+Declaration(Class(obo:CLYH_1000026))
+Declaration(Class(obo:CLYH_1000027))
+Declaration(Class(obo:CLYH_1000028))
+Declaration(Class(obo:CLYH_1000029))
+Declaration(Class(obo:CLYH_1000030))
+Declaration(Class(obo:CLYH_1000031))
+Declaration(Class(obo:CLYH_1000032))
+Declaration(Class(obo:CLYH_1000033))
+Declaration(Class(obo:CLYH_1000034))
+Declaration(Class(obo:CLYH_1000035))
+Declaration(Class(obo:CLYH_1000036))
+Declaration(Class(obo:CLYH_1000037))
+Declaration(Class(obo:CLYH_1000038))
+Declaration(Class(obo:CLYH_1000039))
+Declaration(Class(obo:CLYH_1000040))
+Declaration(Class(obo:CLYH_1000041))
+Declaration(Class(obo:CLYH_1000042))
+Declaration(Class(obo:CLYH_1000043))
+Declaration(Class(obo:CLYH_1000044))
+Declaration(Class(obo:CLYH_1000045))
+Declaration(Class(obo:CLYH_1000046))
+Declaration(Class(obo:CLYH_1000047))
+Declaration(Class(obo:CLYH_1000048))
+Declaration(Class(obo:CLYH_1000049))
+Declaration(Class(obo:CLYH_1000050))
+Declaration(Class(obo:CLYH_1000051))
+Declaration(Class(obo:CLYH_1000052))
+Declaration(Class(obo:CLYH_1000053))
+Declaration(Class(obo:CLYH_1000054))
+Declaration(Class(obo:CLYH_1000055))
+Declaration(Class(obo:CLYH_1000056))
+Declaration(Class(obo:CLYH_1000057))
+Declaration(Class(obo:CLYH_1000058))
+Declaration(Class(obo:CLYH_1000059))
+Declaration(Class(obo:CLYH_1000060))
+Declaration(Class(obo:CLYH_1000061))
+Declaration(Class(obo:CLYH_1000062))
+Declaration(Class(obo:CLYH_1000063))
+Declaration(Class(obo:CLYH_1000064))
+Declaration(Class(obo:CLYH_1000065))
+Declaration(Class(obo:CLYH_1000066))
+Declaration(Class(obo:CLYH_1000067))
+Declaration(Class(obo:CLYH_1000068))
+Declaration(Class(obo:CLYH_1000069))
+Declaration(Class(obo:CLYH_1000070))
+Declaration(Class(obo:CLYH_1000071))
+Declaration(Class(obo:CLYH_1000072))
+Declaration(Class(obo:CLYH_1000073))
+Declaration(Class(obo:CLYH_1000074))
+Declaration(Class(obo:CLYH_1000075))
+Declaration(Class(obo:CLYH_1000076))
+Declaration(Class(obo:CLYH_1000077))
+Declaration(Class(obo:CLYH_1000078))
+Declaration(Class(obo:CLYH_1000079))
+Declaration(Class(obo:CLYH_1000080))
+Declaration(Class(obo:CLYH_1000081))
+Declaration(Class(obo:CLYH_1000082))
+Declaration(Class(obo:CLYH_1000083))
+Declaration(Class(obo:CLYH_1000084))
+Declaration(Class(obo:CLYH_1000085))
+Declaration(Class(obo:CLYH_1000086))
+Declaration(Class(obo:CLYH_1000087))
+Declaration(Class(obo:CLYH_1000088))
+Declaration(Class(obo:CLYH_1000089))
+Declaration(Class(obo:CLYH_1000090))
+Declaration(Class(obo:CLYH_1000091))
+Declaration(Class(obo:CLYH_1000092))
+Declaration(Class(obo:CLYH_1000093))
+Declaration(Class(obo:CLYH_1000094))
+Declaration(Class(obo:CLYH_1000095))
+Declaration(Class(obo:CLYH_1000096))
+Declaration(Class(obo:CLYH_1000097))
+Declaration(Class(obo:CLYH_1000098))
+Declaration(Class(obo:CLYH_1000099))
+Declaration(Class(obo:CLYH_1000100))
+Declaration(Class(obo:CLYH_1000101))
+Declaration(Class(obo:CLYH_1000102))
+Declaration(Class(obo:CLYH_1000103))
+Declaration(Class(obo:CLYH_1000104))
+Declaration(Class(obo:CLYH_1000105))
+Declaration(Class(obo:CLYH_1000106))
+Declaration(Class(obo:CLYH_1000107))
+Declaration(Class(obo:CLYH_1000108))
+Declaration(Class(obo:CLYH_1000109))
+Declaration(Class(obo:CLYH_1000110))
+Declaration(Class(obo:CLYH_1000111))
+Declaration(Class(obo:CLYH_1000112))
+Declaration(Class(obo:CLYH_1000113))
+Declaration(Class(obo:CLYH_1000114))
+Declaration(Class(obo:CLYH_1000115))
+Declaration(Class(obo:CLYH_1000116))
+Declaration(Class(obo:CLYH_1000117))
+Declaration(Class(obo:CLYH_1000118))
+Declaration(Class(obo:CLYH_1000119))
+Declaration(Class(obo:CLYH_1000120))
+Declaration(Class(obo:CLYH_1000121))
+Declaration(Class(obo:CLYH_1000122))
+Declaration(Class(obo:CLYH_1000123))
+Declaration(Class(obo:CLYH_1000124))
+Declaration(Class(obo:CLYH_1000125))
+Declaration(Class(obo:CLYH_1000126))
+Declaration(Class(obo:CLYH_1000127))
+Declaration(Class(obo:CLYH_1000128))
+Declaration(Class(obo:CLYH_1000129))
+Declaration(Class(obo:CLYH_1000130))
+Declaration(Class(obo:CLYH_1000131))
+Declaration(Class(obo:CLYH_1000132))
+Declaration(Class(obo:CLYH_1000133))
+Declaration(Class(obo:CLYH_1000134))
+Declaration(Class(obo:CLYH_1000135))
+Declaration(Class(obo:CLYH_1000136))
+Declaration(Class(obo:CLYH_1000137))
+Declaration(Class(obo:CLYH_1000138))
+Declaration(Class(obo:CLYH_1000139))
+Declaration(Class(obo:CLYH_1000140))
+Declaration(Class(obo:CLYH_1000141))
+Declaration(Class(obo:CLYH_1000142))
+Declaration(Class(obo:CLYH_1000143))
+Declaration(Class(obo:CLYH_1000144))
+Declaration(Class(obo:CLYH_1000145))
+Declaration(Class(obo:CLYH_1000146))
+Declaration(Class(obo:CLYH_1000147))
+Declaration(Class(obo:CLYH_1000148))
+Declaration(Class(obo:CLYH_1000149))
+Declaration(Class(obo:CLYH_1000150))
+Declaration(Class(obo:CLYH_1000151))
+Declaration(Class(obo:CLYH_1000152))
+Declaration(Class(obo:CLYH_1000153))
+Declaration(Class(obo:CLYH_1000154))
+Declaration(Class(obo:CLYH_1000155))
+Declaration(Class(obo:CLYH_1000156))
+Declaration(Class(obo:CLYH_1000157))
+Declaration(Class(obo:CLYH_1000158))
+Declaration(Class(obo:CLYH_1000159))
+Declaration(Class(obo:CLYH_1000160))
+Declaration(Class(obo:CLYH_1000161))
+Declaration(Class(obo:CLYH_1000162))
+Declaration(Class(obo:CLYH_1000163))
+Declaration(Class(obo:CLYH_1000164))
+Declaration(Class(obo:CLYH_1000165))
+Declaration(Class(obo:CLYH_1000166))
+Declaration(Class(obo:CLYH_1000167))
+Declaration(Class(obo:CLYH_1000168))
+Declaration(Class(obo:CLYH_1000169))
+Declaration(Class(obo:CLYH_1000170))
+Declaration(Class(obo:CLYH_1000171))
+Declaration(Class(obo:CLYH_1000172))
+Declaration(Class(obo:CLYH_1000173))
+Declaration(Class(obo:CLYH_1000174))
+Declaration(Class(obo:CLYH_1000175))
+Declaration(Class(obo:CLYH_1000176))
+Declaration(Class(obo:CLYH_1000177))
+Declaration(Class(obo:CLYH_1000178))
+Declaration(Class(obo:CLYH_1000179))
+Declaration(Class(obo:CLYH_1000180))
+Declaration(Class(obo:CLYH_1000181))
+Declaration(Class(obo:CLYH_1000182))
+Declaration(Class(obo:CLYH_1000183))
+Declaration(Class(obo:CLYH_1000184))
+Declaration(Class(obo:CLYH_1000185))
+Declaration(Class(obo:CLYH_1000186))
+Declaration(Class(obo:CLYH_1000187))
+Declaration(Class(obo:CLYH_1000188))
+Declaration(Class(obo:CLYH_1000189))
+Declaration(Class(obo:CLYH_1000190))
+Declaration(Class(obo:CLYH_1000191))
+Declaration(Class(obo:CLYH_1000192))
+Declaration(Class(obo:CLYH_1000193))
+Declaration(Class(obo:CLYH_1000194))
+Declaration(Class(obo:CL_0000000))
+Declaration(Class(obo:GO_0005575))
+Declaration(Class(obo:GO_0005938))
+Declaration(Class(obo:UBERON_0000061))
+Declaration(Class(obo:UBERON_0000105))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:RO_0002087))
+Declaration(ObjectProperty(obo:RO_0002202))
+Declaration(ObjectProperty(obo:RO_0002488))
+Declaration(ObjectProperty(obo:RO_0002492))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000301))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(terms:license))
+Declaration(AnnotationProperty(oboInOwl:DbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: obo:IAO_0000301 (citation)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000301 "citation")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of")
+
+# Object Property: obo:RO_0002087 (immediately preceded by)
+
+AnnotationAssertion(rdfs:label obo:RO_0002087 "immediately preceded by")
+
+# Object Property: obo:RO_0002202 (develops from)
+
+AnnotationAssertion(rdfs:label obo:RO_0002202 "develops from")
+
+# Object Property: obo:RO_0002488 (existence starts during)
+
+AnnotationAssertion(rdfs:label obo:RO_0002488 "existence starts during")
+
+# Object Property: obo:RO_0002492 (existence ends during)
+
+AnnotationAssertion(rdfs:label obo:RO_0002492 "existence ends during")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:CLYH_0000001 (gametogenesis)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000001 "gametogenesis")
+SubClassOf(obo:CLYH_0000001 obo:UBERON_0000105)
+
+# Class: obo:CLYH_0000002 (gametogenesis period)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000002 "phase of sexual reproduction in which certain cells of a female or male individual (parent) are transformed into specialized reproductive cells (gametes) that will initiate development of a progeny individual (offspring) upon fertilization.")
+AnnotationAssertion(rdfs:label obo:CLYH_0000002 "gametogenesis period")
+SubClassOf(obo:CLYH_0000002 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000001))
+
+# Class: obo:CLYH_0000003 (oogenesis period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000003 "oogenesis period")
+SubClassOf(obo:CLYH_0000003 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000002))
+
+# Class: obo:CLYH_0000004 (previtellogenic stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000004 "Entered into meiosis, DNA replicated, no yolk accumulation.")
+AnnotationAssertion(rdfs:label obo:CLYH_0000004 "previtellogenic stage")
+SubClassOf(obo:CLYH_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000003))
+
+# Class: obo:CLYH_0000005 (oocyte growth period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000005 "oocyte growth period")
+SubClassOf(obo:CLYH_0000005 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000003))
+SubClassOf(obo:CLYH_0000005 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000004))
+
+# Class: obo:CLYH_0000006 (stage I oocyte growth stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000006 "Meiotic Prophase I arrest, GV in centre, diameter x")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000006 "Amiel and Houliston Dev. Biol (2009)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000006 "stage I oocyte growth stage")
+SubClassOf(obo:CLYH_0000006 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000005))
+SubClassOf(obo:CLYH_0000006 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000004))
+
+# Class: obo:CLYH_0000007 (stage II oocyte growth stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000007 "Meiotic Prophase I arrest, GV off centre, diameter x")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000007 "Amiel and Houliston Dev. Biol (2009)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000007 "stage II oocyte growth stage")
+SubClassOf(obo:CLYH_0000007 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000005))
+SubClassOf(obo:CLYH_0000007 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000006))
+
+# Class: obo:CLYH_0000008 (stage III oocyte growth stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000008 "Meiotic Prophase I arrest, GV off centre, diameter x")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000008 "Amiel and Houliston Dev. Biol (2009)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000008 "stage III oocyte growth stage")
+SubClassOf(obo:CLYH_0000008 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000005))
+SubClassOf(obo:CLYH_0000008 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000007))
+
+# Class: obo:CLYH_0000009 (oocyte meiotic maturation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000009 "oocyte undergoing meiosis completion from prophase I to G0  of first meiotic cycle")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000009 "Amiel and Houliston Dev. Biol (2009)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000009 "oocyte meiotic maturation")
+SubClassOf(obo:CLYH_0000009 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000003))
+SubClassOf(obo:CLYH_0000009 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000008))
+
+# Class: obo:CLYH_0000010 (spermatogenesis period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000010 "spermatogenesis period")
+SubClassOf(obo:CLYH_0000010 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000002))
+
+# Class: obo:CLYH_0000011 (spermatogonium stage)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000011 "spermatogonium stage")
+SubClassOf(obo:CLYH_0000011 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000010))
+
+# Class: obo:CLYH_0000012 (spermatid stage)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000012 "spermatid stage")
+SubClassOf(obo:CLYH_0000012 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000010))
+SubClassOf(obo:CLYH_0000012 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000011))
+
+# Class: obo:CLYH_0000013 (embryonic development)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000013 "embryonic development")
+SubClassOf(obo:CLYH_0000013 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000013 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000001))
+
+# Class: obo:CLYH_0000014 (gamete period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000014 "gamete period")
+SubClassOf(obo:CLYH_0000014 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000014 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000013))
+SubClassOf(obo:CLYH_0000014 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000002))
+
+# Class: obo:CLYH_0000015 (unfertilized egg stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000015 "matture female germ cell. not yet fertilized. Meiotic divisions complete. Spawned egg with female pronucleus.")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000015 "Amiel and Houliston Dev. Biol (2009)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000015 "unfertilized egg stage")
+SubClassOf(obo:CLYH_0000015 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000014))
+SubClassOf(obo:CLYH_0000015 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000009))
+
+# Class: obo:CLYH_0000016 (spermatozoid stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000016 "mature male germ cell. ")
+AnnotationAssertion(rdfs:label obo:CLYH_0000016 "spermatozoid stage")
+SubClassOf(obo:CLYH_0000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000014))
+SubClassOf(obo:CLYH_0000016 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000012))
+
+# Class: obo:CLYH_0000017 (cleavage period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000017 "cleavage period")
+SubClassOf(obo:CLYH_0000017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000013))
+SubClassOf(obo:CLYH_0000017 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000014))
+
+# Class: obo:CLYH_0000018 (one cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000018 "Zygote fertilized egg, zygote nucleus forms at animal pole (about 0-50 min post fertilization at 18 degree celsius).")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000018 "Y. Kraus et al in preparation?")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_0000018 " fertilised egg")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_0000018 "zygote ")
+AnnotationAssertion(rdfs:label obo:CLYH_0000018 "one cell stage")
+SubClassOf(obo:CLYH_0000018 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000018 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000014))
+
+# Class: obo:CLYH_0000019 (2-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000019 "Two cell-stage embryo. First cleaveages unipolar and start at the animal pole (about 50-80 min post fertilization at 18 degree celsius).")
+AnnotationAssertion(obo:IAO_0000301 obo:CLYH_0000019 "Y. Kraus et al in preparation?")
+AnnotationAssertion(rdfs:label obo:CLYH_0000019 "2-cell stage")
+SubClassOf(obo:CLYH_0000019 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000019 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000018))
+
+# Class: obo:CLYH_0000020 (4-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000020 "Four cell-stage embryo. Second cleaveages unipolar and start at the animal pole (about 80-110 min post fertilization at 18 degree celsius). ")
+AnnotationAssertion(rdfs:label obo:CLYH_0000020 "4-cell stage")
+SubClassOf(obo:CLYH_0000020 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000020 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000019))
+
+# Class: obo:CLYH_0000021 (8-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000021 "Eight cell-stage embryo (about 2h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000021 "8-cell stage")
+SubClassOf(obo:CLYH_0000021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000021 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000020))
+
+# Class: obo:CLYH_0000022 (16-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000022 "Sixteen cell-stage embryo (about 2.5h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000022 "16-cell stage")
+SubClassOf(obo:CLYH_0000022 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000022 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000021))
+
+# Class: obo:CLYH_0000023 (32-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000023 "thirty two cell-stage embryo (about 3h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000023 "32-cell stage")
+SubClassOf(obo:CLYH_0000023 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000023 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000022))
+
+# Class: obo:CLYH_0000024 (64-cell stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000024 "sixty four cell-stage embryo (about 3h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000024 "64-cell stage")
+SubClassOf(obo:CLYH_0000024 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000017))
+SubClassOf(obo:CLYH_0000024 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000023))
+
+# Class: obo:CLYH_0000025 (blastula period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000025 "blastula period")
+SubClassOf(obo:CLYH_0000025 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000013))
+SubClassOf(obo:CLYH_0000025 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000017))
+
+# Class: obo:CLYH_0000026 (early blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000026 "Cells rounded and loosely adhered, Nuclei central  (5-6h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000026 "early blastula stage")
+SubClassOf(obo:CLYH_0000026 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000026 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000024))
+
+# Class: obo:CLYH_0000027 (mid blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000027 "Cell contacts extended, cells polarised, nuclei apical (8h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000027 "mid blastula stage")
+SubClassOf(obo:CLYH_0000027 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000027 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000026))
+
+# Class: obo:CLYH_0000028 (late blastula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000028 "Cell polarized and columnar, nuclei apical (9- 10h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000028 "late blastula stage")
+SubClassOf(obo:CLYH_0000028 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000028 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000027))
+
+# Class: obo:CLYH_0000029 (gastrula period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000029 "gastrula period")
+SubClassOf(obo:CLYH_0000029 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000013))
+SubClassOf(obo:CLYH_0000029 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000025))
+
+# Class: obo:CLYH_0000030 (very early gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000030 "Visible pointed oral pole but no cell ingression, ciliogenesis starting (12-13h post fertilization at 18 degree celsius). ")
+AnnotationAssertion(rdfs:label obo:CLYH_0000030 "very early gastrula stage")
+SubClassOf(obo:CLYH_0000030 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000030 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000030))
+
+# Class: obo:CLYH_0000031 (early gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000031 "A few cells ingressed at pointed oral pole, swimming started  (14-16h post fertilization at 18 degree celsius).")
+AnnotationAssertion(rdfs:label obo:CLYH_0000031 "early gastrula stage")
+SubClassOf(obo:CLYH_0000031 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000031 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000032))
+
+# Class: obo:CLYH_0000032 (mid gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000032 "Ingression to fill balastotocoel half completed (17- 18h post fertilization at 18 degree celsius)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000032 "mid gastrula stage")
+SubClassOf(obo:CLYH_0000032 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000032 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000031))
+
+# Class: obo:CLYH_0000033 (late gastrula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000033 "Blastocoel full, no epithelisation of internal cells (20h post fertilization at18 degree celsius")
+AnnotationAssertion(rdfs:label obo:CLYH_0000033 "late gastrula stage")
+SubClassOf(obo:CLYH_0000033 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000025))
+SubClassOf(obo:CLYH_0000033 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000032))
+
+# Class: obo:CLYH_0000034 (planula period)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_0000034 "larval development")
+AnnotationAssertion(rdfs:label obo:CLYH_0000034 "planula period")
+SubClassOf(obo:CLYH_0000034 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000034 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000013))
+SubClassOf(obo:CLYH_0000034 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000029))
+
+# Class: obo:CLYH_0000035 (planula P1 stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000035 "Epithelisation beginning at aboral pole (as seen at 24h post fertilization at 18 degree celsius)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000035 "planula P1 stage")
+SubClassOf(obo:CLYH_0000035 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000034))
+SubClassOf(obo:CLYH_0000035 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000033))
+
+# Class: obo:CLYH_0000036 (planula P2 stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000036 "Visible central cavity (as seen at 48h post fertilization at 18 degree celsius)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000036 "planula P2 stage")
+SubClassOf(obo:CLYH_0000036 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000034))
+SubClassOf(obo:CLYH_0000036 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000035))
+
+# Class: obo:CLYH_0000037 (planula P3 stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000037 "Competent to metamorphose as (72h post fertilization at 18 degree celsius)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000037 "planula P3 stage")
+SubClassOf(obo:CLYH_0000037 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000034))
+SubClassOf(obo:CLYH_0000037 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000036))
+
+# Class: obo:CLYH_0000038 (aged planula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000038 "Aged planula (> 3 days post fertilization at 18 degree celsius) but not received metamporphosis signal.")
+AnnotationAssertion(rdfs:label obo:CLYH_0000038 "aged planula stage")
+SubClassOf(obo:CLYH_0000038 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000034))
+SubClassOf(obo:CLYH_0000038 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000037))
+
+# Class: obo:CLYH_0000040 (metamorphosis period)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000040 "metamorphosis period")
+SubClassOf(obo:CLYH_0000040 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000040 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000034))
+
+# Class: obo:CLYH_0000041 (settled planula stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000041 "torpedo shape planula that stopped swimming")
+AnnotationAssertion(rdfs:label obo:CLYH_0000041 "settled planula stage")
+SubClassOf(obo:CLYH_0000041 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000041 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000034))
+
+# Class: obo:CLYH_0000042 (blob stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000042 "irregularly shaped metamorphosing planula attached to substrate, not yet flattened")
+AnnotationAssertion(rdfs:label obo:CLYH_0000042 "blob stage")
+SubClassOf(obo:CLYH_0000042 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000042 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000041))
+
+# Class: obo:CLYH_0000043 (disc stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000043 "metamorphosing planula attached to the substrate and in shape of a flattened disc")
+AnnotationAssertion(rdfs:label obo:CLYH_0000043 "disc stage")
+SubClassOf(obo:CLYH_0000043 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000043 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000042))
+
+# Class: obo:CLYH_0000044 (sculpted disc stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000044 "metamorphosing planula attached to the substrate and in shape of a flattened disc with sculpted indentations")
+AnnotationAssertion(rdfs:label obo:CLYH_0000044 "sculpted disc stage")
+SubClassOf(obo:CLYH_0000044 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000044 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000043))
+
+# Class: obo:CLYH_0000045 (primary polyp stalk extension stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000045 "uniform extension emerging from the sculpted disc")
+AnnotationAssertion(rdfs:label obo:CLYH_0000045 "primary polyp stalk extension stage")
+SubClassOf(obo:CLYH_0000045 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000045 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000044))
+
+# Class: obo:CLYH_0000046 (primary polyp developing head stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000046 "swollen distal extremity developing into a functional primary polyp head")
+AnnotationAssertion(rdfs:label obo:CLYH_0000046 "primary polyp developing head stage")
+SubClassOf(obo:CLYH_0000046 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000046 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000045))
+
+# Class: obo:CLYH_0000047 (functional primary polyp stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000047 "theca of the primary polyp open on the oral side and mouth open")
+AnnotationAssertion(rdfs:label obo:CLYH_0000047 "functional primary polyp stage")
+SubClassOf(obo:CLYH_0000047 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000040))
+SubClassOf(obo:CLYH_0000047 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000046))
+
+# Class: obo:CLYH_0000049 (colony phase)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000049 "colony containing  mature or developing gonozoids , gastrozoids and stolons.")
+AnnotationAssertion(rdfs:label obo:CLYH_0000049 "colony phase")
+SubClassOf(obo:CLYH_0000049 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000049 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000040))
+
+# Class: obo:CLYH_0000050 (gastrozoid development)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000050 "gastrozoid development")
+SubClassOf(obo:CLYH_0000050 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000049))
+
+# Class: obo:CLYH_0000051 (stalk extenstion stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000051 "uniform extension emerging from the stolon as first stage of gastrozoid development")
+AnnotationAssertion(rdfs:label obo:CLYH_0000051 "stalk extenstion stage")
+SubClassOf(obo:CLYH_0000051 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000050))
+
+# Class: obo:CLYH_0000052 (developing head stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000052 "swollen distal extremity developing into a complete gastrozoid head")
+AnnotationAssertion(rdfs:label obo:CLYH_0000052 "developing head stage")
+SubClassOf(obo:CLYH_0000052 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000050))
+SubClassOf(obo:CLYH_0000052 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000051))
+
+# Class: obo:CLYH_0000053 (functional gastrozoid stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000053 "complete and functional gastrozoid with open hydrotheca and mouth")
+AnnotationAssertion(rdfs:label obo:CLYH_0000053 "functional gastrozoid stage")
+SubClassOf(obo:CLYH_0000053 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000050))
+SubClassOf(obo:CLYH_0000053 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000052))
+
+# Class: obo:CLYH_0000054 (gonozoid development)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000054 "Non feeding polyp specialized in budding medusae")
+AnnotationAssertion(rdfs:label obo:CLYH_0000054 "gonozoid development")
+SubClassOf(obo:CLYH_0000054 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000049))
+
+# Class: obo:CLYH_0000055 (growing gonozoid stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000055 "growing and developing gonozoid")
+AnnotationAssertion(rdfs:label obo:CLYH_0000055 "growing gonozoid stage")
+SubClassOf(obo:CLYH_0000055 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000054))
+
+# Class: obo:CLYH_0000056 (budding gonozoid stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000056 "mature gonozoid budding medusae")
+AnnotationAssertion(rdfs:label obo:CLYH_0000056 "budding gonozoid stage")
+SubClassOf(obo:CLYH_0000056 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000054))
+SubClassOf(obo:CLYH_0000056 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000055))
+
+# Class: obo:CLYH_0000057 (non-budding gonozoid stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000057 "mature gonozoid not containing any medusa bud only central tube and disc-shaped cap")
+AnnotationAssertion(rdfs:label obo:CLYH_0000057 "non-budding gonozoid stage")
+SubClassOf(obo:CLYH_0000057 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000054))
+SubClassOf(obo:CLYH_0000057 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000055))
+
+# Class: obo:CLYH_0000059 (medusa phase)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000059 "medusa phase")
+SubClassOf(obo:CLYH_0000059 obo:UBERON_0000105)
+SubClassOf(obo:CLYH_0000059 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000054))
+
+# Class: obo:CLYH_0000060 (medusa budding)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000060 "medusa budding")
+SubClassOf(obo:CLYH_0000060 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000059))
+SubClassOf(obo:CLYH_0000060 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000054))
+
+# Class: obo:CLYH_0000061 (early medusa bud stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000061 "medusa bud with visible ectoderm, endoderm and entocodon")
+AnnotationAssertion(rdfs:label obo:CLYH_0000061 "early medusa bud stage")
+SubClassOf(obo:CLYH_0000061 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000060))
+SubClassOf(obo:CLYH_0000061 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000056))
+
+# Class: obo:CLYH_0000062 (mid medusa bud stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000062 "medusa bud with forming subumbrella cavity")
+AnnotationAssertion(rdfs:label obo:CLYH_0000062 "mid medusa bud stage")
+SubClassOf(obo:CLYH_0000062 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000060))
+SubClassOf(obo:CLYH_0000062 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000061))
+
+# Class: obo:CLYH_0000063 (late medusa bud stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000063 "medusa bud with with folding umbrella")
+AnnotationAssertion(rdfs:label obo:CLYH_0000063 "late medusa bud stage")
+SubClassOf(obo:CLYH_0000063 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000060))
+SubClassOf(obo:CLYH_0000063 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000062))
+
+# Class: obo:CLYH_0000064 (medusa growth)
+
+AnnotationAssertion(rdfs:label obo:CLYH_0000064 "medusa growth")
+SubClassOf(obo:CLYH_0000064 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000059))
+SubClassOf(obo:CLYH_0000064 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000060))
+
+# Class: obo:CLYH_0000065 (4-bulb medusa stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000065 "period of medusa growth between release medusa from gonozoid  until appearance of secondary tentacles. Only  4 tentacle bulbs present ")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_0000065 "baby medusa stage")
+AnnotationAssertion(rdfs:label obo:CLYH_0000065 "4-bulb medusa stage")
+SubClassOf(obo:CLYH_0000065 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000064))
+SubClassOf(obo:CLYH_0000065 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000063))
+
+# Class: obo:CLYH_0000066 (8-bulb medusa stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000066 "period of medusa growth when only 8 tentacles are present ")
+AnnotationAssertion(rdfs:label obo:CLYH_0000066 "8-bulb medusa stage")
+SubClassOf(obo:CLYH_0000066 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000064))
+SubClassOf(obo:CLYH_0000066 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000065))
+
+# Class: obo:CLYH_0000067 (12-bulb medusa stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000067 "period of medusa growth when only 12 tentacles are present ")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_0000067 "young medusa stage")
+AnnotationAssertion(rdfs:label obo:CLYH_0000067 "12-bulb medusa stage")
+SubClassOf(obo:CLYH_0000067 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000064))
+SubClassOf(obo:CLYH_0000067 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000066))
+
+# Class: obo:CLYH_0000068 (16-bulb immature medusa stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000068 "period of medusa growth when only 16 tentacles are present. No mature gametes (eg 5mm diameter) ")
+AnnotationAssertion(rdfs:label obo:CLYH_0000068 "16-bulb immature medusa stage")
+SubClassOf(obo:CLYH_0000068 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000064))
+SubClassOf(obo:CLYH_0000068 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000067))
+
+# Class: obo:CLYH_0000069 (mature adult medusa stage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_0000069 "period of medusa growth when only 16 tentacles are present. Gonads contain mature gametes. (eg 10mm diameter)")
+AnnotationAssertion(rdfs:label obo:CLYH_0000069 "mature adult medusa stage")
+SubClassOf(obo:CLYH_0000069 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_0000064))
+SubClassOf(obo:CLYH_0000069 ObjectSomeValuesFrom(obo:RO_0002087 obo:CLYH_0000068))
+
+# Class: obo:CLYH_1000001 (multicellular organism)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000001 "multicellular organism")
+
+# Class: obo:CLYH_1000002 (organism subdivision)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000002 "organism subdivision")
+AnnotationAssertion(owl:deprecated obo:CLYH_1000002 "true"^^xsd:boolean)
+
+# Class: obo:CLYH_1000003 (mouth)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000003 "mouth")
+SubClassOf(obo:CLYH_1000003 obo:UBERON_0000061)
+
+# Class: obo:CLYH_1000004 (tentacle system)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000004 "tentacle system")
+SubClassOf(obo:CLYH_1000004 obo:UBERON_0000061)
+
+# Class: obo:CLYH_1000005 (tentacle)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000005 "tentacle")
+SubClassOf(obo:CLYH_1000005 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000005 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000004))
+
+# Class: obo:CLYH_1000006 (tissue layer)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000006 "tissue layer")
+SubClassOf(obo:CLYH_1000006 obo:UBERON_0000061)
+
+# Class: obo:CLYH_1000007 (ectoderm)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000007 "ectoderm")
+AnnotationAssertion(owl:deprecated obo:CLYH_1000007 "true"^^xsd:boolean)
+
+# Class: obo:CLYH_1000008 (gastrula outer layer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000008 "Outer layer of the gastrula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000008 "gastrula outer layer")
+SubClassOf(obo:CLYH_1000008 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000008 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000008 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000074))
+SubClassOf(obo:CLYH_1000008 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+SubClassOf(obo:CLYH_1000008 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000009 (oral gastrula outer layer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000009 "Oral part of the outer layer of the gastrula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000009 "oral gastrula outer layer")
+SubClassOf(obo:CLYH_1000009 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000009 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000008))
+SubClassOf(obo:CLYH_1000009 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000068))
+SubClassOf(obo:CLYH_1000009 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+SubClassOf(obo:CLYH_1000009 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000010 (aboral gastrula outer layer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000010 "Aboral part of the outer layer of the gastrula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000010 "aboral gastrula outer layer")
+SubClassOf(obo:CLYH_1000010 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000008))
+SubClassOf(obo:CLYH_1000010 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000074))
+SubClassOf(obo:CLYH_1000010 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+SubClassOf(obo:CLYH_1000010 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000011 (lateral gastrula outer layer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000011 "Mid part of the outer layer of the gastrula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000011 "lateral gastrula outer layer")
+SubClassOf(obo:CLYH_1000011 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000011 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000008))
+SubClassOf(obo:CLYH_1000011 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000031))
+SubClassOf(obo:CLYH_1000011 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+SubClassOf(obo:CLYH_1000011 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000012 (planula ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000012 "Outer layer of the planula.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000012 "planula outer layer")
+AnnotationAssertion(rdfs:label obo:CLYH_1000012 "planula ectoderm")
+SubClassOf(obo:CLYH_1000012 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000012 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000012 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000012 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000013 (oral planula ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000013 "Oral part of the outer layer of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000013 "oral planula ectoderm")
+SubClassOf(obo:CLYH_1000013 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000013 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000012))
+SubClassOf(obo:CLYH_1000013 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000013 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000014 (aboral planula ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000014 "Aboral part of the outer layer of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000014 "aboral planula ectoderm")
+SubClassOf(obo:CLYH_1000014 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000014 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000012))
+SubClassOf(obo:CLYH_1000014 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000014 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000015 (endoderm)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000015 "endoderm")
+AnnotationAssertion(owl:deprecated obo:CLYH_1000015 "true"^^xsd:boolean)
+
+# Class: obo:CLYH_1000016 (gastrula ingressing cells)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000016 "Cells ingressing from the outer layer of the gastrula into the blastocoel.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000016 "gastrula ingressing cells")
+SubClassOf(obo:CLYH_1000016 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000016 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000068))
+SubClassOf(obo:CLYH_1000016 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+SubClassOf(obo:CLYH_1000016 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000017 (oral gastrula ingressing cells)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000017 "Cells ingressing from the outer layer into the blastocoel on the oral side of the gastrula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000017 "oral gastrula ingressing cells")
+SubClassOf(obo:CLYH_1000017 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000017 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000031))
+SubClassOf(obo:CLYH_1000017 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000032))
+
+# Class: obo:CLYH_1000018 (aboral gastrula ingressing cells)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000018 "Cells ingressing from the outer layer into the blastocoel on the aboral side of the gastrula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000018 "aboral gastrula ingressing cells")
+SubClassOf(obo:CLYH_1000018 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000018 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000018 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000031))
+SubClassOf(obo:CLYH_1000018 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000032))
+
+# Class: obo:CLYH_1000019 (planula endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000019 "Inner layer of the planula.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000019 "planula inner layer")
+AnnotationAssertion(rdfs:label obo:CLYH_1000019 "planula endoderm")
+SubClassOf(obo:CLYH_1000019 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000019 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000019 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000019 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000020 (aboral planula endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000020 "Inner layer of the planula on the aboral side of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000020 "aboral planula endoderm")
+SubClassOf(obo:CLYH_1000020 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000020 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000019))
+SubClassOf(obo:CLYH_1000020 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000020 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000021 (oral planula endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000021 "Inner layer of the planula on the oral side of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000021 "oral planula endoderm")
+SubClassOf(obo:CLYH_1000021 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000019))
+SubClassOf(obo:CLYH_1000021 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000021 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000022 (fertilized egg)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000022 "Cell formed by fusion of a mature female reproductive cell and a mature male reproductive cell at fertilization.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000022 "zygote")
+AnnotationAssertion(rdfs:label obo:CLYH_1000022 "fertilized egg")
+SubClassOf(obo:CLYH_1000022 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000022 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000087))
+SubClassOf(obo:CLYH_1000022 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000018))
+SubClassOf(obo:CLYH_1000022 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000018))
+
+# Class: obo:CLYH_1000023 (embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000023 "Anatomical entity that comprises the organism in the early stages of growth and differentiation that are characterized by cleavage, the laying down of fundamental tissues.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000023 "embryo")
+SubClassOf(obo:CLYH_1000023 obo:CLYH_1000001)
+SubClassOf(obo:CLYH_1000023 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000022))
+SubClassOf(obo:CLYH_1000023 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000018))
+SubClassOf(obo:CLYH_1000023 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000024 (cleaving embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000024 "Organism at the cleavage stage.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000024 "cleaving embryo")
+SubClassOf(obo:CLYH_1000024 obo:CLYH_1000023)
+SubClassOf(obo:CLYH_1000024 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000024))
+
+# Class: obo:CLYH_1000025 (2-cell embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000025 "Organism at the cleavage stage after the first cell division.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000025 "2-cell embryo")
+SubClassOf(obo:CLYH_1000025 obo:CLYH_1000024)
+SubClassOf(obo:CLYH_1000025 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000019))
+SubClassOf(obo:CLYH_1000025 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000019))
+
+# Class: obo:CLYH_1000026 (4-cell embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000026 "Organism at the cleavage stage after two division cycles.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000026 "4-cell embryo")
+SubClassOf(obo:CLYH_1000026 obo:CLYH_1000024)
+SubClassOf(obo:CLYH_1000026 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000025))
+SubClassOf(obo:CLYH_1000026 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000020))
+SubClassOf(obo:CLYH_1000026 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000020))
+
+# Class: obo:CLYH_1000027 (8-cell embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000027 "Organism at the cleavage stage after three division cycles.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000027 "8-cell embryo")
+SubClassOf(obo:CLYH_1000027 obo:CLYH_1000024)
+SubClassOf(obo:CLYH_1000027 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000026))
+SubClassOf(obo:CLYH_1000027 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000021))
+SubClassOf(obo:CLYH_1000027 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000021))
+
+# Class: obo:CLYH_1000028 (16-cell embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000028 "Organism at the cleavage stage after four division cycles.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000028 "16-cell embryo")
+SubClassOf(obo:CLYH_1000028 obo:CLYH_1000024)
+SubClassOf(obo:CLYH_1000028 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000027))
+SubClassOf(obo:CLYH_1000028 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000022))
+SubClassOf(obo:CLYH_1000028 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000022))
+
+# Class: obo:CLYH_1000029 (32-cell embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000029 "Organism at the cleavage stage after five division cycles.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000029 "32-cell embryo")
+SubClassOf(obo:CLYH_1000029 obo:CLYH_1000024)
+SubClassOf(obo:CLYH_1000029 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000028))
+SubClassOf(obo:CLYH_1000029 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000023))
+SubClassOf(obo:CLYH_1000029 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000023))
+
+# Class: obo:CLYH_1000030 (64-cell embryo)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000030 "Organism at the cleavage stage after six division cycles.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000030 "64-cell embryo")
+SubClassOf(obo:CLYH_1000030 obo:CLYH_1000024)
+SubClassOf(obo:CLYH_1000030 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000029))
+SubClassOf(obo:CLYH_1000030 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000024))
+
+# Class: obo:CLYH_1000031 (blastula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000031 "Organism at the blastula stage - an early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000031 "blastula")
+SubClassOf(obo:CLYH_1000031 obo:CLYH_1000023)
+SubClassOf(obo:CLYH_1000031 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000030))
+SubClassOf(obo:CLYH_1000031 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000026))
+SubClassOf(obo:CLYH_1000031 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000028))
+
+# Class: obo:CLYH_1000032 (early blastula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000032 "Blastula stage embryo before epithelisation. ")
+AnnotationAssertion(rdfs:label obo:CLYH_1000032 "early blastula")
+SubClassOf(obo:CLYH_1000032 obo:CLYH_1000031)
+SubClassOf(obo:CLYH_1000032 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000026))
+
+# Class: obo:CLYH_1000033 (mid blastula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000033 "Blastula stage embryo with polarised epithelial cells.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000033 "mid blastula")
+SubClassOf(obo:CLYH_1000033 obo:CLYH_1000031)
+SubClassOf(obo:CLYH_1000033 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000032))
+SubClassOf(obo:CLYH_1000033 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000027))
+SubClassOf(obo:CLYH_1000033 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000027))
+
+# Class: obo:CLYH_1000034 (late blasutla)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000034 "Blastula stage embryo with polarised and columnar epithelial cells.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000034 "late blasutla")
+SubClassOf(obo:CLYH_1000034 obo:CLYH_1000031)
+SubClassOf(obo:CLYH_1000034 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000033))
+SubClassOf(obo:CLYH_1000034 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000028))
+
+# Class: obo:CLYH_1000035 (gastrula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000035 "Organism at the gastrula stage.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000035 "gastrula")
+SubClassOf(obo:CLYH_1000035 obo:CLYH_1000023)
+SubClassOf(obo:CLYH_1000035 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000034))
+SubClassOf(obo:CLYH_1000035 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+
+# Class: obo:CLYH_1000036 (very early gastrula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000036 "Visible pointed oral pole but no cell ingression, Ciliogenesis starting.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000036 "very early gastrula")
+SubClassOf(obo:CLYH_1000036 obo:CLYH_1000035)
+SubClassOf(obo:CLYH_1000036 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000030))
+
+# Class: obo:CLYH_1000037 (early gastrula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000037 "Gastrula with a few cells ingressed at pointed oral pole. Swimming.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000037 "early gastrula")
+SubClassOf(obo:CLYH_1000037 obo:CLYH_1000035)
+SubClassOf(obo:CLYH_1000037 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000036))
+SubClassOf(obo:CLYH_1000037 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000031))
+SubClassOf(obo:CLYH_1000037 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000031))
+
+# Class: obo:CLYH_1000038 (mid gastrula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000038 "Gastrula in which blastotocoel is half filled with ingressing cells. ")
+AnnotationAssertion(rdfs:label obo:CLYH_1000038 "mid gastrula")
+SubClassOf(obo:CLYH_1000038 obo:CLYH_1000035)
+SubClassOf(obo:CLYH_1000038 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000037))
+SubClassOf(obo:CLYH_1000038 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000032))
+SubClassOf(obo:CLYH_1000038 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000032))
+
+# Class: obo:CLYH_1000039 (late gastrula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000039 "Gastrula in which Blastocoel is full but no epithelisation of internal cells.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000039 "late gastrula")
+SubClassOf(obo:CLYH_1000039 obo:CLYH_1000035)
+SubClassOf(obo:CLYH_1000039 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000038))
+SubClassOf(obo:CLYH_1000039 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000040 (planula larva)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000040 "A distinct juvenile form before metamorphosis with elongated shape and cilliated outer layer. Inner and outer tissue layers separated by basement membrane.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000040 "planula larva")
+SubClassOf(obo:CLYH_1000040 obo:CLYH_1000001)
+SubClassOf(obo:CLYH_1000040 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000039))
+SubClassOf(obo:CLYH_1000040 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+SubClassOf(obo:CLYH_1000040 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000041))
+
+# Class: obo:CLYH_1000041 (planula P1)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000041 "Planula larva showing epithelisation of gastrodermal cells at aboral pole but not orally.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000041 "planula P1")
+SubClassOf(obo:CLYH_1000041 obo:CLYH_1000040)
+SubClassOf(obo:CLYH_1000041 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000042 (planula P2)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000042 "Planula larva with visible central cavity in gastrodermis, incompetent to metamorphose.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000042 "planula P2")
+SubClassOf(obo:CLYH_1000042 obo:CLYH_1000040)
+SubClassOf(obo:CLYH_1000042 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000041))
+SubClassOf(obo:CLYH_1000042 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000036))
+SubClassOf(obo:CLYH_1000042 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000036))
+
+# Class: obo:CLYH_1000043 (planula P3 )
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000043 "Planula larva with all cell types diffrerntiated and competent to metamorphose.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000043 "planula P3 ")
+SubClassOf(obo:CLYH_1000043 obo:CLYH_1000040)
+SubClassOf(obo:CLYH_1000043 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000042))
+SubClassOf(obo:CLYH_1000043 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000037))
+SubClassOf(obo:CLYH_1000043 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000037))
+
+# Class: obo:CLYH_1000044 (aged planula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000044 "Elongated planula competent to metamorphose, thinner than P3 planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000044 "aged planula")
+SubClassOf(obo:CLYH_1000044 obo:CLYH_1000040)
+SubClassOf(obo:CLYH_1000044 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000043))
+SubClassOf(obo:CLYH_1000044 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000038))
+SubClassOf(obo:CLYH_1000044 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000038))
+
+# Class: obo:CLYH_1000045 (metamorphosing planula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000045 "Planula larva that has stopped swimming and is transforming into a polyp.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000045 "metamorphosing planula")
+SubClassOf(obo:CLYH_1000045 obo:CLYH_1000001)
+SubClassOf(obo:CLYH_1000045 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000045 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000041))
+SubClassOf(obo:CLYH_1000045 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000044))
+
+# Class: obo:CLYH_1000046 (settled planula)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000046 "Planula larva that has stopped swimming and fixed to substrate.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000046 "settled planula")
+SubClassOf(obo:CLYH_1000046 obo:CLYH_1000045)
+SubClassOf(obo:CLYH_1000046 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000041))
+
+# Class: obo:CLYH_1000047 (blob)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000047 "Metamorphosing larva that has a pear shape.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000047 "blob")
+SubClassOf(obo:CLYH_1000047 obo:CLYH_1000045)
+SubClassOf(obo:CLYH_1000047 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000046))
+SubClassOf(obo:CLYH_1000047 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000042))
+SubClassOf(obo:CLYH_1000047 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000042))
+
+# Class: obo:CLYH_1000048 (disc)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000048 "Transitory form of planula undergoing metamorphosis a flattened circular form attached to the substrate.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000048 "disc")
+SubClassOf(obo:CLYH_1000048 obo:CLYH_1000045)
+SubClassOf(obo:CLYH_1000048 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000047))
+SubClassOf(obo:CLYH_1000048 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000043))
+SubClassOf(obo:CLYH_1000048 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000043))
+
+# Class: obo:CLYH_1000049 (sculpted disc)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000049 "Transitory form of planula undergoing metamorphosis a flattened form attached to the substrate showing irregular indentations and with small stalk emerging.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000049 "sculpted disc")
+SubClassOf(obo:CLYH_1000049 obo:CLYH_1000045)
+SubClassOf(obo:CLYH_1000049 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000048))
+SubClassOf(obo:CLYH_1000049 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000044))
+
+# Class: obo:CLYH_1000050 (spindle-associated)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000050 "Region of the cell closely surrounding the mitotoc spindle.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000050 "spindle-associated")
+SubClassOf(obo:CLYH_1000050 obo:GO_0005575)
+SubClassOf(obo:CLYH_1000050 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000019))
+SubClassOf(obo:CLYH_1000050 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000024))
+
+# Class: obo:CLYH_1000051 (animal cortex )
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000051 "Region inheriting the peripheral region of the egg around the animal pole.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000051 "animal cortex ")
+SubClassOf(obo:CLYH_1000051 obo:GO_0005938)
+SubClassOf(obo:CLYH_1000051 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0005575))
+SubClassOf(obo:CLYH_1000051 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000008))
+SubClassOf(obo:CLYH_1000051 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000017))
+
+# Class: obo:CLYH_1000052 (animal cortex of oocyte)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000052 "animal cortex of oocyte")
+SubClassOf(obo:CLYH_1000052 obo:CLYH_1000051)
+SubClassOf(obo:CLYH_1000052 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000084))
+
+# Class: obo:CLYH_1000053 (animal cortex of egg cell)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000053 "animal cortex of egg cell")
+SubClassOf(obo:CLYH_1000053 obo:CLYH_1000051)
+SubClassOf(obo:CLYH_1000053 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000088))
+SubClassOf(obo:CLYH_1000053 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000052))
+
+# Class: obo:CLYH_1000054 (vegetal cortex)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000054 "Region inheriting the peripheral region of the egg around the vegetal pole.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000054 "vegetal cortex")
+SubClassOf(obo:CLYH_1000054 obo:GO_0005938)
+SubClassOf(obo:CLYH_1000054 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0005575))
+SubClassOf(obo:CLYH_1000054 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000017))
+
+# Class: obo:CLYH_1000055 (vegetal cortex of oocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000055 "Region of a stage III oocyte cortex close to the oocyte nucleus.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000055 "vegetal cortex of oocyte")
+SubClassOf(obo:CLYH_1000055 obo:CLYH_1000054)
+SubClassOf(obo:CLYH_1000055 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000084))
+SubClassOf(obo:CLYH_1000055 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000008))
+SubClassOf(obo:CLYH_1000055 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000008))
+
+# Class: obo:CLYH_1000056 (vegetal cortex of egg)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000056 "Egg cortex region containing the site of polar body formation.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000056 "vegetal cortex of egg")
+SubClassOf(obo:CLYH_1000056 obo:CLYH_1000054)
+SubClassOf(obo:CLYH_1000056 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000088))
+SubClassOf(obo:CLYH_1000056 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000055))
+
+# Class: obo:CLYH_1000057 (cytoplasm)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000057 "cytoplasm")
+SubClassOf(obo:CLYH_1000057 obo:GO_0005575)
+SubClassOf(obo:CLYH_1000057 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0005575))
+
+# Class: obo:CLYH_1000058 (animal cytoplasm)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000058 "animal cytoplasm")
+SubClassOf(obo:CLYH_1000058 obo:CLYH_1000057)
+
+# Class: obo:CLYH_1000059 (animal cytoplasm of oocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000059 "Region of cytoplasm in a stage III oocyte in the same hemishere as the nucleus.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000059 "animal cytoplasm of oocyte")
+SubClassOf(obo:CLYH_1000059 obo:CLYH_1000058)
+SubClassOf(obo:CLYH_1000059 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000084))
+SubClassOf(obo:CLYH_1000059 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000008))
+SubClassOf(obo:CLYH_1000059 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000008))
+
+# Class: obo:CLYH_1000060 (animal cytoplasm of egg)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000060 "Cytoplasm in egg hemisphere containing site of polar body formation.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000060 "animal cytoplasm of egg")
+SubClassOf(obo:CLYH_1000060 obo:CLYH_1000058)
+SubClassOf(obo:CLYH_1000060 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000088))
+SubClassOf(obo:CLYH_1000060 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000059))
+
+# Class: obo:CLYH_1000061 (vegetal cytoplasm)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000061 "vegetal cytoplasm")
+SubClassOf(obo:CLYH_1000061 obo:CLYH_1000057)
+
+# Class: obo:CLYH_1000062 (vegetal cytoplasm of oocyte)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000062 "vegetal cytoplasm of oocyte")
+SubClassOf(obo:CLYH_1000062 obo:CLYH_1000061)
+SubClassOf(obo:CLYH_1000062 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000084))
+SubClassOf(obo:CLYH_1000062 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000008))
+SubClassOf(obo:CLYH_1000062 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000008))
+
+# Class: obo:CLYH_1000063 (vegetal cytoplasm of egg)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000063 "vegetal cytoplasm of egg")
+SubClassOf(obo:CLYH_1000063 obo:CLYH_1000061)
+SubClassOf(obo:CLYH_1000063 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000088))
+SubClassOf(obo:CLYH_1000063 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000062))
+
+# Class: obo:CLYH_1000064 (oral territory)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000064 "oral territory")
+SubClassOf(obo:CLYH_1000064 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000064 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000019))
+SubClassOf(obo:CLYH_1000064 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000065 (oral pole of embryo)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000065 "oral pole of embryo")
+SubClassOf(obo:CLYH_1000065 obo:CLYH_1000064)
+SubClassOf(obo:CLYH_1000065 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000023))
+
+# Class: obo:CLYH_1000066 (oral pole of planula larva)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000066 "oral pole of planula larva")
+SubClassOf(obo:CLYH_1000066 obo:CLYH_1000064)
+SubClassOf(obo:CLYH_1000066 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000066 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000065))
+SubClassOf(obo:CLYH_1000066 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+SubClassOf(obo:CLYH_1000066 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000041))
+
+# Class: obo:CLYH_1000067 (oral pole blastomeres)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000067 "oral pole blastomeres")
+SubClassOf(obo:CLYH_1000067 obo:CLYH_1000064)
+SubClassOf(obo:CLYH_1000067 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000024))
+SubClassOf(obo:CLYH_1000067 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000021))
+SubClassOf(obo:CLYH_1000067 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000024))
+
+# Class: obo:CLYH_1000068 (oral pole of blastula)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000068 "oral pole of blastula")
+SubClassOf(obo:CLYH_1000068 obo:CLYH_1000064)
+SubClassOf(obo:CLYH_1000068 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000031))
+SubClassOf(obo:CLYH_1000068 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000067))
+
+# Class: obo:CLYH_1000069 (oral pole of gastrula)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000069 "oral pole of gastrula")
+SubClassOf(obo:CLYH_1000069 obo:CLYH_1000064)
+SubClassOf(obo:CLYH_1000069 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+
+# Class: obo:CLYH_1000070 (aboral territory )
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000070 "aboral territory ")
+SubClassOf(obo:CLYH_1000070 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000070 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000019))
+SubClassOf(obo:CLYH_1000070 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000033))
+
+# Class: obo:CLYH_1000071 (aboral pole of embryo)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000071 "aboral pole of embryo")
+SubClassOf(obo:CLYH_1000071 obo:CLYH_1000070)
+SubClassOf(obo:CLYH_1000071 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000023))
+
+# Class: obo:CLYH_1000072 (aboral pole of planula larva)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000072 "aboral pole of planula larva")
+SubClassOf(obo:CLYH_1000072 obo:CLYH_1000070)
+SubClassOf(obo:CLYH_1000072 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000072 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000071))
+SubClassOf(obo:CLYH_1000072 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+SubClassOf(obo:CLYH_1000072 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000041))
+
+# Class: obo:CLYH_1000073 (aboral pole blastomeres)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000073 "aboral pole blastomeres")
+SubClassOf(obo:CLYH_1000073 obo:CLYH_1000070)
+SubClassOf(obo:CLYH_1000073 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000024))
+SubClassOf(obo:CLYH_1000073 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000021))
+SubClassOf(obo:CLYH_1000073 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000024))
+
+# Class: obo:CLYH_1000074 (aboral pole of blastula)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000074 "aboral pole of blastula")
+SubClassOf(obo:CLYH_1000074 obo:CLYH_1000070)
+SubClassOf(obo:CLYH_1000074 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000031))
+SubClassOf(obo:CLYH_1000074 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000073))
+
+# Class: obo:CLYH_1000075 (aboral pole of gastrula)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000075 "aboral pole of gastrula")
+SubClassOf(obo:CLYH_1000075 obo:CLYH_1000070)
+SubClassOf(obo:CLYH_1000075 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+
+# Class: obo:CLYH_1000076 (blastomere)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000076 "Single cell of a cleavage cel embryo.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000076 "blastomere")
+SubClassOf(obo:CLYH_1000076 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000076 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000024))
+SubClassOf(obo:CLYH_1000076 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000019))
+SubClassOf(obo:CLYH_1000076 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000024))
+
+# Class: obo:CLYH_1000077 (germ cell)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000077 "germ cell")
+SubClassOf(obo:CLYH_1000077 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000077 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000192))
+SubClassOf(obo:CLYH_1000077 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000077 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000078 (male germ cell)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000078 "male germ cell")
+SubClassOf(obo:CLYH_1000078 obo:CLYH_1000077)
+
+# Class: obo:CLYH_1000079 (spermatogonium)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000079 "An undeveloped male germ cell. Spermatogonia develop into primary spermatocytes.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000079 "spermatogonium")
+SubClassOf(obo:CLYH_1000079 obo:CLYH_1000078)
+SubClassOf(obo:CLYH_1000079 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000095))
+
+# Class: obo:CLYH_1000080 (spermatid)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000080 "A male germ cell that develops from the haploid secondary spermatocytes. Without further division, spermatids undergo structural changes and give rise to spermatozoa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000080 "spermatid")
+SubClassOf(obo:CLYH_1000080 obo:CLYH_1000078)
+SubClassOf(obo:CLYH_1000080 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000079))
+SubClassOf(obo:CLYH_1000080 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000066))
+
+# Class: obo:CLYH_1000081 (spermatozoid)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000081 "A mature male germ cell that develops from a spermatid.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000081 "sperm")
+AnnotationAssertion(rdfs:label obo:CLYH_1000081 "spermatozoid")
+SubClassOf(obo:CLYH_1000081 obo:CLYH_1000078)
+SubClassOf(obo:CLYH_1000081 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000080))
+SubClassOf(obo:CLYH_1000081 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000067))
+
+# Class: obo:CLYH_1000082 (female germ cell)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000082 "female germ cell")
+SubClassOf(obo:CLYH_1000082 obo:CLYH_1000077)
+
+# Class: obo:CLYH_1000083 (oogonium)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000083 "An undifferentiated germ cell that proliferates rapidly and gives rise to oocytes.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000083 "oogonium")
+SubClassOf(obo:CLYH_1000083 obo:CLYH_1000082)
+
+# Class: obo:CLYH_1000084 (oocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000084 "A female germ cell that has entered meiosis.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000084 "oocyte")
+SubClassOf(obo:CLYH_1000084 obo:CLYH_1000082)
+SubClassOf(obo:CLYH_1000084 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000083))
+
+# Class: obo:CLYH_1000085 (growing oocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000085 "Oocyte incorporating yolk.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000085 "growing oocyte")
+SubClassOf(obo:CLYH_1000085 obo:CLYH_1000084)
+SubClassOf(obo:CLYH_1000085 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000066))
+
+# Class: obo:CLYH_1000086 (fully grown oocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000086 "Oocyte greater than 150 micrometers in diameter competent to undergo meiotic maturation.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000086 "fully grown oocyte")
+SubClassOf(obo:CLYH_1000086 obo:CLYH_1000084)
+SubClassOf(obo:CLYH_1000086 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000085))
+SubClassOf(obo:CLYH_1000086 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000006))
+SubClassOf(obo:CLYH_1000086 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000008))
+
+# Class: obo:CLYH_1000087 (gamete)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000087 "A mature sexual reproductive cell having a single set of unpaired chromosomes.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000087 "gamete")
+SubClassOf(obo:CLYH_1000087 obo:CL_0000000)
+
+# Class: obo:CLYH_1000088 (egg cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000088 "A female gamete where meiosis is complete and is able to participate in fertilization.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000088 "female gamete")
+AnnotationAssertion(rdfs:label obo:CLYH_1000088 "egg cell")
+SubClassOf(obo:CLYH_1000088 obo:CLYH_1000087)
+SubClassOf(obo:CLYH_1000088 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000086))
+
+# Class: obo:CLYH_1000089 (blastocoel roof cell)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000089 "blastocoel roof cell")
+SubClassOf(obo:CLYH_1000089 obo:CL_0000000)
+SubClassOf(obo:CLYH_1000089 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000089 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000031))
+SubClassOf(obo:CLYH_1000089 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000030))
+
+# Class: obo:CLYH_1000090 (gland cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000090 "Specialized cell participating in mucus secretion.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000090 "gland cell")
+SubClassOf(obo:CLYH_1000090 obo:CL_0000000)
+
+# Class: obo:CLYH_1000091 (planula aboral gland cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000091 "Gland cell located on the aboral side of the planula larva, in the outer layer.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000091 "planula aboral gland cell")
+SubClassOf(obo:CLYH_1000091 obo:CLYH_1000090)
+SubClassOf(obo:CLYH_1000091 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000091 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000092 (planula gland cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000092 "Gland cell located in the inner layer of the planula larva.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000092 "planula gland cell")
+SubClassOf(obo:CLYH_1000092 obo:CLYH_1000090)
+SubClassOf(obo:CLYH_1000092 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000092 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000093 (manubrium gland cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000093 "Gland cell of the manubrium.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000093 "manubrium gland cell")
+SubClassOf(obo:CLYH_1000093 obo:CLYH_1000090)
+SubClassOf(obo:CLYH_1000093 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000093 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000093 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000094 (gastrozoid gland cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000094 "Gland cell of the gastrozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000094 "gastrozoid gland cell")
+SubClassOf(obo:CLYH_1000094 obo:CLYH_1000090)
+SubClassOf(obo:CLYH_1000094 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000150))
+
+# Class: obo:CLYH_1000095 (interstitial cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000095 "Multipotent stem cell.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000095 "interstitial cell")
+SubClassOf(obo:CLYH_1000095 obo:CL_0000000)
+
+# Class: obo:CLYH_1000096 (stolon interstitial cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000096 "Interstitial cell in the stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000096 "stolon interstitial cell")
+SubClassOf(obo:CLYH_1000096 obo:CLYH_1000095)
+SubClassOf(obo:CLYH_1000096 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000096 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000096 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000096 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000097 (embryo interstitial cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000097 "Interstitial cell in the embryo.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000097 "embryo interstitial cell")
+SubClassOf(obo:CLYH_1000097 obo:CLYH_1000095)
+SubClassOf(obo:CLYH_1000097 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000023))
+
+# Class: obo:CLYH_1000098 (planula interstitial cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000098 "Interstitial cell in the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000098 "planula interstitial cell")
+SubClassOf(obo:CLYH_1000098 obo:CLYH_1000095)
+SubClassOf(obo:CLYH_1000098 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+
+# Class: obo:CLYH_1000099 (gastrozoid interstitial cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000099 "Interstitial cell in the feeding polyp.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000099 "gastrozoid interstitial cell")
+SubClassOf(obo:CLYH_1000099 obo:CLYH_1000095)
+SubClassOf(obo:CLYH_1000099 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000150))
+
+# Class: obo:CLYH_1000100 (gonozoid interstitial cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000100 "Interstitial cell within the gonozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000100 "gonozoid interstitial cell")
+SubClassOf(obo:CLYH_1000100 obo:CLYH_1000095)
+SubClassOf(obo:CLYH_1000100 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000100 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000100 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000100 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000101 (manubrium interstital cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000101 "Interstital cell of the manubrium.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000101 "manubrium interstital cell")
+SubClassOf(obo:CLYH_1000101 obo:CLYH_1000095)
+SubClassOf(obo:CLYH_1000101 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000101 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000101 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000102 (nematoblast)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000102 "Differenciating nematocyte.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000102 "nematoblast")
+SubClassOf(obo:CLYH_1000102 obo:CL_0000000)
+
+# Class: obo:CLYH_1000103 (stolon nematoblast)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000103 "Nematoblast in the stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000103 "stolon nematoblast")
+SubClassOf(obo:CLYH_1000103 obo:CLYH_1000102)
+SubClassOf(obo:CLYH_1000103 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000103 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000103 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000103 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000104 (planula nematoblast)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000104 "Nematoblast in the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000104 "planula nematoblast")
+SubClassOf(obo:CLYH_1000104 obo:CLYH_1000102)
+SubClassOf(obo:CLYH_1000104 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+
+# Class: obo:CLYH_1000105 (tentacle bulb nemtoblast)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000105 "Nematoblast of the tentacle bulb.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000105 "tentacle bulb nemtoblast")
+SubClassOf(obo:CLYH_1000105 obo:CLYH_1000102)
+SubClassOf(obo:CLYH_1000105 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000171))
+SubClassOf(obo:CLYH_1000105 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000105 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000106 (manubrium nematoblast)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000106 "Nematoblast of the manubrium.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000106 "manubrium nematoblast")
+SubClassOf(obo:CLYH_1000106 obo:CLYH_1000102)
+SubClassOf(obo:CLYH_1000106 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000106 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000106 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000107 (nematocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000107 "Specialized cell containing one giant explosive secretory organelle called nematocyst used for prey capture and defense from predators.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000107 "nematocyte")
+SubClassOf(obo:CLYH_1000107 obo:CL_0000000)
+
+# Class: obo:CLYH_1000108 (planula nematocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000108 "Nematocyte of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000108 "planula nematocyte")
+SubClassOf(obo:CLYH_1000108 obo:CLYH_1000107)
+SubClassOf(obo:CLYH_1000108 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+
+# Class: obo:CLYH_1000109 (medusa tentacle nematocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000109 "Nematocyte of the medusa tentacle.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000109 "medusa tentacle nematocyte")
+SubClassOf(obo:CLYH_1000109 obo:CLYH_1000107)
+SubClassOf(obo:CLYH_1000109 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000174))
+SubClassOf(obo:CLYH_1000109 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000109 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000110 (manubrium nematocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000110 "Nematocyte located on the manubrium.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000110 "manubrium nematocyte")
+SubClassOf(obo:CLYH_1000110 obo:CLYH_1000107)
+SubClassOf(obo:CLYH_1000110 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000110 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000110 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000111 (gastrozoid tentacle nematocyte)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000111 "Nematocyte located on the tentacle.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000111 "gastrozoid tentacle nematocyte")
+SubClassOf(obo:CLYH_1000111 obo:CLYH_1000107)
+SubClassOf(obo:CLYH_1000111 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000151))
+
+# Class: obo:CLYH_1000112 (neural cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000112 "A cell that is part of the nervous system.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000112 "neural cell")
+SubClassOf(obo:CLYH_1000112 obo:CL_0000000)
+
+# Class: obo:CLYH_1000113 (planula neural cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000113 "Neural cell in the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000113 "planula neural cell")
+SubClassOf(obo:CLYH_1000113 obo:CLYH_1000112)
+SubClassOf(obo:CLYH_1000113 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000040))
+
+# Class: obo:CLYH_1000114 (planula lateral neural cells)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000114 "Neural cell in the mid part of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000114 "planula lateral neural cells")
+SubClassOf(obo:CLYH_1000114 obo:CLYH_1000113)
+SubClassOf(obo:CLYH_1000114 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000114 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000115 (plaunula aboral ectoderm neural cells)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000115 "Neural cell in the aboral part of the planula.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000115 "plaunula aboral ectoderm neural cells")
+SubClassOf(obo:CLYH_1000115 obo:CLYH_1000113)
+SubClassOf(obo:CLYH_1000115 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000035))
+SubClassOf(obo:CLYH_1000115 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000035))
+
+# Class: obo:CLYH_1000116 (nerve cell of the radial canal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000116 "Nerve cells of the radial canal.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000116 "nerve cell of the radial canal")
+SubClassOf(obo:CLYH_1000116 obo:CLYH_1000112)
+SubClassOf(obo:CLYH_1000116 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000182))
+SubClassOf(obo:CLYH_1000116 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000116 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000117 (nerve cell of the circular canal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000117 "Nerve cells of the circular canal.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000117 "nerve cell of the circular canal")
+SubClassOf(obo:CLYH_1000117 obo:CLYH_1000112)
+SubClassOf(obo:CLYH_1000117 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000183))
+SubClassOf(obo:CLYH_1000117 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000117 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000118 (nerve cells of the gonad ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000118 "Nerve cells located in the gonad outer layer.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000118 "nerve cells of the gonad ectoderm")
+SubClassOf(obo:CLYH_1000118 obo:CLYH_1000112)
+SubClassOf(obo:CLYH_1000118 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000192))
+SubClassOf(obo:CLYH_1000118 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000118 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000119 (nerve cell of the tentacle bulb)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000119 "Nerve cell of the medusa tentacle bulb.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000119 "nerve cell of the tentacle bulb")
+SubClassOf(obo:CLYH_1000119 obo:CLYH_1000112)
+SubClassOf(obo:CLYH_1000119 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000170))
+SubClassOf(obo:CLYH_1000119 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000119 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000120 (subumbrella nervous cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000120 "Nervous cells of the subumbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000120 "subumbrella nervous cell")
+SubClassOf(obo:CLYH_1000120 obo:CLYH_1000112)
+SubClassOf(obo:CLYH_1000120 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000163))
+SubClassOf(obo:CLYH_1000120 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000120 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000121 (smooth muscle cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000121 "Epithelial cell containing smooth myofibers.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000121 "smooth muscle cell")
+SubClassOf(obo:CLYH_1000121 obo:CL_0000000)
+
+# Class: obo:CLYH_1000122 (smooth muscle of the velum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000122 "Smooth muscle of the velum.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000122 "smooth muscle of the velum")
+SubClassOf(obo:CLYH_1000122 obo:CLYH_1000121)
+SubClassOf(obo:CLYH_1000122 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000179))
+SubClassOf(obo:CLYH_1000122 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000122 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000123 (subumbrella smooth muscle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000123 "Smooth muscle of the subumbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000123 "subumbrella smooth muscle")
+SubClassOf(obo:CLYH_1000123 obo:CLYH_1000121)
+SubClassOf(obo:CLYH_1000123 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000163))
+SubClassOf(obo:CLYH_1000123 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000123 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000124 (striated muscle cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000124 "Epithelial cell containing striated myofibers.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000124 "striated muscle cell")
+SubClassOf(obo:CLYH_1000124 obo:CL_0000000)
+
+# Class: obo:CLYH_1000125 (striated muscle of the velum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000125 "Striated muscle of the velum.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000125 "striated muscle of the velum")
+SubClassOf(obo:CLYH_1000125 obo:CLYH_1000124)
+SubClassOf(obo:CLYH_1000125 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000179))
+SubClassOf(obo:CLYH_1000125 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000125 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000126 (subumbrella striated muscle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000126 "Striated muscle of the subumbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000126 "subumbrella striated muscle")
+SubClassOf(obo:CLYH_1000126 obo:CLYH_1000124)
+SubClassOf(obo:CLYH_1000126 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000163))
+SubClassOf(obo:CLYH_1000126 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000126 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000127 (polyp colony)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000127 "Connected system of gastrozoid and gonozoid polyps, propagating vegetatively.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000127 "polyp colony")
+SubClassOf(obo:CLYH_1000127 obo:CLYH_1000001)
+SubClassOf(obo:CLYH_1000127 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000040))
+SubClassOf(obo:CLYH_1000127 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000127 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000128 (stolon)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000128 "Tubular structure adhering to the substrate, connecting the bases of the polyps.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000128 "stolon")
+SubClassOf(obo:CLYH_1000128 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000128 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000128 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000128 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000129 (stolon growth tip)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000129 "Growing tip of a stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000129 "stolon growth tip")
+SubClassOf(obo:CLYH_1000129 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000129 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000129 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000129 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000130 (stolon mesoglea)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000130 "Mesoglea layer between the inner and outer layers of the stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000130 "stolon mesoglea")
+SubClassOf(obo:CLYH_1000130 obo:CLYH_1000158)
+SubClassOf(obo:CLYH_1000130 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000130 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000130 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000130 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000131 (stolon body)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000131 "Segments of the stolon between the bases of the polyps, excluding the growing tip.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000131 "stolon body")
+SubClassOf(obo:CLYH_1000131 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000131 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000131 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000131 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000132 (stolon ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000132 "Outer layer within the stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000132 "stolon ectoderm")
+SubClassOf(obo:CLYH_1000132 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000132 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000132 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000132 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000132 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000133 (stolon endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000133 "Inner layer within the stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000133 "stolon endoderm")
+SubClassOf(obo:CLYH_1000133 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000133 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000133 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000133 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000133 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000134 (gonozoid)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000134 "Polyp specialised for production of medusa by budding.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000134 "gonozoid")
+SubClassOf(obo:CLYH_1000134 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000134 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000134 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000134 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000135 (gonozoid cap)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000135 "Structure that closes the distal end of the gonozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000135 "gonozoid cap")
+SubClassOf(obo:CLYH_1000135 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000135 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000135 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000135 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000136 (gonozoid central tube)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000136 "Tubular structure comprising inner and outer layers at the centre of the gonozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000136 "gonozoid central tube")
+SubClassOf(obo:CLYH_1000136 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000136 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000136 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000136 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000137 (gonozoid ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000137 "Outer layer of the gonozoid including central tube and developing buds.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000137 "gonozoid ectoderm")
+SubClassOf(obo:CLYH_1000137 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000137 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000137 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000137 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000137 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000138 (gonozoid endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000138 "Inner layer of the gonozoid including central tube and developing buds.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000138 "gonozoid endoderm")
+SubClassOf(obo:CLYH_1000138 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000138 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000138 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000138 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000138 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000139 (epithelium covering buds)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000139 "Epithelial cell layer positioned between the developing medusa buds and the theca of the gonozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000139 "epithelium covering buds")
+SubClassOf(obo:CLYH_1000139 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000139 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000139 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000139 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000139 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000140 (medusa bud)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000140 "Outgrowth of the gonozoid central tube, within which medusa structures develop.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000140 "medusa bud")
+SubClassOf(obo:CLYH_1000140 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000140 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000140 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000140 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000141 (early medusa bud)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000141 "Outgrowth of the gonozoid central tube, comprising entocodon, endoderm and ectoderm tissue layers.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000141 "early medusa bud")
+SubClassOf(obo:CLYH_1000141 obo:CLYH_1000140)
+
+# Class: obo:CLYH_1000142 (mid medusa bud)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000142 "Bud on the side of the gonozoid central tube, in which all medusa structures are present but not yet expanded to final proportions.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000142 "mid medusa bud")
+SubClassOf(obo:CLYH_1000142 obo:CLYH_1000140)
+
+# Class: obo:CLYH_1000143 (late medusa bud)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000143 "Bud on the side of the gonozoid central tube, containing medusa structures with same proportions as newly released medusa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000143 "late medusa bud")
+SubClassOf(obo:CLYH_1000143 obo:CLYH_1000140)
+
+# Class: obo:CLYH_1000144 (entocodon)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000144 "Group of cells between the inner and outer layers of the early medusa bud.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000144 "entocodon")
+SubClassOf(obo:CLYH_1000144 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000144 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000144 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000144 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000144 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000145 (developing manubrium)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000145 "Developing manubrium within the medusa bud.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000145 "developing manubrium")
+SubClassOf(obo:CLYH_1000145 obo:CLYH_1000187)
+SubClassOf(obo:CLYH_1000145 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000145 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000145 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000145 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000146 (developing tentacle bulbs)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000146 "Developing tentacle bud within the medusa bud.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000146 "developing tentacle bulbs")
+SubClassOf(obo:CLYH_1000146 obo:CLYH_1000168)
+SubClassOf(obo:CLYH_1000146 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000146 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000146 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000146 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000147 (developing radial canal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000147 "Developing radial canal within the medusa bud.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000147 "developing radial canal")
+SubClassOf(obo:CLYH_1000147 obo:CLYH_1000182)
+SubClassOf(obo:CLYH_1000147 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000147 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000147 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000147 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000148 (developing striated muscle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000148 "Developing striated muscle within the medusa bud.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000148 "developing striated muscle")
+SubClassOf(obo:CLYH_1000148 obo:CLYH_1000124)
+SubClassOf(obo:CLYH_1000148 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000148 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000148 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000148 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000149 (developing circular canal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000149 "Developing circular canal within the medusa bud.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000149 "developing circular canal")
+SubClassOf(obo:CLYH_1000149 obo:CLYH_1000183)
+SubClassOf(obo:CLYH_1000149 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000149 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000149 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000149 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000150 (gastrozoid)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000150 "Polyp specialised for catching prey and digesting.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000150 "hydranth")
+AnnotationAssertion(rdfs:label obo:CLYH_1000150 "gastrozoid")
+SubClassOf(obo:CLYH_1000150 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000150 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000128))
+SubClassOf(obo:CLYH_1000150 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000150 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000151 (gastrozoid tentacle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000151 "Tentacle surrounding the gastrozoid mouth.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000151 "gastrozoid tentacle")
+SubClassOf(obo:CLYH_1000151 obo:CLYH_1000005)
+SubClassOf(obo:CLYH_1000151 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000150))
+SubClassOf(obo:CLYH_1000151 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000151 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000152 (gastrozoid mouth)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000152 "Mouth of the gastrozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000152 "gastrozoid mouth")
+SubClassOf(obo:CLYH_1000152 obo:CLYH_1000003)
+SubClassOf(obo:CLYH_1000152 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000150))
+
+# Class: obo:CLYH_1000153 (matrix)
+
+AnnotationAssertion(rdfs:label obo:CLYH_1000153 "matrix")
+SubClassOf(obo:CLYH_1000153 obo:UBERON_0000061)
+
+# Class: obo:CLYH_1000154 (theca)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000154 "Chitinous acellular layer surronding and protecting the polyps.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000154 "theca")
+SubClassOf(obo:CLYH_1000154 obo:CLYH_1000153)
+SubClassOf(obo:CLYH_1000154 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000154 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000154 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000155 (gonotheca)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000155 "Chitinous acellular layer surronding the gonozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000155 "gonotheca")
+SubClassOf(obo:CLYH_1000155 obo:CLYH_1000154)
+SubClassOf(obo:CLYH_1000155 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+
+# Class: obo:CLYH_1000156 (stolon perisarc)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000156 "Chitinous acellular layer surronding the stolon.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000156 "stolon perisarc")
+SubClassOf(obo:CLYH_1000156 obo:CLYH_1000154)
+SubClassOf(obo:CLYH_1000156 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000128))
+
+# Class: obo:CLYH_1000157 (hydrotheca)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000157 "Chitinous acellular layer surronding the gastrozoid.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000157 "hydrotheca")
+SubClassOf(obo:CLYH_1000157 obo:CLYH_1000154)
+SubClassOf(obo:CLYH_1000157 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000150))
+
+# Class: obo:CLYH_1000158 (mesoglea)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000158 "Jelly-like layer between epithelial layer. The mesoglea is mostly acellular and composed of extracellular matrix.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000158 "mesoglea")
+SubClassOf(obo:CLYH_1000158 obo:CLYH_1000153)
+
+# Class: obo:CLYH_1000159 (gonozoid mesoglea)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000159 "Mesoglea layer between the inner and outer tissue layers of the gonozoid central tube.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000159 "gonozoid mesoglea")
+SubClassOf(obo:CLYH_1000159 obo:CLYH_1000158)
+SubClassOf(obo:CLYH_1000159 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000134))
+SubClassOf(obo:CLYH_1000159 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000127))
+SubClassOf(obo:CLYH_1000159 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000049))
+SubClassOf(obo:CLYH_1000159 ObjectSomeValuesFrom(obo:RO_0002492 obo:CLYH_0000059))
+
+# Class: obo:CLYH_1000160 (medusa)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000160 "Swimming pelagic stage of the Clytia hemisphaerica life cycle.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000160 "medusa")
+SubClassOf(obo:CLYH_1000160 obo:CLYH_1000001)
+SubClassOf(obo:CLYH_1000160 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000160 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000161 (umbrella)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000161 "Dome-shaped part of the medusa stage.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000161 "umbrella")
+SubClassOf(obo:CLYH_1000161 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000161 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000161 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000161 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000162 (exumbrella)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000162 "Outer layer of the umbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000162 "exumbrella")
+SubClassOf(obo:CLYH_1000162 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000161))
+SubClassOf(obo:CLYH_1000162 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000162 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000163 (subumbrella)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000163 "Inner layers of the umbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000163 "subumbrella")
+SubClassOf(obo:CLYH_1000163 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000161))
+SubClassOf(obo:CLYH_1000163 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000163 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000164 (subumbrella endodermal plate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000164 "Inner layer of the subumbrella in direct contact with the thick mesoglea layer of the medusa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000164 "subumbrella endodermal plate")
+SubClassOf(obo:CLYH_1000164 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000164 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000163))
+SubClassOf(obo:CLYH_1000164 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000164 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000165 (thick mesoglea layer of the umbrella)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000165 "Thick mesoglea layer of the umbrella forming the bulk of the umbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000165 "thick mesoglea layer of the umbrella")
+SubClassOf(obo:CLYH_1000165 obo:CLYH_1000158)
+SubClassOf(obo:CLYH_1000165 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000165 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000165 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000166 (bell margin)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000166 "Outer border of the umbrella.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000166 "bell margin")
+SubClassOf(obo:CLYH_1000166 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000166 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000161))
+SubClassOf(obo:CLYH_1000166 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000166 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000167 (statocyst)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000167 "Sensory structure of the medusa, located on the bell margin, consisting of a sensory vesicle containing statoliths.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000167 "statocyst")
+SubClassOf(obo:CLYH_1000167 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000167 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000166))
+SubClassOf(obo:CLYH_1000167 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000167 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000168 (medusa tentacle system)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000168 "Medusa tentacle system comprising tentacles, tentacle bulbs and tentacle buds.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000168 "medusa tentacle system")
+SubClassOf(obo:CLYH_1000168 obo:CLYH_1000004)
+SubClassOf(obo:CLYH_1000168 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000166))
+SubClassOf(obo:CLYH_1000168 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000168 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000169 (medusa tentacle bud)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000169 "Initial stage of tentacle bulb formation.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000169 "medusa tentacle bud")
+SubClassOf(obo:CLYH_1000169 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000168))
+SubClassOf(obo:CLYH_1000169 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000169 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000170 (medusa tentacle bulb)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000170 "Swollen structure producing the tentacle and connecting the bell margin to the tentacle.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000170 "medusa tentacle bulb")
+SubClassOf(obo:CLYH_1000170 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000168))
+SubClassOf(obo:CLYH_1000170 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000170 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000171 (nematogenic ectoderm of the bulb)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000171 "Cresent-shaped nematogenic area of the tentacle bulb, located on the oral side of the bulb outer layer.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000171 "nematogenic ectoderm of the bulb")
+SubClassOf(obo:CLYH_1000171 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000171 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000170))
+SubClassOf(obo:CLYH_1000171 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000171 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000172 (non-nematogenic ectoderm of the bulb)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000172 "V-shaped non-nematogenic ectodermal area of the tentacle bulb, located on the aboral side of the bulb.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000172 "non-nematogenic epidermis of the bulb")
+AnnotationAssertion(rdfs:label obo:CLYH_1000172 "non-nematogenic ectoderm of the bulb")
+SubClassOf(obo:CLYH_1000172 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000172 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000170))
+SubClassOf(obo:CLYH_1000172 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000172 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000173 (tentacle bulb endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000173 "Inner layer of the medusa tentacle bulb.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000173 "tentacle bulb gastrodermis")
+AnnotationAssertion(rdfs:label obo:CLYH_1000173 "tentacle bulb endoderm")
+SubClassOf(obo:CLYH_1000173 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000173 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000170))
+SubClassOf(obo:CLYH_1000173 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000173 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000174 (medusa tentacle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000174 "Tentacle of the medusa not including the tentacle bulb.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000174 "medusa tentacle")
+SubClassOf(obo:CLYH_1000174 obo:CLYH_1000005)
+SubClassOf(obo:CLYH_1000174 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000168))
+SubClassOf(obo:CLYH_1000174 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000174 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000175 (primary medusa tentacle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000175 "Four first medusa tentacles of the newly hatched medusa, connected to both radial and circular canals.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000175 "primary medusa tentacle")
+SubClassOf(obo:CLYH_1000175 obo:CLYH_1000174)
+
+# Class: obo:CLYH_1000176 (secondary medusa tentacle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000176 "Medusa tentacle generated after medusa hatching and connected to the circular but not to the radial canal.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000176 "secondary medusa tentacle")
+SubClassOf(obo:CLYH_1000176 obo:CLYH_1000174)
+SubClassOf(obo:CLYH_1000176 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000176 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000066))
+
+# Class: obo:CLYH_1000177 (medusa tentacle ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000177 "Outer layer of the medusa tentacle.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000177 "medusa tentacle epidermis")
+AnnotationAssertion(rdfs:label obo:CLYH_1000177 "medusa tentacle ectoderm")
+SubClassOf(obo:CLYH_1000177 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000177 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000174))
+SubClassOf(obo:CLYH_1000177 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000177 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000178 (medusa tentacle endoderm )
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000178 "Inner layer of the medusa tentacle.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000178 "medusa tentacle endoderm ")
+SubClassOf(obo:CLYH_1000178 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000178 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000174))
+SubClassOf(obo:CLYH_1000178 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000178 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000179 (velum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000179 "A muscular flap of tissue surrounding the margin of the bell.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000179 "velum")
+SubClassOf(obo:CLYH_1000179 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000179 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000166))
+SubClassOf(obo:CLYH_1000179 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000179 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000180 (inner layer of the velum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000180 "Inner layer of the velum.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000180 "inner layer of the velum")
+SubClassOf(obo:CLYH_1000180 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000180 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000179))
+SubClassOf(obo:CLYH_1000180 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000180 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000181 (outerlater of the velum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000181 "Outer layer of the velum.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000181 "outerlater of the velum")
+SubClassOf(obo:CLYH_1000181 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000181 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000179))
+SubClassOf(obo:CLYH_1000181 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000181 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000182 (radial canal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000182 "Canal connecting the manubrium with the bell margin.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000182 "radial canal")
+SubClassOf(obo:CLYH_1000182 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000182 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000182 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000182 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000183 (circular canal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000183 "Canal running along the bell margin.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000183 "circular canal")
+SubClassOf(obo:CLYH_1000183 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000183 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000166))
+SubClassOf(obo:CLYH_1000183 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000183 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000184 (nerve ring)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000184 "Concentration of nerve cell bodies and projections running around the margin of the bell.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000184 "nerve ring")
+SubClassOf(obo:CLYH_1000184 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000184 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000166))
+SubClassOf(obo:CLYH_1000184 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000184 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000185 (inner nerve ring)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000185 "Nerve ring located closest to the centre of the medusa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000185 "inner nerve ring")
+SubClassOf(obo:CLYH_1000185 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000185 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000184))
+SubClassOf(obo:CLYH_1000185 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000185 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000186 (outer nerve ring)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000186 "Nerve ring located farest to the centre of the medusa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000186 "outer nerve ring")
+SubClassOf(obo:CLYH_1000186 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000186 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000184))
+SubClassOf(obo:CLYH_1000186 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000186 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000187 (manubrium)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000187 "Central structure of the medusa bearing the mouth and performing extracellular digestion.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000187 "manubrium")
+SubClassOf(obo:CLYH_1000187 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000187 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000187 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000187 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000188 (medusa mouth)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000188 "Medusa mouth as part of the manubrium.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000188 "medusa mouth")
+SubClassOf(obo:CLYH_1000188 obo:CLYH_1000003)
+SubClassOf(obo:CLYH_1000188 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000188 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000188 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000189 (manubrium roof)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000189 "Inner layer of the manubrium opposite to the mouth and in direct contact with the thick mesoglea layer of the medusa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000189 "manubrium roof")
+SubClassOf(obo:CLYH_1000189 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000189 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000189 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000189 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000190 (manubrium ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000190 "Outer layer of the manubrium.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000190 "manubrium epidermis")
+AnnotationAssertion(rdfs:label obo:CLYH_1000190 "manubrium ectoderm")
+SubClassOf(obo:CLYH_1000190 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000190 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000190 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000190 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000191 (manubrium endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000191 "Inner digestive layer of the manubrium.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000191 "manubrium gastrodermis")
+AnnotationAssertion(rdfs:label obo:CLYH_1000191 "manubrium endoderm")
+SubClassOf(obo:CLYH_1000191 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000191 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000187))
+SubClassOf(obo:CLYH_1000191 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000191 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000192 (gonad)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000192 "Reproductive organ of the medusa.")
+AnnotationAssertion(rdfs:label obo:CLYH_1000192 "gonad")
+SubClassOf(obo:CLYH_1000192 obo:UBERON_0000061)
+SubClassOf(obo:CLYH_1000192 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000192 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000140))
+SubClassOf(obo:CLYH_1000192 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000193 (gonad ectoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000193 "Outer layer of the gonad.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000193 "gonad epidermis")
+AnnotationAssertion(rdfs:label obo:CLYH_1000193 "gonad ectoderm")
+SubClassOf(obo:CLYH_1000193 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000193 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000192))
+SubClassOf(obo:CLYH_1000193 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000193 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CLYH_1000194 (gonad endoderm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CLYH_1000194 "Inner layer of the gonad.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:CLYH_1000194 "gonad gastrodermis")
+AnnotationAssertion(rdfs:label obo:CLYH_1000194 "gonad endoderm")
+SubClassOf(obo:CLYH_1000194 obo:CLYH_1000006)
+SubClassOf(obo:CLYH_1000194 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CLYH_1000192))
+SubClassOf(obo:CLYH_1000194 ObjectSomeValuesFrom(obo:RO_0002202 obo:CLYH_1000160))
+SubClassOf(obo:CLYH_1000194 ObjectSomeValuesFrom(obo:RO_0002488 obo:CLYH_0000065))
+
+# Class: obo:CL_0000000 (cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CL_0000000 "A material entity of anatomical origin (part of or deriving from an organism) that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
+AnnotationAssertion(rdfs:label obo:CL_0000000 "cell")
+
+# Class: obo:GO_0005575 (cellular component)
+
+AnnotationAssertion(rdfs:label obo:GO_0005575 "cellular component")
+SubClassOf(obo:GO_0005575 ObjectSomeValuesFrom(obo:BFO_0000050 obo:CL_0000000))
+
+# Class: obo:GO_0005938 (cell cortex)
+
+AnnotationAssertion(rdfs:label obo:GO_0005938 "cell cortex")
+SubClassOf(obo:GO_0005938 obo:GO_0005575)
+
+# Class: obo:UBERON_0000061 (anatomical structure)
+
+AnnotationAssertion(rdfs:label obo:UBERON_0000061 "anatomical structure")
+
+# Class: obo:UBERON_0000105 (life cycle stage)
+
+AnnotationAssertion(rdfs:label obo:UBERON_0000105 "life cycle stage")
+
+
+)

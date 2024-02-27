@@ -1,0 +1,1301 @@
+Prefix(:=<http://purl.obolibrary.org/obo/bila.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/bila.owl>
+<http://purl.obolibrary.org/obo/bila/releases/2019-06-12/bila.owl>
+Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.000-beta41")
+Annotation(oboInOwl:date "16:07:2008 16:55")
+Annotation(oboInOwl:default-namespace "bila")
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
+Annotation(oboInOwl:saved-by "Thorsten Henrich")
+
+Declaration(Class(obo:BILA_0000000))
+Declaration(Class(obo:BILA_0000003))
+Declaration(Class(obo:BILA_0000004))
+Declaration(Class(obo:BILA_0000005))
+Declaration(Class(obo:BILA_0000006))
+Declaration(Class(obo:BILA_0000007))
+Declaration(Class(obo:BILA_0000008))
+Declaration(Class(obo:BILA_0000009))
+Declaration(Class(obo:BILA_0000010))
+Declaration(Class(obo:BILA_0000011))
+Declaration(Class(obo:BILA_0000012))
+Declaration(Class(obo:BILA_0000013))
+Declaration(Class(obo:BILA_0000014))
+Declaration(Class(obo:BILA_0000015))
+Declaration(Class(obo:BILA_0000016))
+Declaration(Class(obo:BILA_0000017))
+Declaration(Class(obo:BILA_0000018))
+Declaration(Class(obo:BILA_0000019))
+Declaration(Class(obo:BILA_0000020))
+Declaration(Class(obo:BILA_0000021))
+Declaration(Class(obo:BILA_0000024))
+Declaration(Class(obo:BILA_0000027))
+Declaration(Class(obo:BILA_0000028))
+Declaration(Class(obo:BILA_0000029))
+Declaration(Class(obo:BILA_0000030))
+Declaration(Class(obo:BILA_0000032))
+Declaration(Class(obo:BILA_0000034))
+Declaration(Class(obo:BILA_0000035))
+Declaration(Class(obo:BILA_0000036))
+Declaration(Class(obo:BILA_0000037))
+Declaration(Class(obo:BILA_0000038))
+Declaration(Class(obo:BILA_0000039))
+Declaration(Class(obo:BILA_0000040))
+Declaration(Class(obo:BILA_0000041))
+Declaration(Class(obo:BILA_0000042))
+Declaration(Class(obo:BILA_0000043))
+Declaration(Class(obo:BILA_0000044))
+Declaration(Class(obo:BILA_0000045))
+Declaration(Class(obo:BILA_0000046))
+Declaration(Class(obo:BILA_0000047))
+Declaration(Class(obo:BILA_0000048))
+Declaration(Class(obo:BILA_0000049))
+Declaration(Class(obo:BILA_0000050))
+Declaration(Class(obo:BILA_0000051))
+Declaration(Class(obo:BILA_0000052))
+Declaration(Class(obo:BILA_0000053))
+Declaration(Class(obo:BILA_0000054))
+Declaration(Class(obo:BILA_0000055))
+Declaration(Class(obo:BILA_0000056))
+Declaration(Class(obo:BILA_0000057))
+Declaration(Class(obo:BILA_0000058))
+Declaration(Class(obo:BILA_0000059))
+Declaration(Class(obo:BILA_0000060))
+Declaration(Class(obo:BILA_0000061))
+Declaration(Class(obo:BILA_0000062))
+Declaration(Class(obo:BILA_0000063))
+Declaration(Class(obo:BILA_0000064))
+Declaration(Class(obo:BILA_0000065))
+Declaration(Class(obo:BILA_0000066))
+Declaration(Class(obo:BILA_0000067))
+Declaration(Class(obo:BILA_0000068))
+Declaration(Class(obo:BILA_0000069))
+Declaration(Class(obo:BILA_0000070))
+Declaration(Class(obo:BILA_0000071))
+Declaration(Class(obo:BILA_0000072))
+Declaration(Class(obo:BILA_0000073))
+Declaration(Class(obo:BILA_0000074))
+Declaration(Class(obo:BILA_0000075))
+Declaration(Class(obo:BILA_0000076))
+Declaration(Class(obo:BILA_0000077))
+Declaration(Class(obo:BILA_0000078))
+Declaration(Class(obo:BILA_0000079))
+Declaration(Class(obo:BILA_0000080))
+Declaration(Class(obo:BILA_0000081))
+Declaration(Class(obo:BILA_0000082))
+Declaration(Class(obo:BILA_0000083))
+Declaration(Class(obo:BILA_0000084))
+Declaration(Class(obo:BILA_0000085))
+Declaration(Class(obo:BILA_0000086))
+Declaration(Class(obo:BILA_0000087))
+Declaration(Class(obo:BILA_0000088))
+Declaration(Class(obo:BILA_0000099))
+Declaration(Class(obo:BILA_0000103))
+Declaration(Class(obo:BILA_0000104))
+Declaration(Class(obo:BILA_0000115))
+Declaration(Class(obo:BILA_0000116))
+Declaration(Class(obo:BILA_0000117))
+Declaration(Class(obo:BILA_0000118))
+Declaration(Class(obo:BILA_0000122))
+Declaration(Class(obo:BILA_0000123))
+Declaration(Class(obo:BILA_0000124))
+Declaration(Class(obo:BILA_0000125))
+Declaration(Class(obo:BILA_0000126))
+Declaration(Class(obo:BILA_0000127))
+Declaration(Class(obo:BILA_0000128))
+Declaration(Class(obo:BILA_0000132))
+Declaration(Class(obo:BILA_0000133))
+Declaration(Class(obo:BILA_0000134))
+Declaration(Class(obo:BILA_0000135))
+Declaration(Class(obo:BILA_0000136))
+Declaration(Class(obo:BILA_0000139))
+Declaration(Class(obo:BILA_0000140))
+Declaration(Class(obo:BILA_0000142))
+Declaration(Class(obo:BILA_0000143))
+Declaration(Class(obo:BILA_0000144))
+Declaration(Class(obo:BILS_0000105))
+Declaration(Class(obo:BILS_0000106))
+Declaration(Class(obo:BILS_0000107))
+Declaration(Class(obo:BILS_0000108))
+Declaration(Class(obo:BILS_0000109))
+Declaration(Class(obo:BILS_0000110))
+Declaration(Class(obo:BILS_0000111))
+Declaration(Class(obo:BILS_0000112))
+Declaration(Class(obo:BILS_0000113))
+Declaration(ObjectProperty(obo:OBO_REL_precedes))
+Declaration(ObjectProperty(obo:OBO_REL_relationship))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/bila#develops_from>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/bila#part_of>))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:created_by))
+Declaration(AnnotationProperty(oboInOwl:creation_date))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:OBO_REL_precedes (precedes)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:OBO_REL_precedes "bila")
+AnnotationAssertion(oboInOwl:id obo:OBO_REL_precedes "OBO_REL:precedes")
+AnnotationAssertion(rdfs:label obo:OBO_REL_precedes "precedes")
+SubObjectPropertyOf(obo:OBO_REL_precedes obo:OBO_REL_relationship)
+InverseObjectProperties(obo:OBO_REL_precedes <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by>)
+TransitiveObjectProperty(obo:OBO_REL_precedes)
+
+# Object Property: obo:OBO_REL_relationship (relationship)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15892874") obo:IAO_0000115 obo:OBO_REL_relationship "A relationship between two classes (terms). Relationships between classes are expressed in terms of relations on underlying instances.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:OBO_REL_relationship "bila")
+AnnotationAssertion(oboInOwl:id obo:OBO_REL_relationship "OBO_REL:relationship")
+AnnotationAssertion(rdfs:label obo:OBO_REL_relationship "relationship")
+
+# Object Property: <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> (preceded_by)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15892874") obo:IAO_0000115 <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> "P preceded_by P' if and only if: given any process p that instantiates P at a time t, there is some process p' such that p' instantiates P' at time t', and t' is earlier than t.")
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> "relationship")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> "OBO_REL:preceded_by")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> "An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> "preceded_by")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:OBO_REL_relationship)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by>)
+
+# Object Property: <http://purl.obolibrary.org/obo/bila#develops_from> (develops_from)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/bila#develops_from> "bila")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/bila#develops_from> "develops_from")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/bila#develops_from> "develops_from")
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/bila#develops_from>)
+
+# Object Property: <http://purl.obolibrary.org/obo/bila#part_of> (part_of)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace <http://purl.obolibrary.org/obo/bila#part_of> "bila")
+AnnotationAssertion(oboInOwl:id <http://purl.obolibrary.org/obo/bila#part_of> "part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/bila#part_of> "part_of")
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/bila#part_of>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:BILA_0000000 (anatomical entity)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000000 "CARO:0000000")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000000 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000000 "BILA:0000000")
+AnnotationAssertion(rdfs:label obo:BILA_0000000 "anatomical entity")
+
+# Class: obo:BILA_0000003 (anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000003 "Material anatomical entity that has inherent 3D shape and is generated by coordinated expression of the organism's own genome.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000003 "CARO:0000003")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000003 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000003 "BILA:0000003")
+AnnotationAssertion(rdfs:label obo:BILA_0000003 "anatomical structure")
+SubClassOf(obo:BILA_0000003 obo:BILA_0000006)
+
+# Class: obo:BILA_0000004 (portion of organism substance)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000004 "Material anatomical entity in a gaseous, liquid, semisolid or solid state; produced by anatomical structures or derived from inhaled and ingested substances that have been modified by anatomical structures as they pass through the body.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000004 "CARO:0000004")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000004 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000004 "BILA:0000004")
+AnnotationAssertion(rdfs:label obo:BILA_0000004 "portion of organism substance")
+SubClassOf(obo:BILA_0000004 obo:BILA_0000006)
+
+# Class: obo:BILA_0000005 (anatomical space)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000005 "Non-material anatomical entity of three dimensions, that is generated by morphogenetic or other physiologic processes; is surrounded by one or more anatomical structures; contains one or more organism substances or anatomical structures.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000005 "CARO:0000005")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000005 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000005 "BILA:0000005")
+AnnotationAssertion(rdfs:label obo:BILA_0000005 "anatomical space")
+SubClassOf(obo:BILA_0000005 obo:BILA_0000007)
+
+# Class: obo:BILA_0000006 (material anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000006 "Anatomical entity that has mass.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000006 "CARO:0000006")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000006 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000006 "BILA:0000006")
+AnnotationAssertion(rdfs:label obo:BILA_0000006 "material anatomical entity")
+SubClassOf(obo:BILA_0000006 obo:BILA_0000000)
+
+# Class: obo:BILA_0000007 (immaterial anatomical entity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000007 "Anatomical entity that has no mass.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000007 "CARO:0000007")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000007 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000007 "BILA:0000007")
+AnnotationAssertion(rdfs:label obo:BILA_0000007 "immaterial anatomical entity")
+SubClassOf(obo:BILA_0000007 obo:BILA_0000000)
+
+# Class: obo:BILA_0000008 (anatomical line)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000008 "Non-material anatomical entity of one dimension, which forms a boundary of an anatomical surface or is a modulation of an anatomical surface.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000008 "CARO:0000008")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000008 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000008 "BILA:0000008")
+AnnotationAssertion(rdfs:label obo:BILA_0000008 "anatomical line")
+SubClassOf(obo:BILA_0000008 obo:BILA_0000007)
+
+# Class: obo:BILA_0000009 (anatomical point)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000009 "Non-material anatomical entity of zero dimension, which forms a boundary of an anatomical line or surface.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000009 "CARO:0000009")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000009 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000009 "BILA:0000009")
+AnnotationAssertion(rdfs:label obo:BILA_0000009 "anatomical point")
+SubClassOf(obo:BILA_0000009 obo:BILA_0000007)
+
+# Class: obo:BILA_0000010 (anatomical surface)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000010 "Non-material anatomical entity of two dimensions, that is demarcated by anatomical lines or points on the external or internal surfaces of anatomical structures.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000010 "CARO:0000010")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000010 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000010 "BILA:0000010")
+AnnotationAssertion(rdfs:label obo:BILA_0000010 "anatomical surface")
+SubClassOf(obo:BILA_0000010 obo:BILA_0000007)
+
+# Class: obo:BILA_0000011 (anatomical system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000011 "Anatomical group that is has as its parts distinct anatomical structures interconnected by anatomical structures at a lower level of granularity.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000011 "CARO:0000011")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000011 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000011 "BILA:0000011")
+AnnotationAssertion(rdfs:label obo:BILA_0000011 "anatomical system")
+SubClassOf(obo:BILA_0000011 obo:BILA_0000054)
+
+# Class: obo:BILA_0000012 (multi-cellular organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000012 "Anatomical structure that is an individual member of a species and consists of more than one cell.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000012 "CARO:0000012")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000012 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000012 "BILA:0000012")
+AnnotationAssertion(rdfs:label obo:BILA_0000012 "multi-cellular organism")
+SubClassOf(obo:BILA_0000012 obo:BILA_0000003)
+
+# Class: obo:BILA_0000013 (cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000013 "Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000013 "CARO:0000013")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000013 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000013 "BILA:0000013")
+AnnotationAssertion(rdfs:label obo:BILA_0000013 "cell")
+SubClassOf(obo:BILA_0000013 obo:BILA_0000003)
+
+# Class: obo:BILA_0000014 (cell component)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000014 "Anatomical structure that is a direct part of the cell.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000014 "CARO:0000014")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000014 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000014 "BILA:0000014")
+AnnotationAssertion(rdfs:label obo:BILA_0000014 "cell component")
+SubClassOf(obo:BILA_0000014 obo:BILA_0000003)
+SubClassOf(obo:BILA_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000013))
+
+# Class: obo:BILA_0000015 (excretory system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "4DXp:TH") obo:IAO_0000115 obo:BILA_0000015 "The excretory system is the system of an organism that mainly performs the function of excretion, the bodily process of discharging wastes. It is responsible for the elimination of wastes produced by the processes that maintain homeostasis.")
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000015 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000015 "2008-03-05T02:00:00Z")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:BILA_0000015 "renal system")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000015 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000015 "BILA:0000015")
+AnnotationAssertion(rdfs:label obo:BILA_0000015 "excretory system")
+SubClassOf(obo:BILA_0000015 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000122))
+
+# Class: obo:BILA_0000016 (cardiovascular system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000016 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000016 "2008-03-04T11:11:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000016 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000016 "BILA:0000016")
+AnnotationAssertion(rdfs:label obo:BILA_0000016 "cardiovascular system")
+SubClassOf(obo:BILA_0000016 obo:BILA_0000011)
+
+# Class: obo:BILA_0000017 (eye)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11604122") obo:IAO_0000115 obo:BILA_0000017 "The minimum setting for an eye involves a photo-receptor in the vicinity of shading pigment, which allows the detection of the direction of light. A simple eye consists of one photoreceptor and one pigment cell. Such prototype two- celled eyes are found, for example, in trochophora larvae and in planarians. Our definition also includes single photosensitive cells containing both photo- and shading pigment (eg. unicellular algae, turbellarian 'epidermal eyes'), but excludes photoreceptor cells not combined with shading pigment (eg. deep brain photoreceptor cells).")
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000017 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000017 "2008-07-16T03:27:46Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000017 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000017 "BILA:0000017")
+AnnotationAssertion(rdfs:label obo:BILA_0000017 "eye")
+SubClassOf(obo:BILA_0000017 obo:BILA_0000140)
+
+# Class: obo:BILA_0000018 (appendage)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "4DXp:TH") obo:IAO_0000115 obo:BILA_0000018 "An appendage is an external body part, or natural prolongation, that protrudes from an organism's body, such as a vertebrate's limbs.")
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000018 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000018 "2008-04-21T10:24:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000018 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000018 "BILA:0000018")
+AnnotationAssertion(rdfs:label obo:BILA_0000018 "appendage")
+SubClassOf(obo:BILA_0000018 obo:BILA_0000032)
+
+# Class: obo:BILA_0000019 (compound organ component)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000019 "Multi-tissue structure that is part of a compound organ.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000019 "CARO:0000019")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000019 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000019 "BILA:0000019")
+AnnotationAssertion(rdfs:label obo:BILA_0000019 "compound organ component")
+SubClassOf(obo:BILA_0000019 obo:BILA_0000055)
+SubClassOf(obo:BILA_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000024))
+
+# Class: obo:BILA_0000020 (heart)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000020 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000020 "2008-03-04T11:12:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000020 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000020 "BILA:0000020")
+AnnotationAssertion(rdfs:label obo:BILA_0000020 "heart")
+SubClassOf(obo:BILA_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000016))
+
+# Class: obo:BILA_0000021 (simple organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000021 "Multi-tissue structure that is not part of a compound organ.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000021 "CARO:0000021")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000021 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000021 "BILA:0000021")
+AnnotationAssertion(rdfs:label obo:BILA_0000021 "simple organ")
+SubClassOf(obo:BILA_0000021 obo:BILA_0000055)
+
+# Class: obo:BILA_0000024 (compound organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000024 "Anatomical structure that has as its parts two or more multi-tissue structures of at least two different types and which through specific morphogenetic processes forms a single distinct structural unit demarcated by bona fide boundaries from other distinct anatomical structures of different types.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000024 "CARO:0000024")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000024 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000024 "BILA:0000024")
+AnnotationAssertion(rdfs:label obo:BILA_0000024 "compound organ")
+SubClassOf(obo:BILA_0000024 obo:BILA_0000003)
+
+# Class: obo:BILA_0000027 (male organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000027 "Gonochoristic organism that can produce male gametes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000027 "CARO:0000027")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000027 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000027 "BILA:0000027")
+AnnotationAssertion(rdfs:label obo:BILA_0000027 "male organism")
+SubClassOf(obo:BILA_0000027 obo:BILA_0000048)
+
+# Class: obo:BILA_0000028 (female organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000028 "Gonochoristic organism that can produce female gametes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000028 "CARO:0000028")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000028 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000028 "BILA:0000028")
+AnnotationAssertion(rdfs:label obo:BILA_0000028 "female organism")
+SubClassOf(obo:BILA_0000028 obo:BILA_0000048)
+
+# Class: obo:BILA_0000029 (hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000029 "Multi-cellular organism that can produce both male and female gametes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000029 "CARO:0000029")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000029 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000029 "dioecious organism")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000029 "BILA:0000029")
+AnnotationAssertion(rdfs:label obo:BILA_0000029 "hermaphroditic organism")
+SubClassOf(obo:BILA_0000029 obo:BILA_0000012)
+
+# Class: obo:BILA_0000030 (asexual organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000030 "Multi-cellular organism that does not produce gametes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000030 "CARO:0000030")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000030 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000030 "BILA:0000030")
+AnnotationAssertion(rdfs:label obo:BILA_0000030 "asexual organism")
+SubClassOf(obo:BILA_0000030 obo:BILA_0000012)
+
+# Class: obo:BILA_0000032 (organism subdivision)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000032 "Anatomical structure which is a primary subdivision of whole organism. The mereological sum of these is the whole organism.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000032 "CARO:0000032")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000032 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000032 "BILA:0000032")
+AnnotationAssertion(rdfs:label obo:BILA_0000032 "organism subdivision")
+SubClassOf(obo:BILA_0000032 obo:BILA_0000003)
+
+# Class: obo:BILA_0000034 (embryonic structure)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000034 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000034 "2008-03-04T11:34:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000034 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000034 "BILA:0000034")
+AnnotationAssertion(rdfs:label obo:BILA_0000034 "embryonic structure")
+SubClassOf(obo:BILA_0000034 obo:BILA_0000003)
+
+# Class: obo:BILA_0000035 (germ layer)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000035 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000035 "2008-03-04T11:36:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000035 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000035 "BILA:0000035")
+AnnotationAssertion(rdfs:label obo:BILA_0000035 "germ layer")
+SubClassOf(obo:BILA_0000035 obo:BILA_0000034)
+
+# Class: obo:BILA_0000036 (ectoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000036 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000036 "2008-03-04T11:37:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000036 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000036 "BILA:0000036")
+AnnotationAssertion(rdfs:label obo:BILA_0000036 "ectoderm")
+SubClassOf(obo:BILA_0000036 obo:BILA_0000035)
+
+# Class: obo:BILA_0000037 (mesoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000037 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000037 "2008-03-04T11:38:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000037 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000037 "BILA:0000037")
+AnnotationAssertion(rdfs:label obo:BILA_0000037 "mesoderm")
+SubClassOf(obo:BILA_0000037 obo:BILA_0000035)
+
+# Class: obo:BILA_0000038 (endoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000038 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000038 "2008-03-04T11:38:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000038 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000038 "BILA:0000038")
+AnnotationAssertion(rdfs:label obo:BILA_0000038 "endoderm")
+SubClassOf(obo:BILA_0000038 obo:BILA_0000035)
+
+# Class: obo:BILA_0000039 (neuroectoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000039 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000039 "2008-03-04T11:40:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000039 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000039 "BILA:0000039")
+AnnotationAssertion(rdfs:label obo:BILA_0000039 "neuroectoderm")
+SubClassOf(obo:BILA_0000039 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000036))
+
+# Class: obo:BILA_0000040 (acellular anatomical structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000040 "Anatomical structure that consists of cell parts and cell substances and together does not constitute a cell or a tissue.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000040 "CARO:0000040")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000040 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000040 "BILA:0000040")
+AnnotationAssertion(rdfs:label obo:BILA_0000040 "acellular anatomical structure")
+SubClassOf(obo:BILA_0000040 obo:BILA_0000003)
+
+# Class: obo:BILA_0000041 (anatomical cluster)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000041 "Anatomical group that has its parts adjacent to one another.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000041 "CARO:0000041")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000041 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000041 "BILA:0000041")
+AnnotationAssertion(rdfs:label obo:BILA_0000041 "anatomical cluster")
+SubClassOf(obo:BILA_0000041 obo:BILA_0000054)
+
+# Class: obo:BILA_0000042 (extraembryonic structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000042 "Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue or cells that will not contribute to the embryo.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000042 "CARO:0000042")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000042 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000042 "BILA:0000042")
+AnnotationAssertion(rdfs:label obo:BILA_0000042 "extraembryonic structure")
+SubClassOf(obo:BILA_0000042 obo:BILA_0000003)
+
+# Class: obo:BILA_0000043 (portion of tissue)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000043 "Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000043 "CARO:0000043")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000043 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000043 "BILA:0000043")
+AnnotationAssertion(rdfs:label obo:BILA_0000043 "portion of tissue")
+SubClassOf(obo:BILA_0000043 obo:BILA_0000003)
+
+# Class: obo:BILA_0000044 (visceral mesoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000044 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000044 "2008-03-04T11:41:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000044 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000044 "BILA:0000044")
+AnnotationAssertion(rdfs:label obo:BILA_0000044 "visceral mesoderm")
+SubClassOf(obo:BILA_0000044 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000037))
+
+# Class: obo:BILA_0000045 (sequential hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000045 "Hermaphroditic organism that produces gametes first of one sex, and then later of the other sex.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000045 "CARO:0000045")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000045 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000045 "consecutive hermaphroditic organism")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000045 "BILA:0000045")
+AnnotationAssertion(rdfs:label obo:BILA_0000045 "sequential hermaphroditic organism")
+SubClassOf(obo:BILA_0000045 obo:BILA_0000029)
+
+# Class: obo:BILA_0000046 (synchronous hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000046 "Hermaphroditic organism that produces both male and female gametes at the same time.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000046 "CARO:0000046")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000046 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000046 "serially hermaphroditic organism")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000046 "BILA:0000046")
+AnnotationAssertion(rdfs:label obo:BILA_0000046 "synchronous hermaphroditic organism")
+SubClassOf(obo:BILA_0000046 obo:BILA_0000029)
+
+# Class: obo:BILA_0000047 (somatic mesoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000047 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000047 "2008-03-04T11:42:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000047 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000047 "BILA:0000047")
+AnnotationAssertion(rdfs:label obo:BILA_0000047 "somatic mesoderm")
+SubClassOf(obo:BILA_0000047 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000037))
+
+# Class: obo:BILA_0000048 (gonochoristic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000048 "Multi-cellular organism that has male and female sexes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000048 "CARO:0000048")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000048 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000048 "monoecious organism")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000048 "BILA:0000048")
+AnnotationAssertion(rdfs:label obo:BILA_0000048 "gonochoristic organism")
+SubClassOf(obo:BILA_0000048 obo:BILA_0000012)
+
+# Class: obo:BILA_0000049 (protandrous hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000049 "Sequential hermaphroditic organism that produces
+gametes first of the male sex, and then later of the
+female sex.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000049 "CARO:0000049")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000049 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000049 "BILA:0000049")
+AnnotationAssertion(rdfs:label obo:BILA_0000049 "protandrous hermaphroditic organism")
+SubClassOf(obo:BILA_0000049 obo:BILA_0000045)
+
+# Class: obo:BILA_0000050 (protogynous hermaphroditic organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000050 "Sequential hermaphroditic organism that produces
+gametes first of the female sex, and then later of the
+male sex.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000050 "CARO:0000050")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000050 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000050 "BILA:0000050")
+AnnotationAssertion(rdfs:label obo:BILA_0000050 "protogynous hermaphroditic organism")
+SubClassOf(obo:BILA_0000050 obo:BILA_0000045)
+
+# Class: obo:BILA_0000051 (cardiac mesoderm)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000051 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000051 "2008-03-04T11:55:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000051 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000051 "BILA:0000051")
+AnnotationAssertion(rdfs:label obo:BILA_0000051 "cardiac mesoderm")
+SubClassOf(obo:BILA_0000051 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000037))
+
+# Class: obo:BILA_0000052 (blastomere)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000052 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000052 "2008-03-04T11:59:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000052 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000052 "BILA:0000052")
+AnnotationAssertion(rdfs:label obo:BILA_0000052 "blastomere")
+SubClassOf(obo:BILA_0000052 obo:BILA_0000034)
+
+# Class: obo:BILA_0000053 (organizer)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000053 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000053 "2008-03-04T11:59:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000053 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000053 "Spemann's organizer")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000053 "BILA:0000053")
+AnnotationAssertion(rdfs:label obo:BILA_0000053 "organizer")
+SubClassOf(obo:BILA_0000053 obo:BILA_0000034)
+
+# Class: obo:BILA_0000054 (anatomical group)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000054 "Anatomical structure consisting of at least two non-overlapping organs, multi-tissue aggregates or portion of tissues or cells of different types that does not constitute an organism, organ, multi-tissue aggregate, or portion of tissue.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000054 "CARO:0000054")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000054 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000054 "BILA:0000054")
+AnnotationAssertion(rdfs:label obo:BILA_0000054 "anatomical group")
+SubClassOf(obo:BILA_0000054 obo:BILA_0000003)
+
+# Class: obo:BILA_0000055 (multi-tissue structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000055 "Anatomical structure that has as its parts two or more portions of tissue of at least two different types and which through specific morphogenetic processes forms a single distinct structural unit demarcated by bona-fide boundaries from other distinct structural units of different types.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000055 "CARO:0000055")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000055 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000055 "BILA:0000055")
+AnnotationAssertion(rdfs:label obo:BILA_0000055 "multi-tissue structure")
+SubClassOf(obo:BILA_0000055 obo:BILA_0000003)
+
+# Class: obo:BILA_0000056 (embryonic organism)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000056 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000056 "2008-03-04T12:00:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000056 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000056 "developing organism")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000056 "BILA:0000056")
+AnnotationAssertion(rdfs:label obo:BILA_0000056 "embryonic organism")
+SubClassOf(obo:BILA_0000056 obo:BILA_0000012)
+
+# Class: obo:BILA_0000057 (zygote embryo)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000057 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000057 "2008-03-04T12:01:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000057 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000057 "BILA:0000057")
+AnnotationAssertion(rdfs:label obo:BILA_0000057 "zygote embryo")
+SubClassOf(obo:BILA_0000057 obo:BILA_0000056)
+
+# Class: obo:BILA_0000058 (cleaving embryo)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000058 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000058 "2008-03-04T12:01:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000058 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000058 "BILA:0000058")
+AnnotationAssertion(rdfs:label obo:BILA_0000058 "cleaving embryo")
+SubClassOf(obo:BILA_0000058 obo:BILA_0000056)
+SubClassOf(obo:BILA_0000058 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000057))
+
+# Class: obo:BILA_0000059 (blastula embryo)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000059 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000059 "2008-03-04T12:03:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000059 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000059 "BILA:0000059")
+AnnotationAssertion(rdfs:label obo:BILA_0000059 "blastula embryo")
+SubClassOf(obo:BILA_0000059 obo:BILA_0000056)
+SubClassOf(obo:BILA_0000059 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000058))
+
+# Class: obo:BILA_0000060 (gastrula embryo)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000060 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000060 "2008-03-04T12:04:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000060 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000060 "BILA:0000060")
+AnnotationAssertion(rdfs:label obo:BILA_0000060 "gastrula embryo")
+SubClassOf(obo:BILA_0000060 obo:BILA_0000056)
+SubClassOf(obo:BILA_0000060 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000059))
+
+# Class: obo:BILA_0000061 (neurula embryo)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000061 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000061 "2008-03-04T12:05:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000061 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000061 "BILA:0000061")
+AnnotationAssertion(rdfs:label obo:BILA_0000061 "neurula embryo")
+SubClassOf(obo:BILA_0000061 obo:BILA_0000056)
+SubClassOf(obo:BILA_0000061 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000060))
+
+# Class: obo:BILA_0000062 (cell space)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000062 "Anatomical space that is part of a cell.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000062 "CARO:0000062")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000062 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000062 "BILA:0000062")
+AnnotationAssertion(rdfs:label obo:BILA_0000062 "cell space")
+SubClassOf(obo:BILA_0000062 obo:BILA_0000005)
+
+# Class: obo:BILA_0000063 (portion of cell substance)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000063 "Portion of organism substance located within a cell.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000063 "CARO:0000063")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000063 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000063 "BILA:0000063")
+AnnotationAssertion(rdfs:label obo:BILA_0000063 "portion of cell substance")
+SubClassOf(obo:BILA_0000063 obo:BILA_0000004)
+
+# Class: obo:BILA_0000064 (single cell organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000064 "Cell that is an individual member of a species.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000064 "CARO:0000064")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000064 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000064 "BILA:0000064")
+AnnotationAssertion(rdfs:label obo:BILA_0000064 "single cell organism")
+SubClassOf(obo:BILA_0000064 obo:BILA_0000013)
+
+# Class: obo:BILA_0000065 (basal lamina)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000065 "Acellular anatomical structure that consists of a thin sheet of fibrous proteins that underlie and support the cells of an epithelium. It separates the cells of an epithelium from any underlying tissue.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000065 "CARO:0000065")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000065 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000065 "BILA:0000065")
+AnnotationAssertion(rdfs:label obo:BILA_0000065 "basal lamina")
+SubClassOf(obo:BILA_0000065 obo:BILA_0000040)
+
+# Class: obo:BILA_0000066 (epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000066 "Portion of tissue, that consists of one or more layers of epithelial cells connected to each other by cell junctions and which is underlain by a basal lamina.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000066 "CARO:0000066")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000066 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000066 "BILA:0000066")
+AnnotationAssertion(rdfs:label obo:BILA_0000066 "epithelium")
+SubClassOf(obo:BILA_0000066 obo:BILA_0000043)
+
+# Class: obo:BILA_0000067 (simple cuboidal epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000067 "Unilaminar epithelium that consists of a single layer of cuboidal cells.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000067 "CARO:0000067")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000067 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000067 "BILA:0000067")
+AnnotationAssertion(rdfs:label obo:BILA_0000067 "simple cuboidal epithelium")
+SubClassOf(obo:BILA_0000067 obo:BILA_0000073)
+
+# Class: obo:BILA_0000068 (simple columnar epithlium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000068 "Unilaminar epithelium that consists of a single layer of columnar cells.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000068 "CARO:0000068")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000068 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000068 "BILA:0000068")
+AnnotationAssertion(rdfs:label obo:BILA_0000068 "simple columnar epithlium")
+SubClassOf(obo:BILA_0000068 obo:BILA_0000073)
+
+# Class: obo:BILA_0000069 (multilaminar epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000069 "Epithelium that consists of more than one layer of epithelial cells.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000069 "CARO:0000069")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000069 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000069 "BILA:0000069")
+AnnotationAssertion(rdfs:label obo:BILA_0000069 "multilaminar epithelium")
+SubClassOf(obo:BILA_0000069 obo:BILA_0000066)
+
+# Class: obo:BILA_0000070 (simple squamous epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000070 "Unilaminar epithelium that consists of a single layer of squamous cells.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000070 "CARO:0000070")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000070 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000070 "BILA:0000070")
+AnnotationAssertion(rdfs:label obo:BILA_0000070 "simple squamous epithelium")
+SubClassOf(obo:BILA_0000070 obo:BILA_0000073)
+
+# Class: obo:BILA_0000071 (atypical epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000071 "Epithelium that consists of epithelial cells not arranged in one ore more layers.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000071 "CARO:0000071")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000071 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000071 "BILA:0000071")
+AnnotationAssertion(rdfs:label obo:BILA_0000071 "atypical epithelium")
+SubClassOf(obo:BILA_0000071 obo:BILA_0000066)
+
+# Class: obo:BILA_0000072 (cavitated compound organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000072 "Compound organ that contains one or more macroscopic anatomical spaces.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000072 "CARO:0000072")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000072 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000072 "BILA:0000072")
+AnnotationAssertion(rdfs:label obo:BILA_0000072 "cavitated compound organ")
+SubClassOf(obo:BILA_0000072 obo:BILA_0000024)
+
+# Class: obo:BILA_0000073 (unilaminar epithelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000073 "Epithelium that consists of a single layer of epithelial cells.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000073 "CARO:0000073")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000073 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000073 "BILA:0000073")
+AnnotationAssertion(rdfs:label obo:BILA_0000073 "unilaminar epithelium")
+SubClassOf(obo:BILA_0000073 obo:BILA_0000066)
+
+# Class: obo:BILA_0000074 (solid compound organ)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000074 "Compound organ that does not contain macroscopic anatomical spaces.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000074 "CARO:0000074")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000074 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000074 "BILA:0000074")
+AnnotationAssertion(rdfs:label obo:BILA_0000074 "solid compound organ")
+SubClassOf(obo:BILA_0000074 obo:BILA_0000024)
+
+# Class: obo:BILA_0000075 (segmenting embryo)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000075 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000075 "2008-03-04T12:06:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000075 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000075 "BILA:0000075")
+AnnotationAssertion(rdfs:label obo:BILA_0000075 "segmenting embryo")
+SubClassOf(obo:BILA_0000075 obo:BILA_0000056)
+SubClassOf(obo:BILA_0000075 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000061))
+
+# Class: obo:BILA_0000076 (juvenile organism)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000076 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000076 "2008-03-04T12:09:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000076 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000076 "BILA:0000076")
+AnnotationAssertion(rdfs:label obo:BILA_0000076 "juvenile organism")
+SubClassOf(obo:BILA_0000076 obo:BILA_0000012)
+SubClassOf(obo:BILA_0000076 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000075))
+
+# Class: obo:BILA_0000077 (epithelial cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CARO:MAH") obo:IAO_0000115 obo:BILA_0000077 "Cell which has as its part a cytoskeleton that allows for tight cell to cell contact and which has apical-basal cell polarity.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:BILA_0000077 "CARO:0000077")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000077 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000077 "BILA:0000077")
+AnnotationAssertion(rdfs:label obo:BILA_0000077 "epithelial cell")
+SubClassOf(obo:BILA_0000077 obo:BILA_0000013)
+
+# Class: obo:BILA_0000078 (adult organism)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000078 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000078 "2008-03-04T12:10:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000078 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000078 "BILA:0000078")
+AnnotationAssertion(rdfs:label obo:BILA_0000078 "adult organism")
+SubClassOf(obo:BILA_0000078 obo:BILA_0000012)
+SubClassOf(obo:BILA_0000078 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000076))
+
+# Class: obo:BILA_0000079 (nervous system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000079 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000079 "2008-03-04T04:54:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000079 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000079 "BILA:0000079")
+AnnotationAssertion(rdfs:label obo:BILA_0000079 "nervous system")
+SubClassOf(obo:BILA_0000079 obo:BILA_0000011)
+SubClassOf(obo:BILA_0000079 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000039))
+
+# Class: obo:BILA_0000080 (central nervous system)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18192182") obo:IAO_0000115 obo:BILA_0000080 "In physiological terms, a CNS integrates and processes sensory information coming from the periphery, and initiates body-wide responses via neurosecretion into the body fluid or direct stimulation of the body musculature. Anatomically, a CNS is a delimited nervous tissue that comprises distinct agglomerations of functionally specialized neurons (nuclei) interconnected by axon tracts (neuropil). The CNS may be subdivided into separate parts (ganglia). It connects to the periphery via nerves. A CNS thus defined is found in various shapes and degrees of complexity in different animal phyla, including vertebrates and many invertebrates, such as echinoderms, arthropods, nematodes, molluscs and annelids.")
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000080 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000080 "2008-03-04T05:26:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000080 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000080 "CNS")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000080 "BILA:0000080")
+AnnotationAssertion(rdfs:label obo:BILA_0000080 "central nervous system")
+SubClassOf(obo:BILA_0000080 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000079))
+
+# Class: obo:BILA_0000081 (peripheral nervous system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000081 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000081 "2008-03-04T05:27:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000081 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000081 "PNS")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000081 "BILA:0000081")
+AnnotationAssertion(rdfs:label obo:BILA_0000081 "peripheral nervous system")
+SubClassOf(obo:BILA_0000081 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000079))
+
+# Class: obo:BILA_0000082 (digestive system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000082 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000082 "2008-03-04T05:31:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000082 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000082 "alimentary system")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000082 "BILA:0000082")
+AnnotationAssertion(rdfs:label obo:BILA_0000082 "digestive system")
+SubClassOf(obo:BILA_0000082 obo:BILA_0000011)
+
+# Class: obo:BILA_0000083 (digestive tract)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000083 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000083 "2008-03-04T05:40:00Z")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:BILA_0000083 "alimentary canal")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:BILA_0000083 "gastrointestinal tract")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000083 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000083 "<new synonym>")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000083 "BILA:0000083")
+AnnotationAssertion(rdfs:label obo:BILA_0000083 "digestive tract")
+SubClassOf(obo:BILA_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000084))
+SubClassOf(obo:BILA_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000082))
+
+# Class: obo:BILA_0000084 (primitive gut)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000084 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000084 "2008-03-04T05:43:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000084 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000084 "BILA:0000084")
+AnnotationAssertion(rdfs:label obo:BILA_0000084 "primitive gut")
+SubClassOf(obo:BILA_0000084 obo:BILA_0000034)
+
+# Class: obo:BILA_0000085 (foregut)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000085 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000085 "2008-03-04T05:46:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000085 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000085 "BILA:0000085")
+AnnotationAssertion(rdfs:label obo:BILA_0000085 "foregut")
+SubClassOf(obo:BILA_0000085 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000036))
+SubClassOf(obo:BILA_0000085 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000083))
+
+# Class: obo:BILA_0000086 (midgut)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000086 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000086 "2008-03-04T05:47:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000086 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000086 "BILA:0000086")
+AnnotationAssertion(rdfs:label obo:BILA_0000086 "midgut")
+SubClassOf(obo:BILA_0000086 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000038))
+SubClassOf(obo:BILA_0000086 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000083))
+
+# Class: obo:BILA_0000087 (hindgut)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000087 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000087 "2008-03-04T05:47:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000087 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000087 "BILA:0000087")
+AnnotationAssertion(rdfs:label obo:BILA_0000087 "hindgut")
+SubClassOf(obo:BILA_0000087 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#develops_from> obo:BILA_0000036))
+SubClassOf(obo:BILA_0000087 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000083))
+
+# Class: obo:BILA_0000088 (musculature system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000088 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000088 "2008-03-05T11:08:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000088 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000088 "BILA:0000088")
+AnnotationAssertion(rdfs:label obo:BILA_0000088 "musculature system")
+SubClassOf(obo:BILA_0000088 obo:BILA_0000011)
+
+# Class: obo:BILA_0000099 (sensory system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000099 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000099 "2008-03-05T11:35:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000099 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000099 "BILA:0000099")
+AnnotationAssertion(rdfs:label obo:BILA_0000099 "sensory system")
+SubClassOf(obo:BILA_0000099 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000081))
+
+# Class: obo:BILA_0000103 (reproductive system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000103 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000103 "2008-03-05T02:04:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000103 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000103 "BILA:0000103")
+AnnotationAssertion(rdfs:label obo:BILA_0000103 "reproductive system")
+SubClassOf(obo:BILA_0000103 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000122))
+
+# Class: obo:BILA_0000104 (immune system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000104 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000104 "2008-03-05T02:14:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000104 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000104 "BILA:0000104")
+AnnotationAssertion(rdfs:label obo:BILA_0000104 "immune system")
+SubClassOf(obo:BILA_0000104 obo:BILA_0000011)
+
+# Class: obo:BILA_0000115 (head)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "4DXp:TH") obo:IAO_0000115 obo:BILA_0000115 "The head of an animal is the anterior part that usually comprises the brain, eyes, ears, nose, and mouth.")
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000115 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000115 "2008-03-05T03:03:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000115 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000115 "BILA:0000115")
+AnnotationAssertion(rdfs:label obo:BILA_0000115 "head")
+SubClassOf(obo:BILA_0000115 obo:BILA_0000032)
+
+# Class: obo:BILA_0000116 (trunk)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000116 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000116 "2008-03-05T03:04:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000116 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000116 "BILA:0000116")
+AnnotationAssertion(rdfs:label obo:BILA_0000116 "trunk")
+SubClassOf(obo:BILA_0000116 obo:BILA_0000032)
+
+# Class: obo:BILA_0000117 (tail)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000117 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000117 "2008-03-05T03:04:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000117 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000117 "BILA:0000117")
+AnnotationAssertion(rdfs:label obo:BILA_0000117 "tail")
+SubClassOf(obo:BILA_0000117 obo:BILA_0000032)
+
+# Class: obo:BILA_0000118 (surface)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000118 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000118 "2008-03-05T03:04:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000118 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILA_0000118 "skin")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000118 "BILA:0000118")
+AnnotationAssertion(rdfs:label obo:BILA_0000118 "surface")
+SubClassOf(obo:BILA_0000118 obo:BILA_0000032)
+
+# Class: obo:BILA_0000122 (urogenital system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000122 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000122 "2008-03-10T10:10:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000122 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000122 "BILA:0000122")
+AnnotationAssertion(rdfs:label obo:BILA_0000122 "urogenital system")
+SubClassOf(obo:BILA_0000122 obo:BILA_0000011)
+
+# Class: obo:BILA_0000123 (gonad)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000123 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000123 "2008-03-10T10:18:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000123 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000123 "BILA:0000123")
+AnnotationAssertion(rdfs:label obo:BILA_0000123 "gonad")
+SubClassOf(obo:BILA_0000123 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000103))
+
+# Class: obo:BILA_0000124 (testis)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000124 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000124 "2008-03-10T10:18:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000124 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000124 "BILA:0000124")
+AnnotationAssertion(rdfs:label obo:BILA_0000124 "testis")
+SubClassOf(obo:BILA_0000124 obo:BILA_0000123)
+
+# Class: obo:BILA_0000125 (ovary)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000125 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000125 "2008-03-10T10:19:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000125 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000125 "BILA:0000125")
+AnnotationAssertion(rdfs:label obo:BILA_0000125 "ovary")
+SubClassOf(obo:BILA_0000125 obo:BILA_0000123)
+
+# Class: obo:BILA_0000126 (protonephridium)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000126 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000126 "2008-03-10T10:44:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000126 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000126 "BILA:0000126")
+AnnotationAssertion(rdfs:label obo:BILA_0000126 "protonephridium")
+SubClassOf(obo:BILA_0000126 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000015))
+
+# Class: obo:BILA_0000127 (metanephridium)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000127 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000127 "2008-03-10T10:45:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000127 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000127 "BILA:0000127")
+AnnotationAssertion(rdfs:label obo:BILA_0000127 "metanephridium")
+SubClassOf(obo:BILA_0000127 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000015))
+
+# Class: obo:BILA_0000128 (nephros)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000128 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000128 "2008-03-10T10:49:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000128 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000128 "BILA:0000128")
+AnnotationAssertion(rdfs:label obo:BILA_0000128 "nephros")
+
+# Class: obo:BILA_0000132 (visceral muculature)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000132 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000132 "2008-03-10T10:50:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000132 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000132 "BILA:0000132")
+AnnotationAssertion(rdfs:label obo:BILA_0000132 "visceral muculature")
+SubClassOf(obo:BILA_0000132 obo:BILA_0000088)
+
+# Class: obo:BILA_0000133 (somatic musculature)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000133 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000133 "2008-03-10T10:50:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000133 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000133 "BILA:0000133")
+AnnotationAssertion(rdfs:label obo:BILA_0000133 "somatic musculature")
+SubClassOf(obo:BILA_0000133 obo:BILA_0000088)
+
+# Class: obo:BILA_0000134 (cardiac musculature)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000134 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000134 "2008-03-10T10:51:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000134 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000134 "BILA:0000134")
+AnnotationAssertion(rdfs:label obo:BILA_0000134 "cardiac musculature")
+SubClassOf(obo:BILA_0000134 obo:BILA_0000088)
+
+# Class: obo:BILA_0000135 (brain)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000135 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000135 "2008-03-10T10:53:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000135 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000135 "BILA:0000135")
+AnnotationAssertion(rdfs:label obo:BILA_0000135 "brain")
+SubClassOf(obo:BILA_0000135 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000080))
+
+# Class: obo:BILA_0000136 (nerve cord)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000136 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000136 "2008-03-10T10:53:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000136 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000136 "BILA:0000136")
+AnnotationAssertion(rdfs:label obo:BILA_0000136 "nerve cord")
+SubClassOf(obo:BILA_0000136 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/bila#part_of> obo:BILA_0000080))
+
+# Class: obo:BILA_0000139 (chemosensory system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000139 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000139 "2008-03-10T10:55:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000139 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000139 "BILA:0000139")
+AnnotationAssertion(rdfs:label obo:BILA_0000139 "chemosensory system")
+SubClassOf(obo:BILA_0000139 obo:BILA_0000099)
+
+# Class: obo:BILA_0000140 (photosensory system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000140 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000140 "2008-03-10T10:56:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000140 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000140 "BILA:0000140")
+AnnotationAssertion(rdfs:label obo:BILA_0000140 "photosensory system")
+SubClassOf(obo:BILA_0000140 obo:BILA_0000099)
+
+# Class: obo:BILA_0000142 (mechanosensory system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000142 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000142 "2008-03-10T10:58:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000142 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000142 "BILA:0000142")
+AnnotationAssertion(rdfs:label obo:BILA_0000142 "mechanosensory system")
+SubClassOf(obo:BILA_0000142 obo:BILA_0000099)
+
+# Class: obo:BILA_0000143 (gustatory system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000143 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000143 "2008-03-10T11:10:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000143 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000143 "BILA:0000143")
+AnnotationAssertion(rdfs:label obo:BILA_0000143 "gustatory system")
+SubClassOf(obo:BILA_0000143 obo:BILA_0000139)
+
+# Class: obo:BILA_0000144 (olfactory system)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILA_0000144 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILA_0000144 "2008-03-10T11:10:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILA_0000144 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILA_0000144 "BILA:0000144")
+AnnotationAssertion(rdfs:label obo:BILA_0000144 "olfactory system")
+SubClassOf(obo:BILA_0000144 obo:BILA_0000139)
+
+# Class: obo:BILS_0000105 (bilateria developmental stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000105 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000105 "2008-03-05T02:30:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000105 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000105 "BILS:0000105")
+AnnotationAssertion(rdfs:label obo:BILS_0000105 "bilateria developmental stage")
+
+# Class: obo:BILS_0000106 (zygote stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000106 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000106 "2008-03-05T02:30:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000106 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILS_0000106 "one cell stage")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000106 "BILS:0000106")
+AnnotationAssertion(rdfs:label obo:BILS_0000106 "zygote stage")
+SubClassOf(obo:BILS_0000106 obo:BILS_0000105)
+
+# Class: obo:BILS_0000107 (cleavage stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000107 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000107 "2008-03-05T02:31:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000107 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000107 "BILS:0000107")
+AnnotationAssertion(rdfs:label obo:BILS_0000107 "cleavage stage")
+SubClassOf(obo:BILS_0000107 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000107 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000106))
+
+# Class: obo:BILS_0000108 (blastula stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000108 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000108 "2008-03-05T02:33:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000108 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000108 "BILS:0000108")
+AnnotationAssertion(rdfs:label obo:BILS_0000108 "blastula stage")
+SubClassOf(obo:BILS_0000108 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000108 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000107))
+
+# Class: obo:BILS_0000109 (gastrula stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000109 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000109 "2008-03-05T02:36:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000109 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000109 "BILS:0000109")
+AnnotationAssertion(rdfs:label obo:BILS_0000109 "gastrula stage")
+SubClassOf(obo:BILS_0000109 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000109 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000108))
+
+# Class: obo:BILS_0000110 (neurula stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000110 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000110 "2008-03-05T02:36:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000110 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000110 "BILS:0000110")
+AnnotationAssertion(rdfs:label obo:BILS_0000110 "neurula stage")
+SubClassOf(obo:BILS_0000110 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000110 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000109))
+
+# Class: obo:BILS_0000111 (organogenesis stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000111 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000111 "2008-03-05T02:36:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000111 "bila")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:BILS_0000111 "segmentation stage")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000111 "BILS:0000111")
+AnnotationAssertion(rdfs:label obo:BILS_0000111 "organogenesis stage")
+SubClassOf(obo:BILS_0000111 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000111 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000110))
+
+# Class: obo:BILS_0000112 (juvenile stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000112 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000112 "2008-03-05T02:37:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000112 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000112 "BILS:0000112")
+AnnotationAssertion(rdfs:label obo:BILS_0000112 "juvenile stage")
+SubClassOf(obo:BILS_0000112 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000112 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000111))
+
+# Class: obo:BILS_0000113 (adult stage)
+
+AnnotationAssertion(oboInOwl:created_by obo:BILS_0000113 "henrich")
+AnnotationAssertion(oboInOwl:creation_date obo:BILS_0000113 "2008-03-05T02:37:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BILS_0000113 "bila")
+AnnotationAssertion(oboInOwl:id obo:BILS_0000113 "BILS:0000113")
+AnnotationAssertion(rdfs:label obo:BILS_0000113 "adult stage")
+SubClassOf(obo:BILS_0000113 obo:BILS_0000105)
+SubClassOf(obo:BILS_0000113 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBO_REL#_preceded_by> obo:BILS_0000112))
+
+
+)

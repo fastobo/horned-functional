@@ -1,0 +1,1345 @@
+Prefix(:=<http://purl.obolibrary.org/obo/zeco.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(ubprop:=<http://purl.obolibrary.org/obo/ubprop#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/zeco.owl>
+<http://purl.obolibrary.org/obo/zeco/releases/2022-02-14/zeco.owl>
+Annotation(dc:description "Ontology of Zebrafish Experimental Conditions")
+Annotation(dc:title "Zebrafish Experimental Conditions Ontology")
+Annotation(terms:license <https://creativecommons.org/licenses/by/3.0/>)
+Annotation(oboInOwl:default-namespace "zebrafish_experimental_conditions_ontology")
+Annotation(owl:versionInfo "2022-02-14")
+
+Declaration(Class(obo:ZECO_0000100))
+Declaration(Class(obo:ZECO_0000101))
+Declaration(Class(obo:ZECO_0000102))
+Declaration(Class(obo:ZECO_0000103))
+Declaration(Class(obo:ZECO_0000104))
+Declaration(Class(obo:ZECO_0000105))
+Declaration(Class(obo:ZECO_0000106))
+Declaration(Class(obo:ZECO_0000107))
+Declaration(Class(obo:ZECO_0000108))
+Declaration(Class(obo:ZECO_0000109))
+Declaration(Class(obo:ZECO_0000110))
+Declaration(Class(obo:ZECO_0000111))
+Declaration(Class(obo:ZECO_0000112))
+Declaration(Class(obo:ZECO_0000113))
+Declaration(Class(obo:ZECO_0000114))
+Declaration(Class(obo:ZECO_0000115))
+Declaration(Class(obo:ZECO_0000116))
+Declaration(Class(obo:ZECO_0000117))
+Declaration(Class(obo:ZECO_0000118))
+Declaration(Class(obo:ZECO_0000119))
+Declaration(Class(obo:ZECO_0000120))
+Declaration(Class(obo:ZECO_0000121))
+Declaration(Class(obo:ZECO_0000122))
+Declaration(Class(obo:ZECO_0000123))
+Declaration(Class(obo:ZECO_0000124))
+Declaration(Class(obo:ZECO_0000125))
+Declaration(Class(obo:ZECO_0000126))
+Declaration(Class(obo:ZECO_0000127))
+Declaration(Class(obo:ZECO_0000128))
+Declaration(Class(obo:ZECO_0000129))
+Declaration(Class(obo:ZECO_0000130))
+Declaration(Class(obo:ZECO_0000131))
+Declaration(Class(obo:ZECO_0000132))
+Declaration(Class(obo:ZECO_0000133))
+Declaration(Class(obo:ZECO_0000134))
+Declaration(Class(obo:ZECO_0000135))
+Declaration(Class(obo:ZECO_0000136))
+Declaration(Class(obo:ZECO_0000137))
+Declaration(Class(obo:ZECO_0000138))
+Declaration(Class(obo:ZECO_0000139))
+Declaration(Class(obo:ZECO_0000140))
+Declaration(Class(obo:ZECO_0000141))
+Declaration(Class(obo:ZECO_0000142))
+Declaration(Class(obo:ZECO_0000143))
+Declaration(Class(obo:ZECO_0000144))
+Declaration(Class(obo:ZECO_0000145))
+Declaration(Class(obo:ZECO_0000146))
+Declaration(Class(obo:ZECO_0000147))
+Declaration(Class(obo:ZECO_0000148))
+Declaration(Class(obo:ZECO_0000149))
+Declaration(Class(obo:ZECO_0000150))
+Declaration(Class(obo:ZECO_0000151))
+Declaration(Class(obo:ZECO_0000152))
+Declaration(Class(obo:ZECO_0000153))
+Declaration(Class(obo:ZECO_0000154))
+Declaration(Class(obo:ZECO_0000155))
+Declaration(Class(obo:ZECO_0000156))
+Declaration(Class(obo:ZECO_0000157))
+Declaration(Class(obo:ZECO_0000158))
+Declaration(Class(obo:ZECO_0000159))
+Declaration(Class(obo:ZECO_0000160))
+Declaration(Class(obo:ZECO_0000161))
+Declaration(Class(obo:ZECO_0000162))
+Declaration(Class(obo:ZECO_0000163))
+Declaration(Class(obo:ZECO_0000164))
+Declaration(Class(obo:ZECO_0000165))
+Declaration(Class(obo:ZECO_0000166))
+Declaration(Class(obo:ZECO_0000168))
+Declaration(Class(obo:ZECO_0000169))
+Declaration(Class(obo:ZECO_0000170))
+Declaration(Class(obo:ZECO_0000171))
+Declaration(Class(obo:ZECO_0000172))
+Declaration(Class(obo:ZECO_0000173))
+Declaration(Class(obo:ZECO_0000174))
+Declaration(Class(obo:ZECO_0000176))
+Declaration(Class(obo:ZECO_0000177))
+Declaration(Class(obo:ZECO_0000178))
+Declaration(Class(obo:ZECO_0000179))
+Declaration(Class(obo:ZECO_0000180))
+Declaration(Class(obo:ZECO_0000181))
+Declaration(Class(obo:ZECO_0000182))
+Declaration(Class(obo:ZECO_0000183))
+Declaration(Class(obo:ZECO_0000184))
+Declaration(Class(obo:ZECO_0000185))
+Declaration(Class(obo:ZECO_0000186))
+Declaration(Class(obo:ZECO_0000187))
+Declaration(Class(obo:ZECO_0000188))
+Declaration(Class(obo:ZECO_0000189))
+Declaration(Class(obo:ZECO_0000190))
+Declaration(Class(obo:ZECO_0000191))
+Declaration(Class(obo:ZECO_0000192))
+Declaration(Class(obo:ZECO_0000193))
+Declaration(Class(obo:ZECO_0000194))
+Declaration(Class(obo:ZECO_0000195))
+Declaration(Class(obo:ZECO_0000196))
+Declaration(Class(obo:ZECO_0000197))
+Declaration(Class(obo:ZECO_0000198))
+Declaration(Class(obo:ZECO_0000199))
+Declaration(Class(obo:ZECO_0000200))
+Declaration(Class(obo:ZECO_0000201))
+Declaration(Class(obo:ZECO_0000202))
+Declaration(Class(obo:ZECO_0000203))
+Declaration(Class(obo:ZECO_0000204))
+Declaration(Class(obo:ZECO_0000205))
+Declaration(Class(obo:ZECO_0000206))
+Declaration(Class(obo:ZECO_0000207))
+Declaration(Class(obo:ZECO_0000208))
+Declaration(Class(obo:ZECO_0000209))
+Declaration(Class(obo:ZECO_0000210))
+Declaration(Class(obo:ZECO_0000211))
+Declaration(Class(obo:ZECO_0000212))
+Declaration(Class(obo:ZECO_0000213))
+Declaration(Class(obo:ZECO_0000214))
+Declaration(Class(obo:ZECO_0000215))
+Declaration(Class(obo:ZECO_0000216))
+Declaration(Class(obo:ZECO_0000217))
+Declaration(Class(obo:ZECO_0000218))
+Declaration(Class(obo:ZECO_0000219))
+Declaration(Class(obo:ZECO_0000220))
+Declaration(Class(obo:ZECO_0000221))
+Declaration(Class(obo:ZECO_0000222))
+Declaration(Class(obo:ZECO_0000223))
+Declaration(Class(obo:ZECO_0000224))
+Declaration(Class(obo:ZECO_0000225))
+Declaration(Class(obo:ZECO_0000226))
+Declaration(Class(obo:ZECO_0000227))
+Declaration(Class(obo:ZECO_0000228))
+Declaration(Class(obo:ZECO_0000229))
+Declaration(Class(obo:ZECO_0000230))
+Declaration(Class(obo:ZECO_0000231))
+Declaration(Class(obo:ZECO_0000232))
+Declaration(Class(obo:ZECO_0000233))
+Declaration(Class(obo:ZECO_0000234))
+Declaration(Class(obo:ZECO_0000235))
+Declaration(Class(obo:ZECO_0000236))
+Declaration(Class(obo:ZECO_0000237))
+Declaration(Class(obo:ZECO_0000238))
+Declaration(Class(obo:ZECO_0000239))
+Declaration(Class(obo:ZECO_0000240))
+Declaration(Class(obo:ZECO_0000241))
+Declaration(Class(obo:ZECO_0000242))
+Declaration(Class(obo:ZECO_0000243))
+Declaration(Class(obo:ZECO_0000244))
+Declaration(Class(obo:ZECO_0000245))
+Declaration(Class(obo:ZECO_0000246))
+Declaration(Class(obo:ZECO_0000247))
+Declaration(Class(obo:ZECO_0000248))
+Declaration(Class(obo:ZECO_0000249))
+Declaration(Class(obo:ZECO_0000250))
+Declaration(Class(obo:ZECO_0000251))
+Declaration(Class(obo:ZECO_0000252))
+Declaration(Class(obo:ZECO_0000253))
+Declaration(Class(obo:ZECO_0000254))
+Declaration(Class(obo:ZECO_0000255))
+Declaration(Class(obo:ZECO_0000256))
+Declaration(Class(obo:ZECO_0000259))
+Declaration(Class(obo:ZECO_0000260))
+Declaration(Class(obo:ZECO_0000261))
+Declaration(Class(obo:ZECO_0000262))
+Declaration(Class(obo:ZECO_0000263))
+Declaration(Class(obo:ZECO_0000264))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:RO_0002211))
+Declaration(AnnotationProperty(obo:IAO_0000111))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000114))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000116))
+Declaration(AnnotationProperty(obo:IAO_0000117))
+Declaration(AnnotationProperty(obo:IAO_0000118))
+Declaration(AnnotationProperty(obo:IAO_0000119))
+Declaration(AnnotationProperty(obo:IAO_0000232))
+Declaration(AnnotationProperty(obo:IAO_0000589))
+Declaration(AnnotationProperty(obo:IAO_0000600))
+Declaration(AnnotationProperty(obo:IAO_0100001))
+Declaration(AnnotationProperty(obo:RO_0001900))
+Declaration(AnnotationProperty(obo:RO_0040042))
+Declaration(AnnotationProperty(obo:ZECO_0000267))
+Declaration(AnnotationProperty(obo:valid_for_go_annotation_extension))
+Declaration(AnnotationProperty(obo:valid_for_go_gp2term))
+Declaration(AnnotationProperty(obo:valid_for_go_ontology))
+Declaration(AnnotationProperty(obo:valid_for_gocam))
+Declaration(AnnotationProperty(ubprop:_upper_level))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:license))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(terms:license))
+Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:consider))
+Declaration(AnnotationProperty(oboInOwl:created_by))
+Declaration(AnnotationProperty(oboInOwl:creation_date))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:inSubset))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(oboInOwl:shorthand))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000115 obo:IAO_0000122)
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: obo:IAO_0100001 (term replaced by)
+
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0100001 obo:IAO_0000125)
+AnnotationAssertion(rdfs:label obo:IAO_0100001 "term replaced by")
+AnnotationAssertion(rdfs:label obo:IAO_0100001 "term replaced by"@en)
+
+# Annotation Property: obo:ZECO_0000267 (ZECO_AGR_slim)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000267 "ZECO_AGR_slim"@en)
+SubAnnotationPropertyOf(obo:ZECO_0000267 oboInOwl:SubsetProperty)
+
+# Annotation Property: obo:valid_for_go_annotation_extension (obo:valid_for_go_annotation_extension)
+
+SubAnnotationPropertyOf(obo:valid_for_go_annotation_extension oboInOwl:SubsetProperty)
+
+# Annotation Property: obo:valid_for_go_gp2term (obo:valid_for_go_gp2term)
+
+SubAnnotationPropertyOf(obo:valid_for_go_gp2term oboInOwl:SubsetProperty)
+
+# Annotation Property: obo:valid_for_go_ontology (obo:valid_for_go_ontology)
+
+SubAnnotationPropertyOf(obo:valid_for_go_ontology oboInOwl:SubsetProperty)
+
+# Annotation Property: obo:valid_for_gocam (obo:valid_for_gocam)
+
+SubAnnotationPropertyOf(obo:valid_for_gocam oboInOwl:SubsetProperty)
+
+# Annotation Property: ubprop:_upper_level (ubprop:_upper_level)
+
+AnnotationAssertion(rdfs:comment ubprop:_upper_level "abstract upper-level terms not directly useful for analysis")
+SubAnnotationPropertyOf(ubprop:_upper_level oboInOwl:SubsetProperty)
+
+# Annotation Property: oboInOwl:SubsetProperty (subset_property)
+
+AnnotationAssertion(rdfs:label oboInOwl:SubsetProperty "subset_property")
+
+# Annotation Property: oboInOwl:consider (consider)
+
+AnnotationAssertion(rdfs:label oboInOwl:consider "consider")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+# Annotation Property: oboInOwl:inSubset (in_subset)
+
+AnnotationAssertion(rdfs:label oboInOwl:inSubset "in_subset")
+
+# Annotation Property: oboInOwl:shorthand (shorthand)
+
+AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(obo:IAO_0000111 obo:BFO_0000050 "is part of"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "my brain is part of my body (continuant parthood, two material entities)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "this day is part of this year (occurrent parthood)"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000050 "a core relation that holds between a part and its whole"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000050 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000050 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000050 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."@en)
+AnnotationAssertion(obo:IAO_0000118 obo:BFO_0000050 "part_of"@en)
+AnnotationAssertion(obo:RO_0001900 obo:BFO_0000050 obo:RO_0001901)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000002)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000003)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000004)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000017)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000019)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000020)
+AnnotationAssertion(obo:RO_0040042 obo:BFO_0000050 obo:BFO_0000031)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000050 obo:valid_for_go_annotation_extension)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000050 obo:valid_for_go_gp2term)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000050 obo:valid_for_go_ontology)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000050 obo:valid_for_gocam)
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of"@en)
+AnnotationAssertion(rdfs:seeAlso obo:BFO_0000050 <http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections>)
+AnnotationAssertion(rdfs:seeAlso obo:BFO_0000050 <http://ontologydesignpatterns.org/wiki/Submissions:PartOf>)
+AnnotationAssertion(rdfs:seeAlso obo:BFO_0000050 "http://www.obofoundry.org/ro/#OBO_REL:part_of")
+InverseObjectProperties(obo:BFO_0000050 obo:BFO_0000051)
+TransitiveObjectProperty(obo:BFO_0000050)
+
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(obo:IAO_0000111 obo:BFO_0000051 "has part"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000051 "my body has part my brain (continuant parthood, two material entities)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000051 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000051 "this year has part this day (occurrent parthood)"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."@en)
+AnnotationAssertion(obo:IAO_0000118 obo:BFO_0000051 "has_part"@en)
+AnnotationAssertion(obo:RO_0001900 obo:BFO_0000051 obo:RO_0001901)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000051 obo:valid_for_go_annotation_extension)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000051 obo:valid_for_go_ontology)
+AnnotationAssertion(oboInOwl:inSubset obo:BFO_0000051 obo:valid_for_gocam)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
+TransitiveObjectProperty(obo:BFO_0000051)
+
+# Object Property: obo:RO_0002211 (regulates)
+
+AnnotationAssertion(obo:IAO_0000114 obo:RO_0002211 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002211 "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2.")
+AnnotationAssertion(obo:IAO_0000116 obo:RO_0002211 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit")
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002211 "Chris Mungall")
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002211 "David Hill")
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002211 "Tanya Berardini")
+AnnotationAssertion(obo:IAO_0000119 obo:RO_0002211 <http://purl.obolibrary.org/obo/ro/docs/causal-relations>)
+AnnotationAssertion(obo:IAO_0000119 obo:RO_0002211 "GO")
+AnnotationAssertion(obo:IAO_0000232 obo:RO_0002211 "Regulation precludes parthood; the regulatory process may not be within the regulated process.")
+AnnotationAssertion(obo:IAO_0000589 obo:RO_0002211 "regulates (processual)")
+AnnotationAssertion(obo:IAO_0000600 obo:RO_0002211 "false"^^xsd:boolean)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002211 obo:valid_for_go_annotation_extension)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002211 obo:valid_for_go_ontology)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002211 obo:valid_for_gocam)
+AnnotationAssertion(rdfs:label obo:RO_0002211 "regulates"@en)
+TransitiveObjectProperty(obo:RO_0002211)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:ZECO_0000100 (conditions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000100 "The state in which an organism exists. ")
+AnnotationAssertion(rdfs:label obo:ZECO_0000100 "conditions"@en)
+
+# Class: obo:ZECO_0000101 (control conditions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000101 "Condition which serves as a standard against which experimental conditions can be compared.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000101 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000101 "control conditions"@en)
+SubClassOf(obo:ZECO_0000101 obo:ZECO_0000100)
+
+# Class: obo:ZECO_0000102 (generic control)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000102 "Control condition in which the conditions of the organism in the control experiment are not standard but are being used as the condition against which the experimental condition is compared.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000102 "innocuous condition")
+AnnotationAssertion(rdfs:label obo:ZECO_0000102 "generic control"@en)
+SubClassOf(obo:ZECO_0000102 obo:ZECO_0000101)
+
+# Class: obo:ZECO_0000103 (standard conditions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000103 "Experimental condition that is the standard environment for zebrafish husbandry, as described in ‘The Zebrafish Book’. In general the standard environment utilizes contaminant free tank water, heated to 28.5 degrees C, with the fish fed a normal contaminant free diet, with standard osmolarity, pH, and normal light cycle of 14hr light/10hr dark.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000103 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000103 "standard conditions"@en)
+SubClassOf(obo:ZECO_0000103 obo:ZECO_0000100)
+
+# Class: obo:ZECO_0000104 (experimental conditions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000104 "Condition in which variables of the experiment are manipulated to determine the variables effect by comparing to a control condition.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000104 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000104 "experimental conditions"@en)
+SubClassOf(obo:ZECO_0000104 obo:ZECO_0000100)
+
+# Class: obo:ZECO_0000105 (biological treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000105 "Experimental condition in which the organism is treated with a microorganism.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000105 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000105 "biological treatment"@en)
+SubClassOf(obo:ZECO_0000105 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000106 (bacterial treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000106 "Biological treatment in which fish have been infected with bacteria. This infection can be done by addition of bacteria in the water or by injection of bacteria, (for example in the brain ventricle, in the caudal vein, in the yolk sac), or ingestion, or other means.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000106 "bacterial treatment"@en)
+SubClassOf(obo:ZECO_0000106 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000107 (fungal treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000107 "Biological treatment in which fish have been infected with a fungus.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000107 "fungal treatment"@en)
+SubClassOf(obo:ZECO_0000107 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000108 (germ free)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000108 "Biological treatment in which fish were raised in the absence of bacteria.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000108 "germ free"@en)
+SubClassOf(obo:ZECO_0000108 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000109 (protozoan treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000109 "Biological treatment in which fish have been infected with protozoa.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000109 "protozoan treatment"@en)
+SubClassOf(obo:ZECO_0000109 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000110 (viral treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000110 "Biological treatment in which fish have been infected with a virus.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000110 "viral treatment"@en)
+SubClassOf(obo:ZECO_0000110 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000111 (chemical treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000111 "Experimental condition in which the fish is treated with a chemical substance. This treatment could be administered by adding the chemical substance to the tank water, injections, or by consumption.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000111 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000111 "chemical treatment"@en)
+SubClassOf(obo:ZECO_0000111 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000112 (diet)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000112 "Experimental condition where the food of the zebrafish is manipulated in some way.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000112 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000112 "diet"@en)
+SubClassOf(obo:ZECO_0000112 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000113 (food availability)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000113 "Experimental condition in which the availability of food is manipulated.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000113 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000113 "food availability"@en)
+SubClassOf(obo:ZECO_0000113 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000114 (fasting)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000114 "Limited food availability condition in which there is no food provided.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000114 "fasting"@en)
+SubClassOf(obo:ZECO_0000114 obo:ZECO_0000115)
+
+# Class: obo:ZECO_0000115 (limited food availability)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000115 "Food availability condition in which food is provided in limited supply.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000115 "limited food availability"@en)
+SubClassOf(obo:ZECO_0000115 obo:ZECO_0000113)
+
+# Class: obo:ZECO_0000116 (unlimited food availability)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000116 "Food availability condition in which food is available in unlimited supply.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000116 "unlimited food availability"@en)
+SubClassOf(obo:ZECO_0000116 obo:ZECO_0000247)
+
+# Class: obo:ZECO_0000117 (food content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000117 "Diet condition in which the contents of the food is manipulated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000117 "food content"@en)
+SubClassOf(obo:ZECO_0000117 obo:ZECO_0000112)
+
+# Class: obo:ZECO_0000118 (cholesterol content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000118 "Food content condition in which the amount of cholesterol in the diet is manipulated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000118 "cholesterol content"@en)
+SubClassOf(obo:ZECO_0000118 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000119 (high cholesterol)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000119 "Cholesterol content condition in which the amount of cholesterol in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000119 "high cholesterol"@en)
+SubClassOf(obo:ZECO_0000119 obo:ZECO_0000118)
+
+# Class: obo:ZECO_0000120 (low cholesterol)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000120 "Cholesterol content condition in which the amount of cholesterol in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000120 "low cholesterol"@en)
+SubClassOf(obo:ZECO_0000120 obo:ZECO_0000118)
+
+# Class: obo:ZECO_0000121 (fat content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000121 "Food content condition in which the amount of fat in the diet is manipulated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000121 "fat content"@en)
+SubClassOf(obo:ZECO_0000121 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000122 (high fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000122 "Fat content condition in which the amount of fat in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000122 "high fat"@en)
+SubClassOf(obo:ZECO_0000122 obo:ZECO_0000121)
+SubClassOf(obo:ZECO_0000122 obo:ZECO_0000251)
+
+# Class: obo:ZECO_0000123 (high saturated fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000123 "High fat condition in which the amount of saturated fat in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000123 "high saturated fat"@en)
+SubClassOf(obo:ZECO_0000123 obo:ZECO_0000122)
+
+# Class: obo:ZECO_0000124 (high monounsaturated fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000124 "High fat condition in which the amount of monounsaturated fat in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000124 "high monounsaturated fat"@en)
+SubClassOf(obo:ZECO_0000124 obo:ZECO_0000122)
+
+# Class: obo:ZECO_0000125 (low fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000125 "Fat content condition in which the amount of fat in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000125 "low fat"@en)
+SubClassOf(obo:ZECO_0000125 obo:ZECO_0000121)
+SubClassOf(obo:ZECO_0000125 obo:ZECO_0000250)
+
+# Class: obo:ZECO_0000126 (low trans fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000126 "Low fat condition in which the amount of trans fat in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000126 "low trans fat"@en)
+SubClassOf(obo:ZECO_0000126 obo:ZECO_0000125)
+
+# Class: obo:ZECO_0000127 (low polyunsaturated fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000127 "Low fat condition in which the amount of polyunsaturated fat in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000127 "low polyunsaturated fat"@en)
+SubClassOf(obo:ZECO_0000127 obo:ZECO_0000125)
+
+# Class: obo:ZECO_0000128 (protein content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000128 "Food content condition in which the amount of protein in the diet is manipulated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000128 "protein content"@en)
+SubClassOf(obo:ZECO_0000128 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000129 (high protein)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000129 "Protein content condition in which the protein in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000129 "high protein"@en)
+SubClassOf(obo:ZECO_0000129 obo:ZECO_0000128)
+SubClassOf(obo:ZECO_0000129 obo:ZECO_0000251)
+
+# Class: obo:ZECO_0000130 (low protein)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000130 "Protein content condition in which the protein in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000130 "low protein"@en)
+SubClassOf(obo:ZECO_0000130 obo:ZECO_0000128)
+SubClassOf(obo:ZECO_0000130 obo:ZECO_0000250)
+
+# Class: obo:ZECO_0000131 (stress)
+
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000131 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000131 "stress"@en)
+SubClassOf(obo:ZECO_0000131 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000132 (high sugar)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000132 "High carbohydrate conditions in which the amount of sugar in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000132 "high sugar"@en)
+SubClassOf(obo:ZECO_0000132 obo:ZECO_0000241)
+
+# Class: obo:ZECO_0000133 (high fructose)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000133 "High sugar condition in which the amount of fructose in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000133 "high fructose"@en)
+SubClassOf(obo:ZECO_0000133 obo:ZECO_0000132)
+
+# Class: obo:ZECO_0000134 (high glucose)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000134 "High sugar condition in which the amount of glucose in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000134 "high glucose"@en)
+SubClassOf(obo:ZECO_0000134 obo:ZECO_0000132)
+
+# Class: obo:ZECO_0000135 (high sucrose)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000135 "High sugar condition in which the amount of sucrose in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000135 "high sucrose"@en)
+SubClassOf(obo:ZECO_0000135 obo:ZECO_0000132)
+
+# Class: obo:ZECO_0000136 (low sugar)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000136 "High carbohydrate conditions in which the amount of sugar in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000136 "low sugar"@en)
+SubClassOf(obo:ZECO_0000136 obo:ZECO_0000242)
+
+# Class: obo:ZECO_0000137 (low sucrose)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000137 "Low sugar condition in which the amount of sucrose in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000137 "low sucrose"@en)
+SubClassOf(obo:ZECO_0000137 obo:ZECO_0000136)
+
+# Class: obo:ZECO_0000138 (low fructose)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000138 "Low sugar condition in which the amount of fructose in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000138 "low fructose"@en)
+SubClassOf(obo:ZECO_0000138 obo:ZECO_0000136)
+
+# Class: obo:ZECO_0000139 (low glucose)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000139 "Low sugar condition in which the amount of glucose in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000139 "low glucose"@en)
+SubClassOf(obo:ZECO_0000139 obo:ZECO_0000136)
+
+# Class: obo:ZECO_0000140 (housing conditions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000140 "Experimental condition that manipulates the enclosure of the fish.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000140 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000140 "housing conditions"@en)
+SubClassOf(obo:ZECO_0000140 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000141 (open roofed)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000141 "Housing condition in which the roof of the enclosure if open.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000141 "open roofed"@en)
+SubClassOf(obo:ZECO_0000141 obo:ZECO_0000140)
+
+# Class: obo:ZECO_0000142 (overcrowding)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000142 "Housing condition in which the enclosure of the fish is overcrowded, containing an excess of fish that reduces the available space of the enclosure.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000142 "high density")
+AnnotationAssertion(rdfs:label obo:ZECO_0000142 "overcrowding"@en)
+SubClassOf(obo:ZECO_0000142 obo:ZECO_0000140)
+
+# Class: obo:ZECO_0000143 (in vitro culture)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000143 "Experimental condition in which components of the fish have been removed and are maintained separately.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000143 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000143 "in vitro culture"@en)
+SubClassOf(obo:ZECO_0000143 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000144 (organ culture)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000144 "In vitro culture condition in which an organ is dissected/isolated/collected from the fish and placed in culture. The analysis of the experiment is done on this organ in culture.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000144 "organ culture"@en)
+SubClassOf(obo:ZECO_0000144 obo:ZECO_0000143)
+
+# Class: obo:ZECO_0000145 (primary cell culture)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000145 "In vitro culture condition in which an embryo or adult fish is dissociated to a single cell suspension. The analysis is made on this cell culture.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000145 "primary cell culture"@en)
+SubClassOf(obo:ZECO_0000145 obo:ZECO_0000143)
+
+# Class: obo:ZECO_0000146 (lighting conditions)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000146 "Experimental condition in which the intensity, wavelength, and/or duration of illumination is (are) different from the one in controlled conditions.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000146 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000146 "lighting conditions"@en)
+SubClassOf(obo:ZECO_0000146 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000147 (light duration)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000147 "light duration"@en)
+SubClassOf(obo:ZECO_0000147 obo:ZECO_0000146)
+
+# Class: obo:ZECO_0000148 (altered light dark cycle)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000148 "altered light dark cycle"@en)
+SubClassOf(obo:ZECO_0000148 obo:ZECO_0000147)
+
+# Class: obo:ZECO_0000149 (constant dark)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000149 "constant dark"@en)
+SubClassOf(obo:ZECO_0000149 obo:ZECO_0000147)
+
+# Class: obo:ZECO_0000150 (constant light)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000150 "constant light"@en)
+SubClassOf(obo:ZECO_0000150 obo:ZECO_0000147)
+
+# Class: obo:ZECO_0000151 (light intensity)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000151 "light intensity"@en)
+SubClassOf(obo:ZECO_0000151 obo:ZECO_0000146)
+
+# Class: obo:ZECO_0000152 (high light intensity)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000152 "high light intensity"@en)
+SubClassOf(obo:ZECO_0000152 obo:ZECO_0000151)
+
+# Class: obo:ZECO_0000153 (low light intensity)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000153 "low light intensity"@en)
+SubClassOf(obo:ZECO_0000153 obo:ZECO_0000151)
+
+# Class: obo:ZECO_0000154 (gravity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000154 "Experimental condition in which gravity forces are manipulated. For zebrafish, this can be in the form of centrifugal forces or trips to outerspace.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000154 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000154 "gravity"@en)
+SubClassOf(obo:ZECO_0000154 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000155 (mechanical stress)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000155 "Experimental condition in which an external mechanical force is applied to the fish or part of the fish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000155 "mechanical stress"@en)
+SubClassOf(obo:ZECO_0000155 obo:ZECO_0000131)
+
+# Class: obo:ZECO_0000156 (vibration)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000156 "vibration"@en)
+SubClassOf(obo:ZECO_0000156 obo:ZECO_0000155)
+
+# Class: obo:ZECO_0000157 (water flow)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000157 "water flow"@en)
+SubClassOf(obo:ZECO_0000157 obo:ZECO_0000155)
+
+# Class: obo:ZECO_0000158 (circular flow)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000158 "circular flow"@en)
+SubClassOf(obo:ZECO_0000158 obo:ZECO_0000157)
+
+# Class: obo:ZECO_0000159 (through flow)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000159 "through flow"@en)
+SubClassOf(obo:ZECO_0000159 obo:ZECO_0000157)
+
+# Class: obo:ZECO_0000160 (temperature exposure)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000160 "Experimental condition in which the zebrafish is exposed to an increased or decreased temperature.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000160 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000160 "temperature exposure"@en)
+SubClassOf(obo:ZECO_0000160 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000161 (stable temperature exposure)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000161 "Temperature exposure condition in which fish are raised in temperature different (lower or higher) than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000161 "stable temperature exposure"@en)
+SubClassOf(obo:ZECO_0000161 obo:ZECO_0000160)
+
+# Class: obo:ZECO_0000162 (cold exposure)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000162 "Temperature exposure condition in which fish are raised in temperature that is lower than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000162 "cold exposure"@en)
+SubClassOf(obo:ZECO_0000162 obo:ZECO_0000161)
+
+# Class: obo:ZECO_0000163 (heat exposure)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000163 "Temperature exposure condition in which fish are raised in temperature that is higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000163 "heat exposure"@en)
+SubClassOf(obo:ZECO_0000163 obo:ZECO_0000161)
+
+# Class: obo:ZECO_0000164 (temperature shock)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000164 "Temperature exposure condition in which fish are subjected for a short period of time to temperature that is lower or higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000164 "temperature shock"@en)
+SubClassOf(obo:ZECO_0000164 obo:ZECO_0000160)
+
+# Class: obo:ZECO_0000165 (cold shock)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000165 "Temperature shock condition in which fish are subjected for a short period of time to temperature lower than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000165 "cold shock"@en)
+SubClassOf(obo:ZECO_0000165 obo:ZECO_0000164)
+
+# Class: obo:ZECO_0000166 (heat shock)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000166 "Temperature shock condition in which fish are subjected for a short period of time to temperature higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000166 "heat shock"@en)
+SubClassOf(obo:ZECO_0000166 obo:ZECO_0000164)
+
+# Class: obo:ZECO_0000168 (ablation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000168 "Targeted destruction of an anatomical structure.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000168 "ablation"@en)
+SubClassOf(obo:ZECO_0000168 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000169 (chemical ablation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000169 "Experimental condition which uses a chemical to ablate an anatomical structure or cell.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000169 "chemical ablation"@en)
+SubClassOf(obo:ZECO_0000169 obo:ZECO_0000168)
+
+# Class: obo:ZECO_0000170 (light ablation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000170 "Experimental condition which uses focused light to ablate an anatomical structure or cell.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000170 "light ablation"@en)
+SubClassOf(obo:ZECO_0000170 obo:ZECO_0000168)
+SubClassOf(obo:ZECO_0000170 obo:ZECO_0000245)
+
+# Class: obo:ZECO_0000171 (resection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000171 "Surgical manipulation in which a particular organ, appendage, or part of an organism is removed.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000171 "resection"@en)
+SubClassOf(obo:ZECO_0000171 obo:ZECO_0000176)
+
+# Class: obo:ZECO_0000172 (amputation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000172 "Resection condtion in which all or part of an extremity such as the fin or tail are removed.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000172 "amputation"@en)
+SubClassOf(obo:ZECO_0000172 obo:ZECO_0000171)
+
+# Class: obo:ZECO_0000173 (vaccine treatment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000173 "Biological treatment in which the organism is treated with a substance to stimulate the production of antibodies and provide immunity against one or several diseases.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000173 "vaccine treatment"@en)
+SubClassOf(obo:ZECO_0000173 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000174 (laceration)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000174 "Experimental condition in which there is a deep cut or tear of the flesh.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000174 "laceration"@en)
+SubClassOf(obo:ZECO_0000174 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000176 (surgical manipulation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000176 "Experimental condition that involves  manual or instrumental techniques to alter anatomical structures.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000176 "surgical manipulation"@en)
+SubClassOf(obo:ZECO_0000176 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000177 (xenotransplantation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000177 "Experimental condition in which living cells or tissues from one species are transplanted into another.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000177 "xenotransplantation"@en)
+SubClassOf(obo:ZECO_0000177 obo:ZECO_0000105)
+
+# Class: obo:ZECO_0000178 (perforation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000178 "Experimental condition in which a hole or break in the membranes of an organ or structure of the body is created.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000178 "perforation"@en)
+SubClassOf(obo:ZECO_0000178 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000179 (abrasion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000179 "Experimental condition that results in superficial damage of tissue such that it is scraped or worn away.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000179 "abrasion"@en)
+SubClassOf(obo:ZECO_0000179 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000180 (contusion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000180 "Experimental condition that results in hematoma of tissue in which capillaries and sometimes venules are damaged by trauma, allowing blood to seep, hemorrhage, or extravasate into the surrounding interstitial tissues. (https://en.wikipedia.org/wiki/Bruise)")
+AnnotationAssertion(rdfs:label obo:ZECO_0000180 "contusion"@en)
+SubClassOf(obo:ZECO_0000180 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000181 (transection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000181 "Cutting transversly of an organ or tissue. Type of cutting often used to divide the spinal cord to investigate neural regeneration in zebrafish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000181 "transection"@en)
+SubClassOf(obo:ZECO_0000181 obo:ZECO_0000176)
+
+# Class: obo:ZECO_0000182 (water quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000182 "Experimental condition in which a chemical or physical characteristic of water is altered.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000182 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000182 "water quality"@en)
+SubClassOf(obo:ZECO_0000182 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000183 (gas composition)
+
+AnnotationAssertion(rdfs:comment obo:ZECO_0000183 "Water quality condition that alters the concentration of atmospheric gases in water.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000183 "gas composition"@en)
+SubClassOf(obo:ZECO_0000183 obo:ZECO_0000182)
+
+# Class: obo:ZECO_0000184 (carbon dioxide content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000184 "A gas composition condition that alters the concentraion of carbion dioxide.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000184 "carbon dioxide content"@en)
+SubClassOf(obo:ZECO_0000184 obo:ZECO_0000183)
+
+# Class: obo:ZECO_0000185 (hypercapnia)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000185 "hypercapnia"@en)
+SubClassOf(obo:ZECO_0000185 obo:ZECO_0000184)
+
+# Class: obo:ZECO_0000186 (hypocapnia)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000186 "hypocapnia"@en)
+SubClassOf(obo:ZECO_0000186 obo:ZECO_0000184)
+
+# Class: obo:ZECO_0000187 (oxygen content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000187 "A gas composition condition that alters the concentraion of oxygen.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000187 "oxygen content"@en)
+SubClassOf(obo:ZECO_0000187 obo:ZECO_0000183)
+
+# Class: obo:ZECO_0000188 (hyperoxia)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000188 "An oxygen content with high concentration of oxygen.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000188 "hyperoxia"@en)
+SubClassOf(obo:ZECO_0000188 obo:ZECO_0000187)
+
+# Class: obo:ZECO_0000189 (hypoxia)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000189 "An oxygen content with low concentration of oxygen.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000189 "hypoxia"@en)
+SubClassOf(obo:ZECO_0000189 obo:ZECO_0000187)
+
+# Class: obo:ZECO_0000190 (ion composition)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000190 "ion composition"@en)
+SubClassOf(obo:ZECO_0000190 obo:ZECO_0000182)
+
+# Class: obo:ZECO_0000191 (modified calcium composition)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000191 "modified calcium composition"@en)
+SubClassOf(obo:ZECO_0000191 obo:ZECO_0000190)
+
+# Class: obo:ZECO_0000192 (high calcium)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000192 "high calcium"@en)
+SubClassOf(obo:ZECO_0000192 obo:ZECO_0000191)
+
+# Class: obo:ZECO_0000193 (low calcium)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000193 "low calcium"@en)
+SubClassOf(obo:ZECO_0000193 obo:ZECO_0000191)
+
+# Class: obo:ZECO_0000194 (modified potassium composition)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000194 "modified potassium composition"@en)
+SubClassOf(obo:ZECO_0000194 obo:ZECO_0000190)
+
+# Class: obo:ZECO_0000195 (high potassium)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000195 "high potassium"@en)
+SubClassOf(obo:ZECO_0000195 obo:ZECO_0000194)
+
+# Class: obo:ZECO_0000196 (low potassium)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000196 "low potassium"@en)
+SubClassOf(obo:ZECO_0000196 obo:ZECO_0000194)
+
+# Class: obo:ZECO_0000197 (modified sodium composition)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000197 "modified sodium composition"@en)
+SubClassOf(obo:ZECO_0000197 obo:ZECO_0000190)
+
+# Class: obo:ZECO_0000198 (high sodium)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000198 "high sodium"@en)
+SubClassOf(obo:ZECO_0000198 obo:ZECO_0000197)
+
+# Class: obo:ZECO_0000199 (low sodium)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000199 "low sodium"@en)
+SubClassOf(obo:ZECO_0000199 obo:ZECO_0000197)
+
+# Class: obo:ZECO_0000200 (pH)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000200 "pH"@en)
+SubClassOf(obo:ZECO_0000200 obo:ZECO_0000190)
+
+# Class: obo:ZECO_0000201 (acidic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000201 "Experimental condition in which the pH of the water is lower than the pH of the controlled conditions.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000201 "acidic"@en)
+SubClassOf(obo:ZECO_0000201 obo:ZECO_0000200)
+
+# Class: obo:ZECO_0000202 (basic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000202 "Experimental condition in which the pH of the water is higher than the pH of the controlled conditions.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000202 "basic"@en)
+SubClassOf(obo:ZECO_0000202 obo:ZECO_0000200)
+
+# Class: obo:ZECO_0000203 (water salinity)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000203 "water salinity"@en)
+SubClassOf(obo:ZECO_0000203 obo:ZECO_0000182)
+
+# Class: obo:ZECO_0000204 (hypertonic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000204 "Experimental condition in which the salt concentration is higher than the one in controlled conditions.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000204 "hypertonic"@en)
+SubClassOf(obo:ZECO_0000204 obo:ZECO_0000203)
+
+# Class: obo:ZECO_0000205 (hypotonic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000205 "Experimental condition in which the salt concentration is lower than the one in controlled conditions.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000205 "hypotonic"@en)
+SubClassOf(obo:ZECO_0000205 obo:ZECO_0000203)
+
+# Class: obo:ZECO_0000206 (isotonic)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000206 "isotonic"@en)
+SubClassOf(obo:ZECO_0000206 obo:ZECO_0000203)
+
+# Class: obo:ZECO_0000207 (stable)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000207 "stable"@en)
+SubClassOf(obo:ZECO_0000207 obo:ZECO_0000203)
+
+# Class: obo:ZECO_0000208 (radiation)
+
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000208 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000208 "radiation"@en)
+SubClassOf(obo:ZECO_0000208 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000209 (electromagnetic radiation)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000209 "electromagnetic radiation"@en)
+SubClassOf(obo:ZECO_0000209 obo:ZECO_0000208)
+
+# Class: obo:ZECO_0000210 (radio waves)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000210 "radio waves"@en)
+SubClassOf(obo:ZECO_0000210 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000211 (microwaves)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000211 "microwaves"@en)
+SubClassOf(obo:ZECO_0000211 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000212 (infared)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000212 "infared"@en)
+SubClassOf(obo:ZECO_0000212 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000213 (visible light)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Light") obo:IAO_0000115 obo:ZECO_0000213 "Electromagnetic radiation with a wavelength from 400 nm to 700 nm. Visible light referes to the light which is visible to the human eye and is responsible fo the sense of sight.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000213 "visible light"@en)
+SubClassOf(obo:ZECO_0000213 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000214 (ultraviolet light)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Ultraviolet") obo:IAO_0000115 obo:ZECO_0000214 "Electromagnetic radiation with a wavelength from 10 nm to 400nm. Long-wavelength ultraviolet radiation can cause chemical reactions and causes many substances to glow or fluoresce.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000214 "UV")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000214 "UV light")
+AnnotationAssertion(rdfs:label obo:ZECO_0000214 "ultraviolet light")
+SubClassOf(obo:ZECO_0000214 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000215 (x-ray)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000215 "x-ray"@en)
+SubClassOf(obo:ZECO_0000215 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000216 (gamma ray)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000216 "gamma ray")
+SubClassOf(obo:ZECO_0000216 obo:ZECO_0000209)
+
+# Class: obo:ZECO_0000217 (particle radiation)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000217 "particle radiation"@en)
+SubClassOf(obo:ZECO_0000217 obo:ZECO_0000208)
+
+# Class: obo:ZECO_0000218 (proton)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000218 "proton"@en)
+SubClassOf(obo:ZECO_0000218 obo:ZECO_0000217)
+
+# Class: obo:ZECO_0000219 (neutron)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000219 "neutron"@en)
+SubClassOf(obo:ZECO_0000219 obo:ZECO_0000217)
+
+# Class: obo:ZECO_0000220 (acoustic radiation)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000220 "acoustic radiation"@en)
+SubClassOf(obo:ZECO_0000220 obo:ZECO_0000208)
+
+# Class: obo:ZECO_0000221 (alpha particle)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000221 "alpha particle"@en)
+SubClassOf(obo:ZECO_0000221 obo:ZECO_0000217)
+
+# Class: obo:ZECO_0000222 (electromagnetic field)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000222 "Experimental condition in which the fish is exposed to a physical field that is produced by electrically charged objects.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000222 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000222 "electromagnetic field"@en)
+SubClassOf(obo:ZECO_0000222 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000223 (electric field)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000223 "Experimental condition where the fish is exposed to materials that produce an electric field.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000223 "electric field"@en)
+SubClassOf(obo:ZECO_0000223 obo:ZECO_0000222)
+
+# Class: obo:ZECO_0000224 (magnetic field)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000224 "Experimental condition where the fish is exposed to magnetic materials.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000224 "magnetic field"@en)
+SubClassOf(obo:ZECO_0000224 obo:ZECO_0000222)
+
+# Class: obo:ZECO_0000225 (high polysunsaturated fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000225 "High fat condition in which the amount of polyunsaturated fat in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000225 "high polysunsaturated fat"@en)
+SubClassOf(obo:ZECO_0000225 obo:ZECO_0000122)
+
+# Class: obo:ZECO_0000226 (high trans fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000226 "High fat condition in which the amount of trans fat in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000226 "high trans fat"@en)
+SubClassOf(obo:ZECO_0000226 obo:ZECO_0000122)
+
+# Class: obo:ZECO_0000227 (low saturated fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000227 "Low fat condition in which the amount of saturated fat in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000227 "low saturated fat"@en)
+SubClassOf(obo:ZECO_0000227 obo:ZECO_0000125)
+
+# Class: obo:ZECO_0000228 (low monounsaturated fat)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000228 "Low fat condition in which the amount of monounsaturated fat in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000228 "low monounsaturated fat"@en)
+SubClassOf(obo:ZECO_0000228 obo:ZECO_0000125)
+
+# Class: obo:ZECO_0000229 (physical alteration)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000229 "Experimental condition in which an anatomical structure, cell, or organ has sustained targeted physical change, usually through the use of an instrument.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000229 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000229 "physical alteration"@en)
+SubClassOf(obo:ZECO_0000229 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000230 (bacterial treatment by injection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000230 "Bacterial treatment where the bacteria are injected into the fish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000230 "bacterial treatment by injection"@en)
+SubClassOf(obo:ZECO_0000230 obo:ZECO_0000106)
+
+# Class: obo:ZECO_0000231 (bacterial treatment by exposure to environment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000231 "Bacterial treatment where the bacteria are introduced via the environment. For zebrafish this is the tank water.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000231 "bacterial treatment by exposure to environment"@en)
+SubClassOf(obo:ZECO_0000231 obo:ZECO_0000106)
+
+# Class: obo:ZECO_0000232 (fungal treatment by injection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000232 "Fungal treatment where the fungus is injected into the fish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000232 "fungal treatment by injection"@en)
+SubClassOf(obo:ZECO_0000232 obo:ZECO_0000107)
+
+# Class: obo:ZECO_0000233 (fungal treatment by exposure to environment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000233 "Fungal treatment where the fungus is introduced via the environment. For zebrafish this is the tank water.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000233 "fungal treatment by exposure to environment"@en)
+SubClassOf(obo:ZECO_0000233 obo:ZECO_0000107)
+
+# Class: obo:ZECO_0000234 (viral treatment by exposure to environment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000234 "Viral treatment where the virus is introduced via the environment. For zebrafish this is the tank water.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000234 "viral treatment by exposure to environment"@en)
+SubClassOf(obo:ZECO_0000234 obo:ZECO_0000110)
+
+# Class: obo:ZECO_0000235 (viral treatment by injection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000235 "Viral treatment where the virus is injected into the fish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000235 "viral treatment by injection"@en)
+SubClassOf(obo:ZECO_0000235 obo:ZECO_0000110)
+
+# Class: obo:ZECO_0000236 (cancer xenotransplantation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000236 "Xenotransplantation condition in which cancer cells are injected or grafted into the zebrafish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000236 "cancer xenotransplantation"@en)
+SubClassOf(obo:ZECO_0000236 obo:ZECO_0000177)
+
+# Class: obo:ZECO_0000237 (chemical treatment by injection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000237 "Chemical treatment in which the chemical is injected into the zebrafish.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000237 "chemical treatment by injection"@en)
+SubClassOf(obo:ZECO_0000237 obo:ZECO_0000111)
+
+# Class: obo:ZECO_0000238 (chemical treatment by environment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000238 "Chemical treatment condition in which the chemical is introduced through the environment. For zebrafish this is the tank water.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000238 "chemical treatment by environment"@en)
+SubClassOf(obo:ZECO_0000238 obo:ZECO_0000111)
+
+# Class: obo:ZECO_0000239 (chemical treatment by diet)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000239 "Chemical treatment condition in which the chemical is introduced through the diet.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000239 "chemical treatment by diet"@en)
+SubClassOf(obo:ZECO_0000239 obo:ZECO_0000111)
+SubClassOf(obo:ZECO_0000239 obo:ZECO_0000112)
+
+# Class: obo:ZECO_0000240 (carbohydrate content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000240 "Food content condition in which the amount of carbohydrate in the diet is manipulated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000240 "carbohydrate content"@en)
+SubClassOf(obo:ZECO_0000240 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000241 (high carbohydrate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000241 "Food content condtion in which the amount of carbohydrate in the diet is elevated.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000241 "high carbohydrate"@en)
+SubClassOf(obo:ZECO_0000241 obo:ZECO_0000240)
+SubClassOf(obo:ZECO_0000241 obo:ZECO_0000251)
+
+# Class: obo:ZECO_0000242 (low carbohydrate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000242 "Food content condtion in which the amount of carbohydrate in the diet is reduced.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000242 "low carbohydrate"@en)
+SubClassOf(obo:ZECO_0000242 obo:ZECO_0000240)
+SubClassOf(obo:ZECO_0000242 obo:ZECO_0000250)
+
+# Class: obo:ZECO_0000243 (stress by handling)
+
+AnnotationAssertion(rdfs:label obo:ZECO_0000243 "stress by handling"@en)
+SubClassOf(obo:ZECO_0000243 obo:ZECO_0000131)
+
+# Class: obo:ZECO_0000244 (ultrasound)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000244 "Mechanical stress condition where the organism is subjected to vibrations having an ultrasonic frequency.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000244 "ultrasound"@en)
+SubClassOf(obo:ZECO_0000244 obo:ZECO_0000156)
+
+# Class: obo:ZECO_0000245 (light damage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000245 "Physical alteration which uses light to damage the anatomical structure, cell, or organ.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000245 "light damage"@en)
+SubClassOf(obo:ZECO_0000245 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000246 (undercrowding)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000246 "Housing condition in which the enclosure of the fish is undercrowded,containing a low amount of fish that increases the available space of the enclosure.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000246 "low density")
+AnnotationAssertion(rdfs:label obo:ZECO_0000246 "undercrowding"@en)
+SubClassOf(obo:ZECO_0000246 obo:ZECO_0000140)
+
+# Class: obo:ZECO_0000247 (increased food availability)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000247 "Food availability condition in which food is provided in increased supply.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000247 "overfeeding")
+AnnotationAssertion(rdfs:label obo:ZECO_0000247 "increased food availability"@en)
+SubClassOf(obo:ZECO_0000247 obo:ZECO_0000113)
+
+# Class: obo:ZECO_0000248 (cold damage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000248 "Physical alteration which uses cold to damage an anatomical structure, cell, or organ")
+AnnotationAssertion(rdfs:label obo:ZECO_0000248 "cold damage"@en)
+SubClassOf(obo:ZECO_0000248 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000249 (cryoablation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000249 "Experimental condition which uses a cold instrument to ablate an anatomical structure or cell.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000249 "cryoablation"@en)
+SubClassOf(obo:ZECO_0000249 obo:ZECO_0000168)
+SubClassOf(obo:ZECO_0000249 obo:ZECO_0000248)
+
+# Class: obo:ZECO_0000250 (nutrient decreased)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000250 "Food content condition in which levels of a nutrient are decreased relative to standard diet.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000250 "nutrient decreased"@en)
+SubClassOf(obo:ZECO_0000250 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000251 (nutrient increased)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000251 "Food content condition in which levels of a nutrient are increased relative to standard diet.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000251 "nutrient increased"@en)
+SubClassOf(obo:ZECO_0000251 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000252 (feeding regime)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000252 "Experimental condition that manipulates the frequency or way an organism is fed.")
+AnnotationAssertion(oboInOwl:inSubset obo:ZECO_0000252 obo:ZECO_0000267)
+AnnotationAssertion(rdfs:label obo:ZECO_0000252 "feeding regime"@en)
+SubClassOf(obo:ZECO_0000252 obo:ZECO_0000104)
+
+# Class: obo:ZECO_0000253 (gavage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000253 "Feeding regime in which food, drugs, or other substances are administered by force, typically through a tube leading down the throat to the stomach.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000253 "gavage"@en)
+SubClassOf(obo:ZECO_0000253 obo:ZECO_0000252)
+
+# Class: obo:ZECO_0000254 (bacterial treatment by gavage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000254 "Bacterial treatment condition where bacteria are introduced to the organism by gavage.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000254 "bacterial treatment by gavage"@en)
+SubClassOf(obo:ZECO_0000254 obo:ZECO_0000106)
+SubClassOf(obo:ZECO_0000254 obo:ZECO_0000253)
+
+# Class: obo:ZECO_0000255 (chemical treatment by gavage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000255 "Chemical treatment condition where the chemical is introduced to the organism by gavage.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000255 "chemical treatment by gavage"@en)
+SubClassOf(obo:ZECO_0000255 obo:ZECO_0000111)
+SubClassOf(obo:ZECO_0000255 obo:ZECO_0000253)
+
+# Class: obo:ZECO_0000256 (bacterial treatment by diet)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000256 "Bacterial treatment where bacteria are introduced via the diet.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000256 "bacterial treatment by diet"@en)
+SubClassOf(obo:ZECO_0000256 obo:ZECO_0000106)
+
+# Class: obo:ZECO_0000259 (cauterization)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000259 "Condition that uses a cold or hot insturment, electrical current, or chemical to burn or dissolve an anatomical structure to remove or close it off.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000259 "cauterization"@en)
+SubClassOf(obo:ZECO_0000259 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000260 (thermal cauterization)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000260 "Cauterization of a tissue using a heated instrument.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000260 "thermal cauterization"@en)
+SubClassOf(obo:ZECO_0000260 obo:ZECO_0000259)
+
+# Class: obo:ZECO_0000261 (compression injury)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000261 "An injury that occurs because of pressure from a heavy object onto a body part. A compression injury may also arise from squeezing of a body part between two objects. https://www.medicinenet.com/crush_injury/definition.htm")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ZECO_0000261 "crush injury")
+AnnotationAssertion(rdfs:label obo:ZECO_0000261 "compression injury"@en)
+SubClassOf(obo:ZECO_0000261 obo:ZECO_0000229)
+
+# Class: obo:ZECO_0000262 (probiotic content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000262 "Food content condition in which the amount of probiotics in the diet is manipulated")
+AnnotationAssertion(rdfs:label obo:ZECO_0000262 "probiotic content"@en)
+SubClassOf(obo:ZECO_0000262 obo:ZECO_0000117)
+
+# Class: obo:ZECO_0000263 (microgravity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000263 "Experimental condition in which gravity forces are smaller than in control conditions. An example of a microgravity condition would be trips to outerspace.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000263 "microgravity"@en)
+SubClassOf(obo:ZECO_0000263 obo:ZECO_0000154)
+
+# Class: obo:ZECO_0000264 (increased gravity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ZECO_0000264 "Experimental condition in which gravity forces are greater than in control conditions. An example of an increased gravity condition would be the application of centrifugal forces.")
+AnnotationAssertion(rdfs:label obo:ZECO_0000264 "increased gravity"@en)
+SubClassOf(obo:ZECO_0000264 obo:ZECO_0000154)
+
+
+AnnotationAssertion(oboInOwl:hasDbXref _:genid2147483652 "https://en.wikipedia.org/wiki/Ultraviolet")
+AnnotationAssertion(rdfs:comment _:genid2147483653 "https://en.wikipedia.org/wiki/Ultraviolet")
+)

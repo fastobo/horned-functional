@@ -1,0 +1,816 @@
+Prefix(:=<http://purl.obolibrary.org/obo/hom.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/hom.owl>
+<http://purl.obolibrary.org/obo/hom/releases/2015-01-07/hom.owl>
+Annotation(oboInOwl:NamespaceIdRule "* HOM:$sequence(7,0,9999999)$")
+Annotation(oboInOwl:date "02:12:2009 15:16")
+Annotation(oboInOwl:default-namespace "homology_and_related_concepts_in_biology")
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
+
+Declaration(Class(obo:HOM_0000000))
+Declaration(Class(obo:HOM_0000001))
+Declaration(Class(obo:HOM_0000002))
+Declaration(Class(obo:HOM_0000003))
+Declaration(Class(obo:HOM_0000004))
+Declaration(Class(obo:HOM_0000005))
+Declaration(Class(obo:HOM_0000006))
+Declaration(Class(obo:HOM_0000007))
+Declaration(Class(obo:HOM_0000008))
+Declaration(Class(obo:HOM_0000009))
+Declaration(Class(obo:HOM_0000010))
+Declaration(Class(obo:HOM_0000011))
+Declaration(Class(obo:HOM_0000012))
+Declaration(Class(obo:HOM_0000013))
+Declaration(Class(obo:HOM_0000014))
+Declaration(Class(obo:HOM_0000015))
+Declaration(Class(obo:HOM_0000016))
+Declaration(Class(obo:HOM_0000017))
+Declaration(Class(obo:HOM_0000018))
+Declaration(Class(obo:HOM_0000019))
+Declaration(Class(obo:HOM_0000020))
+Declaration(Class(obo:HOM_0000021))
+Declaration(Class(obo:HOM_0000022))
+Declaration(Class(obo:HOM_0000023))
+Declaration(Class(obo:HOM_0000024))
+Declaration(Class(obo:HOM_0000025))
+Declaration(Class(obo:HOM_0000026))
+Declaration(Class(obo:HOM_0000027))
+Declaration(Class(obo:HOM_0000028))
+Declaration(Class(obo:HOM_0000029))
+Declaration(Class(obo:HOM_0000030))
+Declaration(Class(obo:HOM_0000031))
+Declaration(Class(obo:HOM_0000032))
+Declaration(Class(obo:HOM_0000033))
+Declaration(Class(obo:HOM_0000034))
+Declaration(Class(obo:HOM_0000036))
+Declaration(Class(obo:HOM_0000037))
+Declaration(Class(obo:HOM_0000042))
+Declaration(Class(obo:HOM_0000043))
+Declaration(Class(obo:HOM_0000044))
+Declaration(Class(obo:HOM_0000045))
+Declaration(Class(obo:HOM_0000046))
+Declaration(Class(obo:HOM_0000047))
+Declaration(Class(obo:HOM_0000048))
+Declaration(Class(obo:HOM_0000049))
+Declaration(Class(obo:HOM_0000050))
+Declaration(Class(obo:HOM_0000051))
+Declaration(Class(obo:HOM_0000052))
+Declaration(Class(obo:HOM_0000053))
+Declaration(Class(obo:HOM_0000054))
+Declaration(Class(obo:HOM_0000055))
+Declaration(Class(obo:HOM_0000057))
+Declaration(Class(obo:HOM_0000058))
+Declaration(Class(obo:HOM_0000060))
+Declaration(Class(obo:HOM_0000061))
+Declaration(Class(obo:HOM_0000062))
+Declaration(Class(obo:HOM_0000063))
+Declaration(Class(obo:HOM_0000065))
+Declaration(Class(obo:HOM_0000066))
+Declaration(Class(obo:HOM_0000068))
+Declaration(Class(obo:HOM_0000069))
+Declaration(Class(obo:HOM_0000071))
+Declaration(Class(obo:HOM_0000072))
+Declaration(Class(obo:HOM_0000073))
+Declaration(Class(obo:HOM_0000074))
+Declaration(Class(obo:HOM_0000075))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(oboInOwl:NamespaceIdRule))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:created_by))
+Declaration(AnnotationProperty(oboInOwl:creation_date))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasBroadSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(owl:deprecated))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: oboInOwl:NamespaceIdRule (namespace-id-rule)
+
+AnnotationAssertion(rdfs:label oboInOwl:NamespaceIdRule "namespace-id-rule")
+
+# Annotation Property: oboInOwl:hasBroadSynonym (has_broad_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:HOM_0000000 (similarity)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BGEE:curator") obo:IAO_0000115 obo:HOM_0000000 "Relation between biological objects that resemble or are related to each other sufficiently to warrant a comparison.")
+AnnotationAssertion(Annotation(rdfs:label "inferred from similarity") oboInOwl:hasDbXref obo:HOM_0000000 "ECO:0000041")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000000 "SO:similar_to")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000000 "sameness")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000000 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814479") oboInOwl:hasRelatedSynonym obo:HOM_0000000 "correspondence")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000000 "resemblance")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000000 "HOM:0000000")
+AnnotationAssertion(rdfs:label obo:HOM_0000000 "similarity")
+
+# Class: obo:HOM_0000001 (homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1002/bies.950180611") Annotation(oboInOwl:hasDbXref "DOI:10.1002/jmor.1051730307") Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814480") obo:IAO_0000115 obo:HOM_0000001 "Similarity that results from common evolutionary origin.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000001 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000001 "HOM:0000001")
+AnnotationAssertion(rdfs:comment obo:HOM_0000001 "This broad definition encompasses all the working definitions proposed so far in the literature.")
+AnnotationAssertion(rdfs:label obo:HOM_0000001 "homology")
+SubClassOf(obo:HOM_0000001 obo:HOM_0000000)
+DisjointClasses(obo:HOM_0000001 obo:HOM_0000002)
+
+# Class: obo:HOM_0000002 (homoplasy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.jhevol.2006.11.010") obo:IAO_0000115 obo:HOM_0000002 "Similarity that results from independent evolution.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000002 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000002 "analogy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000002 "HOM:0000002")
+AnnotationAssertion(rdfs:label obo:HOM_0000002 "homoplasy")
+SubClassOf(obo:HOM_0000002 obo:HOM_0000000)
+
+# Class: obo:HOM_0000003 (homocracy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814484") Annotation(oboInOwl:hasDbXref "DOI:10.1007/s00427-003-0301-4") Annotation(oboInOwl:hasDbXref "DOI:10.1186/1742-9994-2-15") obo:IAO_0000115 obo:HOM_0000003 "Similarity that is characterized by the organization of anatomical structures through the expression of homologous or identical patterning genes.")
+AnnotationAssertion(Annotation(rdfs:label "inferred from gene expression similarity") oboInOwl:hasDbXref obo:HOM_0000003 "ECO:0000075")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000003 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000003 "HOM:0000003")
+AnnotationAssertion(rdfs:comment obo:HOM_0000003 "Homology and homocracy are not mutually exclusive. The homology relationships of patterning genes may be unresolved and thus may include orthologues and paralogues.")
+AnnotationAssertion(rdfs:label obo:HOM_0000003 "homocracy")
+SubClassOf(obo:HOM_0000003 obo:HOM_0000000)
+
+# Class: obo:HOM_0000004 (convergence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.jhevol.2006.11.010") obo:IAO_0000115 obo:HOM_0000004 "Homoplasy that involves different underlying mechanisms or structures.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000004 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000004 "analogy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000004 "HOM:0000004")
+AnnotationAssertion(rdfs:comment obo:HOM_0000004 "Convergence usually implies a notion of adaptation.")
+AnnotationAssertion(rdfs:label obo:HOM_0000004 "convergence")
+SubClassOf(obo:HOM_0000004 obo:HOM_0000002)
+
+# Class: obo:HOM_0000005 (parallelism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.jhevol.2006.11.010") obo:IAO_0000115 obo:HOM_0000005 "Homoplasy that involves homologous underlying mechanisms or structures.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000005 "parallel evolution")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000005 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000005 "HOM:0000005")
+AnnotationAssertion(rdfs:comment obo:HOM_0000005 "Can be applied for features present in closely related organisms but not present continuously in all the members of the lineage.")
+AnnotationAssertion(rdfs:label obo:HOM_0000005 "parallelism")
+SubClassOf(obo:HOM_0000005 obo:HOM_0000002)
+
+# Class: obo:HOM_0000006 (structural homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.jhevol.2006.11.014") Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.es.20.110189.000411") Annotation(oboInOwl:hasDbXref "ISBN:0123195837") obo:IAO_0000115 obo:HOM_0000006 "Homology that is defined by similarity with regard to selected structural parameters.")
+AnnotationAssertion(Annotation(rdfs:label "inferred from morphological similarity") oboInOwl:hasDbXref obo:HOM_0000006 "ECO:0000071")
+AnnotationAssertion(Annotation(rdfs:label "by homology") oboInOwl:hasDbXref obo:HOM_0000006 "MI:2163")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000006 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000006 "idealistic homology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000006 "HOM:0000006")
+AnnotationAssertion(rdfs:label obo:HOM_0000006 "structural homology")
+SubClassOf(obo:HOM_0000006 obo:HOM_0000001)
+
+# Class: obo:HOM_0000007 (historical homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0169-5347(97)01125-7") Annotation(oboInOwl:hasDbXref "ISBN:0123195837") obo:IAO_0000115 obo:HOM_0000007 "Homology that is defined by common descent.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:HOM_0000007 "homology")
+AnnotationAssertion(Annotation(rdfs:label "inferred from phylogeny") oboInOwl:hasDbXref obo:HOM_0000007 "ECO:0000080")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000007 "RO_proposed_relation:homologous_to")
+AnnotationAssertion(Annotation(rdfs:label "conserved_region") oboInOwl:hasDbXref obo:HOM_0000007 "SO:0000330")
+AnnotationAssertion(Annotation(rdfs:label "homologous_region") oboInOwl:hasDbXref obo:HOM_0000007 "SO:0000853")
+AnnotationAssertion(Annotation(rdfs:label "homologous") oboInOwl:hasDbXref obo:HOM_0000007 "SO:0000857")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000007 "SO:homologous_to")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000007 "TAO:homologous_to")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000007 "cladistic homology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000007 "phylogenetic homology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000007 "taxic homology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000007 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000007 "true homology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000007 "HOM:0000007")
+AnnotationAssertion(rdfs:label obo:HOM_0000007 "historical homology")
+SubClassOf(obo:HOM_0000007 obo:HOM_0000001)
+
+# Class: obo:HOM_0000008 (biological homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0169-5347(97)01125-7") Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.es.20.110189.000411") obo:IAO_0000115 obo:HOM_0000008 "Homology that is defined by sharing of a set of developmental constraints, caused by locally acting self-regulatory mechanisms of differentiation, between individualized parts of the phenotype.")
+AnnotationAssertion(Annotation(rdfs:label "inferred from developmental similarity") oboInOwl:hasDbXref obo:HOM_0000008 "ECO:0000067")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000008 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000008 "transformational homology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000008 "HOM:0000008")
+AnnotationAssertion(rdfs:comment obo:HOM_0000008 "Applicable only to morphology. A certain degree of ambiguity is accepted between biological homology and parallelism.")
+AnnotationAssertion(rdfs:label obo:HOM_0000008 "biological homology")
+SubClassOf(obo:HOM_0000008 obo:HOM_0000001)
+
+# Class: obo:HOM_0000009 (reversal)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.jhevol.2006.11.010") obo:IAO_0000115 obo:HOM_0000009 "Homoplasy that involves phenotypes similar to those seen in ancestors within the lineage.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000009 "atavism")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000009 "rudiment")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000009 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000009 "reversion")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000009 "HOM:0000009")
+AnnotationAssertion(rdfs:label obo:HOM_0000009 "reversal")
+SubClassOf(obo:HOM_0000009 obo:HOM_0000002)
+
+# Class: obo:HOM_0000010 (syntenic homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MeSH:Synteny") obo:IAO_0000115 obo:HOM_0000010 "Structural homology that is detected by similarity in content and organization between chromosomes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000010 "MeSH:Synteny")
+AnnotationAssertion(Annotation(rdfs:label "syntenic") oboInOwl:hasDbXref obo:HOM_0000010 "SO:0000860")
+AnnotationAssertion(Annotation(rdfs:label "syntenic_region") oboInOwl:hasDbXref obo:HOM_0000010 "SO:0005858")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000010 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000010 "synteny")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000010 "HOM:0000010")
+AnnotationAssertion(rdfs:label obo:HOM_0000010 "syntenic homology")
+SubClassOf(obo:HOM_0000010 obo:HOM_0000006)
+
+# Class: obo:HOM_0000011 (paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0168-9525(00)02005-9") Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") Annotation(oboInOwl:hasDbXref "PMID:5449325") obo:IAO_0000115 obo:HOM_0000011 "Historical homology that involves genes that diverged after a duplication event.")
+AnnotationAssertion(Annotation(rdfs:label "paralogous_region") oboInOwl:hasDbXref obo:HOM_0000011 "SO:0000854")
+AnnotationAssertion(Annotation(rdfs:label "paralogous") oboInOwl:hasDbXref obo:HOM_0000011 "SO:0000859")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000011 "SO:paralogous_to")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000011 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000011 "HOM:0000011")
+AnnotationAssertion(rdfs:label obo:HOM_0000011 "paralogy")
+SubClassOf(obo:HOM_0000011 obo:HOM_0000007)
+DisjointClasses(obo:HOM_0000011 obo:HOM_0000017)
+
+# Class: obo:HOM_0000012 (syntenic paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1002/1097-010X(20001215)288:4<345::AID-JEZ7>3.0.CO;2-Y") Annotation(oboInOwl:hasDbXref "DOI:10.1186/1471-213X-7-100") obo:IAO_0000115 obo:HOM_0000012 "Paralogy that involves sets of syntenic blocks.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000012 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000012 "duplicon")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000012 "paralogon")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000012 "HOM:0000012")
+AnnotationAssertion(rdfs:label obo:HOM_0000012 "syntenic paralogy")
+SubClassOf(obo:HOM_0000012 obo:HOM_0000010)
+SubClassOf(obo:HOM_0000012 obo:HOM_0000011)
+
+# Class: obo:HOM_0000013 (syntenic orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1101/gr.6380007") obo:IAO_0000115 obo:HOM_0000013 "Syntenic homology that involves chromosomes of different species.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000013 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000013 "HOM:0000013")
+AnnotationAssertion(rdfs:label obo:HOM_0000013 "syntenic orthology")
+SubClassOf(obo:HOM_0000013 obo:HOM_0000010)
+
+# Class: obo:HOM_0000014 (partial homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0123195837") Annotation(oboInOwl:hasDbXref "ISBN:978-0471984931") obo:IAO_0000115 obo:HOM_0000014 "Structural homology that involves complex structures from which only a fraction of the elements that can be isolated are separately homologous.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000014 "fractional homology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000014 "segmental homology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000014 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000014 "mixed homology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000014 "modular homology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000014 "partial correspondence")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000014 "percent homology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000014 "HOM:0000014")
+AnnotationAssertion(rdfs:label obo:HOM_0000014 "partial homology")
+SubClassOf(obo:HOM_0000014 obo:HOM_0000006)
+
+# Class: obo:HOM_0000015 (protein structural homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/0022-2836(76)90195-9") obo:IAO_0000115 obo:HOM_0000015 "Structural homology that is detected at the level of the 3D protein structure, but maybe not at the level of the amino acid sequence.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000015 "MeSH:Structural Homology, Protein")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000015 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000015 "HOM:0000015")
+AnnotationAssertion(rdfs:label obo:HOM_0000015 "protein structural homology")
+SubClassOf(obo:HOM_0000015 obo:HOM_0000006)
+
+# Class: obo:HOM_0000016 (non functional homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SO:non_functional_homolog_of") obo:IAO_0000115 obo:HOM_0000016 "Structural homology that involves a pseudogenic feature and its functional ancestor.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:HOM_0000016 "pseudogene")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000016 "SO:non_functional_homolog_of")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000016 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000016 "HOM:0000016")
+AnnotationAssertion(rdfs:label obo:HOM_0000016 "non functional homology")
+SubClassOf(obo:HOM_0000016 obo:HOM_0000006)
+DisjointClasses(obo:HOM_0000016 obo:HOM_0000062)
+
+# Class: obo:HOM_0000017 (orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814484") Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0168-9525(00)02005-9") Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") Annotation(oboInOwl:hasDbXref "PMID:5449325") obo:IAO_0000115 obo:HOM_0000017 "Historical homology that involves genes that diverged after a speciation event.")
+AnnotationAssertion(Annotation(rdfs:label "inferred from sequence orthology") oboInOwl:hasDbXref obo:HOM_0000017 "ECO:00000060")
+AnnotationAssertion(Annotation(rdfs:label "orthologous_region") oboInOwl:hasDbXref obo:HOM_0000017 "SO:0000855")
+AnnotationAssertion(Annotation(rdfs:label "orthologous") oboInOwl:hasDbXref obo:HOM_0000017 "SO:0000858")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000017 "SO:orthologous_to")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000017 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000017 "HOM:0000017")
+AnnotationAssertion(rdfs:comment obo:HOM_0000017 "The term is sometimes also used for anatomical structures.")
+AnnotationAssertion(rdfs:label obo:HOM_0000017 "orthology")
+SubClassOf(obo:HOM_0000017 obo:HOM_0000007)
+
+# Class: obo:HOM_0000018 (xenology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0168-9525(00)02005-9") Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") obo:IAO_0000115 obo:HOM_0000018 "Historical homology that is characterized by an interspecies (horizontal) transfer since the common ancestor.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000018 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000018 "HOM:0000018")
+AnnotationAssertion(rdfs:comment obo:HOM_0000018 "The term is sometimes also used for anatomical structures (e.g. in case of a symbiosis).")
+AnnotationAssertion(rdfs:label obo:HOM_0000018 "xenology")
+SubClassOf(obo:HOM_0000018 obo:HOM_0000007)
+
+# Class: obo:HOM_0000019 (1 to 1 homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BGEE:curator") obo:IAO_0000115 obo:HOM_0000019 "Historical homology that involves two members sharing no other homologs in the lineages considered.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000019 "1:1 homology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000019 "one-to-one homology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000019 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000019 "HOM:0000019")
+AnnotationAssertion(rdfs:label obo:HOM_0000019 "1 to 1 homology")
+SubClassOf(obo:HOM_0000019 obo:HOM_0000007)
+
+# Class: obo:HOM_0000020 (1 to 1 orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814484") Annotation(oboInOwl:hasDbXref "http://www.ensembl.org/info/docs/compara/homology_method.html") obo:IAO_0000115 obo:HOM_0000020 "Orthology that involves two genes that did not experience any duplication after the speciation event that created them.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000020 "1:1 orthology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000020 "one-to-one orthology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000020 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000020 "HOM:0000020")
+AnnotationAssertion(rdfs:label obo:HOM_0000020 "1 to 1 orthology")
+SubClassOf(obo:HOM_0000020 obo:HOM_0000017)
+SubClassOf(obo:HOM_0000020 obo:HOM_0000019)
+
+# Class: obo:HOM_0000021 (allogeny)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1002/1521-1878(200009)22:9<846::AID-BIES10>3.0.CO;2-R") obo:IAO_0000115 obo:HOM_0000021 "Relationship between recognizably corresponding characters that occurs in two or more taxa and have different generative bases.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000021 "generative homoplasy")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000021 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000021 "HOM:0000021")
+AnnotationAssertion(rdfs:label obo:HOM_0000021 "allogeny")
+AnnotationAssertion(owl:deprecated obo:HOM_0000021 "true"^^xsd:boolean)
+
+# Class: obo:HOM_0000022 (ohnology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1038/75560") obo:IAO_0000115 obo:HOM_0000022 "Paralogy that results from a whole genome duplication event.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000022 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000022 "homoeology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000022 "HOM:0000022")
+AnnotationAssertion(rdfs:label obo:HOM_0000022 "ohnology")
+SubClassOf(obo:HOM_0000022 obo:HOM_0000011)
+
+# Class: obo:HOM_0000023 (in-paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") obo:IAO_0000115 obo:HOM_0000023 "Paralogy that results from a lineage-specific duplication subsequent to a given speciation event.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000023 "inparalogy")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000023 "symparalogy")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000023 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000023 "HOM:0000023")
+AnnotationAssertion(rdfs:label obo:HOM_0000023 "in-paralogy")
+SubClassOf(obo:HOM_0000023 obo:HOM_0000011)
+DisjointClasses(obo:HOM_0000023 obo:HOM_0000024)
+
+# Class: obo:HOM_0000024 (out-paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") obo:IAO_0000115 obo:HOM_0000024 "Paralogy that results from a duplication preceding a given speciation event.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000024 "alloparalogy")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000024 "outparalogy")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000024 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000024 "HOM:0000024")
+AnnotationAssertion(rdfs:label obo:HOM_0000024 "out-paralogy")
+SubClassOf(obo:HOM_0000024 obo:HOM_0000011)
+
+# Class: obo:HOM_0000025 (pro-orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1006/scdb.1999.0338") Annotation(oboInOwl:hasDbXref "DOI:10.1038/nrg2099") obo:IAO_0000115 obo:HOM_0000025 "1:many orthology that involves a gene in species A and one of its ortholog in species B, when duplications more recent than the species split have occurred in species B but not in species A.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000025 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000025 "HOM:0000025")
+AnnotationAssertion(rdfs:label obo:HOM_0000025 "pro-orthology")
+SubClassOf(obo:HOM_0000025 obo:HOM_0000034)
+
+# Class: obo:HOM_0000026 (semi-orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1006/scdb.1999.0338") Annotation(oboInOwl:hasDbXref "DOI:10.1038/nrg2099") obo:IAO_0000115 obo:HOM_0000026 "1:many orthology that involves a gene in species A and its ortholog in species B, when duplications more recent than the species split have occurred in species A but not in species B.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000026 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000026 "HOM:0000026")
+AnnotationAssertion(rdfs:comment obo:HOM_0000026 "The converse of pro-orthologous.")
+AnnotationAssertion(rdfs:label obo:HOM_0000026 "semi-orthology")
+SubClassOf(obo:HOM_0000026 obo:HOM_0000034)
+
+# Class: obo:HOM_0000027 (serial homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.es.20.110189.000411") obo:IAO_0000115 obo:HOM_0000027 "Iterative homology that involves structures arranged along the main body axis.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000027 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000027 "homonomy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000027 "HOM:0000027")
+AnnotationAssertion(rdfs:label obo:HOM_0000027 "serial homology")
+SubClassOf(obo:HOM_0000027 obo:HOM_0000066)
+
+# Class: obo:HOM_0000028 (heterochronous homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0674639416") obo:IAO_0000115 obo:HOM_0000028 "Biological homology that is characterized by changes, over evolutionary time, in the rate or timing of developmental events of homologous structures.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000028 "heterochrony")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000028 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000028 "HOM:0000028")
+AnnotationAssertion(rdfs:label obo:HOM_0000028 "heterochronous homology")
+SubClassOf(obo:HOM_0000028 obo:HOM_0000008)
+
+# Class: obo:HOM_0000029 (paedomorphorsis)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0674639416") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Pedomorphosis") obo:IAO_0000115 obo:HOM_0000029 "Heterochronous homology that is produced by a retention in adults of a species of traits previously seen only in juveniles.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000029 "juvenification")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000029 "pedomorphosis")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000029 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000029 "HOM:0000029")
+AnnotationAssertion(rdfs:label obo:HOM_0000029 "paedomorphorsis")
+SubClassOf(obo:HOM_0000029 obo:HOM_0000028)
+DisjointClasses(obo:HOM_0000029 obo:HOM_0000030)
+
+# Class: obo:HOM_0000030 (peramorphosis)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Peramorphosis") obo:IAO_0000115 obo:HOM_0000030 "Heterochronous homology that is produced by a maturation of individuals of a species past adulthood, which take on hitherto unseen traits.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000030 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000030 "HOM:0000030")
+AnnotationAssertion(rdfs:label obo:HOM_0000030 "peramorphosis")
+SubClassOf(obo:HOM_0000030 obo:HOM_0000028)
+
+# Class: obo:HOM_0000031 (progenesis)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0674639416") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Progenesis") obo:IAO_0000115 obo:HOM_0000031 "Paedomorphosis that is produced by precocious sexual maturation of an organism still in a morphologically juvenile stage.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000031 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000031 "HOM:0000031")
+AnnotationAssertion(rdfs:label obo:HOM_0000031 "progenesis")
+SubClassOf(obo:HOM_0000031 obo:HOM_0000029)
+
+# Class: obo:HOM_0000032 (neoteny)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0674639416") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Neoteny") obo:IAO_0000115 obo:HOM_0000032 "Paedomorphosis that is produced by a retardation of somatic development.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000032 "juvenilization")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000032 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000032 "HOM:0000032")
+AnnotationAssertion(rdfs:label obo:HOM_0000032 "neoteny")
+SubClassOf(obo:HOM_0000032 obo:HOM_0000029)
+
+# Class: obo:HOM_0000033 (mimicry)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http:://en.wikipedia.org/wiki/Mimicry") obo:IAO_0000115 obo:HOM_0000033 "Convergence that results from co-evolution usually involving an evolutionary arms race.")
+AnnotationAssertion(oboInOwl:created_by obo:HOM_0000033 "admin")
+AnnotationAssertion(oboInOwl:creation_date obo:HOM_0000033 "2009-07-30T11:28:41Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000033 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000033 "HOM:0000033")
+AnnotationAssertion(rdfs:label obo:HOM_0000033 "mimicry")
+SubClassOf(obo:HOM_0000033 obo:HOM_0000004)
+
+# Class: obo:HOM_0000034 (1 to many orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1038/415741a") Annotation(oboInOwl:hasDbXref "http://www.ensembl.org/info/docs/compara/homology_method.html") obo:IAO_0000115 obo:HOM_0000034 "Orthology that involves two genes when duplications more recent than the species split have occurred in one species but not the other.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000034 "1:many orthology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000034 "one-to-many orthology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000034 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000034 "co-orthology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000034 "many to 1 orthology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000034 "HOM:0000034")
+AnnotationAssertion(rdfs:label obo:HOM_0000034 "1 to many orthology")
+SubClassOf(obo:HOM_0000034 obo:HOM_0000017)
+SubClassOf(obo:HOM_0000034 obo:HOM_0000037)
+
+# Class: obo:HOM_0000036 (many to many homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1093/molbev/msp002") obo:IAO_0000115 obo:HOM_0000036 "Historical homology that involves two members of a larger set of homologs.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000036 "many-to-many homology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000036 "many:many homology ")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000036 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000036 "HOM:0000036")
+AnnotationAssertion(rdfs:label obo:HOM_0000036 "many to many homology")
+SubClassOf(obo:HOM_0000036 obo:HOM_0000007)
+
+# Class: obo:HOM_0000037 (1 to many homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BGEE:curator") obo:IAO_0000115 obo:HOM_0000037 "Historical homology that involves a structure that has no other homologs in the species in which it is defined, and several homologous structures in another species.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000037 "one-to-many homology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000037 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000037 "1:many homology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000037 "HOM:0000037")
+AnnotationAssertion(rdfs:label obo:HOM_0000037 "1 to many homology")
+SubClassOf(obo:HOM_0000037 obo:HOM_0000007)
+
+# Class: obo:HOM_0000042 (apomorphy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0252068140") obo:IAO_0000115 obo:HOM_0000042 "Historical homology that is based on recent shared ancestry, characterizing a monophyletic group.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000042 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000042 "synapomorphy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000042 "HOM:0000042")
+AnnotationAssertion(rdfs:label obo:HOM_0000042 "apomorphy")
+SubClassOf(obo:HOM_0000042 obo:HOM_0000007)
+DisjointClasses(obo:HOM_0000042 obo:HOM_0000043)
+
+# Class: obo:HOM_0000043 (plesiomorphy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0252068140") obo:IAO_0000115 obo:HOM_0000043 "Historical homology that is based on distant shared ancestry.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000043 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000043 "symplesiomorphy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000043 "HOM:0000043")
+AnnotationAssertion(rdfs:comment obo:HOM_0000043 "This term is usually contrasted to apomorphy.")
+AnnotationAssertion(rdfs:label obo:HOM_0000043 "plesiomorphy")
+SubClassOf(obo:HOM_0000043 obo:HOM_0000007)
+
+# Class: obo:HOM_0000044 (deep homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814485") Annotation(oboInOwl:hasDbXref "DOI:10.1038/nature07891") obo:IAO_0000115 obo:HOM_0000044 "Homocracy that involves morphologically and phylogenetically disparate structures that are the result of parallel evolution.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000044 "deep genetic homology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000044 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000044 "generative homology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000044 "homoiology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000044 "HOM:0000044")
+AnnotationAssertion(rdfs:comment obo:HOM_0000044 "Used for structures in distantly related taxa.")
+AnnotationAssertion(rdfs:label obo:HOM_0000044 "deep homology")
+SubClassOf(obo:HOM_0000044 obo:HOM_0000003)
+SubClassOf(obo:HOM_0000044 obo:HOM_0000005)
+
+# Class: obo:HOM_0000045 (hemiplasy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1073/pnas.0807433105") obo:IAO_0000115 obo:HOM_0000045 "Historical homology that is characterized by topological discordance between a gene tree and a species tree attributable to the phylogenetic sorting of genetic polymorphisms across successive nodes in a species tree.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000045 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000045 "HOM:0000045")
+AnnotationAssertion(rdfs:label obo:HOM_0000045 "hemiplasy")
+SubClassOf(obo:HOM_0000045 obo:HOM_0000007)
+
+# Class: obo:HOM_0000046 (gametology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11110898") obo:IAO_0000115 obo:HOM_0000046 "Historical homology that involves not recombining and subsequently differentiated sex chromosomes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000046 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000046 "HOM:0000046")
+AnnotationAssertion(rdfs:label obo:HOM_0000046 "gametology")
+SubClassOf(obo:HOM_0000046 obo:HOM_0000047)
+
+# Class: obo:HOM_0000047 (chromosomal homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0195307615") obo:IAO_0000115 obo:HOM_0000047 "Historical homology that involves the chromosomes able to pair (synapse) during meiosis.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HOM_0000047 "MeSH:Chromosome Pairing")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000047 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000047 "HOM:0000047")
+AnnotationAssertion(rdfs:label obo:HOM_0000047 "chromosomal homology")
+SubClassOf(obo:HOM_0000047 obo:HOM_0000007)
+
+# Class: obo:HOM_0000048 (many to many orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1038/415741a") Annotation(oboInOwl:hasDbXref "http://www.ensembl.org/info/docs/compara/homology_method.html") obo:IAO_0000115 obo:HOM_0000048 "Orthology that involves two genes that experienced duplications more recent than the species split that created them.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000048 "many-to-many orthology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000048 "many:many orthology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000048 "trans-orthology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000048 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000048 "co-orthology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000048 "trans-homology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000048 "HOM:0000048")
+AnnotationAssertion(rdfs:label obo:HOM_0000048 "many to many orthology")
+SubClassOf(obo:HOM_0000048 obo:HOM_0000017)
+SubClassOf(obo:HOM_0000048 obo:HOM_0000036)
+
+# Class: obo:HOM_0000049 (within-species paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.ensembl.org/info/docs/compara/homology_method.html") obo:IAO_0000115 obo:HOM_0000049 "Paralogy that involves genes from the same species.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000049 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000049 "HOM:0000049")
+AnnotationAssertion(rdfs:label obo:HOM_0000049 "within-species paralogy")
+SubClassOf(obo:HOM_0000049 obo:HOM_0000011)
+DisjointClasses(obo:HOM_0000049 obo:HOM_0000050)
+
+# Class: obo:HOM_0000050 (between-species paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.ensembl.org/info/docs/compara/homology_method.html") obo:IAO_0000115 obo:HOM_0000050 "Paralogy that involves genes from different species.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000050 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000050 "HOM:0000050")
+AnnotationAssertion(rdfs:comment obo:HOM_0000050 "The genes have diverged before a speciation event.")
+AnnotationAssertion(rdfs:label obo:HOM_0000050 "between-species paralogy")
+SubClassOf(obo:HOM_0000050 obo:HOM_0000011)
+
+# Class: obo:HOM_0000051 (postdisplacement)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Pedomorphosis") obo:IAO_0000115 obo:HOM_0000051 "Paedomorphosis that is produced by delayed growth of immature structures into the adult form.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000051 "post-displacement")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000051 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000051 "HOM:0000051")
+AnnotationAssertion(rdfs:label obo:HOM_0000051 "postdisplacement")
+SubClassOf(obo:HOM_0000051 obo:HOM_0000029)
+
+# Class: obo:HOM_0000052 (hypermorphosis)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:978-0674639416") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Peramorphosis") obo:IAO_0000115 obo:HOM_0000052 "Peramorphosis that is produced by a delay in the offset of development.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000052 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000052 "HOM:0000052")
+AnnotationAssertion(rdfs:label obo:HOM_0000052 "hypermorphosis")
+SubClassOf(obo:HOM_0000052 obo:HOM_0000030)
+
+# Class: obo:HOM_0000053 (synology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF00173425") Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0168-9525(00)02005-9") obo:IAO_0000115 obo:HOM_0000053 "Xenology that results, not from the transfer of a gene between two species, but from a hybridization of two species.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000053 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000053 "HOM:0000053")
+AnnotationAssertion(rdfs:label obo:HOM_0000053 "synology")
+SubClassOf(obo:HOM_0000053 obo:HOM_0000018)
+
+# Class: obo:HOM_0000054 (isoorthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0168-9525(00)02005-9") obo:IAO_0000115 obo:HOM_0000054 "Orthology that involves functional equivalent genes with retention of the ancestral function.")
+AnnotationAssertion(Annotation(rdfs:label "inferred from phylogeny") oboInOwl:hasDbXref obo:HOM_0000054 "ECO:0000080")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000054 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000054 "HOM:0000054")
+AnnotationAssertion(rdfs:label obo:HOM_0000054 "isoorthology")
+SubClassOf(obo:HOM_0000054 obo:HOM_0000017)
+SubClassOf(obo:HOM_0000054 obo:HOM_0000062)
+
+# Class: obo:HOM_0000055 (tandem paralogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1016/S0168-9525(00)02005-9") Annotation(oboInOwl:hasDbXref "ISBN:978-0878932665") obo:IAO_0000115 obo:HOM_0000055 "Paralogy that is characterized by duplication of adjacent sequences on a chromosome segment.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000055 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000055 "iterative paralogy")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000055 "serial paralogy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000055 "HOM:0000055")
+AnnotationAssertion(rdfs:label obo:HOM_0000055 "tandem paralogy")
+SubClassOf(obo:HOM_0000055 obo:HOM_0000011)
+
+# Class: obo:HOM_0000057 (latent homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814485") Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.jhevol.2006.11.010") Annotation(oboInOwl:hasDbXref "DOI:10.1186/1742-9994-2-15") Annotation(oboInOwl:hasDbXref "ISBN:0199141118") obo:IAO_0000115 obo:HOM_0000057 "Parallelism that involves morphologically very similar structures, occurring only within some members of a taxon and absent in the common ancestor (which possessed the developmental basis to develop this character).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000057 "apomorphic tendency")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000057 "cryptic homology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000057 "underlying synapomorphy")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000057 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000057 "homoiology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000057 "homoplastic tendency")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000057 "re-awakening")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000057 "HOM:0000057")
+AnnotationAssertion(rdfs:comment obo:HOM_0000057 "Used for structures in closely related taxa.")
+AnnotationAssertion(rdfs:label obo:HOM_0000057 "latent homology")
+SubClassOf(obo:HOM_0000057 obo:HOM_0000005)
+SubClassOf(obo:HOM_0000057 obo:HOM_0000058)
+
+# Class: obo:HOM_0000058 (syngeny)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1002/1521-1878(200009)22:9<846::AID-BIES10>3.0.CO;2-R") Annotation(oboInOwl:hasDbXref "DOI:10.1186/1742-9994-2-15") obo:IAO_0000115 obo:HOM_0000058 "Homocracy that involves recognizably corresponding characters that occurs in two or more taxa, or as a repeated unit within an individual.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000058 "generative homology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000058 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000058 "HOM:0000058")
+AnnotationAssertion(rdfs:comment obo:HOM_0000058 "Cannot be used when orthologous patterning gene are organizing obviously non-homologous structures in different organisms due for example to pleiotropic functions of these genes.")
+AnnotationAssertion(rdfs:label obo:HOM_0000058 "syngeny")
+SubClassOf(obo:HOM_0000058 obo:HOM_0000003)
+
+# Class: obo:HOM_0000060 (apparent orthology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") Annotation(oboInOwl:hasDbXref "http://www.ensembl.org/info/docs/compara/homology_method.html") obo:IAO_0000115 obo:HOM_0000060 "Between-species paralogy that involves single copy paralogs resulting from reciprocal gene loss.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000060 "1:1 paralogy")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000060 "apparent 1:1 orthology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000060 "pseudoorthology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000060 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000060 "HOM:0000060")
+AnnotationAssertion(rdfs:comment obo:HOM_0000060 "The genes are actually paralogs but appear to be orthologous due to differential, lineage-specific gene loss.")
+AnnotationAssertion(rdfs:label obo:HOM_0000060 "apparent orthology")
+SubClassOf(obo:HOM_0000060 obo:HOM_0000019)
+SubClassOf(obo:HOM_0000060 obo:HOM_0000050)
+
+# Class: obo:HOM_0000061 (pseudoparalogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.genet.39.073003.114725") obo:IAO_0000115 obo:HOM_0000061 "Xenology that involves genes that ended up in a given genome as a result of a combination of vertical inheritance and horizontal gene transfer.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000061 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000061 "HOM:0000061")
+AnnotationAssertion(rdfs:comment obo:HOM_0000061 "These genes may come out as paralogs in a single-genome analysis.")
+AnnotationAssertion(rdfs:label obo:HOM_0000061 "pseudoparalogy")
+SubClassOf(obo:HOM_0000061 obo:HOM_0000018)
+
+# Class: obo:HOM_0000062 (equivalogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1093/nar/gkl1043") obo:IAO_0000115 obo:HOM_0000062 "Historical homology that involves functional equivalent genes with retention of the ancestral function.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000062 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000062 "HOM:0000062")
+AnnotationAssertion(rdfs:comment obo:HOM_0000062 "This may include examples of orthology, paralogy and xenology.")
+AnnotationAssertion(rdfs:label obo:HOM_0000062 "equivalogy")
+SubClassOf(obo:HOM_0000062 obo:HOM_0000007)
+SubClassOf(obo:HOM_0000062 obo:HOM_0000065)
+
+# Class: obo:HOM_0000063 (interology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1101/gr.1774904") Annotation(oboInOwl:hasDbXref "DOI:10.1126/science.287.5450.116") obo:IAO_0000115 obo:HOM_0000063 "Historical homology that involves orthologous pairs of interacting molecules in different organisms.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000063 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000063 "HOM:0000063")
+AnnotationAssertion(rdfs:label obo:HOM_0000063 "interology")
+SubClassOf(obo:HOM_0000063 obo:HOM_0000007)
+
+# Class: obo:HOM_0000065 (functional equivalence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814484") Annotation(oboInOwl:hasDbXref "DOI:10.1038/415741a") obo:IAO_0000115 obo:HOM_0000065 "Similarity that is characterized by interchangeability in function.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000065 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000065 "functional similarity")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000065 "HOM:0000065")
+AnnotationAssertion(rdfs:label obo:HOM_0000065 "functional equivalence")
+SubClassOf(obo:HOM_0000065 obo:HOM_0000000)
+
+# Class: obo:HOM_0000066 (iterative homology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1146/annurev.es.20.110189.000411") obo:IAO_0000115 obo:HOM_0000066 "Biological homology that involves parts of the same organism.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000066 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000066 "HOM:0000066")
+AnnotationAssertion(rdfs:label obo:HOM_0000066 "iterative homology")
+SubClassOf(obo:HOM_0000066 obo:HOM_0000008)
+
+# Class: obo:HOM_0000068 (paraxenology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:3065587") obo:IAO_0000115 obo:HOM_0000068 "Xenology that is characterized by multiple horizontal transfer events, resulting in the presence of two or more copies of the foreign gene in the host genome.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000068 "duplicate xenology")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:HOM_0000068 "multiple xenology")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000068 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000068 "HOM:0000068")
+AnnotationAssertion(rdfs:label obo:HOM_0000068 "paraxenology")
+SubClassOf(obo:HOM_0000068 obo:HOM_0000018)
+
+# Class: obo:HOM_0000069 (plerology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:3065587") obo:IAO_0000115 obo:HOM_0000069 "Paralogy that is characterized by extra similarity between paralogous sequences resulting from concerted evolution.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000069 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000069 "HOM:0000069")
+AnnotationAssertion(rdfs:comment obo:HOM_0000069 "This phenomenon is usually due to gene conversion process.")
+AnnotationAssertion(rdfs:label obo:HOM_0000069 "plerology")
+SubClassOf(obo:HOM_0000069 obo:HOM_0000011)
+
+# Class: obo:HOM_0000071 (homotopy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814484") Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814485") Annotation(oboInOwl:hasDbXref "ISBN:0123195837") obo:IAO_0000115 obo:HOM_0000071 "Structural homology that involves structures with the same or similar relative positions.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000071 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000071 "HOM:0000071")
+AnnotationAssertion(rdfs:comment obo:HOM_0000071 "Theissen (2005) mentions that some authors may consider homotopy to be distinct from homology, but this is not the standard use.")
+AnnotationAssertion(rdfs:label obo:HOM_0000071 "homotopy")
+SubClassOf(obo:HOM_0000071 obo:HOM_0000006)
+DisjointClasses(obo:HOM_0000071 obo:HOM_0000072)
+
+# Class: obo:HOM_0000072 (homeosis)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/BF02814485") Annotation(oboInOwl:hasDbXref "DOI:10.1016/j.cell.2008.06.030") obo:IAO_0000115 obo:HOM_0000072 "Biological homology that involves an ectopic structure and the normally positioned structure.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000072 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000072 "heterotopy")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000072 "HOM:0000072")
+AnnotationAssertion(rdfs:label obo:HOM_0000072 "homeosis")
+SubClassOf(obo:HOM_0000072 obo:HOM_0000008)
+
+# Class: obo:HOM_0000073 (homoeology)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1073/pnas.0505156102") obo:IAO_0000115 obo:HOM_0000073 "Synology that results from allopolyploidy.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000073 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000073 "HOM:0000073")
+AnnotationAssertion(rdfs:comment obo:HOM_0000073 "On a long term, it is hard to distinguish allopolyploidy from whole genome duplication.")
+AnnotationAssertion(rdfs:label obo:HOM_0000073 "homoeology")
+SubClassOf(obo:HOM_0000073 obo:HOM_0000022)
+SubClassOf(obo:HOM_0000073 obo:HOM_0000053)
+
+# Class: obo:HOM_0000074 (paramorphism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/s10441-007-9023-8") Annotation(oboInOwl:hasDbXref "DOI:10.1046/j.1525-142x.2000.00054.x") obo:IAO_0000115 obo:HOM_0000074 "Iterative homology that involves two structures, one of which originated as a duplicate of the other and co-opted the expression of patterning genes of the ancestral structure.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000074 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:HOM_0000074 "axis paramorphism")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000074 "HOM:0000074")
+AnnotationAssertion(rdfs:label obo:HOM_0000074 "paramorphism")
+SubClassOf(obo:HOM_0000074 obo:HOM_0000003)
+SubClassOf(obo:HOM_0000074 obo:HOM_0000066)
+
+# Class: obo:HOM_0000075 (regulogy)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1101/gr.1774904") obo:IAO_0000115 obo:HOM_0000075 "Historical homology that involves orthologous pairs of transcription factors and downstream regulated genes in different organisms.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:HOM_0000075 "homology_and_related_concepts_in_biology")
+AnnotationAssertion(oboInOwl:id obo:HOM_0000075 "HOM:0000075")
+AnnotationAssertion(rdfs:label obo:HOM_0000075 "regulogy")
+SubClassOf(obo:HOM_0000075 obo:HOM_0000007)
+
+
+)

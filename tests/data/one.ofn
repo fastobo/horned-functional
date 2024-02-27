@@ -1,0 +1,943 @@
+Prefix(:=<http://purl.obolibrary.org/obo/ONE#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(one:=<http://purl.obolibrary.org/obo/one_>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/ONE>
+Import(<http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl>)
+Import(<http://purl.obolibrary.org/obo/obi/2020-12-16/obi.owl>)
+Annotation(obo:IAO_0000117 "Chen Yang")
+
+Declaration(Class(obo:BFO_0000019))
+Declaration(Class(obo:IAO_0000015))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:IAO_0000078))
+Declaration(Class(obo:IAO_0000315))
+Declaration(Class(obo:IAO_0000317))
+Declaration(Class(obo:IAO_0000318))
+Declaration(Class(obo:IAO_0000319))
+Declaration(Class(obo:IAO_0000326))
+Declaration(Class(obo:IAO_0000620))
+Declaration(Class(obo:IAO_0000644))
+Declaration(Class(obo:OBI_0000066))
+Declaration(Class(obo:OBI_0000115))
+Declaration(Class(obo:OBI_0000750))
+Declaration(Class(obo:OBI_0000931))
+Declaration(Class(obo:OBI_0500000))
+Declaration(Class(obo:ONE_0000001))
+Declaration(Class(obo:ONE_0000002))
+Declaration(Class(obo:ONE_0000003))
+Declaration(Class(obo:ONE_0000004))
+Declaration(Class(obo:ONE_0000005))
+Declaration(Class(obo:ONE_0000006))
+Declaration(Class(obo:ONE_0000007))
+Declaration(Class(obo:ONE_0000008))
+Declaration(Class(obo:ONE_0000009))
+Declaration(Class(obo:ONE_0000010))
+Declaration(Class(obo:ONE_0000011))
+Declaration(Class(obo:ONE_0000012))
+Declaration(Class(obo:ONE_0000013))
+Declaration(Class(obo:ONE_0000014))
+Declaration(Class(obo:ONE_0000015))
+Declaration(Class(obo:ONE_0000016))
+Declaration(Class(obo:ONE_0001001))
+Declaration(Class(obo:ONE_0001002))
+Declaration(Class(obo:ONE_0001003))
+Declaration(Class(obo:ONE_0001004))
+Declaration(Class(obo:ONE_0001005))
+Declaration(Class(obo:ONE_0001006))
+Declaration(Class(obo:ONE_0001007))
+Declaration(Class(obo:ONE_0001008))
+Declaration(Class(obo:ONE_0001009))
+Declaration(Class(obo:ONE_0001013))
+Declaration(Class(obo:ONE_0001014))
+Declaration(Class(obo:ONE_0001015))
+Declaration(Class(obo:ONE_0001016))
+Declaration(Class(obo:ONE_0001017))
+Declaration(Class(obo:ONE_0001018))
+Declaration(Class(obo:ONE_0001019))
+Declaration(Class(obo:ONE_0001020))
+Declaration(Class(obo:ONE_0001021))
+Declaration(Class(obo:ONE_0002001))
+Declaration(Class(obo:ONE_0002002))
+Declaration(Class(obo:ONE_0002003))
+Declaration(Class(obo:ONE_0002004))
+Declaration(Class(obo:ONE_0002005))
+Declaration(Class(obo:ONE_0002006))
+Declaration(Class(obo:ONE_0002007))
+Declaration(Class(obo:ONE_0002008))
+Declaration(Class(obo:ONE_0002009))
+Declaration(Class(obo:ONE_0002010))
+Declaration(Class(obo:ONE_0002011))
+Declaration(Class(obo:ONE_0002012))
+Declaration(Class(obo:ONE_0002013))
+Declaration(Class(obo:ONE_0002014))
+Declaration(Class(obo:ONE_0002015))
+Declaration(Class(obo:ONE_0002016))
+Declaration(Class(obo:ONE_0002017))
+Declaration(Class(obo:ONE_0002018))
+Declaration(Class(obo:ONE_0002019))
+Declaration(Class(obo:ONE_0002020))
+Declaration(Class(obo:ONE_0002021))
+Declaration(Class(obo:ONE_0002022))
+Declaration(Class(obo:ONE_0002023))
+Declaration(Class(obo:ONE_0002024))
+Declaration(Class(obo:ONE_0002025))
+Declaration(Class(obo:ONE_0003001))
+Declaration(Class(obo:ONE_0003002))
+Declaration(Class(obo:ONE_0003003))
+Declaration(Class(obo:ONE_0003004))
+Declaration(Class(obo:ONE_0003005))
+Declaration(Class(obo:ONE_0003006))
+Declaration(Class(obo:ONE_0003007))
+Declaration(Class(obo:ONE_0003008))
+Declaration(Class(obo:ONE_0003010))
+Declaration(Class(obo:ONE_0003011))
+Declaration(Class(obo:ONS_0000070))
+Declaration(Class(obo:ONS_0000071))
+Declaration(Class(obo:ONS_0000072))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000067))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:ONE_0003009))
+Declaration(ObjectProperty(obo:ONE_0003012))
+Declaration(ObjectProperty(obo:ONE_0003015))
+Declaration(ObjectProperty(obo:ONE_0003016))
+Declaration(ObjectProperty(obo:ONE_0003017))
+Declaration(ObjectProperty(obo:ONE_0003018))
+Declaration(ObjectProperty(obo:RO_0000059))
+Declaration(DataProperty(obo:ONE_0003013))
+Declaration(DataProperty(obo:ONE_0003014))
+Declaration(DataProperty(obo:ONE_0003019))
+Declaration(NamedIndividual(obo:IAO_0000125))
+Declaration(AnnotationProperty(obo:IAO_0000111))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000114))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000117))
+Declaration(AnnotationProperty(obo:IAO_0000118))
+Declaration(AnnotationProperty(obo:IAO_0000119))
+Declaration(AnnotationProperty(obo:in_minimal_requirements_subset))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:isDefinedBy))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(skos:altLabel))
+Declaration(Datatype(rdf:PlainLiteral))
+Declaration(Datatype(xsd:date))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: skos:altLabel (alternative label)
+
+AnnotationAssertion(obo:IAO_0000115 skos:altLabel "An alternative lexical label for a resource."@en)
+AnnotationAssertion(rdfs:comment skos:altLabel "The range of skos:altLabel is the class of RDF plain literals."@en)
+AnnotationAssertion(rdfs:comment skos:altLabel "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en)
+AnnotationAssertion(rdfs:isDefinedBy skos:altLabel <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label skos:altLabel "alternative label"@en)
+SubAnnotationPropertyOf(skos:altLabel rdfs:label)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
+TransitiveObjectProperty(obo:BFO_0000051)
+
+# Object Property: obo:IAO_0000136 (is about)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"@en)
+
+# Object Property: obo:ONE_0003009 (object property of food-based dietary guidelines)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003009 "a relation between a food-based dietary guideline and an information content entity, in which the information content entity specifies the quality of the food-based dietary guideline.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003009 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003009 "object property of food-based dietary guidelines")
+AnnotationAssertion(skos:altLabel obo:ONE_0003009 "quality indicator of food-based dietary guidelines")
+SubObjectPropertyOf(obo:ONE_0003009 obo:ONE_0003009)
+ObjectPropertyDomain(obo:ONE_0003009 obo:ONE_0003001)
+
+# Object Property: obo:ONE_0003012 (target area)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003012 "a relation between a food-based dietary guideline and a geographic location, in which the geographic location specifies where to apply the food-based dietary guideline.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003012 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003012 "target area")
+AnnotationAssertion(skos:altLabel obo:ONE_0003012 "target area of food-based dietary guidelines")
+SubObjectPropertyOf(obo:ONE_0003012 obo:ONE_0003009)
+ObjectPropertyDomain(obo:ONE_0003012 obo:ONE_0003001)
+
+# Object Property: obo:ONE_0003015 (stakeholder)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003015 "a relation between a food-based dietary guideline and an independent party, in which people from the independent party contributes to the development of the food-based dietary guideline.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003015 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003015 "stakeholder")
+AnnotationAssertion(skos:altLabel obo:ONE_0003015 "stakeholder of food-based dietary guidelines")
+SubObjectPropertyOf(obo:ONE_0003015 obo:ONE_0003009)
+ObjectPropertyDomain(obo:ONE_0003015 obo:ONE_0003001)
+
+# Object Property: obo:ONE_0003016 (target audience)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003016 "a relation between a food-based dietary guideline and a group of individuals , in which the food-based dietary guideline is developed for the group of individuals.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003016 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003016 "target audience")
+AnnotationAssertion(skos:altLabel obo:ONE_0003016 "target audience of food-based dietary guidelines")
+SubObjectPropertyOf(obo:ONE_0003016 obo:ONE_0003009)
+ObjectPropertyDomain(obo:ONE_0003016 obo:ONE_0003001)
+
+# Object Property: obo:ONE_0003017 (promotion method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003017 "a relation between a food-based dietary guideline and a promotion method , in which the promotion method encourages individuals to adopt and maintain healthy behaviours indicated in the food-based dietary guideline.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003017 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003017 "promotion method")
+AnnotationAssertion(skos:altLabel obo:ONE_0003017 "promotion method of food-based dietary guidelines")
+SubObjectPropertyOf(obo:ONE_0003017 obo:ONE_0003009)
+ObjectPropertyDomain(obo:ONE_0003017 obo:ONE_0003001)
+
+# Object Property: obo:ONE_0003018 (evidence characteristic)
+
+AnnotationAssertion(obo:IAO_0000112 obo:ONE_0003018 "local evidence, international evidence, used background method (e.g. eating pattern modelling / a priori dietary pattern; criteria (nutrient adequacy, epi data for long-term health, food contaminants; departure from observed diets)); background data reviewing method (grading quality)")
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003018 "a relation between a food-based dietary guideline and an evidence characteristic , in which the evidence (e.g. scientific reports, articles, etc.) with the characteristic is used to support the food-based dietary guideline.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003018 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003018 "evidence characteristic")
+AnnotationAssertion(skos:altLabel obo:ONE_0003018 "evidence characteristic of food-based dietary guidelines")
+SubObjectPropertyOf(obo:ONE_0003018 obo:ONE_0003009)
+ObjectPropertyDomain(obo:ONE_0003018 obo:ONE_0003001)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:ONE_0003013 (has publication year)
+
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003013 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003013 "has publication year")
+AnnotationAssertion(skos:altLabel obo:ONE_0003013 "a relation between a food-based dietary guideline and its publication year.")
+AnnotationAssertion(skos:altLabel obo:ONE_0003013 "publication year of food-based dietary guidelines")
+SubDataPropertyOf(obo:ONE_0003013 obo:ONE_0003019)
+DataPropertyDomain(obo:ONE_0003013 obo:ONE_0003001)
+DataPropertyRange(obo:ONE_0003013 xsd:dateTime)
+
+# Data Property: obo:ONE_0003014 (has update frequency)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003014 "a relation between a food-based dietary guideline and its update frequency.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003014 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003014 "has update frequency")
+AnnotationAssertion(skos:altLabel obo:ONE_0003014 "update frequency of food-based dietary guidelines")
+SubDataPropertyOf(obo:ONE_0003014 obo:ONE_0003019)
+DataPropertyDomain(obo:ONE_0003014 obo:ONE_0003001)
+DataPropertyRange(obo:ONE_0003014 xsd:int)
+
+# Data Property: obo:ONE_0003019 (data property of food-based dietary guidelines)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003019 "a relation between a food-based dietary guideline and an information content entity, in which the information content entity specifies the quality of the food-based dietary guideline.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003019 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003019 "data property of food-based dietary guidelines")
+AnnotationAssertion(skos:altLabel obo:ONE_0003019 "quality indicator of food-based dietary guidelines")
+DataPropertyDomain(obo:ONE_0003019 obo:ONE_0003001)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:OBI_0000115 (intervention design)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000115 "intervention design")
+AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000115 "PMID: 18208636.Br J Nutr. 2008 Jan 22;:1-11.Effect of vitamin D supplementation on bone and vitamin D status among Pakistani immigrants in Denmark: a randomised double-blinded placebo-controlled intervention study.")
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000115 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000115 "An intervention design is a study design in which a controlled process applied to the subjects (the intervention) serves as the independent variable manipulated by the experimentalist. The treatment (perturbation or intervention) defined can be defined as a combination of values taken by independent variable manipulated by the experimentalists are applied to the recruited subjects assigned (possibly by applying specific methods) to treatment groups. The specificity of intervention design is the fact that independent variables are being manipulated and a response of the biological system is evaluated via response variables as monitored by possibly a series of assays.")
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000115 "Philppe Rocca-Serra")
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000115 "OBI branch derived")
+AnnotationAssertion(rdfs:label obo:OBI_0000115 "intervention design")
+EquivalentClasses(obo:OBI_0000115 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:OBI_0000750 ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0000931)))))
+EquivalentClasses(obo:OBI_0000115 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000067 obo:ONE_0000001)))
+SubClassOf(obo:OBI_0000115 obo:OBI_0500000)
+
+# Class: obo:OBI_0000750 (study design independent variable)
+
+AnnotationAssertion(rdfs:label obo:OBI_0000750 "study design independent variable"@en)
+
+# Class: obo:OBI_0000931 (study intervention)
+
+AnnotationAssertion(rdfs:label obo:OBI_0000931 "study intervention")
+
+# Class: obo:OBI_0500000 (study design)
+
+AnnotationAssertion(rdfs:label obo:OBI_0500000 "study design"@en)
+
+# Class: obo:ONE_0000001 (dietary survey method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000001 "An investigation of food and nutrient intake and dietary pattern of an individual or individuals."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000001 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000001 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000001 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000001 "dietary survey method"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0000001 "dietary assessment method"@en)
+SubClassOf(obo:ONE_0000001 obo:OBI_0000070)
+
+# Class: obo:ONE_0000002 (retrospective dietary survey method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000002 "A type of dietary survey method that is based on a recall of food or drink intake that have already been consumed."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000002 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000002 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000002 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000002 "retrospective dietary survey method"@en)
+SubClassOf(obo:ONE_0000002 obo:ONE_0000001)
+
+# Class: obo:ONE_0000003 (prospective dietary survey method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000003 "A type of dietary survey method that involves recording the diet when the foods or drinks are being consumed."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000003 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000003 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000003 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000003 "prospective dietary survey method"@en)
+SubClassOf(obo:ONE_0000003 obo:ONE_0000001)
+
+# Class: obo:ONE_0000004 (retrospective method for assessing dietary diversity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000004 "A retrospective dietary survey method that provides a score that represents a number of different foods, drinks and/or food groups consumed over a given reference period."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000004 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000004 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000118 obo:ONE_0000004 "Dietary Diversity Score (DDS)"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000004 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000004 "retrospective method for assessing dietary diversity"@en)
+SubClassOf(obo:ONE_0000004 obo:ONE_0000002)
+
+# Class: obo:ONE_0000005 (24-hour dietary recall method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000005 "A type of retrospective dietary survey method where respondents are asked, by a nutritionist or dietitian who has been trained in interviewing techniques, to recall and report all foods and beverages consumed over the preceding 24 hours."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000005 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000005 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000005 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000005 "24-hour dietary recall method"@en)
+SubClassOf(obo:ONE_0000005 obo:ONE_0000002)
+
+# Class: obo:ONE_0000006 (dietary history method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000006 "A type of retrospective dietary survey method that is a detailed assessment to describe usual food intake and its variation over a long period of time."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000006 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000006 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000006 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000006 "dietary history method"@en)
+SubClassOf(obo:ONE_0000006 obo:ONE_0000002)
+
+# Class: obo:ONE_0000007 (Food Frequency Questionnaire method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000007 "A retrospective dietary survey method that assesses the frequency with which foods and/or food groups are eaten over a certain time period. The questionnaire includes a food list (commonly close-ended), a frequency category section, and can be self- or interviewer administered."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000007 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000007 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000118 obo:ONE_0000007 "FFQ"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000007 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000007 "Food Frequency Questionnaire method"@en)
+SubClassOf(obo:ONE_0000007 obo:ONE_0000002)
+
+# Class: obo:ONE_0000008 (duplicate diet method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000008 "A type of prospective dietary survey method that involves setting aside duplicate portions of all foods and beverages consumed throughout a specific time period. These duplicate portions are set aside, weighed, either by the respondent or fieldworker, and then sent to a laboratory for chemical analysis to determine content."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000008 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000008 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000008 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000008 "duplicate diet method"@en)
+SubClassOf(obo:ONE_0000008 obo:ONE_0000003)
+
+# Class: obo:ONE_0000009 (dietary records method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000009 "A type of prospective dietary survey method collecting data about the foods and beverages consumed over a previously specified period of time."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000009 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000009 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000009 "https://doi.org/10.3305/nh.2015.31.sup3.8749"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000009 "dietary records method"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0000009 "food dairies"@en)
+SubClassOf(obo:ONE_0000009 obo:ONE_0000003)
+
+# Class: obo:ONE_0000010 (retrospective method for assessing dietary diversity of infant and yong child)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000010 "A retrospective method for assessing dietary diversity with the \"Infant and Young Child Dietary Diversity Score\" (IYCDDS, defined as the Proportion of children 6–23 months of age who receive foods from four or more predefined food groups."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000010 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000010 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000010 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000010 "retrospective method for assessing dietary diversity of infant and yong child")
+AnnotationAssertion(skos:altLabel obo:ONE_0000010 "IYCDDS"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0000010 "Infant and Young Child Dietary Diversity Score"@en)
+SubClassOf(obo:ONE_0000010 obo:ONE_0000004)
+
+# Class: obo:ONE_0000011 (retrospective method for assessing dietary diversity of women)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000011 "A retrospective method for assessing dietary diversity in women. Minimum Dietary Diversity-Women is a dichotomous indicator of whether or not women of 15–49 years of age have consumed at least five out of ten predefined food groups during the previous 24 hours."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000011 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000011 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000011 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000011 "retrospective method for assessing dietary diversity of women")
+AnnotationAssertion(skos:altLabel obo:ONE_0000011 "MDD-W"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0000011 "Minimum Dietary Diversity–Women"@en)
+SubClassOf(obo:ONE_0000011 obo:ONE_0000004)
+
+# Class: obo:ONE_0000012 (screener method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000012 "A retrospective dietary survey method that uses modified versions of longer Food Frequency Questionnaires varying in length, frequency categories and number of foods listed."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000012 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000012 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000012 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000012 "screener method"@en)
+SubClassOf(obo:ONE_0000012 obo:ONE_0000007)
+
+# Class: obo:ONE_0000013 (non-quantitative FFQ method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000013 "A type of Food Frequency Questionnaire method that collects only frequency of food or drink intake."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000013 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000013 "PERSON: Chen Yang")
+AnnotationAssertion(rdfs:label obo:ONE_0000013 "non-quantitative FFQ method"@en)
+SubClassOf(obo:ONE_0000013 obo:ONE_0000007)
+
+# Class: obo:ONE_0000014 (semi-quantitative FFQ method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000014 "A type of Food Frequency Questionnaire method that includes information about both the frequency and quantity of food or drink intake."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000014 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000014 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000014 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000014 "semi-quantitative FFQ method"@en)
+SubClassOf(obo:ONE_0000014 obo:ONE_0000007)
+
+# Class: obo:ONE_0000015 (weighed food records method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000015 "A type of dietary records method that adopts the same methodological principles as the estimated food record method. However, in this method respondents are asked to weigh foods or drinks using weighing scales."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000015 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000015 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000015 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000015 "weighed food records method"@en)
+SubClassOf(obo:ONE_0000015 obo:ONE_0000009)
+
+# Class: obo:ONE_0000016 (estimated food records method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0000016 "A type of dietary records method that instructions respondents to document all foods and beverages consumed during a predefined period."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000016 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0000016 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0000016 "http://www.fao.org/3/I9940EN/i9940en.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0000016 "estimated food records method"@en)
+SubClassOf(obo:ONE_0000016 obo:ONE_0000009)
+
+# Class: obo:ONE_0001001 (quality indicator of a dietary survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001001 "An information content entity that specifies the quality of a dietary survey."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001001 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001001 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001001 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001001 "quality indicator of a dietary survey"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0001001 "quality of a dietary assessment"@en)
+SubClassOf(obo:ONE_0001001 obo:IAO_0000030)
+
+# Class: obo:ONE_0001002 (quality indicator of a diet recall method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001002 ": An indicator that specifies the quality of a diet recall method."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001002 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001002 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001002 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001002 "quality indicator of a diet recall method"@en)
+SubClassOf(obo:ONE_0001002 obo:ONE_0001001)
+
+# Class: obo:ONE_0001003 (quality indicator of a diet survey questionnaire)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001003 "An indicator that specifies the quality of dietary survey questionnaires that includes a predetermined set of questions used to collect diet intake information."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001003 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001003 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001003 "https://www.oxfordreference.com/view/10.1093/acref/9780195314496.001.0001/acref-9780195314496"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001003 "quality indicator of a diet survey questionnaire"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0001003 "quality of a data collection instrument"@en)
+SubClassOf(obo:ONE_0001003 obo:ONE_0001001)
+
+# Class: obo:ONE_0001004 (representativeness of days as a quality indicator of a dietary survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001004 "An indicator that specifies the representativeness of days of a dietary survey."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001004 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001004 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001004 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001004 "representativeness of days as a quality indicator of a dietary survey"@en)
+SubClassOf(obo:ONE_0001004 obo:ONE_0001001)
+
+# Class: obo:ONE_0001005 (quality indicator of a food quantification method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001005 "An indicator that specifies the accuracy of a food quantification process (i.e. a process that helps express food intake into units of weights or volume.)."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001005 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001005 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001005 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001005 "quality indicator of a food quantification method"@en)
+SubClassOf(obo:ONE_0001005 obo:ONE_0001001)
+
+# Class: obo:ONE_0001006 (administration type of a diet recall method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001006 "An indicator that specifies the administration type of a diet recall method. A diet recall method can be proxy administered, self-administered or interview administered."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001006 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001006 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001006 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001006 "administration type of a diet recall method"@en)
+SubClassOf(obo:ONE_0001006 obo:ONE_0001002)
+
+# Class: obo:ONE_0001007 (time of dietary record)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001007 "An indicator that specifies when the dietary intake was recorded. (e.g. during eating occasion, immediately after eating occasion, or later)."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001007 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001007 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001007 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001007 "time of dietary record"@en)
+SubClassOf(obo:ONE_0001007 obo:ONE_0001002)
+
+# Class: obo:ONE_0001008 (origin of a diet survey questionnaire)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001008 "An indicator that specifies how the questionnaire was developed (e.g. de novo self-developed questionnaire, standardized questionnaire, questionnaire adapted from another questionnaires, etc.)."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001008 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001008 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001008 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0001008 "Chen Yang"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001008 "origin of a diet survey questionnaire")
+SubClassOf(obo:ONE_0001008 obo:ONE_0001003)
+
+# Class: obo:ONE_0001009 (content validity of a diet survey questionnaire)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001009 "An indicator that specifies the content validity of a diet survey questionnaire in another comparable population in terms of both age and dietary habits. The reference, the type of the validation, and validation estimates are important pieces of information."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001009 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001009 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001009 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001009 "content validity of a diet survey questionnaire")
+AnnotationAssertion(skos:altLabel obo:ONE_0001009 "content validity")
+SubClassOf(obo:ONE_0001009 obo:ONE_0001003)
+
+# Class: obo:ONE_0001013 (representativeness of seasons of a dietary survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001013 "An indicator that specifies if data collection was seasonality representative."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001013 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001013 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001013 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001013 "representativeness of seasons of a dietary survey"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0001013 "representativeness of seasons")
+SubClassOf(obo:ONE_0001013 obo:ONE_0001004)
+
+# Class: obo:ONE_0001014 (representativeness of week/weekend days of a dietary survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001014 "An indicator that specifies the representativeness of week/weekend days when conducting a dietary survey."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001014 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001014 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001014 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001014 "representativeness of week/weekend days of a dietary survey"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0001014 "representativeness of week/weekend days")
+SubClassOf(obo:ONE_0001014 obo:ONE_0001004)
+
+# Class: obo:ONE_0001015 (number of days of a dietary survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001015 "An indicator that specifies the number of days of a dietary recall/measurement per individual."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001015 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001015 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001015 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001015 "number of days of a dietary survey"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0001015 "number of days")
+SubClassOf(obo:ONE_0001015 obo:ONE_0001004)
+
+# Class: obo:ONE_0001016 (selection of recall/measurement days of a dietary survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001016 "An indicator that specifies how the recall/measurement days of a dietary survey were selected."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001016 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001016 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001016 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001016 "selection of recall/measurement days of a dietary survey"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0001016 "selection of recall/measurement days")
+SubClassOf(obo:ONE_0001016 obo:ONE_0001004)
+
+# Class: obo:ONE_0001017 (quantification of a food portion size)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001017 "An indicator that specifies how the quantity of the portion sizes is estimated."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001017 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001017 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001017 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001017 "quantification of a food portion size"@en)
+SubClassOf(obo:ONE_0001017 obo:ONE_0001005)
+
+# Class: obo:ONE_0001018 (quantification of food intake data)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001018 "An indicator that specifies how food intake data are expressed into units of weights or volume."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001018 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001018 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001018 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001018 "quantification of food intake data"@en)
+SubClassOf(obo:ONE_0001018 obo:ONE_0001005)
+
+# Class: obo:ONE_0001019 (geographically specific food quantification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001019 "An indicator for food quantification method that indicates whether a food quantification method is geography matched to the area where the food is estimated."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001019 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001019 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001019 "http://www.fao.org/fileadmin/templates/food_composition/images/FCD.pdf"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001019 "geographically specific food quantification"@en)
+SubClassOf(obo:ONE_0001019 obo:ONE_0001005)
+
+# Class: obo:ONE_0001020 (customized food quantification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001020 "An indicator for food quantification method that indicates whether a food quantification method is tailored to the characteristics of the assessed population."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001020 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001020 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001020 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001020 "customized food quantification"@en)
+SubClassOf(obo:ONE_0001020 obo:ONE_0001005)
+
+# Class: obo:ONE_0001021 (referred food composition data for quantification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0001021 "An indicator that indicates how the measured food intake data are matched to food composition data."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001021 "PERSON: Carl Lachat")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0001021 "PERSON: Chen Yang")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0001021 "https://doi.org/10.3945/an.117.015651"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0001021 "referred food composition data for quantification"@en)
+SubClassOf(obo:ONE_0001021 obo:ONE_0001005)
+
+# Class: obo:ONE_0002001 (abstract of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002001 "An abstract which states the dietary/nutritional assessment method(s) used in the research (STROBE-nut-1)."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002001 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002001 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002001 "abstract of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002001 obo:IAO_0000315)
+
+# Class: obo:ONE_0002002 (participants result section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002002 "A results section that reports the number of individuals excluded based on missing, incomplete or implausible dietary/nutritional data."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002002 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002002 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002002 "participants result section"@en)
+SubClassOf(obo:ONE_0002002 obo:ONE_0002004)
+
+# Class: obo:ONE_0002003 (methods of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002003 "a methods section that includes a few sections to describe particular characterisitics of study methods based on dietary surveys."@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002003 "methods of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002003 obo:IAO_0000317)
+
+# Class: obo:ONE_0002004 (results section of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002004 "A results section that includes a few sections to describe particular characterisitics of research results of a study based on dietary surveys."@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002004 "results section of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002004 obo:IAO_0000318)
+
+# Class: obo:ONE_0002005 (discussion of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002005 "A discussion section that interprets particular characterisitics of a study based on dietary surveys."@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002005 "discussion of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002005 obo:IAO_0000319)
+
+# Class: obo:ONE_0002006 (ethics of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002006 "an ethical approval section that describes the procedure for consent and study approval from ethics committee(s)."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002006 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002006 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002006 "ethics of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002006 obo:IAO_0000620)
+
+# Class: obo:ONE_0002007 (limitation section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002007 "A discussion section that describes the main limitations of the data sources and assessment methods used and implications for the interpretation of the findings."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002007 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002007 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002007 "limitation section"@en)
+SubClassOf(obo:ONE_0002007 obo:ONE_0002005)
+
+# Class: obo:ONE_0002008 (supplementary material of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002008 "a supplementary (online) material that provides data collection tools and data as online material or explain how they can be accessed."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002008 "Lachat C, Hawwash D, Ocké MC, Berg C, Forsum E, Hörnell A, Larsson C, Sonestedt E, Wirfält E, Åkesson A, Kolsteren P, Byrnes G, De Keyzer W, Van Camp J, Cade JE, Slimani N, Cevallos M, Egger M, Huybrechts I. Strengthening the Reporting of Observational Studies in Epidemiology-Nutritional Epidemiology (STROBE-nut): An Extension of the STROBE Statement. PLoS Med. 2016 Jun 7;13(6):e1002036. doi: 10.1371/journal.pmed.1002036."@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002008 "supplementary material of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002008 obo:IAO_0000326)
+
+# Class: obo:ONE_0002009 (settings section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002009 "A methods section that describes any characteristics of the study settings that might affect the dietary intake or nutritional status of the participants, if applicable."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002009 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002009 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002009 "settings section"@en)
+SubClassOf(obo:ONE_0002009 obo:ONE_0002003)
+
+# Class: obo:ONE_0002010 (participants section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002010 "A methods section that reports particular dietary, physiological or nutritional characteristics that were considered when selecting the target population."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002010 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002010 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002010 "participants section"@en)
+SubClassOf(obo:ONE_0002010 obo:ONE_0002003)
+
+# Class: obo:ONE_0002011 (variables section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002011 "A methods section that a) clearly defines foods, food groups, nutrients, or other food components.b) when using dietary patterns or indices, describes the methods to obtain them and their nutritional properties."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002011 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002011 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002011 "variables section"@en)
+SubClassOf(obo:ONE_0002011 obo:ONE_0002003)
+
+# Class: obo:ONE_0002012 (data measurements section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002012 "A methods section that includes 6 elements for the description of data measurements of a study based on dietary survey(s)."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002012 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002012 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002012 "data measurements section"@en)
+SubClassOf(obo:ONE_0002012 obo:ONE_0002003)
+
+# Class: obo:ONE_0002013 (bias section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002013 "A method section that reports how bias in dietary or nutritional assessment was addressed, e.g., misreporting, changes in habits as a result of being measured, or data imputation from other sources"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002013 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002013 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002013 "bias section"@en)
+SubClassOf(obo:ONE_0002013 obo:ONE_0002003)
+
+# Class: obo:ONE_0002014 (quantitative variables section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002014 "A methods section that explains categorization of dietary/nutritional data (e.g., use of N-tiles and handling of nonconsumers) and the choice of reference category, if applicable."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002014 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002014 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002014 "quantitative variables section"@en)
+SubClassOf(obo:ONE_0002014 obo:ONE_0002003)
+
+# Class: obo:ONE_0002015 (statistical analysis section of a published study based on dietary survey(s))
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002015 "A statistical analysis section that a) describes any statistical method used to combine dietary or nutritional data, if applicable; b) describes and justifies the method for energy adjustments, intake modeling, and use of weighting factors, if applicable; c) reports any adjustments for measurement error, i.e,. from a validity or calibration study."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002015 "Lachat C, Hawwash D, Ocké MC, Berg C, Forsum E, Hörnell A, Larsson C, Sonestedt E, Wirfält E, Åkesson A, Kolsteren P, Byrnes G, De Keyzer W, Van Camp J, Cade JE, Slimani N, Cevallos M, Egger M, Huybrechts I. Strengthening the Reporting of Observational Studies in Epidemiology-Nutritional Epidemiology (STROBE-nut): An Extension of the STROBE Statement. PLoS Med. 2016 Jun 7;13(6):e1002036. doi: 10.1371/journal.pmed.1002036."@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002015 "statistical analysis section of a published study based on dietary survey(s)"@en)
+SubClassOf(obo:ONE_0002015 obo:IAO_0000644)
+
+# Class: obo:ONE_0002016 (dietary assessment method(s) section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002016 "A data measurements section that describes the dietary assessment method(s), e.g., portion size estimation, number of days and items recorded, how it was developed and administered, and how quality was assured, and report if and how supplement intake was assessed."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002016 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002016 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002016 "dietary assessment method(s) section"@en)
+SubClassOf(obo:ONE_0002016 obo:ONE_0002012)
+
+# Class: obo:ONE_0002017 (food composition data section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002017 "A data measurements section that describes and justifies food composition data used. (e.g. explain the procedure to match food composition with consumption data and describe the use of conversion factors, if applicable.)"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002017 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002017 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002017 "food composition data section"@en)
+SubClassOf(obo:ONE_0002017 obo:ONE_0002012)
+
+# Class: obo:ONE_0002018 (dietary reference values section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002018 "A data measurements section that describes the nutrient requirements, recommendations, or dietary guidelines and the evaluation approach used to compare intake with the dietary reference values, if applicable."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002018 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002018 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002018 "dietary reference values section"@en)
+SubClassOf(obo:ONE_0002018 obo:ONE_0002012)
+
+# Class: obo:ONE_0002019 (biomarkers section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002019 "A data measurements section that reports the type of biomarkers used and their usefulness as dietary exposure markers. When using nutritional biomarkers, additionally use the STROBE Extension for Molecular Epidemiology (STROBE-ME)."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002019 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002019 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002019 "biomarkers section"@en)
+SubClassOf(obo:ONE_0002019 obo:ONE_0002012)
+
+# Class: obo:ONE_0002020 (nondietary data section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002020 "A data measurements section that describes the assessment of nondietary data (e.g., nutritional status and influencing factors) and timing of the assessment of these variables in relation to dietary assessment."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002020 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002020 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002020 "nondietary data section"@en)
+SubClassOf(obo:ONE_0002020 obo:ONE_0002012)
+
+# Class: obo:ONE_0002021 (study validation section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002021 "A data measurements section that reports on the validity of the dietary or nutritional assessment methods and any internal or external validation used in the study, if applicable."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002021 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002021 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002021 "study validation section"@en)
+SubClassOf(obo:ONE_0002021 obo:ONE_0002012)
+
+# Class: obo:ONE_0002022 (descriptive data section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002022 "A results section that gives the distribution of participant characteristics across the exposure variables if applicable, specifies if food consumption of total population or consumers only were used to obtain results."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002022 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002022 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002022 "descriptive data section"@en)
+SubClassOf(obo:ONE_0002022 obo:ONE_0002004)
+
+# Class: obo:ONE_0002023 (main results section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002023 "A result section that specifies if nutrient intakes are reported with or without inclusion of dietary supplement intake, if applicable."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002023 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002023 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002023 "main results section"@en)
+SubClassOf(obo:ONE_0002023 obo:ONE_0002004)
+
+# Class: obo:ONE_0002024 (other analyses section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002024 "A results section that reports any sensitivity analysis (e.g., exclusion of misreporters or outliers) and data imputation, if applicable."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002024 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002024 "Carl Lachat"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0002024 "other analyses section"@en)
+SubClassOf(obo:ONE_0002024 obo:ONE_0002004)
+
+# Class: obo:ONE_0002025 (interpretation section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0002025 "A discussion section that reports the nutritional relevance of the findings, given the complexity of diet or nutrition as an exposure."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0002025 "https://www.strobe-nut.ugent.be/content/recommendations"@en)
+AnnotationAssertion(dc:contributor obo:ONE_0002025 "Carl Lachat")
+AnnotationAssertion(rdfs:label obo:ONE_0002025 "interpretation section"@en)
+SubClassOf(obo:ONE_0002025 obo:ONE_0002005)
+
+# Class: obo:ONE_0003001 (food-based dietary guideline)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003001 "A publication that provides science-based dietary advice to promote healthy eating of the general public."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003001 "SYSTEMIC WP5"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0003001 "http://www.fao.org/nutrition/education/food-dietary-guidelines/en/")
+AnnotationAssertion(obo:IAO_0000119 obo:ONE_0003001 "https://www.ncbi.nlm.nih.gov/books/NBK235267/")
+AnnotationAssertion(rdfs:label obo:ONE_0003001 "food-based dietary guideline"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003001 "FBDG"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003001 "dietary guideline"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003001 "dietary recommendation"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003001 "healthy eating plan"@en)
+SubClassOf(obo:ONE_0003001 obo:IAO_0000311)
+
+# Class: obo:ONE_0003002 (qualitative food-based dietary guideline)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003002 "A food-based dietary guideline that provides qualitative dietary advice."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003002 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003002 "qualitative food-based dietary guideline"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003002 "qualitative FBDG"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003002 "qualitative dietary guideline"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003002 "qualitative dietary recommendation"@en)
+SubClassOf(obo:ONE_0003002 obo:ONE_0003001)
+
+# Class: obo:ONE_0003003 (quantitative food-based dietary guideline)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003003 "A food-based dietary guideline that provides quantitative dietary advice."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003003 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003003 "quantitative food-based dietary guideline"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003003 "quantitative FBDG"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003003 "quantitative dietary guideline"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003003 "quantitative dietary recommendation"@en)
+SubClassOf(obo:ONE_0003003 obo:ONE_0003001)
+
+# Class: obo:ONE_0003004 (food-based dietary guideline for infants)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003004 "A food-based dietary guideline that provides a guide about breastfeeding, baby food and nutrition."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003004 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003004 "food-based dietary guideline for infants"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003004 "FBDG for infants"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003004 "dietary guideline for infants"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003004 "dietary recommendation for infants"@en)
+SubClassOf(obo:ONE_0003004 obo:ONE_0003001)
+
+# Class: obo:ONE_0003005 (food-based dietary guideline for children)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003005 "A food-based dietary guideline that provides dietary advice for children."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003005 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003005 "food-based dietary guideline for children"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003005 "FBDG for children"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003005 "dietary guideline for children"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003005 "dietary recommendation for children"@en)
+SubClassOf(obo:ONE_0003005 obo:ONE_0003001)
+
+# Class: obo:ONE_0003006 (food-based dietary guideline for adolescents)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003006 "A food-based dietary guideline that provides dietary advice for adolescents."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003006 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003006 "food-based dietary guideline for adolescents"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003006 "FBDG for adolescents"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003006 "dietary guideline for adolescents"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003006 "dietary recommendation for adolescents"@en)
+SubClassOf(obo:ONE_0003006 obo:ONE_0003001)
+
+# Class: obo:ONE_0003007 (food-based dietary guideline for adults)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003007 "A food-based dietary guideline that provides dietary advice for adults."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003007 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003007 "food-based dietary guideline for adults"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003007 "FBDG for adults"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003007 "dietary guideline for adults"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003007 "dietary recommendation for adults"@en)
+SubClassOf(obo:ONE_0003007 obo:ONE_0003001)
+
+# Class: obo:ONE_0003008 (food-based dietary guideline for elderly people)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003008 "A food-based dietary guideline that provides dietary advice for elderly people."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003008 "SYSTEMIC WP5"@en)
+AnnotationAssertion(rdfs:label obo:ONE_0003008 "food-based dietary guideline for elderly people"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003008 "FBDG for elderly people"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003008 "dietary guideline for elderly people"@en)
+AnnotationAssertion(skos:altLabel obo:ONE_0003008 "dietary recommendation for elderly people"@en)
+SubClassOf(obo:ONE_0003008 obo:ONE_0003001)
+
+# Class: obo:ONE_0003010 (food-based dietary guideline regarding food diversity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003010 "A food-based dietary guideline that provides dietary advice regarding food diversity.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003010 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003010 "food-based dietary guideline regarding food diversity")
+AnnotationAssertion(skos:altLabel obo:ONE_0003010 "FBDG regarding food diversity")
+AnnotationAssertion(skos:altLabel obo:ONE_0003010 "dietary guideline regarding food diversity")
+AnnotationAssertion(skos:altLabel obo:ONE_0003010 "dietary recommendation regarding food diversity")
+SubClassOf(obo:ONE_0003010 obo:ONE_0003001)
+
+# Class: obo:ONE_0003011 (food-based dietary guideline regarding processed food)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONE_0003011 "A food-based dietary guideline that provides dietary advice regarding the eating frequency/quantity of processed food.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONE_0003011 "SYSTEMIC WP5")
+AnnotationAssertion(rdfs:label obo:ONE_0003011 "food-based dietary guideline regarding processed food")
+AnnotationAssertion(skos:altLabel obo:ONE_0003011 "FBDG regarding processed food")
+AnnotationAssertion(skos:altLabel obo:ONE_0003011 "dietary guideline regarding processed food")
+AnnotationAssertion(skos:altLabel obo:ONE_0003011 "dietary recommendation regarding processed food")
+SubClassOf(obo:ONE_0003011 obo:ONE_0003001)
+
+# Class: obo:ONS_0000070 (Cohort Study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONS_0000070 "Data are obtained from groups who have been exposed, or not exposed, to the new technology or factor of interest (eg from databases). No allocation of exposure is made by the researcher. Best for study the effect of predictive risk factors on an outcome.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONS_0000070 "ENPADASI_WP4")
+AnnotationAssertion(obo:in_minimal_requirements_subset obo:ONS_0000070 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label obo:ONS_0000070 "Cohort Study")
+AnnotationAssertion(rdfs:seeAlso obo:ONS_0000070 "http://www.cebm.net/study-designs/")
+EquivalentClasses(obo:ONS_0000070 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000067 obo:ONE_0000001)))
+SubClassOf(obo:ONS_0000070 obo:OBI_0500000)
+
+# Class: obo:ONS_0000071 (Case-Control Studies)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONS_0000071 "Patients with a certain outcome or disease and an appropriate group of controls without the outcome or disease are selected (usually with careful consideration of appropriate choice of controls, matching, etc) and then information is obtained on whether the subjects have been exposed to the factor under investigation.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONS_0000071 "ENPADASI_WP4")
+AnnotationAssertion(obo:in_minimal_requirements_subset obo:ONS_0000071 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label obo:ONS_0000071 "Case-Control Studies")
+AnnotationAssertion(rdfs:seeAlso obo:ONS_0000071 "http://www.cebm.net/study-designs/")
+EquivalentClasses(obo:ONS_0000071 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000067 obo:ONE_0000001)))
+SubClassOf(obo:ONS_0000071 obo:OBI_0500000)
+
+# Class: obo:ONS_0000072 (Cross-Sectional Survey)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ONS_0000072 "A study that examines the relationship between diseases (or other health-related characteristics) and other variables of interest as they exist in a defined population at one particular time (ie exposure and outcomes are both measured at the same time). Best for quantifying the prevalence of a disease or risk factor, and for quantifying the accuracy of a diagnostic test.")
+AnnotationAssertion(obo:IAO_0000117 obo:ONS_0000072 "ENPADASI_WP4")
+AnnotationAssertion(obo:in_minimal_requirements_subset obo:ONS_0000072 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label obo:ONS_0000072 "Cross-Sectional Survey")
+AnnotationAssertion(rdfs:seeAlso obo:ONS_0000072 "http://www.cebm.net/study-designs/")
+EquivalentClasses(obo:ONS_0000072 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000067 obo:ONE_0000001)))
+SubClassOf(obo:ONS_0000072 obo:OBI_0500000)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:IAO_0000125 (pending final vetting)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000125 "pending final vetting"@en)
+ClassAssertion(obo:IAO_0000078 obo:IAO_0000125)
+ClassAssertion(owl:Thing obo:IAO_0000125)
+
+
+)

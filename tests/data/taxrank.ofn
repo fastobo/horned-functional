@@ -1,0 +1,692 @@
+Prefix(:=<http://purl.obolibrary.org/obo/taxrank.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/taxrank.owl>
+<http://purl.obolibrary.org/obo/taxrank/releases/2016-04-15/taxrank.owl>
+Annotation(oboInOwl:default-namespace "taxonomic_rank")
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
+Annotation(rdfs:comment "To the extent possible under law, Peter E. Midford has waived all copyright and related or neighboring rights to the Taxonomic Rank Vocabulary (TAXRANK). This work is published from the United States. It is requested that users of this vocabulary cite it at the following URI: http://www.phenoscape.org/wiki/Taxonomic_Rank_Vocabulary")
+
+Declaration(Class(obo:TAXRANK_0000000))
+Declaration(Class(obo:TAXRANK_0000001))
+Declaration(Class(obo:TAXRANK_0000002))
+Declaration(Class(obo:TAXRANK_0000003))
+Declaration(Class(obo:TAXRANK_0000004))
+Declaration(Class(obo:TAXRANK_0000005))
+Declaration(Class(obo:TAXRANK_0000006))
+Declaration(Class(obo:TAXRANK_0000007))
+Declaration(Class(obo:TAXRANK_0000008))
+Declaration(Class(obo:TAXRANK_0000009))
+Declaration(Class(obo:TAXRANK_0000010))
+Declaration(Class(obo:TAXRANK_0000011))
+Declaration(Class(obo:TAXRANK_0000012))
+Declaration(Class(obo:TAXRANK_0000013))
+Declaration(Class(obo:TAXRANK_0000014))
+Declaration(Class(obo:TAXRANK_0000015))
+Declaration(Class(obo:TAXRANK_0000016))
+Declaration(Class(obo:TAXRANK_0000017))
+Declaration(Class(obo:TAXRANK_0000018))
+Declaration(Class(obo:TAXRANK_0000019))
+Declaration(Class(obo:TAXRANK_0000020))
+Declaration(Class(obo:TAXRANK_0000021))
+Declaration(Class(obo:TAXRANK_0000022))
+Declaration(Class(obo:TAXRANK_0000023))
+Declaration(Class(obo:TAXRANK_0000024))
+Declaration(Class(obo:TAXRANK_0000025))
+Declaration(Class(obo:TAXRANK_0000026))
+Declaration(Class(obo:TAXRANK_0000027))
+Declaration(Class(obo:TAXRANK_0000028))
+Declaration(Class(obo:TAXRANK_0000029))
+Declaration(Class(obo:TAXRANK_0000030))
+Declaration(Class(obo:TAXRANK_0000031))
+Declaration(Class(obo:TAXRANK_0000032))
+Declaration(Class(obo:TAXRANK_0000033))
+Declaration(Class(obo:TAXRANK_0000034))
+Declaration(Class(obo:TAXRANK_0000035))
+Declaration(Class(obo:TAXRANK_0000036))
+Declaration(Class(obo:TAXRANK_0000037))
+Declaration(Class(obo:TAXRANK_0000038))
+Declaration(Class(obo:TAXRANK_0000039))
+Declaration(Class(obo:TAXRANK_0000040))
+Declaration(Class(obo:TAXRANK_0000041))
+Declaration(Class(obo:TAXRANK_0000042))
+Declaration(Class(obo:TAXRANK_0000043))
+Declaration(Class(obo:TAXRANK_0000044))
+Declaration(Class(obo:TAXRANK_0000045))
+Declaration(Class(obo:TAXRANK_0000046))
+Declaration(Class(obo:TAXRANK_0000047))
+Declaration(Class(obo:TAXRANK_0000048))
+Declaration(Class(obo:TAXRANK_0000049))
+Declaration(Class(obo:TAXRANK_0000050))
+Declaration(Class(obo:TAXRANK_0000051))
+Declaration(Class(obo:TAXRANK_0000052))
+Declaration(Class(obo:TAXRANK_0000053))
+Declaration(Class(obo:TAXRANK_0000054))
+Declaration(Class(obo:TAXRANK_0000055))
+Declaration(Class(obo:TAXRANK_0000056))
+Declaration(Class(obo:TAXRANK_0000057))
+Declaration(Class(obo:TAXRANK_0000058))
+Declaration(Class(obo:TAXRANK_0000059))
+Declaration(Class(obo:TAXRANK_0000060))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:TAXRANK_1000000))
+Declaration(AnnotationProperty(oboInOwl:created_by))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:is_metadata_tag))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: obo:TAXRANK_1000000 (has_rank)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_1000000 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_1000000 "TAXRANK:1000000")
+AnnotationAssertion(oboInOwl:is_metadata_tag obo:TAXRANK_1000000 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label obo:TAXRANK_1000000 "has_rank")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:TAXRANK_0000000 (taxonomic_rank)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAXRANK:curator") obo:IAO_0000115 obo:TAXRANK_0000000 "A level of depth of a taxon in a taxonomic hierarchy.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000000 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000000 "TAXRANK:0000000")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000000 "taxonomic_rank")
+SubClassOf(obo:TAXRANK_0000000 owl:Thing)
+
+# Class: obo:TAXRANK_0000001 (phylum)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000001 "NCBITaxon:phylum")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000001 "http://rs.tdwg.org/ontology/voc/TaxonRank#Phylum")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000001 "division")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000001 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000001 "TAXRANK:0000001")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000001 "phylum")
+SubClassOf(obo:TAXRANK_0000001 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000002 (class)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000002 "NCBITaxon:class")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000002 "http://rs.tdwg.org/ontology/voc/TaxonRank#Class")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000002 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000002 "TAXRANK:0000002")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000002 "class")
+SubClassOf(obo:TAXRANK_0000002 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000003 (order)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000003 "NCBITaxon:order")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000003 "http://rs.tdwg.org/ontology/voc/TaxonRank#Order")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000003 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000003 "TAXRANK:0000003")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000003 "order")
+SubClassOf(obo:TAXRANK_0000003 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000004 (family)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000004 "NCBITaxon:family")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000004 "http://rs.tdwg.org/ontology/voc/TaxonRank#Family")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000004 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000004 "TAXRANK:0000004")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000004 "family")
+SubClassOf(obo:TAXRANK_0000004 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000005 (genus)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000005 "NCBITaxon:genus")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000005 "http://rs.tdwg.org/ontology/voc/TaxonRank#Genus")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000005 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000005 "TAXRANK:0000005")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000005 "genus")
+SubClassOf(obo:TAXRANK_0000005 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000006 (species)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000006 "NCBITaxon:species")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000006 "http://rs.tdwg.org/ontology/voc/TaxonRank#Species")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000006 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000006 "TAXRANK:0000006")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000006 "species")
+SubClassOf(obo:TAXRANK_0000006 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000007 (subclass)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000007 "NCBITaxon:subclass")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000007 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subclass")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000007 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000007 "TAXRANK:0000007")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000007 "subclass")
+SubClassOf(obo:TAXRANK_0000007 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000008 (subphylum)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000008 "NCBITaxon:subphylum")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000008 "http://rs.tdwg.org/ontology/voc/TaxonRank#SubPhylum")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000008 "subdivision")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000008 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000008 "TAXRANK:0000008")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000008 "subphylum")
+SubClassOf(obo:TAXRANK_0000008 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000009 (subgenus)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000009 "NCBITaxon:subgenus")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000009 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subgenus")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000009 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000009 "TAXRANK:0000009")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000009 "subgenus")
+SubClassOf(obo:TAXRANK_0000009 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000010 (species_group)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000010 "NCBITaxon:species_group")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000010 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000010 "TAXRANK:0000010")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000010 "species_group")
+SubClassOf(obo:TAXRANK_0000010 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000011 (species_subgroup)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000011 "NCBITaxon:species_subgroup")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000011 "species complex")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000011 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000011 "TAXRANK:0000011")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000011 "species_subgroup")
+SubClassOf(obo:TAXRANK_0000011 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000012 (species_complex)
+
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000012 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000012 "TAXRANK:0000012")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000012 "species_complex")
+SubClassOf(obo:TAXRANK_0000012 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000013 (infraorder)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000013 "NCBITaxon:infraorder")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000013 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infraorder")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000013 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000013 "TAXRANK:0000013")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000013 "infraorder")
+SubClassOf(obo:TAXRANK_0000013 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000014 (suborder)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000014 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000014 "NCBITaxon:suborder")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000014 "http://rs.tdwg.org/ontology/voc/TaxonRank#Suborder")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000014 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000014 "TAXRANK:0000014")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000014 "suborder")
+SubClassOf(obo:TAXRANK_0000014 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000015 (superclass)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000015 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000015 "NCBITaxon:superclass")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000015 "http://rs.tdwg.org/ontology/voc/TaxonRank#Superclass")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000015 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000015 "TAXRANK:0000015")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000015 "superclass")
+SubClassOf(obo:TAXRANK_0000015 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000016 (varietas)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000016 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000016 "NCBITaxon:varietas")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000016 "variety")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000016 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000016 "TAXRANK:0000016")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000016 "varietas")
+SubClassOf(obo:TAXRANK_0000016 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000017 (kingdom)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000017 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000017 "NCBITaxon:kingdom")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000017 "http://rs.tdwg.org/ontology/voc/TaxonRank#Kingdom")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000017 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000017 "TAXRANK:0000017")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000017 "kingdom")
+SubClassOf(obo:TAXRANK_0000017 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000018 (superfamily)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000018 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000018 "NCBITaxon:superfamily")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000018 "http://rs.tdwg.org/ontology/voc/TaxonRank#Superfamily")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000018 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000018 "TAXRANK:0000018")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000018 "superfamily")
+SubClassOf(obo:TAXRANK_0000018 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000019 (infraclass)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000019 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000019 "NCBITaxon:infraclass")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000019 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infraclass")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000019 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000019 "TAXRANK:0000019")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000019 "infraclass")
+SubClassOf(obo:TAXRANK_0000019 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000020 (superorder)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000020 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000020 "NCBITaxon:superorder")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000020 "http://rs.tdwg.org/ontology/voc/TaxonRank#Superorder")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000020 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000020 "TAXRANK:0000020")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000020 "superorder")
+SubClassOf(obo:TAXRANK_0000020 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000021 (parvorder)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000021 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000021 "NCBITaxon:parvorder")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000021 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000021 "TAXRANK:0000021")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000021 "parvorder")
+SubClassOf(obo:TAXRANK_0000021 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000022 (superkingdom)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000022 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000022 "NCBITaxon:superkingdom")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000022 "http://rs.tdwg.org/ontology/voc/TaxonRank#Superkingdom")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000022 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000022 "TAXRANK:0000022")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000022 "superkingdom")
+SubClassOf(obo:TAXRANK_0000022 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000023 (subspecies)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000023 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000023 "NCBITaxon:subspecies")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000023 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subspecies")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000023 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000023 "TAXRANK:0000023")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000023 "subspecies")
+SubClassOf(obo:TAXRANK_0000023 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000024 (subfamily)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000024 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000024 "NCBITaxon:subfamily")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000024 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subfamily")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000024 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000024 "TAXRANK:0000024")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000024 "subfamily")
+SubClassOf(obo:TAXRANK_0000024 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000025 (tribe)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000025 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000025 "NCBITaxon:tribe")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000025 "http://rs.tdwg.org/ontology/voc/TaxonRank#Tribe")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000025 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000025 "TAXRANK:0000025")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000025 "tribe")
+SubClassOf(obo:TAXRANK_0000025 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000026 (forma)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000026 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000026 "NCBITaxon:forma")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000026 "http://rs.tdwg.org/ontology/voc/TaxonRank#Form")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000026 "form")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000026 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000026 "TAXRANK:0000026")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000026 "forma")
+SubClassOf(obo:TAXRANK_0000026 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000027 (superphylum)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000027 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000027 "NCBITaxon:superphylum")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000027 "http://rs.tdwg.org/ontology/voc/TaxonRank#Superphylum")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000027 "superdivision")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000027 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000027 "TAXRANK:0000027")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000027 "superphylum")
+SubClassOf(obo:TAXRANK_0000027 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000028 (subtribe)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000028 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000028 "NCBITaxon:subtribe")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000028 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subtribe")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000028 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000028 "TAXRANK:0000028")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000028 "subtribe")
+SubClassOf(obo:TAXRANK_0000028 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000029 (subkingdom)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000029 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000029 "NCBITaxon:subkingdom")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000029 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subkingdom")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000029 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000029 "TAXRANK:0000029")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000029 "subkingdom")
+SubClassOf(obo:TAXRANK_0000029 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000030 (section)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000030 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000030 "http://rs.tdwg.org/ontology/voc/TaxonRank#Section")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000030 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000030 "TAXRANK:0000030")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000030 "section")
+SubClassOf(obo:TAXRANK_0000030 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000031 (series)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000031 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000031 "http://rs.tdwg.org/ontology/voc/TaxonRank#Series")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000031 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000031 "TAXRANK:0000031")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000031 "series")
+SubClassOf(obo:TAXRANK_0000031 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000032 (bio-variety)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000032 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000032 "http://rs.tdwg.org/ontology/voc/TaxonRank#Bio-variety")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000032 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000032 "TAXRANK:0000032")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000032 "bio-variety")
+SubClassOf(obo:TAXRANK_0000032 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000033 (candidate)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000033 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000033 "http://rs.tdwg.org/ontology/voc/TaxonRank#Candidate")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000033 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000033 "TAXRANK:0000033")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000033 "candidate")
+SubClassOf(obo:TAXRANK_0000033 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000034 (cultivar)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000034 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000034 "http://rs.tdwg.org/ontology/voc/TaxonRank#Cultivar")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000034 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000034 "TAXRANK:0000034")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000034 "cultivar")
+SubClassOf(obo:TAXRANK_0000034 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000035 (cultivar-group)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000035 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000035 "http://rs.tdwg.org/ontology/voc/TaxonRank#Cultivar-group")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000035 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000035 "TAXRANK:0000035")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000035 "cultivar-group")
+SubClassOf(obo:TAXRANK_0000035 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000036 (denominationclass)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000036 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000036 "http://rs.tdwg.org/ontology/voc/TaxonRank#DenominationClass")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000036 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000036 "TAXRANK:0000036")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000036 "denominationclass")
+SubClassOf(obo:TAXRANK_0000036 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000037 (domain)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000037 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000037 "http://rs.tdwg.org/ontology/voc/TaxonRank#Domain")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000037 "empire")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000037 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000037 "TAXRANK:0000037")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000037 "domain")
+SubClassOf(obo:TAXRANK_0000037 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000038 (graft-chimaera)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000038 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000038 "http://rs.tdwg.org/ontology/voc/TaxonRank#Graft-chimaera")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000038 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000038 "TAXRANK:0000038")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000038 "graft-chimaera")
+SubClassOf(obo:TAXRANK_0000038 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000039 (grex)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000039 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000039 "http://rs.tdwg.org/ontology/voc/TaxonRank#Grex")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000039 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000039 "TAXRANK:0000039")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000039 "grex")
+SubClassOf(obo:TAXRANK_0000039 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000040 (infraphylum)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000040 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000040 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infraphylum")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:TAXRANK_0000040 "infradivision")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000040 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000040 "TAXRANK:0000040")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000040 "infraphylum")
+SubClassOf(obo:TAXRANK_0000040 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000041 (infrafamily)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000041 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000041 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infrafamily")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000041 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000041 "TAXRANK:0000041")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000041 "infrafamily")
+SubClassOf(obo:TAXRANK_0000041 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000042 (infragenerictaxon)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000042 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000042 "http://rs.tdwg.org/ontology/voc/TaxonRank#InfragenericTaxon")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000042 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000042 "TAXRANK:0000042")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000042 "infragenerictaxon")
+SubClassOf(obo:TAXRANK_0000042 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000043 (infragenus)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000043 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000043 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infragenus")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000043 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000043 "TAXRANK:0000043")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000043 "infragenus")
+SubClassOf(obo:TAXRANK_0000043 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000044 (infrakingdom)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000044 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000044 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infrakingdom")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000044 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000044 "TAXRANK:0000044")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000044 "infrakingdom")
+SubClassOf(obo:TAXRANK_0000044 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000045 (infraspecies)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000045 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000045 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infraspecies")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000045 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000045 "TAXRANK:0000045")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000045 "infraspecies")
+SubClassOf(obo:TAXRANK_0000045 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000046 (infraspecificTaxon)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000046 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000046 "http://rs.tdwg.org/ontology/voc/TaxonRank#InfraspecificTaxon")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000046 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000046 "TAXRANK:0000046")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000046 "infraspecificTaxon")
+SubClassOf(obo:TAXRANK_0000046 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000047 (infratribe)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000047 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000047 "http://rs.tdwg.org/ontology/voc/TaxonRank#Infratribe")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000047 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000047 "TAXRANK:0000047")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000047 "infratribe")
+SubClassOf(obo:TAXRANK_0000047 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000048 (patho-variety)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000048 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000048 "http://rs.tdwg.org/ontology/voc/TaxonRank#patho-variety")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000048 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000048 "TAXRANK:0000048")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000048 "patho-variety")
+SubClassOf(obo:TAXRANK_0000048 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000049 (specialform)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000049 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000049 "http://rs.tdwg.org/ontology/voc/TaxonRank#Specialform")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000049 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000049 "TAXRANK:0000049")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000049 "specialform")
+SubClassOf(obo:TAXRANK_0000049 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000050 (speciesaggregate)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000050 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000050 "http://rs.tdwg.org/ontology/voc/TaxonRank#SpeciesAggregate")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000050 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000050 "TAXRANK:0000050")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000050 "speciesaggregate")
+SubClassOf(obo:TAXRANK_0000050 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000051 (subvariety)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000051 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000051 "http://rs.tdwg.org/ontology/voc/TaxonRank#Sub-Variety")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000051 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000051 "TAXRANK:0000051")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000051 "subvariety")
+SubClassOf(obo:TAXRANK_0000051 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000052 (subsubvariety)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000052 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000052 "http://rs.tdwg.org/ontology/voc/TaxonRank#Sub-Sub-Variety")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000052 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000052 "TAXRANK:0000052")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000052 "subsubvariety")
+SubClassOf(obo:TAXRANK_0000052 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000053 (subsection)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000053 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000053 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subsection")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000053 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000053 "TAXRANK:0000053")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000053 "subsection")
+SubClassOf(obo:TAXRANK_0000053 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000054 (subseries)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000054 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000054 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subseries")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000054 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000054 "TAXRANK:0000054")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000054 "subseries")
+SubClassOf(obo:TAXRANK_0000054 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000055 (subspecificaggregate)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000055 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000055 "http://rs.tdwg.org/ontology/voc/TaxonRank#SubspecificAggregate")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000055 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000055 "TAXRANK:0000055")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000055 "subspecificaggregate")
+SubClassOf(obo:TAXRANK_0000055 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000056 (subsubform)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000056 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000056 "http://rs.tdwg.org/ontology/voc/TaxonRank#Subsubform")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000056 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000056 "TAXRANK:0000056")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000056 "subsubform")
+SubClassOf(obo:TAXRANK_0000056 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000057 (supertribe)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000057 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000057 "http://rs.tdwg.org/ontology/voc/TaxonRank#Supertribe")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000057 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000057 "TAXRANK:0000057")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000057 "supertribe")
+SubClassOf(obo:TAXRANK_0000057 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000058 (supragenerictaxon)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000058 "pmidford")
+AnnotationAssertion(oboInOwl:hasDbXref obo:TAXRANK_0000058 "http://rs.tdwg.org/ontology/voc/TaxonRank#SupragenericTaxon")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000058 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000058 "TAXRANK:0000058")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000058 "supragenerictaxon")
+SubClassOf(obo:TAXRANK_0000058 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000059 (subform)
+
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000059 "pmidford")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000059 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000059 "TAXRANK:0000059")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000059 "subform")
+SubClassOf(obo:TAXRANK_0000059 obo:TAXRANK_0000000)
+
+# Class: obo:TAXRANK_0000060 (no_rank)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAXRANK:curator") obo:IAO_0000115 obo:TAXRANK_0000060 "A token asserting that the taxon was not assigned a rank.")
+AnnotationAssertion(oboInOwl:created_by obo:TAXRANK_0000060 "pmidford")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:TAXRANK_0000060 "taxonomic_rank")
+AnnotationAssertion(oboInOwl:id obo:TAXRANK_0000060 "TAXRANK:0000060")
+AnnotationAssertion(rdfs:label obo:TAXRANK_0000060 "no_rank")
+SubClassOf(obo:TAXRANK_0000060 obo:TAXRANK_0000000)
+
+
+)

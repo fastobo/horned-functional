@@ -1,0 +1,724 @@
+Prefix(:=<http://purl.obolibrary.org/obo/psdo.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(doap:=<http://usefulinc.com/ns/doap#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/psdo.owl>
+<http://purl.obolibrary.org/obo/2022-02-23/psdo.owl>
+Import(<http://purl.obolibrary.org/obo/stato.owl>)
+Import(<http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl>)
+Import(<http://purl.obolibrary.org/obo/ro/core.owl>)
+Annotation(dc:contributor "Dahee Lee"@en)
+Annotation(dc:contributor "Shelbi Lisecki"@en)
+Annotation(dc:contributor "Veena Panicker"@en)
+Annotation(dc:creator "Colin Gross"@en)
+Annotation(dc:creator "Cooper Stansbury"@en)
+Annotation(dc:creator "John Rincon"@en)
+Annotation(dc:creator "Zach Landis-Lewis"@en)
+Annotation(dc:description "Performance Summary Display Ontology (PSDO) is an application ontology about motivating information in performance summaries and the visual and textual entities that are used to communicate about performance. Motivating information includes performance comparisons and changes that motivate improvement or sustainment, such as improvement towards a goal, loss of high performer status, or the presence of a performance gap. Visual and textual entities include charts, tables, and graphs that display performance information. PSDO's domain focus is healthcare organizations that use clinical quality dashboards and feedback interventions for healthcare professionals and teams. Performance information is commonly about the quality of care and health outcomes that have been derived from clinical data using performance measures (aka metrics, process indicators, quality measures, etc). PSDO uses Basic Formal Ontology as its upper level ontology. This work is supported by the NIH, National Library of Medicine (1K01LM012528-01, 1R01LM013894-01).
+
+Landis-Lewis Z, Stansbury C, Rincón J, Gross C. Performance Summary Display Ontology: Feedback intervention content, delivery, and interpreted information. International Conference on Biomedical Ontology 2022 (ICBO 2022). https://icbo-conference.github.io/icbo2022/papers/ICBO-2022_paper_2172.pdf"@en)
+Annotation(dc:language "en"@en)
+Annotation(dc:license "https://creativecommons.org/licenses/by/4.0/"@en)
+Annotation(dc:title "Performance Summary Display Ontology"@en)
+Annotation(terms:license "https://creativecommons.org/licenses/by/4.0/"@en)
+Annotation(owl:versionInfo "1.0.1"@en)
+
+Declaration(Class(obo:PSDO_0000001))
+Declaration(Class(obo:PSDO_0000002))
+Declaration(Class(obo:PSDO_0000003))
+Declaration(Class(obo:PSDO_0000006))
+Declaration(Class(obo:PSDO_0000008))
+Declaration(Class(obo:PSDO_0000018))
+Declaration(Class(obo:PSDO_0000019))
+Declaration(Class(obo:PSDO_0000020))
+Declaration(Class(obo:PSDO_0000023))
+Declaration(Class(obo:PSDO_0000024))
+Declaration(Class(obo:PSDO_0000025))
+Declaration(Class(obo:PSDO_0000026))
+Declaration(Class(obo:PSDO_0000028))
+Declaration(Class(obo:PSDO_0000029))
+Declaration(Class(obo:PSDO_0000031))
+Declaration(Class(obo:PSDO_0000035))
+Declaration(Class(obo:PSDO_0000036))
+Declaration(Class(obo:PSDO_0000037))
+Declaration(Class(obo:PSDO_0000040))
+Declaration(Class(obo:PSDO_0000041))
+Declaration(Class(obo:PSDO_0000045))
+Declaration(Class(obo:PSDO_0000046))
+Declaration(Class(obo:PSDO_0000047))
+Declaration(Class(obo:PSDO_0000054))
+Declaration(Class(obo:PSDO_0000055))
+Declaration(Class(obo:PSDO_0000056))
+Declaration(Class(obo:PSDO_0000058))
+Declaration(Class(obo:PSDO_0000059))
+Declaration(Class(obo:PSDO_0000060))
+Declaration(Class(obo:PSDO_0000061))
+Declaration(Class(obo:PSDO_0000062))
+Declaration(Class(obo:PSDO_0000079))
+Declaration(Class(obo:PSDO_0000080))
+Declaration(Class(obo:PSDO_0000081))
+Declaration(Class(obo:PSDO_0000082))
+Declaration(Class(obo:PSDO_0000083))
+Declaration(Class(obo:PSDO_0000084))
+Declaration(Class(obo:PSDO_0000085))
+Declaration(Class(obo:PSDO_0000086))
+Declaration(Class(obo:PSDO_0000087))
+Declaration(Class(obo:PSDO_0000088))
+Declaration(Class(obo:PSDO_0000089))
+Declaration(Class(obo:PSDO_0000090))
+Declaration(Class(obo:PSDO_0000091))
+Declaration(Class(obo:PSDO_0000092))
+Declaration(Class(obo:PSDO_0000093))
+Declaration(Class(obo:PSDO_0000094))
+Declaration(Class(obo:PSDO_0000095))
+Declaration(Class(obo:PSDO_0000096))
+Declaration(Class(obo:PSDO_0000097))
+Declaration(Class(obo:PSDO_0000098))
+Declaration(Class(obo:PSDO_0000099))
+Declaration(Class(obo:PSDO_0000100))
+Declaration(Class(obo:PSDO_0000101))
+Declaration(Class(obo:PSDO_0000102))
+Declaration(Class(obo:PSDO_0000103))
+Declaration(Class(obo:PSDO_0000104))
+Declaration(Class(obo:PSDO_0000105))
+Declaration(Class(obo:PSDO_0000106))
+Declaration(Class(obo:PSDO_0000107))
+Declaration(Class(obo:PSDO_0000108))
+Declaration(Class(obo:PSDO_0000110))
+Declaration(Class(obo:PSDO_0000111))
+Declaration(Class(obo:PSDO_0000112))
+Declaration(Class(obo:PSDO_0000113))
+Declaration(Class(obo:PSDO_0000114))
+Declaration(Class(obo:PSDO_0000115))
+Declaration(Class(obo:PSDO_0000116))
+Declaration(Class(obo:PSDO_0000117))
+Declaration(Class(obo:PSDO_0000118))
+Declaration(Class(obo:PSDO_0000119))
+Declaration(Class(obo:PSDO_0000120))
+Declaration(Class(obo:PSDO_0000121))
+Declaration(Class(obo:PSDO_0000122))
+Declaration(Class(obo:PSDO_0000123))
+Declaration(Class(obo:PSDO_0000124))
+Declaration(Class(obo:PSDO_0000125))
+Declaration(Class(obo:PSDO_0000126))
+Declaration(Class(obo:PSDO_0000127))
+Declaration(Class(obo:PSDO_0000128))
+Declaration(Class(obo:PSDO_0000129))
+Declaration(Class(foaf:Organization))
+Declaration(Class(foaf:Person))
+Declaration(ObjectProperty(obo:PSDO_0000109))
+Declaration(AnnotationProperty(dc:license))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:PSDO_0000109 (described by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000109 "Relationship between foaf:Person or foaf:Organization and an information content entity.  The ICE represents data about the person such as their performance capabilities or situation."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000109 "described by")
+ObjectPropertyDomain(obo:PSDO_0000109 ObjectUnionOf(foaf:Organization foaf:Person))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:PSDO_0000001 (relational information display)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000001 "An information content entity that displays relations between sets in a concretized collection of display components."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000001 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000001 "Zhang’s notion of 'dimension' relies on an understanding of ‘distributed representations’ which have both an 'internal' and an 'external' component. Each sets (see 'representing sets') has a quality of 'being distrobuted between internal (the cognition and representation of the sets as such) and external (the 'mark).' See:
+
+Zhang J, Norman DA. Representations in distributed cognitive tasks. Cognitive Science. 1994 Jan 1;18(1):87–122."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000001 "relational information display"@en)
+SubClassOf(obo:PSDO_0000001 obo:IAO_0000030)
+SubClassOf(obo:PSDO_0000001 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PSDO_0000008))
+SubClassOf(obo:PSDO_0000001 ObjectSomeValuesFrom(obo:RO_0000058 obo:PSDO_0000079))
+
+# Class: obo:PSDO_0000002 (performance summary display template)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000002 "An information content entity that is the collection of specification and metadata associated with a generalized potential information display."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000002 "performance summary display template"@en)
+SubClassOf(obo:PSDO_0000002 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000003 (performance summary display)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000003 "A relational information display whose display components bear some combination of sets (roles): ascribee set, performance measure set, performance set, or time set."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000003 "Cooper Stansbury, John Rincon, Dahee Lee, Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000003 "All subclasses of 'performance summary display' are defined classes based on cardinality of marks that realize specific represented set roles."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000003 "It is the authors current belief that the necessary and sufficient definiton of 'performance summary display' mandates that at least two set must be realized."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000003 "performance summary display"@en)
+SubClassOf(obo:PSDO_0000003 obo:PSDO_0000001)
+SubClassOf(obo:PSDO_0000003 ObjectSomeValuesFrom(obo:IAO_0000136 obo:PSDO_0000006))
+
+# Class: obo:PSDO_0000006 (represented set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000006 "A role inhering in the set of attributes of a mark in a relational information display that share a scale type and that convey information about another entity."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000006 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000006 "'Represented sets' are realized in the processes perception, design or cognition."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000006 "There is a distinction between elements and sets. Sets are groups, or sets of elements (with cardinality of at least one). At this time we do not know if elements with different roles can exist in a set with a different name, i.e., an acribee role within a time set. It seems unlikely that this is possible."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000006 "represented set"@en)
+SubClassOf(obo:PSDO_0000006 obo:BFO_0000023)
+SubClassOf(obo:PSDO_0000006 ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:PSDO_0000062) ObjectSomeValuesFrom(obo:RO_0000052 obo:PSDO_0000079)))
+
+# Class: obo:PSDO_0000008 (relational information display component)
+
+AnnotationAssertion(obo:IAO_0000112 obo:PSDO_0000008 "An axis, a title of an axis or of a graph, a bar in a bar graph, a line in a line graph, a textual entity in a table.")
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000008 "An information content entity that is a proper part of a relational information display and is concretized by a mark."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000008 "Munzner T. Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business; 2015. 404 p. (A.K. Peters visualization series)."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000008 "The material entity that concretizes the information content entity has the capability to bear some role 'represented sets' or 'focal element, ect..."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000008 "relational information display component"@en)
+SubClassOf(obo:PSDO_0000008 obo:IAO_0000030)
+SubClassOf(obo:PSDO_0000008 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PSDO_0000001))
+
+# Class: obo:PSDO_0000018 (ascribee set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000018 "A represented set where the mark attributes are about entities that have attributed performance data."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000018 "The elements of an 'ascribee set' typically represent people, organizations, or groups. They can also represent statistics, targets, or goals. The possible overlap with 'performance measure set' is justified by the creative liberties taken by the designer of the performance summary display."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000018 "ascribee set"@en)
+SubClassOf(obo:PSDO_0000018 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000019 (comparative element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000019 "A role inhering in a mark that is disjoint with a focal element and that has the same scale type as the focal element."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000019 "comparative element"@en)
+SubClassOf(obo:PSDO_0000019 obo:PSDO_0000084)
+SubClassOf(obo:PSDO_0000019 ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:PSDO_0000062) ObjectSomeValuesFrom(obo:RO_0000052 obo:PSDO_0000079)))
+
+# Class: obo:PSDO_0000020 (scale type)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000020 "A quality that is the abstract measurement property of a concretized display component."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000020 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000020 "scale type"@en)
+SubClassOf(obo:PSDO_0000020 obo:BFO_0000019)
+SubClassOf(obo:PSDO_0000020 ObjectSomeValuesFrom(obo:RO_0000080 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000023 (interval scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000023 "A scale type with three formal properties that (1) the instances can be distinguished from each other and (2) that one instance on a scale can be judged greater than, less than, or equal to another instance on the same scale and that (3) the magnitude of an instance represented by a unit on the scale is the same regardless of where on the scale the unit falls."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000023 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000023 "interval scale"@en)
+SubClassOf(obo:PSDO_0000023 obo:PSDO_0000020)
+SubClassOf(obo:PSDO_0000023 ObjectSomeValuesFrom(obo:RO_0000080 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000024 (ratio scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000024 "A scale type with four formal properties that (1) the instances can be distinguished from each other and (2) that one instance on a scale can be judged greater than, less than, or equal to another instance on the same scale, that (3) the magnitude of an instance represented by a unit on the scale is the same regardless of where on the scale the unit falls and (4) an absolute zero value can indicate that nothing at all of the property being represented exists."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000024 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000024 "ratio scale"@en)
+SubClassOf(obo:PSDO_0000024 obo:PSDO_0000020)
+SubClassOf(obo:PSDO_0000024 ObjectSomeValuesFrom(obo:RO_0000080 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000025 (ordinal scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000025 "A scale type with two formal properties that (1) the instances can be distinguished from each other and (2) that one instance on a scale can be judged greater than, less than, or equal to another instance on the same scale."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000025 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000025 "ordinal scale"@en)
+SubClassOf(obo:PSDO_0000025 obo:PSDO_0000020)
+SubClassOf(obo:PSDO_0000025 ObjectSomeValuesFrom(obo:RO_0000080 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000026 (nominal scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000026 "A scale type with one  formal property that (1) the instances can be distinguished from each other."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000026 "Zhang J. A representational analysis of relational information displays. International Journal of Human-Computer Studies. 1996 Jul 1;45(1):59–74."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000026 "nominal scale"@en)
+SubClassOf(obo:PSDO_0000026 obo:PSDO_0000020)
+SubClassOf(obo:PSDO_0000026 ObjectSomeValuesFrom(obo:RO_0000080 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000028 (performance trend quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000028 "A relational quality of the perceived general movement of a mark, or set of marks that is integrated over a time set."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000028 "performance trend quality"@en)
+SubClassOf(obo:PSDO_0000028 obo:BFO_0000145)
+
+# Class: obo:PSDO_0000029 (performance gap quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000029 "A relational quality of the perceived distance between marks."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000029 "performance gap quality"@en)
+SubClassOf(obo:PSDO_0000029 obo:BFO_0000145)
+
+# Class: obo:PSDO_0000031 (performance report)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000031 "A report designed for the purpose of providing performance summary information to a recipient of an intervention."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000031 "performance report"@en)
+SubClassOf(obo:PSDO_0000031 obo:IAO_0000088)
+
+# Class: obo:PSDO_0000035 (performance measure set)
+
+AnnotationAssertion(obo:IAO_0000112 obo:PSDO_0000035 "Two sepearate performance measure elements might be 'appropriate perscriptions of Drug A' and 'appropriate perscriptions of Drug B.' Each performance has a method for measurement that is specific to the type of drug (A or B) prescription behavior."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000035 "A represented set where the attributes of the mark are about the methods of measuring behavior."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000035 "performance measure set"@en)
+SubClassOf(obo:PSDO_0000035 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000036 (time set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000036 "A represented set where the attributes of the mark are about time."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000036 "time set"@en)
+SubClassOf(obo:PSDO_0000036 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000037 (performance set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000037 "A represented set where the attributes of the mark are about measurements, decisions, aggregates, or calculations related to measured behavior."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000037 "Performance set can include entities like performance values (all scale types)"@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000037 "performance set"@en)
+SubClassOf(obo:PSDO_0000037 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000040 (focal element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000040 "A role inhering in a mark that conveys specific information to the recipient of a performance summary report realized through the acts of perception."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000040 "focal element"@en)
+SubClassOf(obo:PSDO_0000040 obo:PSDO_0000084)
+SubClassOf(obo:PSDO_0000040 ObjectSomeValuesFrom(obo:RO_0000052 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000041 (recipient element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000041 "A focal element that conveys information about identity to the recipient of the performance summary report."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000041 "recipient element"@en)
+SubClassOf(obo:PSDO_0000041 obo:PSDO_0000040)
+
+# Class: obo:PSDO_0000045 (social comparator element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000045 "A comparative element that conveys information about an entity that has an attributed performance level."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000045 "social comparator element"@en)
+SubClassOf(obo:PSDO_0000045 obo:PSDO_0000019)
+
+# Class: obo:PSDO_0000046 (goal comparator element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000046 "A comparative element that conveys information about a desired future performance level."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000046 "goal comparator element"@en)
+SubClassOf(obo:PSDO_0000046 obo:PSDO_0000019)
+
+# Class: obo:PSDO_0000047 (standard comparator element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000047 "A comparative element that conveys information about a predetermined performance level."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000047 "standard comparator element"@en)
+SubClassOf(obo:PSDO_0000047 obo:PSDO_0000019)
+
+# Class: obo:PSDO_0000054 (shape)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000054 "An attribute of external form or contour."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000054 "\"shape, n.1.\" OED Online, Oxford University Press, June 2018, www.oed.com/view/Entry/177498. Accessed 28 June 2018."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000054 "shape"@en)
+SubClassOf(obo:PSDO_0000054 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000055 (color hue)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000055 "An attribute by virtue of which some thing appears to have a 'pure' color."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000055 "\"colour | color, n.1.\" OED Online, Oxford University Press, June 2018, www.oed.com/view/Entry/36596. Accessed 28 June 2018."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000055 "color hue"@en)
+SubClassOf(obo:PSDO_0000055 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000056 (position)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000056 "An attribute of relation in which a thing stands with respect to another or others."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000056 "\"position, n.\" OED Online, Oxford University Press, June 2018, www.oed.com/view/Entry/148314. Accessed 28 June 2018."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000056 "'Position’ may actually be a relational quality in BFO because is depends on multiple entities.")
+AnnotationAssertion(rdfs:label obo:PSDO_0000056 "position"@en)
+SubClassOf(obo:PSDO_0000056 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000058 (angle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000058 "An attribute of the magnitude of the degree of divergence of two things from one another."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000058 "\"angle, n.2.\" OED Online, Oxford University Press, June 2018, www.oed.com/view/Entry/7542. Accessed 28 June 2018."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000058 "'Angle’ may actually be a relational quality in BFO because is depends on multiple entities.")
+AnnotationAssertion(rdfs:label obo:PSDO_0000058 "angle"@en)
+SubClassOf(obo:PSDO_0000058 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000059 (texture)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000059 "An attribute of constitution, structure, or substance of anything with regard to its constituents or formative element."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000059 "\"texture, n.\" OED Online, Oxford University Press, June 2018, www.oed.com/view/Entry/200031. Accessed 28 June 2018."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000059 "texture"@en)
+SubClassOf(obo:PSDO_0000059 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000060 (mark length)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000060 "The quality of linear magnitude of any thing as measured from end to end"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000060 "\"length, n.\" OED Online, Oxford University Press, June 2018, www.oed.com/view/Entry/107245. Accessed 28 June 2018."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000060 "rdfs:Label property is 'mark length' to distinguish from the PATO class 'length.'"@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000060 "mark length"@en)
+SubClassOf(obo:PSDO_0000060 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000061 (attribute)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000061 "An information carrier that can be measured, observed, or logged."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000061 "Munzner T. Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business; 2015. 404 p. (A.K. Peters visualization series)."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000061 "This is also called a 'channel' by T. Munzner. \"A channel is a way to control the appearance of marks independent of the dimensionality of the goemetric primitive.\"
+
+T. Munzner, Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000061 "attribute"@en)
+SubClassOf(obo:PSDO_0000061 obo:IAO_0000015)
+SubClassOf(obo:PSDO_0000061 ObjectSomeValuesFrom(obo:RO_0000080 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000062 (mark)
+
+AnnotationAssertion(obo:IAO_0000112 obo:PSDO_0000062 "Ink on paper or pixels on a screen (non-exhaustive)."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000062 "A material information bearer that is a basic visual element of a relational information display."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000062 "Munzner T. Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business; 2015. 404 p. (A.K. Peters visualization series)."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000062 "mark"@en)
+EquivalentClasses(obo:PSDO_0000062 ObjectIntersectionOf(obo:IAO_0000178 ObjectSomeValuesFrom(obo:RO_0000053 ObjectSomeValuesFrom(obo:RO_0000059 obo:PSDO_0000008))))
+SubClassOf(obo:PSDO_0000062 obo:IAO_0000178)
+
+# Class: obo:PSDO_0000079 (mark collection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000079 "A object aggregate of marks."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000079 "mark collection"@en)
+SubClassOf(obo:PSDO_0000079 obo:BFO_0000027)
+SubClassOf(obo:PSDO_0000079 ObjectSomeValuesFrom(obo:RO_0002351 obo:PSDO_0000062))
+
+# Class: obo:PSDO_0000080 (represented element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000080 "A role born by a member of a represented set."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000080 "It is possible that elements and sets are realized in different, but similar processes."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000080 "The distinction between an element and a role is one of plurality. The set refers to the set of entities that bear represented roles, while the represented element is born by each element of the set."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000080 "represented element"@en)
+SubClassOf(obo:PSDO_0000080 obo:BFO_0000023)
+
+# Class: obo:PSDO_0000081 (performance measure element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000081 "A represented element that is born by a member of a performance measure set."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000081 "performance measure element"@en)
+SubClassOf(obo:PSDO_0000081 obo:PSDO_0000080)
+
+# Class: obo:PSDO_0000082 (time element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000082 "A represented element that is born by a member of a time set."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000082 "time element"@en)
+SubClassOf(obo:PSDO_0000082 obo:PSDO_0000080)
+
+# Class: obo:PSDO_0000083 (performance level element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000083 "A represented element that is born by a member of a performance set."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000083 "performance level element"@en)
+SubClassOf(obo:PSDO_0000083 obo:PSDO_0000080)
+
+# Class: obo:PSDO_0000084 (ascribee element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000084 "A represented element that is born by a member of an acribee set."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000084 "ascribee element"@en)
+SubClassOf(obo:PSDO_0000084 obo:PSDO_0000080)
+
+# Class: obo:PSDO_0000085 (performer element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000085 "An ascribee element where the mark attributes are about a living system."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000085 "performer element"@en)
+SubClassOf(obo:PSDO_0000085 obo:PSDO_0000084)
+
+# Class: obo:PSDO_0000086 (performer set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000086 "An ascribee set where the mark attributes are about a living system."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000086 "performer set"@en)
+SubClassOf(obo:PSDO_0000086 obo:PSDO_0000018)
+
+# Class: obo:PSDO_0000087 (curvature)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000087 "An attribute of the degree from which a curve deviates from a straight line."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000087 "“curvature | Definition of curvature in English by Oxford Dictionaries,” Oxford Dictionaries | English. [Online]. Available: https://en.oxforddictionaries.com/definition/curvature. [Accessed: 20-Feb-2019]."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000087 "curvature"@en)
+SubClassOf(obo:PSDO_0000087 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000088 (position on common scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000088 "A position where the distance between marks is on the same scale."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000088 "T. Munzner, Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015."@en)
+AnnotationAssertion(obo:IAO_0000232 obo:PSDO_0000088 "This, like the superclass, may actually be a BFO 'relational quality' that holds between sets of marks."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000088 "position on common scale"@en)
+SubClassOf(obo:PSDO_0000088 obo:PSDO_0000056)
+
+# Class: obo:PSDO_0000089 (position on unaligned scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000089 "A position where the distance between marks is not on the same scale."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000089 "T. Munzner, Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000089 "position on unaligned scale"@en)
+SubClassOf(obo:PSDO_0000089 obo:PSDO_0000056)
+
+# Class: obo:PSDO_0000090 (area)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000090 "An attribute that is the quantity that expresses the extent of a two-dimensional figure or shape in a plane."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000090 "“Area,” Wikipedia. 14-Feb-2019."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000090 "area"@en)
+SubClassOf(obo:PSDO_0000090 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000091 (color saturation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000091 "An attribute that is the amount of white content mixed with a pure color, or mixture of pure colors."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000091 "T. Munzner, Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000091 "color saturation"@en)
+SubClassOf(obo:PSDO_0000091 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000092 (color lightness)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000092 "An attribute that is the amount of black content mixed with a pure color, or mixture of pure colors."@en)
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000092 "T. Munzner, Visualization analysis and design. Boca Raton: CRC Press, Taylor & Francis Group, CRC Press is an imprint of the Taylor & Francis Group, an informa business, 2015."@en)
+AnnotationAssertion(rdfs:label obo:PSDO_0000092 "color lightness"@en)
+SubClassOf(obo:PSDO_0000092 obo:PSDO_0000061)
+
+# Class: obo:PSDO_0000093 (comparator content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000093 "Ascribee content that is used to identify a discrepancy with the performance level of the recipient of an intervention."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000093 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000093 "comparator content"@en)
+SubClassOf(obo:PSDO_0000093 obo:PSDO_0000108)
+
+# Class: obo:PSDO_0000094 (goal comparator content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000094 "Comparator content that has been ascribed a desired future performance level.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000094 "Veena Panicker, Colin Gross, Shelbi Lisecki, Cooper Stansbury, Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000094 "goal comparator content"@en)
+SubClassOf(obo:PSDO_0000094 obo:PSDO_0000093)
+
+# Class: obo:PSDO_0000095 (social comparator content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000095 "Comparator content about living systems that are ascribed a performance level.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000095 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000095 "social comparator content")
+SubClassOf(obo:PSDO_0000095 obo:PSDO_0000093)
+
+# Class: obo:PSDO_0000096 (standard comparator content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000096 "Comparator content that has been ascribed a predetermined performance level.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000096 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000096 "standard comparator content")
+SubClassOf(obo:PSDO_0000096 obo:PSDO_0000093)
+
+# Class: obo:PSDO_0000097 (recipient content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000097 "Ascribee content that is about a living system to whom an intervention is directed.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000097 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000097 "recipient content"@en)
+SubClassOf(obo:PSDO_0000097 obo:PSDO_0000108)
+
+# Class: obo:PSDO_0000098 (performance summary document)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000098 "A document that is an aggregate of information content entities about performance levels, performance measures, time intervals, and ascribees.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000098 "Zach Landis-Lewis, Cooper Stansbury, Colin Gross")
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000098 "Lee D, Panicker V, Gross C, Zhang J, Landis-Lewis Z. What was visualized? A method for describing content of performance summary displays in feedback interventions. BMC Med Res Methodol. 2020 Apr 23;20(1):90.")
+AnnotationAssertion(rdfs:label obo:PSDO_0000098 "performance summary document")
+SubClassOf(obo:PSDO_0000098 obo:IAO_0000310)
+
+# Class: obo:PSDO_0000099 (positive performance trend content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000099 "A performance trend that is improving")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000099 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000099 "positive performance trend content")
+SubClassOf(obo:PSDO_0000099 obo:PSDO_0000101)
+
+# Class: obo:PSDO_0000100 (negative performance trend content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000100 "A performance trend that is worsening")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000100 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000100 "negative performance trend content")
+SubClassOf(obo:PSDO_0000100 obo:PSDO_0000101)
+
+# Class: obo:PSDO_0000101 (performance trend content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000101 "An information content entity that is about a change in performance"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000101 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000101 "performance trend content"@en)
+SubClassOf(obo:PSDO_0000101 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000102 (performance measure content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000102 "An information content entity about a method of measuring performance.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000102 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000102 "performance measure content"@en)
+SubClassOf(obo:PSDO_0000102 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000103 (performance level content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000103 "An information content entity that is about the output value of a method of measuring performance."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000103 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000103 "performance level content"@en)
+SubClassOf(obo:PSDO_0000103 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000104 (positive performance gap content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000104 "A performance gap content entity having a recipient performance level that is better than its comparator performance level")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000104 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000104 "positive performance gap content")
+SubClassOf(obo:PSDO_0000104 obo:PSDO_0000106)
+
+# Class: obo:PSDO_0000105 (negative performance gap content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000105 "A performance gap content entity having a comparator performance level that is better than its recipient performance level.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000105 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000105 "negative performance gap content")
+SubClassOf(obo:PSDO_0000105 obo:PSDO_0000106)
+
+# Class: obo:PSDO_0000106 (performance gap content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000106 "An information content entity that is about a discrepancy between performance levels."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000106 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000106 "performance gap content"@en)
+SubClassOf(obo:PSDO_0000106 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000107 (performance content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000107 "An information content entity that is an aggregate of performance level content entities.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000107 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000107 "performance content"@en)
+SubClassOf(obo:PSDO_0000107 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000108 (ascribee content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000108 "An information content entity that is about an entity that is ascribed a performance value.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000108 "Veena Panicker, Colin Gross, Shelbi Lisecki, Cooper Stansbury, Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000108 "ascribee content"@en)
+SubClassOf(obo:PSDO_0000108 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000110 (performance summary textual entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000110 "A textual entity about performance levels, measures, ascribees, and time.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000110 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000110 "performance summary textual entity")
+SubClassOf(obo:PSDO_0000110 obo:IAO_0000300)
+
+# Class: obo:PSDO_0000111 (time interval content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000111 "An information content entity that is about a unit of time.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000111 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000111 "time interval content")
+SubClassOf(obo:PSDO_0000111 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000112 (achievement content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000112 "An information content entity that is about a change from a negative performance gap to a positive performance gap")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000112 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000112 "achievement content")
+SubClassOf(obo:PSDO_0000112 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000113 (loss content)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000113 "An information content entity that is about a change from a positive performance gap to a negative performance gap")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000113 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000113 "loss content")
+SubClassOf(obo:PSDO_0000113 obo:IAO_0000030)
+
+# Class: obo:PSDO_0000114 (performance summary section)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000114 "A document part designed for the purpose of providing information about performance levels, measures, ascribees, and time to a recipient of an intervention.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000114 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(obo:IAO_0000119 obo:PSDO_0000114 "Lee D, Panicker V, Gross C, Zhang J, Landis-Lewis Z. What was visualized? A method for describing content of performance summary displays in feedback interventions. BMC Med Res Methodol. 2020 Apr 23;20(1):90.")
+AnnotationAssertion(rdfs:label obo:PSDO_0000114 "performance summary section")
+SubClassOf(obo:PSDO_0000114 obo:IAO_0000314)
+
+# Class: obo:PSDO_0000115 (performance gap set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000115 "A represented set where the mark attributes are about a discrepancy between performance levels.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000115 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000115 "performance gap set")
+SubClassOf(obo:PSDO_0000115 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000116 (negative performance gap set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000116 "A performance gap set where the mark attributes are about a comparator performance level that is better than the recipient performance level.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000116 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000116 "negative performance gap set")
+SubClassOf(obo:PSDO_0000116 obo:PSDO_0000115)
+
+# Class: obo:PSDO_0000117 (positive performance gap set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000117 "A performance gap set where the mark attributes are about a recipient performance level that is better than a comparator performance level.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000117 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000117 "positive performance gap set")
+SubClassOf(obo:PSDO_0000117 obo:PSDO_0000115)
+
+# Class: obo:PSDO_0000118 (performance trend set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000118 "A represented set where the mark attributes are about a change in performance.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000118 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000118 "performance trend set")
+SubClassOf(obo:PSDO_0000118 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000119 (negative performance trend set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000119 "A performance trend set where the mark attributes are about worsening.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000119 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000119 "negative performance trend set")
+SubClassOf(obo:PSDO_0000119 obo:PSDO_0000118)
+
+# Class: obo:PSDO_0000120 (positive performance trend set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000120 "A performance trend set where the mark attributes are about improvement.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000120 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000120 "positive performance trend set")
+SubClassOf(obo:PSDO_0000120 obo:PSDO_0000118)
+
+# Class: obo:PSDO_0000121 (achievement set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000121 "A represented set where the mark attributes are about a change from a negative performance gap to a positive performance gap.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000121 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000121 "achievement set")
+SubClassOf(obo:PSDO_0000121 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000122 (loss set)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000122 "A represented set where the mark attributes are about a change from a positive performance gap to a negative performance gap.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000122 "Zach Landis-Lewis, Colin Gross")
+AnnotationAssertion(rdfs:label obo:PSDO_0000122 "loss set")
+SubClassOf(obo:PSDO_0000122 obo:PSDO_0000006)
+
+# Class: obo:PSDO_0000123 (top performer benchmark)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000123 "Social comparator content that is about a percentile for a performance level that is better than average.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000123 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000123 "top performer benchmark")
+SubClassOf(obo:PSDO_0000123 obo:PSDO_0000095)
+
+# Class: obo:PSDO_0000124 (90th percentile benchmark)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000124 "A top performer benchmark that is ascribed the performance level of the 90th percentile for a population.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000124 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000124 "90th percentile benchmark")
+SubClassOf(obo:PSDO_0000124 obo:PSDO_0000123)
+
+# Class: obo:PSDO_0000125 (75th percentile benchmark)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000125 "A top performer benchmark that is ascribed the performance level of the 75th percentile for a population.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000125 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000125 "75th percentile benchmark")
+SubClassOf(obo:PSDO_0000125 obo:PSDO_0000123)
+
+# Class: obo:PSDO_0000126 (peer average comparator)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000126 "An average comparator that is about a peer group.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000126 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000126 "peer average comparator")
+SubClassOf(obo:PSDO_0000126 obo:PSDO_0000127)
+
+# Class: obo:PSDO_0000127 (average comparator)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000127 "Social comparator content that is about a mean performance level for a population.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000127 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000127 "average comparator")
+SubClassOf(obo:PSDO_0000127 obo:PSDO_0000095)
+
+# Class: obo:PSDO_0000128 (peer 75th percentile benchmark)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000128 "A 75th percentile benchmark that is about a peer group.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000128 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000128 "peer 75th percentile benchmark")
+SubClassOf(obo:PSDO_0000128 obo:PSDO_0000125)
+
+# Class: obo:PSDO_0000129 (peer 90th percentile benchmark)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PSDO_0000129 "A 90th percentile benchmark that is about a peer group.")
+AnnotationAssertion(obo:IAO_0000117 obo:PSDO_0000129 "Zach Landis-Lewis")
+AnnotationAssertion(rdfs:label obo:PSDO_0000129 "peer 90th percentile benchmark")
+SubClassOf(obo:PSDO_0000129 obo:PSDO_0000124)
+
+
+)

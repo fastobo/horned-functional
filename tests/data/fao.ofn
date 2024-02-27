@@ -1,0 +1,1333 @@
+Prefix(:=<http://purl.obolibrary.org/obo/fao.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(taxslim:=<http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/fao.owl>
+<http://purl.obolibrary.org/obo/fao/releases/2020-05-07/fao.owl>
+Import(<http://purl.obolibrary.org/obo/fao/imports/ncbitaxon_import.owl>)
+Annotation(oboInOwl:NamespaceIdRule "* FAO:$sequence(7,0000001,9999999)$")
+Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1")
+Annotation(oboInOwl:date "23:01:2020 16:30")
+Annotation(oboInOwl:default-namespace "fungal_anatomy_ontology")
+Annotation(oboInOwl:hasOBOFormatVersion "1.2")
+Annotation(oboInOwl:saved-by "midori")
+Annotation(rdfs:comment "version: $Revision: 1.7 $")
+
+Declaration(Class(obo:FAO_0000001))
+Declaration(Class(obo:FAO_0000002))
+Declaration(Class(obo:FAO_0000003))
+Declaration(Class(obo:FAO_0000004))
+Declaration(Class(obo:FAO_0000005))
+Declaration(Class(obo:FAO_0000006))
+Declaration(Class(obo:FAO_0000007))
+Declaration(Class(obo:FAO_0000008))
+Declaration(Class(obo:FAO_0000009))
+Declaration(Class(obo:FAO_0000010))
+Declaration(Class(obo:FAO_0000011))
+Declaration(Class(obo:FAO_0000012))
+Declaration(Class(obo:FAO_0000013))
+Declaration(Class(obo:FAO_0000014))
+Declaration(Class(obo:FAO_0000015))
+Declaration(Class(obo:FAO_0000016))
+Declaration(Class(obo:FAO_0000017))
+Declaration(Class(obo:FAO_0000018))
+Declaration(Class(obo:FAO_0000019))
+Declaration(Class(obo:FAO_0000020))
+Declaration(Class(obo:FAO_0000021))
+Declaration(Class(obo:FAO_0000022))
+Declaration(Class(obo:FAO_0000023))
+Declaration(Class(obo:FAO_0000024))
+Declaration(Class(obo:FAO_0000025))
+Declaration(Class(obo:FAO_0000026))
+Declaration(Class(obo:FAO_0000027))
+Declaration(Class(obo:FAO_0000028))
+Declaration(Class(obo:FAO_0000029))
+Declaration(Class(obo:FAO_0000030))
+Declaration(Class(obo:FAO_0000031))
+Declaration(Class(obo:FAO_0000032))
+Declaration(Class(obo:FAO_0000033))
+Declaration(Class(obo:FAO_0000034))
+Declaration(Class(obo:FAO_0000035))
+Declaration(Class(obo:FAO_0000036))
+Declaration(Class(obo:FAO_0000037))
+Declaration(Class(obo:FAO_0000038))
+Declaration(Class(obo:FAO_0000039))
+Declaration(Class(obo:FAO_0000040))
+Declaration(Class(obo:FAO_0000041))
+Declaration(Class(obo:FAO_0000042))
+Declaration(Class(obo:FAO_0000043))
+Declaration(Class(obo:FAO_0000044))
+Declaration(Class(obo:FAO_0000045))
+Declaration(Class(obo:FAO_0000046))
+Declaration(Class(obo:FAO_0000047))
+Declaration(Class(obo:FAO_0000048))
+Declaration(Class(obo:FAO_0000049))
+Declaration(Class(obo:FAO_0000050))
+Declaration(Class(obo:FAO_0000051))
+Declaration(Class(obo:FAO_0000052))
+Declaration(Class(obo:FAO_0000053))
+Declaration(Class(obo:FAO_0000054))
+Declaration(Class(obo:FAO_0000055))
+Declaration(Class(obo:FAO_0000056))
+Declaration(Class(obo:FAO_0000057))
+Declaration(Class(obo:FAO_0000058))
+Declaration(Class(obo:FAO_0000059))
+Declaration(Class(obo:FAO_0000060))
+Declaration(Class(obo:FAO_0000061))
+Declaration(Class(obo:FAO_0000062))
+Declaration(Class(obo:FAO_0000063))
+Declaration(Class(obo:FAO_0000064))
+Declaration(Class(obo:FAO_0000065))
+Declaration(Class(obo:FAO_0000066))
+Declaration(Class(obo:FAO_0000067))
+Declaration(Class(obo:FAO_0001001))
+Declaration(Class(obo:FAO_0001002))
+Declaration(Class(obo:FAO_0001003))
+Declaration(Class(obo:FAO_0001004))
+Declaration(Class(obo:FAO_0001005))
+Declaration(Class(obo:FAO_0001006))
+Declaration(Class(obo:FAO_0001007))
+Declaration(Class(obo:FAO_0001008))
+Declaration(Class(obo:FAO_0001009))
+Declaration(Class(obo:FAO_0001010))
+Declaration(Class(obo:FAO_0001011))
+Declaration(Class(obo:FAO_0001012))
+Declaration(Class(obo:FAO_0001013))
+Declaration(Class(obo:FAO_0001014))
+Declaration(Class(obo:FAO_0001015))
+Declaration(Class(obo:FAO_0001016))
+Declaration(Class(obo:FAO_0001017))
+Declaration(Class(obo:FAO_0001018))
+Declaration(Class(obo:FAO_0001019))
+Declaration(Class(obo:FAO_0001020))
+Declaration(Class(obo:FAO_0001021))
+Declaration(Class(obo:FAO_0001022))
+Declaration(Class(obo:FAO_0001023))
+Declaration(Class(obo:FAO_0001024))
+Declaration(Class(obo:FAO_0001025))
+Declaration(Class(obo:FAO_0001026))
+Declaration(Class(obo:FAO_0001027))
+Declaration(Class(obo:FAO_0001028))
+Declaration(Class(obo:FAO_0001029))
+Declaration(Class(obo:FAO_0001030))
+Declaration(Class(obo:FAO_0001031))
+Declaration(Class(obo:FAO_0001034))
+Declaration(Class(obo:FAO_0001035))
+Declaration(Class(obo:FAO_0001036))
+Declaration(Class(obo:FAO_0001051))
+Declaration(Class(obo:FAO_0001052))
+Declaration(Class(obo:FAO_0001053))
+Declaration(Class(obo:FAO_0002001))
+Declaration(Class(obo:FAO_0002002))
+Declaration(Class(obo:FAO_0002003))
+Declaration(Class(obo:FAO_0002004))
+Declaration(Class(obo:FAO_0002005))
+Declaration(Class(obo:FAO_0002006))
+Declaration(Class(obo:FAO_0002007))
+Declaration(Class(obo:FAO_0002008))
+Declaration(Class(obo:FAO_0002009))
+Declaration(Class(obo:FAO_0002010))
+Declaration(Class(obo:FAO_0002011))
+Declaration(Class(obo:NCBITaxon_4751))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:RO_0002160))
+Declaration(ObjectProperty(obo:RO_0002202))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000231))
+Declaration(AnnotationProperty(obo:IAO_0100001))
+Declaration(AnnotationProperty(oboInOwl:NamespaceIdRule))
+Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
+Declaration(AnnotationProperty(oboInOwl:created_by))
+Declaration(AnnotationProperty(oboInOwl:creation_date))
+Declaration(AnnotationProperty(oboInOwl:date))
+Declaration(AnnotationProperty(oboInOwl:default-namespace))
+Declaration(AnnotationProperty(oboInOwl:hasAlternativeId))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasOBOFormatVersion))
+Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
+Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
+Declaration(AnnotationProperty(oboInOwl:saved-by))
+Declaration(AnnotationProperty(oboInOwl:shorthand))
+Declaration(AnnotationProperty(oboInOwl:source))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+Declaration(AnnotationProperty(owl:deprecated))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: oboInOwl:NamespaceIdRule (namespace-id-rule)
+
+AnnotationAssertion(rdfs:label oboInOwl:NamespaceIdRule "namespace-id-rule")
+
+# Annotation Property: oboInOwl:hasAlternativeId (has_alternative_id)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
+
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
+
+# Annotation Property: oboInOwl:hasOBOFormatVersion (has_obo_format_version)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_version")
+
+# Annotation Property: oboInOwl:hasOBONamespace (has_obo_namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
+
+# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
+
+# Annotation Property: oboInOwl:shorthand (shorthand)
+
+AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:BFO_0000050 "BFO:0000050")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:BFO_0000050 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:BFO_0000050 "part_of")
+AnnotationAssertion(oboInOwl:shorthand obo:BFO_0000050 "part_of")
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of")
+TransitiveObjectProperty(obo:BFO_0000050)
+
+# Object Property: obo:RO_0002160 (only in taxon)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:RO_0002160 "RO:0002160")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:RO_0002160 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:RO_0002160 "only_in_taxon")
+AnnotationAssertion(oboInOwl:shorthand obo:RO_0002160 "only_in_taxon")
+AnnotationAssertion(rdfs:label obo:RO_0002160 "only in taxon")
+
+# Object Property: obo:RO_0002202 (develops from)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:RO_0002202 "RO:0002202")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:RO_0002202 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:RO_0002202 "develops_from")
+AnnotationAssertion(oboInOwl:shorthand obo:RO_0002202 "develops_from")
+AnnotationAssertion(rdfs:label obo:RO_0002202 "develops from")
+TransitiveObjectProperty(obo:RO_0002202)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:FAO_0000001 (fungal structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") obo:IAO_0000115 obo:FAO_0000001 "An anatomical structure that forms all or part of a fungus.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000001 "BTO:0001494")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000001 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000001 "fungal structure ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000001 "FAO:0000001")
+AnnotationAssertion(rdfs:label obo:FAO_0000001 "fungal structure")
+SubClassOf(obo:FAO_0000001 ObjectSomeValuesFrom(obo:RO_0002160 obo:NCBITaxon_4751))
+
+# Class: obo:FAO_0000002 (composite structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000002 "A multicellular fungal structure composed of cells from more than one species.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000002 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000002 "multispecific structure")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000002 "FAO:0000002")
+AnnotationAssertion(rdfs:label obo:FAO_0000002 "composite structure")
+SubClassOf(obo:FAO_0000002 obo:FAO_0000001)
+
+# Class: obo:FAO_0000003 (basidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "ISBN:0471940526") obo:IAO_0000115 obo:FAO_0000003 "A spore-producing structure found in a Basidiomycete; formed when the terminal cell of a dikaryotic hyphal branch inflates and undergoes karyogamy and meiosis.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000003 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000003 "FAO:0000003")
+AnnotationAssertion(rdfs:label obo:FAO_0000003 "basidium")
+SubClassOf(obo:FAO_0000003 obo:FAO_0000052)
+SubClassOf(obo:FAO_0000003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000012))
+
+# Class: obo:FAO_0000004 (ascocarp-bound ascus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000004 "An ascus that is associated with an ascocarp.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000004 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000004 "FAO:0000004")
+AnnotationAssertion(rdfs:label obo:FAO_0000004 "ascocarp-bound ascus")
+SubClassOf(obo:FAO_0000004 obo:FAO_0000014)
+SubClassOf(obo:FAO_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000008))
+
+# Class: obo:FAO_0000005 (obsolete)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000005 "The placeholder class 'obsolete' has been made obsolete, as this is not tracked with an explicit obsoletion flag in obo format.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000005 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000005 "FAO:0000005")
+AnnotationAssertion(rdfs:label obo:FAO_0000005 "obsolete")
+AnnotationAssertion(owl:deprecated obo:FAO_0000005 "true"^^xsd:boolean)
+
+# Class: obo:FAO_0000006 (stipe)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000006 "The stalk or stem that supports the cap of a mushroom. A stipe is usually composed of hyphae arrayed parallel to the long axis of the structure; in some species a stipe may be a single supporting hypha.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000006 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000006 "stem")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000006 "FAO:0000006")
+AnnotationAssertion(rdfs:label obo:FAO_0000006 "stipe")
+SubClassOf(obo:FAO_0000006 obo:FAO_0002004)
+SubClassOf(obo:FAO_0000006 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000012))
+
+# Class: obo:FAO_0000007 (fruitbody)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000007 "Any specialized structure which bears or contains sexually or asexually derived spores.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000007 "BTO:0000487")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000007 "fruiting body")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000007 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000007 "FAO:0000007")
+AnnotationAssertion(rdfs:label obo:FAO_0000007 "fruitbody")
+SubClassOf(obo:FAO_0000007 obo:FAO_0002004)
+
+# Class: obo:FAO_0000008 (ascocarp)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") obo:IAO_0000115 obo:FAO_0000008 "A structure within, or at the surface of, which an ascus develops in Ascomycetes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000008 "BTO:0002161")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000008 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000008 "FAO:0000008")
+AnnotationAssertion(rdfs:label obo:FAO_0000008 "ascocarp")
+SubClassOf(obo:FAO_0000008 obo:FAO_0000007)
+
+# Class: obo:FAO_0000009 (pileus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") obo:IAO_0000115 obo:FAO_0000009 "The structure on which spore-bearing tissue is carried in sexually-derived fruiting bodies.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000009 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000009 "cap")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000009 "FAO:0000009")
+AnnotationAssertion(rdfs:label obo:FAO_0000009 "pileus")
+SubClassOf(obo:FAO_0000009 obo:FAO_0002004)
+SubClassOf(obo:FAO_0000009 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000012))
+
+# Class: obo:FAO_0000010 (sporophore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000010 "A multicellular anatomical structure that functions in the production of spores, which are directly borne upon or within sporogenous cells that form part of the sporophore.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000010 "GO:0075259")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0000010 "fruit body")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0000010 "fruitbody")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0000010 "fruiting body")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0000010 "spore-bearing structure")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0000010 "spore-producing structure")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0000010 "sporocarp")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000010 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000010 "FAO:0000010")
+AnnotationAssertion(rdfs:label obo:FAO_0000010 "sporophore")
+SubClassOf(obo:FAO_0000010 obo:FAO_0002004)
+
+# Class: obo:FAO_0000011 (mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") obo:IAO_0000115 obo:FAO_0000011 "A group or mass of discrete hyphae; the vegetative structure of many fungi.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000011 "BTO:0001436")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000011 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000011 "FAO:0000011")
+AnnotationAssertion(rdfs:label obo:FAO_0000011 "mycelium")
+SubClassOf(obo:FAO_0000011 obo:FAO_0002004)
+
+# Class: obo:FAO_0000012 (basidiocarp)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0000114") Annotation(oboInOwl:hasDbXref "ISBN:0471940526") obo:IAO_0000115 obo:FAO_0000012 "A large fruiting body that is composed of masses of intertwined hyphal elements and produces basidia and basidiospores. The basidiocarp is characteristic of the majority of fungi of the subphylum Basidiomycotina, in which it is the site of karyogamy and meiosis. Mushrooms and toadstools are common examples.")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:FAO_0000012 "FAO:0001024")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000012 "BTO:0000114")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000012 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000012 "mushroom")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000012 "FAO:0000012")
+AnnotationAssertion(rdfs:label obo:FAO_0000012 "basidiocarp")
+SubClassOf(obo:FAO_0000012 obo:FAO_0000007)
+
+# Class: obo:FAO_0000013 (ascospore in ascocarp-bound ascus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "FAO:mah") obo:IAO_0000115 obo:FAO_0000013 "An ascospore that is contained in an ascus associated with an ascocarp.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000013 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000013 "FAO:0000013")
+AnnotationAssertion(rdfs:label obo:FAO_0000013 "ascospore in ascocarp-bound ascus")
+SubClassOf(obo:FAO_0000013 obo:FAO_0000020)
+SubClassOf(obo:FAO_0000013 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000004))
+
+# Class: obo:FAO_0000014 (ascus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000014 "A sac-like structure containing sexual spores formed by Ascomycotina; mature asci may have little or no cytoplasm or cytoplasmic contents, and no nucleus outside of the spores.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000014 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000014 "FAO:0000014")
+AnnotationAssertion(rdfs:label obo:FAO_0000014 "ascus")
+SubClassOf(obo:FAO_0000014 obo:FAO_0000052)
+
+# Class: obo:FAO_0000015 (free ascus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000015 "An ascus that is not associated with an ascocarp, and is usually derived from a single cell.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000015 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000015 "FAO:0000015")
+AnnotationAssertion(rdfs:label obo:FAO_0000015 "free ascus")
+SubClassOf(obo:FAO_0000015 obo:FAO_0000014)
+
+# Class: obo:FAO_0000016 (ascospore in free ascus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "FAO:mah") obo:IAO_0000115 obo:FAO_0000016 "An ascospore that is contained in a free ascus (i.e. not associated with an ascocarp).")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000016 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000016 "FAO:0000016")
+AnnotationAssertion(rdfs:label obo:FAO_0000016 "ascospore in free ascus")
+SubClassOf(obo:FAO_0000016 obo:FAO_0000020)
+SubClassOf(obo:FAO_0000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000015))
+
+# Class: obo:FAO_0000017 (sexual spore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000017 "A spore formed following meiosis. In some species, prospores formed by meiosis may undergo one or more rounds of mitosis before they are fully mature.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000017 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000017 "meiotically-derived spore")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000017 "FAO:0000017")
+AnnotationAssertion(rdfs:label obo:FAO_0000017 "sexual spore")
+SubClassOf(obo:FAO_0000017 obo:FAO_0000019)
+
+# Class: obo:FAO_0000018 (unicellular structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000018 "A fungal structure that comprises a single cell. An individual cell is composed of a plasma membrane, contents internal to the plasma membrane, and any external protective or encapsulating structure.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000018 "cell")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000018 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000018 "FAO:0000018")
+AnnotationAssertion(rdfs:label obo:FAO_0000018 "unicellular structure")
+SubClassOf(obo:FAO_0000018 obo:FAO_0000001)
+
+# Class: obo:FAO_0000019 (spore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") obo:IAO_0000115 obo:FAO_0000019 "A spore produced by a fungus. A spore is a differentiated form of an organism produced during or as a result of an asexual or sexual reproductive process; usually a cell with a thick cell wall that stores and protects one or more nuclei. Spores may be produced in response to, and are characteristically resistant to, adverse environmental conditions.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000019 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000019 "FAO:0000019")
+AnnotationAssertion(rdfs:label obo:FAO_0000019 "spore")
+SubClassOf(obo:FAO_0000019 obo:FAO_0000018)
+
+# Class: obo:FAO_0000020 (ascospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:16339736") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000020 "A thick-walled spore that forms in an ascus. Clusters of four or eight spores are formed in a single ascus following sexual reproduction; found in Ascomycetes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000020 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000020 "FAO:0000020")
+AnnotationAssertion(rdfs:label obo:FAO_0000020 "ascospore")
+SubClassOf(obo:FAO_0000020 obo:FAO_0000017)
+
+# Class: obo:FAO_0000021 (basidiospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "ISBN:9781107079915") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000021 "A thick-walled spore formed externally on extrusions of a basidium following sexual reproduction; found in Basidiomycetes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000021 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000021 "FAO:0000021")
+AnnotationAssertion(rdfs:label obo:FAO_0000021 "basidiospore")
+SubClassOf(obo:FAO_0000021 obo:FAO_0000017)
+SubClassOf(obo:FAO_0000021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000003))
+
+# Class: obo:FAO_0000022 (teliospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "PMID:27888605") Annotation(oboInOwl:hasDbXref "PMID:8898211") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000022 "A diploid spore with a thick, pigmented, sculpted cell wall, and extracellular peptidoglycan spikes that is formed during growth in a plant host by some Basidiomycete species, including pathogenic smut (Ustilaginales) and rust (Pucciniales) fungi.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000022 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000022 "FAO:0000022")
+AnnotationAssertion(rdfs:label obo:FAO_0000022 "teliospore")
+SubClassOf(obo:FAO_0000022 obo:FAO_0000021)
+
+# Class: obo:FAO_0000023 (asexual spore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:2524423") Annotation(oboInOwl:hasDbXref "PMID:9529886") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000023 "A spore formed following one or more rounds of mitosis, without meiosis.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000023 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000023 "mitotically-derived spore")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000023 "FAO:0000023")
+AnnotationAssertion(rdfs:label obo:FAO_0000023 "asexual spore")
+SubClassOf(obo:FAO_0000023 obo:FAO_0000019)
+
+# Class: obo:FAO_0000024 (conidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:2524423") Annotation(oboInOwl:hasDbXref "PMID:9529886") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000024 "An asexual, nonmotile spore formed by higher fungi. Conidia are usually made from the side or tip of specialized sporogenous cells and do not form by progressive cleavage of the cytoplasm.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000024 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000024 "FAO:0000024")
+AnnotationAssertion(rdfs:label obo:FAO_0000024 "conidium")
+SubClassOf(obo:FAO_0000024 obo:FAO_0000023)
+
+# Class: obo:FAO_0000025 (mononucleate conidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000025 "A conidium that has only one nucleus.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "SGD:clt") oboInOwl:hasExactSynonym obo:FAO_0000025 "uninucleate conidium")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000025 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000025 "FAO:0000025")
+AnnotationAssertion(rdfs:label obo:FAO_0000025 "mononucleate conidium")
+SubClassOf(obo:FAO_0000025 obo:FAO_0000024)
+
+# Class: obo:FAO_0000026 (urediniospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "PMID:21642346") Annotation(oboInOwl:hasDbXref "PMID:26731728") Annotation(oboInOwl:hasDbXref "PMID:30206343") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000026 "A thin-walled spore that is formed in a uredinium and is the primary dispersal mode for rust-causing Basidiomycete fungi.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") oboInOwl:hasExactSynonym obo:FAO_0000026 "urediospore")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") oboInOwl:hasExactSynonym obo:FAO_0000026 "uredospore")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000026 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000026 "FAO:0000026")
+AnnotationAssertion(rdfs:label obo:FAO_0000026 "urediniospore")
+SubClassOf(obo:FAO_0000026 obo:FAO_0000021)
+
+# Class: obo:FAO_0000027 (conidium of conidiophore head)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:9529886") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000027 "A mononucleate spore formed on specialized cells or projections (sterigma) of a conidiophore head.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000027 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000027 "FAO:0000027")
+AnnotationAssertion(rdfs:label obo:FAO_0000027 "conidium of conidiophore head")
+SubClassOf(obo:FAO_0000027 obo:FAO_0000025)
+
+# Class: obo:FAO_0000028 (microconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "PMID:8357339") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000028 "The smaller of two types of asexual spores formed by some fungi. An ovoid to pear-shaped asexual spore that contains very little cytoplasm and organelles, is mononucleate, and forms in vegetative hypae within a mycelium. Micronidia are extruded from the hyphal cell wall.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000028 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000028 "FAO:0000028")
+AnnotationAssertion(rdfs:label obo:FAO_0000028 "microconidium")
+SubClassOf(obo:FAO_0000028 obo:FAO_0000025)
+
+# Class: obo:FAO_0000029 (mononucleate macroconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000029 "A macroconidium that has only one nucleus.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "SGD:clt") oboInOwl:hasExactSynonym obo:FAO_0000029 "uninucleate macroconidium")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000029 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000029 "FAO:0000029")
+AnnotationAssertion(rdfs:label obo:FAO_0000029 "mononucleate macroconidium")
+SubClassOf(obo:FAO_0000029 obo:FAO_0000025)
+SubClassOf(obo:FAO_0000029 obo:FAO_0000038)
+
+# Class: obo:FAO_0000030 (mononucleate blastoconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000030 "A blastoconidium that has only one nucleus.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "SGD:clt") oboInOwl:hasExactSynonym obo:FAO_0000030 "uninucleate blastoconidium")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000030 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000030 "FAO:0000030")
+AnnotationAssertion(rdfs:label obo:FAO_0000030 "mononucleate blastoconidium")
+SubClassOf(obo:FAO_0000030 obo:FAO_0000029)
+SubClassOf(obo:FAO_0000030 obo:FAO_0000042)
+
+# Class: obo:FAO_0000031 (mononucleate arthroconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000031 "An arthroconidium that has only one nucleus.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "SGD:clt") oboInOwl:hasExactSynonym obo:FAO_0000031 "uninucleate arthroconidium")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000031 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000031 "FAO:0000031")
+AnnotationAssertion(rdfs:label obo:FAO_0000031 "mononucleate arthroconidium")
+SubClassOf(obo:FAO_0000031 obo:FAO_0000029)
+SubClassOf(obo:FAO_0000031 obo:FAO_0000041)
+
+# Class: obo:FAO_0000032 (vegetative cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000032 "A single cell that is in the vegetative growth stage of an organism's life cycle, in which metabolism and growth predominate, and is not undergoing sexual processes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000032 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000032 "yeast-form")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000032 "FAO:0000032")
+AnnotationAssertion(rdfs:label obo:FAO_0000032 "vegetative cell")
+SubClassOf(obo:FAO_0000032 obo:FAO_0000018)
+
+# Class: obo:FAO_0000033 (multinucleate conidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000033 "A conidium that has more than one nucleus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000033 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000033 "FAO:0000033")
+AnnotationAssertion(rdfs:label obo:FAO_0000033 "multinucleate conidium")
+SubClassOf(obo:FAO_0000033 obo:FAO_0000024)
+
+# Class: obo:FAO_0000034 (lichen thallus)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "SGD:clt") Annotation(oboInOwl:hasDbXref "https://www.britishlichensociety.org.uk/about-lichens/what-is-a-lichen") Annotation(oboInOwl:hasDbXref "https://www.livescience.com/55008-lichens.html") obo:IAO_0000115 obo:FAO_0000034 "A composite structure that forms the vegetative portion of a lichen; minimally composed of at least one fungal species (the mycobiont) and an alga or cyanobacterium (the photobiont).")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000034 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000034 "FAO:0000034")
+AnnotationAssertion(rdfs:label obo:FAO_0000034 "lichen thallus")
+SubClassOf(obo:FAO_0000034 obo:FAO_0000002)
+
+# Class: obo:FAO_0000035 (multinucleate macroconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000035 "A macroconidium that has more than one nucleus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000035 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000035 "FAO:0000035")
+AnnotationAssertion(rdfs:label obo:FAO_0000035 "multinucleate macroconidium")
+SubClassOf(obo:FAO_0000035 obo:FAO_0000033)
+SubClassOf(obo:FAO_0000035 obo:FAO_0000038)
+
+# Class: obo:FAO_0000036 (multinucleate blastoconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000036 "A blastoconidium that has more than one nucleus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000036 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000036 "FAO:0000036")
+AnnotationAssertion(rdfs:label obo:FAO_0000036 "multinucleate blastoconidium")
+SubClassOf(obo:FAO_0000036 obo:FAO_0000035)
+SubClassOf(obo:FAO_0000036 obo:FAO_0000042)
+
+# Class: obo:FAO_0000037 (multinucleate arthroconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000037 "An arthroconidium that has more than one nucleus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000037 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000037 "FAO:0000037")
+AnnotationAssertion(rdfs:label obo:FAO_0000037 "multinucleate arthroconidium")
+SubClassOf(obo:FAO_0000037 obo:FAO_0000035)
+SubClassOf(obo:FAO_0000037 obo:FAO_0000041)
+
+# Class: obo:FAO_0000038 (macroconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000038 "The larger of two types of asexual spores formed by some fungi; usually round or oblong.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000038 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000038 "FAO:0000038")
+AnnotationAssertion(rdfs:label obo:FAO_0000038 "macroconidium")
+SubClassOf(obo:FAO_0000038 obo:FAO_0000024)
+
+# Class: obo:FAO_0000039 (oospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0851988857") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000039 "An asexual spore formed by Oomycetes; formed upon fertilization of an oosphere.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000039 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000039 "FAO:0000039")
+AnnotationAssertion(rdfs:label obo:FAO_0000039 "oospore")
+SubClassOf(obo:FAO_0000039 obo:FAO_0000023)
+
+# Class: obo:FAO_0000040 (zygospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0471940526") Annotation(oboInOwl:hasDbXref "ISBN:9781107079915") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000040 "A thick-walled, sexual, resting spore that forms in a zygosporangium; typical of Zygomycetes.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000040 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000040 "FAO:0000040")
+AnnotationAssertion(rdfs:comment obo:FAO_0000040 "Note that \"zygospore\" is sometimes used to refer to both the spore and the multi-layered cell wall that encloses the spore, the zygosporangium.")
+AnnotationAssertion(rdfs:label obo:FAO_0000040 "zygospore")
+SubClassOf(obo:FAO_0000040 obo:FAO_0000017)
+
+# Class: obo:FAO_0000041 (arthroconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:2524423") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000041 "A cylindrical spore formed by development and compartmentation of hyphae; the hyphae are often supporting blastoconidiophores.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000041 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000041 "arthrospore")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000041 "FAO:0000041")
+AnnotationAssertion(rdfs:label obo:FAO_0000041 "arthroconidium")
+SubClassOf(obo:FAO_0000041 obo:FAO_0000038)
+
+# Class: obo:FAO_0000042 (blastoconidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") Annotation(oboInOwl:hasDbXref "PMID:2524423") Annotation(oboInOwl:hasDbXref "SGD:clt") obo:IAO_0000115 obo:FAO_0000042 "An oblong or round asexual reproductive spore formed specifically by budding.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000042 "GO:0034299")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000042 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000042 "blastospore")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0000042 "reproductive blastospore")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000042 "FAO:0000042")
+AnnotationAssertion(rdfs:label obo:FAO_0000042 "blastoconidium")
+SubClassOf(obo:FAO_0000042 obo:FAO_0000038)
+
+# Class: obo:FAO_0000043 (conidiophore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") Annotation(oboInOwl:hasDbXref "PMID:9529886") obo:IAO_0000115 obo:FAO_0000043 "A specialized hypha, often aerial, that gives rise to asexual spores known as conidia.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000043 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000043 "FAO:0000043")
+AnnotationAssertion(rdfs:label obo:FAO_0000043 "conidiophore")
+SubClassOf(obo:FAO_0000043 obo:FAO_0002004)
+SubClassOf(obo:FAO_0000043 ObjectSomeValuesFrom(obo:RO_0002202 obo:FAO_0001001))
+
+# Class: obo:FAO_0000044 (sterigma)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0000044 "A small hyphal branch or structure which supports a sporangium, a conidium, or a basidiospore. In species with biseriate (two-layered) sterigmata such as A. nidulans, the first layer comprises primary sterigmata (metulae) and the second layer secondary sterigmata (phialides). Some species, e.g. A. fumigatus, A. oryzae, and others, have only phialides.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000044 "sterigmata (plural)")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000044 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000044 "FAO:0000044")
+AnnotationAssertion(rdfs:label obo:FAO_0000044 "sterigma")
+SubClassOf(obo:FAO_0000044 obo:FAO_0000001)
+SubClassOf(obo:FAO_0000044 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000043))
+
+# Class: obo:FAO_0000045 (phialide)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "PMID:9529886") obo:IAO_0000115 obo:FAO_0000045 "A specialized cell that buds from a metula on a developing conidiophore. Multiple phialides may bud from each metula. The phialides in turn divide asymmetrically to give rise to chains of conidia.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000045 "secondary sterigma")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000045 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000045 "FAO:0000045")
+AnnotationAssertion(rdfs:label obo:FAO_0000045 "phialide")
+SubClassOf(obo:FAO_0000045 obo:FAO_0000044)
+
+# Class: obo:FAO_0000046 (metula)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "PMID:9529886") obo:IAO_0000115 obo:FAO_0000046 "A specialized cell borne on a conidiophore that gives rise to phialides during the process of conidiation.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000046 "metulae (plural)")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000046 "primary sterigma")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000046 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000046 "FAO:0000046")
+AnnotationAssertion(rdfs:label obo:FAO_0000046 "metula")
+SubClassOf(obo:FAO_0000046 obo:FAO_0000044)
+
+# Class: obo:FAO_0000047 (cleistothecium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0000047 "A completely closed fruiting body formed by some fungi of the Ascomycota, containing asci.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000047 "BTO:0002159")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000047 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000047 "FAO:0000047")
+AnnotationAssertion(rdfs:label obo:FAO_0000047 "cleistothecium")
+SubClassOf(obo:FAO_0000047 obo:FAO_0000008)
+
+# Class: obo:FAO_0000048 (Hulle cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "PMID:19210625") obo:IAO_0000115 obo:FAO_0000048 "A specialized multinucleate cell that originates from a nest-like aggregation of hyphae during sexual development. Hulle cells serve as nurse cells to the developing cleistothecium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000048 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000048 "FAO:0000048")
+AnnotationAssertion(rdfs:comment obo:FAO_0000048 "Note that \"Hulle\" is properly written with an umlaut on the \"u\".")
+AnnotationAssertion(rdfs:label obo:FAO_0000048 "Hulle cell")
+SubClassOf(obo:FAO_0000048 obo:FAO_0000018)
+SubClassOf(obo:FAO_0000048 ObjectSomeValuesFrom(obo:RO_0002202 obo:FAO_0001001))
+
+# Class: obo:FAO_0000049 (conidiophore vesicle)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "PMID:9529886") obo:IAO_0000115 obo:FAO_0000049 "The swollen region at the apex of a conidiophore, bearing multiple metulae.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000049 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000049 "FAO:0000049")
+AnnotationAssertion(rdfs:label obo:FAO_0000049 "conidiophore vesicle")
+SubClassOf(obo:FAO_0000049 obo:FAO_0000001)
+SubClassOf(obo:FAO_0000049 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000043))
+
+# Class: obo:FAO_0000050 (conidiophore stalk)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AspGD:mcc") Annotation(oboInOwl:hasDbXref "PMID:9529886") obo:IAO_0000115 obo:FAO_0000050 "The elongated part of the conidiophore that extends, often aerially, from the growth substrate and supports the structures that bear conidia.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000050 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000050 "FAO:0000050")
+AnnotationAssertion(rdfs:label obo:FAO_0000050 "conidiophore stalk")
+SubClassOf(obo:FAO_0000050 obo:FAO_0000001)
+SubClassOf(obo:FAO_0000050 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000043))
+
+# Class: obo:FAO_0000051 (oidium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.mushroomthejournal.com/greatlakesdata/Terms/oidiu163.html") obo:IAO_0000115 obo:FAO_0000051 "An asexual spore that is produced on very simple hyphae that protrude a short distance into the substrate. Oidia are borne a few at a time, and are usually presumed not to constitute the main reproductive strategy of the fungus.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000051 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000051 "2011-06-10T12:03:49Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000051 "GO:0034297")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000051 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000051 "FAO:0000051")
+AnnotationAssertion(rdfs:label obo:FAO_0000051 "oidium")
+SubClassOf(obo:FAO_0000051 obo:FAO_0000023)
+SubClassOf(obo:FAO_0000051 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001001))
+
+# Class: obo:FAO_0000052 (sporangium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000052 "A structure within which spores develop.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000052 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000052 "2011-06-10T12:06:16Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000052 "GO:0043582")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000052 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000052 "FAO:0000052")
+AnnotationAssertion(rdfs:label obo:FAO_0000052 "sporangium")
+SubClassOf(obo:FAO_0000052 obo:FAO_0000010)
+
+# Class: obo:FAO_0000053 (zygosporangium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "ISBN:9781107079915") obo:IAO_0000115 obo:FAO_0000053 "A thick-walled structure that arises from a zygote formed by the fusion or conjugation of two hyphal branches, produces spores, and is characteristic of the Zygomycetes.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000053 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000053 "2011-06-10T12:14:19Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000053 "GO:0075271")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000053 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000053 "FAO:0000053")
+AnnotationAssertion(rdfs:label obo:FAO_0000053 "zygosporangium")
+SubClassOf(obo:FAO_0000053 obo:FAO_0000052)
+
+# Class: obo:FAO_0000054 (aeciospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000054 "A dikaryotic spore, typically of a rust fungus, that is produced in an aecium; in heteroecious rusts, the aeciospore is a spore stage that infects the alternate host.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000054 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000054 "2011-06-10T12:18:12Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000054 "GO:0075247")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000054 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000054 "FAO:0000054")
+AnnotationAssertion(rdfs:label obo:FAO_0000054 "aeciospore")
+SubClassOf(obo:FAO_0000054 obo:FAO_0000023)
+
+# Class: obo:FAO_0000055 (aplanospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") Annotation(oboInOwl:hasDbXref "answers.com:aplanospore") obo:IAO_0000115 obo:FAO_0000055 "A nonmotile, asexual spore, usually a sporangiospore, common in the Phycomycetes.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000055 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000055 "2011-06-10T12:21:58Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000055 "GO:0075289")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000055 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000055 "FAO:0000055")
+AnnotationAssertion(rdfs:label obo:FAO_0000055 "aplanospore")
+SubClassOf(obo:FAO_0000055 obo:FAO_0000023)
+
+# Class: obo:FAO_0000056 (aecium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000056 "A cuplike structure of some rust fungi that contains chains of aeciospores.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000056 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000056 "2011-06-10T02:45:15Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000056 "GO:0075267")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000056 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000056 "FAO:0000056")
+AnnotationAssertion(rdfs:label obo:FAO_0000056 "aecium")
+SubClassOf(obo:FAO_0000056 obo:FAO_0000010)
+
+# Class: obo:FAO_0000057 (telium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000057 "A teliospore-bearing sorus of the rust fungi. A sorus is a cluster of sporangia; the telium is a pustule-like sorus that forms on the tissue of a plant infected by a rust fungus and produces teliospores.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000057 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000057 "2011-06-10T02:47:39Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000057 "GO:0075275")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000057 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000057 "FAO:0000057")
+AnnotationAssertion(rdfs:label obo:FAO_0000057 "telium")
+SubClassOf(obo:FAO_0000057 obo:FAO_0000010)
+
+# Class: obo:FAO_0000058 (uredinium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:curators") obo:IAO_0000115 obo:FAO_0000058 "A reddish, pustule-like structure formed by a rust fungus, in which urediniospores are produced.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000058 "Maria")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000058 "2011-06-10T02:49:08Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000058 "GO:0075279")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") oboInOwl:hasExactSynonym obo:FAO_0000058 "uredium")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000058 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000058 "FAO:0000058")
+AnnotationAssertion(rdfs:label obo:FAO_0000058 "uredinium")
+SubClassOf(obo:FAO_0000058 obo:FAO_0000010)
+
+# Class: obo:FAO_0000059 (conjugation tube)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") Annotation(oboInOwl:hasDbXref "http://science.yourdictionary.com/conjugation-tube") obo:IAO_0000115 obo:FAO_0000059 "A tubular structure that connects two individuals during conjugation, through which the transfer of genetic material can occur. The conjugation tube usually forms in response to pheromone.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000059 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000059 "2013-04-02T03:23:27Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000059 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000059 "FAO:0000059")
+AnnotationAssertion(rdfs:label obo:FAO_0000059 "conjugation tube")
+SubClassOf(obo:FAO_0000059 obo:FAO_0001022)
+
+# Class: obo:FAO_0000060 (clamp cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") obo:IAO_0000115 obo:FAO_0000060 "A hyphal cell that forms a clamp connection, a structure that separates differing nuclei, which have been obtained through mating of hyphae of differing sexual types, into distinct hyphal segments that are separated by septa (cross walls).")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000060 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000060 "2013-04-02T03:28:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000060 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000060 "FAO:0000060")
+AnnotationAssertion(rdfs:label obo:FAO_0000060 "clamp cell")
+SubClassOf(obo:FAO_0000060 obo:FAO_0000018)
+SubClassOf(obo:FAO_0000060 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001009))
+
+# Class: obo:FAO_0000061 (fused clamp)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") obo:IAO_0000115 obo:FAO_0000061 "A structure produced in a dikaryotic hypha upon migration of the nuclei after mating of hyphae of differing sexual types.  The clamp fuses to compartmentalize a nucleus within the subapical cell.  Note: A hyphal cell that forms a clamp connection is called a \"clamp cell\".")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000061 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000061 "2013-04-02T03:29:16Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000061 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000061 "FAO:0000061")
+AnnotationAssertion(rdfs:label obo:FAO_0000061 "fused clamp")
+SubClassOf(obo:FAO_0000061 obo:FAO_0001009)
+
+# Class: obo:FAO_0000062 (unfused clamp)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") obo:IAO_0000115 obo:FAO_0000062 "A structure that separates the nuclei within monokaryotic hyphae into distinct hyphal segments. Monokaryotic hyphae are produced during unisexual reproduction or hyphal development of a diploid, in contrast to dikaryotic hyphae which are produced by mating of hyphae of differing sexual types.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000062 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000062 "2013-04-02T03:31:28Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000062 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000062 "FAO:0000062")
+AnnotationAssertion(rdfs:label obo:FAO_0000062 "unfused clamp")
+SubClassOf(obo:FAO_0000062 obo:FAO_0001009)
+
+# Class: obo:FAO_0000063 (titan cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") Annotation(oboInOwl:hasDbXref "PMID:21821718") Annotation(oboInOwl:hasDbXref "PMID:29775474") obo:IAO_0000115 obo:FAO_0000063 "A large, highly polyploid cell that has altered capsule structure, a thickened cell wall, and increased resistance to nitrosative and oxidative stresses relative to yeast-form cells of the same species. Identified in Cryptococcus neoformans, in which the morphological transition to Tina cell form enables the fungus to evade the immune system of a mammalian host.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000063 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000063 "2013-04-03T11:15:35Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000063 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000063 "FAO:0000063")
+AnnotationAssertion(rdfs:label obo:FAO_0000063 "titan cell")
+SubClassOf(obo:FAO_0000063 obo:FAO_0000032)
+
+# Class: obo:FAO_0000064 (ballistospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") obo:IAO_0000115 obo:FAO_0000064 "A forcibly discharged asexual spore. With fungi, most types of basidiospores formed on basidia are discharged into the air from the tips of sterigmata.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000064 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000064 "2013-04-03T11:18:18Z")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FAO_0000064 "ballistoconidium")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000064 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000064 "FAO:0000064")
+AnnotationAssertion(rdfs:label obo:FAO_0000064 "ballistospore")
+SubClassOf(obo:FAO_0000064 obo:FAO_0000023)
+
+# Class: obo:FAO_0000065 (dikaryon)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "http://en.wikipedia.org/wiki/Dikaryon") obo:IAO_0000115 obo:FAO_0000065 "A binucleate cell observed in some fungi that forms when two compatible nuclei, each originating from one of the cells, pair off after plasmogamy and cohabit without karyogamy within a hyphal compartment. The nuclei divide synchronously and are passed in pairs to newer cells or hyphal tips, which are also binucleate.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000065 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000065 "2013-04-03T11:20:00Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000065 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000065 "FAO:0000065")
+AnnotationAssertion(rdfs:label obo:FAO_0000065 "dikaryon")
+SubClassOf(obo:FAO_0000065 obo:FAO_0002004)
+SubClassOf(obo:FAO_0000065 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001001))
+
+# Class: obo:FAO_0000066 (haustorium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") obo:IAO_0000115 obo:FAO_0000066 "The appendage or portion of a commensal or parasitic fungus (the hyphal tip) that penetrates the host's tissue and draws nutrients from it. Haustoria may arise from intercellular hyphae, appressoria, or external hyphae.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000066 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000066 "2013-04-03T11:21:38Z")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0000066 "BTO:0000515")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000066 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000066 "FAO:0000066")
+AnnotationAssertion(rdfs:label obo:FAO_0000066 "haustorium")
+SubClassOf(obo:FAO_0000066 obo:FAO_0001011)
+
+# Class: obo:FAO_0000067 (chlamydospore)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "CGD:doi") Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "PMID:16215181") obo:IAO_0000115 obo:FAO_0000067 "A large, thick-walled resting spore with condensed cytoplasm, formed within hyphae or at hyphal tips in several kinds of fungi.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0000067 "mariacostanzo")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0000067 "2013-04-03T11:41:14Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0000067 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0000067 "FAO:0000067")
+AnnotationAssertion(rdfs:label obo:FAO_0000067 "chlamydospore")
+SubClassOf(obo:FAO_0000067 obo:FAO_0000023)
+
+# Class: obo:FAO_0001001 (hypha)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001001 "A long, branching filamentous structure formed by a vegetatively growing fungus.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001001 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001001 "FAO:0001001")
+AnnotationAssertion(rdfs:label obo:FAO_0001001 "hypha")
+SubClassOf(obo:FAO_0001001 obo:FAO_0002004)
+
+# Class: obo:FAO_0001002 (pseudohypha)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") obo:IAO_0000115 obo:FAO_0001002 "A chain of cells, formed under specific growth conditions, in which yeast-form fungal cells become elongated, bud only at the cellular pole distal to the mother cell, and fail to separate after division. Pseudohyphae exhibit constrictions at the cell-cell junctions, in contrast to true hyphae which are of more uniform diameter.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001002 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001002 "FAO:0001002")
+AnnotationAssertion(rdfs:label obo:FAO_0001002 "pseudohypha")
+SubClassOf(obo:FAO_0001002 obo:FAO_0002002)
+
+# Class: obo:FAO_0001003 (hypha in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001003 "A hypha that forms part of a mycelium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001003 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001003 "FAO:0001003")
+AnnotationAssertion(rdfs:label obo:FAO_0001003 "hypha in mycelium")
+SubClassOf(obo:FAO_0001003 obo:FAO_0001001)
+SubClassOf(obo:FAO_0001003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0000011))
+
+# Class: obo:FAO_0001004 (septate hypha in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001004 "A hypha that is divided internally by septa, or lateral cell walls, and that exists as part of a mycelium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001004 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001004 "FAO:0001004")
+AnnotationAssertion(rdfs:label obo:FAO_0001004 "septate hypha in mycelium")
+SubClassOf(obo:FAO_0001004 obo:FAO_0001003)
+SubClassOf(obo:FAO_0001004 obo:FAO_0001009)
+
+# Class: obo:FAO_0001005 (rhizomorph)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:clt") Annotation(oboInOwl:hasDbXref "ISBN:0632030771") obo:IAO_0000115 obo:FAO_0001005 "A thick strand of hyphae oriented in parallel to each other, with a central channel through which nutrients are conducted.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001005 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001005 "FAO:0001005")
+AnnotationAssertion(rdfs:label obo:FAO_0001005 "rhizomorph")
+SubClassOf(obo:FAO_0001005 obo:FAO_0000011)
+
+# Class: obo:FAO_0001006 (mycelial cord)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:clt") Annotation(oboInOwl:hasDbXref "ISBN:0632030771") obo:IAO_0000115 obo:FAO_0001006 "A thick strand of hyphae oriented in parallel to each other, with specialized channels through which nutrients are conducted.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001006 "BTO:0000660")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001006 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001006 "FAO:0001006")
+AnnotationAssertion(rdfs:label obo:FAO_0001006 "mycelial cord")
+SubClassOf(obo:FAO_0001006 obo:FAO_0000011)
+
+# Class: obo:FAO_0001007 (stroma)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001007 "A compact hyphal mass, on or in which fruiting bodies are formed.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001007 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001007 "FAO:0001007")
+AnnotationAssertion(rdfs:label obo:FAO_0001007 "stroma")
+SubClassOf(obo:FAO_0001007 obo:FAO_0000011)
+
+# Class: obo:FAO_0001008 (sclerotium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001008 "A mycelial resting body, resistant to adverse environmental conditions.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001008 "BTO:0001810")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001008 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001008 "FAO:0001008")
+AnnotationAssertion(rdfs:label obo:FAO_0001008 "sclerotium")
+SubClassOf(obo:FAO_0001008 obo:FAO_0000011)
+
+# Class: obo:FAO_0001009 (septate hypha)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001009 "A hypha that is divided internally by septa, or lateral cell walls.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001009 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001009 "FAO:0001009")
+AnnotationAssertion(rdfs:label obo:FAO_0001009 "septate hypha")
+SubClassOf(obo:FAO_0001009 obo:FAO_0001001)
+
+# Class: obo:FAO_0001010 (aseptate hypha)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001010 "A hypha whose growing portion contains multiple nuclei but is not divided internally by septa, or lateral cell walls. Septa may be present in older portions of the hypha, or at the base of reproductive structures.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001010 "FAO:mcc")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001010 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0001010 "coenocytic hypha")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001010 "FAO:0001010")
+AnnotationAssertion(rdfs:label obo:FAO_0001010 "aseptate hypha")
+SubClassOf(obo:FAO_0001010 obo:FAO_0001001)
+
+# Class: obo:FAO_0001011 (hyphal tip)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001011 "The growing end of a hypha.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001011 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001011 "FAO:0001011")
+AnnotationAssertion(rdfs:label obo:FAO_0001011 "hyphal tip")
+SubClassOf(obo:FAO_0001011 obo:FAO_0000001)
+SubClassOf(obo:FAO_0001011 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001001))
+
+# Class: obo:FAO_0001012 (hyphal tip, hypha in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001012 "The growing end of a hypha that is part of a mycelium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001012 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001012 "FAO:0001012")
+AnnotationAssertion(rdfs:label obo:FAO_0001012 "hyphal tip, hypha in mycelium")
+SubClassOf(obo:FAO_0001012 obo:FAO_0001011)
+SubClassOf(obo:FAO_0001012 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001003))
+
+# Class: obo:FAO_0001013 (hypha with dolipore septa, in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001013 "A hypha that is divided by dolipore septa and is part of a mycelium. A dolipore septum is a cross-wall that contains a central pore around which the septum is swollen to form a barrel-shaped structure.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001013 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001013 "FAO:0001013")
+AnnotationAssertion(rdfs:label obo:FAO_0001013 "hypha with dolipore septa, in mycelium")
+SubClassOf(obo:FAO_0001013 obo:FAO_0001004)
+SubClassOf(obo:FAO_0001013 obo:FAO_0001018)
+
+# Class: obo:FAO_0001014 (aseptate hypha in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001014 "A hypha that is part of a mycelium, and whose growing portion contains multiple nuclei but is not divided internally by septa.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001014 "FAO:mcc")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001014 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FAO_0001014 "coenocytic hypha in mycelium")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001014 "FAO:0001014")
+AnnotationAssertion(rdfs:label obo:FAO_0001014 "aseptate hypha in mycelium")
+SubClassOf(obo:FAO_0001014 obo:FAO_0001003)
+SubClassOf(obo:FAO_0001014 obo:FAO_0001010)
+
+# Class: obo:FAO_0001015 (hyphal tip, septate hypha in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001015 "The growing end of an aseptate hypha that is part of a mycelium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001015 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001015 "FAO:0001015")
+AnnotationAssertion(rdfs:label obo:FAO_0001015 "hyphal tip, septate hypha in mycelium")
+SubClassOf(obo:FAO_0001015 obo:FAO_0001012)
+SubClassOf(obo:FAO_0001015 obo:FAO_0001016)
+SubClassOf(obo:FAO_0001015 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001004))
+
+# Class: obo:FAO_0001016 (hyphal tip, septate hypha)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001016 "The growing end of an aseptate hypha that is part of a mycelium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001016 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001016 "FAO:0001016")
+AnnotationAssertion(rdfs:label obo:FAO_0001016 "hyphal tip, septate hypha")
+SubClassOf(obo:FAO_0001016 obo:FAO_0001011)
+SubClassOf(obo:FAO_0001016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001009))
+
+# Class: obo:FAO_0001017 (hyphal tip, hypha with dolipore septa in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001017 "The growing end of a hypha that is divided internally by dolipore septa and is part of a mycelium.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001017 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001017 "FAO:0001017")
+AnnotationAssertion(rdfs:label obo:FAO_0001017 "hyphal tip, hypha with dolipore septa in mycelium")
+SubClassOf(obo:FAO_0001017 obo:FAO_0001015)
+SubClassOf(obo:FAO_0001017 obo:FAO_0001019)
+SubClassOf(obo:FAO_0001017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001013))
+
+# Class: obo:FAO_0001018 (hypha with dolipore septa)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001018 "A hypha that is divided by dolipore septa. A dolipore septum is a cross-wall that contains a central pore around which the septum is swollen to form a barrel-shaped structure.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001018 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001018 "FAO:0001018")
+AnnotationAssertion(rdfs:label obo:FAO_0001018 "hypha with dolipore septa")
+SubClassOf(obo:FAO_0001018 obo:FAO_0001009)
+
+# Class: obo:FAO_0001019 (hyphal tip, hypha with dolipore septa)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001019 "The growing end of a hypha that is divided by dolipore septa. A dolipore septum is a cross-wall that contains a central pore around which the septum is swollen to form a barrel-shaped structure.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001019 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001019 "FAO:0001019")
+AnnotationAssertion(rdfs:label obo:FAO_0001019 "hyphal tip, hypha with dolipore septa")
+SubClassOf(obo:FAO_0001019 obo:FAO_0001016)
+SubClassOf(obo:FAO_0001019 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001018))
+
+# Class: obo:FAO_0001020 (hyphal tip, aseptate hypha in mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001020 "The growing end of a hypha that is part of a mycelium, and whose growing portion contains multiple nuclei but is not divided internally by septa.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001020 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001020 "FAO:0001020")
+AnnotationAssertion(rdfs:label obo:FAO_0001020 "hyphal tip, aseptate hypha in mycelium")
+SubClassOf(obo:FAO_0001020 obo:FAO_0001012)
+SubClassOf(obo:FAO_0001020 obo:FAO_0001021)
+SubClassOf(obo:FAO_0001020 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001014))
+
+# Class: obo:FAO_0001021 (hyphal tip, aseptate hypha)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0471522295") obo:IAO_0000115 obo:FAO_0001021 "The growing end of a hypha that is not divided internally by septa, or cross-walls.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001021 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001021 "FAO:0001021")
+AnnotationAssertion(rdfs:label obo:FAO_0001021 "hyphal tip, aseptate hypha")
+SubClassOf(obo:FAO_0001021 obo:FAO_0001011)
+SubClassOf(obo:FAO_0001021 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001010))
+
+# Class: obo:FAO_0001022 (mating cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") obo:IAO_0000115 obo:FAO_0001022 "A cell engaged in or about to engage in the process of mating; exhibits different morphology from a vegetative cell due to the action of mating pheromones.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001022 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001022 "FAO:0001022")
+AnnotationAssertion(rdfs:label obo:FAO_0001022 "mating cell")
+SubClassOf(obo:FAO_0001022 obo:FAO_0000018)
+
+# Class: obo:FAO_0001023 (shmoo)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mcc") Annotation(oboInOwl:hasDbXref "ISBN:0879693568") obo:IAO_0000115 obo:FAO_0001023 "An elongated, asymmetric cell formed before mating, in response to mating pheromone, by Saccharomyces species and other fungi with similar life cycles. Named after the Al Capp cartoon character, whose shape it resembles.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001023 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001023 "FAO:0001023")
+AnnotationAssertion(rdfs:label obo:FAO_0001023 "shmoo")
+SubClassOf(obo:FAO_0001023 obo:FAO_0001022)
+
+# Class: obo:FAO_0001024 (obo:FAO_0001024)
+
+AnnotationAssertion(obo:IAO_0000231 obo:FAO_0001024 obo:IAO_0000227)
+AnnotationAssertion(obo:IAO_0100001 obo:FAO_0001024 obo:FAO_0000012)
+AnnotationAssertion(owl:deprecated obo:FAO_0001024 "true"^^xsd:boolean)
+
+# Class: obo:FAO_0001025 (mycelial felt)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0000890") obo:IAO_0000115 obo:FAO_0001025 "A mass of hyphae, usually in wood or bark; visible with the naked eye.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001025 "BTO:0000890")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001025 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001025 "FAO:0001025")
+AnnotationAssertion(rdfs:label obo:FAO_0001025 "mycelial felt")
+SubClassOf(Annotation(oboInOwl:source "BTO:0000890") obo:FAO_0001025 obo:FAO_0000011)
+
+# Class: obo:FAO_0001026 (obsolete mycobiont)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0000892") obo:IAO_0000115 obo:FAO_0001026 "OBSOLETE. The fungal component of the lichen partnership, absorbing nutrients and providing structural support for the plant.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001026 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001026 "FAO:0001026")
+AnnotationAssertion(rdfs:comment obo:FAO_0001026 "This term was made obsolete because it represents a class of organism, not a fungal structure.")
+AnnotationAssertion(rdfs:label obo:FAO_0001026 "obsolete mycobiont")
+AnnotationAssertion(owl:deprecated obo:FAO_0001026 "true"^^xsd:boolean)
+
+# Class: obo:FAO_0001027 (mycorrhiza)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0000893") obo:IAO_0000115 obo:FAO_0001027 "A composite structure formed by the symbiotic association of the mycelium of a fungus with the roots of a seed plant.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001027 "BTO:0000893")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001027 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001027 "FAO:0001027")
+AnnotationAssertion(rdfs:label obo:FAO_0001027 "mycorrhiza")
+SubClassOf(obo:FAO_0001027 obo:FAO_0000002)
+
+# Class: obo:FAO_0001028 (sorocarp)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0001098") obo:IAO_0000115 obo:FAO_0001028 "A fruiting body formed by some cellular slime moulds; has a stalk and a spore mass.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001028 "BTO:0001098")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001028 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001028 "FAO:0001028")
+AnnotationAssertion(rdfs:label obo:FAO_0001028 "sorocarp")
+SubClassOf(Annotation(oboInOwl:source "BTO:0001098") obo:FAO_0001028 obo:FAO_0000007)
+
+# Class: obo:FAO_0001029 (pseudoplasmodium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0001139") obo:IAO_0000115 obo:FAO_0001029 "A multinucleate plasmodium-like body formed by aggregation of myxamoebae without fusion of their protoplasm.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001029 "BTO:0001139")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001029 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001029 "FAO:0001029")
+AnnotationAssertion(rdfs:label obo:FAO_0001029 "pseudoplasmodium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0001139") obo:FAO_0001029 obo:FAO_0000001)
+
+# Class: obo:FAO_0001030 (substrate mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0001030 "An invasive mycelium that forms within a solid or semi-solid substrate such as wood, soil or agar.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001030 "BTO:0001562")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001030 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001030 "FAO:0001030")
+AnnotationAssertion(rdfs:label obo:FAO_0001030 "substrate mycelium")
+SubClassOf(obo:FAO_0001030 obo:FAO_0002004)
+
+# Class: obo:FAO_0001031 (aerial mycelium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0001031 "A mycelium that forms prior to sporulation and extends aerially, or perpendicular, to its substrate.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001031 "BTO:0001562")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001031 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001031 "FAO:0001031")
+AnnotationAssertion(rdfs:label obo:FAO_0001031 "aerial mycelium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0001562") obo:FAO_0001031 obo:FAO_0000011)
+
+# Class: obo:FAO_0001034 (apothecium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0002160") obo:IAO_0000115 obo:FAO_0001034 "An open or expanded fruiting body that has asci contained on its exposed surface; found in lichens and actinomycetous fungi.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001034 "BTO:0002160")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001034 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001034 "FAO:0001034")
+AnnotationAssertion(rdfs:label obo:FAO_0001034 "apothecium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0002160") obo:FAO_0001034 obo:FAO_0000008)
+
+# Class: obo:FAO_0001035 (gymnothecium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0002163") obo:IAO_0000115 obo:FAO_0001035 "An ascocarp that is composed of a loose network of mycelia through which ascospores filter and are released at maturity; its reproductive organs are in the form of naked asci. Found in fungi of the family Gymnoascaceae.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001035 "BTO:0002163")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001035 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001035 "FAO:0001035")
+AnnotationAssertion(rdfs:label obo:FAO_0001035 "gymnothecium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0002163") obo:FAO_0001035 obo:FAO_0000008)
+
+# Class: obo:FAO_0001036 (perithecium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0002164") obo:IAO_0000115 obo:FAO_0001036 "A flask-shaped fruiting body that forms a pore for the escape of spores; found in some molds and ascomycetous fungi.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001036 "BTO:0002164")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001036 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001036 "FAO:0001036")
+AnnotationAssertion(rdfs:label obo:FAO_0001036 "perithecium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0002164") obo:FAO_0001036 obo:FAO_0000008)
+SubClassOf(obo:FAO_0001036 ObjectSomeValuesFrom(obo:RO_0002202 obo:FAO_0002001))
+
+# Class: obo:FAO_0001051 (germ tube)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0004822") obo:IAO_0000115 obo:FAO_0001051 "An outgrowth produced by germinating spores in certain species of spore-releasing fungi. The germ tube differentiates, grows, and undergoes mitosis to create somatic hyphae.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001051 "BTO:0004822")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001051 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001051 "FAO:0001051")
+AnnotationAssertion(rdfs:label obo:FAO_0001051 "germ tube")
+SubClassOf(Annotation(oboInOwl:source "BTO:0004822") obo:FAO_0001051 obo:FAO_0000011)
+
+# Class: obo:FAO_0001052 (fungal primordium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0005533") obo:IAO_0000115 obo:FAO_0001052 "The nodule from which a mushroom develops. The primordium, less than two millimeters in diameter, resembles a pinhead, and is typically found on or near the surface of the substrate. It is formed within the mycelium, the mass of threadlike hyphae that make up the fungus. The primordium enlarges into a roundish structure of interwoven hyphae roughly resembling an egg, called a button.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001052 "BTO:0005533")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001052 "fungal_anatomy_ontology")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0005533") oboInOwl:hasRelatedSynonym obo:FAO_0001052 "primordium")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001052 "FAO:0001052")
+AnnotationAssertion(rdfs:label obo:FAO_0001052 "fungal primordium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0005533") obo:FAO_0001052 obo:FAO_0000001)
+
+# Class: obo:FAO_0001053 (microsclerotium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BTO:0006116") obo:IAO_0000115 obo:FAO_0001053 "A very small sclerotium.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FAO_0001053 "BTO:0006116")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0001053 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0001053 "FAO:0001053")
+AnnotationAssertion(rdfs:label obo:FAO_0001053 "microsclerotium")
+SubClassOf(Annotation(oboInOwl:source "BTO:0006116") obo:FAO_0001053 obo:FAO_0001008)
+
+# Class: obo:FAO_0002001 (protoperithecium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI:10.1007/978-3-642-00286-1_2") Annotation(oboInOwl:hasDbXref "PMID:125266") Annotation(oboInOwl:hasDbXref "PMID:20739093") Annotation(oboInOwl:hasDbXref "PMID:25311923") Annotation(oboInOwl:hasDbXref "PMID:4410944") Annotation(oboInOwl:hasDbXref "PMID:6235211") Annotation(oboInOwl:hasDbXref "PMID:6235212") obo:IAO_0000115 obo:FAO_0002001 "A spherical fungal structure that is formed in the sexual phase of ascomycetous fungi such as Neurospora crassa and Sordaria macrospora. A protoperithecium is formed by the enveloping of ascogonia cells by sterile hyphae, and develops into a perithecium.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002001 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002001 "2018-09-21T10:54:17Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002001 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002001 "FAO:0002001")
+AnnotationAssertion(rdfs:label obo:FAO_0002001 "protoperithecium")
+SubClassOf(obo:FAO_0002001 obo:FAO_0000008)
+
+# Class: obo:FAO_0002002 (multicellular fungal structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") obo:IAO_0000115 obo:FAO_0002002 "A fungal structure that comprises more than one cell.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002002 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002002 "2019-05-03T13:33:22Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002002 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002002 "FAO:0002002")
+AnnotationAssertion(rdfs:label obo:FAO_0002002 "multicellular fungal structure")
+SubClassOf(obo:FAO_0002002 obo:FAO_0000001)
+
+# Class: obo:FAO_0002003 (multicellular fungal structure, unicellular organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0002003 "A multicellular fungal structure composed of two or more cells of a single unicellular organism.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002003 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002003 "2019-05-03T14:07:29Z")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002003 "multicellular structure, unicellular organism")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002003 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002003 "FAO:0002003")
+AnnotationAssertion(rdfs:label obo:FAO_0002003 "multicellular fungal structure, unicellular organism")
+SubClassOf(obo:FAO_0002003 obo:FAO_0002002)
+
+# Class: obo:FAO_0002004 (multicellular fungal structure, multicellular organism)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0002004 "A multicellular fungal structure composed of two or more cells of a single multicellular organism.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002004 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002004 "2019-05-03T14:10:13Z")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002004 "multicellular structure, multicellular organism")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002004 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002004 "FAO:0002004")
+AnnotationAssertion(rdfs:label obo:FAO_0002004 "multicellular fungal structure, multicellular organism")
+SubClassOf(obo:FAO_0002004 obo:FAO_0002002)
+
+# Class: obo:FAO_0002005 (appressorium)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "PMID:15012214") Annotation(oboInOwl:hasDbXref "PMID:15012548") Annotation(oboInOwl:hasDbXref "PMID:22496661") Annotation(oboInOwl:hasDbXref "PMID:26043436") Annotation(oboInOwl:hasDbXref "PMID:31382649") obo:IAO_0000115 obo:FAO_0002005 "A modified hypha that forms a specialized structure used by a fungus to penetrate a target. The appressorium first presses against the substrate, usually with a flattened morphology, and then forms a penetration peg that enters the substrate via turgor pressure. Parasitic and mutualistic fungi use appressoria to enter host cells, and some saprotrophs can form appressoria to penetrate non-living substrates.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002005 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002005 "2020-01-10T14:43:59Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002005 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002005 "FAO:0002005")
+AnnotationAssertion(rdfs:label obo:FAO_0002005 "appressorium")
+SubClassOf(obo:FAO_0002005 obo:FAO_0001001)
+
+# Class: obo:FAO_0002006 (monokaryotic fruitbody)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0002006 "A spore-producing structure that is formed following same-sex (self) mating. These structures are produced by Cryptococcus species in a manner similar to sexual mating except that the resulting spores are isogenic with the parental strain.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002006 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002006 "2020-01-23T14:04:34Z")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002006 "haploid fruit body")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002006 "haploid fruitbody")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002006 "haploid fruiting body")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002006 "monokaryotic fruit body")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") oboInOwl:hasExactSynonym obo:FAO_0002006 "monokaryotic fruiting body")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002006 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002006 "FAO:0002006")
+AnnotationAssertion(rdfs:label obo:FAO_0002006 "monokaryotic fruitbody")
+SubClassOf(obo:FAO_0002006 obo:FAO_0000010)
+
+# Class: obo:FAO_0002007 (conidiophore foot cell)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0002007 "A specialized cell with an enlarged cell wall that develops from a hyphal cell in a septate mycelium and swells at the aerial terminus to form a conidiophore vesicle. The aerial portion of the foot cell forms the conidiophore stalk.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002007 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002007 "2020-01-23T15:25:29Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002007 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002007 "FAO:0002007")
+AnnotationAssertion(rdfs:label obo:FAO_0002007 "conidiophore foot cell")
+SubClassOf(obo:FAO_0002007 obo:FAO_0000018)
+SubClassOf(obo:FAO_0002007 ObjectSomeValuesFrom(obo:BFO_0000050 obo:FAO_0001004))
+SubClassOf(obo:FAO_0002007 ObjectSomeValuesFrom(obo:RO_0002202 obo:FAO_0000032))
+
+# Class: obo:FAO_0002008 (conidial anastomosis tube)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") Annotation(oboInOwl:hasDbXref "FAO:mah") Annotation(oboInOwl:hasDbXref "PMID:16040203") obo:IAO_0000115 obo:FAO_0002008 "A short, thin, unbranched tubular structure that emerges from a conidium and grows towards, and then fuses with, a similar tube growing from another conidium or conidial germling.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002008 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002008 "2020-01-23T15:57:41Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002008 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002008 "FAO:0002008")
+AnnotationAssertion(rdfs:label obo:FAO_0002008 "conidial anastomosis tube")
+SubClassOf(obo:FAO_0002008 obo:FAO_0000001)
+
+# Class: obo:FAO_0002009 (spherule)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0002009 "A  large, round, thick-walled structure that contains endospores such as those produced by Coccidioides species within a host.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002009 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002009 "2020-01-23T16:18:39Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002009 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002009 "FAO:0002009")
+AnnotationAssertion(rdfs:label obo:FAO_0002009 "spherule")
+SubClassOf(obo:FAO_0002009 obo:FAO_0000052)
+
+# Class: obo:FAO_0002010 (sexual structure)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") Annotation(oboInOwl:hasDbXref "FAO:mah") obo:IAO_0000115 obo:FAO_0002010 "A fungal structure that develops during mating and contributes to sexual reproduction.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002010 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002010 "2020-01-23T16:26:39Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002010 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002010 "FAO:0002010")
+AnnotationAssertion(rdfs:label obo:FAO_0002010 "sexual structure")
+SubClassOf(obo:FAO_0002010 obo:FAO_0000001)
+
+# Class: obo:FAO_0002011 (mating filament)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FAO:doi") obo:IAO_0000115 obo:FAO_0002011 "A hypha that emerges from a yeast-form cell upon stimulation by the pheromone of a compatible mating partner. An example is observed in Cryptococcus species.")
+AnnotationAssertion(oboInOwl:created_by obo:FAO_0002011 "midori")
+AnnotationAssertion(oboInOwl:creation_date obo:FAO_0002011 "2020-01-23T16:29:54Z")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FAO_0002011 "fungal_anatomy_ontology")
+AnnotationAssertion(oboInOwl:id obo:FAO_0002011 "FAO:0002011")
+AnnotationAssertion(rdfs:label obo:FAO_0002011 "mating filament")
+SubClassOf(obo:FAO_0002011 obo:FAO_0001001)
+
+
+)
