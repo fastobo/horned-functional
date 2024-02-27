@@ -472,9 +472,10 @@ impl<A: ForIRI> FromPair<A> for AnnotationValue<A> {
             Rule::Literal => Literal::from_pair(inner, ctx).map(AnnotationValue::Literal),
             // FIXME: when horned-owl is updated, replace with
             //        AnonymousIndividual::from_pair(inner, ctx).map(AnnotationValue::Anonymous)
-            Rule::AnonymousIndividual => unimplemented!(
-                "horned-owl does not support AnonymousIndividual as annotation values"
-            ),
+            Rule::AnonymousIndividual => Err(Error::custom(
+                "anonymous annotation targets are not supported",
+                inner.as_span(),
+            )),
             _ => unreachable!(),
         }
     }
@@ -607,9 +608,9 @@ impl<A: ForIRI> FromPair<A> for ClassExpression<A> {
                 let dp = DataProperty::from_pair(pair.next().unwrap(), ctx)?;
                 let next = pair.next().unwrap();
                 if next.as_rule() == Rule::DataProperty {
-                    Err(Error::Unsupported(
-                        "data property chaining in DataSomeValuesFrom",
-                        "https://github.com/phillord/horned-owl/issues/17",
+                    Err(Error::custom(
+                        "cannot use data property chaining in `DataSomeValuesFrom`",
+                        next.as_span(),
                     ))
                 } else {
                     let dr = DataRange::from_pair(next, ctx)?;
@@ -621,9 +622,9 @@ impl<A: ForIRI> FromPair<A> for ClassExpression<A> {
                 let dp = DataProperty::from_pair(pair.next().unwrap(), ctx)?;
                 let next = pair.next().unwrap();
                 if next.as_rule() == Rule::DataProperty {
-                    Err(Error::Unsupported(
-                        "data property chaining in DataAllValuesFrom",
-                        "https://github.com/phillord/horned-owl/issues/17",
+                    Err(Error::custom(
+                        "cannot use data property chaining in `DataAllValuesFrom`",
+                        next.as_span(),
                     ))
                 } else {
                     let dr = DataRange::from_pair(next, ctx)?;

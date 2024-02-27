@@ -1,3 +1,5 @@
+use pest::Span;
+
 use super::parser::Rule;
 
 /// The result type for this crate.
@@ -22,7 +24,7 @@ pub enum Error {
     /// assert_matches!(res, Err(horned_functional::Error::Pest(_)));
     /// ```
     #[error(transparent)]
-    Pest(#[from] pest::error::Error<Rule>),
+    Pest(Box<pest::error::Error<Rule>>),
 
     /// An error that happened at the I/O level.
     ///
@@ -69,15 +71,24 @@ pub enum Error {
     /// ```
     #[error("invalid facet: {0}")]
     InvalidFacet(String),
+}
 
-    /// An unsupported construct was used.
-    ///
-    /// See the relevant issue for each unsupported syntax construct; if the
-    /// issue has been resolved, please open an issue on the
-    /// [`fastobo/horned-functional`](https://github.com/fastobo/horned-functional)
-    /// repository so that it can be fixed.
-    #[error("unsupported: {0} (see {1})")]
-    Unsupported(&'static str, &'static str),
+impl Error {
+    /// Create a custom `pest` error located at the given span.
+    pub fn custom<S: Into<String>>(message: S, span: Span) -> Self {
+        Self::from(pest::error::Error::new_from_span(
+            pest::error::ErrorVariant::CustomError {
+                message: message.into(),
+            },
+            span,
+        ))
+    }
+}
+
+impl From<pest::error::Error<Rule>> for Error {
+    fn from(e: pest::error::Error<Rule>) -> Self {
+        Error::Pest(Box::new(e))
+    }
 }
 
 impl From<curie::ExpansionError> for Error {
