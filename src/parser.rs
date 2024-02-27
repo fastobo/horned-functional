@@ -47,6 +47,23 @@ mod tests {
     }
 
     #[test]
+    fn datatype_restriction() {
+        assert_parse!(
+            Rule::DatatypeRestriction,
+            r#"DatatypeRestriction(xsd:short xsd:minInclusive "0"^^xsd:short xsd:maxInclusive "100"^^xsd:short)"#
+        );
+    }
+
+    #[test]
+    fn facet_restriction() {
+        assert_parse!(Rule::FacetRestriction, r#"xsd:minInclusive "0"^^xsd:short"#);
+        assert_parse!(
+            Rule::FacetRestriction,
+            r#"xsd:maxInclusive "100"^^xsd:short"#
+        );
+    }
+
+    #[test]
     fn ontology_document() {
         assert_parse!(
             Rule::OntologyDocument,
@@ -65,6 +82,8 @@ mod tests {
     fn literal() {
         assert_parse!(Rule::Literal, r#""gene_ontology"^^xsd:string"#);
         assert_parse!(Rule::Literal, r#""Alan Ruttenberg"@en"#);
+        assert_parse!(Rule::Literal, r#""0"^^xsd:short"#);
+        assert_parse!(Rule::Literal, r#""100"^^xsd:short"#);
     }
 
     #[test]

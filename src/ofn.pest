@@ -110,7 +110,7 @@ Import                   = { LIT_IMPORT ~ LBRACKET ~ IRI ~ RBRACKET }
 DirectlyImportsDocuments = { Import* }
 OntologyAnnotations      = { Annotation* }
 OntologyAxiom            = { Axiom | Rule | DGAxiom }
-OntologyAxioms           = _{ OntologyAxiom* }
+OntologyAxioms           = { OntologyAxiom* }
 Axioms                   = { Axiom* }
 
 Annotations = { Annotation* }
