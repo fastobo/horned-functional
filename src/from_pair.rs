@@ -530,7 +530,7 @@ macro_rules! impl_ce_data_cardinality {
 }
 
 macro_rules! impl_ce_obj_cardinality {
-    ($ctx:ident, $inner:ident, $dt:ident) => {{
+    ($ctx:ident, $inner:ident, $card:ident) => {{
         let mut pair = $inner.into_inner();
         let n = u32::from_pair(pair.next().unwrap(), $ctx)?;
         let ope = ObjectPropertyExpression::from_pair(pair.next().unwrap(), $ctx)?;
@@ -542,7 +542,7 @@ macro_rules! impl_ce_obj_cardinality {
                 $ctx.iri(OWL::Thing.iri_str()),
             ))),
         };
-        Ok(ClassExpression::ObjectMinCardinality { n, ope, bce })
+        Ok(ClassExpression::$card { n, ope, bce })
     }};
 }
 
