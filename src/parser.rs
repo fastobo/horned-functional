@@ -94,6 +94,28 @@ mod tests {
     }
 
     #[test]
+    fn swrl_rule() {
+        assert_parse!(
+            Rule::Rule,
+            r#"
+            DLSafeRule(
+                Annotation(rdfs:comment "Rule with class expression")
+                Body(
+                    ClassAtom( :Person Variable(var:x) )
+                    ClassAtom(
+                        ObjectMinCardinality( 1 :hasChild :Person )
+                        Variable(var:x)
+                    )
+                )
+                Head(
+                    ClassAtom( :Parent Variable(var:x) )
+                )
+            )
+            "#
+        );
+    }
+
+    #[test]
     fn string_literal_with_language() {
         assert_parse!(Rule::StringLiteralWithLanguage, r#""Alan Ruttenberg"@en"#);
     }
