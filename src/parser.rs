@@ -47,6 +47,11 @@ mod tests {
     }
 
     #[test]
+    fn data_range() {
+        assert_parse!(Rule::DataRange, r#"DataOneOf("default" "transsmt")"#);
+    }
+
+    #[test]
     fn datatype_restriction() {
         assert_parse!(
             Rule::DatatypeRestriction,

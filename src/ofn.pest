@@ -217,8 +217,8 @@ ObjectHasSelf          = { LIT_OBJECT_HAS_SELF ~ LBRACKET ~ ObjectPropertyExpres
 ObjectMinCardinality   = { LIT_OBJECT_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
 ObjectMaxCardinality   = { LIT_OBJECT_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
 ObjectExactCardinality = { LIT_OBJECT_EXACT_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
-DataSomeValuesFrom     = { LIT_DATA_SOME_VALUES_FROM ~ LBRACKET ~ DataProperty+ ~ DataRange ~ RBRACKET }
-DataAllValuesFrom      = { LIT_DATA_ALL_VALUES_FROM ~ LBRACKET ~ DataProperty+ ~ DataRange ~ RBRACKET }
+DataSomeValuesFrom     = { LIT_DATA_SOME_VALUES_FROM ~ LBRACKET ~ DataProperty ~ DataProperty* ~ DataRange ~ RBRACKET }
+DataAllValuesFrom      = { LIT_DATA_ALL_VALUES_FROM ~ LBRACKET ~ DataProperty ~ DataProperty* ~ DataRange ~ RBRACKET }
 DataHasValue           = { LIT_DATA_HAS_VALUE ~ LBRACKET ~ DataProperty ~ Literal ~ RBRACKET }
 DataMinCardinality     = { LIT_DATA_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
 DataMaxCardinality     = { LIT_DATA_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
@@ -272,14 +272,14 @@ InverseObjectProperties         = { LIT_INVERSE_OBJECT_PROPERTIES ~ LBRACKET ~ A
 DataPropertyAxiom = _{ SubDataPropertyOf | EquivalentDataProperties | DisjointDataProperties | DataPropertyDomain | DataPropertyRange | FunctionalDataProperty }
 
 SubDataPropertyOf = { LIT_SUB_DATA_PROPERTY_OF ~ LBRACKET ~ AxiomAnnotations ~ SubDataProperty ~ SuperDataProperty ~ RBRACKET }
-SubDataProperty   = { DataProperty }
-SuperDataProperty = { DataProperty }
+SubDataProperty   = _{ DataProperty }
+SuperDataProperty = _{ DataProperty }
 
 EquivalentDataProperties = { LIT_EQUIVALENT_DATA_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ DataProperty{2, } ~ RBRACKET }
 DisjointDataProperties   = { LIT_DISJOINT_DATA_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ DataProperty{2, } ~ RBRACKET }
 
 DataPropertyDomain     = { LIT_DATA_PROPERTY_DOMAIN ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ ClassExpression ~ RBRACKET }
-DataPropertyRange      = { LIT_DATA_PROPERTY_RANGE ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ ClassExpression ~ RBRACKET }
+DataPropertyRange      = { LIT_DATA_PROPERTY_RANGE ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ DataRange ~ RBRACKET }
 FunctionalDataProperty = { LIT_FUNCTIONAL_DATA_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ DataProperty ~ RBRACKET }
 
 DatatypeDefinition = { LIT_DATATYPE_DEFINITION ~ LBRACKET ~ AxiomAnnotations ~ Datatype ~ DataRange ~ RBRACKET }
