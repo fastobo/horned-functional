@@ -260,8 +260,7 @@ ReflexiveObjectProperty = {LIT_REFLEXIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnot
 IrreflexiveObjectProperty = {LIT_IRREFLEXIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 SymmetricObjectProperty = {LIT_SYMMETRIC_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 AsymmetricObjectProperty = {LIT_ASYMMETRIC_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
-// FIXME: the official grammar allows `ObjectPropertyExpression` here but `horned-owl` does not.
-TransitiveObjectProperty = {LIT_TRANSITIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectProperty ~ RBRACKET}
+TransitiveObjectProperty = {LIT_TRANSITIVE_OBJECT_PROPERTY ~ LBRACKET ~ AxiomAnnotations ~ ObjectPropertyExpression ~ RBRACKET}
 InverseObjectProperties = {LIT_INVERSE_OBJECT_PROPERTIES ~ LBRACKET ~ AxiomAnnotations ~ ObjectProperty{2} ~ RBRACKET}
 
 

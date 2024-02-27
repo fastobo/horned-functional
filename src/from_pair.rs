@@ -233,8 +233,8 @@ impl<A: ForIRI> FromPair<A> for AnnotatedAxiom<A> {
             Rule::TransitiveObjectProperty => {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
-                let r = ObjectProperty::from_pair(inner.next().unwrap(), ctx)?;
-                Ok(Self::new(TransitiveObjectProperty(r.into()), annotations))
+                let r = FromPair::from_pair(inner.next().unwrap(), ctx)?;
+                Ok(Self::new(TransitiveObjectProperty(r), annotations))
             }
 
             // DataPropertyAxiom
