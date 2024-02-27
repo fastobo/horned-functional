@@ -217,8 +217,12 @@ ObjectHasSelf          = { LIT_OBJECT_HAS_SELF ~ LBRACKET ~ ObjectPropertyExpres
 ObjectMinCardinality   = { LIT_OBJECT_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
 ObjectMaxCardinality   = { LIT_OBJECT_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
 ObjectExactCardinality = { LIT_OBJECT_EXACT_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ ObjectPropertyExpression ~ ClassExpression? ~ RBRACKET }
-DataSomeValuesFrom     = { LIT_DATA_SOME_VALUES_FROM ~ LBRACKET ~ DataProperty ~ DataProperty* ~ DataRange ~ RBRACKET }
-DataAllValuesFrom      = { LIT_DATA_ALL_VALUES_FROM ~ LBRACKET ~ DataProperty ~ DataProperty* ~ DataRange ~ RBRACKET }
+// WORKAROUND(@althonos): Because the PEG is greedy and DataRange can be an IRI, in the case where the DataRange is
+//                        an IRI it can actually match the DataProperty being repeated and fail the parser. To avoid this,
+//                        we check that the DataProperty is never at the end of the list, and force the parser to move
+//                        to the DataRange rule.
+DataSomeValuesFrom     = { LIT_DATA_SOME_VALUES_FROM ~ LBRACKET ~ ( DataProperty ~ !RBRACKET )+ ~ DataRange ~ RBRACKET }
+DataAllValuesFrom      = { LIT_DATA_ALL_VALUES_FROM ~ LBRACKET ~ ( DataProperty ~ !RBRACKET )+ ~ DataRange ~ RBRACKET }
 DataHasValue           = { LIT_DATA_HAS_VALUE ~ LBRACKET ~ DataProperty ~ Literal ~ RBRACKET }
 DataMinCardinality     = { LIT_DATA_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
 DataMaxCardinality     = { LIT_DATA_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }

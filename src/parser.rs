@@ -60,6 +60,14 @@ mod tests {
     }
 
     #[test]
+    fn data_some_values_from() {
+        assert_parse!(
+            Rule::DataSomeValuesFrom,
+            r#"DataSomeValuesFrom(resource:CHEMINF_000012 xsd:string)"#
+        );
+    }
+
+    #[test]
     fn facet_restriction() {
         assert_parse!(Rule::FacetRestriction, r#"xsd:minInclusive "0"^^xsd:short"#);
         assert_parse!(
