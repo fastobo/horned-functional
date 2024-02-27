@@ -381,20 +381,7 @@ impl<A: ForIRI> FromPair<A> for AnnotatedAxiom<A> {
                 let mut inner = pair.into_inner();
                 let annotations = FromPair::from_pair(inner.next().unwrap(), ctx)?;
                 let ap = AnnotationProperty::from_pair(inner.next().unwrap(), ctx)?;
-                let subject = {
-                    let inner2 = inner.next().unwrap().into_inner().next().unwrap();
-                    match inner2.as_rule() {
-                        // FIXME: likely to change after discussion in
-                        //        https://github.com/phillord/horned-owl/pull/32
-                        Rule::IRI => IRI::from_pair(inner2, ctx).map(AnnotationSubject::from)?,
-                        // .map(Individual::Named)?,
-                        Rule::AnonymousIndividual => AnonymousIndividual::from_pair(inner2, ctx)
-                            .map(AnnotationSubject::from)?,
-                        rule => {
-                            unreachable!("unexpected rule in Individual::from_pair: {:?}", rule)
-                        }
-                    }
-                };
+                let subject = AnnotationSubject::from_pair(inner.next().unwrap(), ctx)?;
                 let av = AnnotationValue::from_pair(inner.next().unwrap(), ctx)?;
                 Ok(Self::new(
                     AnnotationAssertion::new(subject, Annotation { ap, av }),
@@ -449,6 +436,28 @@ impl<A: ForIRI> FromPair<A> for Annotation<A> {
             ap: FromPair::from_pair(inner.next().unwrap(), ctx)?,
             av: FromPair::from_pair(inner.next().unwrap(), ctx)?,
         })
+    }
+}
+
+// ---------------------------------------------------------------------------
+
+impl<A: ForIRI> FromPair<A> for AnnotationSubject<A> {
+    const RULE: Rule = Rule::AnnotationSubject;
+    fn from_pair_unchecked(pair: Pair<Rule>, ctx: &Context<'_, A>) -> Result<Self> {
+        let inner = pair.into_inner().next().unwrap();
+        match inner.as_rule() {
+            Rule::IRI => FromPair::from_pair(inner, ctx).map(AnnotationSubject::IRI),
+            // .map(Individual::Named)?,
+            Rule::AnonymousIndividual => {
+                FromPair::from_pair(inner, ctx).map(AnnotationSubject::AnonymousIndividual)
+            }
+            rule => {
+                unreachable!(
+                    "unexpected rule in AnnotationSubject::from_pair: {:?}",
+                    rule
+                )
+            }
+        }
     }
 }
 

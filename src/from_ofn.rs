@@ -76,6 +76,7 @@ implement!(
     AnnotationProperty<A>,
     AnnotatedAxiom<A>,
     Annotation<A>,
+    AnnotationSubject<A>,
     AnnotationValue<A>,
     AnonymousIndividual<A>,
     Axiom<A>,
