@@ -271,7 +271,7 @@ InverseObjectProperties         = { LIT_INVERSE_OBJECT_PROPERTIES ~ LBRACKET ~ A
 
 DataPropertyAxiom = _{ SubDataPropertyOf | EquivalentDataProperties | DisjointDataProperties | DataPropertyDomain | DataPropertyRange | FunctionalDataProperty }
 
-SubDataPropertyOf = { LIT_SUB_DATA_PROPERTY_OF ~ LBRACKET ~ AxiomAnnotations ~ SubDataProperty ~ SuperDataProperty }
+SubDataPropertyOf = { LIT_SUB_DATA_PROPERTY_OF ~ LBRACKET ~ AxiomAnnotations ~ SubDataProperty ~ SuperDataProperty ~ RBRACKET }
 SubDataProperty   = { DataProperty }
 SuperDataProperty = { DataProperty }
 
