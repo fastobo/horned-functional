@@ -861,9 +861,18 @@ macro_rules! impl_ontology {
                     ontology.insert(OntologyAnnotation::from_pair(pair, ctx)?);
                 }
 
-                // Process axioms
+                // Process axioms, ignore SWRL rules
                 for pair in pairs.next().unwrap().into_inner() {
-                    ontology.insert(AnnotatedAxiom::from_pair(pair, ctx)?);
+                    match pair.as_rule() {
+                        // FIXME: SWRL rules are not supported for now
+                        Rule::Rule | Rule::DGAxiom => (),
+                        Rule::Axiom => {
+                            ontology.insert(AnnotatedAxiom::from_pair(pair, ctx)?);
+                        }
+                        rule => {
+                            unreachable!("unexpected rule in Ontology::from_pair: {:?}", rule);
+                        }
+                    }
                 }
 
                 Ok(ontology)

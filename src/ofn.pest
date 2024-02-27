@@ -100,7 +100,7 @@ OntologyDocument = { SOI ~ PrefixDeclaration* ~ Ontology ~ EOI }
 PrefixDeclaration = { LIT_PREFIX ~ LBRACKET ~ PrefixName ~ EQ ~ FullIRI ~ RBRACKET }
 
 Ontology = {
-    LIT_ONTOLOGY ~ LBRACKET ~ (OntologyIRI ~ VersionIRI?)? ~ DirectlyImportsDocuments ~ OntologyAnnotations ~ Axioms ~ RBRACKET
+    LIT_ONTOLOGY ~ LBRACKET ~ (OntologyIRI ~ VersionIRI?)? ~ DirectlyImportsDocuments ~ OntologyAnnotations ~ OntologyAxioms ~ RBRACKET
 }
 
 OntologyIRI = { IRI }
@@ -109,6 +109,8 @@ VersionIRI  = { IRI }
 Import                   = { LIT_IMPORT ~ LBRACKET ~ IRI ~ RBRACKET }
 DirectlyImportsDocuments = { Import* }
 OntologyAnnotations      = { Annotation* }
+OntologyAxiom            = { Axiom | Rule | DGAxiom }
+OntologyAxioms           = _{ OntologyAxiom* }
 Axioms                   = { Axiom* }
 
 Annotations = { Annotation* }
@@ -222,7 +224,7 @@ DataMinCardinality     = { LIT_DATA_MIN_CARDINALITY ~ LBRACKET ~ NonNegativeInte
 DataMaxCardinality     = { LIT_DATA_MAX_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
 DataExactCardinality   = { LIT_DATA_EXACT_CARDINALITY ~ LBRACKET ~ NonNegativeInteger ~ DataProperty ~ DataRange? ~ RBRACKET }
 
-Axiom = { Declaration | ClassAxiom | ObjectPropertyAxiom | DataPropertyAxiom | DatatypeDefinition | HasKey | Assertion | AnnotationAxiom | Rule | DGAxiom }
+Axiom = { Declaration | ClassAxiom | ObjectPropertyAxiom | DataPropertyAxiom | DatatypeDefinition | HasKey | Assertion | AnnotationAxiom }
 
 ClassAxiom           = _{ SubClassOf | EquivalentClasses | DisjointClasses | DisjointUnion }
 SubClassOf           =  { LIT_SUB_CLASS_OF ~ LBRACKET ~ AxiomAnnotations ~ SubClassExpression ~ SuperClassExpression ~ RBRACKET }
